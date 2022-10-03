@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-c4acff1e","path":"/Gomd_super/markdown/25.html","title":"MySQL\u4E8B\u52A1","lang":"zh-CN","frontmatter":{},"excerpt":"","headers":[{"level":2,"title":"END \u94FE\u63A5","slug":"end-\u94FE\u63A5","link":"#end-\u94FE\u63A5","children":[]}],"git":{"updatedTime":null,"contributors":[]},"filePathRelative":"Gomd_super/markdown/25.md"}');export{e as data};

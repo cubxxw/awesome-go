@@ -7,7 +7,7 @@
 <ul>
 <li>[x] <a href="https://github.com/3293172751/Block_Chain/blob/master/TOC.md" target="_blank" rel="noopener noreferrer">🖱️GO 基础部分🔥<ExternalLinkIcon/></a></li>
 <li>[ ] <a href="https://github.com/3293172751/Block_Chain/blob/master/go-web" target="_blank" rel="noopener noreferrer">🖱️GO web框架<ExternalLinkIcon/></a></li>
-<li>[ ] <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/README.md" target="_blank" rel="noopener noreferrer">🖱️Go语言100篇进阶🔥<ExternalLinkIcon/></a></li>
+<li>[ ] <RouterLink to="/Gomd_super/markdown/">🖱️Go语言100篇进阶🔥</RouterLink></li>
 <li>[ ] <a href="https://github.com/3293172751/Block_Chain/blob/master/go-advancend/README.md" target="_blank" rel="noopener noreferrer">🖱️Go 高级篇<ExternalLinkIcon/></a></li>
 </ul>
 </blockquote>
@@ -166,128 +166,128 @@
 </li>
 </ul>
 <h3 id="go网络编程和并发编程" tabindex="-1"><a class="header-anchor" href="#go网络编程和并发编程" aria-hidden="true">#</a> Go网络编程和并发编程</h3>
-<p>🐾👓1. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/1.md" target="_blank" rel="noopener noreferrer">互联网协议介绍<ExternalLinkIcon/></a></p>
-<p>🐾👓2. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/2.md" target="_blank" rel="noopener noreferrer">socket编程<ExternalLinkIcon/></a></p>
-<p>🐾👓3. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/3.md" target="_blank" rel="noopener noreferrer">TCP编程<ExternalLinkIcon/></a></p>
-<p>🐾👓4. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/4.md" target="_blank" rel="noopener noreferrer">UDP编程<ExternalLinkIcon/></a></p>
-<p>🐾👓5. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/5.md" target="_blank" rel="noopener noreferrer">TCP黏包<ExternalLinkIcon/></a></p>
-<p>🐾👓6. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/6.md" target="_blank" rel="noopener noreferrer">http编程<ExternalLinkIcon/></a></p>
-<p>🐾👓7. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/7.md" target="_blank" rel="noopener noreferrer">WebSocket编程<ExternalLinkIcon/></a></p>
-<p>🐾👓8. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/8.md" target="_blank" rel="noopener noreferrer">并发介绍<ExternalLinkIcon/></a></p>
-<p>🐾👓9. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/9.md" target="_blank" rel="noopener noreferrer">Goroutine<ExternalLinkIcon/></a></p>
-<p>🐾👓10. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/10.md" target="_blank" rel="noopener noreferrer">runtime包<ExternalLinkIcon/></a></p>
-<p>🐾👓11. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/11.md" target="_blank" rel="noopener noreferrer">Channel<ExternalLinkIcon/></a></p>
-<p>🐾👓12. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/12.md" target="_blank" rel="noopener noreferrer">Goroutine池<ExternalLinkIcon/></a></p>
-<p>🐾👓13. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/13.md" target="_blank" rel="noopener noreferrer">定时器<ExternalLinkIcon/></a></p>
-<p>🐾👓14. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/14.md" target="_blank" rel="noopener noreferrer">select<ExternalLinkIcon/></a></p>
-<p>🐾👓15. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/15.md" target="_blank" rel="noopener noreferrer">并发安全和锁<ExternalLinkIcon/></a></p>
-<p>🐾👓16. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/16.md" target="_blank" rel="noopener noreferrer">Sync<ExternalLinkIcon/></a></p>
-<p>🐾👓17. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/17.md" target="_blank" rel="noopener noreferrer">原子操作(atomic包)<ExternalLinkIcon/></a></p>
-<p>🐾👓18. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/18.md" target="_blank" rel="noopener noreferrer">GMP 原理与调度<ExternalLinkIcon/></a></p>
-<p>🐾👓19. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/19.md" target="_blank" rel="noopener noreferrer">Go爬虫小案例<ExternalLinkIcon/></a></p>
+<p>🐾👓1. <RouterLink to="/Gomd_super/markdown/1.html">互联网协议介绍</RouterLink></p>
+<p>🐾👓2. <RouterLink to="/Gomd_super/markdown/2.html">socket编程</RouterLink></p>
+<p>🐾👓3. <RouterLink to="/Gomd_super/markdown/3.html">TCP编程</RouterLink></p>
+<p>🐾👓4. <RouterLink to="/Gomd_super/markdown/4.html">UDP编程</RouterLink></p>
+<p>🐾👓5. <RouterLink to="/Gomd_super/markdown/5.html">TCP黏包</RouterLink></p>
+<p>🐾👓6. <RouterLink to="/Gomd_super/markdown/6.html">http编程</RouterLink></p>
+<p>🐾👓7. <RouterLink to="/Gomd_super/markdown/7.html">WebSocket编程</RouterLink></p>
+<p>🐾👓8. <RouterLink to="/Gomd_super/markdown/8.html">并发介绍</RouterLink></p>
+<p>🐾👓9. <RouterLink to="/Gomd_super/markdown/9.html">Goroutine</RouterLink></p>
+<p>🐾👓10. <RouterLink to="/Gomd_super/markdown/10.html">runtime包</RouterLink></p>
+<p>🐾👓11. <RouterLink to="/Gomd_super/markdown/11.html">Channel</RouterLink></p>
+<p>🐾👓12. <RouterLink to="/Gomd_super/markdown/12.html">Goroutine池</RouterLink></p>
+<p>🐾👓13. <RouterLink to="/Gomd_super/markdown/13.html">定时器</RouterLink></p>
+<p>🐾👓14. <RouterLink to="/Gomd_super/markdown/14.html">select</RouterLink></p>
+<p>🐾👓15. <RouterLink to="/Gomd_super/markdown/15.html">并发安全和锁</RouterLink></p>
+<p>🐾👓16. <RouterLink to="/Gomd_super/markdown/16.html">Sync</RouterLink></p>
+<p>🐾👓17. <RouterLink to="/Gomd_super/markdown/17.html">原子操作(atomic包)</RouterLink></p>
+<p>🐾👓18. <RouterLink to="/Gomd_super/markdown/18.html">GMP 原理与调度</RouterLink></p>
+<p>🐾👓19. <RouterLink to="/Gomd_super/markdown/19.html">Go爬虫小案例</RouterLink></p>
 <hr>
 <h3 id="go连接数据库" tabindex="-1"><a class="header-anchor" href="#go连接数据库" aria-hidden="true">#</a> Go连接数据库</h3>
 <p>🐾👓Mysql</p>
-<p>🐾👓20. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/20.md" target="_blank" rel="noopener noreferrer">Mysql使用<ExternalLinkIcon/></a></p>
-<p>🐾👓21. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/21.md" target="_blank" rel="noopener noreferrer">Insert操作<ExternalLinkIcon/></a></p>
-<p>🐾👓22. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/22.md" target="_blank" rel="noopener noreferrer">Select操作<ExternalLinkIcon/></a></p>
-<p>🐾👓23. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/23.md" target="_blank" rel="noopener noreferrer">Update操作<ExternalLinkIcon/></a></p>
-<p>🐾👓24. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/24.md" target="_blank" rel="noopener noreferrer">Delete操作<ExternalLinkIcon/></a></p>
-<p>🐾👓25. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/25.md" target="_blank" rel="noopener noreferrer">MySQL事务<ExternalLinkIcon/></a></p>
+<p>🐾👓20. <RouterLink to="/Gomd_super/markdown/20.html">Mysql使用</RouterLink></p>
+<p>🐾👓21. <RouterLink to="/Gomd_super/markdown/21.html">Insert操作</RouterLink></p>
+<p>🐾👓22. <RouterLink to="/Gomd_super/markdown/22.html">Select操作</RouterLink></p>
+<p>🐾👓23. <RouterLink to="/Gomd_super/markdown/23.html">Update操作</RouterLink></p>
+<p>🐾👓24. <RouterLink to="/Gomd_super/markdown/24.html">Delete操作</RouterLink></p>
+<p>🐾👓25. <RouterLink to="/Gomd_super/markdown/25.html">MySQL事务</RouterLink></p>
 <h3 id="redis" tabindex="-1"><a class="header-anchor" href="#redis" aria-hidden="true">#</a> Redis</h3>
-<p>🐾👓26. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/26.md" target="_blank" rel="noopener noreferrer">Redis介绍<ExternalLinkIcon/></a></p>
-<p>🐾👓27. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/27.md" target="_blank" rel="noopener noreferrer">链接Redis<ExternalLinkIcon/></a></p>
-<p>🐾👓28. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/28.md" target="_blank" rel="noopener noreferrer">String类型Set、Get操作<ExternalLinkIcon/></a></p>
-<p>🐾👓29. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/29.md" target="_blank" rel="noopener noreferrer">String批量操作<ExternalLinkIcon/></a></p>
-<p>🐾👓30. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/30.md" target="_blank" rel="noopener noreferrer">设置过期时间<ExternalLinkIcon/></a></p>
-<p>🐾👓31. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/31.md" target="_blank" rel="noopener noreferrer">List队列操作<ExternalLinkIcon/></a></p>
-<p>🐾👓32. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/32.md" target="_blank" rel="noopener noreferrer">Hash表<ExternalLinkIcon/></a></p>
-<p>🐾👓33. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/33.md" target="_blank" rel="noopener noreferrer">Redis连接池<ExternalLinkIcon/></a></p>
+<p>🐾👓26. <RouterLink to="/Gomd_super/markdown/26.html">Redis介绍</RouterLink></p>
+<p>🐾👓27. <RouterLink to="/Gomd_super/markdown/27.html">链接Redis</RouterLink></p>
+<p>🐾👓28. <RouterLink to="/Gomd_super/markdown/28.html">String类型Set、Get操作</RouterLink></p>
+<p>🐾👓29. <RouterLink to="/Gomd_super/markdown/29.html">String批量操作</RouterLink></p>
+<p>🐾👓30. <RouterLink to="/Gomd_super/markdown/30.html">设置过期时间</RouterLink></p>
+<p>🐾👓31. <RouterLink to="/Gomd_super/markdown/31.html">List队列操作</RouterLink></p>
+<p>🐾👓32. <RouterLink to="/Gomd_super/markdown/32.html">Hash表</RouterLink></p>
+<p>🐾👓33. <RouterLink to="/Gomd_super/markdown/33.html">Redis连接池</RouterLink></p>
 <hr>
 <h3 id="go操作etcd" tabindex="-1"><a class="header-anchor" href="#go操作etcd" aria-hidden="true">#</a> go操作ETCD</h3>
-<p>🐾👓34. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/34.md" target="_blank" rel="noopener noreferrer">ETCD介绍<ExternalLinkIcon/></a></p>
-<p>🐾👓35. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/35.md" target="_blank" rel="noopener noreferrer">操作ETCD<ExternalLinkIcon/></a></p>
+<p>🐾👓34. <RouterLink to="/Gomd_super/markdown/34.html">ETCD介绍</RouterLink></p>
+<p>🐾👓35. <RouterLink to="/Gomd_super/markdown/35.html">操作ETCD</RouterLink></p>
 <h3 id="go-zookeeper" tabindex="-1"><a class="header-anchor" href="#go-zookeeper" aria-hidden="true">#</a> Go - zookeeper</h3>
-<p>🐾👓36. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/36.md" target="_blank" rel="noopener noreferrer">基本操作测试<ExternalLinkIcon/></a></p>
-<p>🐾👓37. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/37.md" target="_blank" rel="noopener noreferrer">简单的分布式server<ExternalLinkIcon/></a></p>
-<p>🐾👓38. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/38.md" target="_blank" rel="noopener noreferrer">Zookeeper命令行使用<ExternalLinkIcon/></a></p>
-<p>🐾👓39. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/39.md" target="_blank" rel="noopener noreferrer">Kafka介绍<ExternalLinkIcon/></a></p>
+<p>🐾👓36. <RouterLink to="/Gomd_super/markdown/36.html">基本操作测试</RouterLink></p>
+<p>🐾👓37. <RouterLink to="/Gomd_super/markdown/37.html">简单的分布式server</RouterLink></p>
+<p>🐾👓38. <RouterLink to="/Gomd_super/markdown/38.html">Zookeeper命令行使用</RouterLink></p>
+<p>🐾👓39. <RouterLink to="/Gomd_super/markdown/39.html">Kafka介绍</RouterLink></p>
 <h3 id="go操作kafka" tabindex="-1"><a class="header-anchor" href="#go操作kafka" aria-hidden="true">#</a> go操作kafka</h3>
-<p>🐾👓40. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/40.md" target="_blank" rel="noopener noreferrer">Kafka深层介绍<ExternalLinkIcon/></a></p>
-<p>🐾👓41. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/41.md" target="_blank" rel="noopener noreferrer">Kafka的安装<ExternalLinkIcon/></a></p>
-<p>🐾👓42. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/42.md" target="_blank" rel="noopener noreferrer">操作Kafka<ExternalLinkIcon/></a></p>
+<p>🐾👓40. <RouterLink to="/Gomd_super/markdown/40.html">Kafka深层介绍</RouterLink></p>
+<p>🐾👓41. <RouterLink to="/Gomd_super/markdown/41.html">Kafka的安装</RouterLink></p>
+<p>🐾👓42. <RouterLink to="/Gomd_super/markdown/42.html">操作Kafka</RouterLink></p>
 <h3 id="go操作rabbitmq" tabindex="-1"><a class="header-anchor" href="#go操作rabbitmq" aria-hidden="true">#</a> go操作RabbitMQ</h3>
-<p>🐾👓43. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/43.md" target="_blank" rel="noopener noreferrer">MQ 简介<ExternalLinkIcon/></a></p>
-<p>🐾👓44. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/44.md" target="_blank" rel="noopener noreferrer">RabbitMQ安装<ExternalLinkIcon/></a></p>
-<p>🐾👓30. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/30.md" target="_blank" rel="noopener noreferrer">Simple模式<ExternalLinkIcon/></a></p>
-<p>🐾👓46. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/46.md" target="_blank" rel="noopener noreferrer">Work模式<ExternalLinkIcon/></a></p>
-<p>🐾👓47. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/47.md" target="_blank" rel="noopener noreferrer">Publish模式<ExternalLinkIcon/></a></p>
-<p>🐾👓48. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/48.md" target="_blank" rel="noopener noreferrer">Routing模式<ExternalLinkIcon/></a></p>
-<p>🐾👓49. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/49.md" target="_blank" rel="noopener noreferrer">Topic模式<ExternalLinkIcon/></a></p>
+<p>🐾👓43. <RouterLink to="/Gomd_super/markdown/43.html">MQ 简介</RouterLink></p>
+<p>🐾👓44. <RouterLink to="/Gomd_super/markdown/44.html">RabbitMQ安装</RouterLink></p>
+<p>🐾👓30. <RouterLink to="/Gomd_super/markdown/30.html">Simple模式</RouterLink></p>
+<p>🐾👓46. <RouterLink to="/Gomd_super/markdown/46.html">Work模式</RouterLink></p>
+<p>🐾👓47. <RouterLink to="/Gomd_super/markdown/47.html">Publish模式</RouterLink></p>
+<p>🐾👓48. <RouterLink to="/Gomd_super/markdown/48.html">Routing模式</RouterLink></p>
+<p>🐾👓49. <RouterLink to="/Gomd_super/markdown/49.html">Topic模式</RouterLink></p>
 <h3 id="go操作elasticsearch" tabindex="-1"><a class="header-anchor" href="#go操作elasticsearch" aria-hidden="true">#</a> go操作ElasticSearch</h3>
-<p>🐾👓50. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/50.md" target="_blank" rel="noopener noreferrer">ElasticSearch 介绍<ExternalLinkIcon/></a></p>
-<p>🐾👓51. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/51.md" target="_blank" rel="noopener noreferrer">Elasticsearch安装<ExternalLinkIcon/></a></p>
-<p>🐾👓52. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/52.md" target="_blank" rel="noopener noreferrer">Kibana安装<ExternalLinkIcon/></a></p>
-<p>🐾👓53. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/53.md" target="_blank" rel="noopener noreferrer">操作ElasticSearch<ExternalLinkIcon/></a></p>
+<p>🐾👓50. <RouterLink to="/Gomd_super/markdown/50.html">ElasticSearch 介绍</RouterLink></p>
+<p>🐾👓51. <RouterLink to="/Gomd_super/markdown/51.html">Elasticsearch安装</RouterLink></p>
+<p>🐾👓52. <RouterLink to="/Gomd_super/markdown/52.html">Kibana安装</RouterLink></p>
+<p>🐾👓53. <RouterLink to="/Gomd_super/markdown/53.html">操作ElasticSearch</RouterLink></p>
 <hr>
 <h3 id="go语言常用包" tabindex="-1"><a class="header-anchor" href="#go语言常用包" aria-hidden="true">#</a> Go语言常用包</h3>
-<p>🐾👓54. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/54.md" target="_blank" rel="noopener noreferrer">fmt包<ExternalLinkIcon/></a></p>
-<p>🐾👓55. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/55.md" target="_blank" rel="noopener noreferrer">Time包<ExternalLinkIcon/></a></p>
-<p>🐾👓56. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/56.md" target="_blank" rel="noopener noreferrer">Flag<ExternalLinkIcon/></a></p>
-<p>🐾👓57. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/57.md" target="_blank" rel="noopener noreferrer">Log<ExternalLinkIcon/></a></p>
-<p>🐾👓58. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/58.md" target="_blank" rel="noopener noreferrer">IO操作<ExternalLinkIcon/></a></p>
-<p>🐾👓59. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/59.md" target="_blank" rel="noopener noreferrer">Strconv<ExternalLinkIcon/></a></p>
-<p>🐾👓60. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/60.md" target="_blank" rel="noopener noreferrer">Template<ExternalLinkIcon/></a></p>
-<p>🐾👓61. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/61.md" target="_blank" rel="noopener noreferrer">Http<ExternalLinkIcon/></a></p>
-<p>🐾👓62. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/62.md" target="_blank" rel="noopener noreferrer">Context<ExternalLinkIcon/></a></p>
-<p>🐾👓63. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/63.md" target="_blank" rel="noopener noreferrer">数据格式<ExternalLinkIcon/></a></p>
-<p>🐾👓64. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/64.md" target="_blank" rel="noopener noreferrer">反射<ExternalLinkIcon/></a></p>
+<p>🐾👓54. <RouterLink to="/Gomd_super/markdown/54.html">fmt包</RouterLink></p>
+<p>🐾👓55. <RouterLink to="/Gomd_super/markdown/55.html">Time包</RouterLink></p>
+<p>🐾👓56. <RouterLink to="/Gomd_super/markdown/56.html">Flag</RouterLink></p>
+<p>🐾👓57. <RouterLink to="/Gomd_super/markdown/57.html">Log</RouterLink></p>
+<p>🐾👓58. <RouterLink to="/Gomd_super/markdown/58.html">IO操作</RouterLink></p>
+<p>🐾👓59. <RouterLink to="/Gomd_super/markdown/59.html">Strconv</RouterLink></p>
+<p>🐾👓60. <RouterLink to="/Gomd_super/markdown/60.html">Template</RouterLink></p>
+<p>🐾👓61. <RouterLink to="/Gomd_super/markdown/61.html">Http</RouterLink></p>
+<p>🐾👓62. <RouterLink to="/Gomd_super/markdown/62.html">Context</RouterLink></p>
+<p>🐾👓63. <RouterLink to="/Gomd_super/markdown/63.html">数据格式</RouterLink></p>
+<p>🐾👓64. <RouterLink to="/Gomd_super/markdown/64.html">反射</RouterLink></p>
 <hr>
 <h3 id="beego框架" tabindex="-1"><a class="header-anchor" href="#beego框架" aria-hidden="true">#</a> beego框架</h3>
-<p>🐾👓65. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/65.md" target="_blank" rel="noopener noreferrer">beego框架<ExternalLinkIcon/></a></p>
-<p>🐾👓66. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/66.md" target="_blank" rel="noopener noreferrer">新建项目<ExternalLinkIcon/></a></p>
-<p>🐾👓67. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/67.md" target="_blank" rel="noopener noreferrer">路由设置<ExternalLinkIcon/></a></p>
-<p>🐾👓68. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/68.md" target="_blank" rel="noopener noreferrer">Controller运行机制<ExternalLinkIcon/></a></p>
-<p>🐾👓69. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/69.md" target="_blank" rel="noopener noreferrer">Model逻辑<ExternalLinkIcon/></a></p>
-<p>🐾👓70. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/70.md" target="_blank" rel="noopener noreferrer">View编写<ExternalLinkIcon/></a></p>
-<p>🐾👓71. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/71.md" target="_blank" rel="noopener noreferrer">静态文件处理<ExternalLinkIcon/></a></p>
-<p>🐾👓72. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/72.md" target="_blank" rel="noopener noreferrer">gin简介<ExternalLinkIcon/></a></p>
+<p>🐾👓65. <RouterLink to="/Gomd_super/markdown/65.html">beego框架</RouterLink></p>
+<p>🐾👓66. <RouterLink to="/Gomd_super/markdown/66.html">新建项目</RouterLink></p>
+<p>🐾👓67. <RouterLink to="/Gomd_super/markdown/67.html">路由设置</RouterLink></p>
+<p>🐾👓68. <RouterLink to="/Gomd_super/markdown/68.html">Controller运行机制</RouterLink></p>
+<p>🐾👓69. <RouterLink to="/Gomd_super/markdown/69.html">Model逻辑</RouterLink></p>
+<p>🐾👓70. <RouterLink to="/Gomd_super/markdown/70.html">View编写</RouterLink></p>
+<p>🐾👓71. <RouterLink to="/Gomd_super/markdown/71.html">静态文件处理</RouterLink></p>
+<p>🐾👓72. <RouterLink to="/Gomd_super/markdown/72.html">gin简介</RouterLink></p>
 <hr>
 <h3 id="go高级" tabindex="-1"><a class="header-anchor" href="#go高级" aria-hidden="true">#</a> Go高级</h3>
-<p>🐾👓73. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/73.md" target="_blank" rel="noopener noreferrer">Go跨平台交叉编译<ExternalLinkIcon/></a></p>
-<p>🐾👓74. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/74.md" target="_blank" rel="noopener noreferrer">文件上传<ExternalLinkIcon/></a></p>
-<p>🐾👓75. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/75.md" target="_blank" rel="noopener noreferrer">依赖管理<ExternalLinkIcon/></a></p>
-<p>🐾👓76. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/76.md" target="_blank" rel="noopener noreferrer">高效读取配置信息<ExternalLinkIcon/></a></p>
-<p>🐾👓77. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/77.md" target="_blank" rel="noopener noreferrer">实时读取文件内容<ExternalLinkIcon/></a></p>
+<p>🐾👓73. <RouterLink to="/Gomd_super/markdown/73.html">Go跨平台交叉编译</RouterLink></p>
+<p>🐾👓74. <RouterLink to="/Gomd_super/markdown/74.html">文件上传</RouterLink></p>
+<p>🐾👓75. <RouterLink to="/Gomd_super/markdown/75.html">依赖管理</RouterLink></p>
+<p>🐾👓76. <RouterLink to="/Gomd_super/markdown/76.html">高效读取配置信息</RouterLink></p>
+<p>🐾👓77. <RouterLink to="/Gomd_super/markdown/77.html">实时读取文件内容</RouterLink></p>
 <hr>
 <h3 id="密码学" tabindex="-1"><a class="header-anchor" href="#密码学" aria-hidden="true">#</a> 密码学</h3>
-<p>🐾👓78. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/78.md" target="_blank" rel="noopener noreferrer">哈希算法<ExternalLinkIcon/></a></p>
-<p>🐾👓79. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/79.md" target="_blank" rel="noopener noreferrer">加密解密<ExternalLinkIcon/></a></p>
-<p>🐾👓80. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/80.md" target="_blank" rel="noopener noreferrer">md5<ExternalLinkIcon/></a></p>
-<p>🐾👓81. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/81.md" target="_blank" rel="noopener noreferrer">base64<ExternalLinkIcon/></a></p>
-<p>🐾👓82. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/82.md" target="_blank" rel="noopener noreferrer">sha<ExternalLinkIcon/></a></p>
-<p>🐾👓83. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/83.md" target="_blank" rel="noopener noreferrer">hmac<ExternalLinkIcon/></a></p>
+<p>🐾👓78. <RouterLink to="/Gomd_super/markdown/78.html">哈希算法</RouterLink></p>
+<p>🐾👓79. <RouterLink to="/Gomd_super/markdown/79.html">加密解密</RouterLink></p>
+<p>🐾👓80. <RouterLink to="/Gomd_super/markdown/80.html">md5</RouterLink></p>
+<p>🐾👓81. <RouterLink to="/Gomd_super/markdown/81.html">base64</RouterLink></p>
+<p>🐾👓82. <RouterLink to="/Gomd_super/markdown/82.html">sha</RouterLink></p>
+<p>🐾👓83. <RouterLink to="/Gomd_super/markdown/83.html">hmac</RouterLink></p>
 <hr>
 <h3 id="高级技巧" tabindex="-1"><a class="header-anchor" href="#高级技巧" aria-hidden="true">#</a> 高级技巧</h3>
-<p>🐾👓84. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/84.md" target="_blank" rel="noopener noreferrer">查询结果反射结构体(mysql)<ExternalLinkIcon/></a></p>
-<p>🐾👓85. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/85.md" target="_blank" rel="noopener noreferrer">form(表单）数据绑定结构体<ExternalLinkIcon/></a></p>
-<p>🐾👓86. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/86.md" target="_blank" rel="noopener noreferrer">验证码<ExternalLinkIcon/></a></p>
-<p>🐾👓87. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/87.md" target="_blank" rel="noopener noreferrer">发邮件<ExternalLinkIcon/></a></p>
-<p>🐾👓88. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/88.md" target="_blank" rel="noopener noreferrer">go-admin<ExternalLinkIcon/></a></p>
+<p>🐾👓84. <RouterLink to="/Gomd_super/markdown/84.html">查询结果反射结构体(mysql)</RouterLink></p>
+<p>🐾👓85. <RouterLink to="/Gomd_super/markdown/85.html">form(表单）数据绑定结构体</RouterLink></p>
+<p>🐾👓86. <RouterLink to="/Gomd_super/markdown/86.html">验证码</RouterLink></p>
+<p>🐾👓87. <RouterLink to="/Gomd_super/markdown/87.html">发邮件</RouterLink></p>
+<p>🐾👓88. <RouterLink to="/Gomd_super/markdown/88.html">go-admin</RouterLink></p>
 <hr>
 <h3 id="总结" tabindex="-1"><a class="header-anchor" href="#总结" aria-hidden="true">#</a> 总结</h3>
-<p>🐾👓89. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/89.md" target="_blank" rel="noopener noreferrer">Golang新手可能会踩的58个坑<ExternalLinkIcon/></a></p>
-<p>🐾👓90. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/90.md" target="_blank" rel="noopener noreferrer">总结Go对文件的读取方式<ExternalLinkIcon/></a></p>
-<p>🐾👓91. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/91.md" target="_blank" rel="noopener noreferrer">Go 命令：go test 工具详解<ExternalLinkIcon/></a></p>
-<p>🐾👓92. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/92.md" target="_blank" rel="noopener noreferrer">Go 命令指南<ExternalLinkIcon/></a></p>
-<p>🐾👓93. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/93.md" target="_blank" rel="noopener noreferrer">调试技巧：使用 GDB 调试 Go 程序<ExternalLinkIcon/></a></p>
-<p>🐾👓94. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/94.md" target="_blank" rel="noopener noreferrer">理清 Go 中晦涩难懂的寻址问题<ExternalLinkIcon/></a></p>
-<p>🐾👓95. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/95.md" target="_blank" rel="noopener noreferrer">学习 Go 语言中边界检查<ExternalLinkIcon/></a></p>
-<p>🐾👓96. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/96.md" target="_blank" rel="noopener noreferrer">Go 语言中的内存分配规律及逃逸分析<ExternalLinkIcon/></a></p>
-<p>🐾👓97. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/97.md" target="_blank" rel="noopener noreferrer">测试技巧：单元测试（Unit Test）<ExternalLinkIcon/></a></p>
-<p>🐾👓98. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/98.md" target="_blank" rel="noopener noreferrer">测试技巧：模糊测试（Fuzzing）<ExternalLinkIcon/></a></p>
-<p>🐾👓99. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/99.md" target="_blank" rel="noopener noreferrer">测试技巧：网络测试<ExternalLinkIcon/></a></p>
-<p>🐾👓100. <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/100.md" target="_blank" rel="noopener noreferrer">测试技巧：基准测试（Benchmark）<ExternalLinkIcon/></a></p>
+<p>🐾👓89. <RouterLink to="/Gomd_super/markdown/89.html">Golang新手可能会踩的58个坑</RouterLink></p>
+<p>🐾👓90. <RouterLink to="/Gomd_super/markdown/90.html">总结Go对文件的读取方式</RouterLink></p>
+<p>🐾👓91. <RouterLink to="/Gomd_super/markdown/91.html">Go 命令：go test 工具详解</RouterLink></p>
+<p>🐾👓92. <RouterLink to="/Gomd_super/markdown/92.html">Go 命令指南</RouterLink></p>
+<p>🐾👓93. <RouterLink to="/Gomd_super/markdown/93.html">调试技巧：使用 GDB 调试 Go 程序</RouterLink></p>
+<p>🐾👓94. <RouterLink to="/Gomd_super/markdown/94.html">理清 Go 中晦涩难懂的寻址问题</RouterLink></p>
+<p>🐾👓95. <RouterLink to="/Gomd_super/markdown/95.html">学习 Go 语言中边界检查</RouterLink></p>
+<p>🐾👓96. <RouterLink to="/Gomd_super/markdown/96.html">Go 语言中的内存分配规律及逃逸分析</RouterLink></p>
+<p>🐾👓97. <RouterLink to="/Gomd_super/markdown/97.html">测试技巧：单元测试（Unit Test）</RouterLink></p>
+<p>🐾👓98. <RouterLink to="/Gomd_super/markdown/98.html">测试技巧：模糊测试（Fuzzing）</RouterLink></p>
+<p>🐾👓99. <RouterLink to="/Gomd_super/markdown/99.html">测试技巧：网络测试</RouterLink></p>
+<p>🐾👓100. <RouterLink to="/Gomd_super/markdown/100.html">测试技巧：基准测试（Benchmark）</RouterLink></p>
 <hr>
 <div class="custom-container danger"><p class="custom-container-title">继续往下看</p>
 <p>下面是精心打造的菜鸟成长手册，覆盖有多广~~，喜欢请在GitHub仓库给个♥，不胜感激</p>
