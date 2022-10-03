@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-daf92ea4\",\"path\":\"/markdown/48.html\",\"title\":\"空白页\",\"lang\":\"zh-CN\",\"frontmatter\":{},\"excerpt\":\"\",\"headers\":[],\"git\":{\"updatedTime\":1663169957000,\"contributors\":[{\"name\":\"xiongxinwei\",\"email\":\"3293172751nss@gmail.com\",\"commits\":1}]},\"filePathRelative\":\"markdown/48.md\"}")
