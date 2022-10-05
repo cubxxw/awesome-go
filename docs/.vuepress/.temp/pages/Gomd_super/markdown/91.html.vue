@@ -1,4 +1,4 @@
-<template><div><h1 id="go-命令-go-test-工具详解" tabindex="-1"><a class="header-anchor" href="#go-命令-go-test-工具详解" aria-hidden="true">#</a> Go 命令：go test 工具详解</h1>
+<template><div><h1 id="go-test-工具详解" tabindex="-1"><a class="header-anchor" href="#go-test-工具详解" aria-hidden="true">#</a> go test 工具详解</h1>
 <p>在学习如何编写测试代码之前，需要先了解一下Go 提供的测试工具 ：go test</p>
 <p>go test 本身可以携带很多的参数，熟悉这些参数，可以让我们的测试过程更加方便。</p>
 <p>下面就根据场景来解释一下常用的几个参数：</p>

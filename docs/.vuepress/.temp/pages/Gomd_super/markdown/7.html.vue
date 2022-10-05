@@ -8,7 +8,7 @@
 <li>在WebSocket API中，浏览器和服务器只需要完成一次握手，两者之间就直接可以创建持久性的连接，并进行双向数据传输</li>
 <li>需要安装第三方包：
 <ul>
-<li>cmd中：go get -u -v github.com/gorilla/websocket</li>
+<li>cmd中：<code v-pre>go get -u -v github.com/gorilla/websocket</code></li>
 </ul>
 </li>
 </ul>

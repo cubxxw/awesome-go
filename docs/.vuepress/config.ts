@@ -2,8 +2,8 @@
  * @Description: docker的配置
  * @Author: xiongxinwei 3293172751nss@gmail.com
  * @Date: 2022-09-14 11:48:44
- * @LastEditTime: 2022-10-03 21:15:46
- * @FilePath: \undefinedd:\文档\最近的\docker - 副本\docs\.vuepress\config.ts
+ * @LastEditTime: 2022-10-05 10:39:18
+ * @FilePath: \.vuepress\config.ts
  * @blog: https://nsddd.top
  */
 import { defaultTheme } from 'vuepress'
@@ -218,6 +218,11 @@ export default {
                     // 该元素将一直处于激活状态
                     activeMatch: '/',
                   },
+                  {
+                    text: '⛓️链学社组织',
+                    link: 'https://github.com/C-UB/',
+                    target:'_blank',
+                  }, 
                 ],
             },
             {
@@ -229,11 +234,6 @@ export default {
                 link: 'https://docker.nsddd.top/',
                 target:'_blank',
             },
-            {
-              text: '⛓️链学社组织',
-              link: 'https://github.com/C-UB/',
-              target:'_blank',
-            }, 
             {
                 text: '🔥 Go语言基础篇',
                 link: '/markdown/1.md'

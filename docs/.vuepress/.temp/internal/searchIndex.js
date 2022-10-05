@@ -262,6 +262,21 @@ export const searchIndex = [
     "extraFields": []
   },
   {
+    "title": "Go语言进阶—高级篇代码",
+    "headers": [
+      {
+        "level": 2,
+        "title": "基础篇代码在下面",
+        "slug": "基础篇代码在下面",
+        "link": "#基础篇代码在下面",
+        "children": []
+      }
+    ],
+    "path": "/code/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "位运算以及补码重点",
     "headers": [
       {
@@ -378,6 +393,13 @@ export const searchIndex = [
   {
     "title": "目录结构",
     "headers": [
+      {
+        "level": 2,
+        "title": "Go语言目录结构",
+        "slug": "go语言目录结构",
+        "link": "#go语言目录结构",
+        "children": []
+      },
       {
         "level": 2,
         "title": "Go 目录",
@@ -632,31 +654,16 @@ export const searchIndex = [
           },
           {
             "level": 3,
-            "title": "✨ beta 版本的特性",
-            "slug": "✨-beta-版本的特性",
-            "link": "#✨-beta-版本的特性",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "安装",
-        "slug": "安装-1",
-        "link": "#安装-1",
-        "children": [
-          {
-            "level": 3,
-            "title": "推荐使用 install.sh",
-            "slug": "推荐使用-install-sh-1",
-            "link": "#推荐使用-install-sh-1",
+            "title": "使用 go install",
+            "slug": "使用-go-install",
+            "link": "#使用-go-install",
             "children": []
           },
           {
             "level": 3,
-            "title": "使用 go install",
-            "slug": "使用-go-install",
-            "link": "#使用-go-install",
+            "title": "配置镜像源",
+            "slug": "配置镜像源",
+            "link": "#配置镜像源",
             "children": []
           },
           {
@@ -667,6 +674,13 @@ export const searchIndex = [
             "children": []
           }
         ]
+      },
+      {
+        "level": 2,
+        "title": "✨ beta 版本的特性",
+        "slug": "✨-beta-版本的特性",
+        "link": "#✨-beta-版本的特性",
+        "children": []
       },
       {
         "level": 2,
@@ -5447,9 +5461,9 @@ export const searchIndex = [
     "headers": [
       {
         "level": 2,
-        "title": "1.1.1. Go语言实现UDP通信",
-        "slug": "_1-1-1-go语言实现udp通信",
-        "link": "#_1-1-1-go语言实现udp通信",
+        "title": "Go语言实现UDP通信",
+        "slug": "go语言实现udp通信",
+        "link": "#go语言实现udp通信",
         "children": [
           {
             "level": 3,
@@ -5724,7 +5738,7 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "1. Work模式（工作模式，一个消息只能被一个消费者获取）",
+    "title": "Work模式（工作模式，一个消息只能被一个消费者获取）",
     "headers": [
       {
         "level": 2,
@@ -5794,18 +5808,26 @@ export const searchIndex = [
     "title": "TCP黏包",
     "headers": [
       {
-        "level": 3,
-        "title": "1.1.1. 为什么会出现粘包",
-        "slug": "_1-1-1-为什么会出现粘包",
-        "link": "#_1-1-1-为什么会出现粘包",
+        "level": 2,
+        "title": "为什么会出现粘包",
+        "slug": "为什么会出现粘包",
+        "link": "#为什么会出现粘包",
         "children": []
       },
       {
-        "level": 3,
-        "title": "1.1.2. 解决办法",
-        "slug": "_1-1-2-解决办法",
-        "link": "#_1-1-2-解决办法",
-        "children": []
+        "level": 2,
+        "title": "解决办法",
+        "slug": "解决办法",
+        "link": "#解决办法",
+        "children": [
+          {
+            "level": 3,
+            "title": "服务端代码",
+            "slug": "服务端代码",
+            "link": "#服务端代码",
+            "children": []
+          }
+        ]
       },
       {
         "level": 2,
@@ -7700,7 +7722,7 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "Go 命令：go test 工具详解",
+    "title": "go test 工具详解",
     "headers": [
       {
         "level": 2,

@@ -1,7 +1,8 @@
 <template><div><h2 id="目录" tabindex="-1"><a class="header-anchor" href="#目录" aria-hidden="true">#</a> 目录</h2>
 <blockquote>
-<p>参考Go语言的开源文档、社区资源并且批注</p>
+<p>参考Go语言的开源文档、自己对每一点的补充说明，社区资源并且批注</p>
 </blockquote>
+<p><RouterLink to="/code/">🗃️代码在这里</RouterLink></p>
 <h2 id="go网络编程和并发编程" tabindex="-1"><a class="header-anchor" href="#go网络编程和并发编程" aria-hidden="true">#</a> Go网络编程和并发编程</h2>
 <ul>
 <li>
@@ -26,7 +27,7 @@
 <p>[x] <RouterLink to="/Gomd_super/markdown/7.html">📚💢WebSocket编程🔖</RouterLink></p>
 </li>
 <li>
-<p>[x] <RouterLink to="/Gomd_super/markdown/8.html">📚💢 并发介绍🔖</RouterLink></p>
+<p>[x] <RouterLink to="/Gomd_super/markdown/8.html">📚💢并发介绍🔖</RouterLink></p>
 </li>
 <li>
 <p>[x] <RouterLink to="/Gomd_super/markdown/9.html">📚💢Goroutine🔖</RouterLink></p>
@@ -164,7 +165,7 @@
 <p>[x] <RouterLink to="/Gomd_super/markdown/47.html">📚💢Publish模式🔖</RouterLink></p>
 </li>
 <li>
-<p>[x] <RouterLink to="/Gomd_super/markdown/48.html">📚💢 Routing模式🔖</RouterLink></p>
+<p>[x] <RouterLink to="/Gomd_super/markdown/48.html">📚💢Routing模式🔖</RouterLink></p>
 </li>
 <li>
 <p>[x] <RouterLink to="/Gomd_super/markdown/49.html">📚💢Topic模式🔖</RouterLink></p>

@@ -1,4 +1,4 @@
-<template><div><h1 id="_1-work模式-工作模式-一个消息只能被一个消费者获取" tabindex="-1"><a class="header-anchor" href="#_1-work模式-工作模式-一个消息只能被一个消费者获取" aria-hidden="true">#</a> 1. Work模式（工作模式，一个消息只能被一个消费者获取）</h1>
+<template><div><h1 id="work模式-工作模式-一个消息只能被一个消费者获取" tabindex="-1"><a class="header-anchor" href="#work模式-工作模式-一个消息只能被一个消费者获取" aria-hidden="true">#</a> Work模式（工作模式，一个消息只能被一个消费者获取）</h1>
 <p><img src="https://www.topgoer.com/static/9.3/2.png" alt="img"></p>
 <ul>
 <li>消息产生者将消息放入队列消费者可以有多个,消费者1,消费者2,同时监听同一个队列,消息被消费?C1 C2共同争抢当前的消息队列内容,谁先拿到谁负责消费消息(隐患,高并发情况下,默认会产生某一个消息被多个消费者共同使用,可以设置一个开关(syncronize,与同步锁的性能不一样) 保证一条消息只能被一个消费者使用)</li>
@@ -6,16 +6,24 @@
 </ul>
 <p>目录结构</p>
 <p><img src="https://www.topgoer.com/static/9.3/36.png" alt="img"></p>
-<p>kuteng-RabbitMQ</p>
-<p>-RabbitMQ</p>
-<p>--rabitmq.go //这个是RabbitMQ的封装和Simple模式代码一样</p>
-<p>-SimlpePublish</p>
-<p>--mainSimlpePublish.go //Publish 先启动</p>
-<p>-SimpleRecieve1</p>
-<p>--mainSimpleRecieve.go</p>
-<p>-SimpleRecieve2</p>
-<p>--mainSimpleRecieve.go</p>
-<p><strong>注意</strong></p>
+<div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>kuteng-RabbitMQ
+
+-RabbitMQ
+
+--rabitmq.go //这个是RabbitMQ的封装和Simple模式代码一样
+
+-SimlpePublish
+
+--mainSimlpePublish.go //Publish 先启动
+
+-SimpleRecieve1
+
+--mainSimpleRecieve.go
+
+-SimpleRecieve2
+
+--mainSimpleRecieve.go
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>注意</strong></p>
 <p>Work模式和Simple模式相比代码并没有发生变化只是多了一个消费者</p>
 <p>rabitmq.go代码</p>
 <div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">package</span> RabbitMQ

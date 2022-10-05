@@ -1,15 +1,27 @@
 <template><div><h1 id="tcp编程" tabindex="-1"><a class="header-anchor" href="#tcp编程" aria-hidden="true">#</a> TCP编程</h1>
 <nav class="table-of-contents"><ul><li><router-link to="#go语言实现tcp通信">Go语言实现TCP通信</router-link><ul><li><router-link to="#tcp协议">TCP协议</router-link></li><li><router-link to="#tcp服务端">TCP服务端</router-link></li><li><router-link to="#tcp客户端">TCP客户端</router-link></li></ul></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
+<p>[toc]</p>
 <h2 id="go语言实现tcp通信" tabindex="-1"><a class="header-anchor" href="#go语言实现tcp通信" aria-hidden="true">#</a> Go语言实现TCP通信</h2>
 <h3 id="tcp协议" tabindex="-1"><a class="header-anchor" href="#tcp协议" aria-hidden="true">#</a> TCP协议</h3>
 <p>TCP/IP(Transmission Control Protocol/Internet Protocol) 即传输控制协议/网间协议，是一种面向连接（连接导向）的、可靠的、基于字节流的传输层（Transport layer）通信协议，因为是面向连接的协议，数据像水流一样传输，会存在黏包问题。</p>
+<blockquote>
+<p>tcp通信是服务端先发起的，我们先看一下服务端：</p>
+</blockquote>
 <h3 id="tcp服务端" tabindex="-1"><a class="header-anchor" href="#tcp服务端" aria-hidden="true">#</a> TCP服务端</h3>
 <p>一个TCP服务端可以同时连接很多个客户端，例如世界各地的用户使用自己电脑上的浏览器访问淘宝网。因为Go语言中创建多个goroutine实现并发非常方便和高效，所以我们可以每建立一次链接就创建一个goroutine去处理。</p>
 <p>TCP服务端程序的处理流程：</p>
-<div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>    1.监听端口
-    2.接收客户端请求建立链接
-    3.创建goroutine处理链接。
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>我们使用Go语言的net包实现的TCP服务端代码如下：</p>
+<ol>
+<li>
+<p>监听端口</p>
+</li>
+<li>
+<p>接收客户端请求建立链接</p>
+</li>
+<li>
+<p>创建goroutine处理链接。</p>
+</li>
+</ol>
+<p>我们使用Go语言的net包实现的TCP服务端代码如下：</p>
 <div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token comment">// tcp/server/main.go</span>
 
 <span class="token comment">// TCP server端</span>
@@ -49,10 +61,12 @@
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>将上面的代码保存之后编译成server或server.exe可执行文件。</p>
 <h3 id="tcp客户端" tabindex="-1"><a class="header-anchor" href="#tcp客户端" aria-hidden="true">#</a> TCP客户端</h3>
 <p>一个TCP客户端进行TCP通信的流程如下：</p>
-<div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>    1.建立与服务端的链接
-    2.进行数据收发
-    3.关闭链接
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>使用Go语言的net包实现的TCP客户端代码如下：</p>
+<ol>
+<li>建立与服务端的链接</li>
+<li>进行数据收发</li>
+<li>关闭链接</li>
+</ol>
+<p>使用Go语言的net包实现的TCP客户端代码如下：</p>
 <div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token comment">// tcp/client/main.go</span>
 
 <span class="token comment">// 客户端</span>
