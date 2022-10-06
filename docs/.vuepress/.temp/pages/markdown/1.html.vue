@@ -1,5 +1,5 @@
 <template><div><h1 id="go语言基本语法和数据类型" tabindex="-1"><a class="header-anchor" href="#go语言基本语法和数据类型" aria-hidden="true">#</a> go语言基本语法和数据类型</h1>
-<nav class="table-of-contents"><ul><li><router-link to="#_1-🐧应用场景">1. 🐧应用场景</router-link></li><li><router-link to="#_2-🗃️特点">2.🗃️特点</router-link></li><li><router-link to="#_3-⚒️使用工具">3.⚒️使用工具</router-link></li><li><router-link to="#_4-🔦环境搭建">4.🔦环境搭建</router-link><ul><li><router-link to="#_4-1-windows下搭建go-开发环境-暗转和配置sdk">4.1 Windows下搭建go 开发环境 - 暗转和配置SDK</router-link></li><li><router-link to="#_4-2-linux下搭建go环境">4.2 Linux下搭建go环境</router-link></li></ul></li><li><router-link to="#_5-📘go-语言的快速入门">5. 📘Go 语言的快速入门</router-link><ul><li><router-link to="#go-语言结构">Go 语言结构</router-link></li><li><router-link to="#_5-1go-hello-world-实例">5.1Go Hello World 实例</router-link></li><li><router-link to="#_5-3-执行代码">5.3 执行代码</router-link></li><li><router-link to="#go语言转义字符-escape-char">go语言转义字符（escape char)</router-link></li><li><router-link to="#go语言常见错误和解决方法">go语言常见错误和解决方法</router-link></li></ul></li><li><router-link to="#go语言目录结构">Go语言目录结构</router-link></li><li><router-link to="#go语言基本语法">Go语言基本语法</router-link><ul><li><router-link to="#go-标记">Go 标记</router-link></li><li><router-link to="#行分隔符">行分隔符</router-link></li><li><router-link to="#注释-comment">注释(comment)</router-link></li><li><router-link to="#标识符">标识符</router-link></li><li><router-link to="#字符串连接">字符串连接</router-link></li><li><router-link to="#关键字">关键字</router-link></li><li><router-link to="#go语言的空格">go语言的空格</router-link></li><li><router-link to="#格式化字符串">格式化字符串</router-link></li><li><router-link to="#golang-标准库api文档">golang 标准库api文档</router-link></li><li><router-link to="#dos命令">DOS命令</router-link></li></ul></li><li><router-link to="#语言的数据类型">语言的数据类型</router-link><ul><li><router-link to="#数据类型">数据类型</router-link></li><li><router-link to="#浮点型">浮点型</router-link></li><li><router-link to="#其他数字类型">其他数字类型</router-link></li></ul></li><li><router-link to="#变量">变量</router-link><ul><li><router-link to="#变量声明">变量声明</router-link></li><li><router-link to="#多变量声明">多变量声明</router-link></li><li><router-link to="#实例">实例</router-link></li><li><router-link to="#值类型和引用类型">值类型和引用类型</router-link></li></ul></li><li><router-link to="#简短形式-使用-赋值操作符">简短形式，使用 := 赋值操作符</router-link><ul><li><router-link to="#注意事项">注意事项</router-link></li></ul></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
+<nav class="table-of-contents"><ul><li><router-link to="#_1-🐧应用场景">1. 🐧应用场景</router-link></li><li><router-link to="#_2-🗃️特点">2.🗃️特点</router-link></li><li><router-link to="#_3-⚒️使用工具">3.⚒️使用工具</router-link></li><li><router-link to="#_4-🔦环境搭建">4.🔦环境搭建</router-link><ul><li><router-link to="#_4-1-windows下搭建go-开发环境-暗转和配置sdk">4.1 Windows下搭建go 开发环境 - 暗转和配置SDK</router-link></li><li><router-link to="#_4-2-linux下搭建go环境">4.2 Linux下搭建go环境</router-link></li></ul></li><li><router-link to="#ide-golang">ide：golang</router-link></li><li><router-link to="#_5-📘go-语言的快速入门">5. 📘Go 语言的快速入门</router-link><ul><li><router-link to="#go-语言结构">Go 语言结构</router-link></li><li><router-link to="#_5-1go-hello-world-实例">5.1Go Hello World 实例</router-link></li><li><router-link to="#_5-3-执行代码">5.3 执行代码</router-link></li><li><router-link to="#go语言转义字符-escape-char">go语言转义字符（escape char)</router-link></li><li><router-link to="#go语言常见错误和解决方法">go语言常见错误和解决方法</router-link></li></ul></li><li><router-link to="#go语言目录结构">Go语言目录结构</router-link></li><li><router-link to="#go语言基本语法">Go语言基本语法</router-link><ul><li><router-link to="#go-标记">Go 标记</router-link></li><li><router-link to="#行分隔符">行分隔符</router-link></li><li><router-link to="#注释-comment">注释(comment)</router-link></li><li><router-link to="#标识符">标识符</router-link></li><li><router-link to="#字符串连接">字符串连接</router-link></li><li><router-link to="#关键字">关键字</router-link></li><li><router-link to="#go语言的空格">go语言的空格</router-link></li><li><router-link to="#格式化字符串">格式化字符串</router-link></li><li><router-link to="#golang-标准库api文档">golang 标准库api文档</router-link></li><li><router-link to="#dos命令">DOS命令</router-link></li></ul></li><li><router-link to="#语言的数据类型">语言的数据类型</router-link><ul><li><router-link to="#数据类型">数据类型</router-link></li><li><router-link to="#浮点型">浮点型</router-link></li><li><router-link to="#其他数字类型">其他数字类型</router-link></li></ul></li><li><router-link to="#变量">变量</router-link><ul><li><router-link to="#变量声明">变量声明</router-link></li><li><router-link to="#多变量声明">多变量声明</router-link></li><li><router-link to="#实例">实例</router-link></li><li><router-link to="#值类型和引用类型">值类型和引用类型</router-link></li></ul></li><li><router-link to="#简短形式-使用-赋值操作符">简短形式，使用 := 赋值操作符</router-link><ul><li><router-link to="#注意事项">注意事项</router-link></li></ul></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
 <p>[toc]</p>
 <p>😶‍🌫️go语言官方编程指南：<a href="https://golang.org/#" target="_blank" rel="noopener noreferrer">https://golang.org/#<ExternalLinkIcon/></a></p>
 <blockquote>
@@ -26,6 +26,9 @@
 <p>​	3. 云计算和云服务</p>
 <p>内容分发网络</p>
 <h2 id="_2-🗃️特点" tabindex="-1"><a class="header-anchor" href="#_2-🗃️特点" aria-hidden="true">#</a> 2.🗃️特点</h2>
+<blockquote>
+<p>Go是Google开发的一种静态强类型、编译型、并发型，并具有垃圾回收功能的编程语言。</p>
+</blockquote>
 <p>go语言保证了既能达到静态编译语言的安全与性能，又达到了动态语言开发维护的高效率，使用一个表达式来形容go语言：<code v-pre>go = C +python</code></p>
 <p>​	由此说明go语言既有C静态语言程序运行速度，有能达到python动态语言的快速开发。</p>
 <ul>
@@ -50,6 +53,10 @@
 <li>Go语言管道通信机制</li>
 <li>函数可以返回多个值</li>
 </ul>
+<blockquote>
+<p>Go语言的应用场景也是非常广的：</p>
+<p><img src="@source/markdown/images/image-20221005115036178.png" alt="image-20221005115036178"></p>
+</blockquote>
 <h2 id="_3-⚒️使用工具" tabindex="-1"><a class="header-anchor" href="#_3-⚒️使用工具" aria-hidden="true">#</a> 3.⚒️使用工具</h2>
 <p>​	我使用的工具有两种,分别对应的是window系统和Linux系统</p>
 <pre><code>+ vscode
@@ -78,14 +85,33 @@
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></CodeGroupItem>
 </CodeGroup>
 <h3 id="_4-1-windows下搭建go-开发环境-暗转和配置sdk" tabindex="-1"><a class="header-anchor" href="#_4-1-windows下搭建go-开发环境-暗转和配置sdk" aria-hidden="true">#</a> 4.1 Windows下搭建go 开发环境 - 暗转和配置SDK</h3>
-<p>​	<strong>SDK:software development kit 软件开发工具包</strong></p>
+<blockquote>
+<p>在win环境下安装Go语言（现阶段用<code v-pre>1.18~1.19</code>版本都可以）：</p>
+<ul>
+<li>[x] <a href="https://go.dev/dl/" target="_blank" rel="noopener noreferrer">官方地址<ExternalLinkIcon/></a></li>
+</ul>
+<p><img src="@source/markdown/images/image-20221005115134062.png" alt="image-20221005115134062"></p>
+</blockquote>
+<p>⚠️ 可能出现没办法访问（网络防火墙），我将安装包上传到迅雷。</p>
+<ul>
+<li>[x] <a href="https://pan.xunlei.com/s/VNDaGl3svnHgctoYVReZQ9T_A1?pwd=intg#" target="_blank" rel="noopener noreferrer">迅雷地址<ExternalLinkIcon/></a></li>
+</ul>
+<div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>链接：https://pan.xunlei.com/s/VNDaGl3svnHgctoYVReZQ9T_A1?pwd=intg#
+提取码：intg
+复制这段内容后打开手机迅雷App，查看更方便
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>SDK:software development kit 软件开发工具包</strong></p>
 <p>​	提供给开发者的工具,编译成可执行文件,包括____工具和API____</p>
 <ul>
-<li>官网(需要外网):golang.org.</li>
-<li>msi:是exe文件安装,推荐使用zip类型安装,解压既可以使用.</li>
+<li>官网(需要外网):<code v-pre>golang.org.</code></li>
+<li>msi:是exe文件安装,推荐使用zip类型安装,解压既可以使用</li>
 </ul>
+<p><img src="@source/markdown/images/image-20221005115627681.png" alt="image-20221005115627681"></p>
 <h3 id="_4-2-linux下搭建go环境" tabindex="-1"><a class="header-anchor" href="#_4-2-linux下搭建go环境" aria-hidden="true">#</a> 4.2 Linux下搭建go环境</h3>
-<ul>
+<blockquote>
+<p>Ubuntu的安装地址（centos把<code v-pre>apt</code>换成<code v-pre>yum</code>即可）</p>
+</blockquote>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token function">apt</span> <span class="token function">install</span> golang
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><ul>
 <li>Linux下安装路径建议选择 ```/opt ``</li>
 <li>使用 <code v-pre>uanme -a</code>查看当前Linux的版本号和基本信息.</li>
 <li>使用<code v-pre>ftp</code> 将文件传输到Linux中,或者使用apt(ubuntu) wget下载</li>
@@ -106,6 +132,15 @@
 </li>
 </ol>
 <hr>
+<h2 id="ide-golang" tabindex="-1"><a class="header-anchor" href="#ide-golang" aria-hidden="true">#</a> ide：golang</h2>
+<p><img src="@source/markdown/images/image-20221005120324034.png" alt="image-20221005120324034"></p>
+<blockquote>
+<p>接下来可以愉快的编程了</p>
+</blockquote>
+<p><strong>推荐一个很好用的主题，个人也比较喜欢</strong></p>
+<ul>
+<li>[x] <a href="https://github.com/dracula/jetbrains" target="_blank" rel="noopener noreferrer">https://github.com/dracula/jetbrains<ExternalLinkIcon/></a></li>
+</ul>
 <h2 id="_5-📘go-语言的快速入门" tabindex="-1"><a class="header-anchor" href="#_5-📘go-语言的快速入门" aria-hidden="true">#</a> 5. 📘Go 语言的快速入门</h2>
 <h3 id="go-语言结构" tabindex="-1"><a class="header-anchor" href="#go-语言结构" aria-hidden="true">#</a> Go 语言结构</h3>
 <p>在我们开始学习 Go 编程语言的基础构建模块前，让我们先来了解 Go 语言最简单程序的结构。</p>

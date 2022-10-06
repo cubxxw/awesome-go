@@ -1210,6 +1210,13 @@ export const searchIndex = [
       },
       {
         "level": 2,
+        "title": "ide：golang",
+        "slug": "ide-golang",
+        "link": "#ide-golang",
+        "children": []
+      },
+      {
+        "level": 2,
         "title": "5. 📘Go 语言的快速入门",
         "slug": "_5-📘go-语言的快速入门",
         "link": "#_5-📘go-语言的快速入门",
