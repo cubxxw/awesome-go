@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-2a0fc6cb\",\"path\":\"/go-advancend/design/55.html\",\"title\":\"第55节\",\"lang\":\"zh-CN\",\"frontmatter\":{},\"excerpt\":\"\",\"headers\":[{\"level\":2,\"title\":\"END 链接\",\"slug\":\"end-链接\",\"link\":\"#end-链接\",\"children\":[]}],\"git\":{\"updatedTime\":null,\"contributors\":[]},\"filePathRelative\":\"go-advancend/design/55.md\"}")

@@ -33,7 +33,7 @@
 
 缓冲区中总是有一个存储单元保持未使用状态。缓冲区最多存入（size-1）个数据。如果读写指针指向同一位置，则缓冲区为空。如果写指针位于读指针的相邻后一个位置，则缓冲区为满。
 
-![img](https://s2.loli.net/2022/03/20/6EgmtVuvlj2YMxU.jpg)
+![img](./images/6EgmtVuvlj2YMxU.jpg)
 
 
 
@@ -223,5 +223,3 @@ func recvDirect(t *_type, sg *sudog, dst unsafe.Pointer) {
 ```
 
 
-
-------------------------------------------------

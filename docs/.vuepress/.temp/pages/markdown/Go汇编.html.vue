@@ -42,7 +42,7 @@ func add(a, b int) int {
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>代码片段中的第 1 行，将第 2 个参数<code v-pre>b</code>搬到<code v-pre>AX</code>寄存器；第 2 行将 1 个参数<code v-pre>a</code>搬到寄存器<code v-pre>CX</code>；第 3 行将<code v-pre>a</code>和<code v-pre>b</code>相加，相加的结果搬到<code v-pre>AX</code>；最后一行，将结果搬到返回参数的地址，这段汇编代码非常简单，来看一下函数调用者和被调者的栈帧图：</p>
 <p>(SP) 指栈顶，b+16(SP) 表示裸骑 1 的位置，从 SP 往上增加 16 个字节，注意，前面的 b 仅表示一个标号；同样，a+8(SP) 表示实参 0；~r2+24(SP) 则表示返回值的位置。</p>
 <p>具体可以看下面的图：</p>
-<p><img src="https://s2.loli.net/2022/04/03/FKswDWzxflcYgQt.jpg" alt="img"></p>
+<p><img src="@source/markdown/images/FKswDWzxflcYgQt.jpg" alt="img"></p>
 <p>上面 add 函数的栈帧大小为 0，其实更一般的调用者与被调用者的栈帧示意图如下：</p>
 <p><img src="https://s2.loli.net/2022/04/03/9oOHUtkh4V8T1Ag.jpg" alt="img"></p>
 <p>最后，执行<code v-pre>RET</code>指令。这一步把被调用函数<code v-pre>add</code>栈帧清零, 接着，弹出栈顶的<code v-pre>返回地址</code>，把它赋给指令寄存器<code v-pre>rip</code>，而<code v-pre>返回地址</code>就是<code v-pre>main</code>函数里调用<code v-pre>add</code>函数的下一行。</p>
@@ -101,7 +101,7 @@ func f(s []int) int {
         rel 47+4 t=8 runtime.panicindex+0
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>‍</p>
 <p>通过上面的汇编代码，我们画出函数调用的栈帧图：</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/ASQrEXvmx61SibpScibvDXMdLBeCWAUwlkj8JR2rbpSfiaD8qe966ibWS5Sj0bRGEz5yvUp8cLFd9n9RHzY03L6b0Q/640?wx_fmt=png" alt="img"></p>
+<p><img src="@source/markdown/images/640.jpeg" alt="img"></p>
 <p>我们可以清晰地看到，一个 slice 本质上是用一个数据首地址，一个长度 Len，一个容量 Cap。所以在参数是 slice 的函数里，对 slice 的操作会影响到实参的 slice。</p>
 </div></template>
 

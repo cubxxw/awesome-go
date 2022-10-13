@@ -245,9 +245,10 @@
 <li>
 <p>[x] <RouterLink to="/Gomd_super/markdown/71.html">📚💢静态文件处理🔖</RouterLink></p>
 </li>
-<li>
-<p>[x] <RouterLink to="/Gomd_super/markdown/72.html">📚💢gin简介🔖</RouterLink></p>
-</li>
+</ul>
+<h3 id="gin框架" tabindex="-1"><a class="header-anchor" href="#gin框架" aria-hidden="true">#</a> gin框架</h3>
+<ul>
+<li>[x] <RouterLink to="/Gomd_super/markdown/72.html">📚💢gin简介🔖</RouterLink></li>
 </ul>
 <h3 id="go高级" tabindex="-1"><a class="header-anchor" href="#go高级" aria-hidden="true">#</a> Go高级</h3>
 <ul>

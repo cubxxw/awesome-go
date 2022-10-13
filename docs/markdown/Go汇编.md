@@ -79,7 +79,7 @@ go tool compile -S main.go
 
 
 
-![img](https://s2.loli.net/2022/04/03/FKswDWzxflcYgQt.jpg)
+![img](./images/FKswDWzxflcYgQt.jpg)
 
 
 
@@ -163,7 +163,7 @@ func f(s []int) int {
 
 
 
-![img](https://mmbiz.qpic.cn/mmbiz_png/ASQrEXvmx61SibpScibvDXMdLBeCWAUwlkj8JR2rbpSfiaD8qe966ibWS5Sj0bRGEz5yvUp8cLFd9n9RHzY03L6b0Q/640?wx_fmt=png)
+![img](./images/640.jpeg)
 
 
 
