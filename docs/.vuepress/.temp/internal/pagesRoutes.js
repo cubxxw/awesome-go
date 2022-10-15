@@ -49,7 +49,7 @@ export const pagesRoutes = [
   ["v-184b65bd","/markdown/Go%E6%B1%87%E7%BC%96.html",{"title":"什么是 plan9 汇编"},["/markdown/Go汇编.html","/markdown/Go%E6%B1%87%E7%BC%96","/markdown/Go汇编.md","/markdown/Go%E6%B1%87%E7%BC%96.md"]],
   ["v-3e6edb5a","/markdown/%E4%B9%9D%E5%9E%8B%E4%BA%BA%E6%A0%BC.html",{"title":"九型人格"},["/markdown/九型人格.html","/markdown/%E4%B9%9D%E5%9E%8B%E4%BA%BA%E6%A0%BC","/markdown/九型人格.md","/markdown/%E4%B9%9D%E5%9E%8B%E4%BA%BA%E6%A0%BC.md"]],
   ["v-a7c03efc","/markdown/%E5%8F%8D%E5%B0%84.html",{"title":"Go语言反射"},["/markdown/反射.html","/markdown/%E5%8F%8D%E5%B0%84","/markdown/反射.md","/markdown/%E5%8F%8D%E5%B0%84.md"]],
-  ["v-01dce1e5","/markdown/%E5%B9%B6%E5%8F%91.html",{"title":""},["/markdown/并发.html","/markdown/%E5%B9%B6%E5%8F%91","/markdown/并发.md","/markdown/%E5%B9%B6%E5%8F%91.md"]],
+  ["v-01dce1e5","/markdown/%E5%B9%B6%E5%8F%91.html",{"title":"并发处理"},["/markdown/并发.html","/markdown/%E5%B9%B6%E5%8F%91","/markdown/并发.md","/markdown/%E5%B9%B6%E5%8F%91.md"]],
   ["v-f2ba1714","/go-advancend/design/1.html",{"title":"第1节 设计模式"},["/go-advancend/design/1","/go-advancend/design/1.md"]],
   ["v-4dee9eac","/go-advancend/design/10.html",{"title":"第10节"},["/go-advancend/design/10","/go-advancend/design/10.md"]],
   ["v-4fa3774b","/go-advancend/design/11.html",{"title":"第11节"},["/go-advancend/design/11","/go-advancend/design/11.md"]],

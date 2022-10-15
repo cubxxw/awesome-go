@@ -1,13 +1,13 @@
 <template><div><h1 id="goroutine" tabindex="-1"><a class="header-anchor" href="#goroutine" aria-hidden="true">#</a> Goroutine</h1>
-<nav class="table-of-contents"><ul><li><router-link to="#_1-1-1-goroutine与线程">1.1.1. goroutine与线程</router-link></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
+<nav class="table-of-contents"><ul><li><router-link to="#使用goroutine">使用goroutine</router-link><ul><li><router-link to="#启动单个goroutine">启动单个goroutine</router-link></li><li><router-link to="#启动多个goroutine">启动多个goroutine</router-link></li><li><router-link to="#注意">注意</router-link></li></ul></li><li><router-link to="#goroutine与线程">goroutine与线程</router-link><ul><li><router-link to="#可增长的栈">可增长的栈</router-link></li><li><router-link to="#goroutine调度">goroutine调度</router-link></li></ul></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
 <p>[toc]</p>
 <p>在java/c++中我们要实现并发编程的时候，我们通常需要自己维护一个线程池，并且需要自己去包装一个又一个的任务，同时需要自己去调度线程执行任务并维护上下文切换，这一切通常会耗费程序员大量的心智。那么能不能有一种机制，程序员只需要定义很多个任务，让系统去帮助我们把这些任务分配到CPU上实现并发执行呢？</p>
 <p>Go语言中的goroutine就是这样一种机制，goroutine的概念类似于线程，但 goroutine是由Go的运行时（runtime）调度和管理的。Go程序会智能地将 goroutine 中的任务合理地分配给每个CPU。Go语言之所以被称为现代化的编程语言，就是因为它在语言层面已经内置了调度和上下文切换的机制。</p>
 <p>在Go语言编程中你不需要去自己写进程、线程、协程，你的技能包里只有一个技能–goroutine，当你需要让某个任务并发执行的时候，你只需要把这个任务包装成一个函数，开启一个goroutine去执行这个函数就可以了，就是这么简单粗暴。</p>
-<h4 id="使用goroutine" tabindex="-1"><a class="header-anchor" href="#使用goroutine" aria-hidden="true">#</a> 使用goroutine</h4>
+<h2 id="使用goroutine" tabindex="-1"><a class="header-anchor" href="#使用goroutine" aria-hidden="true">#</a> 使用goroutine</h2>
 <p>Go语言中使用goroutine非常简单，只需要在调用函数的时候在前面加上go关键字，就可以为一个函数创建一个goroutine。</p>
 <p>一个goroutine必定对应一个函数，可以创建多个goroutine去执行相同的函数。</p>
-<h4 id="启动单个goroutine" tabindex="-1"><a class="header-anchor" href="#启动单个goroutine" aria-hidden="true">#</a> 启动单个goroutine</h4>
+<h3 id="启动单个goroutine" tabindex="-1"><a class="header-anchor" href="#启动单个goroutine" aria-hidden="true">#</a> 启动单个goroutine</h3>
 <p>启动goroutine的方式非常简单，只需要在调用的函数（普通函数和匿名函数）前面加上一个go关键字。</p>
 <p>举个例子如下：</p>
 <div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">func</span> <span class="token function">hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -34,7 +34,7 @@
 <span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>执行上面的代码你会发现，这一次先打印main goroutine done!，然后紧接着打印Hello Goroutine!。</p>
 <p>首先为什么会先打印main goroutine done!是因为我们在创建新的goroutine的时候需要花费一些时间，而此时main函数所在的goroutine是继续执行的。</p>
-<h4 id="启动多个goroutine" tabindex="-1"><a class="header-anchor" href="#启动多个goroutine" aria-hidden="true">#</a> 启动多个goroutine</h4>
+<h3 id="启动多个goroutine" tabindex="-1"><a class="header-anchor" href="#启动多个goroutine" aria-hidden="true">#</a> 启动多个goroutine</h3>
 <p>在Go语言中实现并发就是这样简单，我们还可以启动多个goroutine。让我们再来一个例子： （这里使用了sync.WaitGroup来实现goroutine的同步）</p>
 <div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">var</span> wg sync<span class="token punctuation">.</span>WaitGroup
 
@@ -51,7 +51,7 @@
     wg<span class="token punctuation">.</span><span class="token function">Wait</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 等待所有登记的goroutine都结束</span>
 <span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>多次执行上面的代码，会发现每次打印的数字的顺序都不一致。这是因为10个goroutine是并发执行的，而goroutine的调度是随机的。</p>
-<h4 id="注意" tabindex="-1"><a class="header-anchor" href="#注意" aria-hidden="true">#</a> 注意</h4>
+<h3 id="注意" tabindex="-1"><a class="header-anchor" href="#注意" aria-hidden="true">#</a> 注意</h3>
 <ul>
 <li>如果主协程退出了，其他任务还执行吗（运行下面的代码测试一下吧）</li>
 </ul>
@@ -82,10 +82,10 @@
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="_1-1-1-goroutine与线程" tabindex="-1"><a class="header-anchor" href="#_1-1-1-goroutine与线程" aria-hidden="true">#</a> 1.1.1. goroutine与线程</h3>
-<h4 id="可增长的栈" tabindex="-1"><a class="header-anchor" href="#可增长的栈" aria-hidden="true">#</a> 可增长的栈</h4>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="goroutine与线程" tabindex="-1"><a class="header-anchor" href="#goroutine与线程" aria-hidden="true">#</a> goroutine与线程</h2>
+<h3 id="可增长的栈" tabindex="-1"><a class="header-anchor" href="#可增长的栈" aria-hidden="true">#</a> 可增长的栈</h3>
 <p>OS线程（操作系统线程）一般都有固定的栈内存（通常为2MB）,一个goroutine的栈在其生命周期开始时只有很小的栈（典型情况下2KB），goroutine的栈不是固定的，他可以按需增大和缩小，goroutine的栈大小限制可以达到1GB，虽然极少会用到这个大。所以在Go语言中一次创建十万左右的goroutine也是可以的。</p>
-<h4 id="goroutine调度" tabindex="-1"><a class="header-anchor" href="#goroutine调度" aria-hidden="true">#</a> goroutine调度</h4>
+<h3 id="goroutine调度" tabindex="-1"><a class="header-anchor" href="#goroutine调度" aria-hidden="true">#</a> goroutine调度</h3>
 <p>GPM是Go语言运行时（runtime）层面的实现，是go语言自己实现的一套调度系统。区别于操作系统调度OS线程。</p>
 <ul>
 <li>1.G很好理解，就是个goroutine的，里面除了存放本goroutine信息外 还有与所在P的绑定等信息。</li>

@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-2bc49f6a","path":"/go-advancend/design/56.html","title":"\u7B2C56\u8282","lang":"zh-CN","frontmatter":{},"excerpt":"","headers":[{"level":2,"title":"END \u94FE\u63A5","slug":"end-\u94FE\u63A5","link":"#end-\u94FE\u63A5","children":[]}],"git":{"updatedTime":null,"contributors":[]},"filePathRelative":"go-advancend/design/56.md"}');export{e as data};

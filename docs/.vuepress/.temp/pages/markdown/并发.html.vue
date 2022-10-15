@@ -1,5 +1,5 @@
-<template><div><h2 id="并发处理" tabindex="-1"><a class="header-anchor" href="#并发处理" aria-hidden="true">#</a> 并发处理</h2>
-<nav class="table-of-contents"><ul><li><router-link to="#并发处理">并发处理</router-link></li><li><router-link to="#并发处理-1">并发处理</router-link></li><li><router-link to="#并发和并行关系">并发和并行关系</router-link></li><li><router-link to="#程序的顺序执行">程序的顺序执行</router-link></li><li><router-link to="#进程的状态">进程的状态</router-link></li><li><router-link to="#线程的状态">线程的状态</router-link></li><li><router-link to="#线程与进程的区别可以归纳为以下4点">线程与进程的区别可以归纳为以下4点：</router-link></li><li><router-link to="#进程之间的相互制约关系">进程之间的相互制约关系</router-link></li><li><router-link to="#进程互斥概念">进程互斥概念</router-link></li></ul></nav>
+<template><div><h1 id="并发处理" tabindex="-1"><a class="header-anchor" href="#并发处理" aria-hidden="true">#</a> 并发处理</h1>
+<nav class="table-of-contents"><ul><li><router-link to="#并发处理-1">并发处理</router-link></li><li><router-link to="#并发和并行关系">并发和并行关系</router-link></li><li><router-link to="#程序的顺序执行">程序的顺序执行</router-link></li><li><router-link to="#进程的状态">进程的状态</router-link></li><li><router-link to="#线程的状态">线程的状态</router-link></li><li><router-link to="#线程与进程的区别可以归纳为以下4点">线程与进程的区别可以归纳为以下4点：</router-link></li><li><router-link to="#进程之间的相互制约关系">进程之间的相互制约关系</router-link></li><li><router-link to="#进程互斥概念">进程互斥概念</router-link></li></ul></nav>
 <p>[toc]</p>
 <h2 id="并发处理-1" tabindex="-1"><a class="header-anchor" href="#并发处理-1" aria-hidden="true">#</a> 并发处理</h2>
 <p><strong>1. 进程：进程就是程序在操作系统中的一次执行过程，是系统进行资源调度和分配的基本单位</strong></p>

@@ -4457,15 +4457,8 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "",
+    "title": "并发处理",
     "headers": [
-      {
-        "level": 2,
-        "title": "并发处理",
-        "slug": "并发处理",
-        "link": "#并发处理",
-        "children": []
-      },
       {
         "level": 2,
         "title": "并发处理",
@@ -8960,6 +8953,62 @@ export const searchIndex = [
     "headers": [
       {
         "level": 2,
+        "title": "进程和线程",
+        "slug": "进程和线程",
+        "link": "#进程和线程",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "并发和并行",
+        "slug": "并发和并行",
+        "link": "#并发和并行",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "并发",
+        "slug": "并发",
+        "link": "#并发",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "并行",
+        "slug": "并行",
+        "link": "#并行",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "协程和线程",
+        "slug": "协程和线程",
+        "link": "#协程和线程",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "goroutine 只是由官方实现的超级\"线程池\"。",
+        "slug": "goroutine-只是由官方实现的超级-线程池-。",
+        "link": "#goroutine-只是由官方实现的超级-线程池-。",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "并发不是并行：",
+        "slug": "并发不是并行",
+        "link": "#并发不是并行",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "goroutine 奉行通过通信来共享内存，而不是共享内存来通信。",
+        "slug": "goroutine-奉行通过通信来共享内存-而不是共享内存来通信。",
+        "link": "#goroutine-奉行通过通信来共享内存-而不是共享内存来通信。",
+        "children": []
+      },
+      {
+        "level": 2,
         "title": "END 链接",
         "slug": "end-链接",
         "link": "#end-链接",
@@ -9251,11 +9300,55 @@ export const searchIndex = [
     "title": "Goroutine",
     "headers": [
       {
-        "level": 3,
-        "title": "1.1.1. goroutine与线程",
-        "slug": "_1-1-1-goroutine与线程",
-        "link": "#_1-1-1-goroutine与线程",
-        "children": []
+        "level": 2,
+        "title": "使用goroutine",
+        "slug": "使用goroutine",
+        "link": "#使用goroutine",
+        "children": [
+          {
+            "level": 3,
+            "title": "启动单个goroutine",
+            "slug": "启动单个goroutine",
+            "link": "#启动单个goroutine",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "启动多个goroutine",
+            "slug": "启动多个goroutine",
+            "link": "#启动多个goroutine",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "注意",
+            "slug": "注意",
+            "link": "#注意",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "goroutine与线程",
+        "slug": "goroutine与线程",
+        "link": "#goroutine与线程",
+        "children": [
+          {
+            "level": 3,
+            "title": "可增长的栈",
+            "slug": "可增长的栈",
+            "link": "#可增长的栈",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "goroutine调度",
+            "slug": "goroutine调度",
+            "link": "#goroutine调度",
+            "children": []
+          }
+        ]
       },
       {
         "level": 2,
