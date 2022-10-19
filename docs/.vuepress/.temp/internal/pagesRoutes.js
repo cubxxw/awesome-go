@@ -149,7 +149,7 @@ export const pagesRoutes = [
   ["v-0112650d","/go-advancend/design/97.html",{"title":"第97节"},["/go-advancend/design/97","/go-advancend/design/97.md"]],
   ["v-02c73dac","/go-advancend/design/98.html",{"title":"第98节"},["/go-advancend/design/98","/go-advancend/design/98.md"]],
   ["v-047c164b","/go-advancend/design/99.html",{"title":"第99节"},["/go-advancend/design/99","/go-advancend/design/99.md"]],
-  ["v-0a521026","/Gomd_super/markdown/1.html",{"title":"互联网协议介绍"},["/Gomd_super/markdown/1","/Gomd_super/markdown/1.md"]],
+  ["v-0a521026","/Gomd_super/markdown/1.html",{"title":"互联网协议和Goweb编程"},["/Gomd_super/markdown/1","/Gomd_super/markdown/1.md"]],
   ["v-603b0a15","/Gomd_super/markdown/10.html",{"title":"runtime包"},["/Gomd_super/markdown/10","/Gomd_super/markdown/10.md"]],
   ["v-b14d8626","/Gomd_super/markdown/100.html",{"title":"测试技巧：基准测试（Benchmark）"},["/Gomd_super/markdown/100","/Gomd_super/markdown/100.md"]],
   ["v-61efe2b4","/Gomd_super/markdown/11.html",{"title":"Channel"},["/Gomd_super/markdown/11","/Gomd_super/markdown/11.md"]],

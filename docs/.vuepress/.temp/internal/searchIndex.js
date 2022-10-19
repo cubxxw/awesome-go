@@ -6021,8 +6021,15 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "互联网协议介绍",
+    "title": "互联网协议和Goweb编程",
     "headers": [
+      {
+        "level": 2,
+        "title": "前言",
+        "slug": "前言",
+        "link": "#前言",
+        "children": []
+      },
       {
         "level": 2,
         "title": "互联网分层模型",
@@ -6067,6 +6074,35 @@ export const searchIndex = [
       },
       {
         "level": 2,
+        "title": "Go web编程",
+        "slug": "go-web编程",
+        "link": "#go-web编程",
+        "children": [
+          {
+            "level": 3,
+            "title": "URL和DNS解析",
+            "slug": "url和dns解析",
+            "link": "#url和dns解析",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "HTTP 请求包（浏览器信息）",
+            "slug": "http-请求包-浏览器信息",
+            "link": "#http-请求包-浏览器信息",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "HTTP 响应包（服务器信息）",
+            "slug": "http-响应包-服务器信息",
+            "link": "#http-响应包-服务器信息",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
         "title": "END 链接",
         "slug": "end-链接",
         "link": "#end-链接",
@@ -6081,24 +6117,24 @@ export const searchIndex = [
     "title": "runtime包",
     "headers": [
       {
-        "level": 3,
-        "title": "1.1.1. runtime.Gosched()",
-        "slug": "_1-1-1-runtime-gosched",
-        "link": "#_1-1-1-runtime-gosched",
+        "level": 2,
+        "title": "runtime.Gosched()",
+        "slug": "runtime-gosched",
+        "link": "#runtime-gosched",
         "children": []
       },
       {
-        "level": 3,
-        "title": "1.1.2. runtime.Goexit()",
-        "slug": "_1-1-2-runtime-goexit",
-        "link": "#_1-1-2-runtime-goexit",
+        "level": 2,
+        "title": "runtime.Goexit()",
+        "slug": "runtime-goexit",
+        "link": "#runtime-goexit",
         "children": []
       },
       {
-        "level": 3,
-        "title": "1.1.3. runtime.GOMAXPROCS",
-        "slug": "_1-1-3-runtime-gomaxprocs",
-        "link": "#_1-1-3-runtime-gomaxprocs",
+        "level": 2,
+        "title": "runtime.GOMAXPROCS",
+        "slug": "runtime-gomaxprocs",
+        "link": "#runtime-gomaxprocs",
         "children": []
       },
       {
@@ -8052,31 +8088,31 @@ export const searchIndex = [
     "title": "http编程",
     "headers": [
       {
-        "level": 3,
-        "title": "1.1.1. web工作流程",
-        "slug": "_1-1-1-web工作流程",
-        "link": "#_1-1-1-web工作流程",
+        "level": 2,
+        "title": "web工作流程",
+        "slug": "web工作流程",
+        "link": "#web工作流程",
         "children": []
       },
       {
-        "level": 3,
-        "title": "1.1.2. HTTP协议",
-        "slug": "_1-1-2-http协议",
-        "link": "#_1-1-2-http协议",
+        "level": 2,
+        "title": "HTTP协议",
+        "slug": "http协议",
+        "link": "#http协议",
         "children": []
       },
       {
-        "level": 3,
-        "title": "1.1.3. HTTP服务端",
-        "slug": "_1-1-3-http服务端",
-        "link": "#_1-1-3-http服务端",
+        "level": 2,
+        "title": "HTTP服务端",
+        "slug": "http服务端",
+        "link": "#http服务端",
         "children": []
       },
       {
-        "level": 3,
-        "title": "1.1.4. HTTP服务端",
-        "slug": "_1-1-4-http服务端",
-        "link": "#_1-1-4-http服务端",
+        "level": 2,
+        "title": "HTTP服务端",
+        "slug": "http服务端-1",
+        "link": "#http服务端-1",
         "children": []
       },
       {
@@ -8626,18 +8662,54 @@ export const searchIndex = [
     "title": "WebSocket编程",
     "headers": [
       {
-        "level": 3,
-        "title": "1.1.1. webSocket是什么",
-        "slug": "_1-1-1-websocket是什么",
-        "link": "#_1-1-1-websocket是什么",
+        "level": 2,
+        "title": "webSocket是什么",
+        "slug": "websocket是什么",
+        "link": "#websocket是什么",
         "children": []
       },
       {
-        "level": 3,
-        "title": "1.1.2. 举个聊天室的小例子",
-        "slug": "_1-1-2-举个聊天室的小例子",
-        "link": "#_1-1-2-举个聊天室的小例子",
-        "children": []
+        "level": 2,
+        "title": "举个聊天室的小例子",
+        "slug": "举个聊天室的小例子",
+        "link": "#举个聊天室的小例子",
+        "children": [
+          {
+            "level": 3,
+            "title": "server.go文件代码",
+            "slug": "server-go文件代码",
+            "link": "#server-go文件代码",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "hub.go文件代码",
+            "slug": "hub-go文件代码",
+            "link": "#hub-go文件代码",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "data.go文件代码",
+            "slug": "data-go文件代码",
+            "link": "#data-go文件代码",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "connection.go文件代码",
+            "slug": "connection-go文件代码",
+            "link": "#connection-go文件代码",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "local.html文件代码",
+            "slug": "local-html文件代码",
+            "link": "#local-html文件代码",
+            "children": []
+          }
+        ]
       },
       {
         "level": 2,
@@ -9299,6 +9371,35 @@ export const searchIndex = [
   {
     "title": "Goroutine",
     "headers": [
+      {
+        "level": 2,
+        "title": "前言",
+        "slug": "前言",
+        "link": "#前言",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "协程和管道",
+        "slug": "协程和管道",
+        "link": "#协程和管道",
+        "children": [
+          {
+            "level": 3,
+            "title": "#进程",
+            "slug": "进程",
+            "link": "#进程",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "#Go语言协程和Go主线程",
+            "slug": "go语言协程和go主线程",
+            "link": "#go语言协程和go主线程",
+            "children": []
+          }
+        ]
+      },
       {
         "level": 2,
         "title": "使用goroutine",
