@@ -2,8 +2,8 @@
  * @Description: docker的配置
  * @Author: xiongxinwei 3293172751nss@gmail.com
  * @Date: 2022-09-14 11:48:44
- * @LastEditTime: 2022-10-05 10:39:18
- * @FilePath: \.vuepress\config.ts
+ * @LastEditTime: 2022-10-15 17:41:53
+ * @FilePath: \undefinedd:\文档\最近的\awesome-golang\docs\.vuepress\config.ts
  * @blog: https://nsddd.top
  */
 import { defaultTheme } from 'vuepress'
@@ -129,17 +129,56 @@ export default {
         // 配置项  -- 轻量搜索
       }),      
       docsearchPlugin({
-        // 配置项 配置上申请下来的 apiKey、indexName、appId
-        apiKey: '661a2d8409a1b3e5ae62094dca33f10d',
-        indexName: 'awesome-docker',
-        appId: 'LIPIDXUN7V',
-        placeholder: '搜索文档',
-        translations: {
-          button: {
-            buttonText: '搜索文档',
+        apiKey: "e0bc57bb5910bb4cbaff54471af173d4",
+        appId: "LIPIDXUN7V",
+        indexName: "go.nsddd.top",
+        searchParameters: {
+          attributesToSnippet: ["lvl1:30", "content:25"],
+        },
+        locales: {
+          "/": {
+            placeholder: "搜索文档",
+            translations: {
+              button: {
+                buttonText: "搜索文档",
+                buttonAriaLabel: "搜索文档",
+              },
+              modal: {
+                searchBox: {
+                  resetButtonTitle: "清除查询条件",
+                  resetButtonAriaLabel: "清除查询条件",
+                  cancelButtonText: "取消",
+                  cancelButtonAriaLabel: "取消",
+                },
+                startScreen: {
+                  recentSearchesTitle: "搜索历史",
+                  noRecentSearchesText: "没有搜索历史",
+                  saveRecentSearchButtonTitle: "保存至搜索历史",
+                  removeRecentSearchButtonTitle: "从搜索历史中移除",
+                  favoriteSearchesTitle: "收藏",
+                  removeFavoriteSearchButtonTitle: "从收藏中移除",
+                },
+                errorScreen: {
+                  titleText: "无法获取结果",
+                  helpText: "你可能需要检查你的网络连接",
+                },
+                footer: {
+                  selectText: "选择",
+                  navigateText: "切换",
+                  closeText: "关闭",
+                  searchByText: "搜索提供者",
+                },
+                noResultsScreen: {
+                  noResultsText: "无法找到相关结果",
+                  suggestedQueryText: "你可以尝试查询",
+                  reportMissingResultsText: "你认为该查询应该有结果？",
+                  reportMissingResultsLinkText: "点击反馈",
+                },
+              },
+            },
           },
-        }
-    }),
+        },
+      }),
       prismjsPlugin({
         // 配置项  -- 语法高亮
       }),

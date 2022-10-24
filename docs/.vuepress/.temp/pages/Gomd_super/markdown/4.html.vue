@@ -3,9 +3,9 @@
 <p>[toc]</p>
 <h2 id="go语言实现udp通信" tabindex="-1"><a class="header-anchor" href="#go语言实现udp通信" aria-hidden="true">#</a> Go语言实现UDP通信</h2>
 <h3 id="udp协议" tabindex="-1"><a class="header-anchor" href="#udp协议" aria-hidden="true">#</a> UDP协议</h3>
-<p>UDP协议（User Datagram Protocol）中文名称是用户数据报协议，是OSI（Open System Interconnection，开放式系统互联）参考模型中一种无连接的传输层协议，不需要建立连接就能直接进行数据发送和接收，属于不可靠的、没有时序的通信，但是UDP协议的实时性比较好，通常用于视频直播相关领域。</p>
+<p><code v-pre>UDP</code>协议（User Datagram Protocol）中文名称是用户数据报协议，是OSI（Open System Interconnection，开放式系统互联）参考模型中一种无连接的传输层协议，不需要建立连接就能直接进行数据发送和接收，属于不可靠的、没有时序的通信，但是UDP协议的实时性比较好，通常用于视频直播相关领域。</p>
 <h3 id="udp服务端" tabindex="-1"><a class="header-anchor" href="#udp服务端" aria-hidden="true">#</a> UDP服务端</h3>
-<p>使用Go语言的net包实现的UDP服务端代码如下：</p>
+<p>使用<code v-pre>Go</code>语言的<code v-pre>net</code>包实现的<code v-pre>UDP</code>服务端代码如下：</p>
 <div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token comment">// UDP/server/main.go</span>
 
 <span class="token comment">// UDP server端</span>

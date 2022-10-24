@@ -277,6 +277,100 @@ export const searchIndex = [
     "extraFields": []
   },
   {
+    "title": "",
+    "headers": [
+      {
+        "level": 2,
+        "title": "路线图",
+        "slug": "路线图",
+        "link": "#路线图",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "资源",
+        "slug": "资源",
+        "link": "#资源",
+        "children": [
+          {
+            "level": 3,
+            "title": "看书路线",
+            "slug": "看书路线",
+            "link": "#看书路线",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "github上面一些好的Go项目",
+            "slug": "github上面一些好的go项目",
+            "link": "#github上面一些好的go项目",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "开发路线",
+            "slug": "开发路线",
+            "link": "#开发路线",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/go-advancend/go_route.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Go语言高级篇",
+    "headers": [
+      {
+        "level": 2,
+        "title": "⚡ 前言",
+        "slug": "⚡-前言",
+        "link": "#⚡-前言",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "前期知识",
+        "slug": "前期知识",
+        "link": "#前期知识",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "📜目录",
+        "slug": "📜目录",
+        "link": "#📜目录",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "📚 设计模式",
+        "slug": "📚-设计模式",
+        "link": "#📚-设计模式",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "参与贡献",
+        "slug": "参与贡献",
+        "link": "#参与贡献",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "版权声明",
+        "slug": "版权声明",
+        "link": "#版权声明",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "位运算以及补码重点",
     "headers": [
       {
@@ -1103,6 +1197,13 @@ export const searchIndex = [
             "title": "beego框架",
             "slug": "beego框架",
             "link": "#beego框架",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "gin框架",
+            "slug": "gin框架",
+            "link": "#gin框架",
             "children": []
           },
           {
@@ -4356,15 +4457,8 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "",
+    "title": "并发处理",
     "headers": [
-      {
-        "level": 2,
-        "title": "并发处理",
-        "slug": "并发处理",
-        "link": "#并发处理",
-        "children": []
-      },
       {
         "level": 2,
         "title": "并发处理",
@@ -4427,8 +4521,1515 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "互联网协议介绍",
+    "title": "第1节 设计模式",
     "headers": [
+      {
+        "level": 2,
+        "title": "设计模式分类",
+        "slug": "设计模式分类",
+        "link": "#设计模式分类",
+        "children": [
+          {
+            "level": 3,
+            "title": "创建型模式",
+            "slug": "创建型模式",
+            "link": "#创建型模式",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/1.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第10节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/10.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第11节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/11.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第12节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/12.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第13节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/13.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第14节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/14.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第15节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/15.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第16节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/16.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第17节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/17.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第18节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/18.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第19节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/19.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第2节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/2.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第20节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/20.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第21节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/21.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第22节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/22.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第23节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/23.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第24节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/24.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第25节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/25.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第26节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/26.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第27节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/27.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第28节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/28.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第29节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/29.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第3节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/3.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第30节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/30.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第31节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/31.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第32节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/32.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第33节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/33.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第34节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/34.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第35节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/35.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第36节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/36.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第37节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/37.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第38节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/38.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第39节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/39.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第4节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/4.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第40节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/40.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第41节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/41.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第42节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/42.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第43节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/43.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第44节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/44.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第45节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/45.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第46节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/46.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第47节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/47.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第48节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/48.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第49节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/49.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第5节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/5.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第50节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/50.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第51节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/51.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第52节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/52.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第53节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/53.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第54节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/54.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第55节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/55.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第56节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/56.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第57节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/57.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第58节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/58.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第59节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/59.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第6节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/6.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第60节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/60.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第61节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/61.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第62节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/62.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第63节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/63.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第64节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/64.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第65节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/65.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第66节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/66.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第67节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/67.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第68节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/68.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第69节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/69.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第7节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/7.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第70节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/70.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第71节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/71.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第72节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/72.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第73节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/73.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第74节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/74.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第75节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/75.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第76节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/76.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第77节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/77.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第78节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/78.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第79节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/79.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第8节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/8.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第80节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/80.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第81节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/81.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第82节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/82.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第83节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/83.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第84节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/84.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第85节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/85.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第86节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/86.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第87节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/87.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第88节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/88.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第89节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/89.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第9节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/9.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第90节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/90.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第91节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/91.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第92节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/92.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第93节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/93.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第94节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/94.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第95节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/95.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第96节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/96.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第97节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/97.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第98节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/98.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第99节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/99.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "互联网协议和Goweb编程",
+    "headers": [
+      {
+        "level": 2,
+        "title": "前言",
+        "slug": "前言",
+        "link": "#前言",
+        "children": []
+      },
       {
         "level": 2,
         "title": "互联网分层模型",
@@ -4473,6 +6074,35 @@ export const searchIndex = [
       },
       {
         "level": 2,
+        "title": "Go web编程",
+        "slug": "go-web编程",
+        "link": "#go-web编程",
+        "children": [
+          {
+            "level": 3,
+            "title": "URL和DNS解析",
+            "slug": "url和dns解析",
+            "link": "#url和dns解析",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "HTTP 请求包（浏览器信息）",
+            "slug": "http-请求包-浏览器信息",
+            "link": "#http-请求包-浏览器信息",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "HTTP 响应包（服务器信息）",
+            "slug": "http-响应包-服务器信息",
+            "link": "#http-响应包-服务器信息",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
         "title": "END 链接",
         "slug": "end-链接",
         "link": "#end-链接",
@@ -4487,24 +6117,24 @@ export const searchIndex = [
     "title": "runtime包",
     "headers": [
       {
-        "level": 3,
-        "title": "1.1.1. runtime.Gosched()",
-        "slug": "_1-1-1-runtime-gosched",
-        "link": "#_1-1-1-runtime-gosched",
+        "level": 2,
+        "title": "runtime.Gosched()",
+        "slug": "runtime-gosched",
+        "link": "#runtime-gosched",
         "children": []
       },
       {
-        "level": 3,
-        "title": "1.1.2. runtime.Goexit()",
-        "slug": "_1-1-2-runtime-goexit",
-        "link": "#_1-1-2-runtime-goexit",
+        "level": 2,
+        "title": "runtime.Goexit()",
+        "slug": "runtime-goexit",
+        "link": "#runtime-goexit",
         "children": []
       },
       {
-        "level": 3,
-        "title": "1.1.3. runtime.GOMAXPROCS",
-        "slug": "_1-1-3-runtime-gomaxprocs",
-        "link": "#_1-1-3-runtime-gomaxprocs",
+        "level": 2,
+        "title": "runtime.GOMAXPROCS",
+        "slug": "runtime-gomaxprocs",
+        "link": "#runtime-gomaxprocs",
         "children": []
       },
       {
@@ -6458,31 +8088,31 @@ export const searchIndex = [
     "title": "http编程",
     "headers": [
       {
-        "level": 3,
-        "title": "1.1.1. web工作流程",
-        "slug": "_1-1-1-web工作流程",
-        "link": "#_1-1-1-web工作流程",
+        "level": 2,
+        "title": "web工作流程",
+        "slug": "web工作流程",
+        "link": "#web工作流程",
         "children": []
       },
       {
-        "level": 3,
-        "title": "1.1.2. HTTP协议",
-        "slug": "_1-1-2-http协议",
-        "link": "#_1-1-2-http协议",
+        "level": 2,
+        "title": "HTTP协议",
+        "slug": "http协议",
+        "link": "#http协议",
         "children": []
       },
       {
-        "level": 3,
-        "title": "1.1.3. HTTP服务端",
-        "slug": "_1-1-3-http服务端",
-        "link": "#_1-1-3-http服务端",
+        "level": 2,
+        "title": "HTTP服务端",
+        "slug": "http服务端",
+        "link": "#http服务端",
         "children": []
       },
       {
-        "level": 3,
-        "title": "1.1.4. HTTP服务端",
-        "slug": "_1-1-4-http服务端",
-        "link": "#_1-1-4-http服务端",
+        "level": 2,
+        "title": "HTTP服务端",
+        "slug": "http服务端-1",
+        "link": "#http服务端-1",
         "children": []
       },
       {
@@ -7032,18 +8662,54 @@ export const searchIndex = [
     "title": "WebSocket编程",
     "headers": [
       {
-        "level": 3,
-        "title": "1.1.1. webSocket是什么",
-        "slug": "_1-1-1-websocket是什么",
-        "link": "#_1-1-1-websocket是什么",
+        "level": 2,
+        "title": "webSocket是什么",
+        "slug": "websocket是什么",
+        "link": "#websocket是什么",
         "children": []
       },
       {
-        "level": 3,
-        "title": "1.1.2. 举个聊天室的小例子",
-        "slug": "_1-1-2-举个聊天室的小例子",
-        "link": "#_1-1-2-举个聊天室的小例子",
-        "children": []
+        "level": 2,
+        "title": "举个聊天室的小例子",
+        "slug": "举个聊天室的小例子",
+        "link": "#举个聊天室的小例子",
+        "children": [
+          {
+            "level": 3,
+            "title": "server.go文件代码",
+            "slug": "server-go文件代码",
+            "link": "#server-go文件代码",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "hub.go文件代码",
+            "slug": "hub-go文件代码",
+            "link": "#hub-go文件代码",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "data.go文件代码",
+            "slug": "data-go文件代码",
+            "link": "#data-go文件代码",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "connection.go文件代码",
+            "slug": "connection-go文件代码",
+            "link": "#connection-go文件代码",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "local.html文件代码",
+            "slug": "local-html文件代码",
+            "link": "#local-html文件代码",
+            "children": []
+          }
+        ]
       },
       {
         "level": 2,
@@ -7088,27 +8754,48 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "1. gin简介",
+    "title": "gin框架一套解决",
     "headers": [
       {
         "level": 2,
-        "title": "1.1. 介绍",
-        "slug": "_1-1-介绍",
-        "link": "#_1-1-介绍",
+        "title": "介绍",
+        "slug": "介绍",
+        "link": "#介绍",
         "children": []
       },
       {
         "level": 2,
-        "title": "1.2. 安装",
-        "slug": "_1-2-安装",
-        "link": "#_1-2-安装",
+        "title": "要求",
+        "slug": "要求",
+        "link": "#要求",
         "children": []
       },
       {
         "level": 2,
-        "title": "1.3. hello word",
-        "slug": "_1-3-hello-word",
-        "link": "#_1-3-hello-word",
+        "title": "安装",
+        "slug": "安装",
+        "link": "#安装",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "开始",
+        "slug": "开始",
+        "link": "#开始",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "hello word",
+        "slug": "hello-word",
+        "link": "#hello-word",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "gin框架采用的路由库",
+        "slug": "gin框架采用的路由库",
+        "link": "#gin框架采用的路由库",
         "children": []
       },
       {
@@ -7336,6 +9023,62 @@ export const searchIndex = [
   {
     "title": "并发介绍",
     "headers": [
+      {
+        "level": 2,
+        "title": "进程和线程",
+        "slug": "进程和线程",
+        "link": "#进程和线程",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "并发和并行",
+        "slug": "并发和并行",
+        "link": "#并发和并行",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "并发",
+        "slug": "并发",
+        "link": "#并发",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "并行",
+        "slug": "并行",
+        "link": "#并行",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "协程和线程",
+        "slug": "协程和线程",
+        "link": "#协程和线程",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "goroutine 只是由官方实现的超级\"线程池\"。",
+        "slug": "goroutine-只是由官方实现的超级-线程池-。",
+        "link": "#goroutine-只是由官方实现的超级-线程池-。",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "并发不是并行：",
+        "slug": "并发不是并行",
+        "link": "#并发不是并行",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "goroutine 奉行通过通信来共享内存，而不是共享内存来通信。",
+        "slug": "goroutine-奉行通过通信来共享内存-而不是共享内存来通信。",
+        "link": "#goroutine-奉行通过通信来共享内存-而不是共享内存来通信。",
+        "children": []
+      },
       {
         "level": 2,
         "title": "END 链接",
@@ -7629,11 +9372,84 @@ export const searchIndex = [
     "title": "Goroutine",
     "headers": [
       {
-        "level": 3,
-        "title": "1.1.1. goroutine与线程",
-        "slug": "_1-1-1-goroutine与线程",
-        "link": "#_1-1-1-goroutine与线程",
+        "level": 2,
+        "title": "前言",
+        "slug": "前言",
+        "link": "#前言",
         "children": []
+      },
+      {
+        "level": 2,
+        "title": "协程和管道",
+        "slug": "协程和管道",
+        "link": "#协程和管道",
+        "children": [
+          {
+            "level": 3,
+            "title": "#进程",
+            "slug": "进程",
+            "link": "#进程",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "#Go语言协程和Go主线程",
+            "slug": "go语言协程和go主线程",
+            "link": "#go语言协程和go主线程",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "使用goroutine",
+        "slug": "使用goroutine",
+        "link": "#使用goroutine",
+        "children": [
+          {
+            "level": 3,
+            "title": "启动单个goroutine",
+            "slug": "启动单个goroutine",
+            "link": "#启动单个goroutine",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "启动多个goroutine",
+            "slug": "启动多个goroutine",
+            "link": "#启动多个goroutine",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "注意",
+            "slug": "注意",
+            "link": "#注意",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "goroutine与线程",
+        "slug": "goroutine与线程",
+        "link": "#goroutine与线程",
+        "children": [
+          {
+            "level": 3,
+            "title": "可增长的栈",
+            "slug": "可增长的栈",
+            "link": "#可增长的栈",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "goroutine调度",
+            "slug": "goroutine调度",
+            "link": "#goroutine调度",
+            "children": []
+          }
+        ]
       },
       {
         "level": 2,

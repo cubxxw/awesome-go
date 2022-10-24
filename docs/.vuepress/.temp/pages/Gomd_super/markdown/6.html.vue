@@ -1,7 +1,7 @@
 <template><div><h1 id="http编程" tabindex="-1"><a class="header-anchor" href="#http编程" aria-hidden="true">#</a> http编程</h1>
-<nav class="table-of-contents"><ul><li><router-link to="#_1-1-1-web工作流程">1.1.1. web工作流程</router-link></li><li><router-link to="#_1-1-2-http协议">1.1.2. HTTP协议</router-link></li><li><router-link to="#_1-1-3-http服务端">1.1.3. HTTP服务端</router-link></li><li><router-link to="#_1-1-4-http服务端">1.1.4. HTTP服务端</router-link></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
+<nav class="table-of-contents"><ul><li><router-link to="#web工作流程">web工作流程</router-link></li><li><router-link to="#http协议">HTTP协议</router-link></li><li><router-link to="#http服务端">HTTP服务端</router-link></li><li><router-link to="#http服务端-1">HTTP服务端</router-link></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
 <p>[toc]</p>
-<h3 id="_1-1-1-web工作流程" tabindex="-1"><a class="header-anchor" href="#_1-1-1-web工作流程" aria-hidden="true">#</a> 1.1.1. web工作流程</h3>
+<h2 id="web工作流程" tabindex="-1"><a class="header-anchor" href="#web工作流程" aria-hidden="true">#</a> web工作流程</h2>
 <ul>
 <li>Web服务器的工作原理可以简单地归纳为
 <ul>
@@ -12,12 +12,12 @@
 </ul>
 </li>
 </ul>
-<h3 id="_1-1-2-http协议" tabindex="-1"><a class="header-anchor" href="#_1-1-2-http协议" aria-hidden="true">#</a> 1.1.2. HTTP协议</h3>
+<h2 id="http协议" tabindex="-1"><a class="header-anchor" href="#http协议" aria-hidden="true">#</a> HTTP协议</h2>
 <ul>
 <li>超文本传输协议(HTTP，HyperText Transfer Protocol)是互联网上应用最为广泛的一种网络协议，它详细规定了浏览器和万维网服务器之间互相通信的规则，通过因特网传送万维网文档的数据传送协议</li>
 <li>HTTP协议通常承载于TCP协议之上</li>
 </ul>
-<h3 id="_1-1-3-http服务端" tabindex="-1"><a class="header-anchor" href="#_1-1-3-http服务端" aria-hidden="true">#</a> 1.1.3. HTTP服务端</h3>
+<h2 id="http服务端" tabindex="-1"><a class="header-anchor" href="#http服务端" aria-hidden="true">#</a> HTTP服务端</h2>
 <div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">package</span> main
 
 <span class="token keyword">import</span> <span class="token punctuation">(</span>
@@ -47,7 +47,7 @@
     <span class="token comment">// 回复</span>
     w<span class="token punctuation">.</span><span class="token function">Write</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token function">byte</span><span class="token punctuation">(</span><span class="token string">"www.5lmh.com"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="_1-1-4-http服务端" tabindex="-1"><a class="header-anchor" href="#_1-1-4-http服务端" aria-hidden="true">#</a> 1.1.4. HTTP服务端</h3>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="http服务端-1" tabindex="-1"><a class="header-anchor" href="#http服务端-1" aria-hidden="true">#</a> HTTP服务端</h2>
 <div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">package</span> main
 
 <span class="token keyword">import</span> <span class="token punctuation">(</span>

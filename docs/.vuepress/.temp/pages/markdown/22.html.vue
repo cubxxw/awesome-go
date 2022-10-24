@@ -158,23 +158,23 @@ redis> HLEN db
 <p>一个包含哈希表中所有域的表。当 <code v-pre>key</code> 不存在时，返回一个空表。</p>
 </li>
 </ul>
-<div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code># 哈希表非空
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code># 哈希表非空
 
-redis> HMSET website google www.google.com yahoo www.yahoo.com
+redis<span class="token operator">></span> HMSET website google www<span class="token punctuation">.</span>google<span class="token punctuation">.</span>com yahoo www<span class="token punctuation">.</span>yahoo<span class="token punctuation">.</span>com
 OK
 
-redis> HKEYS website
-1) "google"
-2) "yahoo"
+redis<span class="token operator">></span> HKEYS website
+<span class="token number">1</span><span class="token punctuation">)</span> <span class="token string">"google"</span>
+<span class="token number">2</span><span class="token punctuation">)</span> <span class="token string">"yahoo"</span>
 
 
-# 空哈希表/key不存在
+# 空哈希表<span class="token operator">/</span>key不存在
 
-redis> EXISTS fake_key
-(integer) 0
+redis<span class="token operator">></span> EXISTS fake_key
+<span class="token punctuation">(</span>integer<span class="token punctuation">)</span> <span class="token number">0</span>
 
-redis> HKEYS fake_key
-(empty list or set)
+redis<span class="token operator">></span> HKEYS fake_key
+<span class="token punctuation">(</span>empty list or set<span class="token punctuation">)</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>HVALS key</strong></p>
 <p>返回哈希表 <code v-pre>key</code> 中所有域的值。</p>
 <ul>
