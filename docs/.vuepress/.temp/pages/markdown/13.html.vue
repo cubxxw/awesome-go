@@ -1,5 +1,5 @@
-<template><div><h1 id="接口和多态" tabindex="-1"><a class="header-anchor" href="#接口和多态" aria-hidden="true">#</a> 接口和多态</h1>
-<nav class="table-of-contents"><ul><li><router-link to="#接口体现多态">接口体现多态</router-link></li><li><router-link to="#类型断言-如何检测和转换接口变量的类型">类型断言：如何检测和转换接口变量的类型</router-link></li><li><router-link to="#类型判断-type-switch">类型判断：type-switch</router-link></li><li><router-link to="#测试一个值是否实现了某个接口">测试一个值是否实现了某个接口</router-link></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
+<template><div><h1 id="接口和多态、类型断言" tabindex="-1"><a class="header-anchor" href="#接口和多态、类型断言" aria-hidden="true">#</a> 接口和多态、类型断言</h1>
+<nav class="table-of-contents"><ul><li><router-link to="#接口体现多态">接口体现多态</router-link></li><li><router-link to="#结构体接收者和指针接收者实现接口区别">结构体接收者和指针接收者实现接口区别</router-link></li><li><router-link to="#类型断言-–-接口判断类型">类型断言 – 接口判断类型</router-link></li><li><router-link to="#类型断言-如何检测和转换接口变量的类型">类型断言：如何检测和转换接口变量的类型</router-link></li><li><router-link to="#类型判断-type-switch">类型判断：type-switch</router-link></li><li><router-link to="#测试一个值是否实现了某个接口">测试一个值是否实现了某个接口</router-link></li><li><router-link to="#接口嵌套">接口嵌套</router-link></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
 <p>[toc]</p>
 <p>😶‍🌫️go语言官方编程指南：<a href="https://pkg.go.dev/std" target="_blank" rel="noopener noreferrer">https://pkg.go.dev/std<ExternalLinkIcon/></a></p>
 <blockquote>
@@ -64,7 +64,191 @@
 	
 	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>usbArr<span class="token punctuation">)</span>
 <span class="token punctuation">}</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="类型断言-如何检测和转换接口变量的类型" tabindex="-1"><a class="header-anchor" href="#类型断言-如何检测和转换接口变量的类型" aria-hidden="true">#</a> 类型断言：如何检测和转换接口变量的类型</h2>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><details class="custom-container details"><summary>接口实现带参数方法</summary>
+<p>💡简单的一个案例如下：</p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token comment">/*
+ * @Description: 接口带参数方法
+ * @Author: xiongxinwei 3293172751nss@gmail.com
+ * @Date: 2022-10-04 21:37:41
+ * @LastEditTime: 2022-10-25 10:13:45
+ * @FilePath: \code\go-super\30-main.go
+ * @Github_Address: https://github.com/3293172751/cs-awesome-Block_Chain
+ * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://nsddd.top
+ */</span>
+<span class="token keyword">package</span> main
+
+<span class="token keyword">import</span> <span class="token string">"fmt"</span>
+
+<span class="token keyword">type</span> A <span class="token keyword">interface</span> <span class="token punctuation">{</span>
+	<span class="token function">String</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span>
+	<span class="token comment">//get和set方法</span>
+	<span class="token function">GetName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span>
+	<span class="token function">SetName</span><span class="token punctuation">(</span><span class="token builtin">string</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">type</span> A1 <span class="token keyword">struct</span> <span class="token punctuation">{</span>
+	name <span class="token builtin">string</span>
+	age  <span class="token builtin">int64</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token punctuation">(</span>a <span class="token operator">*</span>A1<span class="token punctuation">)</span> <span class="token function">GetName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span> <span class="token punctuation">{</span>
+	<span class="token comment">//可以是指针接收者，也可以是值接收者</span>
+	<span class="token keyword">return</span> a<span class="token punctuation">.</span>name
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token punctuation">(</span>a <span class="token operator">*</span>A1<span class="token punctuation">)</span> <span class="token function">SetName</span><span class="token punctuation">(</span>name <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token comment">//必须是指针接收者</span>
+	a<span class="token punctuation">.</span>name <span class="token operator">=</span> name
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token punctuation">(</span>a <span class="token operator">*</span>A1<span class="token punctuation">)</span> <span class="token function">String</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span> <span class="token punctuation">{</span>
+	<span class="token comment">//打印结构体</span>
+	<span class="token keyword">return</span> fmt<span class="token punctuation">.</span><span class="token function">Sprintf</span><span class="token punctuation">(</span><span class="token string">"name=%v age=%v"</span><span class="token punctuation">,</span> a<span class="token punctuation">.</span>name<span class="token punctuation">,</span> a<span class="token punctuation">.</span>age<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token comment">//实现</span>
+	a1 <span class="token operator">:=</span> <span class="token operator">&amp;</span>A1<span class="token punctuation">{</span>
+		<span class="token comment">//必须是指针</span>
+		name<span class="token punctuation">:</span> <span class="token string">"Tom"</span><span class="token punctuation">,</span>
+		age<span class="token punctuation">:</span>  <span class="token number">20</span><span class="token punctuation">,</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token keyword">var</span> a A <span class="token operator">=</span> a1
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>a<span class="token punctuation">.</span><span class="token function">GetName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+	a<span class="token punctuation">.</span><span class="token function">SetName</span><span class="token punctuation">(</span><span class="token string">"Jack"</span><span class="token punctuation">)</span> <span class="token comment">//修改结构体的值</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>a<span class="token punctuation">.</span><span class="token function">GetName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"a="</span><span class="token punctuation">,</span> a<span class="token punctuation">)</span>
+
+<span class="token punctuation">}</span>
+
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>🚀 编译结果如下：</p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token punctuation">[</span>Running<span class="token punctuation">]</span> go run <span class="token string">"d:\文档\最近的<span class="token entity" title="\a">\a</span>wesome-golang\docs<span class="token entity" title="\c">\c</span>ode\go-super<span class="token entity" title="\t">\t</span>empCodeRunnerFile.go"</span>
+<span class="token assign-left variable">name</span><span class="token operator">=</span>Tom <span class="token assign-left variable">age</span><span class="token operator">=</span><span class="token number">20</span>
+Tom
+Jack
+<span class="token assign-left variable">a</span><span class="token operator">=</span> <span class="token assign-left variable">name</span><span class="token operator">=</span>Jack <span class="token assign-left variable">age</span><span class="token operator">=</span><span class="token number">20</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></details>
+<h2 id="结构体接收者和指针接收者实现接口区别" tabindex="-1"><a class="header-anchor" href="#结构体接收者和指针接收者实现接口区别" aria-hidden="true">#</a> 结构体接收者和指针接收者实现接口区别</h2>
+<p>💡简单的一个案例如下：</p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token comment">/*
+ * @Description: interface
+ * @Author: xiongxinwei 3293172751nss@gmail.com
+ * @Date: 2022-10-04 21:37:41
+ * @LastEditTime: 2022-10-25 10:01:38
+ * @FilePath: \code\go-super\29-main.go
+ * @Github_Address: https://github.com/3293172751/cs-awesome-Block_Chain
+ * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://nsddd.top
+ */</span>
+<span class="token keyword">package</span> main
+
+<span class="token keyword">import</span> <span class="token string">"fmt"</span>
+
+<span class="token keyword">type</span> animal <span class="token keyword">interface</span> <span class="token punctuation">{</span> <span class="token comment">//动物接口</span>
+	<span class="token function">move</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	<span class="token function">eat</span><span class="token punctuation">(</span><span class="token builtin">string</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">type</span> cat <span class="token keyword">struct</span> <span class="token punctuation">{</span> <span class="token comment">//猫结构体</span>
+	name <span class="token builtin">string</span>
+	feet <span class="token builtin">int8</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token punctuation">(</span>c <span class="token operator">*</span>cat<span class="token punctuation">)</span> <span class="token function">move</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">//指针接收者实现接口</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"猫动"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token punctuation">(</span>c <span class="token operator">*</span>cat<span class="token punctuation">)</span> <span class="token function">eat</span><span class="token punctuation">(</span>food <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"猫吃%s\n"</span><span class="token punctuation">,</span> food<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token operator">&amp;</span>cat<span class="token punctuation">{</span><span class="token string">"tom"</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">}</span>
+	<span class="token comment">//注意：接口变量保存的是一个指针，这个指针指向了实现该接口的自定义类型的变量（结构体变量）</span>
+	<span class="token comment">//var a = cat{"tom", 4} 错误写法</span>
+	<span class="token keyword">var</span> ai <span class="token operator">=</span> a
+	ai<span class="token punctuation">.</span><span class="token function">move</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	ai<span class="token punctuation">.</span><span class="token function">eat</span><span class="token punctuation">(</span><span class="token string">"fish"</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">}</span>
+
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>🚀 编译结果如下：</p>
+<div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>猫动
+猫吃fish
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>📜 对上面的解释：</p>
+<blockquote>
+<p>接口变量保存的是一个指针，这个指针指向了实现该接口的自定义类型的变量（结构体变量）</p>
+<p><code v-pre>var a = cat{&quot;tom&quot;, 4}</code> 这个是错误写法</p>
+</blockquote>
+<h2 id="类型断言-–-接口判断类型" tabindex="-1"><a class="header-anchor" href="#类型断言-–-接口判断类型" aria-hidden="true">#</a> 类型断言 – 接口判断类型</h2>
+<details class="custom-container details"><summary>类型断言判断</summary>
+<p>💡简单的一个案例如下：</p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token comment">/*
+ * @Description:类型断言 -- 接口类型转换
+ * @Author: xiongxinwei 3293172751nss@gmail.com
+ * @Date: 2022-10-04 21:37:41
+ * @LastEditTime: 2022-10-25 09:26:03
+ * @FilePath: \code\go-super\28-main.go
+ * @Github_Address: https://github.com/3293172751/cs-awesome-Block_Chain
+ * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://nsddd.top
+ */</span>
+<span class="token keyword">package</span> main
+
+<span class="token keyword">import</span> <span class="token string">"fmt"</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+	<span class="token keyword">var</span> a <span class="token keyword">interface</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+	a <span class="token operator">=</span> <span class="token number">10</span>
+	<span class="token keyword">if</span> v<span class="token punctuation">,</span> ok <span class="token operator">:=</span> a<span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token builtin">float64</span><span class="token punctuation">)</span><span class="token punctuation">;</span> ok <span class="token punctuation">{</span>
+		fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"转换成功,a="</span><span class="token punctuation">,</span> v<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+		fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"转换失败"</span><span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+	a <span class="token operator">=</span> <span class="token number">10.4</span>
+	<span class="token keyword">if</span> v<span class="token punctuation">,</span> ok <span class="token operator">:=</span> a<span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token builtin">float64</span><span class="token punctuation">)</span><span class="token punctuation">;</span> ok <span class="token punctuation">{</span>
+		fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"转换成功,a="</span><span class="token punctuation">,</span> v<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+		fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"转换失败"</span><span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>🚀 编译结果如下：</p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token punctuation">[</span>Running<span class="token punctuation">]</span> go run <span class="token string">"d:\文档\最近的<span class="token entity" title="\a">\a</span>wesome-golang\docs<span class="token entity" title="\c">\c</span>ode\go-super<span class="token entity" title="\2">\2</span>8-main.go"</span>
+转换失败
+转换成功,a<span class="token operator">=</span> <span class="token number">10.4</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>定义一个方法，可以传入任何类型的数据，就然后根据不同的类型，做不同的事情：</strong></p>
+<p>💡简单的一个案例如下：</p>
+<blockquote>
+<p><strong>注意： x.(type)只能结合switch使用</strong></p>
+</blockquote>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token comment">//if-else类型断言</span>
+<span class="token keyword">func</span> <span class="token function">Prints</span><span class="token punctuation">(</span>x <span class="token keyword">interface</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token keyword">if</span> v<span class="token punctuation">,</span> ok <span class="token operator">:=</span> x<span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">)</span><span class="token punctuation">;</span> ok <span class="token punctuation">{</span>
+		fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"x is a int, value is %v"</span><span class="token punctuation">,</span> v<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> v<span class="token punctuation">,</span> ok <span class="token operator">:=</span> x<span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token builtin">string</span><span class="token punctuation">)</span><span class="token punctuation">;</span> ok <span class="token punctuation">{</span>
+		fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"x is a string, value is %v"</span><span class="token punctuation">,</span> v<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+		fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"unsupport type!"</span><span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>同样可以用switch实现：</strong></p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token comment">//使用switch语句，可以判断一个变量是什么类型</span>
+<span class="token keyword">func</span> <span class="token function">switch2</span><span class="token punctuation">(</span>x <span class="token keyword">interface</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token keyword">switch</span> x<span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token keyword">type</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token keyword">case</span> <span class="token builtin">string</span><span class="token punctuation">:</span>
+		fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"x is a string"</span><span class="token punctuation">)</span>
+	<span class="token keyword">case</span> <span class="token builtin">int</span><span class="token punctuation">:</span>
+		fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"x is a int"</span><span class="token punctuation">)</span>
+	<span class="token keyword">case</span> <span class="token builtin">bool</span><span class="token punctuation">:</span>
+		fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"x is a bool"</span><span class="token punctuation">)</span>
+	<span class="token keyword">default</span><span class="token punctuation">:</span>
+		fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"unsupport type!"</span><span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></details>
+<h2 id="类型断言-如何检测和转换接口变量的类型" tabindex="-1"><a class="header-anchor" href="#类型断言-如何检测和转换接口变量的类型" aria-hidden="true">#</a> 类型断言：如何检测和转换接口变量的类型</h2>
 <p>一个接口类型的变量 <code v-pre>varI</code> 中可以包含任何类型的值，必须有一种方式来检测它的 <strong>动态</strong> 类型，即运行时在变量中存储的值的实际类型。在执行过程中动态类型可能会有所不同，但是它总是可以分配给接口变量本身的类型。通常我们可以使用 <strong>类型断言</strong> 来测试在某个时刻 <code v-pre>varI</code> 是否包含类型 <code v-pre>T</code> 的值：</p>
 <div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code>v <span class="token operator">:=</span> varI<span class="token punctuation">.</span><span class="token punctuation">(</span>T<span class="token punctuation">)</span>       <span class="token comment">// unchecked type assertion</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p><strong>varI 必须是一个接口变量</strong>，否则编译器会报错：<code v-pre>invalid type assertion: varI.(T) (non-interface type (type of varI) on left)</code> 。</p>
@@ -193,7 +377,67 @@ default:
 <p><strong>使用接口使代码更具有普适性。</strong></p>
 <p>标准库里到处都使用了这个原则，如果对接口概念没有良好的把握，是不可能理解它是如何构建的。</p>
 <p>在接下来的章节中，我们会讨论两个重要的例子，试着去深入理解它们，这样你就可以更好的应用上面的原则。</p>
-<h2 id="end-链接" tabindex="-1"><a class="header-anchor" href="#end-链接" aria-hidden="true">#</a> END 链接</h2>
+<h2 id="接口嵌套" tabindex="-1"><a class="header-anchor" href="#接口嵌套" aria-hidden="true">#</a> 接口嵌套</h2>
+<p>💡简单的一个案例如下：</p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token comment">/*
+ * @Description:接口嵌套
+ * @Author: xiongxinwei 3293172751nss@gmail.com
+ * @Date: 2022-10-04 21:37:41
+ * @LastEditTime: 2022-10-25 10:32:49
+ * @FilePath: \code\go-super\31-main.go
+ * @Github_Address: https://github.com/3293172751/cs-awesome-Block_Chain
+ * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://nsddd.top
+ */</span>
+<span class="token keyword">package</span> main
+
+<span class="token keyword">import</span> <span class="token string">"fmt"</span>
+
+<span class="token keyword">type</span> Ainterface <span class="token keyword">interface</span> <span class="token punctuation">{</span>
+	<span class="token comment">// A接口</span>
+	<span class="token function">GetName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">type</span> Binterface <span class="token keyword">interface</span> <span class="token punctuation">{</span>
+	<span class="token comment">// B接口</span>
+	<span class="token function">SetName</span><span class="token punctuation">(</span><span class="token builtin">string</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">type</span> Animaler <span class="token keyword">interface</span> <span class="token punctuation">{</span>
+	<span class="token comment">// Animaler接口</span>
+	Ainterface
+	Binterface
+<span class="token punctuation">}</span>
+
+<span class="token keyword">type</span> Dog <span class="token keyword">struct</span> <span class="token punctuation">{</span>
+	<span class="token comment">// Dog</span>
+	name <span class="token builtin">string</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token punctuation">(</span>d <span class="token operator">*</span>Dog<span class="token punctuation">)</span> <span class="token function">GetName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span> <span class="token punctuation">{</span>
+	<span class="token comment">// 实现A接口</span>
+	<span class="token keyword">return</span> d<span class="token punctuation">.</span>name
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token punctuation">(</span>d <span class="token operator">*</span>Dog<span class="token punctuation">)</span> <span class="token function">SetName</span><span class="token punctuation">(</span>name <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token comment">// 实现B接口</span>
+	d<span class="token punctuation">.</span>name <span class="token operator">=</span> name
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	dog <span class="token operator">:=</span> <span class="token operator">&amp;</span>Dog<span class="token punctuation">{</span>
+		name<span class="token punctuation">:</span> <span class="token string">"Tom"</span><span class="token punctuation">,</span>
+	<span class="token punctuation">}</span>
+	<span class="token keyword">var</span> animaler Animaler <span class="token operator">=</span> dog <span class="token comment">//animailer嵌套了Ainterface和Binterface</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>animaler<span class="token punctuation">.</span><span class="token function">GetName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+	animaler<span class="token punctuation">.</span><span class="token function">SetName</span><span class="token punctuation">(</span><span class="token string">"dog1"</span><span class="token punctuation">)</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>animaler<span class="token punctuation">.</span><span class="token function">GetName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>🚀 编译结果如下：</p>
+<div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>[Running] go run "d:\文档\最近的\awesome-golang\docs\code\go-super\31-main.go"
+Tom
+dog1
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="end-链接" tabindex="-1"><a class="header-anchor" href="#end-链接" aria-hidden="true">#</a> END 链接</h2>
 <ul><li><div><a href = '12.md' style='float:left'>⬆️上一节🔗</a><a href = '14.md' style='float: right'>⬇️下一节🔗</a></div></li></ul>
 <ul>
 <li>

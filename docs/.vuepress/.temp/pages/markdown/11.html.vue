@@ -1,5 +1,5 @@
 <template><div><h1 id="golang面对对象思想" tabindex="-1"><a class="header-anchor" href="#golang面对对象思想" aria-hidden="true">#</a> Golang面对对象思想</h1>
-<nav class="table-of-contents"><ul><li><router-link to="#面对对象编程">面对对象编程</router-link></li><li><router-link to="#指定变量值">指定变量值</router-link></li><li><router-link to="#工厂模式">工厂模式</router-link></li><li><router-link to="#抽象">抽象</router-link></li><li><router-link to="#面对对象特征">面对对象特征</router-link></li><li><router-link to="#封装">封装</router-link></li><li><router-link to="#继承">继承</router-link></li><li><router-link to="#继承的深入讨论">继承的深入讨论</router-link></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
+<nav class="table-of-contents"><ul><li><router-link to="#面对对象编程">面对对象编程</router-link></li><li><router-link to="#结构体">结构体</router-link></li><li><router-link to="#指定变量值">指定变量值</router-link></li><li><router-link to="#结构体方法">结构体方法</router-link></li><li><router-link to="#工厂模式">工厂模式</router-link></li><li><router-link to="#抽象">抽象</router-link></li><li><router-link to="#面对对象特征">面对对象特征</router-link></li><li><router-link to="#封装">封装</router-link></li><li><router-link to="#继承">继承</router-link></li><li><router-link to="#继承的深入讨论">继承的深入讨论</router-link></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
 <p>[toc]</p>
 <p>😶‍🌫️go语言官方编程指南：<a href="https://pkg.go.dev/std" target="_blank" rel="noopener noreferrer">https://pkg.go.dev/std<ExternalLinkIcon/></a></p>
 <blockquote>
@@ -21,6 +21,68 @@
 <li>编写结构体方法</li>
 </ol>
 </blockquote>
+<h2 id="结构体" tabindex="-1"><a class="header-anchor" href="#结构体" aria-hidden="true">#</a> 结构体</h2>
+<details class="custom-container details"><summary>结构体创建💡简单的一个案例如下：</summary>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token comment">/*
+ * @Description:结构体
+ * @Author: xiongxinwei 3293172751nss@gmail.com
+ * @Date: 2022-10-04 21:37:41
+ * @LastEditTime: 2022-10-24 18:44:31
+ * @FilePath: \code\go-super\20-main.go
+ * @Github_Address: https://github.com/3293172751/cs-awesome-Block_Chain
+ * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://nsddd.top
+ */</span>
+<span class="token keyword">package</span> main
+
+<span class="token keyword">import</span> <span class="token punctuation">(</span>
+	<span class="token string">"fmt"</span>
+<span class="token punctuation">)</span>
+
+<span class="token keyword">type</span> Person <span class="token keyword">struct</span> <span class="token punctuation">{</span>
+	Name  <span class="token builtin">string</span>
+	Age   <span class="token builtin">int</span>
+	Email <span class="token builtin">string</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token keyword">var</span> p1 Person
+	p1<span class="token punctuation">.</span>Name <span class="token operator">=</span> <span class="token string">"Tom"</span>
+	p1<span class="token punctuation">.</span>Age <span class="token operator">=</span> <span class="token number">20</span>
+	p1<span class="token punctuation">.</span>Email <span class="token operator">=</span> <span class="token string">"3293172751@qq.com"</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"p1="</span><span class="token punctuation">,</span> p1<span class="token punctuation">)</span>
+
+	p2 <span class="token operator">:=</span> Person<span class="token punctuation">{</span><span class="token string">"Jack"</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">,</span> <span class="token string">"xiongxinwei@mail.com"</span><span class="token punctuation">}</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"p2="</span><span class="token punctuation">,</span> p2<span class="token punctuation">)</span>
+
+	p3 <span class="token operator">:=</span> <span class="token operator">&amp;</span>Person<span class="token punctuation">{</span>Name<span class="token punctuation">:</span> <span class="token string">"Mary"</span><span class="token punctuation">,</span> Age<span class="token punctuation">:</span> <span class="token number">40</span><span class="token punctuation">,</span> Email<span class="token punctuation">:</span> <span class="token string">"cub@nsddd.top"</span><span class="token punctuation">}</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"p3="</span><span class="token punctuation">,</span> p3<span class="token punctuation">)</span>
+
+	p4 <span class="token operator">:=</span> <span class="token function">new</span><span class="token punctuation">(</span>Person<span class="token punctuation">)</span>
+	p4<span class="token punctuation">.</span>Name <span class="token operator">=</span> <span class="token string">"Mike"</span>
+	p4<span class="token punctuation">.</span>Age <span class="token operator">=</span> <span class="token number">50</span>
+	p4<span class="token punctuation">.</span>Email <span class="token operator">=</span> <span class="token string">"xxw@nsddd.top"</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"p4="</span><span class="token punctuation">,</span> p4<span class="token punctuation">)</span>
+
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"p1.Email ="</span><span class="token punctuation">,</span> p1<span class="token punctuation">.</span>Email<span class="token punctuation">)</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"p2.Email ="</span><span class="token punctuation">,</span> p2<span class="token punctuation">.</span>Email<span class="token punctuation">)</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"p3.Email ="</span><span class="token punctuation">,</span> p3<span class="token punctuation">.</span>Email<span class="token punctuation">)</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"p4.Email ="</span><span class="token punctuation">,</span> p4<span class="token punctuation">.</span>Email<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>🚀 编译结果如下：</p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token punctuation">[</span>Running<span class="token punctuation">]</span> go run <span class="token string">"d:\文档\最近的<span class="token entity" title="\a">\a</span>wesome-golang\docs<span class="token entity" title="\c">\c</span>ode\go-super<span class="token entity" title="\20">\20</span>-main.go"</span>
+<span class="token assign-left variable">p1</span><span class="token operator">=</span> <span class="token punctuation">{</span>Tom <span class="token number">20</span> <span class="token number">3293172751</span>@qq.com<span class="token punctuation">}</span>
+<span class="token assign-left variable">p2</span><span class="token operator">=</span> <span class="token punctuation">{</span>Jack <span class="token number">30</span> xiongxinwei@mail.com<span class="token punctuation">}</span>
+<span class="token assign-left variable">p3</span><span class="token operator">=</span> <span class="token operator">&amp;</span><span class="token punctuation">{</span>Mary <span class="token number">40</span> cub@nsddd.top<span class="token punctuation">}</span>
+<span class="token assign-left variable">p4</span><span class="token operator">=</span> <span class="token operator">&amp;</span><span class="token punctuation">{</span>Mike <span class="token number">50</span> xxw@nsddd.top<span class="token punctuation">}</span>
+p1.Email <span class="token operator">=</span> <span class="token number">3293172751</span>@qq.com
+p2.Email <span class="token operator">=</span> xiongxinwei@mail.com
+p3.Email <span class="token operator">=</span> cub@nsddd.top
+p4.Email <span class="token operator">=</span> xxw@nsddd.top
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>结构体的值改变：</strong></p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code>	p1<span class="token punctuation">.</span>Email <span class="token operator">=</span> <span class="token string">"x@nsddd.top"</span> <span class="token comment">//修改 p1 的 Email</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"p1.Email ="</span><span class="token punctuation">,</span> p1<span class="token punctuation">.</span>Email<span class="token punctuation">)</span> <span class="token comment">//p1.Email = x@nsddd.top</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div></details>
 <p><strong>案例联系：</strong></p>
 <div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">package</span> main
 
@@ -126,7 +188,7 @@
 
 	<span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><hr>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>🚀 编译结果如下：</p>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token punctuation">[</span>root@mail golang<span class="token punctuation">]</span><span class="token comment"># go build -o main main.go </span>
 <span class="token punctuation">[</span>root@mail golang<span class="token punctuation">]</span><span class="token comment"># ./main</span>
 student的信息 <span class="token assign-left variable">name</span><span class="token operator">=</span><span class="token punctuation">[</span>tom<span class="token punctuation">]</span> <span class="token assign-left variable">gender</span><span class="token operator">=</span><span class="token punctuation">[</span>male<span class="token punctuation">]</span>, <span class="token assign-left variable">age</span><span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">18</span><span class="token punctuation">]</span> <span class="token assign-left variable">id</span><span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">1000</span><span class="token punctuation">]</span> <span class="token assign-left variable">score</span><span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">99.98</span><span class="token punctuation">]</span>
@@ -190,10 +252,50 @@ stu8 <span class="token operator">:=</span> <span class="token operator">&amp;</
 	Age <span class="token punctuation">:</span><span class="token number">59</span><span class="token punctuation">,</span>
 	Name <span class="token punctuation">:</span> <span class="token string">"小李~"</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><hr>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>🚀 编译结果如下：</p>
 <div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code>fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token operator">*</span>stu5<span class="token punctuation">,</span> <span class="token operator">*</span>stu6<span class="token punctuation">,</span> <span class="token operator">*</span>stu7<span class="token punctuation">,</span> <span class="token operator">*</span>stu8<span class="token punctuation">)</span>   <span class="token comment">//取值</span>
 fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>stu5<span class="token punctuation">,</span> stu6<span class="token punctuation">,</span> stu7<span class="token punctuation">,</span> stu8<span class="token punctuation">)</span>   <span class="token comment">//取地址</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="工厂模式" tabindex="-1"><a class="header-anchor" href="#工厂模式" aria-hidden="true">#</a> 工厂模式</h2>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="结构体方法" tabindex="-1"><a class="header-anchor" href="#结构体方法" aria-hidden="true">#</a> 结构体方法</h2>
+<div class="custom-container danger"><p class="custom-container-title">结构体是值类型</p>
+<p>💡简单的一个案例如下：</p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token comment">/*
+ * @Description:结构体的使用
+ * @Author: xiongxinwei 3293172751nss@gmail.com
+ * @Date: 2022-10-04 21:37:41
+ * @LastEditTime: 2022-10-24 18:53:16
+ * @FilePath: \code\go-super\21-main.go
+ * @Github_Address: https://github.com/3293172751/cs-awesome-Block_Chain
+ * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://nsddd.top
+ */</span>
+<span class="token keyword">package</span> main
+
+<span class="token keyword">import</span> <span class="token string">"fmt"</span>
+
+<span class="token keyword">type</span> Person <span class="token keyword">struct</span> <span class="token punctuation">{</span>
+	Name <span class="token builtin">string</span>
+	Age  <span class="token builtin">int</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">type</span> PersonList <span class="token keyword">struct</span> <span class="token punctuation">{</span>
+	Persons <span class="token punctuation">[</span><span class="token punctuation">]</span>Person
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	person <span class="token operator">:=</span> Person<span class="token punctuation">{</span>
+		Name<span class="token punctuation">:</span> <span class="token string">"Tom"</span><span class="token punctuation">,</span>
+		Age<span class="token punctuation">:</span>  <span class="token number">20</span><span class="token punctuation">,</span>
+	<span class="token punctuation">}</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"person="</span><span class="token punctuation">,</span> person<span class="token punctuation">)</span>
+	persone2 <span class="token operator">:=</span> person
+	persone2<span class="token punctuation">.</span>Name <span class="token operator">=</span> <span class="token string">"Jack"</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"person="</span><span class="token punctuation">,</span> persone2<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>🚀 编译结果如下：</p>
+<div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>[Running] go run "d:\文档\最近的\awesome-golang\docs\code\go-super\21-main.go"
+person= {Tom 20}
+person= {Jack 20}
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div>
+<h2 id="工厂模式" tabindex="-1"><a class="header-anchor" href="#工厂模式" aria-hidden="true">#</a> 工厂模式</h2>
 <p><strong>Golang中没有构造函数，通常可以用工厂模式来解决问题</strong></p>
 <blockquote>
 <p>当我们的结构体首字母是大写的可以在其他包使用这个结构体,<strong>那么如果我们希望小写的也能在其他包使用,此时就需要工厂模式来解决,使用工厂模式实现挎包访问结构体实例</strong></p>

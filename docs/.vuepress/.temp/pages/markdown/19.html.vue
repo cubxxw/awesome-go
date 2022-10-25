@@ -1,5 +1,5 @@
 <template><div><h1 id="channel-管道" tabindex="-1"><a class="header-anchor" href="#channel-管道" aria-hidden="true">#</a> channel(管道)</h1>
-<nav class="table-of-contents"><ul><li><router-link to="#channel-管道-1">channel(管道)</router-link></li><li><router-link to="#chan底层分析">chan底层分析</router-link></li><li><router-link to="#channel关闭">channel关闭</router-link></li><li><router-link to="#channel的遍历">channel的遍历</router-link></li><li><router-link to="#goroutine-和-channel结合">goroutine 和 channel结合</router-link></li><li><router-link to="#channel使用细节">channel使用细节</router-link></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
+<nav class="table-of-contents"><ul><li><router-link to="#channel-管道-1">channel(管道)</router-link></li><li><router-link to="#chan底层分析">chan底层分析</router-link></li><li><router-link to="#channel关闭">channel关闭</router-link></li><li><router-link to="#channel的遍历">channel的遍历</router-link></li><li><router-link to="#goroutine-和-channel结合">goroutine 和 channel结合</router-link></li><li><router-link to="#统计素数">统计素数</router-link></li><li><router-link to="#channel使用细节">channel使用细节</router-link></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
 <p>[toc]</p>
 <p>😶‍🌫️go语言官方编程指南：<a href="https://golang.org/#" target="_blank" rel="noopener noreferrer">https://golang.org/#<ExternalLinkIcon/></a></p>
 <blockquote>
@@ -12,14 +12,28 @@
 <p>❤️💕💕关于区块链技术，可以关注我，共同学习更多的区块链技术。博客<a href="http://nsddd.top" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
 </blockquote>
 <hr>
+<details class="custom-container details"><summary>不同的协程如何通信？</summary>
+<p>方法：</p>
+<ol>
+<li>全局变量加锁同步</li>
+<li>channel</li>
+</ol>
+<p><strong>因为没有对全局变量加锁，因此会出现资源争夺的问题，代码会出现错误，此时要解决的话可以加入互斥锁</strong></p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code>time<span class="token punctuation">.</span><span class="token function">Sleep</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token operator">*</span>time<span class="token punctuation">.</span>Second<span class="token punctuation">)</span>
+lock<span class="token punctuation">.</span><span class="token function">Lock</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> k<span class="token punctuation">,</span>v <span class="token operator">:=</span> <span class="token keyword">range</span> m<span class="token punctuation">{</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token operator">%</span>d <span class="token operator">!=</span> <span class="token operator">%</span>v\n"<span class="token punctuation">,</span>k<span class="token punctuation">,</span>v<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+lock<span class="token punctuation">.</span><span class="token function">Unlock</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>⬇️ 或许你还可以使用管道</p>
+</details>
 <h2 id="channel-管道-1" tabindex="-1"><a class="header-anchor" href="#channel-管道-1" aria-hidden="true">#</a> channel(管道)</h2>
 <p><strong>演示管道使用</strong></p>
 <p><strong>channel初始化：</strong></p>
 <div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">var</span> intChan <span class="token keyword">chan</span> <span class="token builtin">int</span> 
 intChan <span class="token operator">=</span> <span class="token function">make</span><span class="token punctuation">(</span><span class="token keyword">chan</span> <span class="token builtin">int</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">)</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><div class="custom-container danger"><p class="custom-container-title">管道是引用数据类型</p>
 <p>一定要使用make不然会报错</p>
-</blockquote>
 <div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">package</span> main
 <span class="token keyword">import</span><span class="token punctuation">(</span>
 	<span class="token string">"fmt"</span>
@@ -38,7 +52,122 @@ intChan <span class="token operator">=</span> <span class="token function">make<
 intchan 本身的值为: 0xc00001e080
 intchan 本身的地址：0xc00000e028
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>由此可见，管道是一个地址</strong></p>
-<p><img src="https://s2.loli.net/2022/03/20/eRdMEkUaCY2PpTW.png" alt="image-20220320114737171"></p>
+</div>
+<div class="custom-container tip"><p class="custom-container-title">管道的基本操作</p>
+<p>💡简单的一个案例如下：</p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token comment">/*
+ * @Description:channel管道
+ * @Author: xiongxinwei 3293172751nss@gmail.com
+ * @Date: 2022-10-04 21:37:41
+ * @LastEditTime: 2022-10-25 14:39:30
+ * @FilePath: \code\go-super\37-main.go
+ * @Github_Address: https://github.com/3293172751/cs-awesome-Block_Chain
+ * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://nsddd.top
+ */</span>
+<span class="token keyword">package</span> main
+
+<span class="token keyword">import</span> <span class="token punctuation">(</span>
+	<span class="token string">"fmt"</span>
+<span class="token punctuation">)</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token comment">//创建一个管道</span>
+	ch <span class="token operator">:=</span> <span class="token function">make</span><span class="token punctuation">(</span><span class="token keyword">chan</span> <span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span> <span class="token comment">//管道的容量是10</span>
+
+	<span class="token comment">//给管l道中写入数据</span>
+	ch <span class="token operator">&lt;-</span> <span class="token number">10</span>
+	ch <span class="token operator">&lt;-</span> <span class="token number">20</span>
+	ch <span class="token operator">&lt;-</span> <span class="token number">30</span>
+	ch <span class="token operator">&lt;-</span> <span class="token number">40</span>
+
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"len(ch) = "</span><span class="token punctuation">,</span> <span class="token function">len</span><span class="token punctuation">(</span>ch<span class="token punctuation">)</span><span class="token punctuation">)</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"cap(ch) = "</span><span class="token punctuation">,</span> <span class="token function">cap</span><span class="token punctuation">(</span>ch<span class="token punctuation">)</span><span class="token punctuation">)</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"ch = "</span><span class="token punctuation">,</span> ch<span class="token punctuation">)</span>
+
+	<span class="token comment">//从管道中读取数据</span>
+	num <span class="token operator">:=</span> <span class="token operator">&lt;-</span>ch
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"num = "</span><span class="token punctuation">,</span> num<span class="token punctuation">)</span>   <span class="token comment">//10</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"再读取一个数据"</span><span class="token punctuation">,</span> <span class="token operator">&lt;-</span>ch<span class="token punctuation">)</span> <span class="token comment">//20</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"再读取一个数据"</span><span class="token punctuation">,</span> <span class="token operator">&lt;-</span>ch<span class="token punctuation">)</span> <span class="token comment">//30</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"再读取一个数据"</span><span class="token punctuation">,</span> <span class="token operator">&lt;-</span>ch<span class="token punctuation">)</span> <span class="token comment">//40</span>
+	<span class="token comment">//fmt.Println("再读取一个数据", &lt;-ch) //error: all goroutines are asleep - deadlock!</span>
+
+	<span class="token comment">//继续批量存储数据</span>
+	ch <span class="token operator">&lt;-</span> <span class="token number">50</span>
+	ch <span class="token operator">&lt;-</span> <span class="token number">150</span>
+	ch <span class="token operator">&lt;-</span> <span class="token number">250</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"len(ch) = "</span><span class="token punctuation">,</span> <span class="token function">len</span><span class="token punctuation">(</span>ch<span class="token punctuation">)</span><span class="token punctuation">)</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"cap(ch) = "</span><span class="token punctuation">,</span> <span class="token function">cap</span><span class="token punctuation">(</span>ch<span class="token punctuation">)</span><span class="token punctuation">)</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"ch = "</span><span class="token punctuation">,</span> ch<span class="token punctuation">)</span>
+
+	<span class="token comment">//遍历管道</span>
+	<span class="token keyword">for</span> i <span class="token operator">:=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token function">len</span><span class="token punctuation">(</span>ch<span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span> i<span class="token operator">++</span> <span class="token punctuation">{</span>
+		num <span class="token operator">=</span> <span class="token operator">&lt;-</span>ch
+		fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"num = "</span><span class="token punctuation">,</span> num<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>🚀 编译结果如下：</p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token punctuation">[</span>Running<span class="token punctuation">]</span> go run <span class="token string">"d:\文档\最近的<span class="token entity" title="\a">\a</span>wesome-golang\docs<span class="token entity" title="\c">\c</span>ode\go-super<span class="token entity" title="\37">\37</span>-main.go"</span>
+len<span class="token punctuation">(</span>ch<span class="token punctuation">)</span> <span class="token operator">=</span>  <span class="token number">4</span>
+cap<span class="token punctuation">(</span>ch<span class="token punctuation">)</span> <span class="token operator">=</span>  <span class="token number">10</span>
+ch <span class="token operator">=</span>  0xc000110000
+num <span class="token operator">=</span>  <span class="token number">10</span>
+再读取一个数据 <span class="token number">20</span>
+再读取一个数据 <span class="token number">30</span>
+再读取一个数据 <span class="token number">40</span>
+len<span class="token punctuation">(</span>ch<span class="token punctuation">)</span> <span class="token operator">=</span>  <span class="token number">3</span>
+cap<span class="token punctuation">(</span>ch<span class="token punctuation">)</span> <span class="token operator">=</span>  <span class="token number">10</span>
+ch <span class="token operator">=</span>  0xc000110000
+num <span class="token operator">=</span>  <span class="token number">50</span>
+num <span class="token operator">=</span>  <span class="token number">150</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>注意 ⚠️：</p>
+<p><code v-pre>fmt.Println(&quot;再读取一个数据&quot;, &lt;-ch)</code>  ：error: all goroutines are asleep - deadlock!</p>
+<p><strong>管道阻塞引起死锁，所以一定要注意管道容量~</strong></p>
+<p>遍历管道，我们发现上面的后面加入<code v-pre>250</code>并没有打印</p>
+<blockquote>
+<p><strong>for循环遍历管道的时候管道可以不关闭，但是for-range必须要关闭，但是我的for遍历好像会出现数据丢失，不知道什么原因</strong></p>
+</blockquote>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">for</span> i <span class="token operator">:=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token function">len</span><span class="token punctuation">(</span>ch<span class="token punctuation">)</span><span class="token punctuation">;</span> i<span class="token operator">++</span> <span class="token punctuation">{</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"i = "</span><span class="token punctuation">,</span> <span class="token operator">&lt;-</span>ch<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>或许我们可以使用<code v-pre>for-range</code>遍历：</p>
+<ul>
+<li>再此之前，你需要使用 <code v-pre>close(ch)</code> 关闭管道</li>
+<li>管道里面是没有<code v-pre>key</code></li>
+</ul>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token comment">//遍历管道</span>
+<span class="token keyword">for</span> v <span class="token operator">:=</span> <span class="token keyword">range</span> ch <span class="token punctuation">{</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"v = "</span><span class="token punctuation">,</span> v<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>只使用for也是一样的：</strong></p>
+<p><strong>不能关闭管道，不然没法取出</strong></p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token comment">//关闭unbuffered channel</span>
+<span class="token function">close</span><span class="token punctuation">(</span>ch<span class="token punctuation">)</span>
+<span class="token keyword">for</span> <span class="token punctuation">{</span>
+	val<span class="token punctuation">,</span> ok <span class="token operator">:=</span> <span class="token operator">&lt;-</span>ch 
+	<span class="token keyword">if</span> <span class="token operator">!</span>ok <span class="token punctuation">{</span>
+		fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"读取完毕"</span><span class="token punctuation">)</span>
+		<span class="token keyword">break</span>
+	<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+		fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"var = "</span><span class="token punctuation">,</span> val<span class="token punctuation">)</span> <span class="token comment">//不断读取管道中的数据</span>
+	<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>给定make值，因为len(ch)长度会变化：</strong></p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">for</span> i <span class="token operator">:=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span><span class="token number">2</span><span class="token punctuation">;</span> i<span class="token operator">++</span> <span class="token punctuation">{</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"i = "</span><span class="token punctuation">,</span> <span class="token operator">&lt;-</span>ch<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>💡 上面的方法不需要关闭管道。</p>
+</div>
+<details class="custom-container details"><summary>截图案例</summary>
+<p><img src="http://sm.nsddd.top/smimage-20221025150553321.png" alt="image-20221025150553321"></p>
+<p><img src="http://sm.nsddd.top/smimage-20221025150456599.png" alt="image-20221025150456599"></p>
+<p><img src="http://sm.nsddd.top/smimage-20221025150403386.png" alt="image-20221025150403386"></p>
+<p><img src="http://sm.nsddd.top/smimage-20221025150523179.png" alt="image-20221025150523179"></p>
+<p><img src="http://sm.nsddd.top/smimage-20221025151321673.png" alt="image-20221025151321673"></p>
+<p><img src="http://sm.nsddd.top/smimage-20221025151331434.png" alt="image-20221025151331434"></p>
+<p><img src="http://sm.nsddd.top/smimage-20221025150718790.png" alt="image-20221025150718790"></p>
+</details>
 <blockquote>
 <p>管道是一个应用类型，使用函数变化的是地址</p>
 </blockquote>
@@ -103,8 +232,7 @@ channel len <span class="token operator">=</span> <span class="token number">1</
 cap <span class="token operator">=</span> <span class="token number">3</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>管道的数据可以直接扔掉，没有接收的变量</strong></p>
 <div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token operator">&lt;-</span> intChan    <span class="token comment">//直接扔掉</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><hr>
-<h2 id="chan底层分析" tabindex="-1"><a class="header-anchor" href="#chan底层分析" aria-hidden="true">#</a> chan底层分析</h2>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h2 id="chan底层分析" tabindex="-1"><a class="header-anchor" href="#chan底层分析" aria-hidden="true">#</a> chan底层分析</h2>
 <details class="custom-container details"><summary>进入chan底层分析</summary>
 <p><a href="chan%E5%BA%95%E5%B1%82%E5%88%86%E6%9E%90">⚡ chan底层分析</a></p>
 </details>
@@ -137,7 +265,7 @@ allChan <span class="token operator">=</span> <span class="token function">make<
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>🚀 编译结果如下：</p>
 <div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>a= 100
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h2 id="channel的遍历" tabindex="-1"><a class="header-anchor" href="#channel的遍历" aria-hidden="true">#</a> channel的遍历</h2>
-<p><strong>channel的遍历==只能使用<code v-pre>for-range</code>遍历，不可以使用普通的for循环==,因为长度会变化</strong></p>
+<p><strong>channel的遍历只能使用<code v-pre>for-range</code>遍历，不可以使用普通的for循环,因为长度会变化，当然你可以给定make的固定值。</strong></p>
 <p><strong>情况：</strong></p>
 <ol>
 <li><strong>遍历时，channel没有关闭，出现deadlock的错误</strong></li>
@@ -235,11 +363,12 @@ writeData <span class="token number">8</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
 <p>当我们make的管道容量很小，但是存入的数据很多，那么此时会出现诸塞</p>
 </blockquote>
-<hr>
+<h2 id="统计素数" tabindex="-1"><a class="header-anchor" href="#统计素数" aria-hidden="true">#</a> 统计素数</h2>
 <blockquote>
-<p>我们回到开始的那一个问题，一个需求,统计1~80000中有哪些素数</p>
+<p>我们回到开始的那一个问题，一个需求,统计<code v-pre>1~80000</code>中有哪些素数</p>
 <p>我们当时想到的方法是将统计素数的任务分配给4个CPU去做（我只有4个<strong>并行</strong>，用8个<strong>并发</strong></p>
 </blockquote>
+<details class="custom-container details"><summary>主要思路</summary>
 <div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">package</span> main
 <span class="token keyword">import</span> <span class="token punctuation">(</span>
 	<span class="token string">"fmt"</span>
@@ -421,6 +550,7 @@ label          <span class="token comment">//标签，重新读取数据</span>
 <p>✴️版权声明 © :本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>
 </li>
 </ul>
+</details>
 </div></template>
 
 

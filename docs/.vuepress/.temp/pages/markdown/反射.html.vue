@@ -1,5 +1,5 @@
-<template><div><h1 id="go语言反射" tabindex="-1"><a class="header-anchor" href="#go语言反射" aria-hidden="true">#</a> Go语言反射</h1>
-<nav class="table-of-contents"><ul><li><router-link to="#反射">反射</router-link><ul><li><router-link to="#反射的基本介绍">反射的基本介绍</router-link></li><li><router-link to="#反射应用场景">反射应用场景</router-link></li><li><router-link to="#反射重要概念❤️">反射重要概念❤️</router-link></li><li><router-link to="#反射入门案列">反射入门案列</router-link></li><li><router-link to="#反射注意事项">反射注意事项</router-link></li><li><router-link to="#反射最佳案例">反射最佳案例</router-link></li></ul></li></ul></nav>
+<template><div><h1 id="go语言反射-json" tabindex="-1"><a class="header-anchor" href="#go语言反射-json" aria-hidden="true">#</a> Go语言反射(Json)</h1>
+<nav class="table-of-contents"><ul><li><router-link to="#反射">反射</router-link></li><li><router-link to="#反射的基本介绍">反射的基本介绍</router-link></li><li><router-link to="#反射重要概念❤️">反射重要概念❤️</router-link></li><li><router-link to="#反射入门案列">反射入门案列</router-link></li><li><router-link to="#反射注意事项">反射注意事项</router-link></li><li><router-link to="#反射最佳案例">反射最佳案例</router-link></li></ul></nav>
 <p>[toc]</p>
 <p>😶‍🌫️go语言官方编程指南：<a href="https://golang.org/#" target="_blank" rel="noopener noreferrer">https://golang.org/#<ExternalLinkIcon/></a></p>
 <blockquote>
@@ -16,14 +16,147 @@
 <blockquote>
 <p>比如在写适配器函数的时候，我们此时就需要用到反射标记</p>
 </blockquote>
-<h3 id="反射的基本介绍" tabindex="-1"><a class="header-anchor" href="#反射的基本介绍" aria-hidden="true">#</a> 反射的基本介绍</h3>
+<details class="custom-container details"><summary>反射的一个基本入门</summary>
+<p>💡简单的一个案例如下：</p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token comment">/*
+ * @Description: json
+ * @Author: xiongxinwei 3293172751nss@gmail.com
+ * @Date: 2022-10-04 21:37:41
+ * @LastEditTime: 2022-10-24 19:37:14
+ * @FilePath: \code\go-super\23-main.go
+ * @Github_Address: https://github.com/3293172751/cs-awesome-Block_Chain
+ * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://nsddd.top
+ */</span>
+<span class="token keyword">package</span> main
+
+<span class="token keyword">import</span> <span class="token punctuation">(</span>
+	<span class="token string">"encoding/json"</span>
+	<span class="token string">"fmt"</span>
+<span class="token punctuation">)</span>
+
+<span class="token keyword">type</span> Config <span class="token keyword">struct</span> <span class="token punctuation">{</span>
+	ID      <span class="token builtin">string</span>   <span class="token string">`json:"id"`</span>
+	Genders <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span> <span class="token string">`json:"性别"`</span>
+	Age     <span class="token builtin">int</span>      <span class="token string">`json:"年龄"`</span>
+	Name    <span class="token builtin">string</span>   <span class="token string">`json:"姓名"`</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">type</span> ConfigList <span class="token keyword">struct</span> <span class="token punctuation">{</span>
+	Configs <span class="token punctuation">[</span><span class="token punctuation">]</span>Config <span class="token string">`json:"configs"`</span>
+	Config
+	Email <span class="token builtin">string</span> <span class="token string">`json:"email"`</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	configList <span class="token operator">:=</span> ConfigList<span class="token punctuation">{</span>
+		Configs<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>Config<span class="token punctuation">{</span>
+			<span class="token punctuation">{</span>
+				ID<span class="token punctuation">:</span>      <span class="token string">"1"</span><span class="token punctuation">,</span>
+				Genders<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span><span class="token punctuation">{</span><span class="token string">"asfd"</span><span class="token punctuation">,</span> <span class="token string">"asfd"</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+				Age<span class="token punctuation">:</span>     <span class="token number">20</span><span class="token punctuation">,</span>
+				Name<span class="token punctuation">:</span>    <span class="token string">"Tom"</span><span class="token punctuation">,</span>
+			<span class="token punctuation">}</span><span class="token punctuation">,</span>
+			<span class="token punctuation">{</span>
+				ID<span class="token punctuation">:</span>      <span class="token string">"2"</span><span class="token punctuation">,</span>
+				Genders<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span><span class="token punctuation">{</span><span class="token string">"asfd"</span><span class="token punctuation">,</span> <span class="token string">"asfd"</span><span class="token punctuation">,</span> <span class="token string">"asfd"</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+				Age<span class="token punctuation">:</span>     <span class="token number">30</span><span class="token punctuation">,</span>
+				Name<span class="token punctuation">:</span>    <span class="token string">"Jack"</span><span class="token punctuation">,</span>
+			<span class="token punctuation">}</span><span class="token punctuation">,</span>
+		<span class="token punctuation">}</span><span class="token punctuation">,</span>
+		Config<span class="token punctuation">:</span> Config<span class="token punctuation">{</span>
+			ID<span class="token punctuation">:</span>      <span class="token string">"3"</span><span class="token punctuation">,</span>
+			Genders<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span><span class="token punctuation">{</span><span class="token string">"asfd"</span><span class="token punctuation">,</span> <span class="token string">"asfd"</span><span class="token punctuation">,</span> <span class="token string">"asfd"</span><span class="token punctuation">,</span> <span class="token string">"as"</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+			Age<span class="token punctuation">:</span>     <span class="token number">40</span><span class="token punctuation">,</span>
+			Name<span class="token punctuation">:</span>    <span class="token string">"Rose"</span><span class="token punctuation">,</span>
+		<span class="token punctuation">}</span><span class="token punctuation">,</span>
+		Email<span class="token punctuation">:</span> <span class="token string">"	nsddd.top"</span><span class="token punctuation">,</span>
+	<span class="token punctuation">}</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>configList<span class="token punctuation">)</span>
+
+	<span class="token comment">//遍历</span>
+	<span class="token keyword">for</span> <span class="token boolean">_</span><span class="token punctuation">,</span> configList <span class="token operator">:=</span> <span class="token keyword">range</span> configList<span class="token punctuation">.</span>Configs <span class="token punctuation">{</span>
+		fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>configList<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token comment">//json</span>
+	jsonBody<span class="token punctuation">,</span> err <span class="token operator">:=</span> json<span class="token punctuation">.</span><span class="token function">Marshal</span><span class="token punctuation">(</span>configList<span class="token punctuation">)</span>
+	<span class="token keyword">if</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+		fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"err="</span><span class="token punctuation">,</span> err<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"jsonBody="</span><span class="token punctuation">,</span> <span class="token function">string</span><span class="token punctuation">(</span>jsonBody<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>🚀 编译结果如下：</p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token punctuation">[</span>Running<span class="token punctuation">]</span> go run <span class="token string">"d:\文档\最近的<span class="token entity" title="\a">\a</span>wesome-golang\docs<span class="token entity" title="\c">\c</span>ode\go-super<span class="token entity" title="\23">\23</span>-main.go"</span>
+<span class="token punctuation">{</span><span class="token punctuation">[</span><span class="token punctuation">{</span><span class="token number">1</span> <span class="token punctuation">[</span>asfd asfd<span class="token punctuation">]</span> <span class="token number">20</span> Tom<span class="token punctuation">}</span> <span class="token punctuation">{</span><span class="token number">2</span> <span class="token punctuation">[</span>asfd asfd asfd<span class="token punctuation">]</span> <span class="token number">30</span> Jack<span class="token punctuation">}</span><span class="token punctuation">]</span> <span class="token punctuation">{</span><span class="token number">3</span> <span class="token punctuation">[</span>asfd asfd asfd as<span class="token punctuation">]</span> <span class="token number">40</span> Rose<span class="token punctuation">}</span> 	nsddd.top<span class="token punctuation">}</span>
+<span class="token punctuation">{</span><span class="token number">1</span> <span class="token punctuation">[</span>asfd asfd<span class="token punctuation">]</span> <span class="token number">20</span> Tom<span class="token punctuation">}</span>
+<span class="token punctuation">{</span><span class="token number">2</span> <span class="token punctuation">[</span>asfd asfd asfd<span class="token punctuation">]</span> <span class="token number">30</span> Jack<span class="token punctuation">}</span>
+<span class="token assign-left variable">jsonBody</span><span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">"configs"</span>:<span class="token punctuation">[</span><span class="token punctuation">{</span><span class="token string">"id"</span><span class="token builtin class-name">:</span><span class="token string">"1"</span>,<span class="token string">"性别"</span>:<span class="token punctuation">[</span><span class="token string">"asfd"</span>,<span class="token string">"asfd"</span><span class="token punctuation">]</span>,<span class="token string">"年龄"</span>:20,<span class="token string">"姓名"</span><span class="token builtin class-name">:</span><span class="token string">"Tom"</span><span class="token punctuation">}</span>,<span class="token punctuation">{</span><span class="token string">"id"</span><span class="token builtin class-name">:</span><span class="token string">"2"</span>,<span class="token string">"性别"</span>:<span class="token punctuation">[</span><span class="token string">"asfd"</span>,<span class="token string">"asfd"</span>,<span class="token string">"asfd"</span><span class="token punctuation">]</span>,<span class="token string">"年龄"</span>:30,<span class="token string">"姓名"</span><span class="token builtin class-name">:</span><span class="token string">"Jack"</span><span class="token punctuation">}</span><span class="token punctuation">]</span>,<span class="token string">"id"</span><span class="token builtin class-name">:</span><span class="token string">"3"</span>,<span class="token string">"性别"</span>:<span class="token punctuation">[</span><span class="token string">"asfd"</span>,<span class="token string">"asfd"</span>,<span class="token string">"asfd"</span>,<span class="token string">"as"</span><span class="token punctuation">]</span>,<span class="token string">"年龄"</span>:40,<span class="token string">"姓名"</span><span class="token builtin class-name">:</span><span class="token string">"Rose"</span>,<span class="token string">"email"</span><span class="token builtin class-name">:</span><span class="token string">"<span class="token entity" title="\t">\t</span>nsddd.top"</span><span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></details>
+<details class="custom-container details"><summary>json转化回来</summary>
+<p>💡简单的一个案例如下：</p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token comment">/*
+ * @Description:json反序列
+ * @Author: xiongxinwei 3293172751nss@gmail.com
+ * @Date: 2022-10-04 21:37:41
+ * @LastEditTime: 2022-10-24 20:01:45
+ * @FilePath: \code\go-super\24-main.go
+ * @Github_Address: https://github.com/3293172751/cs-awesome-Block_Chain
+ * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://nsddd.top
+ */</span>
+<span class="token keyword">package</span> main
+
+<span class="token keyword">import</span> <span class="token punctuation">(</span>
+	<span class="token string">"encoding/json"</span>
+	<span class="token string">"fmt"</span>
+<span class="token punctuation">)</span>
+
+<span class="token keyword">type</span> Config <span class="token keyword">struct</span> <span class="token punctuation">{</span>
+	ID      <span class="token builtin">string</span>   <span class="token string">`json:"id"`</span>
+	Genders <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">string</span> <span class="token string">`json:"性别"`</span>
+	Age     <span class="token builtin">int</span>      <span class="token string">`json:"年龄"`</span>
+	Name    <span class="token builtin">string</span>   <span class="token string">`json:"姓名"`</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">type</span> ConfigList <span class="token keyword">struct</span> <span class="token punctuation">{</span>
+	Configs <span class="token punctuation">[</span><span class="token punctuation">]</span>Config <span class="token string">`json:"configs"`</span>
+	Config
+	Email <span class="token builtin">string</span> <span class="token string">`json:"email"`</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token keyword">var</span> c <span class="token operator">=</span> <span class="token operator">&amp;</span>ConfigList<span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+	<span class="token comment">//定义一个json</span>
+	jsonBody <span class="token operator">:=</span> <span class="token string">`{"configs":[{"id":"1","性别":["asfd","asfd"],"年龄":20,"姓名":"Tom"},{"id":"2","性别":["asfd","asfd","asfd"],"年龄":30,"姓名":"Jack"}],"id":"3","性别":["asfd","asfd","asfd","as"],"年龄":40,"姓名":"Rose","email":"\tnsddd.top"}`</span>
+
+	<span class="token keyword">if</span> err <span class="token operator">:=</span> json<span class="token punctuation">.</span><span class="token function">Unmarshal</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token function">byte</span><span class="token punctuation">(</span>jsonBody<span class="token punctuation">)</span><span class="token punctuation">,</span> c<span class="token punctuation">)</span><span class="token punctuation">;</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+		<span class="token keyword">defer</span> <span class="token keyword">func</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword">if</span> err <span class="token operator">:=</span> <span class="token function">recover</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+				fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"json反序列化失败"</span> <span class="token operator">+</span> err<span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token builtin">string</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+	<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+		fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"json反序列化成功"</span><span class="token punctuation">)</span>
+		fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>🚀 编译结果如下：</p>
+<div class="language-json ext-json line-numbers-mode"><pre v-pre class="language-json"><code>json反序列化成功
+&amp;<span class="token punctuation">{</span><span class="token punctuation">[</span><span class="token punctuation">{</span><span class="token number">1</span> <span class="token punctuation">[</span>asfd asfd<span class="token punctuation">]</span> <span class="token number">20</span> Tom<span class="token punctuation">}</span> <span class="token punctuation">{</span><span class="token number">2</span> <span class="token punctuation">[</span>asfd asfd asfd<span class="token punctuation">]</span> <span class="token number">30</span> Jack<span class="token punctuation">}</span><span class="token punctuation">]</span> <span class="token punctuation">{</span><span class="token number">3</span> <span class="token punctuation">[</span>asfd asfd asfd as<span class="token punctuation">]</span> <span class="token number">40</span> Rose<span class="token punctuation">}</span> 	nsddd.top<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div></details>
+<h2 id="反射的基本介绍" tabindex="-1"><a class="header-anchor" href="#反射的基本介绍" aria-hidden="true">#</a> 反射的基本介绍</h2>
+<div class="custom-container warning"><p class="custom-container-title">反射的基本介绍</p>
+<p>关于反射有以下需要知道的：</p>
 <ol>
 <li><strong>反射可以在运行的时候动态获取变量的各种信息，比如说变量的类型（type),类别(kind)</strong></li>
 <li><strong>如果是结构体变量，还可以获取到结构体本身的信息（包括结构体的字段，方法）</strong></li>
 <li><strong>通过反射，可以修改变量的值，可以调用关联的方法</strong></li>
 <li><strong>使用反射，需要用到一个包import(“reflect”)</strong></li>
 </ol>
-<hr>
+</div>
 <p><strong><a href="https://pkg.go.dev/std" target="_blank" rel="noopener noreferrer">🖱️ 打开包网页<ExternalLinkIcon/></a></strong></p>
 <p><code v-pre>package reflect</code><strong>包</strong></p>
 <blockquote>
@@ -107,11 +240,17 @@
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
 <p>通过反射我们获取到<code v-pre>reflect.Type</code>类型，通过这个类型我们可以使用方法反向操作</p>
 </blockquote>
-<h3 id="反射应用场景" tabindex="-1"><a class="header-anchor" href="#反射应用场景" aria-hidden="true">#</a> 反射应用场景</h3>
-<h5 id="_1-不知道接口调用的是哪个函数" tabindex="-1"><a class="header-anchor" href="#_1-不知道接口调用的是哪个函数" aria-hidden="true">#</a> 1. 不知道接口调用的是哪个函数</h5>
-<p><strong>2. 对结构体序列化时，如果结构体有指定tag,也会使用到反射生成对应的字符串</strong></p>
-<hr>
-<h3 id="反射重要概念❤️" tabindex="-1"><a class="header-anchor" href="#反射重要概念❤️" aria-hidden="true">#</a> 反射重要概念❤️</h3>
+<div class="custom-container tip"><p class="custom-container-title">反射应用场景</p>
+<ol>
+<li>
+<p>不知道接口调用的是哪个函数</p>
+</li>
+<li>
+<p>对结构体序列化时，如果结构体有指定tag，也会使用到反射生成对应的字符串</p>
+</li>
+</ol>
+</div>
+<h2 id="反射重要概念❤️" tabindex="-1"><a class="header-anchor" href="#反射重要概念❤️" aria-hidden="true">#</a> 反射重要概念❤️</h2>
 <p>1 . <strong>reflect.TypeOf(变量名),获取变量类型，返回的是reflect.Type类型</strong></p>
 <ol start="2">
 <li>
@@ -135,7 +274,7 @@
     <span class="token comment">//如何将interface空接口转为原变量类型 - - 使用类型断言即可</span>
     v <span class="token operator">:=</span> iVal<span class="token punctuation">.</span><span class="token punctuation">(</span>Stu<span class="token punctuation">)</span>       <span class="token comment">//直接转化类型断言到变量</span>
 <span class="token punctuation">}</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="反射入门案列" tabindex="-1"><a class="header-anchor" href="#反射入门案列" aria-hidden="true">#</a> 反射入门案列</h3>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="反射入门案列" tabindex="-1"><a class="header-anchor" href="#反射入门案列" aria-hidden="true">#</a> 反射入门案列</h2>
 <blockquote>
 <p>演示对基本数据类型，空接口和反射基本操作</p>
 </blockquote>
@@ -258,7 +397,7 @@ student.Name <span class="token operator">=</span>  tom
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
 <p>类似于枚举哈哈</p>
 </blockquote>
-<h3 id="反射注意事项" tabindex="-1"><a class="header-anchor" href="#反射注意事项" aria-hidden="true">#</a> 反射注意事项</h3>
+<h2 id="反射注意事项" tabindex="-1"><a class="header-anchor" href="#反射注意事项" aria-hidden="true">#</a> 反射注意事项</h2>
 <p><strong>通过反射可以让变量在interface{}和Reflect.Value之间相互转换</strong></p>
 <p><strong>如果要通过反射来修改变量，注意当使用SetXxx方法来设置需要通过对应的指针类型来完成，这样才能改变传入的变量的值，同时需要使用到<code v-pre>redlect.Value.Elem()</code>方法</strong></p>
 <p><strong>注意：elme</strong></p>
@@ -277,7 +416,7 @@ student.Name <span class="token operator">=</span>  tom
     fs<span class="token punctuation">.</span><span class="token function">Elem</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">SetString</span><span class="token punctuation">(</span><span class="token string">"jack"</span><span class="token punctuation">)</span>
     fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"%v\n"</span><span class="token punctuation">,</span>str<span class="token punctuation">)</span>          <span class="token comment">//jack</span>
 <span class="token punctuation">}</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="反射最佳案例" tabindex="-1"><a class="header-anchor" href="#反射最佳案例" aria-hidden="true">#</a> 反射最佳案例</h3>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="反射最佳案例" tabindex="-1"><a class="header-anchor" href="#反射最佳案例" aria-hidden="true">#</a> 反射最佳案例</h2>
 <blockquote>
 <ol>
 <li>使用反射来<strong>遍历结构体字段，调用结构体的方法，并获取结构体标签的值</strong></li>

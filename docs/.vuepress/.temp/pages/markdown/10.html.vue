@@ -77,6 +77,9 @@
 	field2 <span class="token keyword">type</span>
 <span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>✍️ 结构体名称如果首字母如果是大写，那么可以在其他包引用结构体</strong></p>
+<div class="custom-container warning"><p class="custom-container-title">注意</p>
+<p>不是大写也可以通过<strong>工厂模式</strong>来调用，就类似于面对对象语言的构造函数</p>
+</div>
 <h3 id="字段-属性" tabindex="-1"><a class="header-anchor" href="#字段-属性" aria-hidden="true">#</a> 字段/属性</h3>
 <div class="custom-container tip"><p class="custom-container-title">结构体字段</p>
 <p><strong>从概念上看，结构体字段 = 属性 = field</strong></p>

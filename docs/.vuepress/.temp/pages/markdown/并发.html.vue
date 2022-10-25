@@ -18,6 +18,10 @@
 <ul>
 <li>Go语言支持并行，因为并行的速度更快，在多个CPU上同时进行</li>
 </ul>
+<div class="custom-container warning"><p class="custom-container-title">可以同时有并发和并行</p>
+<p>当有4个CPU和8个线程程序在运行，并发和并行都存在</p>
+<p><strong>线程数  &gt; CPU 核数</strong></p>
+</div>
 <h2 id="程序的顺序执行" tabindex="-1"><a class="header-anchor" href="#程序的顺序执行" aria-hidden="true">#</a> 程序的顺序执行</h2>
 <p><strong>一个计算机由若干个操作组成，而这些操作必须按照某种先后次序来执行 ，以保证操作的结果是正确的，则这类计算过程就是程序的顺序执行过程。</strong></p>
 <p><strong>特性：</strong></p>

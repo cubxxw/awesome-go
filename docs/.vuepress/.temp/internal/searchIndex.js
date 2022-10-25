@@ -4,13 +4,6 @@ export const searchIndex = [
     "headers": [
       {
         "level": 2,
-        "title": "🎈怎么学习docker",
-        "slug": "🎈怎么学习docker",
-        "link": "#🎈怎么学习docker",
-        "children": []
-      },
-      {
-        "level": 2,
         "title": "⚡Go语言基础篇",
         "slug": "⚡go语言基础篇",
         "link": "#⚡go语言基础篇",
@@ -1663,9 +1656,23 @@ export const searchIndex = [
       },
       {
         "level": 2,
+        "title": "结构体",
+        "slug": "结构体",
+        "link": "#结构体",
+        "children": []
+      },
+      {
+        "level": 2,
         "title": "指定变量值",
         "slug": "指定变量值",
         "link": "#指定变量值",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "结构体方法",
+        "slug": "结构体方法",
+        "link": "#结构体方法",
         "children": []
       },
       {
@@ -1780,13 +1787,27 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "接口和多态",
+    "title": "接口和多态、类型断言",
     "headers": [
       {
         "level": 2,
         "title": "接口体现多态",
         "slug": "接口体现多态",
         "link": "#接口体现多态",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "结构体接收者和指针接收者实现接口区别",
+        "slug": "结构体接收者和指针接收者实现接口区别",
+        "link": "#结构体接收者和指针接收者实现接口区别",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "类型断言 – 接口判断类型",
+        "slug": "类型断言-–-接口判断类型",
+        "link": "#类型断言-–-接口判断类型",
         "children": []
       },
       {
@@ -1808,6 +1829,13 @@ export const searchIndex = [
         "title": "测试一个值是否实现了某个接口",
         "slug": "测试一个值是否实现了某个接口",
         "link": "#测试一个值是否实现了某个接口",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "接口嵌套",
+        "slug": "接口嵌套",
+        "link": "#接口嵌套",
         "children": []
       },
       {
@@ -2059,7 +2087,7 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "goroutine(协程)和channel(管道)",
+    "title": "goroutine(协程)",
     "headers": [
       {
         "level": 2,
@@ -2083,9 +2111,23 @@ export const searchIndex = [
           },
           {
             "level": 3,
+            "title": "sync.WaitGroup实现主线程等待协程执行完毕",
+            "slug": "sync-waitgroup实现主线程等待协程执行完毕",
+            "link": "#sync-waitgroup实现主线程等待协程执行完毕",
+            "children": []
+          },
+          {
+            "level": 3,
             "title": "goroutine的调度模型",
             "slug": "goroutine的调度模型",
             "link": "#goroutine的调度模型",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "设置CPU",
+            "slug": "设置cpu",
+            "link": "#设置cpu",
             "children": []
           }
         ]
@@ -2095,13 +2137,6 @@ export const searchIndex = [
         "title": "channle(管道)",
         "slug": "channle-管道",
         "link": "#channle-管道",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "不同的gorontine 之间如何通信",
-        "slug": "不同的gorontine-之间如何通信",
-        "link": "#不同的gorontine-之间如何通信",
         "children": []
       },
       {
@@ -2152,6 +2187,13 @@ export const searchIndex = [
         "title": "goroutine 和 channel结合",
         "slug": "goroutine-和-channel结合",
         "link": "#goroutine-和-channel结合",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "统计素数",
+        "slug": "统计素数",
+        "link": "#统计素数",
         "children": []
       },
       {
@@ -3289,7 +3331,7 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "Go语言函数、包、匿名函数",
+    "title": "函数、init函数和包",
     "headers": [
       {
         "level": 2,
@@ -3437,13 +3479,6 @@ export const searchIndex = [
       },
       {
         "level": 2,
-        "title": "匿名函数",
-        "slug": "匿名函数",
-        "link": "#匿名函数",
-        "children": []
-      },
-      {
-        "level": 2,
         "title": "补充:python函数",
         "slug": "补充-python函数",
         "link": "#补充-python函数",
@@ -3484,7 +3519,7 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "Go语言的的函数、闭包，错误处理",
+    "title": "函数、闭包，错误处理",
     "headers": [
       {
         "level": 2,
@@ -3528,6 +3563,13 @@ export const searchIndex = [
         "slug": "闭包",
         "link": "#闭包",
         "children": [
+          {
+            "level": 3,
+            "title": "定义一个闭包理解",
+            "slug": "定义一个闭包理解",
+            "link": "#定义一个闭包理解",
+            "children": []
+          },
           {
             "level": 3,
             "title": "闭包的说明",
@@ -3629,7 +3671,7 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "go语言的的数组和切片",
+    "title": "数组和slice切片&遍历",
     "headers": [
       {
         "level": 2,
@@ -3946,6 +3988,13 @@ export const searchIndex = [
       },
       {
         "level": 2,
+        "title": "sort包排序",
+        "slug": "sort包排序",
+        "link": "#sort包排序",
+        "children": []
+      },
+      {
+        "level": 2,
         "title": "END 链接",
         "slug": "end-链接",
         "link": "#end-链接",
@@ -3961,9 +4010,9 @@ export const searchIndex = [
     "headers": [
       {
         "level": 2,
-        "title": "1. 二维数组",
-        "slug": "_1-二维数组",
-        "link": "#_1-二维数组",
+        "title": "二维数组",
+        "slug": "二维数组",
+        "link": "#二维数组",
         "children": [
           {
             "level": 3,
@@ -3997,9 +4046,9 @@ export const searchIndex = [
       },
       {
         "level": 2,
-        "title": "2. Go语言map（集合）",
-        "slug": "_2-go语言map-集合",
-        "link": "#_2-go语言map-集合",
+        "title": "Go语言map（集合）",
+        "slug": "go语言map-集合",
+        "link": "#go语言map-集合",
         "children": [
           {
             "level": 3,
@@ -4051,6 +4100,13 @@ export const searchIndex = [
             "children": []
           }
         ]
+      },
+      {
+        "level": 2,
+        "title": "封装排序的方法",
+        "slug": "封装排序的方法",
+        "link": "#封装排序的方法",
+        "children": []
       },
       {
         "level": 2,
@@ -4399,57 +4455,49 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "Go语言反射",
+    "title": "Go语言反射(Json)",
     "headers": [
       {
         "level": 2,
         "title": "反射",
         "slug": "反射",
         "link": "#反射",
-        "children": [
-          {
-            "level": 3,
-            "title": "反射的基本介绍",
-            "slug": "反射的基本介绍",
-            "link": "#反射的基本介绍",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "反射应用场景",
-            "slug": "反射应用场景",
-            "link": "#反射应用场景",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "反射重要概念❤️",
-            "slug": "反射重要概念❤️",
-            "link": "#反射重要概念❤️",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "反射入门案列",
-            "slug": "反射入门案列",
-            "link": "#反射入门案列",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "反射注意事项",
-            "slug": "反射注意事项",
-            "link": "#反射注意事项",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "反射最佳案例",
-            "slug": "反射最佳案例",
-            "link": "#反射最佳案例",
-            "children": []
-          }
-        ]
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "反射的基本介绍",
+        "slug": "反射的基本介绍",
+        "link": "#反射的基本介绍",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "反射重要概念❤️",
+        "slug": "反射重要概念❤️",
+        "link": "#反射重要概念❤️",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "反射入门案列",
+        "slug": "反射入门案列",
+        "link": "#反射入门案列",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "反射注意事项",
+        "slug": "反射注意事项",
+        "link": "#反射注意事项",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "反射最佳案例",
+        "slug": "反射最佳案例",
+        "link": "#反射最佳案例",
+        "children": []
       }
     ],
     "path": "/markdown/%E5%8F%8D%E5%B0%84.html",

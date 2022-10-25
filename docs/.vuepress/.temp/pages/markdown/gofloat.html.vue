@@ -31,12 +31,14 @@ m1 <span class="token operator">-</span> m2 <span class="token operator">=</span
 <p>因为 float64（或任何二进制浮点类型，实际上）不能<code v-pre>0.1</code>准确地表示数字。</p>
 <p>考虑以下代码：http://play.golang.org/p/TQBd4yJe6B您可能期望它打印出来<code v-pre>10</code>，但实际上打印出来<code v-pre>9.999999999999831</code>。随着时间的推移，这些小错误真的会加起来！</p>
 <h3 id="为什么不直接使用-big-rat" tabindex="-1"><a class="header-anchor" href="#为什么不直接使用-big-rat" aria-hidden="true">#</a> 为什么不直接使用 big.Rat？</h3>
+<details class="custom-container details"><summary>为什么不直接使用big.Rat?</summary>
 <p>big.Rat 适合表示有理数，但 Decimal 更适合表示金钱。为什么？这是一个（人为的）示例：</p>
 <p>假设你使用 big.Rat，你有两个数字，x 和 y，都代表 1/3，你有<code v-pre>z = 1 - x - y = 1/3</code>. 如果将每一个都打印出来，则字符串输出必须在某处停止（为简单起见，假设它停止在 3 个十进制数字处），因此您将得到 0.333、0.333 和 0.333。但是另一个 0.001 去哪儿了？</p>
 <p>这是上面的示例代码：<a href="http://play.golang.org/p/lCZZs0w9KE" target="_blank" rel="noopener noreferrer">http 😕/play.golang.org/p/lCZZs0w9KE<ExternalLinkIcon/></a></p>
 <p>使用 Decimal，打印出来的字符串准确地表示数字。所以，如果你有<code v-pre>x = y = 1/3</code>（精度为 3），它们实际上将等于 0.333，当你这样做时<code v-pre>z = 1 - x - y</code>，它们<code v-pre>z</code>将等于 0.334。没有钱是下落不明的！</p>
 <p>你还是要小心。如果您想以<code v-pre>N</code>3 种方式拆分数字，则不能只发送<code v-pre>N/3</code>给三个不同的人。你必须选择一个发送 <code v-pre>N - (2/3*N)</code>到。该人将获得一分钱的剩余部分。</p>
 <p>但是，使用 Decimal 比使用 big.Rat 更容易小心。</p>
+</details>
 <h3 id="出现原因总结" tabindex="-1"><a class="header-anchor" href="#出现原因总结" aria-hidden="true">#</a> 出现原因总结</h3>
 <ul>
 <li>

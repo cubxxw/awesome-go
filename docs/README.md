@@ -34,17 +34,7 @@ features:
 footer: 链学社 | Copyright © 2022-present Evan You
 ---
 
-## 🎈怎么学习docker
-
-> + [x] [计算机网络 – TCP/IP – 抓包 – Linux网络编程](https://github.com/3293172751/Block_Chain/blob/master/web/README.md) （有一点网络基础就好）
->+ [x] [有Linux的基础](https://github.com/3293172751/CS_COURSE/blob/master/linux/README.md)
-> 
-> - [x] [🖱️GO 基础部分🔥](https://github.com/3293172751/Block_Chain/blob/master/TOC.md)
->- [ ] [🖱️GO web框架](https://github.com/3293172751/Block_Chain/blob/master/go-web)
-> - [ ] [🖱️Go语言100篇进阶🔥](./Gomd_super/markdown/README.md)
->- [ ] [🖱️Go 高级篇](https://github.com/3293172751/Block_Chain/blob/master/go-advancend/README.md)
-
-
+# Go~
 
 ## ⚡Go语言基础篇
 
@@ -123,7 +113,7 @@ graph LR
 
 🐾[chan底层分析](./markdown/chan底层分析.md)
 
-🐾[Go并发](./markdown/并发.md)
+🐾[Go并行和并发](./markdown/并发.md)
 
 🐾[Go汇编](./markdown/Go汇编.md)
 
@@ -151,9 +141,9 @@ graph LR
 
 - [x] [⭐30天学会Go --第7天 Go语言的数组](markdown/8.md)
 
-- [x] [⭐30天学会go --第8天  go语言的的排序和查找](markdown/8.md)
+- [x] [⭐30天学会go --第8天  Go语言的的排序和查找](markdown/8.md)
 
-- [x] [⭐30天学会go --第9天  Golang的多维数组](markdown/9.md)
+- [x] [⭐30天学会go --第9天  Golang的多维数组和map集合](markdown/9.md)
 
 
 

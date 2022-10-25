@@ -1,5 +1,5 @@
-<template><div><h1 id="go语言函数、包、匿名函数" tabindex="-1"><a class="header-anchor" href="#go语言函数、包、匿名函数" aria-hidden="true">#</a> Go语言函数、包、匿名函数</h1>
-<nav class="table-of-contents"><ul><li><router-link to="#函数">函数</router-link><ul><li><router-link to="#函数定义">函数定义</router-link></li><li><router-link to="#return语句">return语句</router-link></li><li><router-link to="#函数调用">函数调用</router-link></li><li><router-link to="#函数返回多个值">函数返回多个值</router-link></li><li><router-link to="#递归调用">递归调用</router-link></li><li><router-link to="#递归总结">递归总结:</router-link></li><li><router-link to="#函数调用的底层分析">函数调用的底层分析</router-link></li></ul></li><li><router-link to="#函数-包">函数 -- 包</router-link><ul><li><router-link to="#包示意图">包示意图</router-link></li><li><router-link to="#包的使用">包的使用</router-link></li></ul></li><li><router-link to="#函数值传递">函数值传递</router-link></li><li><router-link to="#函数引用传递">函数引用传递</router-link></li><li><router-link to="#在golang语言中不支持函数的重载">在Golang语言中不支持函数的重载</router-link><ul><li><router-link to="#函数作为实参">函数作为实参</router-link></li><li><router-link to="#go语言可以自定义数据类型">Go语言可以自定义数据类型</router-link></li><li><router-link to="#go语言支持对返回值命名">go语言支持对返回值命名</router-link></li><li><router-link to="#go-支持可变参数">GO 支持可变参数</router-link></li></ul></li><li><router-link to="#init函数">init函数</router-link><ul><li><router-link to="#init细节">init细节</router-link></li></ul></li><li><router-link to="#匿名函数">匿名函数</router-link></li><li><router-link to="#补充-python函数">补充:python函数</router-link><ul><li><router-link to="#定义函数">定义函数</router-link></li><li><router-link to="#不带参数值的-return-语句返回-none">不带参数值的 return 语句返回 None</router-link></li><li><router-link to="#python的变量使用">python的变量使用</router-link></li></ul></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
+<template><div><h1 id="函数、init函数和包" tabindex="-1"><a class="header-anchor" href="#函数、init函数和包" aria-hidden="true">#</a> 函数、init函数和包</h1>
+<nav class="table-of-contents"><ul><li><router-link to="#函数">函数</router-link><ul><li><router-link to="#函数定义">函数定义</router-link></li><li><router-link to="#return语句">return语句</router-link></li><li><router-link to="#函数调用">函数调用</router-link></li><li><router-link to="#函数返回多个值">函数返回多个值</router-link></li><li><router-link to="#递归调用">递归调用</router-link></li><li><router-link to="#递归总结">递归总结:</router-link></li><li><router-link to="#函数调用的底层分析">函数调用的底层分析</router-link></li></ul></li><li><router-link to="#函数-包">函数 -- 包</router-link><ul><li><router-link to="#包示意图">包示意图</router-link></li><li><router-link to="#包的使用">包的使用</router-link></li></ul></li><li><router-link to="#函数值传递">函数值传递</router-link></li><li><router-link to="#函数引用传递">函数引用传递</router-link></li><li><router-link to="#在golang语言中不支持函数的重载">在Golang语言中不支持函数的重载</router-link><ul><li><router-link to="#函数作为实参">函数作为实参</router-link></li><li><router-link to="#go语言可以自定义数据类型">Go语言可以自定义数据类型</router-link></li><li><router-link to="#go语言支持对返回值命名">go语言支持对返回值命名</router-link></li><li><router-link to="#go-支持可变参数">GO 支持可变参数</router-link></li></ul></li><li><router-link to="#init函数">init函数</router-link><ul><li><router-link to="#init细节">init细节</router-link></li></ul></li><li><router-link to="#补充-python函数">补充:python函数</router-link><ul><li><router-link to="#定义函数">定义函数</router-link></li><li><router-link to="#不带参数值的-return-语句返回-none">不带参数值的 return 语句返回 None</router-link></li><li><router-link to="#python的变量使用">python的变量使用</router-link></li></ul></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
 <p>[toc]</p>
 <p>😶‍🌫️go语言官方编程指南：<a href="https://golang.org/#" target="_blank" rel="noopener noreferrer">https://golang.org/#<ExternalLinkIcon/></a></p>
 <blockquote>
@@ -533,46 +533,7 @@ num1 <span class="token operator">=</span> <span class="token number">40</span>
 </blockquote>
 <p><img src="@source/markdown/images/jFafBviQkpmAH7P.png" alt="image-20220108172558808"></p>
 <p><strong>即先执行引入文件的init函数,变量定义,然后执行main函数里面的变量定义....</strong></p>
-<h2 id="匿名函数" tabindex="-1"><a class="header-anchor" href="#匿名函数" aria-hidden="true">#</a> 匿名函数</h2>
-<p><strong>Go 语言支持匿名函数，可作为闭包。匿名函数是一个&quot;内联&quot;语句或表达式。匿名函数的优越性在于可以直接使用函数内的变量，不必申明。</strong></p>
-<p>以下实例中，我们创建了函数 <code v-pre>getSequence()</code> ，返回另外一个函数。该函数的目的是在闭包中递增 <code v-pre>i</code> 变量，代码如下：</p>
-<p>💡简单的一个案例如下：</p>
-<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">package</span> main
-
-<span class="token keyword">import</span> <span class="token string">"fmt"</span>
-
-<span class="token keyword">func</span> <span class="token function">getSequence</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">func</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">int</span> <span class="token punctuation">{</span>
-  <span class="token comment">//定义匿名函数 getSequence() 返回类型int</span>
-  i<span class="token operator">:=</span><span class="token number">0</span>
-  <span class="token keyword">return</span> <span class="token keyword">func</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">int</span> <span class="token punctuation">{</span>
-  i<span class="token operator">+=</span><span class="token number">1</span>
-  <span class="token keyword">return</span> i 
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-  <span class="token comment">/* nextNumber 为一个函数，函数 i 为 0 */</span>
-  nextNumber <span class="token operator">:=</span> <span class="token function">getSequence</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 
-
-  <span class="token comment">/* 调用 nextNumber 函数，i 变量自增 1 并返回 */</span>
-  fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token function">nextNumber</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-  fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token function">nextNumber</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-  fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token function">nextNumber</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-
-  <span class="token comment">/* 创建新的函数 nextNumber1，并查看结果 */</span>
-  nextNumber1 <span class="token operator">:=</span> <span class="token function">getSequence</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 
-  fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token function">nextNumber1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-  fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token function">nextNumber1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span>
-
-
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>以上代码执行结果为：</p>
-<div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>1
-2
-3
-1
-2
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="补充-python函数" tabindex="-1"><a class="header-anchor" href="#补充-python函数" aria-hidden="true">#</a> 补充:python函数</h2>
+<h2 id="补充-python函数" tabindex="-1"><a class="header-anchor" href="#补充-python函数" aria-hidden="true">#</a> 补充:python函数</h2>
 <h3 id="定义函数" tabindex="-1"><a class="header-anchor" href="#定义函数" aria-hidden="true">#</a> 定义函数</h3>
 <div class="language-python ext-py line-numbers-mode"><pre v-pre class="language-python"><code><span class="token keyword">def</span> 函数名（）：
 代码

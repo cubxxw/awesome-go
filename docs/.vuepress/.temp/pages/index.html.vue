@@ -1,16 +1,4 @@
-<template><div><h2 id="🎈怎么学习docker" tabindex="-1"><a class="header-anchor" href="#🎈怎么学习docker" aria-hidden="true">#</a> 🎈怎么学习docker</h2>
-<blockquote>
-<ul>
-<li>[x] <a href="https://github.com/3293172751/Block_Chain/blob/master/web/README.md" target="_blank" rel="noopener noreferrer">计算机网络 – TCP/IP – 抓包 – Linux网络编程<ExternalLinkIcon/></a> （有一点网络基础就好）</li>
-<li>[x] <a href="https://github.com/3293172751/CS_COURSE/blob/master/linux/README.md" target="_blank" rel="noopener noreferrer">有Linux的基础<ExternalLinkIcon/></a></li>
-</ul>
-<ul>
-<li>[x] <a href="https://github.com/3293172751/Block_Chain/blob/master/TOC.md" target="_blank" rel="noopener noreferrer">🖱️GO 基础部分🔥<ExternalLinkIcon/></a></li>
-<li>[ ] <a href="https://github.com/3293172751/Block_Chain/blob/master/go-web" target="_blank" rel="noopener noreferrer">🖱️GO web框架<ExternalLinkIcon/></a></li>
-<li>[ ] <RouterLink to="/Gomd_super/markdown/">🖱️Go语言100篇进阶🔥</RouterLink></li>
-<li>[ ] <a href="https://github.com/3293172751/Block_Chain/blob/master/go-advancend/README.md" target="_blank" rel="noopener noreferrer">🖱️Go 高级篇<ExternalLinkIcon/></a></li>
-</ul>
-</blockquote>
+<template><div><h1 id="go" tabindex="-1"><a class="header-anchor" href="#go" aria-hidden="true">#</a> Go~</h1>
 <h2 id="⚡go语言基础篇" tabindex="-1"><a class="header-anchor" href="#⚡go语言基础篇" aria-hidden="true">#</a> ⚡Go语言基础篇</h2>
 <div class="custom-container warning"><p class="custom-container-title">Go语言基础篇</p>
 <p>🈺 进入基础篇的学习</p>
@@ -58,7 +46,7 @@
 <h2 id="go语言基础篇—番外篇" tabindex="-1"><a class="header-anchor" href="#go语言基础篇—番外篇" aria-hidden="true">#</a> Go语言基础篇—番外篇</h2>
 <p>🐾<RouterLink to="/markdown/gofloat.html">Go语言精度丢失问题</RouterLink></p>
 <p>🐾<RouterLink to="/markdown/chan%E5%BA%95%E5%B1%82%E5%88%86%E6%9E%90.html">chan底层分析</RouterLink></p>
-<p>🐾<RouterLink to="/markdown/%E5%B9%B6%E5%8F%91.html">Go并发</RouterLink></p>
+<p>🐾<RouterLink to="/markdown/%E5%B9%B6%E5%8F%91.html">Go并行和并发</RouterLink></p>
 <p>🐾<RouterLink to="/markdown/Go%E6%B1%87%E7%BC%96.html">Go汇编</RouterLink></p>
 <p>🐾<RouterLink to="/markdown/eth.html">Goeth</RouterLink></p>
 <p>🐾<RouterLink to="/markdown/file.html">Go实现批量处理文件</RouterLink></p>
@@ -87,10 +75,10 @@
 <p>[x] <RouterLink to="/markdown/8.html">⭐30天学会Go --第7天 Go语言的数组</RouterLink></p>
 </li>
 <li>
-<p>[x] <RouterLink to="/markdown/8.html">⭐30天学会go --第8天  go语言的的排序和查找</RouterLink></p>
+<p>[x] <RouterLink to="/markdown/8.html">⭐30天学会go --第8天  Go语言的的排序和查找</RouterLink></p>
 </li>
 <li>
-<p>[x] <RouterLink to="/markdown/9.html">⭐30天学会go --第9天  Golang的多维数组</RouterLink></p>
+<p>[x] <RouterLink to="/markdown/9.html">⭐30天学会go --第9天  Golang的多维数组和map集合</RouterLink></p>
 </li>
 </ul>
 <h2 id="go语言面对对象" tabindex="-1"><a class="header-anchor" href="#go语言面对对象" aria-hidden="true">#</a> Go语言面对对象</h2>

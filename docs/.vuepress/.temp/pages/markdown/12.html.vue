@@ -7,18 +7,25 @@
 </blockquote>
 <p>😶‍🌫️我的学习笔记：github: <a href="https://github.com/3293172751/golang-rearn" target="_blank" rel="noopener noreferrer">https://github.com/3293172751/golang-rearn<ExternalLinkIcon/></a></p>
 <hr>
-<p><strong>区块链技术（也称之为分布式账本技术）</strong>，是一种互联网数据库技术，其特点是去中心化，公开透明，让每一个人均可参与的数据库记录</p>
+<p><strong>区块链技术（也称之为分布式账本技术）</strong>，是一种互联网数据库技术，其特点是去中心化，公开透明，让每一个人均可参与的数据库记录。</p>
 <blockquote>
 <p>❤️💕💕关于区块链技术，可以关注我，共同学习更多的区块链技术。博客<a href="http://nsddd.top" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
 </blockquote>
 <h2 id="接口-interface" tabindex="-1"><a class="header-anchor" href="#接口-interface" aria-hidden="true">#</a> 接口（interface)</h2>
+<div class="custom-container warning"><p class="custom-container-title">接口注意：</p>
+<p><strong>Golang中的接口也是一种数据类型，不需要显示实现。只需要一个变量含有接口类型中的所有方法，那么这个变量就实现了这个接口。</strong></p>
+<p>接口是一种规范，使用接口必须要按照它的规范来。</p>
 <blockquote>
 <p>可以想象usb是现实中的接口，同时usb可以作为多种不同的尺寸和排线，这种设计需求在golang中也是<strong>大量</strong>存在的</p>
 </blockquote>
 <blockquote>
 <p><strong>按照循序应该是多态，但是在讲解多态之前需要讲解接口，因为在Golang中，多态的特性主要是通过接口来体现出来的</strong></p>
 </blockquote>
+</div>
 <h2 id="接口快速入门" tabindex="-1"><a class="header-anchor" href="#接口快速入门" aria-hidden="true">#</a> 接口快速入门</h2>
+<details class="custom-container details"><summary>接口💡简单的一个案例如下：</summary>
+<p>快速了解接口：</p>
+</details>
 <div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">package</span> main
 <span class="token keyword">import</span> <span class="token punctuation">(</span>
 	<span class="token string">"fmt"</span>
@@ -31,15 +38,13 @@
 	<span class="token function">Stop</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span>
 
-
 <span class="token comment">//声明/定义一个接口</span>
 <span class="token keyword">type</span> Usb2 <span class="token keyword">interface</span> <span class="token punctuation">{</span>
 	<span class="token comment">//声明了两个没有实现的方法</span>
-	<span class="token function">Start</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 
+	<span class="token function">Start</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 	<span class="token function">Stop</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 	<span class="token function">Test</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span>
-
 
 <span class="token comment">//定义手机的结构体</span>
 <span class="token keyword">type</span> Phone <span class="token keyword">struct</span> <span class="token punctuation">{</span>
@@ -63,10 +68,10 @@
 <span class="token keyword">func</span> <span class="token punctuation">(</span>c Camera<span class="token punctuation">)</span> <span class="token function">Start</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"相机开始工作~~~。。。"</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span>
+
 <span class="token keyword">func</span> <span class="token punctuation">(</span>c Camera<span class="token punctuation">)</span> <span class="token function">Stop</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"相机停止工作。。。"</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span>
-
 
 <span class="token comment">//计算机</span>
 <span class="token keyword">type</span> Computer <span class="token keyword">struct</span> <span class="token punctuation">{</span>
@@ -76,14 +81,12 @@
 <span class="token comment">//编写一个方法Working 方法，接收一个Usb接口类型变量</span>
 <span class="token comment">//只要是实现了 Usb接口 （所谓实现Usb接口，就是指实现了 Usb接口声明所有方法）</span>
 <span class="token keyword">func</span> <span class="token punctuation">(</span>c Computer<span class="token punctuation">)</span> <span class="token function">Working</span><span class="token punctuation">(</span>usb Usb<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-
 	<span class="token comment">//通过usb接口变量来调用Start和Stop方法</span>
 	usb<span class="token punctuation">.</span><span class="token function">Start</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 	usb<span class="token punctuation">.</span><span class="token function">Stop</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span>
 
 <span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-
 	<span class="token comment">//测试</span>
 	<span class="token comment">//先创建结构体变量</span>
 	computer <span class="token operator">:=</span> Computer<span class="token punctuation">{</span><span class="token punctuation">}</span>
@@ -94,7 +97,13 @@
 	computer<span class="token punctuation">.</span><span class="token function">Working</span><span class="token punctuation">(</span>phone<span class="token punctuation">)</span>
 	computer<span class="token punctuation">.</span><span class="token function">Working</span><span class="token punctuation">(</span>camera<span class="token punctuation">)</span> <span class="token comment">//实现camera</span>
 <span class="token punctuation">}</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>在文档里面接口的文档也是非常多的</strong></p>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>🚀 编译结果如下：</p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token punctuation">[</span>Running<span class="token punctuation">]</span> go run <span class="token string">"d:\文档\最近的<span class="token entity" title="\a">\a</span>wesome-golang\docs<span class="token entity" title="\c">\c</span>ode\go-super<span class="token entity" title="\26">\26</span>-main.go"</span>
+手机开始工作。。。
+手机停止工作。。。
+相机开始工作~~~。。。
+相机停止工作。。。
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>在文档里面接口的文档也是非常多的</strong></p>
 <h2 id="接口概念" tabindex="-1"><a class="header-anchor" href="#接口概念" aria-hidden="true">#</a> 接口概念</h2>
 <details class="custom-container details"><summary>接口定义</summary>
 <p>接口类型可以定义一组方法，但是这些不需要实现，而且<code v-pre>Interface</code><strong>不能包含任何的变量</strong></p>
@@ -163,11 +172,89 @@ func (struct_name_variable struct_name) method_namen() [return_type] {
     Btow<span class="token punctuation">.</span><span class="token function">Hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>Golang接口中不可以有任何的变量</strong></p>
-<div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>type AInterface interface{
-	int          //报错
-	Hello()
-}
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>接口之间也可以有继承的关系（比如AInterface可以继承BInterface and CInterface)</strong></p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">type</span> AInterface <span class="token keyword">interface</span><span class="token punctuation">{</span>
+	<span class="token builtin">int</span>          <span class="token comment">//报错</span>
+	<span class="token function">Hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="custom-container tip"><p class="custom-container-title">空接口</p>
+<p>空接口表示没有任何约束，任何类型都可以实现空接口</p>
+<p>⚡ 所有有时候需要任何类型的可以选择<strong>空接口~</strong></p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token comment">//空接口表示任意类型</span>
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> a <span class="token keyword">interface</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+    a <span class="token operator">=</span> <span class="token number">20</span>
+    a <span class="token operator">=</span> <span class="token string">"你好hello"</span>
+    a <span class="token operator">=</span> <span class="token boolean">true</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>map定义空接口：</strong></p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code>	<span class="token keyword">var</span> m1 <span class="token operator">=</span> <span class="token function">make</span><span class="token punctuation">(</span><span class="token keyword">map</span><span class="token punctuation">[</span><span class="token builtin">string</span><span class="token punctuation">]</span><span class="token keyword">interface</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+	m1<span class="token punctuation">[</span><span class="token string">"username"</span><span class="token punctuation">]</span> <span class="token operator">=</span> userinfo<span class="token punctuation">[</span><span class="token string">"username"</span><span class="token punctuation">]</span>
+	m1<span class="token punctuation">[</span><span class="token string">"password"</span><span class="token punctuation">]</span> <span class="token operator">=</span> userinfo<span class="token punctuation">[</span><span class="token string">"password"</span><span class="token punctuation">]</span>
+	m1<span class="token punctuation">[</span><span class="token string">"age"</span><span class="token punctuation">]</span> <span class="token operator">=</span> userinfo<span class="token punctuation">[</span><span class="token string">"age"</span><span class="token punctuation">]</span>
+	m1<span class="token punctuation">[</span><span class="token string">"hobby"</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">123</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"m1="</span><span class="token punctuation">,</span> m1<span class="token punctuation">)</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"userinfo[\"username\"] = %T"</span><span class="token punctuation">,</span> userinfo<span class="token punctuation">[</span><span class="token string">"username"</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>切片定义空接口</strong>：</p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">var</span> slice1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token keyword">interface</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token string">"hello"</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">}</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"a type is %T, a value is %v\n"</span><span class="token punctuation">,</span> slice1<span class="token punctuation">,</span> slice1<span class="token punctuation">)</span> 
+<span class="token comment">//a type is []interface {}, a value is [1 2 3 4 5 hello true]</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div>
+<details class="custom-container details"><summary>空接口的一些实现</summary>
+<p>⚡ 空接口有一些实现的方案：</p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token comment">/*
+ * @Description: null interface
+ * @Author: xiongxinwei 3293172751nss@gmail.com
+ * @Date: 2022-10-04 21:37:41
+ * @LastEditTime: 2022-10-25 09:11:10
+ * @FilePath: \code\go-super\27-main.go
+ * @Github_Address: https://github.com/3293172751/cs-awesome-Block_Chain
+ * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://nsddd.top
+ */</span>
+<span class="token keyword">package</span> main
+
+<span class="token keyword">import</span> <span class="token string">"fmt"</span>
+
+<span class="token comment">//空接口</span>
+<span class="token keyword">type</span> A <span class="token keyword">interface</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">show</span><span class="token punctuation">(</span>a <span class="token keyword">interface</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"type:%T value:%v"</span><span class="token punctuation">,</span> a<span class="token punctuation">,</span> a<span class="token punctuation">)</span> <span class="token comment">//type:interface {} value:100</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token keyword">var</span> a A
+	b <span class="token operator">:=</span> <span class="token string">"hello"</span>
+	a <span class="token operator">=</span> b                <span class="token comment">//表示a可以接收任意类型的数据</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"a="</span><span class="token punctuation">,</span> a<span class="token punctuation">)</span> <span class="token comment">//a= hello</span>
+
+	<span class="token keyword">var</span> num <span class="token operator">=</span> <span class="token number">20</span>
+	a <span class="token operator">=</span> num <span class="token comment">//表示空接口可以接收任意类型的数值</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"a type is %T, a value is %v\n"</span><span class="token punctuation">,</span> a<span class="token punctuation">,</span> a<span class="token punctuation">)</span>
+
+	<span class="token keyword">var</span> stu <span class="token operator">=</span> <span class="token keyword">struct</span> <span class="token punctuation">{</span>
+		name <span class="token builtin">string</span>
+		age  <span class="token builtin">int</span>
+	<span class="token punctuation">}</span><span class="token punctuation">{</span>
+		name<span class="token punctuation">:</span> <span class="token string">"tom"</span><span class="token punctuation">,</span>
+		age<span class="token punctuation">:</span>  <span class="token number">20</span><span class="token punctuation">,</span>
+	<span class="token punctuation">}</span>
+
+	a <span class="token operator">=</span> stu
+	fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"a type is %T, a value is %v\n"</span><span class="token punctuation">,</span> a<span class="token punctuation">,</span> a<span class="token punctuation">)</span> <span class="token comment">//a type is struct { name string; age int }, a value is {tom 20}</span>
+
+	<span class="token function">show</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span> <span class="token comment">//type:int value:100</span>
+
+	<span class="token comment">//fmt.Println("a.name=", a.name) //空接口没有字段，不能直接访问字段"</span>
+<span class="token punctuation">}</span>
+
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>🚀 编译结果如下：</p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token punctuation">[</span>Running<span class="token punctuation">]</span> go run <span class="token string">"d:\文档\最近的<span class="token entity" title="\a">\a</span>wesome-golang\docs<span class="token entity" title="\c">\c</span>ode\go-super<span class="token entity" title="\27">\27</span>-main.go"</span>
+<span class="token assign-left variable">a</span><span class="token operator">=</span> hello
+a <span class="token builtin class-name">type</span> is int, a value is <span class="token number">20</span>
+a <span class="token builtin class-name">type</span> is struct <span class="token punctuation">{</span> name string<span class="token punctuation">;</span> age int <span class="token punctuation">}</span>, a value is <span class="token punctuation">{</span>tom <span class="token number">20</span><span class="token punctuation">}</span>
+type:int value:100
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></details>
+<p><strong>接口之间也可以有继承的关系（比如AInterface可以继承BInterface and CInterface)</strong></p>
 <div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token comment">/*************************************************************************           
     > File Name: Interface.go
     > Author: smile
