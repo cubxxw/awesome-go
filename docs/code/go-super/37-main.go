@@ -2,7 +2,7 @@
  * @Description:channel管道
  * @Author: xiongxinwei 3293172751nss@gmail.com
  * @Date: 2022-10-04 21:37:41
- * @LastEditTime: 2022-10-25 15:10:34
+ * @LastEditTime: 2022-10-25 15:01:50
  * @FilePath: \code\go-super\37-main.go
  * @Github_Address: https://github.com/3293172751/cs-awesome-Block_Chain
  * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://nsddd.top
@@ -43,15 +43,17 @@ func main() {
 	fmt.Println("cap(ch) = ", cap(ch))
 	fmt.Println("ch = ", ch)
 
-	//关闭unbuffered channel
+	//关闭管道
 	close(ch)
-	for {
-		val, ok := <-ch
-		if !ok {
-			fmt.Println("读取完毕")
-			break
-		} else {
-			fmt.Println("var = ", val) //不断读取管道中的数据
-		}
+
+	//遍历管道
+	// for v := range ch {
+	// 	fmt.Println("v = ", v)
+	// }
+	fmt.Println("len(ch) = ", len(ch))
+
+	for i := 0; i <= 2; i++ {
+		fmt.Println("i = ", <-ch)
 	}
+
 }
