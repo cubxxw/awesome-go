@@ -532,6 +532,90 @@ userinfo<span class="token punctuation">[</span><span class="token number">2</sp
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><img src="@source/markdown/images/6hiaeLIZwn8bFu2.png" alt="image-20220112141848142"></p>
 <p>🐶 添加成功！</p>
 <h3 id="map排序" tabindex="-1"><a class="header-anchor" href="#map排序" aria-hidden="true">#</a> map排序</h3>
+<details class="custom-container details"><summary>map是无序的~~</summary>
+<p>💡简单的一个案例如下：</p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token comment">/*
+ * @Description:map
+ * @Author: xiongxinwei 3293172751nss@gmail.com
+ * @Date: 2022-10-04 21:37:41
+ * @LastEditTime: 2022-10-25 17:41:04
+ * @FilePath: \code\go-super\43-main.go
+ * @Github_Address: https://github.com/3293172751/cs-awesome-Block_Chain
+ * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://nsddd.top
+ */</span>
+<span class="token keyword">package</span> main
+
+<span class="token keyword">import</span> <span class="token punctuation">(</span>
+	<span class="token string">"fmt"</span>
+	<span class="token string">"sort"</span>
+<span class="token punctuation">)</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token comment">//定义一个map</span>
+	<span class="token keyword">var</span> myMap <span class="token keyword">map</span><span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token builtin">string</span>
+	<span class="token comment">//初始化map</span>
+	myMap <span class="token operator">=</span> <span class="token function">make</span><span class="token punctuation">(</span><span class="token keyword">map</span><span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token builtin">string</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span>
+	<span class="token comment">//赋值</span>
+	myMap<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"北京"</span>
+	myMap<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"上海"</span>
+	myMap<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"广州"</span>
+	myMap<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"深圳"</span>
+	myMap<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"杭州"</span>
+	myMap<span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"成都"</span>
+	myMap<span class="token punctuation">[</span><span class="token number">7</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"重庆"</span>
+	myMap<span class="token punctuation">[</span><span class="token number">8</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"武汉"</span>
+	myMap<span class="token punctuation">[</span><span class="token number">9</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"西安"</span>
+	myMap<span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"南京"</span>
+	myMap<span class="token punctuation">[</span><span class="token number">11</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"苏州"</span>
+	myMap<span class="token punctuation">[</span><span class="token number">12</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"天津"</span>
+
+	<span class="token comment">//遍历map   -- 这个是无序的~</span>
+	<span class="token keyword">for</span> k<span class="token punctuation">,</span> v <span class="token operator">:=</span> <span class="token keyword">range</span> myMap <span class="token punctuation">{</span>
+		fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>k<span class="token punctuation">,</span> v<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token comment">//有序遍历map</span>
+	<span class="token comment">//定义一个切片，用来存放map的key</span>
+	<span class="token keyword">var</span> keys <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">int</span>
+	<span class="token comment">//遍历map，将key存放到切片中</span>
+	<span class="token keyword">for</span> k <span class="token operator">:=</span> <span class="token keyword">range</span> myMap <span class="token punctuation">{</span>
+		keys <span class="token operator">=</span> <span class="token function">append</span><span class="token punctuation">(</span>keys<span class="token punctuation">,</span> k<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+	<span class="token comment">//对切片进行排序</span>
+	sort<span class="token punctuation">.</span><span class="token function">Ints</span><span class="token punctuation">(</span>keys<span class="token punctuation">)</span>
+	<span class="token comment">//遍历切片，按照key的顺序遍历map</span>
+	<span class="token keyword">for</span> <span class="token boolean">_</span><span class="token punctuation">,</span> k <span class="token operator">:=</span> <span class="token keyword">range</span> keys <span class="token punctuation">{</span>
+		fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>k<span class="token punctuation">,</span> myMap<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>🚀 编译结果如下：</p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token punctuation">[</span>Running<span class="token punctuation">]</span> go run <span class="token string">"d:\文档\最近的<span class="token entity" title="\a">\a</span>wesome-golang\docs<span class="token entity" title="\c">\c</span>ode\go-super<span class="token entity" title="\43">\43</span>-main.go"</span>
+<span class="token number">12</span> 天津
+<span class="token number">4</span> 深圳
+<span class="token number">6</span> 成都
+<span class="token number">10</span> 南京
+<span class="token number">5</span> 杭州
+<span class="token number">7</span> 重庆
+<span class="token number">8</span> 武汉
+<span class="token number">9</span> 西安
+<span class="token number">11</span> 苏州
+<span class="token number">1</span> 北京
+<span class="token number">2</span> 上海
+<span class="token number">3</span> 广州
+<span class="token number">1</span> 北京
+<span class="token number">2</span> 上海
+<span class="token number">3</span> 广州
+<span class="token number">4</span> 深圳
+<span class="token number">5</span> 杭州
+<span class="token number">6</span> 成都
+<span class="token number">7</span> 重庆
+<span class="token number">8</span> 武汉
+<span class="token number">9</span> 西安
+<span class="token number">10</span> 南京
+<span class="token number">11</span> 苏州
+<span class="token number">12</span> 天津
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></details>
 <div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">package</span> main
 <span class="token keyword">import</span> <span class="token string">"fmt"</span>
 
@@ -656,8 +740,7 @@ userinfo<span class="token punctuation">[</span><span class="token number">2</sp
 <div class="custom-container tip"><p class="custom-container-title">提示</p>
 <p>对排序进行封装起来，然后对切片进行排序操作</p>
 <p>💡简单的一个案例如下：</p>
-<div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div></div>
+</div>
 <h2 id="end-链接" tabindex="-1"><a class="header-anchor" href="#end-链接" aria-hidden="true">#</a> END 链接</h2>
 <ul><li><div><a href = '7.md' style='float:left'>⬆️上一节🔗</a><a href = '9.md' style='float: right'>⬇️下一节🔗</a></div></li></ul>
 <ul>

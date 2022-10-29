@@ -1,4 +1,4 @@
-<template><div><h1 id="goroutine-协程" tabindex="-1"><a class="header-anchor" href="#goroutine-协程" aria-hidden="true">#</a> goroutine(协程)</h1>
+<template><div><h1 id="goroutine-协程-以及一系列操作" tabindex="-1"><a class="header-anchor" href="#goroutine-协程-以及一系列操作" aria-hidden="true">#</a> goroutine(协程)以及一系列操作</h1>
 <nav class="table-of-contents"><ul><li><router-link to="#协程和管道">协程和管道</router-link><ul><li><router-link to="#进程">进程</router-link></li><li><router-link to="#go语言协程和go主线程">Go语言协程和Go主线程</router-link></li><li><router-link to="#sync-waitgroup实现主线程等待协程执行完毕">sync.WaitGroup实现主线程等待协程执行完毕</router-link></li><li><router-link to="#goroutine的调度模型">goroutine的调度模型</router-link></li><li><router-link to="#设置cpu">设置CPU</router-link></li></ul></li><li><router-link to="#channle-管道">channle(管道)</router-link></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
 <p>[toc]</p>
 <p>😶‍🌫️go语言官方编程指南：<a href="https://golang.org/#" target="_blank" rel="noopener noreferrer">https://golang.org/#<ExternalLinkIcon/></a></p>

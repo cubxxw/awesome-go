@@ -1,5 +1,5 @@
-<template><div><h1 id="channel-管道" tabindex="-1"><a class="header-anchor" href="#channel-管道" aria-hidden="true">#</a> channel(管道)</h1>
-<nav class="table-of-contents"><ul><li><router-link to="#channel-管道-1">channel(管道)</router-link></li><li><router-link to="#chan底层分析">chan底层分析</router-link></li><li><router-link to="#channel关闭">channel关闭</router-link></li><li><router-link to="#channel的遍历">channel的遍历</router-link></li><li><router-link to="#goroutine-和-channel结合">goroutine 和 channel结合</router-link></li><li><router-link to="#统计素数">统计素数</router-link></li><li><router-link to="#channel使用细节">channel使用细节</router-link></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
+<template><div><h1 id="channel-管道-以及互斥锁" tabindex="-1"><a class="header-anchor" href="#channel-管道-以及互斥锁" aria-hidden="true">#</a> channel(管道)以及互斥锁</h1>
+<nav class="table-of-contents"><ul><li><router-link to="#channel-管道">channel(管道)</router-link></li><li><router-link to="#chan底层分析">chan底层分析</router-link></li><li><router-link to="#channel关闭">channel关闭</router-link></li><li><router-link to="#channel的遍历">channel的遍历</router-link></li><li><router-link to="#goroutine-和-channel结合">goroutine 和 channel结合</router-link></li><li><router-link to="#统计素数">统计素数</router-link></li><li><router-link to="#channel使用细节">channel使用细节</router-link><ul><li><router-link to="#单向管道">单向管道</router-link></li><li><router-link to="#select多路复用">select多路复用</router-link></li></ul></li><li><router-link to="#协程的panic处理">协程的panic处理</router-link></li><li><router-link to="#互斥锁">互斥锁</router-link><ul><li><router-link to="#互斥锁-1">互斥锁</router-link></li></ul></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
 <p>[toc]</p>
 <p>😶‍🌫️go语言官方编程指南：<a href="https://golang.org/#" target="_blank" rel="noopener noreferrer">https://golang.org/#<ExternalLinkIcon/></a></p>
 <blockquote>
@@ -27,7 +27,7 @@ lock<span class="token punctuation">.</span><span class="token function">Lock</s
 lock<span class="token punctuation">.</span><span class="token function">Unlock</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>⬇️ 或许你还可以使用管道</p>
 </details>
-<h2 id="channel-管道-1" tabindex="-1"><a class="header-anchor" href="#channel-管道-1" aria-hidden="true">#</a> channel(管道)</h2>
+<h2 id="channel-管道" tabindex="-1"><a class="header-anchor" href="#channel-管道" aria-hidden="true">#</a> channel(管道)</h2>
 <p><strong>演示管道使用</strong></p>
 <p><strong>channel初始化：</strong></p>
 <div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">var</span> intChan <span class="token keyword">chan</span> <span class="token builtin">int</span> 
@@ -481,6 +481,51 @@ writeData <span class="token number">8</span>
 使用协程耗时<span class="token operator">=</span> <span class="token number">2</span>
 main线程退出
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="channel使用细节" tabindex="-1"><a class="header-anchor" href="#channel使用细节" aria-hidden="true">#</a> channel使用细节</h2>
+<h3 id="单向管道" tabindex="-1"><a class="header-anchor" href="#单向管道" aria-hidden="true">#</a> 单向管道</h3>
+<details class="custom-container details"><summary>💡简单的一个案例如下：</summary>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token comment">/*
+ * @Description:go 管道
+ * @Author: xiongxinwei 3293172751nss@gmail.com
+ * @Date: 2022-10-04 21:37:41
+ * @LastEditTime: 2022-10-25 16:55:49
+ * @FilePath: \code\go-super\39-main.go
+ * @Github_Address: https://github.com/3293172751/cs-awesome-Block_Chain
+ * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://nsddd.top
+ */</span>
+<span class="token keyword">package</span> main
+
+<span class="token keyword">import</span> <span class="token punctuation">(</span>
+	<span class="token string">"fmt"</span>
+<span class="token punctuation">)</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	ch1 <span class="token operator">:=</span> <span class="token function">make</span><span class="token punctuation">(</span><span class="token keyword">chan</span> <span class="token builtin">string</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span>
+	ch1 <span class="token operator">&lt;-</span> <span class="token string">"a"</span> <span class="token comment">//写入管道</span>
+	a <span class="token operator">:=</span> <span class="token operator">&lt;-</span>ch1 <span class="token comment">//读取管道</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"读取管道"</span><span class="token punctuation">,</span> a<span class="token punctuation">)</span>
+
+	ch2 <span class="token operator">:=</span> <span class="token function">make</span><span class="token punctuation">(</span><span class="token keyword">chan</span><span class="token operator">&lt;-</span> <span class="token builtin">string</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span> <span class="token comment">//管道只能写入</span>
+	ch2 <span class="token operator">&lt;-</span> <span class="token string">"b"</span>                    <span class="token comment">//写入管道</span>
+	<span class="token comment">// b := &lt;-ch2                 //读取管道</span>
+	<span class="token comment">// fmt.Println("读取管道", b) //读取管道</span>
+
+	ch3 <span class="token operator">:=</span> <span class="token function">make</span><span class="token punctuation">(</span><span class="token operator">&lt;-</span><span class="token keyword">chan</span> <span class="token builtin">string</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span> <span class="token comment">//管道只能读取</span>
+	<span class="token comment">// ch3 &lt;- "c" //写入管道</span>
+	c <span class="token operator">:=</span> <span class="token operator">&lt;-</span>ch3             <span class="token comment">//读取管道</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"读取管道"</span><span class="token punctuation">,</span> c<span class="token punctuation">)</span> <span class="token comment">//读取管道</span>
+<span class="token punctuation">}</span>
+
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>🚀 编译结果如下：</p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token punctuation">[</span>Running<span class="token punctuation">]</span> go run <span class="token string">"d:\文档\最近的<span class="token entity" title="\a">\a</span>wesome-golang\docs<span class="token entity" title="\c">\c</span>ode\go-super<span class="token entity" title="\3">\3</span>9-main.go"</span>
+读取管道 a
+fatal error: all goroutines are asleep - deadlock<span class="token operator">!</span>
+
+goroutine <span class="token number">1</span> <span class="token punctuation">[</span>chan receive<span class="token punctuation">]</span>:
+main.main<span class="token punctuation">(</span><span class="token punctuation">)</span>
+	d:/文档/最近的/awesome-golang/docs/code/go-super/39-main.go:29 +0x106
+<span class="token builtin class-name">exit</span> status <span class="token number">2</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></details>
+</details>
 <p><strong>管道可以声明为只读或者只写，默认情况下，管道是即可读，也可以写入</strong></p>
 <div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">package</span> main
 <span class="token keyword">import</span> <span class="token punctuation">(</span>
@@ -510,17 +555,165 @@ main线程退出
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
 <p>而且Go语言在底层做了优化，所以效率更高一些</p>
 </blockquote>
-<hr>
-<blockquote>
+<p>:::  details💡简单的一个案例如下：
+管道的只读和只写操作定义</p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token comment">/*
+ * @Description:go只读只写管道
+ * @Author: xiongxinwei 3293172751nss@gmail.com
+ * @Date: 2022-10-04 21:37:41
+ * @LastEditTime: 2022-10-25 17:16:21
+ * @FilePath: \code\go-super\40-main.go
+ * @Github_Address: https://github.com/3293172751/cs-awesome-Block_Chain
+ * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://nsddd.top
+ */</span>
+<span class="token keyword">package</span> main
+
+<span class="token keyword">import</span> <span class="token punctuation">(</span>
+	<span class="token string">"fmt"</span>
+	<span class="token string">"sync"</span>
+	<span class="token string">"time"</span>
+<span class="token punctuation">)</span>
+
+<span class="token keyword">var</span> wg sync<span class="token punctuation">.</span>WaitGroup
+
+<span class="token comment">// 只读管道</span>
+<span class="token keyword">func</span> <span class="token function">readChan</span><span class="token punctuation">(</span>ch <span class="token operator">&lt;-</span><span class="token keyword">chan</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token keyword">for</span> <span class="token punctuation">{</span>
+		num <span class="token operator">:=</span> <span class="token operator">&lt;-</span>ch
+		<span class="token keyword">if</span> num <span class="token operator">==</span> <span class="token number">0</span> <span class="token punctuation">{</span>
+			<span class="token keyword">break</span>
+		<span class="token punctuation">}</span>
+		fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span>
+		time<span class="token punctuation">.</span><span class="token function">Sleep</span><span class="token punctuation">(</span><span class="token number">1000</span> <span class="token operator">*</span> time<span class="token punctuation">.</span>Millisecond<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+	wg<span class="token punctuation">.</span><span class="token function">Done</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 只写管道</span>
+<span class="token keyword">func</span> <span class="token function">writeChan</span><span class="token punctuation">(</span>ch <span class="token keyword">chan</span><span class="token operator">&lt;-</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token keyword">for</span> i <span class="token operator">:=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> <span class="token number">100</span><span class="token punctuation">;</span> i<span class="token operator">++</span> <span class="token punctuation">{</span>
+		ch <span class="token operator">&lt;-</span> i
+		time<span class="token punctuation">.</span><span class="token function">Sleep</span><span class="token punctuation">(</span>time<span class="token punctuation">.</span>Millisecond <span class="token operator">*</span> <span class="token number">1000</span><span class="token punctuation">)</span> <span class="token comment">// 100毫秒就是0.1秒</span>
+	<span class="token punctuation">}</span>
+	<span class="token function">close</span><span class="token punctuation">(</span>ch<span class="token punctuation">)</span>
+	wg<span class="token punctuation">.</span><span class="token function">Done</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token keyword">var</span> ch <span class="token operator">=</span> <span class="token function">make</span><span class="token punctuation">(</span><span class="token keyword">chan</span> <span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span>
+	wg<span class="token punctuation">.</span><span class="token function">Add</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+	<span class="token keyword">go</span> <span class="token function">writeChan</span><span class="token punctuation">(</span>ch<span class="token punctuation">)</span> <span class="token comment">// 只写</span>
+	wg<span class="token punctuation">.</span><span class="token function">Add</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+	<span class="token keyword">go</span> <span class="token function">readChan</span><span class="token punctuation">(</span>ch<span class="token punctuation">)</span> <span class="token comment">// 只读</span>
+	wg<span class="token punctuation">.</span><span class="token function">Wait</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>🚀 编译结果如下：</p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token punctuation">[</span>Running<span class="token punctuation">]</span> go run <span class="token string">"d:\文档\最近的<span class="token entity" title="\a">\a</span>wesome-golang\docs<span class="token entity" title="\c">\c</span>ode\go-super<span class="token entity" title="\40">\40</span>-main.go"</span>
+<span class="token number">1</span>
+<span class="token number">2</span>
+<span class="token number">3</span>
+<span class="token number">4</span>
+<span class="token number">5</span>
+<span class="token number">6</span>
+<span class="token number">7</span>
+<span class="token number">8</span>
+<span class="token number">9</span>
+<span class="token punctuation">..</span><span class="token punctuation">..</span>.
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>:::</p>
+<h3 id="select多路复用" tabindex="-1"><a class="header-anchor" href="#select多路复用" aria-hidden="true">#</a> select多路复用</h3>
+<div class="custom-container tip"><p class="custom-container-title">select多路复用</p>
 <p>在我们实际开发中，可能不好确定什么时候关闭该管道，此时我们就不能用close，可以使用select解决方法</p>
-</blockquote>
+<p><strong>注意：使用多路复用的时候不需要关闭<code v-pre>chan</code></strong></p>
 <div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">select</span><span class="token punctuation">{</span>
 	<span class="token keyword">case</span> v<span class="token operator">:=</span> <span class="token operator">&lt;-</span>管道
 	<span class="token operator">...</span><span class="token punctuation">.</span>
 	<span class="token keyword">default</span><span class="token punctuation">:</span>
 	语句
 <span class="token punctuation">}</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>案例</strong></p>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div>
+<details class="custom-container details"><summary>多路复用的解决方案</summary>
+<p><strong>在某些情况下我们需要在多个管道中取出数据：</strong></p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token comment">/*
+ * @Description:select 多路复用
+ * @Author: xiongxinwei 3293172751nss@gmail.com
+ * @Date: 2022-10-04 21:37:41
+ * @LastEditTime: 2022-10-25 17:29:28
+ * @FilePath: \code\go-super\41-main.go
+ * @Github_Address: https://github.com/3293172751/cs-awesome-Block_Chain
+ * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://nsddd.top
+ */</span>
+<span class="token keyword">package</span> main
+
+<span class="token keyword">import</span> <span class="token punctuation">(</span>
+	<span class="token string">"fmt"</span>
+	<span class="token string">"sync"</span>
+	<span class="token string">"time"</span>
+<span class="token punctuation">)</span>
+
+<span class="token keyword">var</span> wg sync<span class="token punctuation">.</span>WaitGroup
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token comment">//int和int64的区别: int是根据操作系统的位数来决定的，32位系统就是int32，64位系统就是int64</span>
+	ch1 <span class="token operator">:=</span> <span class="token function">make</span><span class="token punctuation">(</span><span class="token keyword">chan</span> <span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span>
+	ch2 <span class="token operator">:=</span> <span class="token function">make</span><span class="token punctuation">(</span><span class="token keyword">chan</span> <span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span>
+
+	<span class="token comment">//循环输入管道</span>
+	<span class="token keyword">for</span> i <span class="token operator">:=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">100</span><span class="token punctuation">;</span> i<span class="token operator">++</span> <span class="token punctuation">{</span>
+		ch1 <span class="token operator">&lt;-</span> i
+		ch2 <span class="token operator">&lt;-</span> i
+	<span class="token punctuation">}</span>
+
+	wg<span class="token punctuation">.</span><span class="token function">Add</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+	<span class="token keyword">go</span> <span class="token keyword">func</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">for</span> <span class="token punctuation">{</span>
+			<span class="token keyword">select</span> <span class="token punctuation">{</span>
+			<span class="token keyword">case</span> v <span class="token operator">:=</span> <span class="token operator">&lt;-</span>ch1<span class="token punctuation">:</span>
+				fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"读取管道1"</span><span class="token punctuation">,</span> v<span class="token punctuation">)</span>
+			<span class="token keyword">case</span> v <span class="token operator">:=</span> <span class="token operator">&lt;-</span>ch2<span class="token punctuation">:</span>
+				fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"读取管道2"</span><span class="token punctuation">,</span> v<span class="token punctuation">)</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span>
+		wg<span class="token punctuation">.</span><span class="token function">Done</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	<span class="token punctuation">}</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	time<span class="token punctuation">.</span><span class="token function">Sleep</span><span class="token punctuation">(</span>time<span class="token punctuation">.</span>Second <span class="token operator">*</span> <span class="token number">3</span><span class="token punctuation">)</span>
+	wg<span class="token punctuation">.</span><span class="token function">Wait</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>🚀 编译结果如下：</p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token punctuation">[</span>Running<span class="token punctuation">]</span> go run <span class="token string">"d:\文档\最近的<span class="token entity" title="\a">\a</span>wesome-golang\docs<span class="token entity" title="\c">\c</span>ode\go-super<span class="token entity" title="\41">\41</span>-main.go"</span>
+读取管道2 <span class="token number">0</span>
+读取管道1 <span class="token number">0</span>
+读取管道1 <span class="token number">1</span>
+读取管道2 <span class="token number">1</span>
+读取管道2 <span class="token number">2</span>
+读取管道2 <span class="token number">3</span>
+读取管道1 <span class="token number">2</span>
+读取管道2 <span class="token number">4</span>
+<span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span>
+读取管道1 <span class="token number">15</span>
+读取管道1 <span class="token number">16</span>
+读取管道2 <span class="token number">26</span>
+读取管道1 <span class="token number">17</span>
+读取管道2 <span class="token number">27</span>
+读取管道2 <span class="token number">28</span>
+读取管道2 <span class="token number">29</span>
+读取管道1 <span class="token number">18</span>
+读取管道1 <span class="token number">19</span>
+读取管道2 <span class="token number">30</span>
+读取管道2 <span class="token number">31</span>
+读取管道1 <span class="token number">20</span>
+读取管道2 <span class="token number">32</span>
+读取管道1 <span class="token number">21</span>
+读取管道1 <span class="token number">22</span>
+读取管道2 <span class="token number">33</span>
+读取管道1 <span class="token number">23</span>
+读取管道2 <span class="token number">34</span>
+<span class="token punctuation">..</span><span class="token punctuation">..</span>.
+读取管道1 <span class="token number">98</span>
+读取管道1 <span class="token number">99</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></details>
+<p>💡简单的一个案例如下：</p>
 <div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token comment">/*前面有两个管道*/</span>
 label          <span class="token comment">//标签，重新读取数据</span>
 <span class="token keyword">for</span><span class="token punctuation">{</span>
@@ -537,7 +730,308 @@ label          <span class="token comment">//标签，重新读取数据</span>
         <span class="token comment">/* break label */</span>
         <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="end-链接" tabindex="-1"><a class="header-anchor" href="#end-链接" aria-hidden="true">#</a> END 链接</h2>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="协程的panic处理" tabindex="-1"><a class="header-anchor" href="#协程的panic处理" aria-hidden="true">#</a> 协程的panic处理</h2>
+<p>💡简单的一个案例如下：</p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token comment">/*
+ * @Description:Go语言协程异常处理
+ * @Author: xiongxinwei 3293172751nss@gmail.com
+ * @Date: 2022-10-04 21:37:41
+ * @LastEditTime: 2022-10-25 17:50:10
+ * @FilePath: \code\go-super\44-main.go
+ * @Github_Address: https://github.com/3293172751/cs-awesome-Block_Chain
+ * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://nsddd.top
+ */</span>
+<span class="token keyword">package</span> main
+
+<span class="token keyword">import</span> <span class="token punctuation">(</span>
+	<span class="token string">"fmt"</span>
+	<span class="token string">"time"</span>
+<span class="token punctuation">)</span>
+
+<span class="token keyword">func</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token keyword">defer</span> <span class="token keyword">func</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">if</span> err <span class="token operator">:=</span> <span class="token function">recover</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+			fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"协程出现异常:"</span><span class="token punctuation">,</span> err<span class="token punctuation">)</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	<span class="token keyword">var</span> a <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">int</span>
+	a<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">100</span> <span class="token comment">// 这里会出现数组越界异常</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">test2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token keyword">defer</span> <span class="token keyword">func</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">if</span> err <span class="token operator">:=</span> <span class="token function">recover</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+			fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"协程出现异常:"</span><span class="token punctuation">,</span> err<span class="token punctuation">)</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	<span class="token keyword">var</span> mapping_1 <span class="token keyword">map</span><span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token builtin">string</span>
+	mapping_1<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"hello"</span> <span class="token comment">// 这里会出现空指针异常</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token keyword">go</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	<span class="token keyword">go</span> <span class="token function">test2</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	time<span class="token punctuation">.</span><span class="token function">Sleep</span><span class="token punctuation">(</span>time<span class="token punctuation">.</span>Second <span class="token operator">*</span> <span class="token number">3</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>🚀 编译结果如下：</p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token punctuation">[</span>Running<span class="token punctuation">]</span> go run <span class="token string">"d:\文档\最近的<span class="token entity" title="\a">\a</span>wesome-golang\docs<span class="token entity" title="\c">\c</span>ode\go-super<span class="token entity" title="\44">\44</span>-main.go"</span>
+协程出现异常: assignment to entry <span class="token keyword">in</span> nil map
+协程出现异常: runtime error: index out of range <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> with length <span class="token number">0</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>📜 对上面的解释：</p>
+<blockquote>
+<p>协程出现异常：赋值给空映射中的条目（数组越界）</p>
+<p>协程出现异常：运行时错误:索引超出范围[0]，长度为0</p>
+</blockquote>
+<h2 id="互斥锁" tabindex="-1"><a class="header-anchor" href="#互斥锁" aria-hidden="true">#</a> 互斥锁</h2>
+<div class="custom-container warning"><p class="custom-container-title">资源竞争问题</p>
+<p><strong>我们可能会使用协程同时操作<code v-pre>count</code>出现资源竞争的问题：</strong></p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token comment">/*
+ * @Description:资源竞争死锁
+ * @Author: xiongxinwei 3293172751nss@gmail.com
+ * @Date: 2022-10-04 21:37:41
+ * @LastEditTime: 2022-10-25 18:13:35
+ * @FilePath: \code\go-super\45-main.go
+ * @Github_Address: https://github.com/3293172751/cs-awesome-Block_Chain
+ * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://nsddd.top
+ */</span>
+<span class="token keyword">package</span> main
+
+<span class="token keyword">import</span> <span class="token punctuation">(</span>
+	<span class="token string">"fmt"</span>
+	<span class="token string">"sync"</span>
+	<span class="token string">"time"</span>
+<span class="token punctuation">)</span>
+
+<span class="token keyword">var</span> wg sync<span class="token punctuation">.</span>WaitGroup
+<span class="token keyword">var</span> count <span class="token builtin">int</span>
+
+<span class="token keyword">func</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	count<span class="token operator">++</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"the count is "</span><span class="token punctuation">,</span> count<span class="token punctuation">)</span>
+	time<span class="token punctuation">.</span><span class="token function">Sleep</span><span class="token punctuation">(</span><span class="token number">100</span> <span class="token operator">*</span> time<span class="token punctuation">.</span>Millisecond<span class="token punctuation">)</span>
+	wg<span class="token punctuation">.</span><span class="token function">Done</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">test2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	count<span class="token operator">++</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"the count is "</span><span class="token punctuation">,</span> count<span class="token punctuation">)</span>
+	time<span class="token punctuation">.</span><span class="token function">Sleep</span><span class="token punctuation">(</span><span class="token number">100</span> <span class="token operator">*</span> time<span class="token punctuation">.</span>Millisecond<span class="token punctuation">)</span>
+	wg<span class="token punctuation">.</span><span class="token function">Done</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token keyword">for</span> i <span class="token operator">:=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">100</span><span class="token punctuation">;</span> i<span class="token operator">++</span> <span class="token punctuation">{</span>
+		wg<span class="token punctuation">.</span><span class="token function">Add</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+		<span class="token keyword">go</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+		<span class="token keyword">go</span> <span class="token function">test2</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+	wg<span class="token punctuation">.</span><span class="token function">Wait</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><details class="custom-container details"><summary>根据不同的编译方式编译结果不同</summary>
+<p><strong>直接build🚀 编译结果如下：</strong></p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>the count is  <span class="token number">1</span>
+the count is  <span class="token number">2</span>
+the count is  <span class="token number">26</span>
+the count is  <span class="token number">4</span>
+the count is  <span class="token number">5</span>
+the count is  <span class="token number">6</span>
+the count is  <span class="token number">7</span>
+the count is  <span class="token number">8</span>
+the count is  <span class="token number">9</span>
+the count is  <span class="token number">10</span>
+the count is  <span class="token number">11</span>
+the count is  <span class="token number">12</span>
+the count is  <span class="token number">13</span>
+the count is  <span class="token number">14</span>
+the count is  <span class="token number">15</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>加上<code v-pre>-race</code>查看程序运行时候有竞争关系</p>
+<p>此时就出问题了</p>
+</details>
+</div>
+<h3 id="互斥锁-1" tabindex="-1"><a class="header-anchor" href="#互斥锁-1" aria-hidden="true">#</a> 互斥锁</h3>
+<p>互斥锁是一种常用的同步机制，用于在多个线程中对共享资源进行访问控制。互斥锁的原理是：当一个线程访问共享资源时，其他线程不能访问该共享资源，直到该线程访问完毕。互斥锁可以保证共享资源在同一时刻只被一个线程访问，从而避免了资源的竞争和不一致性。
+互斥锁的使用方法如下：</p>
+<ol>
+<li>定义一个互斥锁变量</li>
+<li>在需要加锁的地方加锁</li>
+<li>在需要解锁的地方解锁</li>
+</ol>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">var</span> mutex sync<span class="token punctuation">.</span>Mutex <span class="token comment">// 定义一个互斥锁变量</span>
+mutex<span class="token punctuation">.</span><span class="token function">Lock</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 加锁</span>
+<span class="token comment">//这里面进行操作</span>
+mutex<span class="token punctuation">.</span><span class="token function">Unlock</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 解锁</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><details class="custom-container details"><summary>💡简单的一个案例如下：</summary>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token comment">/*
+ * @Description:资源竞争死锁
+ * @Author: xiongxinwei 3293172751nss@gmail.com
+ * @Date: 2022-10-04 21:37:41
+ * @LastEditTime: 2022-10-25 18:26:07
+ * @FilePath: \code\go-super\45-main.go
+ * @Github_Address: https://github.com/3293172751/cs-awesome-Block_Chain
+ * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://nsddd.top
+ */</span>
+<span class="token keyword">package</span> main
+
+<span class="token keyword">import</span> <span class="token punctuation">(</span>
+	<span class="token string">"fmt"</span>
+	<span class="token string">"sync"</span>
+	<span class="token string">"time"</span>
+<span class="token punctuation">)</span>
+
+<span class="token keyword">var</span> mutex sync<span class="token punctuation">.</span>Mutex <span class="token comment">// 定义一个互斥锁变量</span>
+<span class="token keyword">var</span> wg sync<span class="token punctuation">.</span>WaitGroup
+<span class="token keyword">var</span> count <span class="token builtin">int</span>
+
+<span class="token keyword">func</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	mutex<span class="token punctuation">.</span><span class="token function">Lock</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 加锁</span>
+	count<span class="token operator">++</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"the count is "</span><span class="token punctuation">,</span> count<span class="token punctuation">)</span>
+	time<span class="token punctuation">.</span><span class="token function">Sleep</span><span class="token punctuation">(</span><span class="token number">100</span> <span class="token operator">*</span> time<span class="token punctuation">.</span>Millisecond<span class="token punctuation">)</span>
+	mutex<span class="token punctuation">.</span><span class="token function">Unlock</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 解锁</span>
+	wg<span class="token punctuation">.</span><span class="token function">Done</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">test2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	mutex<span class="token punctuation">.</span><span class="token function">Lock</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 加锁</span>
+	count<span class="token operator">++</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"the count is "</span><span class="token punctuation">,</span> count<span class="token punctuation">)</span>
+	time<span class="token punctuation">.</span><span class="token function">Sleep</span><span class="token punctuation">(</span><span class="token number">100</span> <span class="token operator">*</span> time<span class="token punctuation">.</span>Millisecond<span class="token punctuation">)</span>
+	mutex<span class="token punctuation">.</span><span class="token function">Unlock</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 解锁</span>
+	wg<span class="token punctuation">.</span><span class="token function">Done</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token keyword">for</span> i <span class="token operator">:=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">100</span><span class="token punctuation">;</span> i<span class="token operator">++</span> <span class="token punctuation">{</span>
+		wg<span class="token punctuation">.</span><span class="token function">Add</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+		<span class="token keyword">go</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+		<span class="token keyword">go</span> <span class="token function">test2</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+	wg<span class="token punctuation">.</span><span class="token function">Wait</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/*
+互斥锁是一种常用的同步机制，用于在多个线程中对共享资源进行访问控制。互斥锁的原理是：当一个线程访问共享资源时，其他线程不能访问该共享资源，直到该线程访问完毕。互斥锁可以保证共享资源在同一时刻只被一个线程访问，从而避免了资源的竞争和不一致性。
+互斥锁的使用方法如下：
+1. 定义一个互斥锁变量
+2. 在需要加锁的地方加锁
+3. 在需要解锁的地方解锁
+
+var mutex sync.Mutex // 定义一个互斥锁变量
+mutex.Lock() // 加锁
+这里面进行操作
+mutex.Unlock() // 解锁
+*/</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>🚀 编译结果如下：</p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>D:<span class="token punctuation">\</span>文档<span class="token punctuation">\</span>最近的<span class="token punctuation">\</span>awesome-golang<span class="token punctuation">\</span>docs<span class="token punctuation">\</span>code<span class="token punctuation">\</span>go-super<span class="token operator">></span><span class="token number">45</span>-main.exe
+the count is  <span class="token number">1</span>
+the count is  <span class="token number">2</span>
+the count is  <span class="token number">3</span>
+the count is  <span class="token number">4</span>
+the count is  <span class="token number">5</span>
+the count is  <span class="token number">6</span>
+the count is  <span class="token number">7</span>
+the count is  <span class="token number">8</span>
+the count is  <span class="token number">9</span>
+the count is  <span class="token number">10</span>
+the count is  <span class="token number">11</span>
+the count is  <span class="token number">12</span>
+the count is  <span class="token number">13</span>
+the count is  <span class="token number">14</span>
+the count is  <span class="token number">15</span>
+the count is  <span class="token number">16</span>
+the count is  <span class="token number">17</span>
+the count is  <span class="token number">18</span>
+the count is  <span class="token number">19</span>
+the count is  <span class="token number">20</span>
+the count is  <span class="token number">21</span>
+the count is  <span class="token number">22</span>
+the count is  <span class="token number">23</span>
+the count is  <span class="token number">24</span>
+the count is  <span class="token number">25</span>
+the count is  <span class="token number">26</span>
+the count is  <span class="token number">27</span>
+the count is  <span class="token number">28</span>
+the count is  <span class="token number">29</span>
+the count is  <span class="token number">30</span>
+the count is  <span class="token number">31</span>
+the count is  <span class="token number">32</span>
+the count is  <span class="token number">33</span>
+the count is  <span class="token number">34</span>
+the count is  <span class="token number">35</span>
+the count is  <span class="token number">36</span>
+the count is  <span class="token number">37</span>
+the count is  <span class="token number">38</span>
+the count is  <span class="token number">39</span>
+the count is  <span class="token number">40</span>
+the count is  <span class="token number">41</span>
+the count is  <span class="token number">42</span>
+the count is  <span class="token number">43</span>
+the count is  <span class="token number">44</span>
+the count is  <span class="token number">45</span>
+the count is  <span class="token number">46</span>
+the count is  <span class="token number">47</span>
+the count is  <span class="token number">48</span>
+the count is  <span class="token number">49</span>
+the count is  <span class="token number">50</span>
+the count is  <span class="token number">51</span>
+the count is  <span class="token number">52</span>
+the count is  <span class="token number">53</span>
+the count is  <span class="token number">54</span>
+the count is  <span class="token number">55</span>
+the count is  <span class="token number">56</span>
+the count is  <span class="token number">57</span>
+the count is  <span class="token number">58</span>
+the count is  <span class="token number">59</span>
+the count is  <span class="token number">60</span>
+the count is  <span class="token number">61</span>
+the count is  <span class="token number">62</span>
+the count is  <span class="token number">63</span>
+the count is  <span class="token number">64</span>
+the count is  <span class="token number">65</span>
+the count is  <span class="token number">66</span>
+the count is  <span class="token number">67</span>
+the count is  <span class="token number">68</span>
+the count is  <span class="token number">69</span>
+the count is  <span class="token number">70</span>
+the count is  <span class="token number">71</span>
+the count is  <span class="token number">72</span>
+the count is  <span class="token number">73</span>
+the count is  <span class="token number">74</span>
+the count is  <span class="token number">75</span>
+the count is  <span class="token number">76</span>
+the count is  <span class="token number">77</span>
+the count is  <span class="token number">78</span>
+the count is  <span class="token number">79</span>
+the count is  <span class="token number">80</span>
+the count is  <span class="token number">81</span>
+the count is  <span class="token number">82</span>
+the count is  <span class="token number">83</span>
+the count is  <span class="token number">84</span>
+the count is  <span class="token number">85</span>
+the count is  <span class="token number">86</span>
+the count is  <span class="token number">87</span>
+the count is  <span class="token number">88</span>
+the count is  <span class="token number">89</span>
+the count is  <span class="token number">90</span>
+the count is  <span class="token number">91</span>
+the count is  <span class="token number">92</span>
+the count is  <span class="token number">93</span>
+the count is  <span class="token number">94</span>
+the count is  <span class="token number">95</span>
+the count is  <span class="token number">96</span>
+the count is  <span class="token number">97</span>
+the count is  <span class="token number">98</span>
+the count is  <span class="token number">99</span>
+the count is  <span class="token number">100</span>
+the count is  <span class="token number">101</span>
+the count is  <span class="token number">102</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></details>
+<div class="custom-container tip"><p class="custom-container-title">总结</p>
+<p>读写锁可以让多个读操作并发，同时读取，但是对于写操作是完全互斥的，也就是说，当一个goroutine进行写操作的时候，其他的goroutine既不能进行读操作，也不能进行写操作。</p>
+</div>
+<h2 id="end-链接" tabindex="-1"><a class="header-anchor" href="#end-链接" aria-hidden="true">#</a> END 链接</h2>
 <ul><li><div><a href = '18.md' style='float:left'>⬆️上一节🔗</a><a href = '20.md' style='float: right'>⬇️下一节🔗</a></div></li></ul>
 <ul>
 <li>
@@ -550,7 +1044,6 @@ label          <span class="token comment">//标签，重新读取数据</span>
 <p>✴️版权声明 © :本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>
 </li>
 </ul>
-</details>
 </div></template>
 
 

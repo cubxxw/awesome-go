@@ -203,7 +203,7 @@
 <h2 id="📚-设计模式" tabindex="-1"><a class="header-anchor" href="#📚-设计模式" aria-hidden="true">#</a> 📚 设计模式</h2>
 <ul>
 <li>
-<p>[x] <RouterLink to="/go-advancend/design/1.html">😎🔑</RouterLink></p>
+<p>[x] <RouterLink to="/go-advancend/design/1.html">😎🔑设计模式概述</RouterLink></p>
 </li>
 <li>
 <p>[x] <RouterLink to="/go-advancend/design/2.html">😎🔑</RouterLink></p>

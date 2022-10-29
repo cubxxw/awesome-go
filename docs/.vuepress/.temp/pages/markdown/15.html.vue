@@ -1,5 +1,5 @@
 <template><div><h1 id="文件的一系列操作" tabindex="-1"><a class="header-anchor" href="#文件的一系列操作" aria-hidden="true">#</a> 文件的一系列操作</h1>
-<nav class="table-of-contents"><ul><li><router-link to="#文件">文件</router-link></li><li><router-link to="#openfile函数">OPenFile函数</router-link></li><li><router-link to="#读取文件内容显示在终端方法">读取文件内容显示在终端方法</router-link></li><li><router-link to="#写文件的操作">写文件的操作</router-link></li><li><router-link to="#constants">Constants</router-link></li><li><router-link to="#golang判断文件或者文件夹是否存在">golang判断文件或者文件夹是否存在</router-link></li><li><router-link to="#拷贝文件">拷贝文件</router-link></li><li><router-link to="#统计英文、数字、空格和其他字符数量">统计英文、数字、空格和其他字符数量</router-link></li><li><router-link to="#python中的文件操作">python中的文件操作</router-link></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
+<nav class="table-of-contents"><ul><li><router-link to="#文件操作速查">文件操作速查</router-link></li><li><router-link to="#文件">文件</router-link></li><li><router-link to="#openfile函数">OPenFile函数</router-link></li><li><router-link to="#读取文件内容显示在终端方法">读取文件内容显示在终端方法</router-link></li><li><router-link to="#写文件的操作">写文件的操作</router-link></li><li><router-link to="#constants">Constants</router-link></li><li><router-link to="#golang判断文件或者文件夹是否存在">golang判断文件或者文件夹是否存在</router-link></li><li><router-link to="#拷贝-复制-文件">拷贝（复制）文件</router-link></li><li><router-link to="#统计英文、数字、空格和其他字符数量">统计英文、数字、空格和其他字符数量</router-link></li><li><router-link to="#python中的文件操作">python中的文件操作</router-link></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
 <p>[toc]</p>
 <p>😶‍🌫️go语言官方编程指南：<a href="https://golang.org/#" target="_blank" rel="noopener noreferrer">https://golang.org/#<ExternalLinkIcon/></a></p>
 <blockquote>
@@ -12,6 +12,128 @@
 <p>❤️💕💕关于区块链技术，可以关注我，共同学习更多的区块链技术。博客<a href="http://nsddd.top" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
 </blockquote>
 <hr>
+<h2 id="文件操作速查" tabindex="-1"><a class="header-anchor" href="#文件操作速查" aria-hidden="true">#</a> 文件操作速查</h2>
+<details class="custom-container details"><summary>读取文件操作 方法一</summary>
+<p><strong>读取文件的方法一：注意一次只能读取<code v-pre>128</code>个字节，可以循环读取</strong></p>
+<ol>
+<li>
+<p>打开文件 <code v-pre>fileObj, err := os.Open(&quot;文件路径&quot;)</code></p>
+</li>
+<li>
+<p>读取文件内容 <code v-pre>reader := bufio.NewReader(fileObj)</code></p>
+</li>
+<li>
+<p>循环读取文件内容</p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">for</span> <span class="token punctuation">{</span>
+    str<span class="token punctuation">,</span> err <span class="token operator">:=</span> reader<span class="token punctuation">.</span><span class="token function">ReadString</span><span class="token punctuation">(</span><span class="token char">''</span><span class="token punctuation">)</span>
+	<span class="token keyword">if</span> err <span class="token operator">==</span> io<span class="token punctuation">.</span>EOF <span class="token punctuation">{</span>  <span class="token comment">// `EOF`是文件读取结束的标志，当读取到文件末尾时，会返回`EOF`</span>
+		<span class="token keyword">break</span>
+	<span class="token punctuation">}</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Print</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></li>
+<li>
+<p>关闭文件 <code v-pre>fileObj.Close()</code></p>
+</li>
+</ol>
+<p>💡简单的一个案例如下：</p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	file<span class="token punctuation">,</span> err <span class="token operator">:=</span> os<span class="token punctuation">.</span><span class="token function">Open</span><span class="token punctuation">(</span><span class="token string">"./51-main.go"</span><span class="token punctuation">)</span>
+	<span class="token keyword">defer</span> file<span class="token punctuation">.</span><span class="token function">Close</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	<span class="token keyword">if</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+		fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"文件打开失败"</span><span class="token punctuation">,</span> err<span class="token punctuation">)</span>
+		<span class="token keyword">return</span>
+	<span class="token punctuation">}</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"文件打开成功"</span><span class="token punctuation">)</span>
+
+	<span class="token comment">//创建一个切片 用来存储读取的内容</span>
+	buf <span class="token operator">:=</span> <span class="token function">make</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">byte</span><span class="token punctuation">,</span> <span class="token number">1024</span><span class="token operator">*</span><span class="token number">2</span><span class="token punctuation">)</span>
+	<span class="token comment">//循环读取文件内容</span>
+	<span class="token keyword">for</span> <span class="token punctuation">{</span>
+		n<span class="token punctuation">,</span> err <span class="token operator">:=</span> file<span class="token punctuation">.</span><span class="token function">Read</span><span class="token punctuation">(</span>buf<span class="token punctuation">)</span>
+		<span class="token keyword">if</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+			fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"文件读取失败"</span><span class="token punctuation">,</span> err<span class="token punctuation">)</span>
+			<span class="token keyword">return</span>
+		<span class="token punctuation">}</span>
+		<span class="token comment">//如果读取的内容小于1024字节，就结束循环</span>
+		<span class="token keyword">if</span> n <span class="token operator">&lt;</span> <span class="token number">1024</span><span class="token operator">*</span><span class="token number">2</span> <span class="token punctuation">{</span>
+			<span class="token keyword">break</span>
+		<span class="token punctuation">}</span>
+		fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token function">string</span><span class="token punctuation">(</span>buf<span class="token punctuation">[</span><span class="token punctuation">:</span>n<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>🚀 编译结果如下：</p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>D:<span class="token punctuation">\</span>文档<span class="token punctuation">\</span>最近的<span class="token punctuation">\</span>awesome-golang<span class="token punctuation">\</span>docs<span class="token punctuation">\</span>code<span class="token punctuation">\</span>go-super<span class="token operator">></span>go build <span class="token number">52</span>-main.go
+
+D:<span class="token punctuation">\</span>文档<span class="token punctuation">\</span>最近的<span class="token punctuation">\</span>awesome-golang<span class="token punctuation">\</span>docs<span class="token punctuation">\</span>code<span class="token punctuation">\</span>go-super<span class="token operator">></span><span class="token number">52</span>-main.exe
+文件打开成功
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>📜 对上面的解释：</p>
+<blockquote>
+<p><strong>后面读取内容太长，但是内容是没有读取完整的，只读取到一部分，最后一个不满1024字节就去掉了，如果想要读取完整，改for循环：~</strong></p>
+<ul>
+<li><code v-pre>EOF</code>是文件读取结束的标志，当读取到文件末尾时，会返回<code v-pre>EOF</code></li>
+</ul>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">for</span> <span class="token punctuation">{</span>
+	n<span class="token punctuation">,</span> err <span class="token operator">:=</span> file<span class="token punctuation">.</span><span class="token function">Read</span><span class="token punctuation">(</span>buf<span class="token punctuation">)</span>
+	<span class="token keyword">if</span> err <span class="token operator">==</span> io<span class="token punctuation">.</span>EOF <span class="token punctuation">{</span>  <span class="token comment">// `EOF`是文件读取结束的标志，当读取到文件末尾时，会返回`EOF`·</span>
+		<span class="token keyword">break</span>
+	<span class="token punctuation">}</span>
+	<span class="token keyword">if</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+		fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"文件读取失败"</span><span class="token punctuation">,</span> err<span class="token punctuation">)</span>
+		<span class="token keyword">return</span>   
+	<span class="token punctuation">}</span>
+	<span class="token comment">// //如果读取的内容小于1024字节，就结束循环</span>
+	<span class="token comment">// if n &lt; 1024*2 {</span>
+	<span class="token comment">// 	break</span>
+	<span class="token comment">// }</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token function">string</span><span class="token punctuation">(</span>buf<span class="token punctuation">[</span><span class="token punctuation">:</span>n<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></blockquote>
+</details>
+<details class="custom-container details"><summary>读取文件的方法二： bufio包的ReadFile()函数</summary>
+<p><strong>读取文件的方法二： bufio包的ReadFile()函数</strong></p>
+<ol>
+<li>读取文件内容 <code v-pre>content, err := ioutil.ReadFile(&quot;文件路径&quot;)</code></li>
+<li>打印文件内容 <code v-pre>fmt.Println(string(content))</code></li>
+</ol>
+<p>💡简单的一个案例如下：</p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token comment">/*
+ * @Description: bufio按行读取文件
+ * @Author: xiongxinwei 3293172751nss@gmail.com
+ * @Date: 2022-10-04 21:37:41
+ * @LastEditTime: 2022-10-26 17:55:39
+ * @FilePath: \code\go-super\53-main.go
+ * @Github_Address: https://github.com/3293172751/cs-awesome-Block_Chain
+ * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://nsddd.top
+ */</span>
+<span class="token keyword">package</span> main
+
+<span class="token keyword">import</span> <span class="token punctuation">(</span>
+	<span class="token string">"fmt"</span>
+	<span class="token string">"io/ioutil"</span>
+<span class="token punctuation">)</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token comment">//bufio按行读取文件  如果文件太大，会导致内存溢出</span>
+	byteString<span class="token punctuation">,</span> err <span class="token operator">:=</span> ioutil<span class="token punctuation">.</span><span class="token function">ReadFile</span><span class="token punctuation">(</span><span class="token string">"./51-main.go"</span><span class="token punctuation">)</span> <span class="token comment">//返回的是一个字节切片</span>
+	<span class="token keyword">if</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+		fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"文件读取失败"</span><span class="token punctuation">,</span> err<span class="token punctuation">)</span>
+		<span class="token keyword">return</span>
+	<span class="token punctuation">}</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token function">string</span><span class="token punctuation">(</span>byteString<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>编译结果和上面一样</p>
+</details>
+<details class="custom-container details"><summary>读取文件的方法二： bufio读取文件</summary>
+<p><strong>bufio读取文件</strong></p>
+<ol>
+<li>只读方式打开文件 <code v-pre>file, err := os.Open(&quot;test.txt&quot;)</code></li>
+<li>创建一个 <code v-pre>*Reader</code> 是带缓冲的 <code v-pre>reader := bufio.NewReader(file)</code></li>
+<li>循环的调用 <code v-pre>reader.ReadString('\n')</code> 读取文件的内容</li>
+<li>关闭文件 <code v-pre>defer file.Close()</code></li>
+</ol>
+</details>
 <h2 id="文件" tabindex="-1"><a class="header-anchor" href="#文件" aria-hidden="true">#</a> 文件</h2>
 <blockquote>
 <p>文件，我们并不陌生，<strong>文件就是数据源（保存数据的地方）的一种</strong>，文件最主要的作用是<strong>保存数据</strong>,它既可以是保存一张图片，也可以是声音和视频</p>
@@ -249,7 +371,20 @@ func <span class="token function-name function">main</span><span class="token pu
 	<span class="token punctuation">}</span>
 	<span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">,</span>err    <span class="token comment">//可能有其他的错误信息</span>
 <span class="token punctuation">}</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="拷贝文件" tabindex="-1"><a class="header-anchor" href="#拷贝文件" aria-hidden="true">#</a> 拷贝文件</h2>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="拷贝-复制-文件" tabindex="-1"><a class="header-anchor" href="#拷贝-复制-文件" aria-hidden="true">#</a> 拷贝（复制）文件</h2>
+<p>::: det复制文件可以用写入方式
+复制文件方法：</p>
+<ol>
+<li>打开源文件 srcFile, err := os.Open(&quot;test.txt&quot;)</li>
+<li>创建目标文件 dstFile, err := os.Create(&quot;test_copy.txt&quot;)</li>
+<li>创建一个 *Reader 是带缓冲的 reader := bufio.NewReader(srcFile)</li>
+<li>创建一个 *Writer 是带缓冲的 writer := bufio.NewWriter(dstFile)</li>
+<li>循环的调用 reader.ReadString('\n') 读取文件的内容</li>
+<li>调用 writer.WriteString(str) 将读取到的内容写入到目标文件中</li>
+<li>调用 writer.Flush() 将缓冲区的内容写入到目标文件中</li>
+<li>关闭文件 defer srcFile.Close()</li>
+</ol>
+<p>:::</p>
 <p><strong>目标文件dst，原文件src</strong></p>
 <div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">func</span> <span class="token function">Copy</span><span class="token punctuation">(</span>dst Writer<span class="token punctuation">,</span>src Reader<span class="token punctuation">)</span> <span class="token punctuation">(</span>written <span class="token builtin">int64</span><span class="token punctuation">,</span>err <span class="token builtin">error</span><span class="token punctuation">)</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p><strong>Copy函数是io包提供的</strong></p>

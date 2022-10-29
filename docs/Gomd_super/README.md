@@ -46,6 +46,12 @@
 
 
 
+### gin框架一章带走
+
++ [📚💢gin简介🔖](./markdown/72.md)
+
+
+
 ### Go连接数据库
 
 + [📚💢Mysql使用🔖](./markdown/20.md)
@@ -183,12 +189,6 @@
 + [📚💢View编写🔖](./markdown/70.md)
 
 + [📚💢静态文件处理🔖](./markdown/71.md)
-
-
-
-### gin框架
-
-+ [📚💢gin简介🔖](./markdown/72.md)
 
 
 

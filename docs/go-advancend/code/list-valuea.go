@@ -2,7 +2,7 @@
  * @Description:
  * @Author: xiongxinwei 3293172751nss@gmail.com
  * @Date: 2022-10-07 21:11:14
- * @LastEditTime: 2022-10-07 21:28:32
+ * @LastEditTime: 2022-10-07 21:27:06
  * @FilePath: \code\list-valuea.go
  * @Github_Address: https://github.com/3293172751/cs-awesome-Block_Chain
  * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://nsddd.top
@@ -23,6 +23,8 @@ func copyList() {
 	list1 := list.New()
 	printList2("刚声明的list1", list1)
 
+	fmt.Println("下面都是list1的操作")
+	list1.PushBack(1) //pushback表示在链表的尾部添加元素
 	//赋值
 	list1.PushBack(1)
 	list1.PushBack(2)
