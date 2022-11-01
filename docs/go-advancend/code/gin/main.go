@@ -1,3 +1,12 @@
+/*
+ * @Description:
+ * @Author: xiongxinwei 3293172751nss@gmail.com
+ * @Date: 2022-10-13 22:21:43
+ * @LastEditTime: 2022-10-29 18:11:40
+ * @FilePath: \code\gin\main.go
+ * @Github_Address: https://github.com/3293172751/cs-awesome-Block_Chain
+ * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://nsddd.top
+ */
 package main
 
 import (
@@ -28,7 +37,7 @@ func setupRouter() *gin.Engine {
 			c.JSON(http.StatusOK, gin.H{"user": user, "status": "no value"})
 		}
 	})
-
+	//linux查看3306是否开放
 	// Authorized group (uses gin.BasicAuth() middleware)
 	// Same than:
 	// authorized := r.Group("/")

@@ -1,7 +1,7 @@
 <template><div><h1 id="tcp黏包" tabindex="-1"><a class="header-anchor" href="#tcp黏包" aria-hidden="true">#</a> TCP黏包</h1>
-<nav class="table-of-contents"><ul><li><router-link to="#为什么会出现粘包">为什么会出现粘包</router-link></li><li><router-link to="#解决办法">解决办法</router-link><ul><li><router-link to="#服务端代码">服务端代码</router-link></li></ul></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
+<nav class="table-of-contents"><ul><li><router-link to="#服务端代码如下">服务端代码如下</router-link></li><li><router-link to="#为什么会出现粘包">为什么会出现粘包</router-link></li><li><router-link to="#解决办法">解决办法</router-link><ul><li><router-link to="#服务端代码">服务端代码</router-link></li></ul></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
 <p>[toc]</p>
-<p>服务端代码如下：</p>
+<h3 id="服务端代码如下" tabindex="-1"><a class="header-anchor" href="#服务端代码如下" aria-hidden="true">#</a> 服务端代码如下</h3>
 <div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token comment">// socket_stick/server/main.go</span>
 
 <span class="token keyword">func</span> <span class="token function">process</span><span class="token punctuation">(</span>conn net<span class="token punctuation">.</span>Conn<span class="token punctuation">)</span> <span class="token punctuation">{</span>

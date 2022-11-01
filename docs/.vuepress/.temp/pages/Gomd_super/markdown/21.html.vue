@@ -1,6 +1,7 @@
 <template><div><h1 id="insert操作" tabindex="-1"><a class="header-anchor" href="#insert操作" aria-hidden="true">#</a> Insert操作</h1>
-<nav class="table-of-contents"><ul><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
+<nav class="table-of-contents"><ul><li><router-link to="#insert操作-1">insert操作</router-link></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
 <p>[toc]</p>
+<h2 id="insert操作-1" tabindex="-1"><a class="header-anchor" href="#insert操作-1" aria-hidden="true">#</a> insert操作</h2>
 <div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">package</span> main
 
 <span class="token keyword">import</span> <span class="token punctuation">(</span>

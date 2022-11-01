@@ -1,7 +1,12 @@
 <template><div><h1 id="socket编程" tabindex="-1"><a class="header-anchor" href="#socket编程" aria-hidden="true">#</a> socket编程</h1>
 <nav class="table-of-contents"><ul><li><router-link to="#socket图解">socket图解</router-link></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
 <p>[toc]</p>
+<div class="custom-container tip"><p class="custom-container-title">Socket 介绍</p>
 <p><code v-pre>Socket</code>是BSD UNIX的进程通信机制，通常也称作”套接字”，用于描述IP地址和端口，是一个通信链的句柄。<code v-pre>Socket</code>可以理解为<code v-pre>TCP/IP</code>网络的<code v-pre>API</code>，它定义了许多函数或例程，程序员可以用它们来开发<code v-pre>TCP/IP</code>网络上的应用程序。电脑上运行的应用程序通常通过”套接字”向网络发出请求或者应答网络请求。</p>
+<ul>
+<li><strong><a href="https://github.com/3293172751/cs-awesome-Block_Chain/blob/master/web/README.md" target="_blank" rel="noopener noreferrer">套接字编程详细讲解篇<ExternalLinkIcon/></a></strong></li>
+</ul>
+</div>
 <h2 id="socket图解" tabindex="-1"><a class="header-anchor" href="#socket图解" aria-hidden="true">#</a> socket图解</h2>
 <p>Socket是应用层与TCP/IP协议族通信的中间软件抽象层。在设计模式中，Socket其实就是一个门面模式，它把复杂的TCP/IP协议族隐藏在Socket后面，对用户来说只需要调用Socket规定的相关函数，让Socket去组织符合指定的协议数据然后进行通信。</p>
 <p><img src="http://sm.nsddd.top/smbjaST7yZI5RuNCV.png?xxw@nsddd.top" alt="socket图解"></p>

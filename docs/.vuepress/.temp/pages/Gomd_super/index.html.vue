@@ -63,6 +63,10 @@
 <p><RouterLink to="/Gomd_super/markdown/19.html">📚💢Go爬虫小案例🔖</RouterLink></p>
 </li>
 </ul>
+<h3 id="gin框架一章带走" tabindex="-1"><a class="header-anchor" href="#gin框架一章带走" aria-hidden="true">#</a> gin框架一章带走</h3>
+<ul>
+<li><RouterLink to="/Gomd_super/markdown/72.html">📚💢gin简介🔖</RouterLink></li>
+</ul>
 <h3 id="go连接数据库" tabindex="-1"><a class="header-anchor" href="#go连接数据库" aria-hidden="true">#</a> Go连接数据库</h3>
 <ul>
 <li>
@@ -245,10 +249,6 @@
 <li>
 <p><RouterLink to="/Gomd_super/markdown/71.html">📚💢静态文件处理🔖</RouterLink></p>
 </li>
-</ul>
-<h3 id="gin框架" tabindex="-1"><a class="header-anchor" href="#gin框架" aria-hidden="true">#</a> gin框架</h3>
-<ul>
-<li><RouterLink to="/Gomd_super/markdown/72.html">📚💢gin简介🔖</RouterLink></li>
 </ul>
 <h3 id="go高级" tabindex="-1"><a class="header-anchor" href="#go高级" aria-hidden="true">#</a> Go高级</h3>
 <ul>

@@ -2,10 +2,16 @@
 <nav class="table-of-contents"><ul><li><router-link to="#前言">前言</router-link></li><li><router-link to="#互联网分层模型">互联网分层模型</router-link></li><li><router-link to="#物理层">物理层</router-link></li><li><router-link to="#数据链路层">数据链路层</router-link></li><li><router-link to="#网络层">网络层</router-link></li><li><router-link to="#传输层">传输层</router-link></li><li><router-link to="#应用层">应用层</router-link></li><li><router-link to="#go-web编程">Go web编程</router-link><ul><li><router-link to="#url和dns解析">URL和DNS解析</router-link></li><li><router-link to="#http-请求包-浏览器信息">HTTP 请求包（浏览器信息）</router-link></li><li><router-link to="#http-响应包-服务器信息">HTTP 响应包（服务器信息）</router-link></li></ul></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
 <p>[toc]</p>
 <h2 id="前言" tabindex="-1"><a class="header-anchor" href="#前言" aria-hidden="true">#</a> 前言</h2>
+<div class="custom-container danger"><p class="custom-container-title">预备知识点</p>
 <ul>
-<li>[x] <a href="https://github.com/3293172751/cs-awesome-Block_Chain/blob/master/web/README.md" target="_blank" rel="noopener noreferrer">此章节预备计算机网络知识<ExternalLinkIcon/></a></li>
-<li>[x] <a href="https://go.nsddd.top" target="_blank" rel="noopener noreferrer">此章节预备Go语言基础知识<ExternalLinkIcon/></a></li>
+<li>
+<p><a href="https://github.com/3293172751/cs-awesome-Block_Chain/blob/master/web/README.md" target="_blank" rel="noopener noreferrer">此章节预备计算机网络知识<ExternalLinkIcon/></a></p>
+</li>
+<li>
+<p><a href="https://go.nsddd.top" target="_blank" rel="noopener noreferrer">此章节预备Go语言基础知识<ExternalLinkIcon/></a></p>
+</li>
 </ul>
+</div>
 <p>互联网的核心是一系列协议，总称为” 互联网协议”（Internet Protocol Suite），正是这一些协议规定了电脑如何连接和组网。</p>
 <p>互联网的核心是一系列协议，总称为” 互联网协议”（Internet Protocol Suite），正是这一些协议规定了电脑如何连接和组网。我们理解了这些协议，就理解了互联网的原理。由于这些协议太过庞大和复杂，没有办法在这里一概而全，只能介绍一下我们日常开发中接触较多的几个协议。</p>
 <h2 id="互联网分层模型" tabindex="-1"><a class="header-anchor" href="#互联网分层模型" aria-hidden="true">#</a> 互联网分层模型</h2>
@@ -18,7 +24,7 @@
 <p>单纯的 0 和 1 没有任何意义，所以我们使用者会为其赋予一些特定的含义，规定解读电信号的方式：例如：多少个电信号算一组？每个信号位有何意义？这就是” 数据链接层” 的功能，它在” 物理层” 的上方，确定了物理层传输的 0 和 1 的分组方式及代表的意义。早期的时候，每家公司都有自己的电信号分组方式。逐渐地，一种叫做” 以太网”（Ethernet）的协议，占据了主导地位。</p>
 <p>以太网规定，一组电信号构成一个数据包，叫做” 帧”（Frame）。每一帧分成两个部分：标头（Head）和数据（Data）。其中” 标头” 包含数据包的一些说明项，比如发送者、接受者、数据类型等等；” 数据” 则是数据包的具体内容。” 标头” 的长度，固定为 18 字节。” 数据” 的长度，最短为 46 字节，最长为 1500 字节。因此，整个” 帧” 最短为 64 字节，最长为 1518 字节。如果数据很长，就必须分割成多个帧进行发送。</p>
 <p>那么，发送者和接受者是如何标识呢？以太网规定，连入网络的所有设备都必须具有” 网卡” 接口。数据包必须是从一块网卡，传送到另一块网卡。网卡的地址，就是数据包的发送地址和接收地址，这叫做 MAC 地址。每块网卡出厂的时候，都有一个全世界独一无二的 MAC 地址，长度是 48 个二进制位，通常用 12 个十六进制数表示。前 6 个十六进制数是厂商编号，后 6 个是该厂商的网卡流水号。有了 MAC 地址，就可以定位网卡和数据包的路径了。</p>
-<p>我们会通过 ARP 协议来获取接受方的 MAC 地址，有了 MAC 地址之后，如何把数据准确的发送给接收方呢？其实这里以太网采用了一种很” 原始” 的方式，它不是把数据包准确送到接收方，而是向本网络内所有计算机都发送，让每台计算机读取这个包的” 标头”，找到接收方的 MAC 地址，然后与自身的 MAC 地址相比较，如果两者相同，就接受这个包，做进一步处理，否则就丢弃这个包。这种发送方式就叫做” 广播”（broadcasting）。</p>
+<p>我们会通过 ARP 协议来获取接受方的 MAC 地址，有了 MAC 地址之后，如何把数据准确的发送给接收方呢？其实这里以太网采用了一种很” 原始” 的方式，它不是把数据包准确送到接收方，而是向本网络内所有计算机都发送，让每台计算机读取这个包的” 标头”，找到接收方的 MAC 地址，然后与自身的 MAC 地址相比较，如果两者相同，就接受这个包，做进一步处理，否则就丢弃这个包。这种发送方式就叫做 &quot;广播&quot;（broadcasting）。</p>
 <h2 id="网络层" tabindex="-1"><a class="header-anchor" href="#网络层" aria-hidden="true">#</a> 网络层</h2>
 <p>按照以太网协议的规则我们可以依靠 MAC 地址来向外发送数据。理论上依靠 MAC 地址，你电脑的网卡就可以找到身在世界另一个角落的某台电脑的网卡了，但是这种做法有一个重大缺陷就是以太网采用广播方式发送数据包，所有成员人手一” 包”，不仅效率低，而且发送的数据只能局限在发送者所在的子网络。也就是说如果两台计算机不在同一个子网络，广播是传不过去的。这种设计是合理且必要的，因为如果互联网上每一台计算机都会收到互联网上收发的所有数据包，那是不现实的。</p>
 <p>因此，必须找到一种方法区分哪些 MAC 地址属于同一个子网络，哪些不是。如果是同一个子网络，就采用广播方式发送，否则就采用” 路由” 方式发送。这就导致了” 网络层” 的诞生。它的作用是引进一套新的地址，使得我们能够区分不同的计算机是否属于同一个子网络。这套地址就叫做” 网络地址”，简称” 网址”。</p>

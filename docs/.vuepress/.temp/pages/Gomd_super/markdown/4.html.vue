@@ -1,9 +1,9 @@
-<template><div><h1 id="udp编程" tabindex="-1"><a class="header-anchor" href="#udp编程" aria-hidden="true">#</a> UDP编程</h1>
+<template><div><h1 id="go-udp-socket-server-client" tabindex="-1"><a class="header-anchor" href="#go-udp-socket-server-client" aria-hidden="true">#</a> Go UDP Socket-Server-Client</h1>
 <nav class="table-of-contents"><ul><li><router-link to="#go语言实现udp通信">Go语言实现UDP通信</router-link><ul><li><router-link to="#udp协议">UDP协议</router-link></li><li><router-link to="#udp服务端">UDP服务端</router-link></li><li><router-link to="#udp客户端">UDP客户端</router-link></li></ul></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
 <p>[toc]</p>
 <h2 id="go语言实现udp通信" tabindex="-1"><a class="header-anchor" href="#go语言实现udp通信" aria-hidden="true">#</a> Go语言实现UDP通信</h2>
 <h3 id="udp协议" tabindex="-1"><a class="header-anchor" href="#udp协议" aria-hidden="true">#</a> UDP协议</h3>
-<p><code v-pre>UDP</code>协议（User Datagram Protocol）中文名称是用户数据报协议，是OSI（Open System Interconnection，开放式系统互联）参考模型中一种无连接的传输层协议，不需要建立连接就能直接进行数据发送和接收，属于不可靠的、没有时序的通信，但是UDP协议的实时性比较好，通常用于视频直播相关领域。</p>
+<p><code v-pre>UDP</code>协议（User Datagram Protocol）中文名称是用户数据报协议，是 OSI（Open System Interconnection，开放式系统互联）参考模型中一种无连接的传输层协议，不需要建立连接就能直接进行数据发送和接收，属于不可靠的、没有时序的通信，但是 <code v-pre>UDP</code> 协议的实时性比较好，通常用于视频直播相关领域。</p>
 <h3 id="udp服务端" tabindex="-1"><a class="header-anchor" href="#udp服务端" aria-hidden="true">#</a> UDP服务端</h3>
 <p>使用<code v-pre>Go</code>语言的<code v-pre>net</code>包实现的<code v-pre>UDP</code>服务端代码如下：</p>
 <div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token comment">// UDP/server/main.go</span>
