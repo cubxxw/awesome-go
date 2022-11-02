@@ -1,0 +1,56 @@
+    <!-- 公共模板 头部-->
+    {{template "public/page_header.html" .}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 缩小h6间距 -->
+    <style>
+        h6 {
+            margin: 0;
+        }
+    </style>
+
+</head>
+<body>
+    <h3>这是index文件</h3>
+    <!-- 渲染 -->
+    <h6>titls = {{.title}}</h6>
+    <h6>msg = {{.msg}}</h6>
+    <h6>score(int类型分数) = {{.score}}</h6>
+    <h6>score2(float64类型分数) = {{.score2}}</h6>
+    <h6>score3(string类型分数) = {{.score3}}</h6>
+    <h6>hobby(切片类型爱好) = {{.hobby}}</h6>
+    <h6>map(地图) = {{.map}}</h6>
+    <h6>news(结构体) = {{.news}}</h6>
+    <h6>news.Title(结构体属性) = {{.news.Title}}</h6>
+
+    <!-- 求msg长度 -->
+    <h6>msg长度 = {{len .msg}}</h6>
+
+    <!-- 判断msg是否为空 -->
+    <h6>msg是否为空 = {{if .msg}}不为空{{else}}为空{{end}}</h6>
+
+    <!-- 判断score是否大于60 -->
+    <h6>score是否大于60 = {{if gt .score 60}}大于60{{else}}小于60{{end}}</h6>
+
+    <!-- 遍历hobby -->
+    <h6>hobby(切片类型爱好) = {{range .hobby}}{{.}} {{end}}</h6>
+
+    <!-- 遍历map -->
+    <h6>map(地图) = {{range $key, $value := .map}}{{$key}} = {{$value}} {{end}}</h6>
+
+    <!-- 自定义模板函数
+        直接在模板中调用，比如下面的函数，直接在模板中调用
+    -->
+    <h3>自定义模板函数/h3>
+    <h6>自定义模板函数 = {{Text .title}}</h6>
+    <h6>自定义模板函数2 = {{Text2 .title .msg}}</h6>
+
+</body>
+</html>
+    <!-- 公共模板 尾部-->
+    {{template "public/page_footer.html" .}}

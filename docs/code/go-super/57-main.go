@@ -49,5 +49,4 @@ func main() {
 		panic(err)
 	}
 	println(string(buf[:n]))
-
 }
