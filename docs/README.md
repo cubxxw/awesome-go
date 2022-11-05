@@ -4,7 +4,7 @@ lang: zh-CN
 title: Cub链学社（c-universal blockchain）
 description: docker学习
 heroImage: https://sm.nsddd.top//typora/logo_transparent.png?mail:3293172751@qq.com
-heroText: Go语言篇
+heroText: Golang
 tagline: 链学社在保障用户安全，信息的完整性同时为大众带来更多的选择，笔记分享，视频分享，版权保护，以及其他的关于学信数据、电子证书、荣誉证明、成绩证明、信息授权的相关工具。
 actions:
   - text: Go语言基础篇学习

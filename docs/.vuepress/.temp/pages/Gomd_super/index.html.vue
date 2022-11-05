@@ -65,7 +65,7 @@
 </ul>
 <h3 id="gin框架一章带走" tabindex="-1"><a class="header-anchor" href="#gin框架一章带走" aria-hidden="true">#</a> gin框架一章带走</h3>
 <ul>
-<li><RouterLink to="/Gomd_super/markdown/72.html">📚💢gin简介🔖</RouterLink></li>
+<li><RouterLink to="/Gomd_super/markdown/72.html">📚💢Gin全篇🔖</RouterLink></li>
 </ul>
 <h3 id="go连接数据库" tabindex="-1"><a class="header-anchor" href="#go连接数据库" aria-hidden="true">#</a> Go连接数据库</h3>
 <ul>

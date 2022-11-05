@@ -1,22 +1,155 @@
-<template><div><h1 id="websocket编程" tabindex="-1"><a class="header-anchor" href="#websocket编程" aria-hidden="true">#</a> WebSocket编程</h1>
-<nav class="table-of-contents"><ul><li><router-link to="#websocket是什么">webSocket是什么</router-link></li><li><router-link to="#举个聊天室的小例子">举个聊天室的小例子</router-link><ul><li><router-link to="#server-go文件代码">server.go文件代码</router-link></li><li><router-link to="#hub-go文件代码">hub.go文件代码</router-link></li><li><router-link to="#data-go文件代码">data.go文件代码</router-link></li><li><router-link to="#connection-go文件代码">connection.go文件代码</router-link></li><li><router-link to="#local-html文件代码">local.html文件代码</router-link></li></ul></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
+<template><div><h1 id="websocket编程-–-聊天室" tabindex="-1"><a class="header-anchor" href="#websocket编程-–-聊天室" aria-hidden="true">#</a> WebSocket编程 – 聊天室</h1>
+<nav class="table-of-contents"><ul><li><router-link to="#websocket是什么">webSocket是什么</router-link></li><li><router-link to="#举个聊天室的小例子">举个聊天室的小例子</router-link></li><li><router-link to="#准备">准备</router-link></li><li><router-link to="#功能补充">功能补充</router-link><ul><li><router-link to="#server-go文件代码">server.go文件代码</router-link></li><li><router-link to="#hub-go文件代码">hub.go文件代码</router-link></li><li><router-link to="#data-go文件代码">data.go文件代码</router-link></li><li><router-link to="#connection-go文件代码">connection.go文件代码</router-link></li><li><router-link to="#local-html文件代码">local.html文件代码</router-link></li></ul></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
 <p>[toc]</p>
+<div class="custom-container tip"><p class="custom-container-title">提示</p>
+<p>在这里我们将会实现一个简易版的 <strong>Go聊天室</strong> 。</p>
+<ol>
+<li>上线、下线</li>
+<li>聊天，其他人和自己都可以看到聊天信息</li>
+<li>查询当前聊天室用户名字</li>
+<li>可以修改自己名字</li>
+<li>超时踢出</li>
+</ol>
+<p>知识点：</p>
+<ol>
+<li>socket tcp 编程</li>
+<li>map 结构</li>
+<li>Go协程</li>
+<li>select（超时退出，主动退出）</li>
+</ol>
+</div>
 <h2 id="websocket是什么" tabindex="-1"><a class="header-anchor" href="#websocket是什么" aria-hidden="true">#</a> webSocket是什么</h2>
 <ul>
-<li>WebSocket是一种在单个TCP连接上进行全双工通信的协议</li>
-<li>WebSocket使得客户端和服务器之间的数据交换变得更加简单，允许服务端主动向客户端推送数据</li>
-<li>在WebSocket API中，浏览器和服务器只需要完成一次握手，两者之间就直接可以创建持久性的连接，并进行双向数据传输</li>
+<li><code v-pre>WebSocket</code> 是一种在单个 <code v-pre>TCP</code> 连接上进行全双工通信的协议</li>
+<li><code v-pre>WebSocket</code> 使得客户端和服务器之间的数据交换变得更加简单，允许服务端主动向客户端推送数据</li>
+<li>在 <code v-pre>WebSocket API</code>中，浏览器和服务器只需要完成一次握手，两者之间就直接可以创建持久性的连接，并进行双向数据传输</li>
 <li>需要安装第三方包：
 <ul>
-<li>cmd中：<code v-pre>go get -u -v github.com/gorilla/websocket</code></li>
+<li><strong>cmd中</strong> ：<code v-pre>go get -u -v github.com/gorilla/websocket</code></li>
 </ul>
 </li>
 </ul>
 <h2 id="举个聊天室的小例子" tabindex="-1"><a class="header-anchor" href="#举个聊天室的小例子" aria-hidden="true">#</a> 举个聊天室的小例子</h2>
 <p>在同一级目录下新建四个go文件<code v-pre>connection.go|data.go|hub.go|server.go</code></p>
-<p><strong>运行</strong></p>
-<div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>go run server.go hub.go data.go connection.go
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>运行之后执行local.html文件</p>
+<p><strong>运行：</strong></p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">go</span> run server<span class="token punctuation">.</span><span class="token keyword">go</span> hub<span class="token punctuation">.</span><span class="token keyword">go</span> data<span class="token punctuation">.</span><span class="token keyword">go</span> connection<span class="token punctuation">.</span><span class="token keyword">go</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>运行之后执行 <code v-pre>local.html</code> 文件</p>
+<h2 id="准备" tabindex="-1"><a class="header-anchor" href="#准备" aria-hidden="true">#</a> 准备</h2>
+<p><strong>开启 <code v-pre>mod</code> 项目：</strong></p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">go</span> mod init socket<span class="token operator">-</span>web
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p><strong>基础代码：</strong></p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">package</span> main
+
+<span class="token keyword">import</span> <span class="token punctuation">(</span>
+	<span class="token string">"fmt"</span>
+	<span class="token string">"net"</span>
+<span class="token punctuation">)</span>
+
+<span class="token keyword">var</span> n <span class="token builtin">int</span> <span class="token comment">//统计监听次数</span>
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token comment">//创建一个监听器</span>
+	listener<span class="token punctuation">,</span> err <span class="token operator">:=</span> net<span class="token punctuation">.</span><span class="token function">Listen</span><span class="token punctuation">(</span><span class="token string">"tcp"</span><span class="token punctuation">,</span> <span class="token string">":8080"</span><span class="token punctuation">)</span>
+	<span class="token keyword">if</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+		fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"监听失败"</span><span class="token punctuation">)</span>
+		<span class="token keyword">return</span>
+	<span class="token punctuation">}</span>
+	<span class="token keyword">defer</span> listener<span class="token punctuation">.</span><span class="token function">Close</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"监听成功..."</span><span class="token punctuation">)</span>
+	<span class="token comment">//循环等待客户端连接</span>
+	<span class="token keyword">for</span> <span class="token punctuation">{</span>
+		<span class="token comment">//监听次数</span>
+		fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"监听次数："</span><span class="token punctuation">,</span> n<span class="token punctuation">)</span>
+		n<span class="token operator">++</span>
+		fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"主Go程监听中..."</span><span class="token punctuation">)</span>
+		<span class="token comment">//监听客户端连接</span>
+		conn<span class="token punctuation">,</span> err <span class="token operator">:=</span> listener<span class="token punctuation">.</span><span class="token function">Accept</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">//Accept()会阻塞，直到有客户端连接</span>
+		<span class="token keyword">if</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+			fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"接收客户端连接失败"</span><span class="token punctuation">)</span>
+			<span class="token keyword">return</span>
+		<span class="token punctuation">}</span>
+		<span class="token keyword">defer</span> conn<span class="token punctuation">.</span><span class="token function">Close</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+		fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"接收客户端连接成功"</span><span class="token punctuation">)</span>
+
+		<span class="token comment">//启动协程，处理客户端请求</span>
+		<span class="token keyword">go</span> <span class="token function">process</span><span class="token punctuation">(</span>conn<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Path: main.go</span>
+<span class="token keyword">func</span> <span class="token function">process</span><span class="token punctuation">(</span>conn net<span class="token punctuation">.</span>Conn<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token comment">//关闭连接</span>
+	<span class="token keyword">defer</span> conn<span class="token punctuation">.</span><span class="token function">Close</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"启动业务~"</span><span class="token punctuation">)</span>
+	<span class="token comment">//读取客户端发送的数据</span>
+	buf <span class="token operator">:=</span> <span class="token function">make</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">byte</span><span class="token punctuation">,</span> <span class="token number">1024</span><span class="token punctuation">)</span>
+	cnt<span class="token punctuation">,</span> err <span class="token operator">:=</span> conn<span class="token punctuation">.</span><span class="token function">Read</span><span class="token punctuation">(</span>buf<span class="token punctuation">)</span> <span class="token comment">//Read()会阻塞，直到有数据发送过来</span>
+	<span class="token keyword">if</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+		fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"读取客户端数据失败"</span><span class="token punctuation">)</span>
+		<span class="token keyword">return</span>
+	<span class="token punctuation">}</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"服务器读取客户端数据成功"</span><span class="token punctuation">)</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token function">string</span><span class="token punctuation">(</span>buf<span class="token punctuation">[</span><span class="token punctuation">:</span>cnt<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span> 
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>🚀 编译结果如下：</p>
+<p><img src="http://sm.nsddd.top/smimage-20221102194839667.png" alt="image-20221102194839667"></p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>监听次数： <span class="token number">4</span>
+主Go程监听中<span class="token punctuation">..</span>.
+启动业务~
+读取客户端数据失败
+服务器读取客户端数据成功
+GET / HTTP/1.1
+name: xiongxinwei
+name2: yangming
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 2319563a-e690-406c-bafc-243fc3f32e39
+Host: localhost:8080
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Type: multipart/form-data<span class="token punctuation">;</span> <span class="token assign-left variable">boundary</span><span class="token operator">=</span>--------------------------322490159781697749709458
+Content-Length: <span class="token number">174</span>
+
+----------------------------322490159781697749709458
+Content-Disposition: form-data<span class="token punctuation">;</span> <span class="token assign-left variable">name</span><span class="token operator">=</span><span class="token string">"asdfasf"</span>
+
+asfdasgasfag
+----------------------------322490159781697749709458--
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><details class="custom-container details"><summary>Post请求![image-20221102195008771](http://sm.nsddd.top/smimage-20221102195008771.png)</summary>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>监听次数： <span class="token number">5</span>
+主Go程监听中<span class="token punctuation">..</span>.
+启动业务~
+接收客户端连接成功
+监听次数： <span class="token number">6</span>
+主Go程监听中<span class="token punctuation">..</span>.
+启动业务~
+读取客户端数据失败
+服务器读取客户端数据成功
+POST / HTTP/1.1
+name: xiongxinwei
+name2: yangming
+User-Agent: PostmanRuntime/7.29.2
+Accept: */*
+Postman-Token: 6ba389f2-e4b6-4bcc-8b8a-cb4f536f3115
+Host: localhost:8080
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Type: multipart/form-data<span class="token punctuation">;</span> <span class="token assign-left variable">boundary</span><span class="token operator">=</span>--------------------------749419380768530406044982
+Content-Length: <span class="token number">174</span>
+
+----------------------------749419380768530406044982
+Content-Disposition: form-data<span class="token punctuation">;</span> <span class="token assign-left variable">name</span><span class="token operator">=</span><span class="token string">"asdfasf"</span>
+
+asfdasgasfag
+----------------------------749419380768530406044982--
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></details>
+<h2 id="功能补充" tabindex="-1"><a class="header-anchor" href="#功能补充" aria-hidden="true">#</a> 功能补充</h2>
+<div class="custom-container tip"><p class="custom-container-title">提示</p>
+<p>我们程序有多个用户，需要一个 User 结构，包含 msg 管道</p>
+<p>需要有一个进行全局广播的管道：message</p>
+<p>需要有一个全局的 map， 存储所有的 user</p>
+</div>
 <h3 id="server-go文件代码" tabindex="-1"><a class="header-anchor" href="#server-go文件代码" aria-hidden="true">#</a> server.go文件代码</h3>
 <div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">package</span> main
 
