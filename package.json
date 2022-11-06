@@ -1,0 +1,33 @@
+{
+  "name": "docker--awesome",
+  "version": "1.0.0",
+  "description": "Docker是一个用于开发，交付和运行应用程序的开放平台。Docker使您能够将应用程序与基础架构分开，从而可以快速交付软件。借助Docker，您可以以与管理应用程序相同的方式来管理基础架构。通过利用Docker的快速交付，测试和部署代码的方法，您可以显着减少编写代码和在生产环境中运行代码之间的延迟。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@vuepress/plugin-docsearch": "^2.0.0-beta.51",
+    "@vuepress/plugin-last-updated": "^1.9.7",
+    "@vuepress/plugin-nprogress": "^1.9.7",
+    "@vuepress/plugin-prismjs": "^2.0.0-beta.51",
+    "@vuepress/plugin-search": "^2.0.0-beta.51",
+    "@vuepress/plugin-shiki": "^2.0.0-beta.51",
+    "@vuepress/plugin-toc": "^2.0.0-beta.51",
+    "markdown-it-task-lists": "^2.1.1",
+    "vuepress": "^2.0.0-beta.51",
+    "vuepress-plugin-baidu-tongji": "^1.0.1",
+    "vuepress-plugin-comment": "^0.7.3",
+    "vuepress-plugin-one-click-copy": "^1.0.6",
+    "vuepress-plugin-zooming": "^1.1.8"
+  },
+  "dependencies": {
+    "@vssue/api-github-v3": "^1.4.7",
+    "@vssue/api-github-v4": "^1.4.7",
+    "vuepress-plugin-md-enhance": "^1.30.0"
+  }
+}
