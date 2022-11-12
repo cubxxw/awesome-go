@@ -255,13 +255,6 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "",
-    "headers": [],
-    "path": "/Untitled.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "Go语言进阶—高级篇代码",
     "headers": [
       {
@@ -367,899 +360,6 @@ export const searchIndex = [
       }
     ],
     "path": "/go-advancend/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "位运算以及补码重点",
-    "headers": [
-      {
-        "level": 2,
-        "title": "ℹ️前言",
-        "slug": "i️前言",
-        "link": "#i️前言",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "🎈乘以 2 的幂",
-        "slug": "🎈乘以-2-的幂",
-        "link": "#🎈乘以-2-的幂",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "🎈除以 2 的幂",
-        "slug": "🎈除以-2-的幂",
-        "link": "#🎈除以-2-的幂",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "🎈交换没有临时变量的整数",
-        "slug": "🎈交换没有临时变量的整数",
-        "link": "#🎈交换没有临时变量的整数",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "🎈增量/减量（较慢但有利于混淆）",
-        "slug": "🎈增量-减量-较慢但有利于混淆",
-        "link": "#🎈增量-减量-较慢但有利于混淆",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "🎈标志翻转",
-        "slug": "🎈标志翻转",
-        "link": "#🎈标志翻转",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "🎈如果除数是 2 的幂，则进行模运算",
-        "slug": "🎈如果除数是-2-的幂-则进行模运算",
-        "link": "#🎈如果除数是-2-的幂-则进行模运算",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "🎈检查整数是偶数还是奇数",
-        "slug": "🎈检查整数是偶数还是奇数",
-        "link": "#🎈检查整数是偶数还是奇数",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "🎈相等检查",
-        "slug": "🎈相等检查",
-        "link": "#🎈相等检查",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "🎈绝对值",
-        "slug": "🎈绝对值",
-        "link": "#🎈绝对值",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "🎈等号检查（两个整数都是 pos 或 neg）",
-        "slug": "🎈等号检查-两个整数都是-pos-或-neg",
-        "link": "#🎈等号检查-两个整数都是-pos-或-neg",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "🎈圆角、天花板、地板",
-        "slug": "🎈圆角、天花板、地板",
-        "link": "#🎈圆角、天花板、地板",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "💡Java中的二进制补充",
-        "slug": "💡java中的二进制补充",
-        "link": "#💡java中的二进制补充",
-        "children": [
-          {
-            "level": 3,
-            "title": "必背",
-            "slug": "必背",
-            "link": "#必背",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "java逻辑右移",
-            "slug": "java逻辑右移",
-            "link": "#java逻辑右移",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/Gomd_super/bitwise.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "目录结构",
-    "headers": [
-      {
-        "level": 2,
-        "title": "Go语言目录结构",
-        "slug": "go语言目录结构",
-        "link": "#go语言目录结构",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Go 目录",
-        "slug": "go-目录",
-        "link": "#go-目录",
-        "children": [
-          {
-            "level": 3,
-            "title": "cmd",
-            "slug": "cmd",
-            "link": "#cmd",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "internal",
-            "slug": "internal",
-            "link": "#internal",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "pkg",
-            "slug": "pkg",
-            "link": "#pkg",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "vendor",
-            "slug": "vendor",
-            "link": "#vendor",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "服务端应用程序目录",
-        "slug": "服务端应用程序目录",
-        "link": "#服务端应用程序目录",
-        "children": [
-          {
-            "level": 3,
-            "title": "api",
-            "slug": "api",
-            "link": "#api",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "Web 应用程序目录",
-        "slug": "web-应用程序目录",
-        "link": "#web-应用程序目录",
-        "children": [
-          {
-            "level": 3,
-            "title": "web",
-            "slug": "web",
-            "link": "#web",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "通用应用程序目录",
-        "slug": "通用应用程序目录",
-        "link": "#通用应用程序目录",
-        "children": [
-          {
-            "level": 3,
-            "title": "build",
-            "slug": "build",
-            "link": "#build",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "configs",
-            "slug": "configs",
-            "link": "#configs",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "deployment",
-            "slug": "deployment",
-            "link": "#deployment",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "init",
-            "slug": "init",
-            "link": "#init",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "scripts",
-            "slug": "scripts",
-            "link": "#scripts",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "test",
-            "slug": "test",
-            "link": "#test",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "其他目录",
-        "slug": "其他目录",
-        "link": "#其他目录",
-        "children": [
-          {
-            "level": 3,
-            "title": "assets",
-            "slug": "assets",
-            "link": "#assets",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "docs",
-            "slug": "docs",
-            "link": "#docs",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "examples",
-            "slug": "examples",
-            "link": "#examples",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "githooks",
-            "slug": "githooks",
-            "link": "#githooks",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "third_party",
-            "slug": "third-party",
-            "link": "#third-party",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "tools",
-            "slug": "tools",
-            "link": "#tools",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "website",
-            "slug": "website",
-            "link": "#website",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "不应该出现的目录",
-        "slug": "不应该出现的目录",
-        "link": "#不应该出现的目录",
-        "children": [
-          {
-            "level": 3,
-            "title": "src",
-            "slug": "src",
-            "link": "#src",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "其他文件",
-        "slug": "其他文件",
-        "link": "#其他文件",
-        "children": [
-          {
-            "level": 3,
-            "title": "Makefile",
-            "slug": "makefile",
-            "link": "#makefile",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "小结",
-        "slug": "小结",
-        "link": "#小结",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "延伸阅读",
-        "slug": "延伸阅读",
-        "link": "#延伸阅读",
-        "children": []
-      }
-    ],
-    "path": "/Gomd_super/catalogue.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "go-air实现热加载",
-    "headers": [
-      {
-        "level": 2,
-        "title": "go air",
-        "slug": "go-air",
-        "link": "#go-air",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "特色",
-        "slug": "特色",
-        "link": "#特色",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "安装",
-        "slug": "安装",
-        "link": "#安装",
-        "children": [
-          {
-            "level": 3,
-            "title": "推荐使用 install.sh",
-            "slug": "推荐使用-install-sh",
-            "link": "#推荐使用-install-sh",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "使用 go install",
-            "slug": "使用-go-install",
-            "link": "#使用-go-install",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "配置镜像源",
-            "slug": "配置镜像源",
-            "link": "#配置镜像源",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "使用Docker",
-            "slug": "使用docker",
-            "link": "#使用docker",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "✨ beta 版本的特性",
-        "slug": "✨-beta-版本的特性",
-        "link": "#✨-beta-版本的特性",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "使用方法",
-        "slug": "使用方法",
-        "link": "#使用方法",
-        "children": [
-          {
-            "level": 3,
-            "title": "运行时参数",
-            "slug": "运行时参数",
-            "link": "#运行时参数",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Docker-compose",
-            "slug": "docker-compose",
-            "link": "#docker-compose",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "调试",
-            "slug": "调试",
-            "link": "#调试",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "Q&A",
-        "slug": "q-a",
-        "link": "#q-a",
-        "children": [
-          {
-            "level": 3,
-            "title": "遇到 \"command not found: air\" 或 \"No such file or directory\" 该怎么办？",
-            "slug": "遇到-command-not-found-air-或-no-such-file-or-directory-该怎么办",
-            "link": "#遇到-command-not-found-air-或-no-such-file-or-directory-该怎么办",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "部署",
-        "slug": "部署",
-        "link": "#部署",
-        "children": [
-          {
-            "level": 3,
-            "title": "发布新版本",
-            "slug": "发布新版本",
-            "link": "#发布新版本",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/Gomd_super/go-air.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Go语言文本编码处理",
-    "headers": [
-      {
-        "level": 2,
-        "title": "前言",
-        "slug": "前言",
-        "link": "#前言",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "判断是否字符串是否包含字符串",
-        "slug": "判断是否字符串是否包含字符串",
-        "link": "#判断是否字符串是否包含字符串",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "字符串拆分",
-        "slug": "字符串拆分",
-        "link": "#字符串拆分",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "可以使用join将其合并起来",
-        "slug": "可以使用join将其合并起来",
-        "link": "#可以使用join将其合并起来",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "字符串转化",
-        "slug": "字符串转化",
-        "link": "#字符串转化",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "序列化和反序列化",
-        "slug": "序列化和反序列化",
-        "link": "#序列化和反序列化",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "使用flag获取复杂参数",
-        "slug": "使用flag获取复杂参数",
-        "link": "#使用flag获取复杂参数",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "控制命令行操作",
-        "slug": "控制命令行操作",
-        "link": "#控制命令行操作",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "补充：变量的作用域",
-        "slug": "补充-变量的作用域",
-        "link": "#补充-变量的作用域",
-        "children": []
-      }
-    ],
-    "path": "/Gomd_super/go_file.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Go-mod包",
-    "headers": [
-      {
-        "level": 2,
-        "title": "Go-mod项目地址",
-        "slug": "go-mod项目地址",
-        "link": "#go-mod项目地址",
-        "children": [
-          {
-            "level": 3,
-            "title": "包的导入方式",
-            "slug": "包的导入方式",
-            "link": "#包的导入方式",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Go-mod方式管理包",
-            "slug": "go-mod方式管理包",
-            "link": "#go-mod方式管理包",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "项目开始~",
-            "slug": "项目开始",
-            "link": "#项目开始",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "为代码启用依赖项跟踪",
-            "slug": "为代码启用依赖项跟踪",
-            "link": "#为代码启用依赖项跟踪",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "所出现问题",
-            "slug": "所出现问题",
-            "link": "#所出现问题",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "github导入包",
-            "slug": "github导入包",
-            "link": "#github导入包",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "远程推送到github上",
-            "slug": "远程推送到github上",
-            "link": "#远程推送到github上",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/Gomd_super/go_mod.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Go mod包",
-    "headers": [
-      {
-        "level": 2,
-        "title": "介绍",
-        "slug": "介绍",
-        "link": "#介绍",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Go mod init",
-        "slug": "go-mod-init",
-        "link": "#go-mod-init",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Go module",
-        "slug": "go-module",
-        "link": "#go-module",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "切换",
-        "slug": "切换",
-        "link": "#切换",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "自己新创建一个项目",
-        "slug": "自己新创建一个项目",
-        "link": "#自己新创建一个项目",
-        "children": [
-          {
-            "level": 3,
-            "title": "包的导入方式",
-            "slug": "包的导入方式",
-            "link": "#包的导入方式",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Go-mod方式管理包",
-            "slug": "go-mod方式管理包",
-            "link": "#go-mod方式管理包",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "项目开始~",
-            "slug": "项目开始",
-            "link": "#项目开始",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "为代码启用依赖项跟踪",
-            "slug": "为代码启用依赖项跟踪",
-            "link": "#为代码启用依赖项跟踪",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "所出现问题",
-            "slug": "所出现问题",
-            "link": "#所出现问题",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "github导入包",
-            "slug": "github导入包",
-            "link": "#github导入包",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "远程推送到github上",
-            "slug": "远程推送到github上",
-            "link": "#远程推送到github上",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/Gomd_super/mod.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Go语言命名规范",
-    "headers": [
-      {
-        "level": 2,
-        "title": "参考",
-        "slug": "参考",
-        "link": "#参考",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "目录",
-        "slug": "目录",
-        "link": "#目录",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "文件",
-        "slug": "文件",
-        "link": "#文件",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "变量",
-        "slug": "变量",
-        "link": "#变量",
-        "children": [
-          {
-            "level": 3,
-            "title": "javascript：驼峰",
-            "slug": "javascript-驼峰",
-            "link": "#javascript-驼峰",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "css：中划线",
-            "slug": "css-中划线",
-            "link": "#css-中划线",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/Gomd_super/name.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [
-      {
-        "level": 2,
-        "title": "目录",
-        "slug": "目录",
-        "link": "#目录",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Go网络编程和并发编程",
-        "slug": "go网络编程和并发编程",
-        "link": "#go网络编程和并发编程",
-        "children": [
-          {
-            "level": 3,
-            "title": "gin框架一章带走",
-            "slug": "gin框架一章带走",
-            "link": "#gin框架一章带走",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Go连接数据库",
-            "slug": "go连接数据库",
-            "link": "#go连接数据库",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Redis",
-            "slug": "redis",
-            "link": "#redis",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "go操作ETCD",
-            "slug": "go操作etcd",
-            "link": "#go操作etcd",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Go - zookeeper",
-            "slug": "go-zookeeper",
-            "link": "#go-zookeeper",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "go操作kafka",
-            "slug": "go操作kafka",
-            "link": "#go操作kafka",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "go操作RabbitMQ",
-            "slug": "go操作rabbitmq",
-            "link": "#go操作rabbitmq",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "go操作ElasticSearch",
-            "slug": "go操作elasticsearch",
-            "link": "#go操作elasticsearch",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Go语言常用包",
-            "slug": "go语言常用包",
-            "link": "#go语言常用包",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "beego框架",
-            "slug": "beego框架",
-            "link": "#beego框架",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Go高级",
-            "slug": "go高级",
-            "link": "#go高级",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "密码学",
-            "slug": "密码学",
-            "link": "#密码学",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "高级技巧",
-            "slug": "高级技巧",
-            "link": "#高级技巧",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "总结",
-            "slug": "总结",
-            "link": "#总结",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/Gomd_super/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "正则表达式语法速查表",
-    "headers": [
-      {
-        "level": 2,
-        "title": "#常用正则表达式",
-        "slug": "常用正则表达式",
-        "link": "#常用正则表达式",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "#Resources",
-        "slug": "resources",
-        "link": "#resources",
-        "children": []
-      }
-    ],
-    "path": "/Gomd_super/zhenze.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -1652,7 +752,7 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "Golang面对对象思想",
+    "title": "结构体、工厂模式、继承封装",
     "headers": [
       {
         "level": 2,
@@ -2090,6 +1190,13 @@ export const searchIndex = [
       },
       {
         "level": 2,
+        "title": "什么是可靠的性能基准测试环境",
+        "slug": "什么是可靠的性能基准测试环境",
+        "link": "#什么是可靠的性能基准测试环境",
+        "children": []
+      },
+      {
+        "level": 2,
         "title": "测试用例的编写规则",
         "slug": "测试用例的编写规则",
         "link": "#测试用例的编写规则",
@@ -2100,7 +1207,15 @@ export const searchIndex = [
         "title": "go test 模式",
         "slug": "go-test-模式",
         "link": "#go-test-模式",
-        "children": []
+        "children": [
+          {
+            "level": 3,
+            "title": "其他的一些参数",
+            "slug": "其他的一些参数",
+            "link": "#其他的一些参数",
+            "children": []
+          }
+        ]
       },
       {
         "level": 2,
@@ -3653,6 +2768,13 @@ export const searchIndex = [
       },
       {
         "level": 2,
+        "title": "闭包的花样玩法",
+        "slug": "闭包的花样玩法",
+        "link": "#闭包的花样玩法",
+        "children": []
+      },
+      {
+        "level": 2,
         "title": "函数defer",
         "slug": "函数defer",
         "link": "#函数defer",
@@ -4651,6 +3773,992 @@ export const searchIndex = [
       }
     ],
     "path": "/markdown/%E5%B9%B6%E5%8F%91.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "位运算以及补码重点",
+    "headers": [
+      {
+        "level": 2,
+        "title": "ℹ️前言",
+        "slug": "i️前言",
+        "link": "#i️前言",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "🎈乘以 2 的幂",
+        "slug": "🎈乘以-2-的幂",
+        "link": "#🎈乘以-2-的幂",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "🎈除以 2 的幂",
+        "slug": "🎈除以-2-的幂",
+        "link": "#🎈除以-2-的幂",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "🎈交换没有临时变量的整数",
+        "slug": "🎈交换没有临时变量的整数",
+        "link": "#🎈交换没有临时变量的整数",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "🎈增量/减量（较慢但有利于混淆）",
+        "slug": "🎈增量-减量-较慢但有利于混淆",
+        "link": "#🎈增量-减量-较慢但有利于混淆",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "🎈标志翻转",
+        "slug": "🎈标志翻转",
+        "link": "#🎈标志翻转",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "🎈如果除数是 2 的幂，则进行模运算",
+        "slug": "🎈如果除数是-2-的幂-则进行模运算",
+        "link": "#🎈如果除数是-2-的幂-则进行模运算",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "🎈检查整数是偶数还是奇数",
+        "slug": "🎈检查整数是偶数还是奇数",
+        "link": "#🎈检查整数是偶数还是奇数",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "🎈相等检查",
+        "slug": "🎈相等检查",
+        "link": "#🎈相等检查",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "🎈绝对值",
+        "slug": "🎈绝对值",
+        "link": "#🎈绝对值",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "🎈等号检查（两个整数都是 pos 或 neg）",
+        "slug": "🎈等号检查-两个整数都是-pos-或-neg",
+        "link": "#🎈等号检查-两个整数都是-pos-或-neg",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "🎈圆角、天花板、地板",
+        "slug": "🎈圆角、天花板、地板",
+        "link": "#🎈圆角、天花板、地板",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "💡Java中的二进制补充",
+        "slug": "💡java中的二进制补充",
+        "link": "#💡java中的二进制补充",
+        "children": [
+          {
+            "level": 3,
+            "title": "必背",
+            "slug": "必背",
+            "link": "#必背",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "java逻辑右移",
+            "slug": "java逻辑右移",
+            "link": "#java逻辑右移",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/Gomd_super/bitwise.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "目录结构",
+    "headers": [
+      {
+        "level": 2,
+        "title": "Go语言目录结构",
+        "slug": "go语言目录结构",
+        "link": "#go语言目录结构",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Go 目录",
+        "slug": "go-目录",
+        "link": "#go-目录",
+        "children": [
+          {
+            "level": 3,
+            "title": "cmd",
+            "slug": "cmd",
+            "link": "#cmd",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "internal",
+            "slug": "internal",
+            "link": "#internal",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "pkg",
+            "slug": "pkg",
+            "link": "#pkg",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "vendor",
+            "slug": "vendor",
+            "link": "#vendor",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "服务端应用程序目录",
+        "slug": "服务端应用程序目录",
+        "link": "#服务端应用程序目录",
+        "children": [
+          {
+            "level": 3,
+            "title": "api",
+            "slug": "api",
+            "link": "#api",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "Web 应用程序目录",
+        "slug": "web-应用程序目录",
+        "link": "#web-应用程序目录",
+        "children": [
+          {
+            "level": 3,
+            "title": "web",
+            "slug": "web",
+            "link": "#web",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "通用应用程序目录",
+        "slug": "通用应用程序目录",
+        "link": "#通用应用程序目录",
+        "children": [
+          {
+            "level": 3,
+            "title": "build",
+            "slug": "build",
+            "link": "#build",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "configs",
+            "slug": "configs",
+            "link": "#configs",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "deployment",
+            "slug": "deployment",
+            "link": "#deployment",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "init",
+            "slug": "init",
+            "link": "#init",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "scripts",
+            "slug": "scripts",
+            "link": "#scripts",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "test",
+            "slug": "test",
+            "link": "#test",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "其他目录",
+        "slug": "其他目录",
+        "link": "#其他目录",
+        "children": [
+          {
+            "level": 3,
+            "title": "assets",
+            "slug": "assets",
+            "link": "#assets",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "docs",
+            "slug": "docs",
+            "link": "#docs",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "examples",
+            "slug": "examples",
+            "link": "#examples",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "githooks",
+            "slug": "githooks",
+            "link": "#githooks",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "third_party",
+            "slug": "third-party",
+            "link": "#third-party",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "tools",
+            "slug": "tools",
+            "link": "#tools",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "website",
+            "slug": "website",
+            "link": "#website",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "不应该出现的目录",
+        "slug": "不应该出现的目录",
+        "link": "#不应该出现的目录",
+        "children": [
+          {
+            "level": 3,
+            "title": "src",
+            "slug": "src",
+            "link": "#src",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "其他文件",
+        "slug": "其他文件",
+        "link": "#其他文件",
+        "children": [
+          {
+            "level": 3,
+            "title": "Makefile",
+            "slug": "makefile",
+            "link": "#makefile",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "小结",
+        "slug": "小结",
+        "link": "#小结",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "延伸阅读",
+        "slug": "延伸阅读",
+        "link": "#延伸阅读",
+        "children": []
+      }
+    ],
+    "path": "/Gomd_super/catalogue.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "go-air实现热加载",
+    "headers": [
+      {
+        "level": 2,
+        "title": "go air",
+        "slug": "go-air",
+        "link": "#go-air",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "特色",
+        "slug": "特色",
+        "link": "#特色",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "安装",
+        "slug": "安装",
+        "link": "#安装",
+        "children": [
+          {
+            "level": 3,
+            "title": "推荐使用 install.sh",
+            "slug": "推荐使用-install-sh",
+            "link": "#推荐使用-install-sh",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "使用 go install",
+            "slug": "使用-go-install",
+            "link": "#使用-go-install",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "配置镜像源",
+            "slug": "配置镜像源",
+            "link": "#配置镜像源",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "使用Docker",
+            "slug": "使用docker",
+            "link": "#使用docker",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "✨ beta 版本的特性",
+        "slug": "✨-beta-版本的特性",
+        "link": "#✨-beta-版本的特性",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "使用方法",
+        "slug": "使用方法",
+        "link": "#使用方法",
+        "children": [
+          {
+            "level": 3,
+            "title": "运行时参数",
+            "slug": "运行时参数",
+            "link": "#运行时参数",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Docker-compose",
+            "slug": "docker-compose",
+            "link": "#docker-compose",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "调试",
+            "slug": "调试",
+            "link": "#调试",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "Q&A",
+        "slug": "q-a",
+        "link": "#q-a",
+        "children": [
+          {
+            "level": 3,
+            "title": "遇到 \"command not found: air\" 或 \"No such file or directory\" 该怎么办？",
+            "slug": "遇到-command-not-found-air-或-no-such-file-or-directory-该怎么办",
+            "link": "#遇到-command-not-found-air-或-no-such-file-or-directory-该怎么办",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "部署",
+        "slug": "部署",
+        "link": "#部署",
+        "children": [
+          {
+            "level": 3,
+            "title": "发布新版本",
+            "slug": "发布新版本",
+            "link": "#发布新版本",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/Gomd_super/go-air.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Go mod包",
+    "headers": [
+      {
+        "level": 2,
+        "title": "介绍",
+        "slug": "介绍",
+        "link": "#介绍",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Go mod init",
+        "slug": "go-mod-init",
+        "link": "#go-mod-init",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Go module",
+        "slug": "go-module",
+        "link": "#go-module",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "切换",
+        "slug": "切换",
+        "link": "#切换",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "自己新创建一个项目",
+        "slug": "自己新创建一个项目",
+        "link": "#自己新创建一个项目",
+        "children": [
+          {
+            "level": 3,
+            "title": "包的导入方式",
+            "slug": "包的导入方式",
+            "link": "#包的导入方式",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Go-mod方式管理包",
+            "slug": "go-mod方式管理包",
+            "link": "#go-mod方式管理包",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "项目开始~",
+            "slug": "项目开始",
+            "link": "#项目开始",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "为代码启用依赖项跟踪",
+            "slug": "为代码启用依赖项跟踪",
+            "link": "#为代码启用依赖项跟踪",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "所出现问题",
+            "slug": "所出现问题",
+            "link": "#所出现问题",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "github导入包",
+            "slug": "github导入包",
+            "link": "#github导入包",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "远程推送到github上",
+            "slug": "远程推送到github上",
+            "link": "#远程推送到github上",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/Gomd_super/go-version.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Go语言文本编码处理",
+    "headers": [
+      {
+        "level": 2,
+        "title": "前言",
+        "slug": "前言",
+        "link": "#前言",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "判断是否字符串是否包含字符串",
+        "slug": "判断是否字符串是否包含字符串",
+        "link": "#判断是否字符串是否包含字符串",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "字符串拆分",
+        "slug": "字符串拆分",
+        "link": "#字符串拆分",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "可以使用join将其合并起来",
+        "slug": "可以使用join将其合并起来",
+        "link": "#可以使用join将其合并起来",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "字符串转化",
+        "slug": "字符串转化",
+        "link": "#字符串转化",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "序列化和反序列化",
+        "slug": "序列化和反序列化",
+        "link": "#序列化和反序列化",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "使用flag获取复杂参数",
+        "slug": "使用flag获取复杂参数",
+        "link": "#使用flag获取复杂参数",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "控制命令行操作",
+        "slug": "控制命令行操作",
+        "link": "#控制命令行操作",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "补充：变量的作用域",
+        "slug": "补充-变量的作用域",
+        "link": "#补充-变量的作用域",
+        "children": []
+      }
+    ],
+    "path": "/Gomd_super/go_file.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Go-mod包",
+    "headers": [
+      {
+        "level": 2,
+        "title": "Go-mod项目地址",
+        "slug": "go-mod项目地址",
+        "link": "#go-mod项目地址",
+        "children": [
+          {
+            "level": 3,
+            "title": "包的导入方式",
+            "slug": "包的导入方式",
+            "link": "#包的导入方式",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Go-mod方式管理包",
+            "slug": "go-mod方式管理包",
+            "link": "#go-mod方式管理包",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "项目开始~",
+            "slug": "项目开始",
+            "link": "#项目开始",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "为代码启用依赖项跟踪",
+            "slug": "为代码启用依赖项跟踪",
+            "link": "#为代码启用依赖项跟踪",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "所出现问题",
+            "slug": "所出现问题",
+            "link": "#所出现问题",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "github导入包",
+            "slug": "github导入包",
+            "link": "#github导入包",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "远程推送到github上",
+            "slug": "远程推送到github上",
+            "link": "#远程推送到github上",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/Gomd_super/go_mod.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Go mod包",
+    "headers": [
+      {
+        "level": 2,
+        "title": "介绍",
+        "slug": "介绍",
+        "link": "#介绍",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Go mod init",
+        "slug": "go-mod-init",
+        "link": "#go-mod-init",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Go module",
+        "slug": "go-module",
+        "link": "#go-module",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "切换",
+        "slug": "切换",
+        "link": "#切换",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "自己新创建一个项目",
+        "slug": "自己新创建一个项目",
+        "link": "#自己新创建一个项目",
+        "children": [
+          {
+            "level": 3,
+            "title": "包的导入方式",
+            "slug": "包的导入方式",
+            "link": "#包的导入方式",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Go-mod方式管理包",
+            "slug": "go-mod方式管理包",
+            "link": "#go-mod方式管理包",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "项目开始~",
+            "slug": "项目开始",
+            "link": "#项目开始",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "为代码启用依赖项跟踪",
+            "slug": "为代码启用依赖项跟踪",
+            "link": "#为代码启用依赖项跟踪",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "所出现问题",
+            "slug": "所出现问题",
+            "link": "#所出现问题",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "github导入包",
+            "slug": "github导入包",
+            "link": "#github导入包",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "远程推送到github上",
+            "slug": "远程推送到github上",
+            "link": "#远程推送到github上",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/Gomd_super/mod.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Go语言命名规范",
+    "headers": [
+      {
+        "level": 2,
+        "title": "参考",
+        "slug": "参考",
+        "link": "#参考",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "目录",
+        "slug": "目录",
+        "link": "#目录",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "文件",
+        "slug": "文件",
+        "link": "#文件",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "变量",
+        "slug": "变量",
+        "link": "#变量",
+        "children": [
+          {
+            "level": 3,
+            "title": "javascript：驼峰",
+            "slug": "javascript-驼峰",
+            "link": "#javascript-驼峰",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "css：中划线",
+            "slug": "css-中划线",
+            "link": "#css-中划线",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/Gomd_super/name.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [
+      {
+        "level": 2,
+        "title": "目录",
+        "slug": "目录",
+        "link": "#目录",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Go网络编程和并发编程",
+        "slug": "go网络编程和并发编程",
+        "link": "#go网络编程和并发编程",
+        "children": [
+          {
+            "level": 3,
+            "title": "gin框架一章带走",
+            "slug": "gin框架一章带走",
+            "link": "#gin框架一章带走",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Go连接数据库",
+            "slug": "go连接数据库",
+            "link": "#go连接数据库",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Redis",
+            "slug": "redis",
+            "link": "#redis",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "go操作ETCD",
+            "slug": "go操作etcd",
+            "link": "#go操作etcd",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Go - zookeeper",
+            "slug": "go-zookeeper",
+            "link": "#go-zookeeper",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "go操作kafka",
+            "slug": "go操作kafka",
+            "link": "#go操作kafka",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "go操作RabbitMQ",
+            "slug": "go操作rabbitmq",
+            "link": "#go操作rabbitmq",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "go操作ElasticSearch",
+            "slug": "go操作elasticsearch",
+            "link": "#go操作elasticsearch",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Go语言常用包",
+            "slug": "go语言常用包",
+            "link": "#go语言常用包",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "beego框架",
+            "slug": "beego框架",
+            "link": "#beego框架",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Go高级",
+            "slug": "go高级",
+            "link": "#go高级",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "密码学",
+            "slug": "密码学",
+            "link": "#密码学",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "高级技巧",
+            "slug": "高级技巧",
+            "link": "#高级技巧",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "总结",
+            "slug": "总结",
+            "link": "#总结",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/Gomd_super/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "正则表达式语法速查表",
+    "headers": [
+      {
+        "level": 2,
+        "title": "#常用正则表达式",
+        "slug": "常用正则表达式",
+        "link": "#常用正则表达式",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "#Resources",
+        "slug": "resources",
+        "link": "#resources",
+        "children": []
+      }
+    ],
+    "path": "/Gomd_super/zhenze.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -6528,7 +6636,7 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "第14节",
+    "title": "第14节 Go版本控制",
     "headers": [
       {
         "level": 3,
@@ -6543,6 +6651,42 @@ export const searchIndex = [
         "slug": "go语言100篇进阶",
         "link": "#go语言100篇进阶",
         "children": []
+      },
+      {
+        "level": 2,
+        "title": "前言",
+        "slug": "前言",
+        "link": "#前言",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "安装 goup",
+        "slug": "安装-goup",
+        "link": "#安装-goup",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "gvm",
+        "slug": "gvm",
+        "link": "#gvm",
+        "children": [
+          {
+            "level": 3,
+            "title": "安装",
+            "slug": "安装",
+            "link": "#安装",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "使用",
+            "slug": "使用",
+            "link": "#使用",
+            "children": []
+          }
+        ]
       },
       {
         "level": 2,

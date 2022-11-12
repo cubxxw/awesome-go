@@ -1,4 +1,4 @@
-<template><div><h1 id="golang面对对象思想" tabindex="-1"><a class="header-anchor" href="#golang面对对象思想" aria-hidden="true">#</a> Golang面对对象思想</h1>
+<template><div><h1 id="结构体、工厂模式、继承封装" tabindex="-1"><a class="header-anchor" href="#结构体、工厂模式、继承封装" aria-hidden="true">#</a> 结构体、工厂模式、继承封装</h1>
 <nav class="table-of-contents"><ul><li><router-link to="#面对对象编程">面对对象编程</router-link></li><li><router-link to="#结构体">结构体</router-link></li><li><router-link to="#指定变量值">指定变量值</router-link></li><li><router-link to="#结构体方法">结构体方法</router-link></li><li><router-link to="#工厂模式">工厂模式</router-link></li><li><router-link to="#抽象">抽象</router-link></li><li><router-link to="#面对对象特征">面对对象特征</router-link></li><li><router-link to="#封装">封装</router-link></li><li><router-link to="#继承">继承</router-link></li><li><router-link to="#继承的深入讨论">继承的深入讨论</router-link></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
 <p>[toc]</p>
 <p>😶‍🌫️go语言官方编程指南：<a href="https://pkg.go.dev/std" target="_blank" rel="noopener noreferrer">https://pkg.go.dev/std<ExternalLinkIcon/></a></p>
@@ -322,12 +322,12 @@ person= {Jack 20}
 <span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>这种方法就被称为工厂模式</strong></p>
 <blockquote>
-<p>如果score 是一个小写的,在其他包不可以直接访问,怎么样访问它呢?</p>
+<p>如果 <code v-pre>score</code> 是一个小写的,在其他包不可以直接访问,怎么样访问它呢?</p>
 <p>我们可以再加入提供一个方法</p>
 </blockquote>
 <div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">func</span> <span class="token punctuation">(</span>s <span class="token operator">*</span>student<span class="token punctuation">)</span> <span class="token function">GetScore</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">float64</span><span class="token punctuation">{</span>
     <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token operator">*</span>s<span class="token punctuation">.</span>score<span class="token punctuation">)</span>   <span class="token comment">//ok,*可以省略</span>
-<span class="token punctuation">}</span><span class="token number">66</span>
+<span class="token punctuation">}</span>
 <span class="token comment">/*main访问*/</span>
 fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>stu<span class="token punctuation">.</span><span class="token function">GetScore</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="抽象" tabindex="-1"><a class="header-anchor" href="#抽象" aria-hidden="true">#</a> 抽象</h2>

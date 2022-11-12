@@ -1,5 +1,5 @@
 <template><div><h1 id="函数、闭包-错误处理" tabindex="-1"><a class="header-anchor" href="#函数、闭包-错误处理" aria-hidden="true">#</a> 函数、闭包，错误处理</h1>
-<nav class="table-of-contents"><ul><li><router-link to="#匿名函数">匿名函数</router-link><ul><li><router-link to="#一次性匿名函数">一次性匿名函数</router-link></li><li><router-link to="#给变量调用">给变量调用</router-link></li><li><router-link to="#全局匿名函数">全局匿名函数</router-link></li><li><router-link to="#匿名总结实战">匿名总结实战</router-link></li></ul></li><li><router-link to="#闭包">闭包</router-link><ul><li><router-link to="#定义一个闭包理解">定义一个闭包理解</router-link></li><li><router-link to="#闭包的说明">闭包的说明</router-link></li></ul></li><li><router-link to="#函数defer">函数defer</router-link></li><li><router-link to="#字符串常用的系统函数">字符串常用的系统函数</router-link></li><li><router-link to="#日期和时间相关函数">日期和时间相关函数</router-link><ul><li><router-link to="#时间常量">时间常量</router-link></li><li><router-link to="#结合sleep来使用时间常量">结合sleep来使用时间常量</router-link></li><li><router-link to="#unix时间戳和unixnano时间戳">unix时间戳和unixnano时间戳</router-link></li><li><router-link to="#用法">用法</router-link></li><li><router-link to="#统计代码执行时间">统计代码执行时间</router-link></li></ul></li><li><router-link to="#golang内置函数">Golang内置函数</router-link></li><li><router-link to="#golang错误处理机制">Golang错误处理机制</router-link><ul><li><router-link to="#自定义错误">自定义错误</router-link></li></ul></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
+<nav class="table-of-contents"><ul><li><router-link to="#匿名函数">匿名函数</router-link><ul><li><router-link to="#一次性匿名函数">一次性匿名函数</router-link></li><li><router-link to="#给变量调用">给变量调用</router-link></li><li><router-link to="#全局匿名函数">全局匿名函数</router-link></li><li><router-link to="#匿名总结实战">匿名总结实战</router-link></li></ul></li><li><router-link to="#闭包">闭包</router-link><ul><li><router-link to="#定义一个闭包理解">定义一个闭包理解</router-link></li><li><router-link to="#闭包的说明">闭包的说明</router-link></li></ul></li><li><router-link to="#闭包的花样玩法">闭包的花样玩法</router-link></li><li><router-link to="#函数defer">函数defer</router-link></li><li><router-link to="#字符串常用的系统函数">字符串常用的系统函数</router-link></li><li><router-link to="#日期和时间相关函数">日期和时间相关函数</router-link><ul><li><router-link to="#时间常量">时间常量</router-link></li><li><router-link to="#结合sleep来使用时间常量">结合sleep来使用时间常量</router-link></li><li><router-link to="#unix时间戳和unixnano时间戳">unix时间戳和unixnano时间戳</router-link></li><li><router-link to="#用法">用法</router-link></li><li><router-link to="#统计代码执行时间">统计代码执行时间</router-link></li></ul></li><li><router-link to="#golang内置函数">Golang内置函数</router-link></li><li><router-link to="#golang错误处理机制">Golang错误处理机制</router-link><ul><li><router-link to="#自定义错误">自定义错误</router-link></li></ul></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
 <p>[toc]</p>
 <p>😶‍🌫️go语言官方编程指南：<a href="https://pkg.go.dev/std" target="_blank" rel="noopener noreferrer">https://pkg.go.dev/std<ExternalLinkIcon/></a></p>
 <blockquote>
@@ -303,6 +303,253 @@ res3= -10
 	<span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div>
+<h2 id="闭包的花样玩法" tabindex="-1"><a class="header-anchor" href="#闭包的花样玩法" aria-hidden="true">#</a> 闭包的花样玩法</h2>
+<ul>
+<li><a href="https://zhuanlan.zhihu.com/p/92634505" target="_blank" rel="noopener noreferrer">参考一篇写的非常棒的文章<ExternalLinkIcon/></a></li>
+</ul>
+<div class="custom-container tip"><p class="custom-container-title">提示</p>
+<p>a <strong>closure</strong> is a record storing <strong>a function</strong> together with <strong>an environment</strong>.
+<strong>闭包</strong>是由<strong>函数</strong>和与其相关的引用<strong>环境</strong>组合而成的实体 。</p>
+</div>
+<p>定义<code v-pre>foo1()</code>到<code v-pre>foo7()</code>一共7个函数，看看有何不同~</p>
+<p><strong>case 1：</strong></p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">package</span> main
+
+<span class="token keyword">import</span> <span class="token string">"fmt"</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	val <span class="token operator">:=</span> <span class="token number">3</span> <span class="token comment">// val is a local variable</span>
+	<span class="token keyword">for</span> i <span class="token operator">:=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">3</span><span class="token punctuation">;</span> i<span class="token operator">++</span> <span class="token punctuation">{</span>
+		<span class="token function">foo1</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>val<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+	<span class="token function">foo1</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>val<span class="token punctuation">)</span> <span class="token comment">// 注意这里没有括号</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">foo1</span><span class="token punctuation">(</span>x <span class="token operator">*</span><span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token keyword">func</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token keyword">return</span> <span class="token keyword">func</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token operator">*</span>x <span class="token operator">=</span> <span class="token operator">*</span>x <span class="token operator">+</span> <span class="token number">1</span>
+		fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"foo1 val = %d\n"</span><span class="token punctuation">,</span> <span class="token operator">*</span>x<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>🚀 编译结果如下：</p>
+<div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>foo1 val = 4
+foo1 val = 5
+foo1 val = 6
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>case 2：</strong></p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    val <span class="token operator">:=</span> <span class="token number">3</span>
+	<span class="token keyword">for</span> i <span class="token operator">:=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">3</span><span class="token punctuation">;</span> i<span class="token operator">++</span> <span class="token punctuation">{</span>
+		<span class="token function">foo2</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+	<span class="token function">foo2</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span> <span class="token comment">// 注意这里没有括号</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">foo2</span><span class="token punctuation">(</span>x <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token keyword">func</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token keyword">func</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    x <span class="token operator">=</span> x <span class="token operator">+</span> <span class="token number">1</span>
+    fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"foo2 val = %d\n"</span><span class="token punctuation">,</span> x<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>🚀 编译结果如下：</p>
+<div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>foo2 val = 4
+foo2 val = 4
+foo2 val = 4
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>case 3：</strong></p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">package</span> main
+
+<span class="token keyword">import</span> <span class="token string">"fmt"</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token function">foo3</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	<span class="token function">foo3</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">foo3</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">func</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	values <span class="token operator">:=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">int</span><span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">}</span>
+	<span class="token keyword">for</span> <span class="token boolean">_</span><span class="token punctuation">,</span> val <span class="token operator">:=</span> <span class="token keyword">range</span> values <span class="token punctuation">{</span>
+		fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"foo3 val = %d\n"</span><span class="token punctuation">,</span> val<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+	<span class="token keyword">return</span> <span class="token keyword">func</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"return func() foo3"</span><span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>🚀 编译结果如下：</p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>foo3 val <span class="token operator">=</span> <span class="token number">1</span>
+foo3 val <span class="token operator">=</span> <span class="token number">2</span>
+foo3 val <span class="token operator">=</span> <span class="token number">3</span>
+foo3 val <span class="token operator">=</span> <span class="token number">1</span>
+foo3 val <span class="token operator">=</span> <span class="token number">2</span>
+foo3 val <span class="token operator">=</span> <span class="token number">3</span>
+<span class="token builtin class-name">return</span> func<span class="token punctuation">(</span><span class="token punctuation">)</span> foo3
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>case 4：</strong></p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token function">foo4</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">show</span><span class="token punctuation">(</span>v <span class="token keyword">interface</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"foo4 val = %v\n"</span><span class="token punctuation">,</span> v<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">foo4</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	values <span class="token operator">:=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">int</span><span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">}</span>
+	<span class="token keyword">for</span> <span class="token boolean">_</span><span class="token punctuation">,</span> val <span class="token operator">:=</span> <span class="token keyword">range</span> values <span class="token punctuation">{</span>
+		<span class="token keyword">go</span> <span class="token function">show</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+	<span class="token keyword">for</span> <span class="token punctuation">{</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>🚀 编译结果如下：</p>
+<div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>foo4 val = 2
+foo4 val = 1
+foo4 val = 3
+foo4 val = 5
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>case 5：</strong></p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">func</span> <span class="token function">foo5</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  values <span class="token operator">:=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">int</span><span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">}</span>
+  <span class="token keyword">for</span> <span class="token boolean">_</span><span class="token punctuation">,</span> val <span class="token operator">:=</span> <span class="token keyword">range</span> values <span class="token punctuation">{</span>
+    <span class="token keyword">go</span> <span class="token keyword">func</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"foo5 val = %v\n"</span><span class="token punctuation">,</span> val<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//🚀 编译结果为 `空的~`</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>case 6：</strong></p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">var</span> foo6Chan <span class="token operator">=</span> <span class="token function">make</span><span class="token punctuation">(</span><span class="token keyword">chan</span> <span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span>
+<span class="token keyword">func</span> <span class="token function">foo6</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">for</span> val <span class="token operator">:=</span> <span class="token keyword">range</span> foo6Chan <span class="token punctuation">{</span>
+    <span class="token keyword">go</span> <span class="token keyword">func</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"foo6 val = %d\n"</span><span class="token punctuation">,</span> val<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">//err</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>case 7：</strong></p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">package</span> main
+
+<span class="token keyword">import</span> <span class="token punctuation">(</span>
+	<span class="token string">"fmt"</span>
+<span class="token punctuation">)</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token function">foo7</span><span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token function">foo7</span><span class="token punctuation">(</span><span class="token number">13</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token comment">// 遍历</span>
+	<span class="token keyword">for</span> i <span class="token operator">:=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">3</span><span class="token punctuation">;</span> i<span class="token operator">++</span> <span class="token punctuation">{</span>
+		<span class="token function">foo7</span><span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">)</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">foo7</span><span class="token punctuation">(</span>x <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token punctuation">(</span>fs <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token keyword">func</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	values <span class="token operator">:=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">int</span><span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">}</span>
+
+	<span class="token keyword">for</span> <span class="token boolean">_</span><span class="token punctuation">,</span> val <span class="token operator">:=</span> <span class="token keyword">range</span> values <span class="token punctuation">{</span>
+		fs <span class="token operator">=</span> <span class="token function">append</span><span class="token punctuation">(</span>fs<span class="token punctuation">,</span> <span class="token keyword">func</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">//添加一个匿名函数到fs中</span>
+			fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"foo7 val = %d\n"</span><span class="token punctuation">,</span> x<span class="token operator">+</span>val<span class="token punctuation">)</span>
+		<span class="token punctuation">}</span><span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token keyword">return</span>
+<span class="token punctuation">}</span>
+
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>🚀 编译结果如下：</p>
+<div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>[0x45ff60 0x45ff60 0x45ff60]
+[0x45ff60 0x45ff60 0x45ff60]
+foo7 val = 15
+foo7 val = 15
+foo7 val = 15
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="custom-container warning"><p class="custom-container-title">📜 对上面的解释（**闭包延迟绑定**）</p>
+<p>what？</p>
+<p>为什么打印的都是一样的~ what，what</p>
+<p>不是说<strong>闭包</strong>是一段<strong>函数</strong>和<strong>相关的引用环境</strong>的实体。case7的问题中，函数是打印变量<code v-pre>val</code>的值，引用环境是变量<code v-pre>val</code>。仅仅是这样的话，遍历到val=1的时候，记录的不应该是val=1的环境吗？</p>
+<p>上文在闭包解释最后，还有一句话：闭包保存/记录了它<strong>产生</strong>时的外部函数的所有环境。如同普通变量/函数的<strong>定义</strong>和实际<strong>赋值/调用或者说执行</strong>，是两个阶段。闭包也是一样，for-loop内部仅仅是声明了一个闭包，<code v-pre>foo7()</code>返回的也仅仅是一段闭包的函数定义，只有在外部执行了<code v-pre>f7()</code>时才真正执行了闭包，此时才闭包内部的变量才会进行赋值的操作。哎，如果这么说的话，岂不是应该抛出异常吗？因为<code v-pre>val</code>是一个比<code v-pre>foo7()</code>生命周期更短的变量啊？</p>
+<p>这就是闭包的神奇之处，它会保存相关引用的环境，也就是说，<code v-pre>val</code>这个变量在闭包内的生命周期得到了保证。因此在执行这个闭包的时候，会去外部环境寻找最新的数值！你是不是不相信？来来来，我们马上写个临时的case执行下分分钟就明白了：</p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">package</span> main
+
+<span class="token keyword">import</span> <span class="token punctuation">(</span>
+	<span class="token string">"fmt"</span>
+<span class="token punctuation">)</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token function">foo0</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	<span class="token function">foo0</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">foo0</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">func</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	x <span class="token operator">:=</span> <span class="token number">1</span>
+	f <span class="token operator">:=</span> <span class="token keyword">func</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"foo0 val = %d\n"</span><span class="token punctuation">,</span> x<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+	x <span class="token operator">=</span> <span class="token number">11</span>
+	<span class="token keyword">return</span> f
+<span class="token punctuation">}</span>
+
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>🚀 编译结果如下：</p>
+<div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>foo0 val = 11
+foo0 val = 11
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div></div>
+<div class="custom-container tip"><p class="custom-container-title">提示</p>
+<p>究竟是如何取出最近的值的：</p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">package</span> main
+
+<span class="token keyword">import</span> <span class="token punctuation">(</span>
+	<span class="token string">"fmt"</span>
+<span class="token punctuation">)</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token comment">// Q1第一组实验</span>
+	x <span class="token operator">:=</span> <span class="token number">133</span>
+	f1 <span class="token operator">:=</span> <span class="token function">foo1</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>x<span class="token punctuation">)</span>
+	f2 <span class="token operator">:=</span> <span class="token function">foo2</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+	<span class="token function">f1</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	<span class="token function">f2</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	<span class="token function">f1</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	<span class="token function">f2</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"--------------------------------"</span><span class="token punctuation">)</span>
+	<span class="token comment">// Q1第二组</span>
+	x <span class="token operator">=</span> <span class="token number">233</span>
+	<span class="token function">f1</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	<span class="token function">f2</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	<span class="token function">f1</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	<span class="token function">f2</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"--------------------------------"</span><span class="token punctuation">)</span>
+	<span class="token comment">// Q1第三组</span>
+	<span class="token function">foo1</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>x<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	<span class="token function">foo2</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	<span class="token function">foo1</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>x<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	<span class="token function">foo2</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	<span class="token function">foo2</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"--------------------------------"</span><span class="token punctuation">)</span>
+	<span class="token function">foo2</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	<span class="token function">foo3</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	<span class="token function">foo1</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>x<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	<span class="token function">foo3</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">foo1</span><span class="token punctuation">(</span>x <span class="token operator">*</span><span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token keyword">func</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token keyword">return</span> <span class="token keyword">func</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token operator">*</span>x <span class="token operator">=</span> <span class="token operator">*</span>x <span class="token operator">+</span> <span class="token number">1</span>
+		fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"foo1 val = %d\n"</span><span class="token punctuation">,</span> <span class="token operator">*</span>x<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">func</span> <span class="token function">foo2</span><span class="token punctuation">(</span>x <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token keyword">func</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token keyword">return</span> <span class="token keyword">func</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		x <span class="token operator">=</span> x <span class="token operator">+</span> <span class="token number">1</span>
+		fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"foo1 val = %d\n"</span><span class="token punctuation">,</span> x<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">foo3</span><span class="token punctuation">(</span>x <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token keyword">func</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token keyword">return</span> <span class="token keyword">func</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		x <span class="token operator">=</span> x <span class="token operator">+</span> <span class="token number">1</span>
+		fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"foo2 val = %d\n"</span><span class="token punctuation">,</span> x<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div>
 <h2 id="函数defer" tabindex="-1"><a class="header-anchor" href="#函数defer" aria-hidden="true">#</a> 函数defer</h2>
 <p><strong>在函数中，通常选用创建资源（比如：数据库连接，文件等），为了在函数执行完毕后，即使的释放资源，Go提供了defer（延时机制）</strong> —&gt;  <code v-pre>栈</code></p>
 <div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">package</span> main

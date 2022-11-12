@@ -151,7 +151,7 @@ graph LR
 
 - [x] [⭐30天学会go --第10天 Go的面对对象 – 结构体](markdown/11.md)
 
-- [x] [⭐30天学会go --第11天 深入理解Go面对对象思想](markdown/11.md)
+- [x] [⭐30天学会go --第11天 结构体、工厂模式、继承封装](markdown/11.md)
 
 - [x] [⭐30天学会go --第12天 Go语言面对接口](markdown/12.md)
 
