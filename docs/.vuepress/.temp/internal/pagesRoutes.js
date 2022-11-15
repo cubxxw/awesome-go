@@ -156,7 +156,7 @@ export const pagesRoutes = [
   ["v-6c325d5b","/go-advancend/markdown/12.html",{"title":"第12节 Go语言的并发特性"},["/go-advancend/markdown/12","/go-advancend/markdown/12.md"]],
   ["v-6de735fa","/go-advancend/markdown/13.html",{"title":"第13节 Go语言退出、结束函数或者协程方式"},["/go-advancend/markdown/13","/go-advancend/markdown/13.md"]],
   ["v-6f9c0e99","/go-advancend/markdown/14.html",{"title":"第14节 Go版本控制"},["/go-advancend/markdown/14","/go-advancend/markdown/14.md"]],
-  ["v-7150e738","/go-advancend/markdown/15.html",{"title":"第15节"},["/go-advancend/markdown/15","/go-advancend/markdown/15.md"]],
+  ["v-7150e738","/go-advancend/markdown/15.html",{"title":"第15节 Cobra"},["/go-advancend/markdown/15","/go-advancend/markdown/15.md"]],
   ["v-7305bfd7","/go-advancend/markdown/16.html",{"title":"第16节"},["/go-advancend/markdown/16","/go-advancend/markdown/16.md"]],
   ["v-74ba9876","/go-advancend/markdown/17.html",{"title":"第17节"},["/go-advancend/markdown/17","/go-advancend/markdown/17.md"]],
   ["v-766f7115","/go-advancend/markdown/18.html",{"title":"第18节"},["/go-advancend/markdown/18","/go-advancend/markdown/18.md"]],

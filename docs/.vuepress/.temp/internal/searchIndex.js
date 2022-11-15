@@ -2775,6 +2775,13 @@ export const searchIndex = [
       },
       {
         "level": 2,
+        "title": "for & 匿名函数（闭包？）",
+        "slug": "for-匿名函数-闭包",
+        "link": "#for-匿名函数-闭包",
+        "children": []
+      },
+      {
+        "level": 2,
         "title": "函数defer",
         "slug": "函数defer",
         "link": "#函数defer",
@@ -6701,7 +6708,7 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "第15节",
+    "title": "第15节 Cobra",
     "headers": [
       {
         "level": 3,
@@ -6715,6 +6722,92 @@ export const searchIndex = [
         "title": "Go语言100篇进阶",
         "slug": "go语言100篇进阶",
         "link": "#go语言100篇进阶",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "cobra 简介",
+        "slug": "cobra-简介",
+        "link": "#cobra-简介",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Cobra 安装",
+        "slug": "cobra-安装",
+        "link": "#cobra-安装",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "项目中导入",
+        "slug": "项目中导入",
+        "link": "#项目中导入",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "cobra-cli",
+        "slug": "cobra-cli",
+        "link": "#cobra-cli",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "cobra 项目创建",
+        "slug": "cobra-项目创建",
+        "link": "#cobra-项目创建",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "编译",
+        "slug": "编译",
+        "link": "#编译",
+        "children": [
+          {
+            "level": 3,
+            "title": "main.go",
+            "slug": "main-go",
+            "link": "#main-go",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "root.go",
+            "slug": "root-go",
+            "link": "#root-go",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "为命令加上一个子命令",
+        "slug": "为命令加上一个子命令",
+        "link": "#为命令加上一个子命令",
+        "children": [
+          {
+            "level": 3,
+            "title": "绑定父命令",
+            "slug": "绑定父命令",
+            "link": "#绑定父命令",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "为命令添加选项",
+        "slug": "为命令添加选项",
+        "link": "#为命令添加选项",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "补充 run参数的匿名函数",
+        "slug": "补充-run参数的匿名函数",
+        "link": "#补充-run参数的匿名函数",
         "children": []
       },
       {
