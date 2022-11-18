@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-bbb61728","path":"/mit-6-824/MIT6-824/36.html","title":"\u7B2C36\u8282","lang":"zh-CN","frontmatter":{},"excerpt":"","headers":[{"level":2,"title":"END \u94FE\u63A5","slug":"end-\u94FE\u63A5","link":"#end-\u94FE\u63A5","children":[]}],"git":{"updatedTime":null,"contributors":[]},"filePathRelative":"mit-6-824/MIT6-824/36.md"}');export{t as data};
