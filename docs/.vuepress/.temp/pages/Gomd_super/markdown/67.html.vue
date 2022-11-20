@@ -12,7 +12,7 @@ func main() {
     beego.Run()
 }
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>我们看到 main 函数是入口函数，但是我们知道 Go 的执行过程是如下图所示的方式：</p>
-<p><img src="https://s2.loli.net/2022/04/11/fFJZpeEcBWLlIYj.png" alt="img"></p>
+<p><img src="http://sm.nsddd.top/smimage-20221120221004281.png" alt="image-20221120221004281"></p>
 <p>这里我们就看到了我们引入了一个包 <code v-pre>_ &quot;quickstart/routers&quot;</code>,这个包只引入执行了里面的 init 函数，那么让我们看看这个里面做了什么事情：</p>
 <div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>package routers
 

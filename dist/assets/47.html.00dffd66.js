@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-4e7fef68","path":"/mit-6-824/MIT6-824/47.html","title":"\u7B2C47\u8282","lang":"zh-CN","frontmatter":{},"excerpt":"","headers":[{"level":2,"title":"END \u94FE\u63A5","slug":"end-\u94FE\u63A5","link":"#end-\u94FE\u63A5","children":[]}],"git":{"updatedTime":null,"contributors":[]},"filePathRelative":"mit-6-824/MIT6-824/47.md"}');export{e as data};

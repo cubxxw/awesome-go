@@ -320,11 +320,11 @@ PS D<span class="token punctuation">:</span>clid<span class="token operator">></
 version called
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><blockquote>
 <p><strong>可以看到绑定到 <code v-pre>test</code> 上面了，当然你可以取消注释，同时绑定两个~</strong></p>
-<div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>PS D:\文档\最近的\awesome-golang\docs\go-advancend\code\cobra\clid> .\clid.exe test version
+<div class="language-powershell ext-powershell line-numbers-mode"><pre v-pre class="language-powershell"><code><span class="token function">PS</span> D:\文档\最近的\awesome-golang\docs\go-advancend\code\cobra\clid> <span class="token punctuation">.</span>\clid<span class="token punctuation">.</span>exe test version
 version called
-PS D:\文档\最近的\awesome-golang\docs\go-advancend\code\cobra\clid> .\clid.exe version
+<span class="token function">PS</span> D:\文档\最近的\awesome-golang\docs\go-advancend\code\cobra\clid> <span class="token punctuation">.</span>\clid<span class="token punctuation">.</span>exe version
 version called
-PS D:\文档\最近的\awesome-golang\docs\go-advancend\code\cobra\clid> .\clid.exe test
+<span class="token function">PS</span> D:\文档\最近的\awesome-golang\docs\go-advancend\code\cobra\clid> <span class="token punctuation">.</span>\clid<span class="token punctuation">.</span>exe test
 测试run
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></blockquote>
 <h2 id="为命令添加选项" tabindex="-1"><a class="header-anchor" href="#为命令添加选项" aria-hidden="true">#</a> 为命令添加选项</h2>
