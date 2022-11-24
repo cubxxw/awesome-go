@@ -3,6 +3,7 @@
 <h2 id="beego框架-1" tabindex="-1"><a class="header-anchor" href="#beego框架-1" aria-hidden="true">#</a> beego框架</h2>
 <p>beego 是免费、开源的软件，这意味着任何人都可以为其开发和进步贡献力量。beego 源代码目前托管在 Github 上，Github 提供非常容易的途径 fork 项目和合并你的贡献。</p>
 <div class="custom-container tip"><p class="custom-container-title">提示</p>
+<p>beego 或许是我们走进云原生的第一步~</p>
 <ul>
 <li><a href="https://github.com/beego/beego" target="_blank" rel="noopener noreferrer">github地址<ExternalLinkIcon/></a></li>
 <li><a href="beego.vip">官网</a></li>
@@ -123,20 +124,72 @@ myproject
     └── index.tpl
 
 <span class="token number">8</span> directories, <span class="token number">4</span> files
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="api-命令" tabindex="-1"><a class="header-anchor" href="#api-命令" aria-hidden="true">#</a> api 命令</h3>
-<p>上面的 <code v-pre>new</code> 命令是用来新建 Web 项目，不过很多用户使用 beego 来开发 API 应用。所以这个 <code v-pre>api</code> 命令就是用来创建 API 应用的，执行命令之后如下所示：</p>
-<div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>bee api apiproject
-create app folder: /gopath/src/apiproject
-create conf: /gopath/src/apiproject/conf
-create controllers: /gopath/src/apiproject/controllers
-create models: /gopath/src/apiproject/models
-create tests: /gopath/src/apiproject/tests
-create conf app.conf: /gopath/src/apiproject/conf/app.conf
-create controllers default.go: /gopath/src/apiproject/controllers/default.go
-create tests default.go: /gopath/src/apiproject/tests/default_test.go
-create models object.go: /gopath/src/apiproject/models/object.go
-create main.go: /gopath/src/apiproject/main.go
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>这个项目的目录结构如下：</p>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="controllers" tabindex="-1"><a class="header-anchor" href="#controllers" aria-hidden="true">#</a> controllers</h3>
+<div class="custom-container warning"><p class="custom-container-title">controllers</p>
+<p>controllers里面内嵌了一个结构体，将 beego的controllers，基于此实现自己的 <code v-pre>Get()</code> 等…</p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">package</span> controllers
+
+<span class="token keyword">import</span> <span class="token punctuation">(</span>
+	<span class="token string">"github.com/astaxie/beego"</span>
+<span class="token punctuation">)</span>
+
+<span class="token keyword">type</span> MainController <span class="token keyword">struct</span> <span class="token punctuation">{</span>
+	beego<span class="token punctuation">.</span>Controller
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token punctuation">(</span>c <span class="token operator">*</span>MainController<span class="token punctuation">)</span> <span class="token function">Get</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	c<span class="token punctuation">.</span>Data<span class="token punctuation">[</span><span class="token string">"Website"</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"beego.me"</span>
+	c<span class="token punctuation">.</span>Data<span class="token punctuation">[</span><span class="token string">"Email"</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"astaxie@gmail.com"</span>
+	c<span class="token punctuation">.</span>TplName <span class="token operator">=</span> <span class="token string">"index.tpl"</span>
+<span class="token punctuation">}</span>
+
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>不仅如此，或许我们可以添加自己的 Post()</strong></p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">func</span> <span class="token punctuation">(</span>c <span class="token operator">*</span>MainController<span class="token punctuation">)</span> <span class="token function">Post</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	c<span class="token punctuation">.</span>Data<span class="token punctuation">[</span><span class="token string">"Website"</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"beego.me"</span>
+	c<span class="token punctuation">.</span>Data<span class="token punctuation">[</span><span class="token string">"Email"</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"3293172751@qq.com"</span>
+	c<span class="token punctuation">.</span>TplName <span class="token operator">=</span> <span class="token string">"index.tpl"</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token punctuation">(</span>c <span class="token operator">*</span>MainController<span class="token punctuation">)</span> <span class="token function">Put</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	c<span class="token punctuation">.</span>Ctx<span class="token punctuation">.</span><span class="token function">WriteString</span><span class="token punctuation">(</span><span class="token string">"put"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token punctuation">(</span>c <span class="token operator">*</span>MainController<span class="token punctuation">)</span> <span class="token function">Delete</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	c<span class="token punctuation">.</span>Ctx<span class="token punctuation">.</span><span class="token function">WriteString</span><span class="token punctuation">(</span><span class="token string">"delete"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token punctuation">(</span>c <span class="token operator">*</span>MainController<span class="token punctuation">)</span> <span class="token function">Head</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	c<span class="token punctuation">.</span>Ctx<span class="token punctuation">.</span><span class="token function">WriteString</span><span class="token punctuation">(</span><span class="token string">"head"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>controller 逻辑：</strong></p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">package</span> controllers
+
+<span class="token keyword">import</span> <span class="token punctuation">(</span>
+        <span class="token string">"github.com/astaxie/beego"</span>
+<span class="token punctuation">)</span>
+
+<span class="token keyword">type</span> MainController <span class="token keyword">struct</span> <span class="token punctuation">{</span>
+        beego<span class="token punctuation">.</span>Controller
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token punctuation">(</span>this <span class="token operator">*</span>MainController<span class="token punctuation">)</span> <span class="token function">Get</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        this<span class="token punctuation">.</span>Data<span class="token punctuation">[</span><span class="token string">"Website"</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"beego.me"</span>
+        this<span class="token punctuation">.</span>Data<span class="token punctuation">[</span><span class="token string">"Email"</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"astaxie@gmail.com"</span>
+        this<span class="token punctuation">.</span>TplName <span class="token operator">=</span> <span class="token string">"index.tpl"</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>1、声明了一个控制器 <code v-pre>MainController</code>，这个控制器里面内嵌了 <code v-pre>beego.Controller</code>，即Go 的嵌入方式，也就是 <code v-pre>MainController</code> 自动拥有了所有 <code v-pre>beego.Controller</code> 的方法。而 <code v-pre>beego.Controller</code> 拥有很多方法，其中包括 <code v-pre>Init</code>、<code v-pre>Prepare</code>、<code v-pre>Post</code>、<code v-pre>Get</code>、<code v-pre>Delete</code>、<code v-pre>Head</code>等方法。可以通过重写的方式来实现这些方法，以上例子重写了 <code v-pre>Get</code> 方法。</p>
+<p>2、beego 是一个 RESTful 的框架，请求默认是执行对应 <code v-pre>req.Method</code> 的方法。例如浏览器的是 <code v-pre>GET</code> 请求，那么默认就会执行 <code v-pre>MainController</code> 下的 <code v-pre>Get</code> 方法。（用户可以改变这个行为，通过注册自定义的函数名）。</p>
+<p>3、获取数据，赋值到 <code v-pre>this.Data</code> 中，这是一个用来存储输出数据的 map。</p>
+<p>4、渲染模板，<code v-pre>this.TplName</code> 就是需要渲染的模板，这里指定了 <code v-pre>index.tpl</code>，如果用户不设置该参数，那么默认会去到模板目录的 <code v-pre>Controller/&lt;方法名&gt;.tpl</code> 查找，例如上面的方法会去 <code v-pre>maincontroller/get.tpl</code>(文件、文件夹必须小写)。用户设置了模板之后系统会自动的调用 <code v-pre>Render</code> 函数（这个函数是在 beego.Controller 中实现的），所以无需用户自己来调用渲染。</p>
+<p>5、如果不使用模板可以直接输出：</p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">func</span> <span class="token punctuation">(</span>this <span class="token operator">*</span>MainController<span class="token punctuation">)</span> <span class="token function">Get</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        this<span class="token punctuation">.</span>Ctx<span class="token punctuation">.</span><span class="token function">WriteString</span><span class="token punctuation">(</span><span class="token string">"hello"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div>
+<h3 id="api-命令" tabindex="-1"><a class="header-anchor" href="#api-命令" aria-hidden="true">#</a> api 命令</h3>
+<p>上面的 <code v-pre>new</code> 命令是用来新建 Web 项目，不过很多用户使用 beego 来开发 API 应用。所以这个 <code v-pre>api</code> 命令就是用来创建 API 应用的：</p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code>bee api apiproject
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>这个项目的目录结构如下：</p>
 <div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>apiproject
 ├── conf
 │   └── app.conf
@@ -159,115 +212,137 @@ create main.go: /gopath/src/apiproject/main.go
 <p>我们在开发 Go 项目的时候最大的问题是经常需要自己手动去编译再运行，<code v-pre>bee run</code> 命令是监控 beego 的项目，通过 <a href="https://github.com/howeyc/fsnotify" target="_blank" rel="noopener noreferrer">fsnotify<ExternalLinkIcon/></a>监控文件系统。但是注意该命令必须在 <code v-pre>$GOPATH/src/appname</code> 下执行。 这样我们在开发过程中就可以实时的看到项目修改之后的效果：</p>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>bee run
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>我们打开浏览器就可以看到效果 <a href="http://localhost:8080/" target="_blank" rel="noopener noreferrer">http://localhost:8080/<ExternalLinkIcon/></a></p>
-<p><img src="http://sm.nsddd.top/smimage-20221120232356456.png" alt="image-20221120232356456"></p>
-<p>如果我们修改了 <code v-pre>Controller</code> 下面的 <code v-pre>default.go</code> 文件，我们就可以看到命令行输出：</p>
-<div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>13-11-25 10:11:20 [EVEN] "/gopath/src/myproject/controllers/default.go": DELETE|MODIFY
-13-11-25 10:11:20 [INFO] Start building...
-13-11-25 10:11:20 [SKIP] "/gopath/src/myproject/controllers/default.go": CREATE
-13-11-25 10:11:23 [SKIP] "/gopath/src/myproject/controllers/default.go": MODIFY
-13-11-25 10:11:23 [SUCC] Build was successful
-13-11-25 10:11:23 [INFO] Restarting myproject ...
-13-11-25 10:11:23 [INFO] ./myproject is running...
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>刷新浏览器我们看到新的修改内容已经输出。</p>
+<div class="custom-container warning"><p class="custom-container-title">bee run 做了什么</p>
+<ul>
+<li>
+<p>解析配置文件</p>
+<p>beego 会自动解析在 conf 目录下面的配置文件 <code v-pre>app.conf</code>，通过修改配置文件相关的属性，我们可以定义：开启的端口，是否开启 session，应用名称等信息。</p>
+</li>
+<li>
+<p>执行用户的hookfunc</p>
+<p>beego会执行用户注册的hookfunc，默认的已经存在了注册mime，用户可以通过函数<code v-pre>AddAPPStartHook</code>注册自己的启动函数。</p>
+</li>
+<li>
+<p>是否开启 session</p>
+<p>会根据上面配置文件的分析之后判断是否开启 session，如果开启的话就初始化全局的 session。</p>
+</li>
+<li>
+<p>是否编译模板</p>
+<p>beego 会在启动的时候根据配置把 views 目录下的所有模板进行预编译，然后存在 map 里面，这样可以有效的提高模板运行的效率，无需进行多次编译。</p>
+</li>
+<li>
+<p>是否开启文档功能</p>
+<p>根据EnableDocs配置判断是否开启内置的文档路由功能</p>
+</li>
+<li>
+<p>是否启动管理模块</p>
+<p>beego 目前做了一个很酷的模块，应用内监控模块，会在 8088 端口做一个内部监听，我们可以通过这个端口查询到 QPS、CPU、内存、GC、goroutine、thread 等统计信息。</p>
+</li>
+<li>
+<p>监听服务端口</p>
+<p>这是最后一步也就是我们看到的访问 8080 看到的网页端口，内部其实调用了 <code v-pre>ListenAndServe</code>，充分利用了 goroutine 的优势，一旦 run 起来之后，我们的服务就监听在两个端口了，一个服务端口 8080 作为对外服务，另一个 8088 端口实行对内监控。</p>
+</li>
+</ul>
+</div>
+<p><strong>其他热加载：</strong></p>
+<div class="custom-container tip"><p class="custom-container-title">提示</p>
+<p>同样也有 <code v-pre>air</code> 等热加载工具。</p>
+</div>
 <h3 id="pack-命令" tabindex="-1"><a class="header-anchor" href="#pack-命令" aria-hidden="true">#</a> pack 命令</h3>
 <p><code v-pre>pack</code> 目录用来发布应用的时候打包，会把项目打包成 zip 包，这样我们部署的时候直接把打包之后的项目上传，解压就可以部署了：</p>
 <div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>bee pack
-app path: /gopath/src/apiproject
-GOOS darwin GOARCH amd64
-build apiproject
-build success
-exclude prefix:
-exclude suffix: .go:.DS_Store:.tmp
-file write to `/gopath/src/apiproject/apiproject.tar.gz`
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>我们可以看到目录下有如下的压缩文件：</p>
-<div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>rwxr-xr-x  1 astaxie  staff  8995376 11 25 22:46 apiproject
--rw-r--r--  1 astaxie  staff  2240288 11 25 22:58 apiproject.tar.gz
-drwxr-xr-x  3 astaxie  staff      102 11 25 22:31 conf
-drwxr-xr-x  3 astaxie  staff      102 11 25 22:31 controllers
--rw-r--r--  1 astaxie  staff      509 11 25 22:31 main.go
-drwxr-xr-x  3 astaxie  staff      102 11 25 22:31 models
-drwxr-xr-x  3 astaxie  staff      102 11 25 22:31 tests
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="bale-命令" tabindex="-1"><a class="header-anchor" href="#bale-命令" aria-hidden="true">#</a> bale 命令</h3>
-<p>这个命令目前仅限内部使用，具体实现方案未完善，主要用来压缩所有的静态文件变成一个变量申明文件，全部编译到二进制文件里面，用户发布的时候携带静态文件，包括 js、css、img 和 views。最后在启动运行时进行非覆盖式的自解压。</p>
-<h3 id="version-命令" tabindex="-1"><a class="header-anchor" href="#version-命令" aria-hidden="true">#</a> version 命令</h3>
-<p>这个命令是动态获取 bee、beego 和 Go 的版本，这样一旦用户出现错误，可以通过该命令来查看当前的版本</p>
-<div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>$ bee version
-bee   :1.2.2
-beego :1.4.2
-Go    :go version go1.3.3 darwin/amd64
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="generate-命令" tabindex="-1"><a class="header-anchor" href="#generate-命令" aria-hidden="true">#</a> generate 命令</h3>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>我们可以看到目录下有如下的压缩文件：</p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>-a---          <span class="token number">2022</span>/11/21    <span class="token number">16</span>:56       <span class="token number">16893719</span> beego.tar.gz
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3 id="bale-命令" tabindex="-1"><a class="header-anchor" href="#bale-命令" aria-hidden="true">#</a> bale 命令</h3>
+<p>用来压缩所有的静态文件变成一个变量申明文件，全部编译到二进制文件里面，用户发布的时候携带静态文件，包括 js、css、img 和 views。最后在启动运行时进行非覆盖式的自解压。</p>
+<h3 id="generate-命令" tabindex="-1"><a class="header-anchor" href="#generate-命令" aria-hidden="true">#</a> generate 命令</h3>
 <p>这个命令是用来自动化的生成代码的，包含了从数据库一键生成 model，还包含了 scaffold 的，通过这个命令，让大家开发代码不再慢</p>
-<div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>bee generate scaffold [scaffoldname] [-fields=""] [-driver=mysql] [-conn="root:@tcp(127.0.0.1:3306)/test"]
-    The generate scaffold command will do a number of things for you.
-    -fields: a list of table fields. Format: field:type, ...
-    -driver: [mysql | postgres | sqlite], the default is mysql
-    -conn:   the connection string used by the driver, the default is root:@tcp(127.0.0.1:3306)/test
-    example: bee generate scaffold post -fields="title:string,body:text"
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>bee generate scaffold <span class="token punctuation">[</span>scaffoldname<span class="token punctuation">]</span> <span class="token punctuation">[</span>-fields<span class="token operator">=</span><span class="token string">""</span><span class="token punctuation">]</span> <span class="token punctuation">[</span>-driver<span class="token operator">=</span>mysql<span class="token punctuation">]</span> <span class="token punctuation">[</span>-conn<span class="token operator">=</span><span class="token string">"root:@tcp(127.0.0.1:3306)/test"</span><span class="token punctuation">]</span>
+    The generate scaffold <span class="token builtin class-name">command</span> will <span class="token keyword">do</span> a number of things <span class="token keyword">for</span> you.
+    -fields: a list of table fields. Format: field:type, <span class="token punctuation">..</span>.
+    -driver: <span class="token punctuation">[</span>mysql <span class="token operator">|</span> postgres <span class="token operator">|</span> sqlite<span class="token punctuation">]</span>, the default is mysql
+    -conn:   the connection string used by the driver, the default is root:@tcp<span class="token punctuation">(</span><span class="token number">127.0</span>.0.1:3306<span class="token punctuation">)</span>/test
+    example: bee generate scaffold post <span class="token parameter variable">-fields</span><span class="token operator">=</span><span class="token string">"title:string,body:text"</span>
 
-bee generate model [modelname] [-fields=""]
+bee generate model <span class="token punctuation">[</span>modelname<span class="token punctuation">]</span> <span class="token punctuation">[</span>-fields<span class="token operator">=</span><span class="token string">""</span><span class="token punctuation">]</span>
     generate RESTful model based on fields
-    -fields: a list of table fields. Format: field:type, ...
+    -fields: a list of table fields. Format: field:type, <span class="token punctuation">..</span>.
 
-bee generate controller [controllerfile]
+bee generate controller <span class="token punctuation">[</span>controllerfile<span class="token punctuation">]</span>
     generate RESTful controllers
 
-bee generate view [viewpath]
-    generate CRUD view in viewpath
+bee generate view <span class="token punctuation">[</span>viewpath<span class="token punctuation">]</span>
+    generate CRUD view <span class="token keyword">in</span> viewpath
 
-bee generate migration [migrationfile] [-fields=""]
-    generate migration file for making database schema update
-    -fields: a list of table fields. Format: field:type, ...
+bee generate migration <span class="token punctuation">[</span>migrationfile<span class="token punctuation">]</span> <span class="token punctuation">[</span>-fields<span class="token operator">=</span><span class="token string">""</span><span class="token punctuation">]</span>
+    generate migration <span class="token function">file</span> <span class="token keyword">for</span> making database schema update
+    -fields: a list of table fields. Format: field:type, <span class="token punctuation">..</span>.
 
 bee generate docs
-    generate swagger doc file
+    generate swagger doc <span class="token function">file</span>
 
-bee generate test [routerfile]
+bee generate <span class="token builtin class-name">test</span> <span class="token punctuation">[</span>routerfile<span class="token punctuation">]</span>
     generate testcase
 
-bee generate appcode [-tables=""] [-driver=mysql] [-conn="root:@tcp(127.0.0.1:3306)/test"] [-level=3]
+bee generate appcode <span class="token punctuation">[</span>-tables<span class="token operator">=</span><span class="token string">""</span><span class="token punctuation">]</span> <span class="token punctuation">[</span>-driver<span class="token operator">=</span>mysql<span class="token punctuation">]</span> <span class="token punctuation">[</span>-conn<span class="token operator">=</span><span class="token string">"root:@tcp(127.0.0.1:3306)/test"</span><span class="token punctuation">]</span> <span class="token punctuation">[</span>-level<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">]</span>
     generate appcode based on an existing database
-    -tables: a list of table names separated by ',', default is empty, indicating all tables
-    -driver: [mysql | postgres | sqlite], the default is mysql
+    -tables: a list of table names separated by <span class="token string">','</span>, default is empty, indicating all tables
+    -driver: <span class="token punctuation">[</span>mysql <span class="token operator">|</span> postgres <span class="token operator">|</span> sqlite<span class="token punctuation">]</span>, the default is mysql
     -conn:   the connection string used by the driver.
-             default for mysql:    root:@tcp(127.0.0.1:3306)/test
-             default for postgres: postgres://postgres:postgres@127.0.0.1:5432/postgres
-    -level:  [1 | 2 | 3], 1 = models; 2 = models,controllers; 3 = models,controllers,router
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="_2-2-8-migrate-命令" tabindex="-1"><a class="header-anchor" href="#_2-2-8-migrate-命令" aria-hidden="true">#</a> 2.2.8. migrate 命令</h3>
+             default <span class="token keyword">for</span> mysql:    root:@tcp<span class="token punctuation">(</span><span class="token number">127.0</span>.0.1:3306<span class="token punctuation">)</span>/test
+             default <span class="token keyword">for</span> postgres: postgres://postgres:postgres@127.0.0.1:5432/postgres
+    -level:  <span class="token punctuation">[</span><span class="token number">1</span> <span class="token operator">|</span> <span class="token number">2</span> <span class="token operator">|</span> <span class="token number">3</span><span class="token punctuation">]</span>, <span class="token number">1</span> <span class="token operator">=</span> models<span class="token punctuation">;</span> <span class="token number">2</span> <span class="token operator">=</span> models,controllers<span class="token punctuation">;</span> <span class="token number">3</span> <span class="token operator">=</span> models,controllers,router
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="migrate-命令" tabindex="-1"><a class="header-anchor" href="#migrate-命令" aria-hidden="true">#</a> migrate 命令</h3>
 <p>这个命令是应用的数据库迁移命令，主要是用来每次应用升级，降级的SQL管理。</p>
-<div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>bee migrate [-driver=mysql] [-conn="root:@tcp(127.0.0.1:3306)/test"]
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>bee migrate <span class="token punctuation">[</span>-driver<span class="token operator">=</span>mysql<span class="token punctuation">]</span> <span class="token punctuation">[</span>-conn<span class="token operator">=</span><span class="token string">"root:@tcp(127.0.0.1:3306)/test"</span><span class="token punctuation">]</span>
     run all outstanding migrations
-    -driver: [mysql | postgresql | sqlite], the default is mysql
-    -conn:   the connection string used by the driver, the default is root:@tcp(127.0.0.1:3306)/test
+    -driver: <span class="token punctuation">[</span>mysql <span class="token operator">|</span> postgresql <span class="token operator">|</span> sqlite<span class="token punctuation">]</span>, the default is mysql
+    -conn:   the connection string used by the driver, the default is root:@tcp<span class="token punctuation">(</span><span class="token number">127.0</span>.0.1:3306<span class="token punctuation">)</span>/test
 
-bee migrate rollback [-driver=mysql] [-conn="root:@tcp(127.0.0.1:3306)/test"]
+bee migrate rollback <span class="token punctuation">[</span>-driver<span class="token operator">=</span>mysql<span class="token punctuation">]</span> <span class="token punctuation">[</span>-conn<span class="token operator">=</span><span class="token string">"root:@tcp(127.0.0.1:3306)/test"</span><span class="token punctuation">]</span>
     rollback the last migration operation
-    -driver: [mysql | postgresql | sqlite], the default is mysql
-    -conn:   the connection string used by the driver, the default is root:@tcp(127.0.0.1:3306)/test
+    -driver: <span class="token punctuation">[</span>mysql <span class="token operator">|</span> postgresql <span class="token operator">|</span> sqlite<span class="token punctuation">]</span>, the default is mysql
+    -conn:   the connection string used by the driver, the default is root:@tcp<span class="token punctuation">(</span><span class="token number">127.0</span>.0.1:3306<span class="token punctuation">)</span>/test
 
-bee migrate reset [-driver=mysql] [-conn="root:@tcp(127.0.0.1:3306)/test"]
+bee migrate reset <span class="token punctuation">[</span>-driver<span class="token operator">=</span>mysql<span class="token punctuation">]</span> <span class="token punctuation">[</span>-conn<span class="token operator">=</span><span class="token string">"root:@tcp(127.0.0.1:3306)/test"</span><span class="token punctuation">]</span>
     rollback all migrations
-    -driver: [mysql | postgresql | sqlite], the default is mysql
-    -conn:   the connection string used by the driver, the default is root:@tcp(127.0.0.1:3306)/test
+    -driver: <span class="token punctuation">[</span>mysql <span class="token operator">|</span> postgresql <span class="token operator">|</span> sqlite<span class="token punctuation">]</span>, the default is mysql
+    -conn:   the connection string used by the driver, the default is root:@tcp<span class="token punctuation">(</span><span class="token number">127.0</span>.0.1:3306<span class="token punctuation">)</span>/test
 
-bee migrate refresh [-driver=mysql] [-conn="root:@tcp(127.0.0.1:3306)/test"]
+bee migrate refresh <span class="token punctuation">[</span>-driver<span class="token operator">=</span>mysql<span class="token punctuation">]</span> <span class="token punctuation">[</span>-conn<span class="token operator">=</span><span class="token string">"root:@tcp(127.0.0.1:3306)/test"</span><span class="token punctuation">]</span>
     rollback all migrations and run them all again
-    -driver: [mysql | postgresql | sqlite], the default is mysql
-    -conn:   the connection string used by the driver, the default is root:@tcp(127.0.0.1:3306)/test
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="_2-2-9-dockerize-命令" tabindex="-1"><a class="header-anchor" href="#_2-2-9-dockerize-命令" aria-hidden="true">#</a> 2.2.9. dockerize 命令</h3>
-<p>这个命令可以通过生成Dockerfile文件来实现docker化你的应用。</p>
-<p>例子:
-生成一个以1.6.4版本Go环境为基础镜像的Dockerfile,并暴露9000端口:</p>
-<div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>$ bee dockerize -image="library/golang:1.6.4" -expose=9000
-______
-| ___ \
-| |_/ /  ___   ___
-| ___ \ / _ \ / _ \
-| |_/ /|  __/|  __/
-\____/  \___| \___| v1.6.2
-2016/12/26 22:34:54 INFO     ▶ 0001 Generating Dockerfile...
-2016/12/26 22:34:54 SUCCESS  ▶ 0002 Dockerfile generated.
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>更多帮助信息可执行<code v-pre>bee help dockerize</code>.</p>
-<h2 id="_2-3-bee-工具配置文件" tabindex="-1"><a class="header-anchor" href="#_2-3-bee-工具配置文件" aria-hidden="true">#</a> 2.3. bee 工具配置文件</h2>
+    -driver: <span class="token punctuation">[</span>mysql <span class="token operator">|</span> postgresql <span class="token operator">|</span> sqlite<span class="token punctuation">]</span>, the default is mysql
+    -conn:   the connection string used by the driver, the default is root:@tcp<span class="token punctuation">(</span><span class="token number">127.0</span>.0.1:3306<span class="token punctuation">)</span>/test
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="dockerize-命令" tabindex="-1"><a class="header-anchor" href="#dockerize-命令" aria-hidden="true">#</a> dockerize 命令</h3>
+<p>这个命令可以通过生成<code v-pre>Dockerfile</code>文件来实现<code v-pre>docker</code>化你的应用。</p>
+<p><strong>例子:</strong></p>
+<p>生成一个以<code v-pre>1.9.2</code>版本Go环境为基础镜像的Dockerfile,并暴露9000端口:</p>
+<div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>bee dockerize -image="library/golang:1.9.2" -expose=8080
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>更多帮助信息可执行<code v-pre>bee help dockerize</code>.</p>
+<div class="custom-container tip"><p class="custom-container-title">打开 dockerfile 文件：</p>
+<div class="language-docker ext-docker line-numbers-mode"><pre v-pre class="language-docker"><code><span class="token instruction"><span class="token keyword">FROM</span> library/golang:1.9.2</span>
+
+<span class="token comment"># Godep for vendoring</span>
+<span class="token instruction"><span class="token keyword">RUN</span> go get github.com/tools/godep</span>
+
+<span class="token comment"># Recompile the standard library without CGO</span>
+<span class="token instruction"><span class="token keyword">RUN</span> CGO_ENABLED=0 go install -a std</span>
+
+<span class="token instruction"><span class="token keyword">ENV</span> APP_DIR <span class="token variable">$GOPATHD</span>:\文档\最近的\awesome-golang\docs\code\beego</span>
+<span class="token instruction"><span class="token keyword">RUN</span> mkdir -p <span class="token variable">$APP_DIR</span></span>
+
+<span class="token comment"># Set the entrypoint</span>
+<span class="token instruction"><span class="token keyword">ENTRYPOINT</span> (cd <span class="token variable">$APP_DIR</span> &amp;&amp; ./D:\文档\最近的\awesome-golang\docs\code\beego)</span>
+<span class="token instruction"><span class="token keyword">ADD</span> . <span class="token variable">$APP_DIR</span></span>
+
+<span class="token comment"># Compile the binary and statically link</span>
+<span class="token instruction"><span class="token keyword">RUN</span> cd <span class="token variable">$APP_DIR</span> &amp;&amp; CGO_ENABLED=0 godep go build -ldflags <span class="token string">'-d -w -s'</span></span>
+
+<span class="token instruction"><span class="token keyword">EXPOSE</span> 8080</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div>
+<h4 id="部署dockerfile" tabindex="-1"><a class="header-anchor" href="#部署dockerfile" aria-hidden="true">#</a> 部署dockerfile</h4>
+<div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>docker build -t mybeego:1.0 .
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h2 id="bee-工具配置文件" tabindex="-1"><a class="header-anchor" href="#bee-工具配置文件" aria-hidden="true">#</a> bee 工具配置文件</h2>
 <p>您可能已经注意到，在 bee 工具的源码目录下有一个 <code v-pre>bee.json</code> 文件，这个文件是针对 bee 工具的一些行为进行配置。该功能还未完全开发完成，不过其中的一些选项已经可以使用：</p>
 <ul>
 <li><code v-pre>&quot;version&quot;: 0</code>：配置文件版本，用于对比是否发生不兼容的配置格式版本。</li>

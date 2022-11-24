@@ -1350,6 +1350,3426 @@ export const searchIndex = [
     "extraFields": []
   },
   {
+    "title": "go语言基本语法和数据类型",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1. 🐧应用场景",
+        "slug": "_1-🐧应用场景",
+        "link": "#_1-🐧应用场景",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2.🗃️特点",
+        "slug": "_2-🗃️特点",
+        "link": "#_2-🗃️特点",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "3.⚒️使用工具",
+        "slug": "_3-⚒️使用工具",
+        "link": "#_3-⚒️使用工具",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "4.🔦环境搭建",
+        "slug": "_4-🔦环境搭建",
+        "link": "#_4-🔦环境搭建",
+        "children": [
+          {
+            "level": 3,
+            "title": "4.1 Windows下搭建go 开发环境 - 暗转和配置SDK",
+            "slug": "_4-1-windows下搭建go-开发环境-暗转和配置sdk",
+            "link": "#_4-1-windows下搭建go-开发环境-暗转和配置sdk",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "4.2 Linux下搭建go环境",
+            "slug": "_4-2-linux下搭建go环境",
+            "link": "#_4-2-linux下搭建go环境",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "ide：golang",
+        "slug": "ide-golang",
+        "link": "#ide-golang",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "5. 📘Go 语言的快速入门",
+        "slug": "_5-📘go-语言的快速入门",
+        "link": "#_5-📘go-语言的快速入门",
+        "children": [
+          {
+            "level": 3,
+            "title": "Go 语言结构",
+            "slug": "go-语言结构",
+            "link": "#go-语言结构",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "5.1Go Hello World 实例",
+            "slug": "_5-1go-hello-world-实例",
+            "link": "#_5-1go-hello-world-实例",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "5.3 执行代码",
+            "slug": "_5-3-执行代码",
+            "link": "#_5-3-执行代码",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "go语言转义字符（escape char)",
+            "slug": "go语言转义字符-escape-char",
+            "link": "#go语言转义字符-escape-char",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "go语言常见错误和解决方法",
+            "slug": "go语言常见错误和解决方法",
+            "link": "#go语言常见错误和解决方法",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "Go语言目录结构",
+        "slug": "go语言目录结构",
+        "link": "#go语言目录结构",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Go语言基本语法",
+        "slug": "go语言基本语法",
+        "link": "#go语言基本语法",
+        "children": [
+          {
+            "level": 3,
+            "title": "Go 标记",
+            "slug": "go-标记",
+            "link": "#go-标记",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "行分隔符",
+            "slug": "行分隔符",
+            "link": "#行分隔符",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "注释(comment)",
+            "slug": "注释-comment",
+            "link": "#注释-comment",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "标识符",
+            "slug": "标识符",
+            "link": "#标识符",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "字符串连接",
+            "slug": "字符串连接",
+            "link": "#字符串连接",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "关键字",
+            "slug": "关键字",
+            "link": "#关键字",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "go语言的空格",
+            "slug": "go语言的空格",
+            "link": "#go语言的空格",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "格式化字符串",
+            "slug": "格式化字符串",
+            "link": "#格式化字符串",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "golang 标准库api文档",
+            "slug": "golang-标准库api文档",
+            "link": "#golang-标准库api文档",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "DOS命令",
+            "slug": "dos命令",
+            "link": "#dos命令",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "语言的数据类型",
+        "slug": "语言的数据类型",
+        "link": "#语言的数据类型",
+        "children": [
+          {
+            "level": 3,
+            "title": "数据类型",
+            "slug": "数据类型",
+            "link": "#数据类型",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "浮点型",
+            "slug": "浮点型",
+            "link": "#浮点型",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "其他数字类型",
+            "slug": "其他数字类型",
+            "link": "#其他数字类型",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "变量",
+        "slug": "变量",
+        "link": "#变量",
+        "children": [
+          {
+            "level": 3,
+            "title": "变量声明",
+            "slug": "变量声明",
+            "link": "#变量声明",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "多变量声明",
+            "slug": "多变量声明",
+            "link": "#多变量声明",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "实例",
+            "slug": "实例",
+            "link": "#实例",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "值类型和引用类型",
+            "slug": "值类型和引用类型",
+            "link": "#值类型和引用类型",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "简短形式，使用 := 赋值操作符",
+        "slug": "简短形式-使用-赋值操作符",
+        "link": "#简短形式-使用-赋值操作符",
+        "children": [
+          {
+            "level": 3,
+            "title": "注意事项",
+            "slug": "注意事项",
+            "link": "#注意事项",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/markdown/1.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Go语言结构体和方法",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1. 结构体",
+        "slug": "_1-结构体",
+        "link": "#_1-结构体",
+        "children": [
+          {
+            "level": 3,
+            "title": "访问结构体成员",
+            "slug": "访问结构体成员",
+            "link": "#访问结构体成员",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "结构体在内存中的布局",
+            "slug": "结构体在内存中的布局",
+            "link": "#结构体在内存中的布局",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "声明结构体",
+            "slug": "声明结构体",
+            "link": "#声明结构体",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "字段/属性",
+            "slug": "字段-属性",
+            "link": "#字段-属性",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "创建结构体变量和访问结构体字段",
+            "slug": "创建结构体变量和访问结构体字段",
+            "link": "#创建结构体变量和访问结构体字段",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "struct类型的内存分配机制",
+            "slug": "struct类型的内存分配机制",
+            "link": "#struct类型的内存分配机制",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "结构体转换",
+            "slug": "结构体转换",
+            "link": "#结构体转换",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "struct -- tag",
+            "slug": "struct-tag",
+            "link": "#struct-tag",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "2. 方法",
+        "slug": "_2-方法",
+        "link": "#_2-方法",
+        "children": [
+          {
+            "level": 3,
+            "title": "方法声明与调用",
+            "slug": "方法声明与调用",
+            "link": "#方法声明与调用",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "方法的调用和传参机制",
+            "slug": "方法的调用和传参机制",
+            "link": "#方法的调用和传参机制",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "方法声明（定义）",
+            "slug": "方法声明-定义",
+            "link": "#方法声明-定义",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "3. 🤺方法和函数的区别",
+        "slug": "_3-🤺方法和函数的区别",
+        "link": "#_3-🤺方法和函数的区别",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/markdown/10.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "结构体、工厂模式、继承封装",
+    "headers": [
+      {
+        "level": 2,
+        "title": "面对对象编程",
+        "slug": "面对对象编程",
+        "link": "#面对对象编程",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "结构体",
+        "slug": "结构体",
+        "link": "#结构体",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "指定变量值",
+        "slug": "指定变量值",
+        "link": "#指定变量值",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "结构体方法",
+        "slug": "结构体方法",
+        "link": "#结构体方法",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "工厂模式",
+        "slug": "工厂模式",
+        "link": "#工厂模式",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "抽象",
+        "slug": "抽象",
+        "link": "#抽象",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "面对对象特征",
+        "slug": "面对对象特征",
+        "link": "#面对对象特征",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "封装",
+        "slug": "封装",
+        "link": "#封装",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "继承",
+        "slug": "继承",
+        "link": "#继承",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "继承的深入讨论",
+        "slug": "继承的深入讨论",
+        "link": "#继承的深入讨论",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/markdown/11.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "接口实现多态",
+    "headers": [
+      {
+        "level": 2,
+        "title": "接口（interface)",
+        "slug": "接口-interface",
+        "link": "#接口-interface",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "接口快速入门",
+        "slug": "接口快速入门",
+        "link": "#接口快速入门",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "接口概念",
+        "slug": "接口概念",
+        "link": "#接口概念",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "接口实践",
+        "slug": "接口实践",
+        "link": "#接口实践",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "接口实现对Hero结构体切片的排序",
+        "slug": "接口实现对hero结构体切片的排序",
+        "link": "#接口实现对hero结构体切片的排序",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "接口VS继承",
+        "slug": "接口vs继承",
+        "link": "#接口vs继承",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/markdown/12.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "接口和多态、类型断言",
+    "headers": [
+      {
+        "level": 2,
+        "title": "接口体现多态",
+        "slug": "接口体现多态",
+        "link": "#接口体现多态",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "结构体接收者和指针接收者实现接口区别",
+        "slug": "结构体接收者和指针接收者实现接口区别",
+        "link": "#结构体接收者和指针接收者实现接口区别",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "类型断言 – 接口判断类型",
+        "slug": "类型断言-–-接口判断类型",
+        "link": "#类型断言-–-接口判断类型",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "类型断言：如何检测和转换接口变量的类型",
+        "slug": "类型断言-如何检测和转换接口变量的类型",
+        "link": "#类型断言-如何检测和转换接口变量的类型",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "类型判断：type-switch",
+        "slug": "类型判断-type-switch",
+        "link": "#类型判断-type-switch",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "测试一个值是否实现了某个接口",
+        "slug": "测试一个值是否实现了某个接口",
+        "link": "#测试一个值是否实现了某个接口",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "接口嵌套",
+        "slug": "接口嵌套",
+        "link": "#接口嵌套",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/markdown/13.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "家庭账目记账软件项目",
+    "headers": [
+      {
+        "level": 2,
+        "title": "案例",
+        "slug": "案例",
+        "link": "#案例",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/markdown/14.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "文件的一系列操作",
+    "headers": [
+      {
+        "level": 2,
+        "title": "文件操作速查",
+        "slug": "文件操作速查",
+        "link": "#文件操作速查",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "文件",
+        "slug": "文件",
+        "link": "#文件",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "OPenFile函数",
+        "slug": "openfile函数",
+        "link": "#openfile函数",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "读取文件内容显示在终端方法",
+        "slug": "读取文件内容显示在终端方法",
+        "link": "#读取文件内容显示在终端方法",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "写文件的操作",
+        "slug": "写文件的操作",
+        "link": "#写文件的操作",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Constants",
+        "slug": "constants",
+        "link": "#constants",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "golang判断文件或者文件夹是否存在",
+        "slug": "golang判断文件或者文件夹是否存在",
+        "link": "#golang判断文件或者文件夹是否存在",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "拷贝（复制）文件",
+        "slug": "拷贝-复制-文件",
+        "link": "#拷贝-复制-文件",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "统计英文、数字、空格和其他字符数量",
+        "slug": "统计英文、数字、空格和其他字符数量",
+        "link": "#统计英文、数字、空格和其他字符数量",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "python中的文件操作",
+        "slug": "python中的文件操作",
+        "link": "#python中的文件操作",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/markdown/15.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "JSON序列化",
+    "headers": [
+      {
+        "level": 2,
+        "title": "JSON",
+        "slug": "json",
+        "link": "#json",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "交换数据",
+        "slug": "交换数据",
+        "link": "#交换数据",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "发送数据",
+        "slug": "发送数据",
+        "link": "#发送数据",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "接收数据",
+        "slug": "接收数据",
+        "link": "#接收数据",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "存储数据",
+        "slug": "存储数据",
+        "link": "#存储数据",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "总结",
+        "slug": "总结",
+        "link": "#总结",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "JSON数据在线解析",
+        "slug": "json数据在线解析",
+        "link": "#json数据在线解析",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "JSON序列化",
+        "slug": "json序列化-1",
+        "link": "#json序列化-1",
+        "children": [
+          {
+            "level": 3,
+            "title": "结构体序列化",
+            "slug": "结构体序列化",
+            "link": "#结构体序列化",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "将map进行序列化",
+            "slug": "将map进行序列化",
+            "link": "#将map进行序列化",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "对切片序列化",
+            "slug": "对切片序列化",
+            "link": "#对切片序列化",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "普通类型序列化",
+            "slug": "普通类型序列化",
+            "link": "#普通类型序列化",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "序列化代码",
+            "slug": "序列化代码",
+            "link": "#序列化代码",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "json的反序列化",
+        "slug": "json的反序列化",
+        "link": "#json的反序列化",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/markdown/16.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Go 测试（模糊、基准、单元测试）",
+    "headers": [
+      {
+        "level": 2,
+        "title": "单元测试",
+        "slug": "单元测试",
+        "link": "#单元测试",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "什么是可靠的性能基准测试环境",
+        "slug": "什么是可靠的性能基准测试环境",
+        "link": "#什么是可靠的性能基准测试环境",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "测试用例的编写规则",
+        "slug": "测试用例的编写规则",
+        "link": "#测试用例的编写规则",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "go test 模式",
+        "slug": "go-test-模式",
+        "link": "#go-test-模式",
+        "children": [
+          {
+            "level": 3,
+            "title": "其他的一些参数",
+            "slug": "其他的一些参数",
+            "link": "#其他的一些参数",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "测试用例",
+        "slug": "测试用例",
+        "link": "#测试用例",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/markdown/17.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "goroutine(协程)以及一系列操作",
+    "headers": [
+      {
+        "level": 2,
+        "title": "协程和管道",
+        "slug": "协程和管道",
+        "link": "#协程和管道",
+        "children": [
+          {
+            "level": 3,
+            "title": "进程",
+            "slug": "进程",
+            "link": "#进程",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Go语言协程和Go主线程",
+            "slug": "go语言协程和go主线程",
+            "link": "#go语言协程和go主线程",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "sync.WaitGroup实现主线程等待协程执行完毕",
+            "slug": "sync-waitgroup实现主线程等待协程执行完毕",
+            "link": "#sync-waitgroup实现主线程等待协程执行完毕",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "goroutine的调度模型",
+            "slug": "goroutine的调度模型",
+            "link": "#goroutine的调度模型",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "设置CPU",
+            "slug": "设置cpu",
+            "link": "#设置cpu",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "channle(管道)",
+        "slug": "channle-管道",
+        "link": "#channle-管道",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/markdown/18.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "channel(管道)以及互斥锁",
+    "headers": [
+      {
+        "level": 2,
+        "title": "channel(管道)",
+        "slug": "channel-管道",
+        "link": "#channel-管道",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "chan底层分析",
+        "slug": "chan底层分析",
+        "link": "#chan底层分析",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "channel关闭",
+        "slug": "channel关闭",
+        "link": "#channel关闭",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "channel的遍历",
+        "slug": "channel的遍历",
+        "link": "#channel的遍历",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "goroutine 和 channel结合",
+        "slug": "goroutine-和-channel结合",
+        "link": "#goroutine-和-channel结合",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "统计素数",
+        "slug": "统计素数",
+        "link": "#统计素数",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "channel使用细节",
+        "slug": "channel使用细节",
+        "link": "#channel使用细节",
+        "children": [
+          {
+            "level": 3,
+            "title": "单向管道",
+            "slug": "单向管道",
+            "link": "#单向管道",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "select多路复用",
+            "slug": "select多路复用",
+            "link": "#select多路复用",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "协程的panic处理",
+        "slug": "协程的panic处理",
+        "link": "#协程的panic处理",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "互斥锁",
+        "slug": "互斥锁",
+        "link": "#互斥锁",
+        "children": [
+          {
+            "level": 3,
+            "title": "互斥锁",
+            "slug": "互斥锁-1",
+            "link": "#互斥锁-1",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/markdown/19.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "go语言常量、基本数据类型、字符串转化",
+    "headers": [
+      {
+        "level": 2,
+        "title": "Go 语言常量",
+        "slug": "go-语言常量",
+        "link": "#go-语言常量",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "iota",
+        "slug": "iota",
+        "link": "#iota",
+        "children": [
+          {
+            "level": 3,
+            "title": "iota 用法",
+            "slug": "iota-用法",
+            "link": "#iota-用法",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "怎么看变量的数据类型",
+            "slug": "怎么看变量的数据类型",
+            "link": "#怎么看变量的数据类型",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "使用包查看字节数：",
+            "slug": "使用包查看字节数",
+            "link": "#使用包查看字节数",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "小数类型",
+            "slug": "小数类型",
+            "link": "#小数类型",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "字符类型",
+            "slug": "字符类型",
+            "link": "#字符类型",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "布尔类型",
+            "slug": "布尔类型",
+            "link": "#布尔类型",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "字符串类型",
+            "slug": "字符串类型",
+            "link": "#字符串类型",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "基本数据类型的相互转换",
+        "slug": "基本数据类型的相互转换",
+        "link": "#基本数据类型的相互转换",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "基本数据类型转string",
+        "slug": "基本数据类型转string",
+        "link": "#基本数据类型转string",
+        "children": [
+          {
+            "level": 3,
+            "title": "方法一：格式化字符串",
+            "slug": "方法一-格式化字符串",
+            "link": "#方法一-格式化字符串",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "方法二：使用strconv包的函数",
+            "slug": "方法二-使用strconv包的函数",
+            "link": "#方法二-使用strconv包的函数",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "string类型转化为基本数据类型",
+        "slug": "string类型转化为基本数据类型",
+        "link": "#string类型转化为基本数据类型",
+        "children": [
+          {
+            "level": 3,
+            "title": "使用strconv包的函数",
+            "slug": "使用strconv包的函数",
+            "link": "#使用strconv包的函数",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "补充：Go语言的fmt包（参考官网文档）",
+        "slug": "补充-go语言的fmt包-参考官网文档",
+        "link": "#补充-go语言的fmt包-参考官网文档",
+        "children": [
+          {
+            "level": 3,
+            "title": "package fmt",
+            "slug": "package-fmt",
+            "link": "#package-fmt",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/markdown/2.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "TCP网络编程",
+    "headers": [
+      {
+        "level": 2,
+        "title": "网络编程",
+        "slug": "网络编程",
+        "link": "#网络编程",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "端口（port)",
+        "slug": "端口-port",
+        "link": "#端口-port",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "处理流程",
+        "slug": "处理流程",
+        "link": "#处理流程",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "net",
+        "slug": "net",
+        "link": "#net",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "net.ParseIP()",
+        "slug": "net-parseip",
+        "link": "#net-parseip",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/markdown/20.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "redis基础",
+    "headers": [
+      {
+        "level": 2,
+        "title": "redis介绍",
+        "slug": "redis介绍",
+        "link": "#redis介绍",
+        "children": [
+          {
+            "level": 3,
+            "title": "redis的安装和使用",
+            "slug": "redis的安装和使用",
+            "link": "#redis的安装和使用",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "Ubuntu apt 命令安装",
+        "slug": "ubuntu-apt-命令安装",
+        "link": "#ubuntu-apt-命令安装",
+        "children": [
+          {
+            "level": 3,
+            "title": "启动 Redis",
+            "slug": "启动-redis",
+            "link": "#启动-redis",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "查看 redis 是否启动？",
+            "slug": "查看-redis-是否启动",
+            "link": "#查看-redis-是否启动",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "Redis 配置",
+        "slug": "redis-配置",
+        "link": "#redis-配置",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "参数说明",
+        "slug": "参数说明",
+        "link": "#参数说明",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Redis 数据类型",
+        "slug": "redis-数据类型",
+        "link": "#redis-数据类型",
+        "children": [
+          {
+            "level": 3,
+            "title": "String（字符串）",
+            "slug": "string-字符串",
+            "link": "#string-字符串",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Hash（哈希）",
+            "slug": "hash-哈希",
+            "link": "#hash-哈希",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "List（列表）",
+            "slug": "list-列表",
+            "link": "#list-列表",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Set（集合）",
+            "slug": "set-集合",
+            "link": "#set-集合",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "zset(sorted set：有序集合)",
+        "slug": "zset-sorted-set-有序集合",
+        "link": "#zset-sorted-set-有序集合",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Redis 命令",
+        "slug": "redis-命令",
+        "link": "#redis-命令",
+        "children": [
+          {
+            "level": 3,
+            "title": "在远程服务上执行命令",
+            "slug": "在远程服务上执行命令",
+            "link": "#在远程服务上执行命令",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/markdown/21.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Redis进阶",
+    "headers": [
+      {
+        "level": 2,
+        "title": "Redis 哈希(Hash)",
+        "slug": "redis-哈希-hash",
+        "link": "#redis-哈希-hash",
+        "children": [
+          {
+            "level": 3,
+            "title": "实例",
+            "slug": "实例",
+            "link": "#实例",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "Redis hash 命令",
+        "slug": "redis-hash-命令",
+        "link": "#redis-hash-命令",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "hash使用",
+        "slug": "hash使用",
+        "link": "#hash使用",
+        "children": [
+          {
+            "level": 3,
+            "title": "列表",
+            "slug": "列表",
+            "link": "#列表",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "set（集合）",
+            "slug": "set-集合",
+            "link": "#set-集合",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/markdown/22.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Go语言操作redis",
+    "headers": [
+      {
+        "level": 2,
+        "title": "Go语言操作redis",
+        "slug": "go语言操作redis-1",
+        "link": "#go语言操作redis-1",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "连接本地服务器",
+        "slug": "连接本地服务器",
+        "link": "#连接本地服务器",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "传统连接redis:",
+        "slug": "传统连接redis",
+        "link": "#传统连接redis",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "连接池",
+        "slug": "连接池",
+        "link": "#连接池",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "连接池核心代码",
+        "slug": "连接池核心代码",
+        "link": "#连接池核心代码",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/markdown/23.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "稀疏数组sparsearray",
+    "headers": [
+      {
+        "level": 2,
+        "title": "实际需求",
+        "slug": "实际需求",
+        "link": "#实际需求",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "分析问题",
+        "slug": "分析问题",
+        "link": "#分析问题",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "基本介绍",
+        "slug": "基本介绍",
+        "link": "#基本介绍",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "应用实例",
+        "slug": "应用实例",
+        "link": "#应用实例",
+        "children": [
+          {
+            "level": 3,
+            "title": "稀疏数组与二维数组互转思路",
+            "slug": "稀疏数组与二维数组互转思路",
+            "link": "#稀疏数组与二维数组互转思路",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "代码实现（Go)",
+            "slug": "代码实现-go",
+            "link": "#代码实现-go",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "代码实现（java)",
+            "slug": "代码实现-java",
+            "link": "#代码实现-java",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/markdown/24.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "队列",
+    "headers": [
+      {
+        "level": 2,
+        "title": "队列的使用",
+        "slug": "队列的使用",
+        "link": "#队列的使用",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "环形队列",
+        "slug": "环形队列",
+        "link": "#环形队列",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/markdown/25.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "go语言链表",
+    "headers": [
+      {
+        "level": 2,
+        "title": "链表",
+        "slug": "链表",
+        "link": "#链表",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "单链表完整代码",
+        "slug": "单链表完整代码",
+        "link": "#单链表完整代码",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/markdown/26.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Go语言数据结构双向链表和循环链表",
+    "headers": [
+      {
+        "level": 2,
+        "title": "链表",
+        "slug": "链表",
+        "link": "#链表",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "全代码",
+        "slug": "全代码",
+        "link": "#全代码",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Go语言环形链表",
+        "slug": "go语言环形链表",
+        "link": "#go语言环形链表",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "全代码",
+        "slug": "全代码-1",
+        "link": "#全代码-1",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/markdown/27.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "约瑟夫问题",
+    "headers": [
+      {
+        "level": 2,
+        "title": "约瑟夫问题",
+        "slug": "约瑟夫问题-1",
+        "link": "#约瑟夫问题-1",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/markdown/28.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "查找算法",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/markdown/29.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "指针、运算符和位运算",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1.指针",
+        "slug": "_1-指针",
+        "link": "#_1-指针",
+        "children": [
+          {
+            "level": 3,
+            "title": "1.1基本介绍",
+            "slug": "_1-1基本介绍",
+            "link": "#_1-1基本介绍",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "1.2 指针变量",
+            "slug": "_1-2-指针变量",
+            "link": "#_1-2-指针变量",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "1.3 指针的使用流程",
+            "slug": "_1-3-指针的使用流程",
+            "link": "#_1-3-指针的使用流程",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "1.4 Go 空指针",
+            "slug": "_1-4-go-空指针",
+            "link": "#_1-4-go-空指针",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "1.5指针变量的修改",
+            "slug": "_1-5指针变量的修改",
+            "link": "#_1-5指针变量的修改",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "2. 值类型和引用类型",
+        "slug": "_2-值类型和引用类型",
+        "link": "#_2-值类型和引用类型",
+        "children": [
+          {
+            "level": 3,
+            "title": "2.1 区别/使用：",
+            "slug": "_2-1-区别-使用",
+            "link": "#_2-1-区别-使用",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "3. 标识符的命名规范",
+        "slug": "_3-标识符的命名规范",
+        "link": "#_3-标识符的命名规范",
+        "children": [
+          {
+            "level": 3,
+            "title": "3.1 标识符的命名规范",
+            "slug": "_3-1-标识符的命名规范",
+            "link": "#_3-1-标识符的命名规范",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.2 标识符命名注意事项",
+            "slug": "_3-2-标识符命名注意事项",
+            "link": "#_3-2-标识符命名注意事项",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "4. Go算数运算符",
+        "slug": "_4-go算数运算符",
+        "link": "#_4-go算数运算符",
+        "children": [
+          {
+            "level": 3,
+            "title": "细节：",
+            "slug": "细节",
+            "link": "#细节",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "5. Go关系运算符",
+        "slug": "_5-go关系运算符",
+        "link": "#_5-go关系运算符",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "6. 逻辑运算符",
+        "slug": "_6-逻辑运算符",
+        "link": "#_6-逻辑运算符",
+        "children": [
+          {
+            "level": 3,
+            "title": "6.1 实例",
+            "slug": "_6-1-实例",
+            "link": "#_6-1-实例",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "8. 其他运算符",
+        "slug": "_8-其他运算符",
+        "link": "#_8-其他运算符",
+        "children": [
+          {
+            "level": 3,
+            "title": "8.2 Golang三元运算符的实现使用if判断",
+            "slug": "_8-2-golang三元运算符的实现使用if判断",
+            "link": "#_8-2-golang三元运算符的实现使用if判断",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "8. 键盘输入",
+        "slug": "_8-键盘输入",
+        "link": "#_8-键盘输入",
+        "children": [
+          {
+            "level": 3,
+            "title": "8.1步骤：",
+            "slug": "_8-1步骤",
+            "link": "#_8-1步骤",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "9. 进制",
+        "slug": "_9-进制",
+        "link": "#_9-进制",
+        "children": [
+          {
+            "level": 3,
+            "title": "9.1 基本的输出方式",
+            "slug": "_9-1-基本的输出方式",
+            "link": "#_9-1-基本的输出方式",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "9.2 补充python中进制的转换",
+            "slug": "_9-2-补充python中进制的转换",
+            "link": "#_9-2-补充python中进制的转换",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "10 .位运算",
+        "slug": "_10-位运算",
+        "link": "#_10-位运算",
+        "children": [
+          {
+            "level": 3,
+            "title": "10.1 实例",
+            "slug": "_10-1-实例",
+            "link": "#_10-1-实例",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "10.2 原码、补码、反码",
+            "slug": "_10-2-原码、补码、反码",
+            "link": "#_10-2-原码、补码、反码",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "10.3 golang 中的位运算",
+            "slug": "_10-3-golang-中的位运算",
+            "link": "#_10-3-golang-中的位运算",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "11. 流程控制",
+        "slug": "_11-流程控制",
+        "link": "#_11-流程控制",
+        "children": [
+          {
+            "level": 3,
+            "title": "11.1 Go分支控制if -else",
+            "slug": "_11-1-go分支控制if-else",
+            "link": "#_11-1-go分支控制if-else",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "11.2 补充：python分支控制if -else",
+            "slug": "_11-2-补充-python分支控制if-else",
+            "link": "#_11-2-补充-python分支控制if-else",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/markdown/3.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "排序算法",
+    "headers": [
+      {
+        "level": 2,
+        "title": "选择排序",
+        "slug": "选择排序",
+        "link": "#选择排序",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "插入排序",
+        "slug": "插入排序",
+        "link": "#插入排序",
+        "children": [
+          {
+            "level": 3,
+            "title": "1. 算法步骤",
+            "slug": "_1-算法步骤",
+            "link": "#_1-算法步骤",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2. 动图演示",
+            "slug": "_2-动图演示",
+            "link": "#_2-动图演示",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "快速排序",
+        "slug": "快速排序",
+        "link": "#快速排序",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/markdown/30.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "go语言的重要语法",
+    "headers": [
+      {
+        "level": 2,
+        "title": "Go语言的switch语句",
+        "slug": "go语言的switch语句",
+        "link": "#go语言的switch语句",
+        "children": [
+          {
+            "level": 3,
+            "title": "语法",
+            "slug": "语法",
+            "link": "#语法",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "fallthrough（穿透）",
+            "slug": "fallthrough-穿透",
+            "link": "#fallthrough-穿透",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Type Switch",
+            "slug": "type-switch",
+            "link": "#type-switch",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "switch和if比较",
+        "slug": "switch和if比较",
+        "link": "#switch和if比较",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "for 循环",
+        "slug": "for-循环",
+        "link": "#for-循环",
+        "children": [
+          {
+            "level": 3,
+            "title": "语法",
+            "slug": "语法-1",
+            "link": "#语法-1",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "for循环的执行顺序",
+            "slug": "for循环的执行顺序",
+            "link": "#for循环的执行顺序",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "for语句执行过程",
+            "slug": "for语句执行过程",
+            "link": "#for语句执行过程",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "无限循环:",
+            "slug": "无限循环",
+            "link": "#无限循环",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "For-each range 循环",
+            "slug": "for-each-range-循环",
+            "link": "#for-each-range-循环",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "注意",
+            "slug": "注意",
+            "link": "#注意",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "while 和 do...while的实现",
+        "slug": "while-和-do-while的实现",
+        "link": "#while-和-do-while的实现",
+        "children": [
+          {
+            "level": 3,
+            "title": "for循环实现while",
+            "slug": "for循环实现while",
+            "link": "#for循环实现while",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "for循环实现do while",
+            "slug": "for循环实现do-while",
+            "link": "#for循环实现do-while",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "嵌套循环",
+        "slug": "嵌套循环",
+        "link": "#嵌套循环",
+        "children": [
+          {
+            "level": 3,
+            "title": "语法",
+            "slug": "语法-2",
+            "link": "#语法-2",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "break",
+        "slug": "break",
+        "link": "#break",
+        "children": [
+          {
+            "level": 3,
+            "title": "break语法",
+            "slug": "break语法",
+            "link": "#break语法",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "Go 语言 continue 语句",
+        "slug": "go-语言-continue-语句",
+        "link": "#go-语言-continue-语句",
+        "children": [
+          {
+            "level": 3,
+            "title": "continue语法",
+            "slug": "continue语法",
+            "link": "#continue语法",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "Go 语言 goto 语句",
+        "slug": "go-语言-goto-语句",
+        "link": "#go-语言-goto-语句",
+        "children": [
+          {
+            "level": 3,
+            "title": "语法",
+            "slug": "语法-3",
+            "link": "#语法-3",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "跳转控制语句return",
+        "slug": "跳转控制语句return",
+        "link": "#跳转控制语句return",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "补：python中循环",
+        "slug": "补-python中循环",
+        "link": "#补-python中循环",
+        "children": [
+          {
+            "level": 3,
+            "title": "基本的循环方法   -- 使用range",
+            "slug": "基本的循环方法-使用range",
+            "link": "#基本的循环方法-使用range",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "字符串遍历和Go较智能",
+            "slug": "字符串遍历和go较智能",
+            "link": "#字符串遍历和go较智能",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "while",
+            "slug": "while",
+            "link": "#while",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/markdown/4.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "函数、init函数和包",
+    "headers": [
+      {
+        "level": 2,
+        "title": "函数",
+        "slug": "函数",
+        "link": "#函数",
+        "children": [
+          {
+            "level": 3,
+            "title": "函数定义",
+            "slug": "函数定义",
+            "link": "#函数定义",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "return语句",
+            "slug": "return语句",
+            "link": "#return语句",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "函数调用",
+            "slug": "函数调用",
+            "link": "#函数调用",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "函数返回多个值",
+            "slug": "函数返回多个值",
+            "link": "#函数返回多个值",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "递归调用",
+            "slug": "递归调用",
+            "link": "#递归调用",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "递归总结:",
+            "slug": "递归总结",
+            "link": "#递归总结",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "函数调用的底层分析",
+            "slug": "函数调用的底层分析",
+            "link": "#函数调用的底层分析",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "函数 -- 包",
+        "slug": "函数-包",
+        "link": "#函数-包",
+        "children": [
+          {
+            "level": 3,
+            "title": "包示意图",
+            "slug": "包示意图",
+            "link": "#包示意图",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "包的使用",
+            "slug": "包的使用",
+            "link": "#包的使用",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "函数值传递",
+        "slug": "函数值传递",
+        "link": "#函数值传递",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "函数引用传递",
+        "slug": "函数引用传递",
+        "link": "#函数引用传递",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "在Golang语言中不支持函数的重载",
+        "slug": "在golang语言中不支持函数的重载",
+        "link": "#在golang语言中不支持函数的重载",
+        "children": [
+          {
+            "level": 3,
+            "title": "函数作为实参",
+            "slug": "函数作为实参",
+            "link": "#函数作为实参",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Go语言可以自定义数据类型",
+            "slug": "go语言可以自定义数据类型",
+            "link": "#go语言可以自定义数据类型",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "go语言支持对返回值命名",
+            "slug": "go语言支持对返回值命名",
+            "link": "#go语言支持对返回值命名",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "GO 支持可变参数",
+            "slug": "go-支持可变参数",
+            "link": "#go-支持可变参数",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "init函数",
+        "slug": "init函数",
+        "link": "#init函数",
+        "children": [
+          {
+            "level": 3,
+            "title": "init细节",
+            "slug": "init细节",
+            "link": "#init细节",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "补充:python函数",
+        "slug": "补充-python函数",
+        "link": "#补充-python函数",
+        "children": [
+          {
+            "level": 3,
+            "title": "定义函数",
+            "slug": "定义函数",
+            "link": "#定义函数",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "不带参数值的 return 语句返回 None",
+            "slug": "不带参数值的-return-语句返回-none",
+            "link": "#不带参数值的-return-语句返回-none",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "python的变量使用",
+            "slug": "python的变量使用",
+            "link": "#python的变量使用",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/markdown/5.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "函数、闭包，错误处理",
+    "headers": [
+      {
+        "level": 2,
+        "title": "匿名函数",
+        "slug": "匿名函数",
+        "link": "#匿名函数",
+        "children": [
+          {
+            "level": 3,
+            "title": "一次性匿名函数",
+            "slug": "一次性匿名函数",
+            "link": "#一次性匿名函数",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "给变量调用",
+            "slug": "给变量调用",
+            "link": "#给变量调用",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "全局匿名函数",
+            "slug": "全局匿名函数",
+            "link": "#全局匿名函数",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "匿名总结实战",
+            "slug": "匿名总结实战",
+            "link": "#匿名总结实战",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "闭包",
+        "slug": "闭包",
+        "link": "#闭包",
+        "children": [
+          {
+            "level": 3,
+            "title": "定义一个闭包理解",
+            "slug": "定义一个闭包理解",
+            "link": "#定义一个闭包理解",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "闭包的说明",
+            "slug": "闭包的说明",
+            "link": "#闭包的说明",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "闭包的花样玩法",
+        "slug": "闭包的花样玩法",
+        "link": "#闭包的花样玩法",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "for & 匿名函数（闭包？）",
+        "slug": "for-匿名函数-闭包",
+        "link": "#for-匿名函数-闭包",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "函数defer",
+        "slug": "函数defer",
+        "link": "#函数defer",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "字符串常用的系统函数",
+        "slug": "字符串常用的系统函数",
+        "link": "#字符串常用的系统函数",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "日期和时间相关函数",
+        "slug": "日期和时间相关函数",
+        "link": "#日期和时间相关函数",
+        "children": [
+          {
+            "level": 3,
+            "title": "时间常量",
+            "slug": "时间常量",
+            "link": "#时间常量",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "结合sleep来使用时间常量",
+            "slug": "结合sleep来使用时间常量",
+            "link": "#结合sleep来使用时间常量",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "unix时间戳和unixnano时间戳",
+            "slug": "unix时间戳和unixnano时间戳",
+            "link": "#unix时间戳和unixnano时间戳",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "用法",
+            "slug": "用法",
+            "link": "#用法",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "统计代码执行时间",
+            "slug": "统计代码执行时间",
+            "link": "#统计代码执行时间",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "Golang内置函数",
+        "slug": "golang内置函数",
+        "link": "#golang内置函数",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Golang错误处理机制",
+        "slug": "golang错误处理机制",
+        "link": "#golang错误处理机制",
+        "children": [
+          {
+            "level": 3,
+            "title": "自定义错误",
+            "slug": "自定义错误",
+            "link": "#自定义错误",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/markdown/6.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "数组和slice切片&遍历",
+    "headers": [
+      {
+        "level": 2,
+        "title": "数组",
+        "slug": "数组",
+        "link": "#数组",
+        "children": [
+          {
+            "level": 3,
+            "title": "声明数组",
+            "slug": "声明数组",
+            "link": "#声明数组",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "初始化数组和内存布局",
+            "slug": "初始化数组和内存布局",
+            "link": "#初始化数组和内存布局",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "访问数组元素",
+            "slug": "访问数组元素",
+            "link": "#访问数组元素",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "数组的遍历",
+        "slug": "数组的遍历",
+        "link": "#数组的遍历",
+        "children": [
+          {
+            "level": 3,
+            "title": "常规遍历",
+            "slug": "常规遍历",
+            "link": "#常规遍历",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "for - range遍历",
+        "slug": "for-range遍历",
+        "link": "#for-range遍历",
+        "children": [
+          {
+            "level": 3,
+            "title": "和python一样的用法",
+            "slug": "和python一样的用法",
+            "link": "#和python一样的用法",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "🐻数组的引用传递",
+            "slug": "🐻数组的引用传递",
+            "link": "#🐻数组的引用传递",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "长度也是数组类型一部分",
+            "slug": "长度也是数组类型一部分",
+            "link": "#长度也是数组类型一部分",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "生成随机数并且打印",
+            "slug": "生成随机数并且打印",
+            "link": "#生成随机数并且打印",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "slice切片",
+        "slug": "slice切片",
+        "link": "#slice切片",
+        "children": [
+          {
+            "level": 3,
+            "title": "❤️💕 切片在内存中形式",
+            "slug": "❤️💕-切片在内存中形式",
+            "link": "#❤️💕-切片在内存中形式",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "切片的使用",
+        "slug": "切片的使用",
+        "link": "#切片的使用",
+        "children": [
+          {
+            "level": 3,
+            "title": "方式一",
+            "slug": "方式一",
+            "link": "#方式一",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "方式二",
+            "slug": "方式二",
+            "link": "#方式二",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "方式三",
+            "slug": "方式三",
+            "link": "#方式三",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "切片初始化",
+        "slug": "切片初始化",
+        "link": "#切片初始化",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "切片的遍历",
+        "slug": "切片的遍历",
+        "link": "#切片的遍历",
+        "children": [
+          {
+            "level": 3,
+            "title": "常规遍历",
+            "slug": "常规遍历-1",
+            "link": "#常规遍历-1",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "for --range遍历",
+            "slug": "for-range遍历-1",
+            "link": "#for-range遍历-1",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "注意",
+            "slug": "注意",
+            "link": "#注意",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "len() 和 cap() 函数",
+        "slug": "len-和-cap-函数",
+        "link": "#len-和-cap-函数",
+        "children": [
+          {
+            "level": 3,
+            "title": "空(nil)切片",
+            "slug": "空-nil-切片",
+            "link": "#空-nil-切片",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "切片截取",
+            "slug": "切片截取",
+            "link": "#切片截取",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "append() 和 copy() 函数",
+        "slug": "append-和-copy-函数",
+        "link": "#append-和-copy-函数",
+        "children": [
+          {
+            "level": 3,
+            "title": "append动态追加",
+            "slug": "append动态追加",
+            "link": "#append动态追加",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "copy内置函数拷贝",
+            "slug": "copy内置函数拷贝",
+            "link": "#copy内置函数拷贝",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "参考python List append()",
+            "slug": "参考python-list-append",
+            "link": "#参考python-list-append",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "string和slice",
+        "slug": "string和slice",
+        "link": "#string和slice",
+        "children": [
+          {
+            "level": 3,
+            "title": "字符串修改的方法",
+            "slug": "字符串修改的方法",
+            "link": "#字符串修改的方法",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Go语言中字符串修改",
+            "slug": "go语言中字符串修改",
+            "link": "#go语言中字符串修改",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "python中字符串修改",
+        "slug": "python中字符串修改",
+        "link": "#python中字符串修改",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/markdown/7.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "golang排序和查找",
+    "headers": [
+      {
+        "level": 2,
+        "title": "前言",
+        "slug": "前言",
+        "link": "#前言",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "排序",
+        "slug": "排序",
+        "link": "#排序",
+        "children": [
+          {
+            "level": 3,
+            "title": "排序的分类",
+            "slug": "排序的分类",
+            "link": "#排序的分类",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "交换排序",
+            "slug": "交换排序",
+            "link": "#交换排序",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "查找",
+        "slug": "查找",
+        "link": "#查找",
+        "children": [
+          {
+            "level": 3,
+            "title": "python实例",
+            "slug": "python实例",
+            "link": "#python实例",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Python 二分查找",
+            "slug": "python-二分查找",
+            "link": "#python-二分查找",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Golang的二分查找",
+            "slug": "golang的二分查找",
+            "link": "#golang的二分查找",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "sort包排序",
+        "slug": "sort包排序",
+        "link": "#sort包排序",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/markdown/8.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Golang的多维数组和map集合",
+    "headers": [
+      {
+        "level": 2,
+        "title": "二维数组",
+        "slug": "二维数组",
+        "link": "#二维数组",
+        "children": [
+          {
+            "level": 3,
+            "title": "二维数组在内存中的布局",
+            "slug": "二维数组在内存中的布局",
+            "link": "#二维数组在内存中的布局",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "初始化二维数组",
+            "slug": "初始化二维数组",
+            "link": "#初始化二维数组",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "遍历二维数组",
+            "slug": "遍历二维数组",
+            "link": "#遍历二维数组",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "创建各个维度元素数量不一致的多维数组",
+            "slug": "创建各个维度元素数量不一致的多维数组",
+            "link": "#创建各个维度元素数量不一致的多维数组",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "Go语言map（集合）",
+        "slug": "go语言map-集合",
+        "link": "#go语言map-集合",
+        "children": [
+          {
+            "level": 3,
+            "title": "定义 Map",
+            "slug": "定义-map",
+            "link": "#定义-map",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "map的增删改查操作",
+            "slug": "map的增删改查操作",
+            "link": "#map的增删改查操作",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "map遍历",
+            "slug": "map遍历",
+            "link": "#map遍历",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "map长度",
+            "slug": "map长度",
+            "link": "#map长度",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "map切片",
+            "slug": "map切片",
+            "link": "#map切片",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "map排序",
+            "slug": "map排序",
+            "link": "#map排序",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "map的使用细节",
+            "slug": "map的使用细节",
+            "link": "#map的使用细节",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "封装排序的方法",
+        "slug": "封装排序的方法",
+        "link": "#封装排序的方法",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/markdown/9.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "chan环形队列 先进先出",
+    "headers": [
+      {
+        "level": 2,
+        "title": "1.1 环形缓冲区结构",
+        "slug": "_1-1-环形缓冲区结构",
+        "link": "#_1-1-环形缓冲区结构",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "1.2 环形缓冲区一种读写实现机制",
+        "slug": "_1-2-环形缓冲区一种读写实现机制",
+        "link": "#_1-2-环形缓冲区一种读写实现机制",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "2 chan内部数据结构",
+        "slug": "_2-chan内部数据结构",
+        "link": "#_2-chan内部数据结构",
+        "children": [
+          {
+            "level": 3,
+            "title": "2.1 chan的数据结构",
+            "slug": "_2-1-chan的数据结构",
+            "link": "#_2-1-chan的数据结构",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "2.2 有缓冲区和无缓冲区chan的区别",
+            "slug": "_2-2-有缓冲区和无缓冲区chan的区别",
+            "link": "#_2-2-有缓冲区和无缓冲区chan的区别",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "3 关键源码分析",
+        "slug": "_3-关键源码分析",
+        "link": "#_3-关键源码分析",
+        "children": [
+          {
+            "level": 3,
+            "title": "3.1 chan数据结构源码",
+            "slug": "_3-1-chan数据结构源码",
+            "link": "#_3-1-chan数据结构源码",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.2 sudog数据结构源码",
+            "slug": "_3-2-sudog数据结构源码",
+            "link": "#_3-2-sudog数据结构源码",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.3 chan的构造过程",
+            "slug": "_3-3-chan的构造过程",
+            "link": "#_3-3-chan的构造过程",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "3.4 无缓冲收发",
+            "slug": "_3-4-无缓冲收发",
+            "link": "#_3-4-无缓冲收发",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/markdown/chan%E5%BA%95%E5%B1%82%E5%88%86%E6%9E%90.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "0x03 geth源码结构",
+    "headers": [],
+    "path": "/markdown/eth.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Go语言批量处理文件",
+    "headers": [
+      {
+        "level": 2,
+        "title": "实现基本的批量创建文件和输入模板",
+        "slug": "实现基本的批量创建文件和输入模板",
+        "link": "#实现基本的批量创建文件和输入模板",
+        "children": []
+      }
+    ],
+    "path": "/markdown/file.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Go语言精度丢失问题",
+    "headers": [
+      {
+        "level": 2,
+        "title": "问题描述",
+        "slug": "问题描述",
+        "link": "#问题描述",
+        "children": [
+          {
+            "level": 3,
+            "title": "为什么不直接使用 float64？",
+            "slug": "为什么不直接使用-float64",
+            "link": "#为什么不直接使用-float64",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "为什么不直接使用 big.Rat？",
+            "slug": "为什么不直接使用-big-rat",
+            "link": "#为什么不直接使用-big-rat",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "出现原因总结",
+            "slug": "出现原因总结",
+            "link": "#出现原因总结",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "解决方法",
+        "slug": "解决方法",
+        "link": "#解决方法",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "完美解决",
+        "slug": "完美解决",
+        "link": "#完美解决",
+        "children": []
+      }
+    ],
+    "path": "/markdown/gofloat.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "什么是 plan9 汇编",
+    "headers": [
+      {
+        "level": 2,
+        "title": "前言",
+        "slug": "前言",
+        "link": "#前言",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "汇编角度看函数调用及返回过程",
+        "slug": "汇编角度看函数调用及返回过程",
+        "link": "#汇编角度看函数调用及返回过程",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "汇编角度看 slice",
+        "slug": "汇编角度看-slice",
+        "link": "#汇编角度看-slice",
+        "children": []
+      }
+    ],
+    "path": "/markdown/Go%E6%B1%87%E7%BC%96.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "九型人格",
+    "headers": [
+      {
+        "level": 2,
+        "title": "F. 了解自己",
+        "slug": "f-了解自己",
+        "link": "#f-了解自己",
+        "children": [
+          {
+            "level": 3,
+            "title": "性格的特征",
+            "slug": "性格的特征",
+            "link": "#性格的特征",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "人性五大需求",
+            "slug": "人性五大需求",
+            "link": "#人性五大需求",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "九型人格",
+            "slug": "九型人格-1",
+            "link": "#九型人格-1",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "1. 追求完美的完美型",
+        "slug": "_1-追求完美的完美型",
+        "link": "#_1-追求完美的完美型",
+        "children": [
+          {
+            "level": 3,
+            "title": "特征：力求最好",
+            "slug": "特征-力求最好",
+            "link": "#特征-力求最好",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "社交",
+            "slug": "社交",
+            "link": "#社交",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "状态",
+            "slug": "状态",
+            "link": "#状态",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "2. 热心的给予型",
+        "slug": "_2-热心的给予型",
+        "link": "#_2-热心的给予型",
+        "children": [
+          {
+            "level": 3,
+            "title": "特质：追求服侍",
+            "slug": "特质-追求服侍",
+            "link": "#特质-追求服侍",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "状态",
+            "slug": "状态-1",
+            "link": "#状态-1",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "3. 追名逐利的实干型",
+        "slug": "_3-追名逐利的实干型",
+        "link": "#_3-追名逐利的实干型",
+        "children": [
+          {
+            "level": 3,
+            "title": "特质：追求成果",
+            "slug": "特质-追求成果",
+            "link": "#特质-追求成果",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "4. 想象力丰富的浪漫型",
+        "slug": "_4-想象力丰富的浪漫型",
+        "link": "#_4-想象力丰富的浪漫型",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "5. 冷静客观的观察型",
+        "slug": "_5-冷静客观的观察型",
+        "link": "#_5-冷静客观的观察型",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "6. 谨慎严谨的怀疑型",
+        "slug": "_6-谨慎严谨的怀疑型",
+        "link": "#_6-谨慎严谨的怀疑型",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "7. 及时行乐的享受型",
+        "slug": "_7-及时行乐的享受型",
+        "link": "#_7-及时行乐的享受型",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "8. 号令天下的领导型",
+        "slug": "_8-号令天下的领导型",
+        "link": "#_8-号令天下的领导型",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "9. 纵横的调停型",
+        "slug": "_9-纵横的调停型",
+        "link": "#_9-纵横的调停型",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "E. 人格升华的整合方向",
+        "slug": "e-人格升华的整合方向",
+        "link": "#e-人格升华的整合方向",
+        "children": []
+      }
+    ],
+    "path": "/markdown/%E4%B9%9D%E5%9E%8B%E4%BA%BA%E6%A0%BC.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Go语言反射(Json)",
+    "headers": [
+      {
+        "level": 2,
+        "title": "反射",
+        "slug": "反射",
+        "link": "#反射",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "使用refilect.TypeOf()获取任意值的类型对象",
+        "slug": "使用refilect-typeof-获取任意值的类型对象",
+        "link": "#使用refilect-typeof-获取任意值的类型对象",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "反射的基本介绍",
+        "slug": "反射的基本介绍",
+        "link": "#反射的基本介绍",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "反射重要概念❤️",
+        "slug": "反射重要概念❤️",
+        "link": "#反射重要概念❤️",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "反射入门案列",
+        "slug": "反射入门案列",
+        "link": "#反射入门案列",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "反射注意事项",
+        "slug": "反射注意事项",
+        "link": "#反射注意事项",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "反射最佳案例",
+        "slug": "反射最佳案例",
+        "link": "#反射最佳案例",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "结构体反射相关的方法",
+        "slug": "结构体反射相关的方法",
+        "link": "#结构体反射相关的方法",
+        "children": []
+      }
+    ],
+    "path": "/markdown/%E5%8F%8D%E5%B0%84.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "并发处理",
+    "headers": [
+      {
+        "level": 2,
+        "title": "并发处理",
+        "slug": "并发处理-1",
+        "link": "#并发处理-1",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "并发和并行关系",
+        "slug": "并发和并行关系",
+        "link": "#并发和并行关系",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "程序的顺序执行",
+        "slug": "程序的顺序执行",
+        "link": "#程序的顺序执行",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "进程的状态",
+        "slug": "进程的状态",
+        "link": "#进程的状态",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "线程的状态",
+        "slug": "线程的状态",
+        "link": "#线程的状态",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "线程与进程的区别可以归纳为以下4点：",
+        "slug": "线程与进程的区别可以归纳为以下4点",
+        "link": "#线程与进程的区别可以归纳为以下4点",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "进程之间的相互制约关系",
+        "slug": "进程之间的相互制约关系",
+        "link": "#进程之间的相互制约关系",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "进程互斥概念",
+        "slug": "进程互斥概念",
+        "link": "#进程互斥概念",
+        "children": []
+      }
+    ],
+    "path": "/markdown/%E5%B9%B6%E5%8F%91.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "MIT 6.824 DistributedSystem~",
     "headers": [
       {
@@ -2553,7 +5973,7 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "第20节",
+    "title": "第20节 Golang云原生部署",
     "headers": [
       {
         "level": 3,
@@ -2567,6 +5987,42 @@ export const searchIndex = [
         "title": "Go语言100篇进阶",
         "slug": "go语言100篇进阶",
         "link": "#go语言100篇进阶",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "开始",
+        "slug": "开始",
+        "link": "#开始",
+        "children": [
+          {
+            "level": 3,
+            "title": "dockerize 命令",
+            "slug": "dockerize-命令",
+            "link": "#dockerize-命令",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "方式二：测试项目",
+        "slug": "方式二-测试项目",
+        "link": "#方式二-测试项目",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "推送镜像",
+        "slug": "推送镜像",
+        "link": "#推送镜像",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "定义 k8s 应用程序载体 Pod",
+        "slug": "定义-k8s-应用程序载体-pod",
+        "link": "#定义-k8s-应用程序载体-pod",
         "children": []
       },
       {
@@ -7965,6 +11421,13 @@ export const searchIndex = [
           },
           {
             "level": 3,
+            "title": "controllers",
+            "slug": "controllers",
+            "link": "#controllers",
+            "children": []
+          },
+          {
+            "level": 3,
             "title": "api 命令",
             "slug": "api-命令",
             "link": "#api-命令",
@@ -7993,13 +11456,6 @@ export const searchIndex = [
           },
           {
             "level": 3,
-            "title": "version 命令",
-            "slug": "version-命令",
-            "link": "#version-命令",
-            "children": []
-          },
-          {
-            "level": 3,
             "title": "generate 命令",
             "slug": "generate-命令",
             "link": "#generate-命令",
@@ -8007,25 +11463,25 @@ export const searchIndex = [
           },
           {
             "level": 3,
-            "title": "2.2.8. migrate 命令",
-            "slug": "_2-2-8-migrate-命令",
-            "link": "#_2-2-8-migrate-命令",
+            "title": "migrate 命令",
+            "slug": "migrate-命令",
+            "link": "#migrate-命令",
             "children": []
           },
           {
             "level": 3,
-            "title": "2.2.9. dockerize 命令",
-            "slug": "_2-2-9-dockerize-命令",
-            "link": "#_2-2-9-dockerize-命令",
+            "title": "dockerize 命令",
+            "slug": "dockerize-命令",
+            "link": "#dockerize-命令",
             "children": []
           }
         ]
       },
       {
         "level": 2,
-        "title": "2.3. bee 工具配置文件",
-        "slug": "_2-3-bee-工具配置文件",
-        "link": "#_2-3-bee-工具配置文件",
+        "title": "bee 工具配置文件",
+        "slug": "bee-工具配置文件",
+        "link": "#bee-工具配置文件",
         "children": []
       },
       {
@@ -8041,13 +11497,27 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "1. 新建项目",
+    "title": "流程梳理",
     "headers": [
       {
         "level": 2,
-        "title": "2.1. 运行项目",
-        "slug": "_2-1-运行项目",
-        "link": "#_2-1-运行项目",
+        "title": "创建项目",
+        "slug": "创建项目",
+        "link": "#创建项目",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "运行项目",
+        "slug": "运行项目",
+        "link": "#运行项目",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "go mod",
+        "slug": "go-mod",
+        "link": "#go-mod",
         "children": []
       },
       {
@@ -8063,8 +11533,15 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "1. 路由设置",
+    "title": "beego路由设置",
     "headers": [
+      {
+        "level": 2,
+        "title": "项目路由设置",
+        "slug": "项目路由设置",
+        "link": "#项目路由设置",
+        "children": []
+      },
       {
         "level": 2,
         "title": "END 链接",
@@ -10422,3426 +13899,6 @@ export const searchIndex = [
       }
     ],
     "path": "/mit-6-824/MIT6-824/9.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "go语言基本语法和数据类型",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1. 🐧应用场景",
-        "slug": "_1-🐧应用场景",
-        "link": "#_1-🐧应用场景",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2.🗃️特点",
-        "slug": "_2-🗃️特点",
-        "link": "#_2-🗃️特点",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "3.⚒️使用工具",
-        "slug": "_3-⚒️使用工具",
-        "link": "#_3-⚒️使用工具",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "4.🔦环境搭建",
-        "slug": "_4-🔦环境搭建",
-        "link": "#_4-🔦环境搭建",
-        "children": [
-          {
-            "level": 3,
-            "title": "4.1 Windows下搭建go 开发环境 - 暗转和配置SDK",
-            "slug": "_4-1-windows下搭建go-开发环境-暗转和配置sdk",
-            "link": "#_4-1-windows下搭建go-开发环境-暗转和配置sdk",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "4.2 Linux下搭建go环境",
-            "slug": "_4-2-linux下搭建go环境",
-            "link": "#_4-2-linux下搭建go环境",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "ide：golang",
-        "slug": "ide-golang",
-        "link": "#ide-golang",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "5. 📘Go 语言的快速入门",
-        "slug": "_5-📘go-语言的快速入门",
-        "link": "#_5-📘go-语言的快速入门",
-        "children": [
-          {
-            "level": 3,
-            "title": "Go 语言结构",
-            "slug": "go-语言结构",
-            "link": "#go-语言结构",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "5.1Go Hello World 实例",
-            "slug": "_5-1go-hello-world-实例",
-            "link": "#_5-1go-hello-world-实例",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "5.3 执行代码",
-            "slug": "_5-3-执行代码",
-            "link": "#_5-3-执行代码",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "go语言转义字符（escape char)",
-            "slug": "go语言转义字符-escape-char",
-            "link": "#go语言转义字符-escape-char",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "go语言常见错误和解决方法",
-            "slug": "go语言常见错误和解决方法",
-            "link": "#go语言常见错误和解决方法",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "Go语言目录结构",
-        "slug": "go语言目录结构",
-        "link": "#go语言目录结构",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Go语言基本语法",
-        "slug": "go语言基本语法",
-        "link": "#go语言基本语法",
-        "children": [
-          {
-            "level": 3,
-            "title": "Go 标记",
-            "slug": "go-标记",
-            "link": "#go-标记",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "行分隔符",
-            "slug": "行分隔符",
-            "link": "#行分隔符",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "注释(comment)",
-            "slug": "注释-comment",
-            "link": "#注释-comment",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "标识符",
-            "slug": "标识符",
-            "link": "#标识符",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "字符串连接",
-            "slug": "字符串连接",
-            "link": "#字符串连接",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "关键字",
-            "slug": "关键字",
-            "link": "#关键字",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "go语言的空格",
-            "slug": "go语言的空格",
-            "link": "#go语言的空格",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "格式化字符串",
-            "slug": "格式化字符串",
-            "link": "#格式化字符串",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "golang 标准库api文档",
-            "slug": "golang-标准库api文档",
-            "link": "#golang-标准库api文档",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "DOS命令",
-            "slug": "dos命令",
-            "link": "#dos命令",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "语言的数据类型",
-        "slug": "语言的数据类型",
-        "link": "#语言的数据类型",
-        "children": [
-          {
-            "level": 3,
-            "title": "数据类型",
-            "slug": "数据类型",
-            "link": "#数据类型",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "浮点型",
-            "slug": "浮点型",
-            "link": "#浮点型",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "其他数字类型",
-            "slug": "其他数字类型",
-            "link": "#其他数字类型",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "变量",
-        "slug": "变量",
-        "link": "#变量",
-        "children": [
-          {
-            "level": 3,
-            "title": "变量声明",
-            "slug": "变量声明",
-            "link": "#变量声明",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "多变量声明",
-            "slug": "多变量声明",
-            "link": "#多变量声明",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "实例",
-            "slug": "实例",
-            "link": "#实例",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "值类型和引用类型",
-            "slug": "值类型和引用类型",
-            "link": "#值类型和引用类型",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "简短形式，使用 := 赋值操作符",
-        "slug": "简短形式-使用-赋值操作符",
-        "link": "#简短形式-使用-赋值操作符",
-        "children": [
-          {
-            "level": 3,
-            "title": "注意事项",
-            "slug": "注意事项",
-            "link": "#注意事项",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/markdown/1.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Go语言结构体和方法",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1. 结构体",
-        "slug": "_1-结构体",
-        "link": "#_1-结构体",
-        "children": [
-          {
-            "level": 3,
-            "title": "访问结构体成员",
-            "slug": "访问结构体成员",
-            "link": "#访问结构体成员",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "结构体在内存中的布局",
-            "slug": "结构体在内存中的布局",
-            "link": "#结构体在内存中的布局",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "声明结构体",
-            "slug": "声明结构体",
-            "link": "#声明结构体",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "字段/属性",
-            "slug": "字段-属性",
-            "link": "#字段-属性",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "创建结构体变量和访问结构体字段",
-            "slug": "创建结构体变量和访问结构体字段",
-            "link": "#创建结构体变量和访问结构体字段",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "struct类型的内存分配机制",
-            "slug": "struct类型的内存分配机制",
-            "link": "#struct类型的内存分配机制",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "结构体转换",
-            "slug": "结构体转换",
-            "link": "#结构体转换",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "struct -- tag",
-            "slug": "struct-tag",
-            "link": "#struct-tag",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "2. 方法",
-        "slug": "_2-方法",
-        "link": "#_2-方法",
-        "children": [
-          {
-            "level": 3,
-            "title": "方法声明与调用",
-            "slug": "方法声明与调用",
-            "link": "#方法声明与调用",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "方法的调用和传参机制",
-            "slug": "方法的调用和传参机制",
-            "link": "#方法的调用和传参机制",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "方法声明（定义）",
-            "slug": "方法声明-定义",
-            "link": "#方法声明-定义",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "3. 🤺方法和函数的区别",
-        "slug": "_3-🤺方法和函数的区别",
-        "link": "#_3-🤺方法和函数的区别",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/markdown/10.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "结构体、工厂模式、继承封装",
-    "headers": [
-      {
-        "level": 2,
-        "title": "面对对象编程",
-        "slug": "面对对象编程",
-        "link": "#面对对象编程",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "结构体",
-        "slug": "结构体",
-        "link": "#结构体",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "指定变量值",
-        "slug": "指定变量值",
-        "link": "#指定变量值",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "结构体方法",
-        "slug": "结构体方法",
-        "link": "#结构体方法",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "工厂模式",
-        "slug": "工厂模式",
-        "link": "#工厂模式",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "抽象",
-        "slug": "抽象",
-        "link": "#抽象",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "面对对象特征",
-        "slug": "面对对象特征",
-        "link": "#面对对象特征",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "封装",
-        "slug": "封装",
-        "link": "#封装",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "继承",
-        "slug": "继承",
-        "link": "#继承",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "继承的深入讨论",
-        "slug": "继承的深入讨论",
-        "link": "#继承的深入讨论",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/markdown/11.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "接口实现多态",
-    "headers": [
-      {
-        "level": 2,
-        "title": "接口（interface)",
-        "slug": "接口-interface",
-        "link": "#接口-interface",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "接口快速入门",
-        "slug": "接口快速入门",
-        "link": "#接口快速入门",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "接口概念",
-        "slug": "接口概念",
-        "link": "#接口概念",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "接口实践",
-        "slug": "接口实践",
-        "link": "#接口实践",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "接口实现对Hero结构体切片的排序",
-        "slug": "接口实现对hero结构体切片的排序",
-        "link": "#接口实现对hero结构体切片的排序",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "接口VS继承",
-        "slug": "接口vs继承",
-        "link": "#接口vs继承",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/markdown/12.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "接口和多态、类型断言",
-    "headers": [
-      {
-        "level": 2,
-        "title": "接口体现多态",
-        "slug": "接口体现多态",
-        "link": "#接口体现多态",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "结构体接收者和指针接收者实现接口区别",
-        "slug": "结构体接收者和指针接收者实现接口区别",
-        "link": "#结构体接收者和指针接收者实现接口区别",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "类型断言 – 接口判断类型",
-        "slug": "类型断言-–-接口判断类型",
-        "link": "#类型断言-–-接口判断类型",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "类型断言：如何检测和转换接口变量的类型",
-        "slug": "类型断言-如何检测和转换接口变量的类型",
-        "link": "#类型断言-如何检测和转换接口变量的类型",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "类型判断：type-switch",
-        "slug": "类型判断-type-switch",
-        "link": "#类型判断-type-switch",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "测试一个值是否实现了某个接口",
-        "slug": "测试一个值是否实现了某个接口",
-        "link": "#测试一个值是否实现了某个接口",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "接口嵌套",
-        "slug": "接口嵌套",
-        "link": "#接口嵌套",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/markdown/13.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "家庭账目记账软件项目",
-    "headers": [
-      {
-        "level": 2,
-        "title": "案例",
-        "slug": "案例",
-        "link": "#案例",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/markdown/14.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "文件的一系列操作",
-    "headers": [
-      {
-        "level": 2,
-        "title": "文件操作速查",
-        "slug": "文件操作速查",
-        "link": "#文件操作速查",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "文件",
-        "slug": "文件",
-        "link": "#文件",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "OPenFile函数",
-        "slug": "openfile函数",
-        "link": "#openfile函数",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "读取文件内容显示在终端方法",
-        "slug": "读取文件内容显示在终端方法",
-        "link": "#读取文件内容显示在终端方法",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "写文件的操作",
-        "slug": "写文件的操作",
-        "link": "#写文件的操作",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Constants",
-        "slug": "constants",
-        "link": "#constants",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "golang判断文件或者文件夹是否存在",
-        "slug": "golang判断文件或者文件夹是否存在",
-        "link": "#golang判断文件或者文件夹是否存在",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "拷贝（复制）文件",
-        "slug": "拷贝-复制-文件",
-        "link": "#拷贝-复制-文件",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "统计英文、数字、空格和其他字符数量",
-        "slug": "统计英文、数字、空格和其他字符数量",
-        "link": "#统计英文、数字、空格和其他字符数量",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "python中的文件操作",
-        "slug": "python中的文件操作",
-        "link": "#python中的文件操作",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/markdown/15.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "JSON序列化",
-    "headers": [
-      {
-        "level": 2,
-        "title": "JSON",
-        "slug": "json",
-        "link": "#json",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "交换数据",
-        "slug": "交换数据",
-        "link": "#交换数据",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "发送数据",
-        "slug": "发送数据",
-        "link": "#发送数据",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "接收数据",
-        "slug": "接收数据",
-        "link": "#接收数据",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "存储数据",
-        "slug": "存储数据",
-        "link": "#存储数据",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "总结",
-        "slug": "总结",
-        "link": "#总结",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "JSON数据在线解析",
-        "slug": "json数据在线解析",
-        "link": "#json数据在线解析",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "JSON序列化",
-        "slug": "json序列化-1",
-        "link": "#json序列化-1",
-        "children": [
-          {
-            "level": 3,
-            "title": "结构体序列化",
-            "slug": "结构体序列化",
-            "link": "#结构体序列化",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "将map进行序列化",
-            "slug": "将map进行序列化",
-            "link": "#将map进行序列化",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "对切片序列化",
-            "slug": "对切片序列化",
-            "link": "#对切片序列化",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "普通类型序列化",
-            "slug": "普通类型序列化",
-            "link": "#普通类型序列化",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "序列化代码",
-            "slug": "序列化代码",
-            "link": "#序列化代码",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "json的反序列化",
-        "slug": "json的反序列化",
-        "link": "#json的反序列化",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/markdown/16.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Go 测试（模糊、基准、单元测试）",
-    "headers": [
-      {
-        "level": 2,
-        "title": "单元测试",
-        "slug": "单元测试",
-        "link": "#单元测试",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "什么是可靠的性能基准测试环境",
-        "slug": "什么是可靠的性能基准测试环境",
-        "link": "#什么是可靠的性能基准测试环境",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "测试用例的编写规则",
-        "slug": "测试用例的编写规则",
-        "link": "#测试用例的编写规则",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "go test 模式",
-        "slug": "go-test-模式",
-        "link": "#go-test-模式",
-        "children": [
-          {
-            "level": 3,
-            "title": "其他的一些参数",
-            "slug": "其他的一些参数",
-            "link": "#其他的一些参数",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "测试用例",
-        "slug": "测试用例",
-        "link": "#测试用例",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/markdown/17.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "goroutine(协程)以及一系列操作",
-    "headers": [
-      {
-        "level": 2,
-        "title": "协程和管道",
-        "slug": "协程和管道",
-        "link": "#协程和管道",
-        "children": [
-          {
-            "level": 3,
-            "title": "进程",
-            "slug": "进程",
-            "link": "#进程",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Go语言协程和Go主线程",
-            "slug": "go语言协程和go主线程",
-            "link": "#go语言协程和go主线程",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "sync.WaitGroup实现主线程等待协程执行完毕",
-            "slug": "sync-waitgroup实现主线程等待协程执行完毕",
-            "link": "#sync-waitgroup实现主线程等待协程执行完毕",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "goroutine的调度模型",
-            "slug": "goroutine的调度模型",
-            "link": "#goroutine的调度模型",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "设置CPU",
-            "slug": "设置cpu",
-            "link": "#设置cpu",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "channle(管道)",
-        "slug": "channle-管道",
-        "link": "#channle-管道",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/markdown/18.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "channel(管道)以及互斥锁",
-    "headers": [
-      {
-        "level": 2,
-        "title": "channel(管道)",
-        "slug": "channel-管道",
-        "link": "#channel-管道",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "chan底层分析",
-        "slug": "chan底层分析",
-        "link": "#chan底层分析",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "channel关闭",
-        "slug": "channel关闭",
-        "link": "#channel关闭",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "channel的遍历",
-        "slug": "channel的遍历",
-        "link": "#channel的遍历",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "goroutine 和 channel结合",
-        "slug": "goroutine-和-channel结合",
-        "link": "#goroutine-和-channel结合",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "统计素数",
-        "slug": "统计素数",
-        "link": "#统计素数",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "channel使用细节",
-        "slug": "channel使用细节",
-        "link": "#channel使用细节",
-        "children": [
-          {
-            "level": 3,
-            "title": "单向管道",
-            "slug": "单向管道",
-            "link": "#单向管道",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "select多路复用",
-            "slug": "select多路复用",
-            "link": "#select多路复用",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "协程的panic处理",
-        "slug": "协程的panic处理",
-        "link": "#协程的panic处理",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "互斥锁",
-        "slug": "互斥锁",
-        "link": "#互斥锁",
-        "children": [
-          {
-            "level": 3,
-            "title": "互斥锁",
-            "slug": "互斥锁-1",
-            "link": "#互斥锁-1",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/markdown/19.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "go语言常量、基本数据类型、字符串转化",
-    "headers": [
-      {
-        "level": 2,
-        "title": "Go 语言常量",
-        "slug": "go-语言常量",
-        "link": "#go-语言常量",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "iota",
-        "slug": "iota",
-        "link": "#iota",
-        "children": [
-          {
-            "level": 3,
-            "title": "iota 用法",
-            "slug": "iota-用法",
-            "link": "#iota-用法",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "怎么看变量的数据类型",
-            "slug": "怎么看变量的数据类型",
-            "link": "#怎么看变量的数据类型",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "使用包查看字节数：",
-            "slug": "使用包查看字节数",
-            "link": "#使用包查看字节数",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "小数类型",
-            "slug": "小数类型",
-            "link": "#小数类型",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "字符类型",
-            "slug": "字符类型",
-            "link": "#字符类型",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "布尔类型",
-            "slug": "布尔类型",
-            "link": "#布尔类型",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "字符串类型",
-            "slug": "字符串类型",
-            "link": "#字符串类型",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "基本数据类型的相互转换",
-        "slug": "基本数据类型的相互转换",
-        "link": "#基本数据类型的相互转换",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "基本数据类型转string",
-        "slug": "基本数据类型转string",
-        "link": "#基本数据类型转string",
-        "children": [
-          {
-            "level": 3,
-            "title": "方法一：格式化字符串",
-            "slug": "方法一-格式化字符串",
-            "link": "#方法一-格式化字符串",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "方法二：使用strconv包的函数",
-            "slug": "方法二-使用strconv包的函数",
-            "link": "#方法二-使用strconv包的函数",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "string类型转化为基本数据类型",
-        "slug": "string类型转化为基本数据类型",
-        "link": "#string类型转化为基本数据类型",
-        "children": [
-          {
-            "level": 3,
-            "title": "使用strconv包的函数",
-            "slug": "使用strconv包的函数",
-            "link": "#使用strconv包的函数",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "补充：Go语言的fmt包（参考官网文档）",
-        "slug": "补充-go语言的fmt包-参考官网文档",
-        "link": "#补充-go语言的fmt包-参考官网文档",
-        "children": [
-          {
-            "level": 3,
-            "title": "package fmt",
-            "slug": "package-fmt",
-            "link": "#package-fmt",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/markdown/2.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "TCP网络编程",
-    "headers": [
-      {
-        "level": 2,
-        "title": "网络编程",
-        "slug": "网络编程",
-        "link": "#网络编程",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "端口（port)",
-        "slug": "端口-port",
-        "link": "#端口-port",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "处理流程",
-        "slug": "处理流程",
-        "link": "#处理流程",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "net",
-        "slug": "net",
-        "link": "#net",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "net.ParseIP()",
-        "slug": "net-parseip",
-        "link": "#net-parseip",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/markdown/20.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "redis基础",
-    "headers": [
-      {
-        "level": 2,
-        "title": "redis介绍",
-        "slug": "redis介绍",
-        "link": "#redis介绍",
-        "children": [
-          {
-            "level": 3,
-            "title": "redis的安装和使用",
-            "slug": "redis的安装和使用",
-            "link": "#redis的安装和使用",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "Ubuntu apt 命令安装",
-        "slug": "ubuntu-apt-命令安装",
-        "link": "#ubuntu-apt-命令安装",
-        "children": [
-          {
-            "level": 3,
-            "title": "启动 Redis",
-            "slug": "启动-redis",
-            "link": "#启动-redis",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "查看 redis 是否启动？",
-            "slug": "查看-redis-是否启动",
-            "link": "#查看-redis-是否启动",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "Redis 配置",
-        "slug": "redis-配置",
-        "link": "#redis-配置",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "参数说明",
-        "slug": "参数说明",
-        "link": "#参数说明",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Redis 数据类型",
-        "slug": "redis-数据类型",
-        "link": "#redis-数据类型",
-        "children": [
-          {
-            "level": 3,
-            "title": "String（字符串）",
-            "slug": "string-字符串",
-            "link": "#string-字符串",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Hash（哈希）",
-            "slug": "hash-哈希",
-            "link": "#hash-哈希",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "List（列表）",
-            "slug": "list-列表",
-            "link": "#list-列表",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Set（集合）",
-            "slug": "set-集合",
-            "link": "#set-集合",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "zset(sorted set：有序集合)",
-        "slug": "zset-sorted-set-有序集合",
-        "link": "#zset-sorted-set-有序集合",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Redis 命令",
-        "slug": "redis-命令",
-        "link": "#redis-命令",
-        "children": [
-          {
-            "level": 3,
-            "title": "在远程服务上执行命令",
-            "slug": "在远程服务上执行命令",
-            "link": "#在远程服务上执行命令",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/markdown/21.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Redis进阶",
-    "headers": [
-      {
-        "level": 2,
-        "title": "Redis 哈希(Hash)",
-        "slug": "redis-哈希-hash",
-        "link": "#redis-哈希-hash",
-        "children": [
-          {
-            "level": 3,
-            "title": "实例",
-            "slug": "实例",
-            "link": "#实例",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "Redis hash 命令",
-        "slug": "redis-hash-命令",
-        "link": "#redis-hash-命令",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "hash使用",
-        "slug": "hash使用",
-        "link": "#hash使用",
-        "children": [
-          {
-            "level": 3,
-            "title": "列表",
-            "slug": "列表",
-            "link": "#列表",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "set（集合）",
-            "slug": "set-集合",
-            "link": "#set-集合",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/markdown/22.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Go语言操作redis",
-    "headers": [
-      {
-        "level": 2,
-        "title": "Go语言操作redis",
-        "slug": "go语言操作redis-1",
-        "link": "#go语言操作redis-1",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "连接本地服务器",
-        "slug": "连接本地服务器",
-        "link": "#连接本地服务器",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "传统连接redis:",
-        "slug": "传统连接redis",
-        "link": "#传统连接redis",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "连接池",
-        "slug": "连接池",
-        "link": "#连接池",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "连接池核心代码",
-        "slug": "连接池核心代码",
-        "link": "#连接池核心代码",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/markdown/23.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "稀疏数组sparsearray",
-    "headers": [
-      {
-        "level": 2,
-        "title": "实际需求",
-        "slug": "实际需求",
-        "link": "#实际需求",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "分析问题",
-        "slug": "分析问题",
-        "link": "#分析问题",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "基本介绍",
-        "slug": "基本介绍",
-        "link": "#基本介绍",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "应用实例",
-        "slug": "应用实例",
-        "link": "#应用实例",
-        "children": [
-          {
-            "level": 3,
-            "title": "稀疏数组与二维数组互转思路",
-            "slug": "稀疏数组与二维数组互转思路",
-            "link": "#稀疏数组与二维数组互转思路",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "代码实现（Go)",
-            "slug": "代码实现-go",
-            "link": "#代码实现-go",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "代码实现（java)",
-            "slug": "代码实现-java",
-            "link": "#代码实现-java",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/markdown/24.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "队列",
-    "headers": [
-      {
-        "level": 2,
-        "title": "队列的使用",
-        "slug": "队列的使用",
-        "link": "#队列的使用",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "环形队列",
-        "slug": "环形队列",
-        "link": "#环形队列",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/markdown/25.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "go语言链表",
-    "headers": [
-      {
-        "level": 2,
-        "title": "链表",
-        "slug": "链表",
-        "link": "#链表",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "单链表完整代码",
-        "slug": "单链表完整代码",
-        "link": "#单链表完整代码",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/markdown/26.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Go语言数据结构双向链表和循环链表",
-    "headers": [
-      {
-        "level": 2,
-        "title": "链表",
-        "slug": "链表",
-        "link": "#链表",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "全代码",
-        "slug": "全代码",
-        "link": "#全代码",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Go语言环形链表",
-        "slug": "go语言环形链表",
-        "link": "#go语言环形链表",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "全代码",
-        "slug": "全代码-1",
-        "link": "#全代码-1",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/markdown/27.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "约瑟夫问题",
-    "headers": [
-      {
-        "level": 2,
-        "title": "约瑟夫问题",
-        "slug": "约瑟夫问题-1",
-        "link": "#约瑟夫问题-1",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/markdown/28.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "查找算法",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/markdown/29.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "指针、运算符和位运算",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1.指针",
-        "slug": "_1-指针",
-        "link": "#_1-指针",
-        "children": [
-          {
-            "level": 3,
-            "title": "1.1基本介绍",
-            "slug": "_1-1基本介绍",
-            "link": "#_1-1基本介绍",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "1.2 指针变量",
-            "slug": "_1-2-指针变量",
-            "link": "#_1-2-指针变量",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "1.3 指针的使用流程",
-            "slug": "_1-3-指针的使用流程",
-            "link": "#_1-3-指针的使用流程",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "1.4 Go 空指针",
-            "slug": "_1-4-go-空指针",
-            "link": "#_1-4-go-空指针",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "1.5指针变量的修改",
-            "slug": "_1-5指针变量的修改",
-            "link": "#_1-5指针变量的修改",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "2. 值类型和引用类型",
-        "slug": "_2-值类型和引用类型",
-        "link": "#_2-值类型和引用类型",
-        "children": [
-          {
-            "level": 3,
-            "title": "2.1 区别/使用：",
-            "slug": "_2-1-区别-使用",
-            "link": "#_2-1-区别-使用",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "3. 标识符的命名规范",
-        "slug": "_3-标识符的命名规范",
-        "link": "#_3-标识符的命名规范",
-        "children": [
-          {
-            "level": 3,
-            "title": "3.1 标识符的命名规范",
-            "slug": "_3-1-标识符的命名规范",
-            "link": "#_3-1-标识符的命名规范",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.2 标识符命名注意事项",
-            "slug": "_3-2-标识符命名注意事项",
-            "link": "#_3-2-标识符命名注意事项",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "4. Go算数运算符",
-        "slug": "_4-go算数运算符",
-        "link": "#_4-go算数运算符",
-        "children": [
-          {
-            "level": 3,
-            "title": "细节：",
-            "slug": "细节",
-            "link": "#细节",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "5. Go关系运算符",
-        "slug": "_5-go关系运算符",
-        "link": "#_5-go关系运算符",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "6. 逻辑运算符",
-        "slug": "_6-逻辑运算符",
-        "link": "#_6-逻辑运算符",
-        "children": [
-          {
-            "level": 3,
-            "title": "6.1 实例",
-            "slug": "_6-1-实例",
-            "link": "#_6-1-实例",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "8. 其他运算符",
-        "slug": "_8-其他运算符",
-        "link": "#_8-其他运算符",
-        "children": [
-          {
-            "level": 3,
-            "title": "8.2 Golang三元运算符的实现使用if判断",
-            "slug": "_8-2-golang三元运算符的实现使用if判断",
-            "link": "#_8-2-golang三元运算符的实现使用if判断",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "8. 键盘输入",
-        "slug": "_8-键盘输入",
-        "link": "#_8-键盘输入",
-        "children": [
-          {
-            "level": 3,
-            "title": "8.1步骤：",
-            "slug": "_8-1步骤",
-            "link": "#_8-1步骤",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "9. 进制",
-        "slug": "_9-进制",
-        "link": "#_9-进制",
-        "children": [
-          {
-            "level": 3,
-            "title": "9.1 基本的输出方式",
-            "slug": "_9-1-基本的输出方式",
-            "link": "#_9-1-基本的输出方式",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "9.2 补充python中进制的转换",
-            "slug": "_9-2-补充python中进制的转换",
-            "link": "#_9-2-补充python中进制的转换",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "10 .位运算",
-        "slug": "_10-位运算",
-        "link": "#_10-位运算",
-        "children": [
-          {
-            "level": 3,
-            "title": "10.1 实例",
-            "slug": "_10-1-实例",
-            "link": "#_10-1-实例",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "10.2 原码、补码、反码",
-            "slug": "_10-2-原码、补码、反码",
-            "link": "#_10-2-原码、补码、反码",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "10.3 golang 中的位运算",
-            "slug": "_10-3-golang-中的位运算",
-            "link": "#_10-3-golang-中的位运算",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "11. 流程控制",
-        "slug": "_11-流程控制",
-        "link": "#_11-流程控制",
-        "children": [
-          {
-            "level": 3,
-            "title": "11.1 Go分支控制if -else",
-            "slug": "_11-1-go分支控制if-else",
-            "link": "#_11-1-go分支控制if-else",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "11.2 补充：python分支控制if -else",
-            "slug": "_11-2-补充-python分支控制if-else",
-            "link": "#_11-2-补充-python分支控制if-else",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/markdown/3.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "排序算法",
-    "headers": [
-      {
-        "level": 2,
-        "title": "选择排序",
-        "slug": "选择排序",
-        "link": "#选择排序",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "插入排序",
-        "slug": "插入排序",
-        "link": "#插入排序",
-        "children": [
-          {
-            "level": 3,
-            "title": "1. 算法步骤",
-            "slug": "_1-算法步骤",
-            "link": "#_1-算法步骤",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2. 动图演示",
-            "slug": "_2-动图演示",
-            "link": "#_2-动图演示",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "快速排序",
-        "slug": "快速排序",
-        "link": "#快速排序",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/markdown/30.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "go语言的重要语法",
-    "headers": [
-      {
-        "level": 2,
-        "title": "Go语言的switch语句",
-        "slug": "go语言的switch语句",
-        "link": "#go语言的switch语句",
-        "children": [
-          {
-            "level": 3,
-            "title": "语法",
-            "slug": "语法",
-            "link": "#语法",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "fallthrough（穿透）",
-            "slug": "fallthrough-穿透",
-            "link": "#fallthrough-穿透",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Type Switch",
-            "slug": "type-switch",
-            "link": "#type-switch",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "switch和if比较",
-        "slug": "switch和if比较",
-        "link": "#switch和if比较",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "for 循环",
-        "slug": "for-循环",
-        "link": "#for-循环",
-        "children": [
-          {
-            "level": 3,
-            "title": "语法",
-            "slug": "语法-1",
-            "link": "#语法-1",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "for循环的执行顺序",
-            "slug": "for循环的执行顺序",
-            "link": "#for循环的执行顺序",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "for语句执行过程",
-            "slug": "for语句执行过程",
-            "link": "#for语句执行过程",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "无限循环:",
-            "slug": "无限循环",
-            "link": "#无限循环",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "For-each range 循环",
-            "slug": "for-each-range-循环",
-            "link": "#for-each-range-循环",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "注意",
-            "slug": "注意",
-            "link": "#注意",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "while 和 do...while的实现",
-        "slug": "while-和-do-while的实现",
-        "link": "#while-和-do-while的实现",
-        "children": [
-          {
-            "level": 3,
-            "title": "for循环实现while",
-            "slug": "for循环实现while",
-            "link": "#for循环实现while",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "for循环实现do while",
-            "slug": "for循环实现do-while",
-            "link": "#for循环实现do-while",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "嵌套循环",
-        "slug": "嵌套循环",
-        "link": "#嵌套循环",
-        "children": [
-          {
-            "level": 3,
-            "title": "语法",
-            "slug": "语法-2",
-            "link": "#语法-2",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "break",
-        "slug": "break",
-        "link": "#break",
-        "children": [
-          {
-            "level": 3,
-            "title": "break语法",
-            "slug": "break语法",
-            "link": "#break语法",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "Go 语言 continue 语句",
-        "slug": "go-语言-continue-语句",
-        "link": "#go-语言-continue-语句",
-        "children": [
-          {
-            "level": 3,
-            "title": "continue语法",
-            "slug": "continue语法",
-            "link": "#continue语法",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "Go 语言 goto 语句",
-        "slug": "go-语言-goto-语句",
-        "link": "#go-语言-goto-语句",
-        "children": [
-          {
-            "level": 3,
-            "title": "语法",
-            "slug": "语法-3",
-            "link": "#语法-3",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "跳转控制语句return",
-        "slug": "跳转控制语句return",
-        "link": "#跳转控制语句return",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "补：python中循环",
-        "slug": "补-python中循环",
-        "link": "#补-python中循环",
-        "children": [
-          {
-            "level": 3,
-            "title": "基本的循环方法   -- 使用range",
-            "slug": "基本的循环方法-使用range",
-            "link": "#基本的循环方法-使用range",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "字符串遍历和Go较智能",
-            "slug": "字符串遍历和go较智能",
-            "link": "#字符串遍历和go较智能",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "while",
-            "slug": "while",
-            "link": "#while",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/markdown/4.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "函数、init函数和包",
-    "headers": [
-      {
-        "level": 2,
-        "title": "函数",
-        "slug": "函数",
-        "link": "#函数",
-        "children": [
-          {
-            "level": 3,
-            "title": "函数定义",
-            "slug": "函数定义",
-            "link": "#函数定义",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "return语句",
-            "slug": "return语句",
-            "link": "#return语句",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "函数调用",
-            "slug": "函数调用",
-            "link": "#函数调用",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "函数返回多个值",
-            "slug": "函数返回多个值",
-            "link": "#函数返回多个值",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "递归调用",
-            "slug": "递归调用",
-            "link": "#递归调用",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "递归总结:",
-            "slug": "递归总结",
-            "link": "#递归总结",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "函数调用的底层分析",
-            "slug": "函数调用的底层分析",
-            "link": "#函数调用的底层分析",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "函数 -- 包",
-        "slug": "函数-包",
-        "link": "#函数-包",
-        "children": [
-          {
-            "level": 3,
-            "title": "包示意图",
-            "slug": "包示意图",
-            "link": "#包示意图",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "包的使用",
-            "slug": "包的使用",
-            "link": "#包的使用",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "函数值传递",
-        "slug": "函数值传递",
-        "link": "#函数值传递",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "函数引用传递",
-        "slug": "函数引用传递",
-        "link": "#函数引用传递",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "在Golang语言中不支持函数的重载",
-        "slug": "在golang语言中不支持函数的重载",
-        "link": "#在golang语言中不支持函数的重载",
-        "children": [
-          {
-            "level": 3,
-            "title": "函数作为实参",
-            "slug": "函数作为实参",
-            "link": "#函数作为实参",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Go语言可以自定义数据类型",
-            "slug": "go语言可以自定义数据类型",
-            "link": "#go语言可以自定义数据类型",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "go语言支持对返回值命名",
-            "slug": "go语言支持对返回值命名",
-            "link": "#go语言支持对返回值命名",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "GO 支持可变参数",
-            "slug": "go-支持可变参数",
-            "link": "#go-支持可变参数",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "init函数",
-        "slug": "init函数",
-        "link": "#init函数",
-        "children": [
-          {
-            "level": 3,
-            "title": "init细节",
-            "slug": "init细节",
-            "link": "#init细节",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "补充:python函数",
-        "slug": "补充-python函数",
-        "link": "#补充-python函数",
-        "children": [
-          {
-            "level": 3,
-            "title": "定义函数",
-            "slug": "定义函数",
-            "link": "#定义函数",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "不带参数值的 return 语句返回 None",
-            "slug": "不带参数值的-return-语句返回-none",
-            "link": "#不带参数值的-return-语句返回-none",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "python的变量使用",
-            "slug": "python的变量使用",
-            "link": "#python的变量使用",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/markdown/5.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "函数、闭包，错误处理",
-    "headers": [
-      {
-        "level": 2,
-        "title": "匿名函数",
-        "slug": "匿名函数",
-        "link": "#匿名函数",
-        "children": [
-          {
-            "level": 3,
-            "title": "一次性匿名函数",
-            "slug": "一次性匿名函数",
-            "link": "#一次性匿名函数",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "给变量调用",
-            "slug": "给变量调用",
-            "link": "#给变量调用",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "全局匿名函数",
-            "slug": "全局匿名函数",
-            "link": "#全局匿名函数",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "匿名总结实战",
-            "slug": "匿名总结实战",
-            "link": "#匿名总结实战",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "闭包",
-        "slug": "闭包",
-        "link": "#闭包",
-        "children": [
-          {
-            "level": 3,
-            "title": "定义一个闭包理解",
-            "slug": "定义一个闭包理解",
-            "link": "#定义一个闭包理解",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "闭包的说明",
-            "slug": "闭包的说明",
-            "link": "#闭包的说明",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "闭包的花样玩法",
-        "slug": "闭包的花样玩法",
-        "link": "#闭包的花样玩法",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "for & 匿名函数（闭包？）",
-        "slug": "for-匿名函数-闭包",
-        "link": "#for-匿名函数-闭包",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "函数defer",
-        "slug": "函数defer",
-        "link": "#函数defer",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "字符串常用的系统函数",
-        "slug": "字符串常用的系统函数",
-        "link": "#字符串常用的系统函数",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "日期和时间相关函数",
-        "slug": "日期和时间相关函数",
-        "link": "#日期和时间相关函数",
-        "children": [
-          {
-            "level": 3,
-            "title": "时间常量",
-            "slug": "时间常量",
-            "link": "#时间常量",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "结合sleep来使用时间常量",
-            "slug": "结合sleep来使用时间常量",
-            "link": "#结合sleep来使用时间常量",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "unix时间戳和unixnano时间戳",
-            "slug": "unix时间戳和unixnano时间戳",
-            "link": "#unix时间戳和unixnano时间戳",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "用法",
-            "slug": "用法",
-            "link": "#用法",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "统计代码执行时间",
-            "slug": "统计代码执行时间",
-            "link": "#统计代码执行时间",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "Golang内置函数",
-        "slug": "golang内置函数",
-        "link": "#golang内置函数",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Golang错误处理机制",
-        "slug": "golang错误处理机制",
-        "link": "#golang错误处理机制",
-        "children": [
-          {
-            "level": 3,
-            "title": "自定义错误",
-            "slug": "自定义错误",
-            "link": "#自定义错误",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/markdown/6.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "数组和slice切片&遍历",
-    "headers": [
-      {
-        "level": 2,
-        "title": "数组",
-        "slug": "数组",
-        "link": "#数组",
-        "children": [
-          {
-            "level": 3,
-            "title": "声明数组",
-            "slug": "声明数组",
-            "link": "#声明数组",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "初始化数组和内存布局",
-            "slug": "初始化数组和内存布局",
-            "link": "#初始化数组和内存布局",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "访问数组元素",
-            "slug": "访问数组元素",
-            "link": "#访问数组元素",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "数组的遍历",
-        "slug": "数组的遍历",
-        "link": "#数组的遍历",
-        "children": [
-          {
-            "level": 3,
-            "title": "常规遍历",
-            "slug": "常规遍历",
-            "link": "#常规遍历",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "for - range遍历",
-        "slug": "for-range遍历",
-        "link": "#for-range遍历",
-        "children": [
-          {
-            "level": 3,
-            "title": "和python一样的用法",
-            "slug": "和python一样的用法",
-            "link": "#和python一样的用法",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "🐻数组的引用传递",
-            "slug": "🐻数组的引用传递",
-            "link": "#🐻数组的引用传递",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "长度也是数组类型一部分",
-            "slug": "长度也是数组类型一部分",
-            "link": "#长度也是数组类型一部分",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "生成随机数并且打印",
-            "slug": "生成随机数并且打印",
-            "link": "#生成随机数并且打印",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "slice切片",
-        "slug": "slice切片",
-        "link": "#slice切片",
-        "children": [
-          {
-            "level": 3,
-            "title": "❤️💕 切片在内存中形式",
-            "slug": "❤️💕-切片在内存中形式",
-            "link": "#❤️💕-切片在内存中形式",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "切片的使用",
-        "slug": "切片的使用",
-        "link": "#切片的使用",
-        "children": [
-          {
-            "level": 3,
-            "title": "方式一",
-            "slug": "方式一",
-            "link": "#方式一",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "方式二",
-            "slug": "方式二",
-            "link": "#方式二",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "方式三",
-            "slug": "方式三",
-            "link": "#方式三",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "切片初始化",
-        "slug": "切片初始化",
-        "link": "#切片初始化",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "切片的遍历",
-        "slug": "切片的遍历",
-        "link": "#切片的遍历",
-        "children": [
-          {
-            "level": 3,
-            "title": "常规遍历",
-            "slug": "常规遍历-1",
-            "link": "#常规遍历-1",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "for --range遍历",
-            "slug": "for-range遍历-1",
-            "link": "#for-range遍历-1",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "注意",
-            "slug": "注意",
-            "link": "#注意",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "len() 和 cap() 函数",
-        "slug": "len-和-cap-函数",
-        "link": "#len-和-cap-函数",
-        "children": [
-          {
-            "level": 3,
-            "title": "空(nil)切片",
-            "slug": "空-nil-切片",
-            "link": "#空-nil-切片",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "切片截取",
-            "slug": "切片截取",
-            "link": "#切片截取",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "append() 和 copy() 函数",
-        "slug": "append-和-copy-函数",
-        "link": "#append-和-copy-函数",
-        "children": [
-          {
-            "level": 3,
-            "title": "append动态追加",
-            "slug": "append动态追加",
-            "link": "#append动态追加",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "copy内置函数拷贝",
-            "slug": "copy内置函数拷贝",
-            "link": "#copy内置函数拷贝",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "参考python List append()",
-            "slug": "参考python-list-append",
-            "link": "#参考python-list-append",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "string和slice",
-        "slug": "string和slice",
-        "link": "#string和slice",
-        "children": [
-          {
-            "level": 3,
-            "title": "字符串修改的方法",
-            "slug": "字符串修改的方法",
-            "link": "#字符串修改的方法",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Go语言中字符串修改",
-            "slug": "go语言中字符串修改",
-            "link": "#go语言中字符串修改",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "python中字符串修改",
-        "slug": "python中字符串修改",
-        "link": "#python中字符串修改",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/markdown/7.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "golang排序和查找",
-    "headers": [
-      {
-        "level": 2,
-        "title": "前言",
-        "slug": "前言",
-        "link": "#前言",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "排序",
-        "slug": "排序",
-        "link": "#排序",
-        "children": [
-          {
-            "level": 3,
-            "title": "排序的分类",
-            "slug": "排序的分类",
-            "link": "#排序的分类",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "交换排序",
-            "slug": "交换排序",
-            "link": "#交换排序",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "查找",
-        "slug": "查找",
-        "link": "#查找",
-        "children": [
-          {
-            "level": 3,
-            "title": "python实例",
-            "slug": "python实例",
-            "link": "#python实例",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Python 二分查找",
-            "slug": "python-二分查找",
-            "link": "#python-二分查找",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Golang的二分查找",
-            "slug": "golang的二分查找",
-            "link": "#golang的二分查找",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "sort包排序",
-        "slug": "sort包排序",
-        "link": "#sort包排序",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/markdown/8.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Golang的多维数组和map集合",
-    "headers": [
-      {
-        "level": 2,
-        "title": "二维数组",
-        "slug": "二维数组",
-        "link": "#二维数组",
-        "children": [
-          {
-            "level": 3,
-            "title": "二维数组在内存中的布局",
-            "slug": "二维数组在内存中的布局",
-            "link": "#二维数组在内存中的布局",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "初始化二维数组",
-            "slug": "初始化二维数组",
-            "link": "#初始化二维数组",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "遍历二维数组",
-            "slug": "遍历二维数组",
-            "link": "#遍历二维数组",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "创建各个维度元素数量不一致的多维数组",
-            "slug": "创建各个维度元素数量不一致的多维数组",
-            "link": "#创建各个维度元素数量不一致的多维数组",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "Go语言map（集合）",
-        "slug": "go语言map-集合",
-        "link": "#go语言map-集合",
-        "children": [
-          {
-            "level": 3,
-            "title": "定义 Map",
-            "slug": "定义-map",
-            "link": "#定义-map",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "map的增删改查操作",
-            "slug": "map的增删改查操作",
-            "link": "#map的增删改查操作",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "map遍历",
-            "slug": "map遍历",
-            "link": "#map遍历",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "map长度",
-            "slug": "map长度",
-            "link": "#map长度",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "map切片",
-            "slug": "map切片",
-            "link": "#map切片",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "map排序",
-            "slug": "map排序",
-            "link": "#map排序",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "map的使用细节",
-            "slug": "map的使用细节",
-            "link": "#map的使用细节",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "封装排序的方法",
-        "slug": "封装排序的方法",
-        "link": "#封装排序的方法",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/markdown/9.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "chan环形队列 先进先出",
-    "headers": [
-      {
-        "level": 2,
-        "title": "1.1 环形缓冲区结构",
-        "slug": "_1-1-环形缓冲区结构",
-        "link": "#_1-1-环形缓冲区结构",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "1.2 环形缓冲区一种读写实现机制",
-        "slug": "_1-2-环形缓冲区一种读写实现机制",
-        "link": "#_1-2-环形缓冲区一种读写实现机制",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "2 chan内部数据结构",
-        "slug": "_2-chan内部数据结构",
-        "link": "#_2-chan内部数据结构",
-        "children": [
-          {
-            "level": 3,
-            "title": "2.1 chan的数据结构",
-            "slug": "_2-1-chan的数据结构",
-            "link": "#_2-1-chan的数据结构",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "2.2 有缓冲区和无缓冲区chan的区别",
-            "slug": "_2-2-有缓冲区和无缓冲区chan的区别",
-            "link": "#_2-2-有缓冲区和无缓冲区chan的区别",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "3 关键源码分析",
-        "slug": "_3-关键源码分析",
-        "link": "#_3-关键源码分析",
-        "children": [
-          {
-            "level": 3,
-            "title": "3.1 chan数据结构源码",
-            "slug": "_3-1-chan数据结构源码",
-            "link": "#_3-1-chan数据结构源码",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.2 sudog数据结构源码",
-            "slug": "_3-2-sudog数据结构源码",
-            "link": "#_3-2-sudog数据结构源码",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.3 chan的构造过程",
-            "slug": "_3-3-chan的构造过程",
-            "link": "#_3-3-chan的构造过程",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "3.4 无缓冲收发",
-            "slug": "_3-4-无缓冲收发",
-            "link": "#_3-4-无缓冲收发",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/markdown/chan%E5%BA%95%E5%B1%82%E5%88%86%E6%9E%90.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "0x03 geth源码结构",
-    "headers": [],
-    "path": "/markdown/eth.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Go语言批量处理文件",
-    "headers": [
-      {
-        "level": 2,
-        "title": "实现基本的批量创建文件和输入模板",
-        "slug": "实现基本的批量创建文件和输入模板",
-        "link": "#实现基本的批量创建文件和输入模板",
-        "children": []
-      }
-    ],
-    "path": "/markdown/file.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Go语言精度丢失问题",
-    "headers": [
-      {
-        "level": 2,
-        "title": "问题描述",
-        "slug": "问题描述",
-        "link": "#问题描述",
-        "children": [
-          {
-            "level": 3,
-            "title": "为什么不直接使用 float64？",
-            "slug": "为什么不直接使用-float64",
-            "link": "#为什么不直接使用-float64",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "为什么不直接使用 big.Rat？",
-            "slug": "为什么不直接使用-big-rat",
-            "link": "#为什么不直接使用-big-rat",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "出现原因总结",
-            "slug": "出现原因总结",
-            "link": "#出现原因总结",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "解决方法",
-        "slug": "解决方法",
-        "link": "#解决方法",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "完美解决",
-        "slug": "完美解决",
-        "link": "#完美解决",
-        "children": []
-      }
-    ],
-    "path": "/markdown/gofloat.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "什么是 plan9 汇编",
-    "headers": [
-      {
-        "level": 2,
-        "title": "前言",
-        "slug": "前言",
-        "link": "#前言",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "汇编角度看函数调用及返回过程",
-        "slug": "汇编角度看函数调用及返回过程",
-        "link": "#汇编角度看函数调用及返回过程",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "汇编角度看 slice",
-        "slug": "汇编角度看-slice",
-        "link": "#汇编角度看-slice",
-        "children": []
-      }
-    ],
-    "path": "/markdown/Go%E6%B1%87%E7%BC%96.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "九型人格",
-    "headers": [
-      {
-        "level": 2,
-        "title": "F. 了解自己",
-        "slug": "f-了解自己",
-        "link": "#f-了解自己",
-        "children": [
-          {
-            "level": 3,
-            "title": "性格的特征",
-            "slug": "性格的特征",
-            "link": "#性格的特征",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "人性五大需求",
-            "slug": "人性五大需求",
-            "link": "#人性五大需求",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "九型人格",
-            "slug": "九型人格-1",
-            "link": "#九型人格-1",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "1. 追求完美的完美型",
-        "slug": "_1-追求完美的完美型",
-        "link": "#_1-追求完美的完美型",
-        "children": [
-          {
-            "level": 3,
-            "title": "特征：力求最好",
-            "slug": "特征-力求最好",
-            "link": "#特征-力求最好",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "社交",
-            "slug": "社交",
-            "link": "#社交",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "状态",
-            "slug": "状态",
-            "link": "#状态",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "2. 热心的给予型",
-        "slug": "_2-热心的给予型",
-        "link": "#_2-热心的给予型",
-        "children": [
-          {
-            "level": 3,
-            "title": "特质：追求服侍",
-            "slug": "特质-追求服侍",
-            "link": "#特质-追求服侍",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "状态",
-            "slug": "状态-1",
-            "link": "#状态-1",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "3. 追名逐利的实干型",
-        "slug": "_3-追名逐利的实干型",
-        "link": "#_3-追名逐利的实干型",
-        "children": [
-          {
-            "level": 3,
-            "title": "特质：追求成果",
-            "slug": "特质-追求成果",
-            "link": "#特质-追求成果",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "4. 想象力丰富的浪漫型",
-        "slug": "_4-想象力丰富的浪漫型",
-        "link": "#_4-想象力丰富的浪漫型",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "5. 冷静客观的观察型",
-        "slug": "_5-冷静客观的观察型",
-        "link": "#_5-冷静客观的观察型",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "6. 谨慎严谨的怀疑型",
-        "slug": "_6-谨慎严谨的怀疑型",
-        "link": "#_6-谨慎严谨的怀疑型",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "7. 及时行乐的享受型",
-        "slug": "_7-及时行乐的享受型",
-        "link": "#_7-及时行乐的享受型",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "8. 号令天下的领导型",
-        "slug": "_8-号令天下的领导型",
-        "link": "#_8-号令天下的领导型",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "9. 纵横的调停型",
-        "slug": "_9-纵横的调停型",
-        "link": "#_9-纵横的调停型",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "E. 人格升华的整合方向",
-        "slug": "e-人格升华的整合方向",
-        "link": "#e-人格升华的整合方向",
-        "children": []
-      }
-    ],
-    "path": "/markdown/%E4%B9%9D%E5%9E%8B%E4%BA%BA%E6%A0%BC.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Go语言反射(Json)",
-    "headers": [
-      {
-        "level": 2,
-        "title": "反射",
-        "slug": "反射",
-        "link": "#反射",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "使用refilect.TypeOf()获取任意值的类型对象",
-        "slug": "使用refilect-typeof-获取任意值的类型对象",
-        "link": "#使用refilect-typeof-获取任意值的类型对象",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "反射的基本介绍",
-        "slug": "反射的基本介绍",
-        "link": "#反射的基本介绍",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "反射重要概念❤️",
-        "slug": "反射重要概念❤️",
-        "link": "#反射重要概念❤️",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "反射入门案列",
-        "slug": "反射入门案列",
-        "link": "#反射入门案列",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "反射注意事项",
-        "slug": "反射注意事项",
-        "link": "#反射注意事项",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "反射最佳案例",
-        "slug": "反射最佳案例",
-        "link": "#反射最佳案例",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "结构体反射相关的方法",
-        "slug": "结构体反射相关的方法",
-        "link": "#结构体反射相关的方法",
-        "children": []
-      }
-    ],
-    "path": "/markdown/%E5%8F%8D%E5%B0%84.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "并发处理",
-    "headers": [
-      {
-        "level": 2,
-        "title": "并发处理",
-        "slug": "并发处理-1",
-        "link": "#并发处理-1",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "并发和并行关系",
-        "slug": "并发和并行关系",
-        "link": "#并发和并行关系",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "程序的顺序执行",
-        "slug": "程序的顺序执行",
-        "link": "#程序的顺序执行",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "进程的状态",
-        "slug": "进程的状态",
-        "link": "#进程的状态",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "线程的状态",
-        "slug": "线程的状态",
-        "link": "#线程的状态",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "线程与进程的区别可以归纳为以下4点：",
-        "slug": "线程与进程的区别可以归纳为以下4点",
-        "link": "#线程与进程的区别可以归纳为以下4点",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "进程之间的相互制约关系",
-        "slug": "进程之间的相互制约关系",
-        "link": "#进程之间的相互制约关系",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "进程互斥概念",
-        "slug": "进程互斥概念",
-        "link": "#进程互斥概念",
-        "children": []
-      }
-    ],
-    "path": "/markdown/%E5%B9%B6%E5%8F%91.html",
     "pathLocale": "/",
     "extraFields": []
   },
