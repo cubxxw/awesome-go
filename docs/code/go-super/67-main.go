@@ -31,7 +31,7 @@ func main() {
 	// 泛型接口
 	var genericityInterface genericityInterface[int]
 	genericityInterface.genericityFunc(1)
-	// 泛型结构体
+	//Generic structs
 	var genericityStruct genericityStruct[int]
 	genericityStruct.a = 1
 	fmt.Println(genericityStruct.a)

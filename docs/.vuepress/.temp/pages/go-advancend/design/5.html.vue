@@ -1,7 +1,7 @@
 <template><div><ul>
 <li><a href="https://github.com/3293172751/cs-awesome-Block_Chain" target="_blank" rel="noopener noreferrer">author<ExternalLinkIcon/></a></li>
 </ul>
-<h1 id="第5节" tabindex="-1"><a class="header-anchor" href="#第5节" aria-hidden="true">#</a> 第5节</h1>
+<h1 id="第5节-合成复用原则" tabindex="-1"><a class="header-anchor" href="#第5节-合成复用原则" aria-hidden="true">#</a> 第5节 合成复用原则</h1>
 <div><a href = '4.md' style='float:left'>⬆️上一节🔗</a><a href = '6.md' style='float: right'>⬇️下一节🔗</a></div>
 <br>
 <blockquote>
@@ -9,6 +9,12 @@
 </blockquote>
 <hr>
 <p>[TOC]</p>
+<h2 id="原则" tabindex="-1"><a class="header-anchor" href="#原则" aria-hidden="true">#</a> 原则</h2>
+<div class="custom-container danger"><p class="custom-container-title">警告</p>
+<p>如果使用继承，会导致父类的任何变换都可能影响到子类的行为。如果使用对象组合，就降低了这种依赖关系。对于继承和组合，优先使用组合。</p>
+<p>合成复用原则 <strong>(Composite Reuse Principle, CRP)</strong> ：通过组合来实现父类方法</p>
+</div>
+<h2 id="没有使用合并复用" tabindex="-1"><a class="header-anchor" href="#没有使用合并复用" aria-hidden="true">#</a> 没有使用合并复用</h2>
 <h2 id="end-链接" tabindex="-1"><a class="header-anchor" href="#end-链接" aria-hidden="true">#</a> END 链接</h2>
 <ul><li><div><a href = '4.md' style='float:left'>⬆️上一节🔗</a><a href = '6.md' style='float: right'>⬇️下一节🔗</a></div></li></ul>
 <ul>

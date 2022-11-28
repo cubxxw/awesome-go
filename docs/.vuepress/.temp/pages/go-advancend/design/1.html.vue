@@ -12,6 +12,12 @@
 <p>“软件设计模式(Design Pattern)是一套被反复使用、多数人知晓的、经过分类编目的、代码设计经验的总结，使用设计模式是为了可重用代码、让代码更容易被他人理解并且保证代码可靠性。”</p>
 <p>一句大白话可以总结：“在一定环境下，用固定套路解决问题。”</p>
 </div>
+<h2 id="参考文章" tabindex="-1"><a class="header-anchor" href="#参考文章" aria-hidden="true">#</a> 参考文章</h2>
+<div class="custom-container tip"><p class="custom-container-title">提示</p>
+<ul>
+<li><a href="https://www.yuque.com/aceld" target="_blank" rel="noopener noreferrer"><strong>Easy 搞定 Golang设计模</strong><ExternalLinkIcon/></a></li>
+</ul>
+</div>
 <h2 id="设计模式的分类" tabindex="-1"><a class="header-anchor" href="#设计模式的分类" aria-hidden="true">#</a> 设计模式的分类</h2>
 <div class="custom-container danger"><p class="custom-container-title">GoF提出的设计模式有23个，包括：</p>
 <p>（1）创建型(Creational)模式：如何创建对象；</p>
@@ -21,7 +27,8 @@
 <p>设计模式目前种类： <code v-pre>GoF的23种   + “简单工厂模式” = 24种</code>。</p>
 </div>
 <h2 id="如何学习设计模式" tabindex="-1"><a class="header-anchor" href="#如何学习设计模式" aria-hidden="true">#</a> 如何学习设计模式</h2>
-<div class="custom-container tip"><p class="custom-container-title">设计模式的基础是：多态。</p>
+<div class="custom-container tip"><p class="custom-container-title">设计模式</p>
+<p>设计模式的基础是：多态。</p>
 <p>初学者：积累案例，不要盲目的背类图。</p>
 <p>初级开发人员：多思考，多梳理，归纳总结，尊重事物的认知规律，注意临界点的突破，不要浮躁。</p>
 <p>中级开发人员：合适的开发环境，寻找合适的设计模式来解决问题。</p>
