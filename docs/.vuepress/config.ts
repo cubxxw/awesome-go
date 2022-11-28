@@ -274,12 +274,21 @@ export default {
                 target:'_blank',
             },
             {
-                text: '🔥 Go语言基础篇',
-                link: '/markdown/1.md'
-            }, 
-            {
-                text: '⚡ Go语言进阶篇',
-                link: '/Gomd_super/'
+                text: '📚go文档',
+                children: [
+                    {
+                        text: '🔥 Go语言基础篇',
+                        link: '/markdown/1.md/',
+                    },
+                    {
+                        text: '🔥 Go语言进阶篇',
+                        link: '/Gomd_super/',
+                    },
+                    {
+                        text: '🔥 Go语言高级篇',
+                        link: '/go-advancend/',
+                    },
+                ],
             },
           ],
           
@@ -293,6 +302,14 @@ export default {
                  {
                     text: '💱个人云盘地址',
                     link: 'https://xxw.nsddd.top/s/wRSz'
+                 },
+                 {
+                    text: '🔥 进阶篇首页',
+                    link: '/Gomd_super/markdown/'
+                 },
+                 {
+                    text: '🔥 Go语言高级篇',
+                    link: '/go-advancend/'
                  },
               {
                 text: '🔥 Go语言基础篇',
@@ -358,6 +375,10 @@ export default {
                  {
                     text: '🔥 进阶篇首页',
                     link: '/Gomd_super/markdown/'
+                 },
+                 {
+                    text: '🔥 Go语言高级篇',
+                    link: '/go-advancend/'
                  },
               {
                 text: '⚡ Go语言进阶篇',
@@ -477,6 +498,69 @@ export default {
                     },  
                 ],
               },
+            ],
+            '/go-advancend/': [
+                {
+                    text: '🏠回到主页',
+                    link: '/', 
+                },
+                // SidebarItem
+                 {
+                    text: '💱个人云盘地址',
+                    link: 'https://xxw.nsddd.top/s/wRSz'
+                 },
+                 {
+                    text: '🔥 进阶篇首页',
+                    link: '/Gomd_super/markdown/'
+                 },
+
+                {
+                    text: 'Go高级编程',
+                    children: [
+                        'design/1.md',
+                        'design/2.md',
+                        'design/3.md',
+                        'design/4.md',
+                        'design/5.md',
+                        'design/6.md',
+                        'design/7.md',
+                        'design/8.md',
+                        'design/9.md',
+                        'design/10.md',
+                        'design/11.md',
+                        'design/12.md',
+                        'design/13.md',
+                        'design/14.md',
+                        'design/15.md',
+                        '/markdown/1.md',
+                        '/markdown/2.md',
+                        '/markdown/3.md',
+                        '/markdown/4.md',
+                        '/markdown/5.md',
+                        '/markdown/6.md',
+                        '/markdown/7.md',
+                        '/markdown/8.md',
+                        '/markdown/9.md',
+                        '/markdown/10.md',
+                        '/markdown/11.md',
+                        '/markdown/12.md',
+                        '/markdown/13.md',
+                        '/markdown/14.md',
+                        '/markdown/15.md',
+                        '/markdown/16.md',
+                        '/markdown/17.md',
+                        '/markdown/18.md',
+                        '/markdown/19.md',
+                        '/markdown/20.md',
+                        '/markdown/21.md',
+                        '/markdown/22.md',
+                        '/markdown/23.md',
+                        '/markdown/24.md',
+                        '/markdown/25.md',
+                        '/markdown/26.md',
+                    ],
+
+                },
             ],
             '/': [
                 '/Gomd_super/',

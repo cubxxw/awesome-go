@@ -1,7 +1,7 @@
 <template><div><ul>
 <li><a href="https://github.com/3293172751/cs-awesome-Block_Chain" target="_blank" rel="noopener noreferrer">author<ExternalLinkIcon/></a></li>
 </ul>
-<h1 id="第6节" tabindex="-1"><a class="header-anchor" href="#第6节" aria-hidden="true">#</a> 第6节</h1>
+<h1 id="第6节-迪米特法则" tabindex="-1"><a class="header-anchor" href="#第6节-迪米特法则" aria-hidden="true">#</a> 第6节 迪米特法则</h1>
 <div><a href = '5.md' style='float:left'>⬆️上一节🔗</a><a href = '7.md' style='float: right'>⬇️下一节🔗</a></div>
 <br>
 <blockquote>
@@ -9,6 +9,12 @@
 </blockquote>
 <hr>
 <p>[TOC]</p>
+<h2 id="原则" tabindex="-1"><a class="header-anchor" href="#原则" aria-hidden="true">#</a> 原则</h2>
+<div class="custom-container danger"><p class="custom-container-title">警告</p>
+<p><strong>(Law of Demeter, LoD</strong> 迪米特法则</p>
+<p>一个对象应当对其他对象尽可能少的了解，从而降低各个对象之间的耦合，提高系统的可维护性。例如在一个程序中，各个模块之间相互调用时，通常会提供一个统一的接口来实现。这样其他模块不需要了解另外一个模块的内部实现细节，这样当一个模块内部的实现发生改变时，不会影响其他模块的使用。（黑盒原理）</p>
+<p>⚠️ 所有设计模式的思想都是：<strong>高内聚，低耦合</strong></p>
+</div>
 <h2 id="end-链接" tabindex="-1"><a class="header-anchor" href="#end-链接" aria-hidden="true">#</a> END 链接</h2>
 <ul><li><div><a href = '5.md' style='float:left'>⬆️上一节🔗</a><a href = '7.md' style='float: right'>⬇️下一节🔗</a></div></li></ul>
 <ul>

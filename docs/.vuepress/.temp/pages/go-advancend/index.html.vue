@@ -86,58 +86,58 @@
 <p>[x] <RouterLink to="/go-advancend/markdown/12.html">⚡第12节 Go语言的并发特性</RouterLink></p>
 </li>
 <li>
-<p><RouterLink to="/go-advancend/markdown/13.html">第13节 go语言list</RouterLink></p>
+<p>[x] <RouterLink to="/go-advancend/markdown/13.html">第13节 Go语言退出、结束函数或者协程方式</RouterLink></p>
 </li>
 <li>
-<p><RouterLink to="/go-advancend/markdown/14.html"></RouterLink></p>
+<p>[x] <RouterLink to="/go-advancend/markdown/14.html">第14节 Go版本控制</RouterLink></p>
 </li>
 <li>
-<p><RouterLink to="/go-advancend/markdown/15.html"></RouterLink></p>
+<p>[x] <RouterLink to="/go-advancend/markdown/15.html">第15节 Cobra</RouterLink></p>
 </li>
 <li>
-<p><RouterLink to="/go-advancend/markdown/16.html"></RouterLink></p>
+<p>[x] <RouterLink to="/go-advancend/markdown/16.html">第16节 Go genericity（泛型）</RouterLink></p>
 </li>
 <li>
-<p><RouterLink to="/go-advancend/markdown/17.html"></RouterLink></p>
+<p>[x] <RouterLink to="/go-advancend/markdown/17.html">第17节 多模块工作区（Workspaces）</RouterLink></p>
 </li>
 <li>
-<p><RouterLink to="/go-advancend/markdown/18.html"></RouterLink></p>
+<p>[x] <RouterLink to="/go-advancend/markdown/18.html">第18节 go 模糊测试</RouterLink></p>
 </li>
 <li>
-<p><RouterLink to="/go-advancend/markdown/19.html"></RouterLink></p>
+<p>[x] <RouterLink to="/go-advancend/markdown/19.html">第19节 go 实现 ping</RouterLink></p>
 </li>
 <li>
-<p><RouterLink to="/go-advancend/markdown/20.html"></RouterLink></p>
+<p>[x] <RouterLink to="/go-advancend/markdown/20.html">第20节 Golang云原生部署</RouterLink></p>
 </li>
 <li>
-<p><RouterLink to="/go-advancend/markdown/21.html"></RouterLink></p>
+<p>[x] <RouterLink to="/go-advancend/markdown/21.html"></RouterLink></p>
 </li>
 <li>
-<p><RouterLink to="/go-advancend/markdown/22.html"></RouterLink></p>
+<p>[x] <RouterLink to="/go-advancend/markdown/22.html"></RouterLink></p>
 </li>
 <li>
-<p><RouterLink to="/go-advancend/markdown/23.html"></RouterLink></p>
+<p>[x] <RouterLink to="/go-advancend/markdown/23.html"></RouterLink></p>
 </li>
 <li>
-<p><RouterLink to="/go-advancend/markdown/24.html"></RouterLink></p>
+<p>[x] <RouterLink to="/go-advancend/markdown/24.html"></RouterLink></p>
 </li>
 <li>
-<p><RouterLink to="/go-advancend/markdown/25.html"></RouterLink></p>
+<p>[x] <RouterLink to="/go-advancend/markdown/25.html"></RouterLink></p>
 </li>
 <li>
-<p><RouterLink to="/go-advancend/markdown/26.html"></RouterLink></p>
+<p>[x] <RouterLink to="/go-advancend/markdown/26.html"></RouterLink></p>
 </li>
 <li>
-<p><RouterLink to="/go-advancend/markdown/27.html"></RouterLink></p>
+<p>[x] <RouterLink to="/go-advancend/markdown/27.html"></RouterLink></p>
 </li>
 <li>
-<p><RouterLink to="/go-advancend/markdown/28.html"></RouterLink></p>
+<p>[x] <RouterLink to="/go-advancend/markdown/28.html"></RouterLink></p>
 </li>
 <li>
-<p><RouterLink to="/go-advancend/markdown/29.html"></RouterLink></p>
+<p>[x] <RouterLink to="/go-advancend/markdown/29.html"></RouterLink></p>
 </li>
 <li>
-<p><RouterLink to="/go-advancend/markdown/30.html"></RouterLink></p>
+<p>[x] <RouterLink to="/go-advancend/markdown/30.html"></RouterLink></p>
 </li>
 <li>
 <p><RouterLink to="/go-advancend/markdown/31.html"></RouterLink></p>
@@ -206,22 +206,22 @@
 <p>[x] <RouterLink to="/go-advancend/design/1.html">😎🔑设计模式概述</RouterLink></p>
 </li>
 <li>
-<p>[x] <RouterLink to="/go-advancend/design/2.html">😎🔑</RouterLink></p>
+<p>[x] <RouterLink to="/go-advancend/design/2.html">😎🔑第2节 单一职责原则</RouterLink></p>
 </li>
 <li>
-<p>[x] <RouterLink to="/go-advancend/design/3.html">😎🔑</RouterLink></p>
+<p>[x] <RouterLink to="/go-advancend/design/3.html">😎🔑第3节 开闭原则</RouterLink></p>
 </li>
 <li>
-<p>[x] <RouterLink to="/go-advancend/design/4.html">😎🔑</RouterLink></p>
+<p>[x] <RouterLink to="/go-advancend/design/4.html">😎🔑第4节 依赖倒转原则</RouterLink></p>
 </li>
 <li>
-<p>[x] <RouterLink to="/go-advancend/design/5.html">😎🔑</RouterLink></p>
+<p>[x] <RouterLink to="/go-advancend/design/5.html">😎🔑第5节 合成复用原则</RouterLink></p>
 </li>
 <li>
-<p>[x] <RouterLink to="/go-advancend/design/6.html">😎🔑</RouterLink></p>
+<p>[x] <RouterLink to="/go-advancend/design/6.html">😎🔑第6节 迪米特法则</RouterLink></p>
 </li>
 <li>
-<p>[x] <RouterLink to="/go-advancend/design/7.html">😎🔑</RouterLink></p>
+<p>[x] <RouterLink to="/go-advancend/design/7.html">😎🔑第7节 工厂模式（创建型模式）</RouterLink></p>
 </li>
 <li>
 <p>[x] <RouterLink to="/go-advancend/design/8.html">😎🔑</RouterLink></p>

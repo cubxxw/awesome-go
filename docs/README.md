@@ -10,8 +10,11 @@ actions:
   - text: Go语言基础篇学习
     link: /markdown/1
     type: primary
-  - text: Go语言高级篇学习
+  - text: Go语言进阶学习
     link: /Gomd_super/
+    type: primary
+  - text: Go语言高级篇学习
+    link: /go-advancend/
     type: primary
   - text: 链学社CUB
     link: https://github.com/C-UB/.github/blob/master/README.md

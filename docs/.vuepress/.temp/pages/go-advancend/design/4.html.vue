@@ -1,7 +1,7 @@
 <template><div><ul>
 <li><a href="https://github.com/3293172751/cs-awesome-Block_Chain" target="_blank" rel="noopener noreferrer">author<ExternalLinkIcon/></a></li>
 </ul>
-<h1 id="第4节-依赖倒转原则" tabindex="-1"><a class="header-anchor" href="#第4节-依赖倒转原则" aria-hidden="true">#</a> 第4节 <strong>依赖倒转原则</strong></h1>
+<h1 id="第4节-依赖倒转原则" tabindex="-1"><a class="header-anchor" href="#第4节-依赖倒转原则" aria-hidden="true">#</a> 第4节 依赖倒转原则</h1>
 <div><a href = '3.md' style='float:left'>⬆️上一节🔗</a><a href = '5.md' style='float: right'>⬇️下一节🔗</a></div>
 <br>
 <blockquote>
