@@ -430,8 +430,8 @@ version called
 	<span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul>
-<li>cmd 是一个指针，可以通过cmd来获取参数</li>
-<li>args 是一个数组，可以通过args来获取参数</li>
+<li><code v-pre>cmd</code> 是一个指针，可以通过<code v-pre>cmd</code>来获取参数</li>
+<li><code v-pre>args</code> 是一个数组，可以通过<code v-pre>args</code>来获取参数</li>
 </ul>
 <p>💡简单的一个案例如下：</p>
 <div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token comment">/*

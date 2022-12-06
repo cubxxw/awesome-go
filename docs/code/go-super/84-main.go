@@ -28,7 +28,9 @@ func (f *Fruit) String(name string) string {
 	}
 }
 
+//NOTE: os.Chmod and os.Chtimes don't recognize symbolic link,
 //Define a fruit method (create a fruit)
+//TODO: The following code is not recommended`	`
 func NewFruit(name string) *Fruit {
 	fruit := &Fruit{}
 	switch name {
