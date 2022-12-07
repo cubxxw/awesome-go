@@ -255,6 +255,115 @@ export const searchIndex = [
     "extraFields": []
   },
   {
+    "title": "Go语言进阶—高级篇代码",
+    "headers": [
+      {
+        "level": 2,
+        "title": "基础篇代码在下面",
+        "slug": "基础篇代码在下面",
+        "link": "#基础篇代码在下面",
+        "children": []
+      }
+    ],
+    "path": "/code/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [
+      {
+        "level": 2,
+        "title": "路线图",
+        "slug": "路线图",
+        "link": "#路线图",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "资源",
+        "slug": "资源",
+        "link": "#资源",
+        "children": [
+          {
+            "level": 3,
+            "title": "看书路线",
+            "slug": "看书路线",
+            "link": "#看书路线",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "github上面一些好的Go项目",
+            "slug": "github上面一些好的go项目",
+            "link": "#github上面一些好的go项目",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "开发路线",
+            "slug": "开发路线",
+            "link": "#开发路线",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/go-advancend/go_route.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Go语言高级篇",
+    "headers": [
+      {
+        "level": 2,
+        "title": "⚡ 前言",
+        "slug": "⚡-前言",
+        "link": "#⚡-前言",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "前期知识",
+        "slug": "前期知识",
+        "link": "#前期知识",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "📜目录",
+        "slug": "📜目录",
+        "link": "#📜目录",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "📚 设计模式",
+        "slug": "📚-设计模式",
+        "link": "#📚-设计模式",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "参与贡献",
+        "slug": "参与贡献",
+        "link": "#参与贡献",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "版权声明",
+        "slug": "版权声明",
+        "link": "#版权声明",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "位运算以及补码重点",
     "headers": [
       {
@@ -1241,21 +1350,6 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "Go语言进阶—高级篇代码",
-    "headers": [
-      {
-        "level": 2,
-        "title": "基础篇代码在下面",
-        "slug": "基础篇代码在下面",
-        "link": "#基础篇代码在下面",
-        "children": []
-      }
-    ],
-    "path": "/code/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "MIT 6.824 DistributedSystem~",
     "headers": [
       {
@@ -1521,100 +1615,6 @@ export const searchIndex = [
       }
     ],
     "path": "/mit-6-824/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [
-      {
-        "level": 2,
-        "title": "路线图",
-        "slug": "路线图",
-        "link": "#路线图",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "资源",
-        "slug": "资源",
-        "link": "#资源",
-        "children": [
-          {
-            "level": 3,
-            "title": "看书路线",
-            "slug": "看书路线",
-            "link": "#看书路线",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "github上面一些好的Go项目",
-            "slug": "github上面一些好的go项目",
-            "link": "#github上面一些好的go项目",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "开发路线",
-            "slug": "开发路线",
-            "link": "#开发路线",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/go-advancend/go_route.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Go语言高级篇",
-    "headers": [
-      {
-        "level": 2,
-        "title": "⚡ 前言",
-        "slug": "⚡-前言",
-        "link": "#⚡-前言",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "前期知识",
-        "slug": "前期知识",
-        "link": "#前期知识",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "📜目录",
-        "slug": "📜目录",
-        "link": "#📜目录",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "📚 设计模式",
-        "slug": "📚-设计模式",
-        "link": "#📚-设计模式",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "参与贡献",
-        "slug": "参与贡献",
-        "link": "#参与贡献",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "版权声明",
-        "slug": "版权声明",
-        "link": "#版权声明",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -5035,6 +5035,3872 @@ export const searchIndex = [
       }
     ],
     "path": "/markdown/%E5%B9%B6%E5%8F%91.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第1节 设计模式概述",
+    "headers": [
+      {
+        "level": 2,
+        "title": "设计模式定义",
+        "slug": "设计模式定义",
+        "link": "#设计模式定义",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "参考文章",
+        "slug": "参考文章",
+        "link": "#参考文章",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "设计模式的分类",
+        "slug": "设计模式的分类",
+        "link": "#设计模式的分类",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "如何学习设计模式",
+        "slug": "如何学习设计模式",
+        "link": "#如何学习设计模式",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "面对对象设计原则",
+        "slug": "面对对象设计原则",
+        "link": "#面对对象设计原则",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "设计模式的类型",
+        "slug": "设计模式的类型",
+        "link": "#设计模式的类型",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/1.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第10节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/10.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第11节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/11.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第12节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/12.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第13节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/13.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第14节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/14.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第15节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/15.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第16节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/16.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第17节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/17.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第18节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/18.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第19节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/19.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第2节 单一职责原则",
+    "headers": [
+      {
+        "level": 2,
+        "title": "什么是单一职责原则",
+        "slug": "什么是单一职责原则",
+        "link": "#什么是单一职责原则",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "代码",
+        "slug": "代码",
+        "link": "#代码",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/2.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第20节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/20.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第21节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/21.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第22节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/22.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第23节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/23.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第24节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/24.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第25节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/25.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第26节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/26.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第27节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/27.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第28节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/28.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第29节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/29.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第3节 开闭原则",
+    "headers": [
+      {
+        "level": 2,
+        "title": "原则",
+        "slug": "原则",
+        "link": "#原则",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "没有使用开闭原则",
+        "slug": "没有使用开闭原则",
+        "link": "#没有使用开闭原则",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "实现架构层，基于抽象层业务封装",
+        "slug": "实现架构层-基于抽象层业务封装",
+        "link": "#实现架构层-基于抽象层业务封装",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/3.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第30节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/30.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第31节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/31.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第32节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/32.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第33节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/33.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第34节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/34.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第35节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/35.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第36节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/36.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第37节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/37.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第38节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/38.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第39节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/39.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第4节 依赖倒转原则",
+    "headers": [
+      {
+        "level": 2,
+        "title": "原则",
+        "slug": "原则",
+        "link": "#原则",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "没有使用依赖倒转",
+        "slug": "没有使用依赖倒转",
+        "link": "#没有使用依赖倒转",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "使用依赖倒转",
+        "slug": "使用依赖倒转",
+        "link": "#使用依赖倒转",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/4.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第40节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/40.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第41节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/41.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第42节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/42.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第43节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/43.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第44节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/44.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第45节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/45.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第46节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/46.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第47节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/47.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第48节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/48.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第49节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/49.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第5节 合成复用原则",
+    "headers": [
+      {
+        "level": 2,
+        "title": "原则",
+        "slug": "原则",
+        "link": "#原则",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "继承和组合",
+        "slug": "继承和组合",
+        "link": "#继承和组合",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "使用合并复用",
+        "slug": "使用合并复用",
+        "link": "#使用合并复用",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/5.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第50节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/50.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第51节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/51.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第52节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/52.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第53节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/53.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第54节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/54.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第55节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/55.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第56节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/56.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第57节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/57.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第58节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/58.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第59节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/59.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第6节 迪米特法则",
+    "headers": [
+      {
+        "level": 2,
+        "title": "原则",
+        "slug": "原则",
+        "link": "#原则",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/6.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第60节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/60.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第61节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/61.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第62节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/62.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第63节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/63.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第64节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/64.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第65节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/65.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第66节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/66.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第67节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/67.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第68节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/68.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第69节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/69.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第7节 工厂模式（创建型模式）",
+    "headers": [
+      {
+        "level": 2,
+        "title": "创建形模式",
+        "slug": "创建形模式",
+        "link": "#创建形模式",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "简单工厂模式",
+        "slug": "简单工厂模式",
+        "link": "#简单工厂模式",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "简单工厂模式设计",
+        "slug": "简单工厂模式设计",
+        "link": "#简单工厂模式设计",
+        "children": [
+          {
+            "level": 3,
+            "title": "简单工厂方法模式的优缺点",
+            "slug": "简单工厂方法模式的优缺点",
+            "link": "#简单工厂方法模式的优缺点",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/7.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第70节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/70.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第71节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/71.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第72节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/72.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第73节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/73.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第74节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/74.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第75节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/75.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第76节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/76.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第77节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/77.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第78节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/78.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第79节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/79.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第8节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/8.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第80节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/80.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第81节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/81.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第82节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/82.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第83节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/83.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第84节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/84.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第85节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/85.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第86节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/86.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第87节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/87.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第88节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/88.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第89节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/89.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第9节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/9.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第90节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/90.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第91节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/91.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第92节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/92.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第93节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/93.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第94节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/94.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第95节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/95.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第96节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/96.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第97节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/97.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第98节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/98.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第99节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/99.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第1节 Gcc and Cgo",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Go语言基础篇",
+        "slug": "go语言基础篇",
+        "link": "#go语言基础篇",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Go语言100篇进阶",
+        "slug": "go语言100篇进阶",
+        "link": "#go语言100篇进阶",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/markdown/1.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第10节 go air实现项目热加载",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Go语言基础篇",
+        "slug": "go语言基础篇",
+        "link": "#go语言基础篇",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Go语言100篇进阶",
+        "slug": "go语言100篇进阶",
+        "link": "#go语言100篇进阶",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "开始准备",
+        "slug": "开始准备",
+        "link": "#开始准备",
+        "children": [
+          {
+            "level": 3,
+            "title": "Windows安装go air实现项目热加载",
+            "slug": "windows安装go-air实现项目热加载",
+            "link": "#windows安装go-air实现项目热加载",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "安装",
+        "slug": "安装",
+        "link": "#安装",
+        "children": [
+          {
+            "level": 3,
+            "title": "推荐使用 install.sh",
+            "slug": "推荐使用-install-sh",
+            "link": "#推荐使用-install-sh",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "使用 go install",
+            "slug": "使用-go-install",
+            "link": "#使用-go-install",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Docker",
+            "slug": "docker",
+            "link": "#docker",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "使用方法",
+        "slug": "使用方法",
+        "link": "#使用方法",
+        "children": [
+          {
+            "level": 3,
+            "title": "运行时参数",
+            "slug": "运行时参数",
+            "link": "#运行时参数",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Docker-compose",
+            "slug": "docker-compose",
+            "link": "#docker-compose",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "调试",
+            "slug": "调试",
+            "link": "#调试",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "部署",
+        "slug": "部署",
+        "link": "#部署",
+        "children": [
+          {
+            "level": 3,
+            "title": "发布新版本",
+            "slug": "发布新版本",
+            "link": "#发布新版本",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/markdown/10.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第11节 Go语言特性代码展示与新特性泛型",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Go语言基础篇",
+        "slug": "go语言基础篇",
+        "link": "#go语言基础篇",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Go语言100篇进阶",
+        "slug": "go语言100篇进阶",
+        "link": "#go语言100篇进阶",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Go18",
+        "slug": "go18",
+        "link": "#go18",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "值、引用、指针",
+        "slug": "值、引用、指针",
+        "link": "#值、引用、指针",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "泛型和约束",
+        "slug": "泛型和约束",
+        "link": "#泛型和约束",
+        "children": [
+          {
+            "level": 3,
+            "title": "GO 中泛型的语法",
+            "slug": "go-中泛型的语法",
+            "link": "#go-中泛型的语法",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "指定类型参数调用",
+            "slug": "指定类型参数调用",
+            "link": "#指定类型参数调用",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "通过interfac进行类型约束",
+            "slug": "通过interfac进行类型约束",
+            "link": "#通过interfac进行类型约束",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/markdown/11.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第12节 Go语言的并发特性",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Go语言基础篇",
+        "slug": "go语言基础篇",
+        "link": "#go语言基础篇",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Go语言100篇进阶",
+        "slug": "go语言100篇进阶",
+        "link": "#go语言100篇进阶",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "并发模型",
+        "slug": "并发模型",
+        "link": "#并发模型",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Go与并发",
+        "slug": "go与并发",
+        "link": "#go与并发",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Go语言",
+        "slug": "go语言",
+        "link": "#go语言",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/markdown/12.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第13节 Go语言退出、结束函数或者协程方式",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Go语言基础篇",
+        "slug": "go语言基础篇",
+        "link": "#go语言基础篇",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Go语言100篇进阶",
+        "slug": "go语言100篇进阶",
+        "link": "#go语言100篇进阶",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "runtime.Goexit() 退出当前协程",
+        "slug": "runtime-goexit-退出当前协程",
+        "link": "#runtime-goexit-退出当前协程",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "os.Exit(-1) 退出当前程序",
+        "slug": "os-exit-1-退出当前程序",
+        "link": "#os-exit-1-退出当前程序",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "os.Exit(0) 中断进程",
+        "slug": "os-exit-0-中断进程",
+        "link": "#os-exit-0-中断进程",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "panic() 抛出异常退出",
+        "slug": "panic-抛出异常退出",
+        "link": "#panic-抛出异常退出",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "return 跳出当前函数",
+        "slug": "return-跳出当前函数",
+        "link": "#return-跳出当前函数",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Lable跳转标签",
+        "slug": "lable跳转标签",
+        "link": "#lable跳转标签",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/markdown/13.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第14节 Go版本控制",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Go语言基础篇",
+        "slug": "go语言基础篇",
+        "link": "#go语言基础篇",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Go语言100篇进阶",
+        "slug": "go语言100篇进阶",
+        "link": "#go语言100篇进阶",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "前言",
+        "slug": "前言",
+        "link": "#前言",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "安装 goup",
+        "slug": "安装-goup",
+        "link": "#安装-goup",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "gvm",
+        "slug": "gvm",
+        "link": "#gvm",
+        "children": [
+          {
+            "level": 3,
+            "title": "安装",
+            "slug": "安装",
+            "link": "#安装",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "使用",
+            "slug": "使用",
+            "link": "#使用",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/markdown/14.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第15节 Cobra",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Go语言基础篇",
+        "slug": "go语言基础篇",
+        "link": "#go语言基础篇",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Go语言100篇进阶",
+        "slug": "go语言100篇进阶",
+        "link": "#go语言100篇进阶",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "cobra 简介",
+        "slug": "cobra-简介",
+        "link": "#cobra-简介",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Cobra 安装",
+        "slug": "cobra-安装",
+        "link": "#cobra-安装",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "项目中导入",
+        "slug": "项目中导入",
+        "link": "#项目中导入",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "cobra-cli",
+        "slug": "cobra-cli",
+        "link": "#cobra-cli",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "cobra 项目创建",
+        "slug": "cobra-项目创建",
+        "link": "#cobra-项目创建",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "编译",
+        "slug": "编译",
+        "link": "#编译",
+        "children": [
+          {
+            "level": 3,
+            "title": "main.go",
+            "slug": "main-go",
+            "link": "#main-go",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "root.go",
+            "slug": "root-go",
+            "link": "#root-go",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "为命令加上一个子命令",
+        "slug": "为命令加上一个子命令",
+        "link": "#为命令加上一个子命令",
+        "children": [
+          {
+            "level": 3,
+            "title": "绑定父命令",
+            "slug": "绑定父命令",
+            "link": "#绑定父命令",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "为命令添加选项",
+        "slug": "为命令添加选项",
+        "link": "#为命令添加选项",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "补充 run参数的匿名函数",
+        "slug": "补充-run参数的匿名函数",
+        "link": "#补充-run参数的匿名函数",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/markdown/15.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第16节 Go genericity（泛型）",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Go语言基础篇",
+        "slug": "go语言基础篇",
+        "link": "#go语言基础篇",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Go语言100篇进阶",
+        "slug": "go语言100篇进阶",
+        "link": "#go语言100篇进阶",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "先决条件",
+        "slug": "先决条件",
+        "link": "#先决条件",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "上手–解决相加问题",
+        "slug": "上手–解决相加问题",
+        "link": "#上手–解决相加问题",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "自定义泛型（genericity）约束",
+        "slug": "自定义泛型-genericity-约束",
+        "link": "#自定义泛型-genericity-约束",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/markdown/16.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第17节 多模块工作区（Workspaces）",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Go语言基础篇",
+        "slug": "go语言基础篇",
+        "link": "#go语言基础篇",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Go语言100篇进阶",
+        "slug": "go语言100篇进阶",
+        "link": "#go语言100篇进阶",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Why you need it？",
+        "slug": "why-you-need-it",
+        "link": "#why-you-need-it",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "简单上手",
+        "slug": "简单上手",
+        "link": "#简单上手",
+        "children": [
+          {
+            "level": 3,
+            "title": "文件内容",
+            "slug": "文件内容",
+            "link": "#文件内容",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "如何调用",
+            "slug": "如何调用",
+            "link": "#如何调用",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "调用 utils",
+            "slug": "调用-utils",
+            "link": "#调用-utils",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "go work 支持命令",
+        "slug": "go-work-支持命令",
+        "link": "#go-work-支持命令",
+        "children": [
+          {
+            "level": 3,
+            "title": "go.work 文件结构",
+            "slug": "go-work-文件结构",
+            "link": "#go-work-文件结构",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "如何使用",
+            "slug": "如何使用",
+            "link": "#如何使用",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "如何禁用工作区",
+            "slug": "如何禁用工作区",
+            "link": "#如何禁用工作区",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "开发流程演示",
+        "slug": "开发流程演示",
+        "link": "#开发流程演示",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "总结",
+        "slug": "总结",
+        "link": "#总结",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "参考文献",
+        "slug": "参考文献",
+        "link": "#参考文献",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/markdown/17.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第18节 go 模糊测试",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Go语言基础篇",
+        "slug": "go语言基础篇",
+        "link": "#go语言基础篇",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Go语言100篇进阶",
+        "slug": "go语言100篇进阶",
+        "link": "#go语言100篇进阶",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Why you need it？",
+        "slug": "why-you-need-it",
+        "link": "#why-you-need-it",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "测试源",
+        "slug": "测试源",
+        "link": "#测试源",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "需要测试",
+        "slug": "需要测试",
+        "link": "#需要测试",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "问题",
+        "slug": "问题",
+        "link": "#问题",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "模糊测试",
+        "slug": "模糊测试",
+        "link": "#模糊测试",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/markdown/18.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第19节 go 实现 ping",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Go语言基础篇",
+        "slug": "go语言基础篇",
+        "link": "#go语言基础篇",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Go语言100篇进阶",
+        "slug": "go语言100篇进阶",
+        "link": "#go语言100篇进阶",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "ICMP",
+        "slug": "icmp",
+        "link": "#icmp",
+        "children": [
+          {
+            "level": 3,
+            "title": "ICMPとは？",
+            "slug": "icmpとは",
+            "link": "#icmpとは",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "报文头",
+            "slug": "报文头",
+            "link": "#报文头",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "ICMP 的格式",
+            "slug": "icmp-的格式",
+            "link": "#icmp-的格式",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "Go语言实现 Ping 操作",
+        "slug": "go语言实现-ping-操作",
+        "link": "#go语言实现-ping-操作",
+        "children": [
+          {
+            "level": 3,
+            "title": "flag 的作用",
+            "slug": "flag-的作用",
+            "link": "#flag-的作用",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "lag.Type()",
+            "slug": "lag-type",
+            "link": "#lag-type",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "flag.TypeVar()",
+            "slug": "flag-typevar",
+            "link": "#flag-typevar",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "flag.Parse()",
+            "slug": "flag-parse",
+            "link": "#flag-parse",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "else",
+            "slug": "else",
+            "link": "#else",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "获取命令行参数",
+        "slug": "获取命令行参数",
+        "link": "#获取命令行参数",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "获取请求",
+        "slug": "获取请求",
+        "link": "#获取请求",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "案例",
+        "slug": "案例",
+        "link": "#案例",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/markdown/19.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第2节 Go并发编程–日志分析系统介绍",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Go语言基础篇",
+        "slug": "go语言基础篇",
+        "link": "#go语言基础篇",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Go语言100篇进阶",
+        "slug": "go语言100篇进阶",
+        "link": "#go语言100篇进阶",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "参考链接",
+        "slug": "参考链接",
+        "link": "#参考链接",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "日志分析系统实战",
+        "slug": "日志分析系统实战",
+        "link": "#日志分析系统实战",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "常见的并发模型",
+        "slug": "常见的并发模型",
+        "link": "#常见的并发模型",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Golang并发实现",
+        "slug": "golang并发实现",
+        "link": "#golang并发实现",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Influxdb简介",
+        "slug": "influxdb简介",
+        "link": "#influxdb简介",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/markdown/2.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第20节 Golang云原生部署",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Go语言基础篇",
+        "slug": "go语言基础篇",
+        "link": "#go语言基础篇",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Go语言100篇进阶",
+        "slug": "go语言100篇进阶",
+        "link": "#go语言100篇进阶",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "开始",
+        "slug": "开始",
+        "link": "#开始",
+        "children": [
+          {
+            "level": 3,
+            "title": "dockerize 命令",
+            "slug": "dockerize-命令",
+            "link": "#dockerize-命令",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "方式二：测试项目",
+        "slug": "方式二-测试项目",
+        "link": "#方式二-测试项目",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "推送镜像",
+        "slug": "推送镜像",
+        "link": "#推送镜像",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "定义 k8s 应用程序载体 Pod",
+        "slug": "定义-k8s-应用程序载体-pod",
+        "link": "#定义-k8s-应用程序载体-pod",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/markdown/20.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第21节 go 语言切片原理",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Go语言基础篇",
+        "slug": "go语言基础篇",
+        "link": "#go语言基础篇",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Go语言100篇进阶",
+        "slug": "go语言100篇进阶",
+        "link": "#go语言100篇进阶",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "代码~",
+        "slug": "代码",
+        "link": "#代码",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "测试",
+        "slug": "测试",
+        "link": "#测试",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "不改变 s2",
+        "slug": "不改变-s2",
+        "link": "#不改变-s2",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "总结",
+        "slug": "总结",
+        "link": "#总结",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/markdown/21.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第22节",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Go语言基础篇",
+        "slug": "go语言基础篇",
+        "link": "#go语言基础篇",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Go语言100篇进阶",
+        "slug": "go语言100篇进阶",
+        "link": "#go语言100篇进阶",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/markdown/22.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第23节",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Go语言基础篇",
+        "slug": "go语言基础篇",
+        "link": "#go语言基础篇",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Go语言100篇进阶",
+        "slug": "go语言100篇进阶",
+        "link": "#go语言100篇进阶",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/markdown/23.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第24节",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Go语言基础篇",
+        "slug": "go语言基础篇",
+        "link": "#go语言基础篇",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Go语言100篇进阶",
+        "slug": "go语言100篇进阶",
+        "link": "#go语言100篇进阶",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/markdown/24.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第25节",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Go语言基础篇",
+        "slug": "go语言基础篇",
+        "link": "#go语言基础篇",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Go语言100篇进阶",
+        "slug": "go语言100篇进阶",
+        "link": "#go语言100篇进阶",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/markdown/25.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第26节",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Go语言基础篇",
+        "slug": "go语言基础篇",
+        "link": "#go语言基础篇",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Go语言100篇进阶",
+        "slug": "go语言100篇进阶",
+        "link": "#go语言100篇进阶",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/markdown/26.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第27节",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Go语言基础篇",
+        "slug": "go语言基础篇",
+        "link": "#go语言基础篇",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Go语言100篇进阶",
+        "slug": "go语言100篇进阶",
+        "link": "#go语言100篇进阶",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/markdown/27.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第28节",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Go语言基础篇",
+        "slug": "go语言基础篇",
+        "link": "#go语言基础篇",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Go语言100篇进阶",
+        "slug": "go语言100篇进阶",
+        "link": "#go语言100篇进阶",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/markdown/28.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第29节",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Go语言基础篇",
+        "slug": "go语言基础篇",
+        "link": "#go语言基础篇",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Go语言100篇进阶",
+        "slug": "go语言100篇进阶",
+        "link": "#go语言100篇进阶",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/markdown/29.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第3节 并发与并行",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Go语言基础篇",
+        "slug": "go语言基础篇",
+        "link": "#go语言基础篇",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Go语言100篇进阶",
+        "slug": "go语言100篇进阶",
+        "link": "#go语言100篇进阶",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "并发和并行关系",
+        "slug": "并发和并行关系",
+        "link": "#并发和并行关系",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/markdown/3.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第30节",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Go语言基础篇",
+        "slug": "go语言基础篇",
+        "link": "#go语言基础篇",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Go语言100篇进阶",
+        "slug": "go语言100篇进阶",
+        "link": "#go语言100篇进阶",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/markdown/30.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第31节",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Go语言基础篇",
+        "slug": "go语言基础篇",
+        "link": "#go语言基础篇",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Go语言100篇进阶",
+        "slug": "go语言100篇进阶",
+        "link": "#go语言100篇进阶",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/markdown/31.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第32节",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Go语言基础篇",
+        "slug": "go语言基础篇",
+        "link": "#go语言基础篇",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Go语言100篇进阶",
+        "slug": "go语言100篇进阶",
+        "link": "#go语言100篇进阶",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/markdown/32.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第33节",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Go语言基础篇",
+        "slug": "go语言基础篇",
+        "link": "#go语言基础篇",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Go语言100篇进阶",
+        "slug": "go语言100篇进阶",
+        "link": "#go语言100篇进阶",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/markdown/33.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第34节",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Go语言基础篇",
+        "slug": "go语言基础篇",
+        "link": "#go语言基础篇",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Go语言100篇进阶",
+        "slug": "go语言100篇进阶",
+        "link": "#go语言100篇进阶",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/markdown/34.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第35节",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Go语言基础篇",
+        "slug": "go语言基础篇",
+        "link": "#go语言基础篇",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Go语言100篇进阶",
+        "slug": "go语言100篇进阶",
+        "link": "#go语言100篇进阶",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/markdown/35.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第36节",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Go语言基础篇",
+        "slug": "go语言基础篇",
+        "link": "#go语言基础篇",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Go语言100篇进阶",
+        "slug": "go语言100篇进阶",
+        "link": "#go语言100篇进阶",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/markdown/36.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第37节",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Go语言基础篇",
+        "slug": "go语言基础篇",
+        "link": "#go语言基础篇",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Go语言100篇进阶",
+        "slug": "go语言100篇进阶",
+        "link": "#go语言100篇进阶",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/markdown/37.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第38节",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Go语言基础篇",
+        "slug": "go语言基础篇",
+        "link": "#go语言基础篇",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Go语言100篇进阶",
+        "slug": "go语言100篇进阶",
+        "link": "#go语言100篇进阶",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/markdown/38.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第39节",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Go语言基础篇",
+        "slug": "go语言基础篇",
+        "link": "#go语言基础篇",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Go语言100篇进阶",
+        "slug": "go语言100篇进阶",
+        "link": "#go语言100篇进阶",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/markdown/39.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第4节 流程构建和分析",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Go语言基础篇",
+        "slug": "go语言基础篇",
+        "link": "#go语言基础篇",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Go语言100篇进阶",
+        "slug": "go语言100篇进阶",
+        "link": "#go语言100篇进阶",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "创建一个go-mod和仓库",
+        "slug": "创建一个go-mod和仓库",
+        "link": "#创建一个go-mod和仓库",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "程序框架",
+        "slug": "程序框架",
+        "link": "#程序框架",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "程序测试",
+        "slug": "程序测试",
+        "link": "#程序测试",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "程序优化",
+        "slug": "程序优化",
+        "link": "#程序优化",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/markdown/4.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第40节",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Go语言基础篇",
+        "slug": "go语言基础篇",
+        "link": "#go语言基础篇",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Go语言100篇进阶",
+        "slug": "go语言100篇进阶",
+        "link": "#go语言100篇进阶",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/markdown/40.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第41节",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Go语言基础篇",
+        "slug": "go语言基础篇",
+        "link": "#go语言基础篇",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Go语言100篇进阶",
+        "slug": "go语言100篇进阶",
+        "link": "#go语言100篇进阶",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/markdown/41.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第42节",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Go语言基础篇",
+        "slug": "go语言基础篇",
+        "link": "#go语言基础篇",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Go语言100篇进阶",
+        "slug": "go语言100篇进阶",
+        "link": "#go语言100篇进阶",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/markdown/42.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第43节",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Go语言基础篇",
+        "slug": "go语言基础篇",
+        "link": "#go语言基础篇",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Go语言100篇进阶",
+        "slug": "go语言100篇进阶",
+        "link": "#go语言100篇进阶",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/markdown/43.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第44节",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Go语言基础篇",
+        "slug": "go语言基础篇",
+        "link": "#go语言基础篇",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Go语言100篇进阶",
+        "slug": "go语言100篇进阶",
+        "link": "#go语言100篇进阶",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/markdown/44.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第45节",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Go语言基础篇",
+        "slug": "go语言基础篇",
+        "link": "#go语言基础篇",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Go语言100篇进阶",
+        "slug": "go语言100篇进阶",
+        "link": "#go语言100篇进阶",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/markdown/45.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第46节",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Go语言基础篇",
+        "slug": "go语言基础篇",
+        "link": "#go语言基础篇",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Go语言100篇进阶",
+        "slug": "go语言100篇进阶",
+        "link": "#go语言100篇进阶",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/markdown/46.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第47节",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Go语言基础篇",
+        "slug": "go语言基础篇",
+        "link": "#go语言基础篇",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Go语言100篇进阶",
+        "slug": "go语言100篇进阶",
+        "link": "#go语言100篇进阶",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/markdown/47.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第48节",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Go语言基础篇",
+        "slug": "go语言基础篇",
+        "link": "#go语言基础篇",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Go语言100篇进阶",
+        "slug": "go语言100篇进阶",
+        "link": "#go语言100篇进阶",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/markdown/48.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第49节",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Go语言基础篇",
+        "slug": "go语言基础篇",
+        "link": "#go语言基础篇",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Go语言100篇进阶",
+        "slug": "go语言100篇进阶",
+        "link": "#go语言100篇进阶",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/markdown/49.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第5节 读取模块的构建",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Go语言基础篇",
+        "slug": "go语言基础篇",
+        "link": "#go语言基础篇",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Go语言100篇进阶",
+        "slug": "go语言100篇进阶",
+        "link": "#go语言100篇进阶",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "读取模块的实现",
+        "slug": "读取模块的实现",
+        "link": "#读取模块的实现",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "读取模块测试",
+        "slug": "读取模块测试",
+        "link": "#读取模块测试",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/markdown/5.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第50节",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Go语言基础篇",
+        "slug": "go语言基础篇",
+        "link": "#go语言基础篇",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Go语言100篇进阶",
+        "slug": "go语言100篇进阶",
+        "link": "#go语言100篇进阶",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/markdown/50.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第6节 解析模块的实现",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Go语言基础篇",
+        "slug": "go语言基础篇",
+        "link": "#go语言基础篇",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Go语言100篇进阶",
+        "slug": "go语言100篇进阶",
+        "link": "#go语言100篇进阶",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "解析模块的功能",
+        "slug": "解析模块的功能",
+        "link": "#解析模块的功能",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "解析模块的实现",
+        "slug": "解析模块的实现",
+        "link": "#解析模块的实现",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/markdown/6.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第7节 InfluxDB的概念和安装",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Go语言基础篇",
+        "slug": "go语言基础篇",
+        "link": "#go语言基础篇",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Go语言100篇进阶",
+        "slug": "go语言100篇进阶",
+        "link": "#go语言100篇进阶",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "写入模块的实现",
+        "slug": "写入模块的实现",
+        "link": "#写入模块的实现",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "监控需求",
+        "slug": "监控需求",
+        "link": "#监控需求",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "influxdb",
+        "slug": "influxdb",
+        "link": "#influxdb",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "安装influxdb",
+        "slug": "安装influxdb",
+        "link": "#安装influxdb",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "influxdb使用",
+        "slug": "influxdb使用",
+        "link": "#influxdb使用",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "使用到的字段",
+        "slug": "使用到的字段",
+        "link": "#使用到的字段",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/markdown/7.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第8节 写入模块的实现",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Go语言基础篇",
+        "slug": "go语言基础篇",
+        "link": "#go语言基础篇",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Go语言100篇进阶",
+        "slug": "go语言100篇进阶",
+        "link": "#go语言100篇进阶",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "写入模块的实现",
+        "slug": "写入模块的实现",
+        "link": "#写入模块的实现",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "写入模块程序",
+        "slug": "写入模块程序",
+        "link": "#写入模块程序",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/markdown/8.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第9节 监控图的绘制",
+    "headers": [
+      {
+        "level": 3,
+        "title": "Go语言基础篇",
+        "slug": "go语言基础篇",
+        "link": "#go语言基础篇",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "Go语言100篇进阶",
+        "slug": "go语言100篇进阶",
+        "link": "#go语言100篇进阶",
+        "children": []
+      },
+      {
+        "level": 3,
+        "title": "grafana",
+        "slug": "grafana",
+        "link": "#grafana",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/markdown/9.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -10167,3872 +14033,6 @@ export const searchIndex = [
       }
     ],
     "path": "/mit-6-824/MIT6-824/9.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第1节 设计模式概述",
-    "headers": [
-      {
-        "level": 2,
-        "title": "设计模式定义",
-        "slug": "设计模式定义",
-        "link": "#设计模式定义",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "参考文章",
-        "slug": "参考文章",
-        "link": "#参考文章",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "设计模式的分类",
-        "slug": "设计模式的分类",
-        "link": "#设计模式的分类",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "如何学习设计模式",
-        "slug": "如何学习设计模式",
-        "link": "#如何学习设计模式",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "面对对象设计原则",
-        "slug": "面对对象设计原则",
-        "link": "#面对对象设计原则",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "设计模式的类型",
-        "slug": "设计模式的类型",
-        "link": "#设计模式的类型",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/1.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第10节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/10.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第11节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/11.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第12节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/12.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第13节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/13.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第14节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/14.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第15节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/15.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第16节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/16.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第17节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/17.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第18节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/18.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第19节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/19.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第2节 单一职责原则",
-    "headers": [
-      {
-        "level": 2,
-        "title": "什么是单一职责原则",
-        "slug": "什么是单一职责原则",
-        "link": "#什么是单一职责原则",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "代码",
-        "slug": "代码",
-        "link": "#代码",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/2.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第20节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/20.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第21节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/21.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第22节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/22.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第23节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/23.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第24节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/24.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第25节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/25.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第26节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/26.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第27节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/27.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第28节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/28.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第29节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/29.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第3节 开闭原则",
-    "headers": [
-      {
-        "level": 2,
-        "title": "原则",
-        "slug": "原则",
-        "link": "#原则",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "没有使用开闭原则",
-        "slug": "没有使用开闭原则",
-        "link": "#没有使用开闭原则",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "实现架构层，基于抽象层业务封装",
-        "slug": "实现架构层-基于抽象层业务封装",
-        "link": "#实现架构层-基于抽象层业务封装",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/3.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第30节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/30.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第31节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/31.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第32节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/32.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第33节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/33.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第34节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/34.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第35节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/35.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第36节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/36.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第37节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/37.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第38节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/38.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第39节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/39.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第4节 依赖倒转原则",
-    "headers": [
-      {
-        "level": 2,
-        "title": "原则",
-        "slug": "原则",
-        "link": "#原则",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "没有使用依赖倒转",
-        "slug": "没有使用依赖倒转",
-        "link": "#没有使用依赖倒转",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "使用依赖倒转",
-        "slug": "使用依赖倒转",
-        "link": "#使用依赖倒转",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/4.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第40节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/40.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第41节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/41.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第42节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/42.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第43节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/43.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第44节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/44.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第45节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/45.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第46节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/46.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第47节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/47.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第48节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/48.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第49节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/49.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第5节 合成复用原则",
-    "headers": [
-      {
-        "level": 2,
-        "title": "原则",
-        "slug": "原则",
-        "link": "#原则",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "继承和组合",
-        "slug": "继承和组合",
-        "link": "#继承和组合",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "使用合并复用",
-        "slug": "使用合并复用",
-        "link": "#使用合并复用",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/5.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第50节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/50.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第51节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/51.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第52节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/52.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第53节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/53.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第54节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/54.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第55节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/55.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第56节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/56.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第57节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/57.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第58节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/58.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第59节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/59.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第6节 迪米特法则",
-    "headers": [
-      {
-        "level": 2,
-        "title": "原则",
-        "slug": "原则",
-        "link": "#原则",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/6.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第60节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/60.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第61节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/61.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第62节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/62.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第63节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/63.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第64节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/64.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第65节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/65.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第66节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/66.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第67节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/67.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第68节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/68.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第69节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/69.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第7节 工厂模式（创建型模式）",
-    "headers": [
-      {
-        "level": 2,
-        "title": "创建形模式",
-        "slug": "创建形模式",
-        "link": "#创建形模式",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "简单工厂模式",
-        "slug": "简单工厂模式",
-        "link": "#简单工厂模式",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "简单工厂模式设计",
-        "slug": "简单工厂模式设计",
-        "link": "#简单工厂模式设计",
-        "children": [
-          {
-            "level": 3,
-            "title": "简单工厂方法模式的优缺点",
-            "slug": "简单工厂方法模式的优缺点",
-            "link": "#简单工厂方法模式的优缺点",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/7.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第70节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/70.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第71节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/71.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第72节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/72.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第73节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/73.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第74节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/74.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第75节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/75.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第76节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/76.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第77节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/77.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第78节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/78.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第79节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/79.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第8节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/8.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第80节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/80.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第81节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/81.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第82节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/82.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第83节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/83.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第84节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/84.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第85节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/85.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第86节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/86.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第87节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/87.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第88节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/88.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第89节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/89.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第9节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/9.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第90节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/90.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第91节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/91.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第92节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/92.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第93节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/93.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第94节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/94.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第95节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/95.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第96节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/96.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第97节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/97.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第98节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/98.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第99节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/99.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第1节 Gcc and Cgo",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Go语言基础篇",
-        "slug": "go语言基础篇",
-        "link": "#go语言基础篇",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Go语言100篇进阶",
-        "slug": "go语言100篇进阶",
-        "link": "#go语言100篇进阶",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/markdown/1.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第10节 go air实现项目热加载",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Go语言基础篇",
-        "slug": "go语言基础篇",
-        "link": "#go语言基础篇",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Go语言100篇进阶",
-        "slug": "go语言100篇进阶",
-        "link": "#go语言100篇进阶",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "开始准备",
-        "slug": "开始准备",
-        "link": "#开始准备",
-        "children": [
-          {
-            "level": 3,
-            "title": "Windows安装go air实现项目热加载",
-            "slug": "windows安装go-air实现项目热加载",
-            "link": "#windows安装go-air实现项目热加载",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "安装",
-        "slug": "安装",
-        "link": "#安装",
-        "children": [
-          {
-            "level": 3,
-            "title": "推荐使用 install.sh",
-            "slug": "推荐使用-install-sh",
-            "link": "#推荐使用-install-sh",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "使用 go install",
-            "slug": "使用-go-install",
-            "link": "#使用-go-install",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Docker",
-            "slug": "docker",
-            "link": "#docker",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "使用方法",
-        "slug": "使用方法",
-        "link": "#使用方法",
-        "children": [
-          {
-            "level": 3,
-            "title": "运行时参数",
-            "slug": "运行时参数",
-            "link": "#运行时参数",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Docker-compose",
-            "slug": "docker-compose",
-            "link": "#docker-compose",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "调试",
-            "slug": "调试",
-            "link": "#调试",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "部署",
-        "slug": "部署",
-        "link": "#部署",
-        "children": [
-          {
-            "level": 3,
-            "title": "发布新版本",
-            "slug": "发布新版本",
-            "link": "#发布新版本",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/markdown/10.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第11节 Go语言特性代码展示与新特性泛型",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Go语言基础篇",
-        "slug": "go语言基础篇",
-        "link": "#go语言基础篇",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Go语言100篇进阶",
-        "slug": "go语言100篇进阶",
-        "link": "#go语言100篇进阶",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Go18",
-        "slug": "go18",
-        "link": "#go18",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "值、引用、指针",
-        "slug": "值、引用、指针",
-        "link": "#值、引用、指针",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "泛型和约束",
-        "slug": "泛型和约束",
-        "link": "#泛型和约束",
-        "children": [
-          {
-            "level": 3,
-            "title": "GO 中泛型的语法",
-            "slug": "go-中泛型的语法",
-            "link": "#go-中泛型的语法",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "指定类型参数调用",
-            "slug": "指定类型参数调用",
-            "link": "#指定类型参数调用",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "通过interfac进行类型约束",
-            "slug": "通过interfac进行类型约束",
-            "link": "#通过interfac进行类型约束",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/markdown/11.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第12节 Go语言的并发特性",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Go语言基础篇",
-        "slug": "go语言基础篇",
-        "link": "#go语言基础篇",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Go语言100篇进阶",
-        "slug": "go语言100篇进阶",
-        "link": "#go语言100篇进阶",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "并发模型",
-        "slug": "并发模型",
-        "link": "#并发模型",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Go与并发",
-        "slug": "go与并发",
-        "link": "#go与并发",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Go语言",
-        "slug": "go语言",
-        "link": "#go语言",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/markdown/12.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第13节 Go语言退出、结束函数或者协程方式",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Go语言基础篇",
-        "slug": "go语言基础篇",
-        "link": "#go语言基础篇",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Go语言100篇进阶",
-        "slug": "go语言100篇进阶",
-        "link": "#go语言100篇进阶",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "runtime.Goexit() 退出当前协程",
-        "slug": "runtime-goexit-退出当前协程",
-        "link": "#runtime-goexit-退出当前协程",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "os.Exit(-1) 退出当前程序",
-        "slug": "os-exit-1-退出当前程序",
-        "link": "#os-exit-1-退出当前程序",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "os.Exit(0) 中断进程",
-        "slug": "os-exit-0-中断进程",
-        "link": "#os-exit-0-中断进程",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "panic() 抛出异常退出",
-        "slug": "panic-抛出异常退出",
-        "link": "#panic-抛出异常退出",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "return 跳出当前函数",
-        "slug": "return-跳出当前函数",
-        "link": "#return-跳出当前函数",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Lable跳转标签",
-        "slug": "lable跳转标签",
-        "link": "#lable跳转标签",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/markdown/13.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第14节 Go版本控制",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Go语言基础篇",
-        "slug": "go语言基础篇",
-        "link": "#go语言基础篇",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Go语言100篇进阶",
-        "slug": "go语言100篇进阶",
-        "link": "#go语言100篇进阶",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "前言",
-        "slug": "前言",
-        "link": "#前言",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "安装 goup",
-        "slug": "安装-goup",
-        "link": "#安装-goup",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "gvm",
-        "slug": "gvm",
-        "link": "#gvm",
-        "children": [
-          {
-            "level": 3,
-            "title": "安装",
-            "slug": "安装",
-            "link": "#安装",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "使用",
-            "slug": "使用",
-            "link": "#使用",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/markdown/14.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第15节 Cobra",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Go语言基础篇",
-        "slug": "go语言基础篇",
-        "link": "#go语言基础篇",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Go语言100篇进阶",
-        "slug": "go语言100篇进阶",
-        "link": "#go语言100篇进阶",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "cobra 简介",
-        "slug": "cobra-简介",
-        "link": "#cobra-简介",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Cobra 安装",
-        "slug": "cobra-安装",
-        "link": "#cobra-安装",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "项目中导入",
-        "slug": "项目中导入",
-        "link": "#项目中导入",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "cobra-cli",
-        "slug": "cobra-cli",
-        "link": "#cobra-cli",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "cobra 项目创建",
-        "slug": "cobra-项目创建",
-        "link": "#cobra-项目创建",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "编译",
-        "slug": "编译",
-        "link": "#编译",
-        "children": [
-          {
-            "level": 3,
-            "title": "main.go",
-            "slug": "main-go",
-            "link": "#main-go",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "root.go",
-            "slug": "root-go",
-            "link": "#root-go",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "为命令加上一个子命令",
-        "slug": "为命令加上一个子命令",
-        "link": "#为命令加上一个子命令",
-        "children": [
-          {
-            "level": 3,
-            "title": "绑定父命令",
-            "slug": "绑定父命令",
-            "link": "#绑定父命令",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "为命令添加选项",
-        "slug": "为命令添加选项",
-        "link": "#为命令添加选项",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "补充 run参数的匿名函数",
-        "slug": "补充-run参数的匿名函数",
-        "link": "#补充-run参数的匿名函数",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/markdown/15.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第16节 Go genericity（泛型）",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Go语言基础篇",
-        "slug": "go语言基础篇",
-        "link": "#go语言基础篇",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Go语言100篇进阶",
-        "slug": "go语言100篇进阶",
-        "link": "#go语言100篇进阶",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "先决条件",
-        "slug": "先决条件",
-        "link": "#先决条件",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "上手–解决相加问题",
-        "slug": "上手–解决相加问题",
-        "link": "#上手–解决相加问题",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "自定义泛型（genericity）约束",
-        "slug": "自定义泛型-genericity-约束",
-        "link": "#自定义泛型-genericity-约束",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/markdown/16.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第17节 多模块工作区（Workspaces）",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Go语言基础篇",
-        "slug": "go语言基础篇",
-        "link": "#go语言基础篇",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Go语言100篇进阶",
-        "slug": "go语言100篇进阶",
-        "link": "#go语言100篇进阶",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Why you need it？",
-        "slug": "why-you-need-it",
-        "link": "#why-you-need-it",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "简单上手",
-        "slug": "简单上手",
-        "link": "#简单上手",
-        "children": [
-          {
-            "level": 3,
-            "title": "文件内容",
-            "slug": "文件内容",
-            "link": "#文件内容",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "如何调用",
-            "slug": "如何调用",
-            "link": "#如何调用",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "调用 utils",
-            "slug": "调用-utils",
-            "link": "#调用-utils",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "go work 支持命令",
-        "slug": "go-work-支持命令",
-        "link": "#go-work-支持命令",
-        "children": [
-          {
-            "level": 3,
-            "title": "go.work 文件结构",
-            "slug": "go-work-文件结构",
-            "link": "#go-work-文件结构",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "如何使用",
-            "slug": "如何使用",
-            "link": "#如何使用",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "如何禁用工作区",
-            "slug": "如何禁用工作区",
-            "link": "#如何禁用工作区",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "开发流程演示",
-        "slug": "开发流程演示",
-        "link": "#开发流程演示",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "总结",
-        "slug": "总结",
-        "link": "#总结",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "参考文献",
-        "slug": "参考文献",
-        "link": "#参考文献",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/markdown/17.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第18节 go 模糊测试",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Go语言基础篇",
-        "slug": "go语言基础篇",
-        "link": "#go语言基础篇",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Go语言100篇进阶",
-        "slug": "go语言100篇进阶",
-        "link": "#go语言100篇进阶",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Why you need it？",
-        "slug": "why-you-need-it",
-        "link": "#why-you-need-it",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "测试源",
-        "slug": "测试源",
-        "link": "#测试源",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "需要测试",
-        "slug": "需要测试",
-        "link": "#需要测试",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "问题",
-        "slug": "问题",
-        "link": "#问题",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "模糊测试",
-        "slug": "模糊测试",
-        "link": "#模糊测试",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/markdown/18.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第19节 go 实现 ping",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Go语言基础篇",
-        "slug": "go语言基础篇",
-        "link": "#go语言基础篇",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Go语言100篇进阶",
-        "slug": "go语言100篇进阶",
-        "link": "#go语言100篇进阶",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "ICMP",
-        "slug": "icmp",
-        "link": "#icmp",
-        "children": [
-          {
-            "level": 3,
-            "title": "ICMPとは？",
-            "slug": "icmpとは",
-            "link": "#icmpとは",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "报文头",
-            "slug": "报文头",
-            "link": "#报文头",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "ICMP 的格式",
-            "slug": "icmp-的格式",
-            "link": "#icmp-的格式",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "Go语言实现 Ping 操作",
-        "slug": "go语言实现-ping-操作",
-        "link": "#go语言实现-ping-操作",
-        "children": [
-          {
-            "level": 3,
-            "title": "flag 的作用",
-            "slug": "flag-的作用",
-            "link": "#flag-的作用",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "lag.Type()",
-            "slug": "lag-type",
-            "link": "#lag-type",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "flag.TypeVar()",
-            "slug": "flag-typevar",
-            "link": "#flag-typevar",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "flag.Parse()",
-            "slug": "flag-parse",
-            "link": "#flag-parse",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "else",
-            "slug": "else",
-            "link": "#else",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "获取命令行参数",
-        "slug": "获取命令行参数",
-        "link": "#获取命令行参数",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "获取请求",
-        "slug": "获取请求",
-        "link": "#获取请求",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "案例",
-        "slug": "案例",
-        "link": "#案例",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/markdown/19.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第2节 Go并发编程–日志分析系统介绍",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Go语言基础篇",
-        "slug": "go语言基础篇",
-        "link": "#go语言基础篇",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Go语言100篇进阶",
-        "slug": "go语言100篇进阶",
-        "link": "#go语言100篇进阶",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "参考链接",
-        "slug": "参考链接",
-        "link": "#参考链接",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "日志分析系统实战",
-        "slug": "日志分析系统实战",
-        "link": "#日志分析系统实战",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "常见的并发模型",
-        "slug": "常见的并发模型",
-        "link": "#常见的并发模型",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Golang并发实现",
-        "slug": "golang并发实现",
-        "link": "#golang并发实现",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Influxdb简介",
-        "slug": "influxdb简介",
-        "link": "#influxdb简介",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/markdown/2.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第20节 Golang云原生部署",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Go语言基础篇",
-        "slug": "go语言基础篇",
-        "link": "#go语言基础篇",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Go语言100篇进阶",
-        "slug": "go语言100篇进阶",
-        "link": "#go语言100篇进阶",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "开始",
-        "slug": "开始",
-        "link": "#开始",
-        "children": [
-          {
-            "level": 3,
-            "title": "dockerize 命令",
-            "slug": "dockerize-命令",
-            "link": "#dockerize-命令",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "方式二：测试项目",
-        "slug": "方式二-测试项目",
-        "link": "#方式二-测试项目",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "推送镜像",
-        "slug": "推送镜像",
-        "link": "#推送镜像",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "定义 k8s 应用程序载体 Pod",
-        "slug": "定义-k8s-应用程序载体-pod",
-        "link": "#定义-k8s-应用程序载体-pod",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/markdown/20.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第21节 go 语言切片原理",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Go语言基础篇",
-        "slug": "go语言基础篇",
-        "link": "#go语言基础篇",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Go语言100篇进阶",
-        "slug": "go语言100篇进阶",
-        "link": "#go语言100篇进阶",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "代码~",
-        "slug": "代码",
-        "link": "#代码",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "测试",
-        "slug": "测试",
-        "link": "#测试",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "不改变 s2",
-        "slug": "不改变-s2",
-        "link": "#不改变-s2",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "总结",
-        "slug": "总结",
-        "link": "#总结",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/markdown/21.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第22节",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Go语言基础篇",
-        "slug": "go语言基础篇",
-        "link": "#go语言基础篇",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Go语言100篇进阶",
-        "slug": "go语言100篇进阶",
-        "link": "#go语言100篇进阶",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/markdown/22.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第23节",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Go语言基础篇",
-        "slug": "go语言基础篇",
-        "link": "#go语言基础篇",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Go语言100篇进阶",
-        "slug": "go语言100篇进阶",
-        "link": "#go语言100篇进阶",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/markdown/23.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第24节",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Go语言基础篇",
-        "slug": "go语言基础篇",
-        "link": "#go语言基础篇",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Go语言100篇进阶",
-        "slug": "go语言100篇进阶",
-        "link": "#go语言100篇进阶",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/markdown/24.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第25节",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Go语言基础篇",
-        "slug": "go语言基础篇",
-        "link": "#go语言基础篇",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Go语言100篇进阶",
-        "slug": "go语言100篇进阶",
-        "link": "#go语言100篇进阶",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/markdown/25.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第26节",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Go语言基础篇",
-        "slug": "go语言基础篇",
-        "link": "#go语言基础篇",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Go语言100篇进阶",
-        "slug": "go语言100篇进阶",
-        "link": "#go语言100篇进阶",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/markdown/26.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第27节",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Go语言基础篇",
-        "slug": "go语言基础篇",
-        "link": "#go语言基础篇",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Go语言100篇进阶",
-        "slug": "go语言100篇进阶",
-        "link": "#go语言100篇进阶",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/markdown/27.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第28节",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Go语言基础篇",
-        "slug": "go语言基础篇",
-        "link": "#go语言基础篇",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Go语言100篇进阶",
-        "slug": "go语言100篇进阶",
-        "link": "#go语言100篇进阶",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/markdown/28.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第29节",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Go语言基础篇",
-        "slug": "go语言基础篇",
-        "link": "#go语言基础篇",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Go语言100篇进阶",
-        "slug": "go语言100篇进阶",
-        "link": "#go语言100篇进阶",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/markdown/29.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第3节 并发与并行",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Go语言基础篇",
-        "slug": "go语言基础篇",
-        "link": "#go语言基础篇",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Go语言100篇进阶",
-        "slug": "go语言100篇进阶",
-        "link": "#go语言100篇进阶",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "并发和并行关系",
-        "slug": "并发和并行关系",
-        "link": "#并发和并行关系",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/markdown/3.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第30节",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Go语言基础篇",
-        "slug": "go语言基础篇",
-        "link": "#go语言基础篇",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Go语言100篇进阶",
-        "slug": "go语言100篇进阶",
-        "link": "#go语言100篇进阶",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/markdown/30.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第31节",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Go语言基础篇",
-        "slug": "go语言基础篇",
-        "link": "#go语言基础篇",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Go语言100篇进阶",
-        "slug": "go语言100篇进阶",
-        "link": "#go语言100篇进阶",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/markdown/31.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第32节",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Go语言基础篇",
-        "slug": "go语言基础篇",
-        "link": "#go语言基础篇",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Go语言100篇进阶",
-        "slug": "go语言100篇进阶",
-        "link": "#go语言100篇进阶",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/markdown/32.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第33节",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Go语言基础篇",
-        "slug": "go语言基础篇",
-        "link": "#go语言基础篇",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Go语言100篇进阶",
-        "slug": "go语言100篇进阶",
-        "link": "#go语言100篇进阶",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/markdown/33.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第34节",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Go语言基础篇",
-        "slug": "go语言基础篇",
-        "link": "#go语言基础篇",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Go语言100篇进阶",
-        "slug": "go语言100篇进阶",
-        "link": "#go语言100篇进阶",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/markdown/34.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第35节",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Go语言基础篇",
-        "slug": "go语言基础篇",
-        "link": "#go语言基础篇",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Go语言100篇进阶",
-        "slug": "go语言100篇进阶",
-        "link": "#go语言100篇进阶",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/markdown/35.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第36节",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Go语言基础篇",
-        "slug": "go语言基础篇",
-        "link": "#go语言基础篇",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Go语言100篇进阶",
-        "slug": "go语言100篇进阶",
-        "link": "#go语言100篇进阶",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/markdown/36.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第37节",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Go语言基础篇",
-        "slug": "go语言基础篇",
-        "link": "#go语言基础篇",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Go语言100篇进阶",
-        "slug": "go语言100篇进阶",
-        "link": "#go语言100篇进阶",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/markdown/37.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第38节",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Go语言基础篇",
-        "slug": "go语言基础篇",
-        "link": "#go语言基础篇",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Go语言100篇进阶",
-        "slug": "go语言100篇进阶",
-        "link": "#go语言100篇进阶",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/markdown/38.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第39节",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Go语言基础篇",
-        "slug": "go语言基础篇",
-        "link": "#go语言基础篇",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Go语言100篇进阶",
-        "slug": "go语言100篇进阶",
-        "link": "#go语言100篇进阶",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/markdown/39.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第4节 流程构建和分析",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Go语言基础篇",
-        "slug": "go语言基础篇",
-        "link": "#go语言基础篇",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Go语言100篇进阶",
-        "slug": "go语言100篇进阶",
-        "link": "#go语言100篇进阶",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "创建一个go-mod和仓库",
-        "slug": "创建一个go-mod和仓库",
-        "link": "#创建一个go-mod和仓库",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "程序框架",
-        "slug": "程序框架",
-        "link": "#程序框架",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "程序测试",
-        "slug": "程序测试",
-        "link": "#程序测试",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "程序优化",
-        "slug": "程序优化",
-        "link": "#程序优化",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/markdown/4.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第40节",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Go语言基础篇",
-        "slug": "go语言基础篇",
-        "link": "#go语言基础篇",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Go语言100篇进阶",
-        "slug": "go语言100篇进阶",
-        "link": "#go语言100篇进阶",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/markdown/40.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第41节",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Go语言基础篇",
-        "slug": "go语言基础篇",
-        "link": "#go语言基础篇",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Go语言100篇进阶",
-        "slug": "go语言100篇进阶",
-        "link": "#go语言100篇进阶",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/markdown/41.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第42节",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Go语言基础篇",
-        "slug": "go语言基础篇",
-        "link": "#go语言基础篇",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Go语言100篇进阶",
-        "slug": "go语言100篇进阶",
-        "link": "#go语言100篇进阶",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/markdown/42.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第43节",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Go语言基础篇",
-        "slug": "go语言基础篇",
-        "link": "#go语言基础篇",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Go语言100篇进阶",
-        "slug": "go语言100篇进阶",
-        "link": "#go语言100篇进阶",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/markdown/43.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第44节",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Go语言基础篇",
-        "slug": "go语言基础篇",
-        "link": "#go语言基础篇",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Go语言100篇进阶",
-        "slug": "go语言100篇进阶",
-        "link": "#go语言100篇进阶",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/markdown/44.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第45节",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Go语言基础篇",
-        "slug": "go语言基础篇",
-        "link": "#go语言基础篇",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Go语言100篇进阶",
-        "slug": "go语言100篇进阶",
-        "link": "#go语言100篇进阶",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/markdown/45.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第46节",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Go语言基础篇",
-        "slug": "go语言基础篇",
-        "link": "#go语言基础篇",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Go语言100篇进阶",
-        "slug": "go语言100篇进阶",
-        "link": "#go语言100篇进阶",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/markdown/46.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第47节",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Go语言基础篇",
-        "slug": "go语言基础篇",
-        "link": "#go语言基础篇",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Go语言100篇进阶",
-        "slug": "go语言100篇进阶",
-        "link": "#go语言100篇进阶",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/markdown/47.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第48节",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Go语言基础篇",
-        "slug": "go语言基础篇",
-        "link": "#go语言基础篇",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Go语言100篇进阶",
-        "slug": "go语言100篇进阶",
-        "link": "#go语言100篇进阶",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/markdown/48.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第49节",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Go语言基础篇",
-        "slug": "go语言基础篇",
-        "link": "#go语言基础篇",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Go语言100篇进阶",
-        "slug": "go语言100篇进阶",
-        "link": "#go语言100篇进阶",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/markdown/49.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第5节 读取模块的构建",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Go语言基础篇",
-        "slug": "go语言基础篇",
-        "link": "#go语言基础篇",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Go语言100篇进阶",
-        "slug": "go语言100篇进阶",
-        "link": "#go语言100篇进阶",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "读取模块的实现",
-        "slug": "读取模块的实现",
-        "link": "#读取模块的实现",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "读取模块测试",
-        "slug": "读取模块测试",
-        "link": "#读取模块测试",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/markdown/5.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第50节",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Go语言基础篇",
-        "slug": "go语言基础篇",
-        "link": "#go语言基础篇",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Go语言100篇进阶",
-        "slug": "go语言100篇进阶",
-        "link": "#go语言100篇进阶",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/markdown/50.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第6节 解析模块的实现",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Go语言基础篇",
-        "slug": "go语言基础篇",
-        "link": "#go语言基础篇",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Go语言100篇进阶",
-        "slug": "go语言100篇进阶",
-        "link": "#go语言100篇进阶",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "解析模块的功能",
-        "slug": "解析模块的功能",
-        "link": "#解析模块的功能",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "解析模块的实现",
-        "slug": "解析模块的实现",
-        "link": "#解析模块的实现",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/markdown/6.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第7节 InfluxDB的概念和安装",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Go语言基础篇",
-        "slug": "go语言基础篇",
-        "link": "#go语言基础篇",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Go语言100篇进阶",
-        "slug": "go语言100篇进阶",
-        "link": "#go语言100篇进阶",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "写入模块的实现",
-        "slug": "写入模块的实现",
-        "link": "#写入模块的实现",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "监控需求",
-        "slug": "监控需求",
-        "link": "#监控需求",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "influxdb",
-        "slug": "influxdb",
-        "link": "#influxdb",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "安装influxdb",
-        "slug": "安装influxdb",
-        "link": "#安装influxdb",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "influxdb使用",
-        "slug": "influxdb使用",
-        "link": "#influxdb使用",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "使用到的字段",
-        "slug": "使用到的字段",
-        "link": "#使用到的字段",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/markdown/7.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第8节 写入模块的实现",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Go语言基础篇",
-        "slug": "go语言基础篇",
-        "link": "#go语言基础篇",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Go语言100篇进阶",
-        "slug": "go语言100篇进阶",
-        "link": "#go语言100篇进阶",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "写入模块的实现",
-        "slug": "写入模块的实现",
-        "link": "#写入模块的实现",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "写入模块程序",
-        "slug": "写入模块程序",
-        "link": "#写入模块程序",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/markdown/8.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第9节 监控图的绘制",
-    "headers": [
-      {
-        "level": 3,
-        "title": "Go语言基础篇",
-        "slug": "go语言基础篇",
-        "link": "#go语言基础篇",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "Go语言100篇进阶",
-        "slug": "go语言100篇进阶",
-        "link": "#go语言100篇进阶",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "grafana",
-        "slug": "grafana",
-        "link": "#grafana",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/markdown/9.html",
     "pathLocale": "/",
     "extraFields": []
   },

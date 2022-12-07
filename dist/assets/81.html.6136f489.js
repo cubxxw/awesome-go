@@ -1,0 +1,47 @@
+import{_ as p,r as e,o as c,c as i,a as n,b as a,w as l,d as u,e as s}from"./app.8acd33e1.js";const d={},r=u(`<h1 id="_1-base64" tabindex="-1"><a class="header-anchor" href="#_1-base64" aria-hidden="true">#</a> 1. base64</h1><p>Base64\u662F\u7F51\u7EDC\u4E0A\u6700\u5E38\u89C1\u7684\u7528\u4E8E\u4F20\u8F938Bit\u5B57\u8282\u4EE3\u7801\u7684\u7F16\u7801\u65B9\u5F0F\u4E4B\u4E00\uFF0C\u53EF\u7528\u4E8E\u5728HTTP\u73AF\u5883\u4E0B\u4F20\u9012\u8F83\u957F\u7684\u6807\u8BC6\u4FE1\u606F\u3002Go \u7684 encoding/base64 \u63D0\u4F9B\u4E86\u5BF9base64\u7684\u7F16\u89E3\u7801\u64CD\u4F5C\u3002</p><div class="language-go ext-go line-numbers-mode"><pre class="language-go"><code><span class="token keyword">package</span> main
+
+<span class="token keyword">import</span> <span class="token punctuation">(</span>
+    <span class="token string">&quot;encoding/base64&quot;</span>
+    <span class="token string">&quot;fmt&quot;</span>
+    <span class="token string">&quot;log&quot;</span>
+<span class="token punctuation">)</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    str <span class="token operator">:=</span> <span class="token string">&quot;www.5lmh.com&quot;</span>
+    fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">&quot;string : %v\\n&quot;</span><span class="token punctuation">,</span> str<span class="token punctuation">)</span>
+
+    input <span class="token operator">:=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token function">byte</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span>
+    fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">&quot;[]byte : %v\\n&quot;</span><span class="token punctuation">,</span> input<span class="token punctuation">)</span>
+
+    <span class="token comment">// \u6F14\u793Abase64\u7F16\u7801</span>
+    encodeString <span class="token operator">:=</span> base64<span class="token punctuation">.</span>StdEncoding<span class="token punctuation">.</span><span class="token function">EncodeToString</span><span class="token punctuation">(</span>input<span class="token punctuation">)</span>
+    fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">&quot;encode base64 : %v\\n&quot;</span><span class="token punctuation">,</span> encodeString<span class="token punctuation">)</span>
+
+    <span class="token comment">// \u5BF9\u4E0A\u9762\u7684\u7F16\u7801\u7ED3\u679C\u8FDB\u884Cbase64\u89E3\u7801</span>
+    decodeBytes<span class="token punctuation">,</span> err <span class="token operator">:=</span> base64<span class="token punctuation">.</span>StdEncoding<span class="token punctuation">.</span><span class="token function">DecodeString</span><span class="token punctuation">(</span>encodeString<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+        log<span class="token punctuation">.</span><span class="token function">Fatalln</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">&quot;decode base64 : %v\\n&quot;</span><span class="token punctuation">,</span> <span class="token function">string</span><span class="token punctuation">(</span>decodeBytes<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token comment">// \u5982\u679C\u8981\u7528\u5728url\u4E2D\uFF0C\u9700\u8981\u4F7F\u7528URLEncoding</span>
+    urlencode <span class="token operator">:=</span> base64<span class="token punctuation">.</span>URLEncoding<span class="token punctuation">.</span><span class="token function">EncodeToString</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token function">byte</span><span class="token punctuation">(</span>input<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">&quot;urlencode : %v\\n&quot;</span><span class="token punctuation">,</span> urlencode<span class="token punctuation">)</span>
+    <span class="token comment">//URLEncoding</span>
+    urldecode<span class="token punctuation">,</span> err <span class="token operator">:=</span> base64<span class="token punctuation">.</span>URLEncoding<span class="token punctuation">.</span><span class="token function">DecodeString</span><span class="token punctuation">(</span>urlencode<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+        log<span class="token punctuation">.</span><span class="token function">Fatalln</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    fmt<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">&quot;urldecode : %v\\n&quot;</span><span class="token punctuation">,</span> <span class="token function">string</span><span class="token punctuation">(</span>urldecode<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>\u8F93\u51FA\u7ED3\u679C\uFF1A</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>    string : www.5lmh.com
+    []byte : [119 119 119 46 53 108 109 104 46 99 111 109]
+    encode base64 : d3d3LjVsbWguY29t
+    decode base64 : www.5lmh.com
+
+    urlencode : d3d3LjVsbWguY29t
+    urldecode : www.5lmh.com
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="end-\u94FE\u63A5" tabindex="-1"><a class="header-anchor" href="#end-\u94FE\u63A5" aria-hidden="true">#</a> END \u94FE\u63A5</h2><ul><li><div><a href="80.md" style="float:left;">\u2B06\uFE0F\u4E0A\u4E00\u8282\u{1F517}</a><a href="82.md" style="float:right;">\u2B07\uFE0F\u4E0B\u4E00\u8282\u{1F517}</a></div></li></ul>`,7),k=s("\u24C2\uFE0F\u56DE\u5230\u9996\u9875\u{1F3E0}"),v={href:"https://nsddd.top/archives/contributors",target:"_blank",rel:"noopener noreferrer"},m=n("strong",null,"\u{1FAF5}\u53C2\u4E0E\u8D21\u732E\u{1F49E}\u2764\uFE0F\u200D\u{1F525}\u{1F496}",-1),b=s(")"),f=s("\u2734\uFE0F\u7248\u6743\u58F0\u660E \xA9 :\u672C\u4E66\u6240\u6709\u5185\u5BB9\u9075\u5FAA"),g={href:"http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC",target:"_blank",rel:"noopener noreferrer"},h=s("CC-BY-SA 3.0\u534F\u8BAE\uFF08\u7F72\u540D-\u76F8\u540C\u65B9\u5F0F\u5171\u4EAB\uFF09\xA9");function _(w,q){const o=e("RouterLink"),t=e("ExternalLinkIcon");return c(),i("div",null,[r,n("ul",null,[n("li",null,[n("p",null,[a(o,{to:"/Gomd_super/"},{default:l(()=>[k]),_:1})])]),n("li",null,[n("p",null,[n("a",v,[m,a(t)]),b])]),n("li",null,[n("p",null,[f,n("a",g,[h,a(t)])])])])])}const x=p(d,[["render",_],["__file","81.html.vue"]]);export{x as default};
