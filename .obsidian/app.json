@@ -1,0 +1,17 @@
+{
+  "showLineNumber": true,
+  "vimMode": true,
+  "promptDelete": false,
+  "attachmentFolderPath": "./images",
+  "trashOption": "local",
+  "newLinkFormat": "relative",
+  "pdfExportSettings": {
+    "includeName": false,
+    "pageSize": "Letter",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  },
+  "readableLineLength": true,
+  "showFrontmatter": true
+}
