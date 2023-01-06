@@ -3,6 +3,7 @@
   "baseFontSize": 18,
   "translucency": false,
   "theme": "moonstone",
-  "cssTheme": "Minimal",
-  "interfaceFontFamily": "Alibaba Sans Thai"
+  "cssTheme": "Typora-Vue",
+  "interfaceFontFamily": "Alibaba Sans Thai",
+  "nativeMenus": false
 }

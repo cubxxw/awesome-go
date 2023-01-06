@@ -13,6 +13,8 @@
 ::: tip 
 可能会出现很多版本翻译问题，Go语言编译问题，还有英文视频不易理解问题，列出以下参考：
 
+参考书籍：**黑皮书：分布式操作系统**
+
 不建议使用代码
 
 + https://mit-public-courses-cn-translatio.gitbook.io/

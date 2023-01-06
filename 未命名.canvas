@@ -1,0 +1,15 @@
+{
+	"nodes":[
+		{"id":"7a00029137831b9f","x":-487,"y":-300,"width":400,"height":400,"type":"file","file":"docs/markdown/1.md"},
+		{"id":"f3f9232bb6d142fe","x":82,"y":-427,"width":289,"height":289,"type":"file","file":"images/245343144_424168725712191_5830370728000182528_n.jpg"},
+		{"id":"513b9ffb0c30c4be","x":46,"y":2,"width":306,"height":254,"type":"file","file":"docs/markdown/2.md"},
+		{"id":"b80df51a2da01b01","x":-183,"y":-243,"width":250,"height":50,"type":"text","text":"**sorry**"},
+		{"id":"24a7f19fddad27e3","x":-494,"y":186,"width":250,"height":60,"color":"3","type":"text","text":""},
+		{"id":"9809857ba3825af3","x":-369,"y":333,"width":400,"height":400,"type":"link","url":"http://43.142.124.85:8090/archives/sealos-one"}
+	],
+	"edges":[
+		{"id":"7ba0a26822945be2","fromNode":"513b9ffb0c30c4be","fromSide":"left","toNode":"7a00029137831b9f","toSide":"right"},
+		{"id":"0376ce02e2e002cc","fromNode":"7a00029137831b9f","fromSide":"top","toNode":"f3f9232bb6d142fe","toSide":"left"},
+		{"id":"0ab165d27003d0a7","fromNode":"f3f9232bb6d142fe","fromSide":"bottom","toNode":"513b9ffb0c30c4be","toSide":"top"}
+	]
+}
