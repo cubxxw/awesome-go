@@ -22,9 +22,51 @@
               "type": "empty",
               "state": {}
             }
+          },
+          {
+            "id": "27b93c51da0be31a",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "未命名.canvas",
+                "viewState": {
+                  "x": -61.5,
+                  "y": 153,
+                  "zoom": -0.7628237620872321,
+                  "snapToGrid": false
+                }
+              }
+            }
+          },
+          {
+            "id": "f5ea71b8c505f422",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/字节青训营/字节青训营进阶面试准备.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "20e83f410ed4146d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/字节青训营/青训营题库.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -98,6 +140,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "docs/字节青训营/青训营题库.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,6 +157,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "docs/字节青训营/青训营题库.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +179,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "docs/字节青训营/青训营题库.md"
+              }
             }
           },
           {
@@ -183,17 +229,17 @@
       "obsidian-memos:Memos": false
     }
   },
-  "active": "fd0b64b2f0ec6059",
+  "active": "20e83f410ed4146d",
   "lastOpenFiles": [
+    "docs/字节青训营/字节青训营进阶面试准备.md",
+    "docs/字节青训营/青训营题库.md",
+    "未命名.canvas",
+    "未命名.md",
     "default/diary/20230104-周三.md",
     "Excalidraw/Drawing 2023-01-05 20.17.59.excalidraw.md",
     "docker/markdown/1.md",
     "go_bible/gopl-zh.github.com/ch2/ch2-01.md",
     "Excalidraw/Drawing 2023-01-05 20.17.27.excalidraw.md",
-    "cs/build-your-own-x/README.md",
-    "cs/images/4j99mhe.png",
-    "go_bible/gopl-zh.github.com/ch2/ch2-02.md",
-    "images/copy.pdf",
-    "images/group.png"
+    "cs/build-your-own-x/README.md"
   ]
 }
