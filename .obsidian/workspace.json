@@ -19,8 +19,22 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "17e890b561bff9bb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Go语言项目实战.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -94,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/字节青训营/抖音项目资源.md",
+                "file": "Go语言项目实战.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +125,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/字节青训营/抖音项目资源.md",
+                "file": "Go语言项目实战.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +148,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/字节青训营/抖音项目资源.md"
+                "file": "Go语言项目实战.md"
               }
             }
           },
@@ -183,14 +197,14 @@
       "obsidian-memos:Memos": false
     }
   },
-  "active": "156e259e9938d686",
+  "active": "17e890b561bff9bb",
   "lastOpenFiles": [
+    "docs/字节青训营/抖音项目资源.md",
     "docs/go-advancend/go_route.md",
     "docs/字节青训营/字节青训营进阶面试准备.md",
     "docs/字节青训营/码上掘金主题创作活动.md",
     "docs/字节青训营/青训营题库.md",
     "未命名.canvas",
-    "docs/字节青训营/抖音项目资源.md",
     "default/diary/20230104-周三.md",
     "Excalidraw/Drawing 2023-01-05 20.17.59.excalidraw.md",
     "docker/markdown/1.md",
