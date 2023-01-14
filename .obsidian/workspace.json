@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Go语言项目实战.md",
+                "file": "docs/go-advancend/markdown/20.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -108,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Go语言项目实战.md",
+                "file": "docs/go-advancend/markdown/20.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +125,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Go语言项目实战.md",
+                "file": "docs/go-advancend/markdown/20.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -148,7 +148,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Go语言项目实战.md"
+                "file": "docs/go-advancend/markdown/20.md"
               }
             }
           },
@@ -199,15 +199,15 @@
   },
   "active": "17e890b561bff9bb",
   "lastOpenFiles": [
+    "docs/go-advancend/markdown/19.md",
+    "docs/go-advancend/markdown/18.md",
+    "docs/go-advancend/markdown/17.md",
+    "docs/go-advancend/markdown/16.md",
+    "docs/go-advancend/markdown/14.md",
+    "docs/go-advancend/markdown/13.md",
+    "Go语言项目实战.md",
     "docs/字节青训营/抖音项目资源.md",
     "docs/go-advancend/go_route.md",
-    "docs/字节青训营/字节青训营进阶面试准备.md",
-    "docs/字节青训营/码上掘金主题创作活动.md",
-    "docs/字节青训营/青训营题库.md",
-    "未命名.canvas",
-    "default/diary/20230104-周三.md",
-    "Excalidraw/Drawing 2023-01-05 20.17.59.excalidraw.md",
-    "docker/markdown/1.md",
-    "go_bible/gopl-zh.github.com/ch2/ch2-01.md"
+    "docs/字节青训营/字节青训营进阶面试准备.md"
   ]
 }
