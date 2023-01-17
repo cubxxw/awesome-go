@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-1582128c\",\"path\":\"/%E5%AD%97%E8%8A%82%E9%9D%92%E8%AE%AD%E8%90%A5/%E6%8E%A5%E5%8F%A3%E8%AE%BE%E8%AE%A1%E7%A8%BF.html\",\"title\":\"接口设计稿\",\"lang\":\"zh-CN\",\"frontmatter\":{},\"excerpt\":\"\",\"headers\":[],\"git\":{\"updatedTime\":null,\"contributors\":[]},\"filePathRelative\":\"字节青训营/接口设计稿.md\"}")

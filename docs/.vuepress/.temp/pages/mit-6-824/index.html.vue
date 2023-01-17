@@ -6,6 +6,7 @@
 <h2 id="🧷-参考文献" tabindex="-1"><a class="header-anchor" href="#🧷-参考文献" aria-hidden="true">#</a> 🧷 参考文献</h2>
 <div class="custom-container tip"><p class="custom-container-title">提示</p>
 <p>可能会出现很多版本翻译问题，Go语言编译问题，还有英文视频不易理解问题，列出以下参考：</p>
+<p>参考书籍：<strong>黑皮书：分布式操作系统</strong></p>
 <p>不建议使用代码</p>
 <ul>
 <li>https://mit-public-courses-cn-translatio.gitbook.io/</li>
