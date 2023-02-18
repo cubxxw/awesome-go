@@ -364,992 +364,6 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "位运算以及补码重点",
-    "headers": [
-      {
-        "level": 2,
-        "title": "ℹ️前言",
-        "slug": "i️前言",
-        "link": "#i️前言",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "🎈乘以 2 的幂",
-        "slug": "🎈乘以-2-的幂",
-        "link": "#🎈乘以-2-的幂",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "🎈除以 2 的幂",
-        "slug": "🎈除以-2-的幂",
-        "link": "#🎈除以-2-的幂",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "🎈交换没有临时变量的整数",
-        "slug": "🎈交换没有临时变量的整数",
-        "link": "#🎈交换没有临时变量的整数",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "🎈增量/减量（较慢但有利于混淆）",
-        "slug": "🎈增量-减量-较慢但有利于混淆",
-        "link": "#🎈增量-减量-较慢但有利于混淆",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "🎈标志翻转",
-        "slug": "🎈标志翻转",
-        "link": "#🎈标志翻转",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "🎈如果除数是 2 的幂，则进行模运算",
-        "slug": "🎈如果除数是-2-的幂-则进行模运算",
-        "link": "#🎈如果除数是-2-的幂-则进行模运算",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "🎈检查整数是偶数还是奇数",
-        "slug": "🎈检查整数是偶数还是奇数",
-        "link": "#🎈检查整数是偶数还是奇数",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "🎈相等检查",
-        "slug": "🎈相等检查",
-        "link": "#🎈相等检查",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "🎈绝对值",
-        "slug": "🎈绝对值",
-        "link": "#🎈绝对值",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "🎈等号检查（两个整数都是 pos 或 neg）",
-        "slug": "🎈等号检查-两个整数都是-pos-或-neg",
-        "link": "#🎈等号检查-两个整数都是-pos-或-neg",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "🎈圆角、天花板、地板",
-        "slug": "🎈圆角、天花板、地板",
-        "link": "#🎈圆角、天花板、地板",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "💡Java中的二进制补充",
-        "slug": "💡java中的二进制补充",
-        "link": "#💡java中的二进制补充",
-        "children": [
-          {
-            "level": 3,
-            "title": "必背",
-            "slug": "必背",
-            "link": "#必背",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "java逻辑右移",
-            "slug": "java逻辑右移",
-            "link": "#java逻辑右移",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/Gomd_super/bitwise.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "目录结构",
-    "headers": [
-      {
-        "level": 2,
-        "title": "Go语言目录结构",
-        "slug": "go语言目录结构",
-        "link": "#go语言目录结构",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Go 目录",
-        "slug": "go-目录",
-        "link": "#go-目录",
-        "children": [
-          {
-            "level": 3,
-            "title": "cmd",
-            "slug": "cmd",
-            "link": "#cmd",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "internal",
-            "slug": "internal",
-            "link": "#internal",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "pkg",
-            "slug": "pkg",
-            "link": "#pkg",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "vendor",
-            "slug": "vendor",
-            "link": "#vendor",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "服务端应用程序目录",
-        "slug": "服务端应用程序目录",
-        "link": "#服务端应用程序目录",
-        "children": [
-          {
-            "level": 3,
-            "title": "api",
-            "slug": "api",
-            "link": "#api",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "Web 应用程序目录",
-        "slug": "web-应用程序目录",
-        "link": "#web-应用程序目录",
-        "children": [
-          {
-            "level": 3,
-            "title": "web",
-            "slug": "web",
-            "link": "#web",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "通用应用程序目录",
-        "slug": "通用应用程序目录",
-        "link": "#通用应用程序目录",
-        "children": [
-          {
-            "level": 3,
-            "title": "build",
-            "slug": "build",
-            "link": "#build",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "configs",
-            "slug": "configs",
-            "link": "#configs",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "deployment",
-            "slug": "deployment",
-            "link": "#deployment",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "init",
-            "slug": "init",
-            "link": "#init",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "scripts",
-            "slug": "scripts",
-            "link": "#scripts",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "test",
-            "slug": "test",
-            "link": "#test",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "其他目录",
-        "slug": "其他目录",
-        "link": "#其他目录",
-        "children": [
-          {
-            "level": 3,
-            "title": "assets",
-            "slug": "assets",
-            "link": "#assets",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "docs",
-            "slug": "docs",
-            "link": "#docs",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "examples",
-            "slug": "examples",
-            "link": "#examples",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "githooks",
-            "slug": "githooks",
-            "link": "#githooks",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "third_party",
-            "slug": "third-party",
-            "link": "#third-party",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "tools",
-            "slug": "tools",
-            "link": "#tools",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "website",
-            "slug": "website",
-            "link": "#website",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "不应该出现的目录",
-        "slug": "不应该出现的目录",
-        "link": "#不应该出现的目录",
-        "children": [
-          {
-            "level": 3,
-            "title": "src",
-            "slug": "src",
-            "link": "#src",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "其他文件",
-        "slug": "其他文件",
-        "link": "#其他文件",
-        "children": [
-          {
-            "level": 3,
-            "title": "Makefile",
-            "slug": "makefile",
-            "link": "#makefile",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "小结",
-        "slug": "小结",
-        "link": "#小结",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "延伸阅读",
-        "slug": "延伸阅读",
-        "link": "#延伸阅读",
-        "children": []
-      }
-    ],
-    "path": "/Gomd_super/catalogue.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "go-air实现热加载",
-    "headers": [
-      {
-        "level": 2,
-        "title": "go air",
-        "slug": "go-air",
-        "link": "#go-air",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "特色",
-        "slug": "特色",
-        "link": "#特色",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "安装",
-        "slug": "安装",
-        "link": "#安装",
-        "children": [
-          {
-            "level": 3,
-            "title": "推荐使用 install.sh",
-            "slug": "推荐使用-install-sh",
-            "link": "#推荐使用-install-sh",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "使用 go install",
-            "slug": "使用-go-install",
-            "link": "#使用-go-install",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "配置镜像源",
-            "slug": "配置镜像源",
-            "link": "#配置镜像源",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "使用Docker",
-            "slug": "使用docker",
-            "link": "#使用docker",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "✨ beta 版本的特性",
-        "slug": "✨-beta-版本的特性",
-        "link": "#✨-beta-版本的特性",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "使用方法",
-        "slug": "使用方法",
-        "link": "#使用方法",
-        "children": [
-          {
-            "level": 3,
-            "title": "运行时参数",
-            "slug": "运行时参数",
-            "link": "#运行时参数",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Docker-compose",
-            "slug": "docker-compose",
-            "link": "#docker-compose",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "调试",
-            "slug": "调试",
-            "link": "#调试",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "Q&A",
-        "slug": "q-a",
-        "link": "#q-a",
-        "children": [
-          {
-            "level": 3,
-            "title": "遇到 \"command not found: air\" 或 \"No such file or directory\" 该怎么办？",
-            "slug": "遇到-command-not-found-air-或-no-such-file-or-directory-该怎么办",
-            "link": "#遇到-command-not-found-air-或-no-such-file-or-directory-该怎么办",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "部署",
-        "slug": "部署",
-        "link": "#部署",
-        "children": [
-          {
-            "level": 3,
-            "title": "发布新版本",
-            "slug": "发布新版本",
-            "link": "#发布新版本",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/Gomd_super/go-air.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Go mod包",
-    "headers": [
-      {
-        "level": 2,
-        "title": "介绍",
-        "slug": "介绍",
-        "link": "#介绍",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Go mod init",
-        "slug": "go-mod-init",
-        "link": "#go-mod-init",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Go module",
-        "slug": "go-module",
-        "link": "#go-module",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "切换",
-        "slug": "切换",
-        "link": "#切换",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "自己新创建一个项目",
-        "slug": "自己新创建一个项目",
-        "link": "#自己新创建一个项目",
-        "children": [
-          {
-            "level": 3,
-            "title": "包的导入方式",
-            "slug": "包的导入方式",
-            "link": "#包的导入方式",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Go-mod方式管理包",
-            "slug": "go-mod方式管理包",
-            "link": "#go-mod方式管理包",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "项目开始~",
-            "slug": "项目开始",
-            "link": "#项目开始",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "为代码启用依赖项跟踪",
-            "slug": "为代码启用依赖项跟踪",
-            "link": "#为代码启用依赖项跟踪",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "所出现问题",
-            "slug": "所出现问题",
-            "link": "#所出现问题",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "github导入包",
-            "slug": "github导入包",
-            "link": "#github导入包",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "远程推送到github上",
-            "slug": "远程推送到github上",
-            "link": "#远程推送到github上",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/Gomd_super/go-version.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Go语言文本编码处理",
-    "headers": [
-      {
-        "level": 2,
-        "title": "前言",
-        "slug": "前言",
-        "link": "#前言",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "判断是否字符串是否包含字符串",
-        "slug": "判断是否字符串是否包含字符串",
-        "link": "#判断是否字符串是否包含字符串",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "字符串拆分",
-        "slug": "字符串拆分",
-        "link": "#字符串拆分",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "可以使用join将其合并起来",
-        "slug": "可以使用join将其合并起来",
-        "link": "#可以使用join将其合并起来",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "字符串转化",
-        "slug": "字符串转化",
-        "link": "#字符串转化",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "序列化和反序列化",
-        "slug": "序列化和反序列化",
-        "link": "#序列化和反序列化",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "使用flag获取复杂参数",
-        "slug": "使用flag获取复杂参数",
-        "link": "#使用flag获取复杂参数",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "控制命令行操作",
-        "slug": "控制命令行操作",
-        "link": "#控制命令行操作",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "补充：变量的作用域",
-        "slug": "补充-变量的作用域",
-        "link": "#补充-变量的作用域",
-        "children": []
-      }
-    ],
-    "path": "/Gomd_super/go_file.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Go-mod包",
-    "headers": [
-      {
-        "level": 2,
-        "title": "Go-mod项目地址",
-        "slug": "go-mod项目地址",
-        "link": "#go-mod项目地址",
-        "children": [
-          {
-            "level": 3,
-            "title": "包的导入方式",
-            "slug": "包的导入方式",
-            "link": "#包的导入方式",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Go-mod方式管理包",
-            "slug": "go-mod方式管理包",
-            "link": "#go-mod方式管理包",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "项目开始~",
-            "slug": "项目开始",
-            "link": "#项目开始",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "为代码启用依赖项跟踪",
-            "slug": "为代码启用依赖项跟踪",
-            "link": "#为代码启用依赖项跟踪",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "所出现问题",
-            "slug": "所出现问题",
-            "link": "#所出现问题",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "github导入包",
-            "slug": "github导入包",
-            "link": "#github导入包",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "远程推送到github上",
-            "slug": "远程推送到github上",
-            "link": "#远程推送到github上",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/Gomd_super/go_mod.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Go mod包",
-    "headers": [
-      {
-        "level": 2,
-        "title": "介绍",
-        "slug": "介绍",
-        "link": "#介绍",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Go mod init",
-        "slug": "go-mod-init",
-        "link": "#go-mod-init",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Go module",
-        "slug": "go-module",
-        "link": "#go-module",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "切换",
-        "slug": "切换",
-        "link": "#切换",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "自己新创建一个项目",
-        "slug": "自己新创建一个项目",
-        "link": "#自己新创建一个项目",
-        "children": [
-          {
-            "level": 3,
-            "title": "包的导入方式",
-            "slug": "包的导入方式",
-            "link": "#包的导入方式",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Go-mod方式管理包",
-            "slug": "go-mod方式管理包",
-            "link": "#go-mod方式管理包",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "项目开始~",
-            "slug": "项目开始",
-            "link": "#项目开始",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "为代码启用依赖项跟踪",
-            "slug": "为代码启用依赖项跟踪",
-            "link": "#为代码启用依赖项跟踪",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "所出现问题",
-            "slug": "所出现问题",
-            "link": "#所出现问题",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "github导入包",
-            "slug": "github导入包",
-            "link": "#github导入包",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "远程推送到github上",
-            "slug": "远程推送到github上",
-            "link": "#远程推送到github上",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/Gomd_super/mod.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Go语言命名规范",
-    "headers": [
-      {
-        "level": 2,
-        "title": "参考",
-        "slug": "参考",
-        "link": "#参考",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "目录",
-        "slug": "目录",
-        "link": "#目录",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "文件",
-        "slug": "文件",
-        "link": "#文件",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "变量",
-        "slug": "变量",
-        "link": "#变量",
-        "children": [
-          {
-            "level": 3,
-            "title": "javascript：驼峰",
-            "slug": "javascript-驼峰",
-            "link": "#javascript-驼峰",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "css：中划线",
-            "slug": "css-中划线",
-            "link": "#css-中划线",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/Gomd_super/name.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "",
-    "headers": [
-      {
-        "level": 2,
-        "title": "目录",
-        "slug": "目录",
-        "link": "#目录",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Go网络编程和并发编程",
-        "slug": "go网络编程和并发编程",
-        "link": "#go网络编程和并发编程",
-        "children": [
-          {
-            "level": 3,
-            "title": "gin框架一章带走",
-            "slug": "gin框架一章带走",
-            "link": "#gin框架一章带走",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Go连接数据库",
-            "slug": "go连接数据库",
-            "link": "#go连接数据库",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Redis",
-            "slug": "redis",
-            "link": "#redis",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "go操作ETCD",
-            "slug": "go操作etcd",
-            "link": "#go操作etcd",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Go - zookeeper",
-            "slug": "go-zookeeper",
-            "link": "#go-zookeeper",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "go操作kafka",
-            "slug": "go操作kafka",
-            "link": "#go操作kafka",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "go操作RabbitMQ",
-            "slug": "go操作rabbitmq",
-            "link": "#go操作rabbitmq",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "go操作ElasticSearch",
-            "slug": "go操作elasticsearch",
-            "link": "#go操作elasticsearch",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Go语言常用包",
-            "slug": "go语言常用包",
-            "link": "#go语言常用包",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "beego框架",
-            "slug": "beego框架",
-            "link": "#beego框架",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Go高级",
-            "slug": "go高级",
-            "link": "#go高级",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "密码学",
-            "slug": "密码学",
-            "link": "#密码学",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "高级技巧",
-            "slug": "高级技巧",
-            "link": "#高级技巧",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "总结",
-            "slug": "总结",
-            "link": "#总结",
-            "children": []
-          }
-        ]
-      }
-    ],
-    "path": "/Gomd_super/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "正则表达式语法速查表",
-    "headers": [
-      {
-        "level": 2,
-        "title": "#常用正则表达式",
-        "slug": "常用正则表达式",
-        "link": "#常用正则表达式",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "#Resources",
-        "slug": "resources",
-        "link": "#resources",
-        "children": []
-      }
-    ],
-    "path": "/Gomd_super/zhenze.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "go语言基本语法和数据类型",
     "headers": [
       {
@@ -4770,6 +3784,992 @@ export const searchIndex = [
     "extraFields": []
   },
   {
+    "title": "位运算以及补码重点",
+    "headers": [
+      {
+        "level": 2,
+        "title": "ℹ️前言",
+        "slug": "i️前言",
+        "link": "#i️前言",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "🎈乘以 2 的幂",
+        "slug": "🎈乘以-2-的幂",
+        "link": "#🎈乘以-2-的幂",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "🎈除以 2 的幂",
+        "slug": "🎈除以-2-的幂",
+        "link": "#🎈除以-2-的幂",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "🎈交换没有临时变量的整数",
+        "slug": "🎈交换没有临时变量的整数",
+        "link": "#🎈交换没有临时变量的整数",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "🎈增量/减量（较慢但有利于混淆）",
+        "slug": "🎈增量-减量-较慢但有利于混淆",
+        "link": "#🎈增量-减量-较慢但有利于混淆",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "🎈标志翻转",
+        "slug": "🎈标志翻转",
+        "link": "#🎈标志翻转",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "🎈如果除数是 2 的幂，则进行模运算",
+        "slug": "🎈如果除数是-2-的幂-则进行模运算",
+        "link": "#🎈如果除数是-2-的幂-则进行模运算",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "🎈检查整数是偶数还是奇数",
+        "slug": "🎈检查整数是偶数还是奇数",
+        "link": "#🎈检查整数是偶数还是奇数",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "🎈相等检查",
+        "slug": "🎈相等检查",
+        "link": "#🎈相等检查",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "🎈绝对值",
+        "slug": "🎈绝对值",
+        "link": "#🎈绝对值",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "🎈等号检查（两个整数都是 pos 或 neg）",
+        "slug": "🎈等号检查-两个整数都是-pos-或-neg",
+        "link": "#🎈等号检查-两个整数都是-pos-或-neg",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "🎈圆角、天花板、地板",
+        "slug": "🎈圆角、天花板、地板",
+        "link": "#🎈圆角、天花板、地板",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "💡Java中的二进制补充",
+        "slug": "💡java中的二进制补充",
+        "link": "#💡java中的二进制补充",
+        "children": [
+          {
+            "level": 3,
+            "title": "必背",
+            "slug": "必背",
+            "link": "#必背",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "java逻辑右移",
+            "slug": "java逻辑右移",
+            "link": "#java逻辑右移",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/Gomd_super/bitwise.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "目录结构",
+    "headers": [
+      {
+        "level": 2,
+        "title": "Go语言目录结构",
+        "slug": "go语言目录结构",
+        "link": "#go语言目录结构",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Go 目录",
+        "slug": "go-目录",
+        "link": "#go-目录",
+        "children": [
+          {
+            "level": 3,
+            "title": "cmd",
+            "slug": "cmd",
+            "link": "#cmd",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "internal",
+            "slug": "internal",
+            "link": "#internal",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "pkg",
+            "slug": "pkg",
+            "link": "#pkg",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "vendor",
+            "slug": "vendor",
+            "link": "#vendor",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "服务端应用程序目录",
+        "slug": "服务端应用程序目录",
+        "link": "#服务端应用程序目录",
+        "children": [
+          {
+            "level": 3,
+            "title": "api",
+            "slug": "api",
+            "link": "#api",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "Web 应用程序目录",
+        "slug": "web-应用程序目录",
+        "link": "#web-应用程序目录",
+        "children": [
+          {
+            "level": 3,
+            "title": "web",
+            "slug": "web",
+            "link": "#web",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "通用应用程序目录",
+        "slug": "通用应用程序目录",
+        "link": "#通用应用程序目录",
+        "children": [
+          {
+            "level": 3,
+            "title": "build",
+            "slug": "build",
+            "link": "#build",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "configs",
+            "slug": "configs",
+            "link": "#configs",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "deployment",
+            "slug": "deployment",
+            "link": "#deployment",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "init",
+            "slug": "init",
+            "link": "#init",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "scripts",
+            "slug": "scripts",
+            "link": "#scripts",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "test",
+            "slug": "test",
+            "link": "#test",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "其他目录",
+        "slug": "其他目录",
+        "link": "#其他目录",
+        "children": [
+          {
+            "level": 3,
+            "title": "assets",
+            "slug": "assets",
+            "link": "#assets",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "docs",
+            "slug": "docs",
+            "link": "#docs",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "examples",
+            "slug": "examples",
+            "link": "#examples",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "githooks",
+            "slug": "githooks",
+            "link": "#githooks",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "third_party",
+            "slug": "third-party",
+            "link": "#third-party",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "tools",
+            "slug": "tools",
+            "link": "#tools",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "website",
+            "slug": "website",
+            "link": "#website",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "不应该出现的目录",
+        "slug": "不应该出现的目录",
+        "link": "#不应该出现的目录",
+        "children": [
+          {
+            "level": 3,
+            "title": "src",
+            "slug": "src",
+            "link": "#src",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "其他文件",
+        "slug": "其他文件",
+        "link": "#其他文件",
+        "children": [
+          {
+            "level": 3,
+            "title": "Makefile",
+            "slug": "makefile",
+            "link": "#makefile",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "小结",
+        "slug": "小结",
+        "link": "#小结",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "延伸阅读",
+        "slug": "延伸阅读",
+        "link": "#延伸阅读",
+        "children": []
+      }
+    ],
+    "path": "/Gomd_super/catalogue.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "go-air实现热加载",
+    "headers": [
+      {
+        "level": 2,
+        "title": "go air",
+        "slug": "go-air",
+        "link": "#go-air",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "特色",
+        "slug": "特色",
+        "link": "#特色",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "安装",
+        "slug": "安装",
+        "link": "#安装",
+        "children": [
+          {
+            "level": 3,
+            "title": "推荐使用 install.sh",
+            "slug": "推荐使用-install-sh",
+            "link": "#推荐使用-install-sh",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "使用 go install",
+            "slug": "使用-go-install",
+            "link": "#使用-go-install",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "配置镜像源",
+            "slug": "配置镜像源",
+            "link": "#配置镜像源",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "使用Docker",
+            "slug": "使用docker",
+            "link": "#使用docker",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "✨ beta 版本的特性",
+        "slug": "✨-beta-版本的特性",
+        "link": "#✨-beta-版本的特性",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "使用方法",
+        "slug": "使用方法",
+        "link": "#使用方法",
+        "children": [
+          {
+            "level": 3,
+            "title": "运行时参数",
+            "slug": "运行时参数",
+            "link": "#运行时参数",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Docker-compose",
+            "slug": "docker-compose",
+            "link": "#docker-compose",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "调试",
+            "slug": "调试",
+            "link": "#调试",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "Q&A",
+        "slug": "q-a",
+        "link": "#q-a",
+        "children": [
+          {
+            "level": 3,
+            "title": "遇到 \"command not found: air\" 或 \"No such file or directory\" 该怎么办？",
+            "slug": "遇到-command-not-found-air-或-no-such-file-or-directory-该怎么办",
+            "link": "#遇到-command-not-found-air-或-no-such-file-or-directory-该怎么办",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "部署",
+        "slug": "部署",
+        "link": "#部署",
+        "children": [
+          {
+            "level": 3,
+            "title": "发布新版本",
+            "slug": "发布新版本",
+            "link": "#发布新版本",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/Gomd_super/go-air.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Go mod包",
+    "headers": [
+      {
+        "level": 2,
+        "title": "介绍",
+        "slug": "介绍",
+        "link": "#介绍",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Go mod init",
+        "slug": "go-mod-init",
+        "link": "#go-mod-init",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Go module",
+        "slug": "go-module",
+        "link": "#go-module",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "切换",
+        "slug": "切换",
+        "link": "#切换",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "自己新创建一个项目",
+        "slug": "自己新创建一个项目",
+        "link": "#自己新创建一个项目",
+        "children": [
+          {
+            "level": 3,
+            "title": "包的导入方式",
+            "slug": "包的导入方式",
+            "link": "#包的导入方式",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Go-mod方式管理包",
+            "slug": "go-mod方式管理包",
+            "link": "#go-mod方式管理包",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "项目开始~",
+            "slug": "项目开始",
+            "link": "#项目开始",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "为代码启用依赖项跟踪",
+            "slug": "为代码启用依赖项跟踪",
+            "link": "#为代码启用依赖项跟踪",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "所出现问题",
+            "slug": "所出现问题",
+            "link": "#所出现问题",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "github导入包",
+            "slug": "github导入包",
+            "link": "#github导入包",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "远程推送到github上",
+            "slug": "远程推送到github上",
+            "link": "#远程推送到github上",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/Gomd_super/go-version.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Go语言文本编码处理",
+    "headers": [
+      {
+        "level": 2,
+        "title": "前言",
+        "slug": "前言",
+        "link": "#前言",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "判断是否字符串是否包含字符串",
+        "slug": "判断是否字符串是否包含字符串",
+        "link": "#判断是否字符串是否包含字符串",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "字符串拆分",
+        "slug": "字符串拆分",
+        "link": "#字符串拆分",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "可以使用join将其合并起来",
+        "slug": "可以使用join将其合并起来",
+        "link": "#可以使用join将其合并起来",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "字符串转化",
+        "slug": "字符串转化",
+        "link": "#字符串转化",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "序列化和反序列化",
+        "slug": "序列化和反序列化",
+        "link": "#序列化和反序列化",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "使用flag获取复杂参数",
+        "slug": "使用flag获取复杂参数",
+        "link": "#使用flag获取复杂参数",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "控制命令行操作",
+        "slug": "控制命令行操作",
+        "link": "#控制命令行操作",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "补充：变量的作用域",
+        "slug": "补充-变量的作用域",
+        "link": "#补充-变量的作用域",
+        "children": []
+      }
+    ],
+    "path": "/Gomd_super/go_file.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Go-mod包",
+    "headers": [
+      {
+        "level": 2,
+        "title": "Go-mod项目地址",
+        "slug": "go-mod项目地址",
+        "link": "#go-mod项目地址",
+        "children": [
+          {
+            "level": 3,
+            "title": "包的导入方式",
+            "slug": "包的导入方式",
+            "link": "#包的导入方式",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Go-mod方式管理包",
+            "slug": "go-mod方式管理包",
+            "link": "#go-mod方式管理包",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "项目开始~",
+            "slug": "项目开始",
+            "link": "#项目开始",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "为代码启用依赖项跟踪",
+            "slug": "为代码启用依赖项跟踪",
+            "link": "#为代码启用依赖项跟踪",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "所出现问题",
+            "slug": "所出现问题",
+            "link": "#所出现问题",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "github导入包",
+            "slug": "github导入包",
+            "link": "#github导入包",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "远程推送到github上",
+            "slug": "远程推送到github上",
+            "link": "#远程推送到github上",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/Gomd_super/go_mod.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Go mod包",
+    "headers": [
+      {
+        "level": 2,
+        "title": "介绍",
+        "slug": "介绍",
+        "link": "#介绍",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Go mod init",
+        "slug": "go-mod-init",
+        "link": "#go-mod-init",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Go module",
+        "slug": "go-module",
+        "link": "#go-module",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "切换",
+        "slug": "切换",
+        "link": "#切换",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "自己新创建一个项目",
+        "slug": "自己新创建一个项目",
+        "link": "#自己新创建一个项目",
+        "children": [
+          {
+            "level": 3,
+            "title": "包的导入方式",
+            "slug": "包的导入方式",
+            "link": "#包的导入方式",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Go-mod方式管理包",
+            "slug": "go-mod方式管理包",
+            "link": "#go-mod方式管理包",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "项目开始~",
+            "slug": "项目开始",
+            "link": "#项目开始",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "为代码启用依赖项跟踪",
+            "slug": "为代码启用依赖项跟踪",
+            "link": "#为代码启用依赖项跟踪",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "所出现问题",
+            "slug": "所出现问题",
+            "link": "#所出现问题",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "github导入包",
+            "slug": "github导入包",
+            "link": "#github导入包",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "远程推送到github上",
+            "slug": "远程推送到github上",
+            "link": "#远程推送到github上",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/Gomd_super/mod.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Go语言命名规范",
+    "headers": [
+      {
+        "level": 2,
+        "title": "参考",
+        "slug": "参考",
+        "link": "#参考",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "目录",
+        "slug": "目录",
+        "link": "#目录",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "文件",
+        "slug": "文件",
+        "link": "#文件",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "变量",
+        "slug": "变量",
+        "link": "#变量",
+        "children": [
+          {
+            "level": 3,
+            "title": "javascript：驼峰",
+            "slug": "javascript-驼峰",
+            "link": "#javascript-驼峰",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "css：中划线",
+            "slug": "css-中划线",
+            "link": "#css-中划线",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/Gomd_super/name.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "",
+    "headers": [
+      {
+        "level": 2,
+        "title": "目录",
+        "slug": "目录",
+        "link": "#目录",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Go网络编程和并发编程",
+        "slug": "go网络编程和并发编程",
+        "link": "#go网络编程和并发编程",
+        "children": [
+          {
+            "level": 3,
+            "title": "gin框架一章带走",
+            "slug": "gin框架一章带走",
+            "link": "#gin框架一章带走",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Go连接数据库",
+            "slug": "go连接数据库",
+            "link": "#go连接数据库",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Redis",
+            "slug": "redis",
+            "link": "#redis",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "go操作ETCD",
+            "slug": "go操作etcd",
+            "link": "#go操作etcd",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Go - zookeeper",
+            "slug": "go-zookeeper",
+            "link": "#go-zookeeper",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "go操作kafka",
+            "slug": "go操作kafka",
+            "link": "#go操作kafka",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "go操作RabbitMQ",
+            "slug": "go操作rabbitmq",
+            "link": "#go操作rabbitmq",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "go操作ElasticSearch",
+            "slug": "go操作elasticsearch",
+            "link": "#go操作elasticsearch",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Go语言常用包",
+            "slug": "go语言常用包",
+            "link": "#go语言常用包",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "beego框架",
+            "slug": "beego框架",
+            "link": "#beego框架",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Go高级",
+            "slug": "go高级",
+            "link": "#go高级",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "密码学",
+            "slug": "密码学",
+            "link": "#密码学",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "高级技巧",
+            "slug": "高级技巧",
+            "link": "#高级技巧",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "总结",
+            "slug": "总结",
+            "link": "#总结",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "path": "/Gomd_super/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "正则表达式语法速查表",
+    "headers": [
+      {
+        "level": 2,
+        "title": "#常用正则表达式",
+        "slug": "常用正则表达式",
+        "link": "#常用正则表达式",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "#Resources",
+        "slug": "resources",
+        "link": "#resources",
+        "children": []
+      }
+    ],
+    "path": "/Gomd_super/zhenze.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "MIT 6.824 DistributedSystem~",
     "headers": [
       {
@@ -5039,6 +5039,100 @@ export const searchIndex = [
     "extraFields": []
   },
   {
+    "title": "database design 和 Poc code 阶段",
+    "headers": [
+      {
+        "level": 2,
+        "title": "数据库设计",
+        "slug": "数据库设计",
+        "link": "#数据库设计",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "自动化测试",
+        "slug": "自动化测试",
+        "link": "#自动化测试",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "内部需求板块",
+        "slug": "内部需求板块",
+        "link": "#内部需求板块",
+        "children": [
+          {
+            "level": 3,
+            "title": "Package：认证模块 Apiserver",
+            "slug": "package-认证模块-apiserver",
+            "link": "#package-认证模块-apiserver",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Token 包",
+            "slug": "token-包",
+            "link": "#token-包",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "编码",
+            "slug": "编码",
+            "link": "#编码",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "解码",
+            "slug": "解码",
+            "link": "#解码",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "用法",
+            "slug": "用法",
+            "link": "#用法",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "参考文档",
+        "slug": "参考文档",
+        "link": "#参考文档",
+        "children": [
+          {
+            "level": 3,
+            "title": "Token",
+            "slug": "token",
+            "link": "#token",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "目录结构",
+        "slug": "目录结构",
+        "link": "#目录结构",
+        "children": []
+      }
+    ],
+    "path": "/%E5%AD%97%E8%8A%82%E9%9D%92%E8%AE%AD%E8%90%A5/poc.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "relation/action/ 实现",
+    "headers": [],
+    "path": "/%E5%AD%97%E8%8A%82%E9%9D%92%E8%AE%AD%E8%90%A5/relation.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "tiktok 设计",
     "headers": [
       {
@@ -5047,6 +5141,262 @@ export const searchIndex = [
         "slug": "目录",
         "link": "#目录",
         "children": []
+      },
+      {
+        "level": 2,
+        "title": "视频流接口设计",
+        "slug": "视频流接口设计",
+        "link": "#视频流接口设计",
+        "children": [
+          {
+            "level": 3,
+            "title": "接口类型",
+            "slug": "接口类型",
+            "link": "#接口类型",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "接口定义",
+            "slug": "接口定义",
+            "link": "#接口定义",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "问题分析",
+            "slug": "问题分析",
+            "link": "#问题分析",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "需求解决方案",
+            "slug": "需求解决方案",
+            "link": "#需求解决方案",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "具体流程",
+            "slug": "具体流程",
+            "link": "#具体流程",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "数据库设计",
+            "slug": "数据库设计",
+            "link": "#数据库设计",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "验收标准——正常场景",
+            "slug": "验收标准——正常场景",
+            "link": "#验收标准——正常场景",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "参考文档",
+            "slug": "参考文档",
+            "link": "#参考文档",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "用户登录接口 POC 方案",
+        "slug": "用户登录接口-poc-方案",
+        "link": "#用户登录接口-poc-方案",
+        "children": [
+          {
+            "level": 3,
+            "title": "版本：v0.1.0",
+            "slug": "版本-v0-1-0",
+            "link": "#版本-v0-1-0",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "名词解析",
+            "slug": "名词解析",
+            "link": "#名词解析",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "需求分解",
+            "slug": "需求分解",
+            "link": "#需求分解",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "需求解决方案",
+            "slug": "需求解决方案-1",
+            "link": "#需求解决方案-1",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "验收标准——正常场景",
+            "slug": "验收标准——正常场景-1",
+            "link": "#验收标准——正常场景-1",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "验收标准——异常场景",
+            "slug": "验收标准——异常场景",
+            "link": "#验收标准——异常场景",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "赞操作",
+        "slug": "赞操作",
+        "link": "#赞操作",
+        "children": [
+          {
+            "level": 3,
+            "title": "问题分析",
+            "slug": "问题分析-1",
+            "link": "#问题分析-1",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "需求的解决方案",
+            "slug": "需求的解决方案",
+            "link": "#需求的解决方案",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "验收标准——正常场景",
+            "slug": "验收标准——正常场景-2",
+            "link": "#验收标准——正常场景-2",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "数据库表设计",
+            "slug": "数据库表设计",
+            "link": "#数据库表设计",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "用户注册接口设计",
+        "slug": "用户注册接口设计",
+        "link": "#用户注册接口设计",
+        "children": [
+          {
+            "level": 3,
+            "title": "版本信息",
+            "slug": "版本信息",
+            "link": "#版本信息",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "变更日志",
+            "slug": "变更日志",
+            "link": "#变更日志",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "文档说明",
+            "slug": "文档说明",
+            "link": "#文档说明",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "名词解释",
+            "slug": "名词解释",
+            "link": "#名词解释",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "需求设计",
+            "slug": "需求设计",
+            "link": "#需求设计",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "要求",
+            "slug": "要求",
+            "link": "#要求",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "接口类型",
+            "slug": "接口类型-1",
+            "link": "#接口类型-1",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "请求路径",
+            "slug": "请求路径",
+            "link": "#请求路径",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "请求参数",
+            "slug": "请求参数",
+            "link": "#请求参数",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "需求分解",
+            "slug": "需求分解-1",
+            "link": "#需求分解-1",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "需求解决方案",
+            "slug": "需求解决方案-2",
+            "link": "#需求解决方案-2",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "功能详细说明",
+            "slug": "功能详细说明",
+            "link": "#功能详细说明",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "验收标准",
+            "slug": "验收标准",
+            "link": "#验收标准",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "参考文档",
+            "slug": "参考文档-1",
+            "link": "#参考文档-1",
+            "children": []
+          }
+        ]
       },
       {
         "level": 2,
@@ -5257,7 +5607,123 @@ export const searchIndex = [
   },
   {
     "title": "接口设计稿",
-    "headers": [],
+    "headers": [
+      {
+        "level": 2,
+        "title": "社交接口",
+        "slug": "社交接口",
+        "link": "#社交接口",
+        "children": [
+          {
+            "level": 3,
+            "title": "关注模块设计",
+            "slug": "关注模块设计",
+            "link": "#关注模块设计",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "调研",
+            "slug": "调研",
+            "link": "#调研",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "关注操作",
+        "slug": "关注操作",
+        "link": "#关注操作",
+        "children": [
+          {
+            "level": 3,
+            "title": "请求参数",
+            "slug": "请求参数",
+            "link": "#请求参数",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "示例代码",
+            "slug": "示例代码",
+            "link": "#示例代码",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Interface",
+            "slug": "interface",
+            "link": "#interface",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "返回相应 200",
+            "slug": "返回相应-200",
+            "link": "#返回相应-200",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "关注列表",
+        "slug": "关注列表",
+        "link": "#关注列表",
+        "children": [
+          {
+            "level": 3,
+            "title": "请求参数",
+            "slug": "请求参数-1",
+            "link": "#请求参数-1",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "示例代码",
+            "slug": "示例代码-1",
+            "link": "#示例代码-1",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Interface",
+            "slug": "interface-1",
+            "link": "#interface-1",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "返回相应 200",
+            "slug": "返回相应-200-1",
+            "link": "#返回相应-200-1",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "验收",
+        "slug": "验收",
+        "link": "#验收",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "数据库设计",
+        "slug": "数据库设计",
+        "link": "#数据库设计",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
     "path": "/%E5%AD%97%E8%8A%82%E9%9D%92%E8%AE%AD%E8%90%A5/%E6%8E%A5%E5%8F%A3%E8%AE%BE%E8%AE%A1%E7%A8%BF.html",
     "pathLocale": "/",
     "extraFields": []
@@ -5395,1646 +5861,6 @@ export const searchIndex = [
     "title": "go-project-example",
     "headers": [],
     "path": "/code/go-project-example/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第1节 设计模式概述",
-    "headers": [
-      {
-        "level": 2,
-        "title": "设计模式定义",
-        "slug": "设计模式定义",
-        "link": "#设计模式定义",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "参考文章",
-        "slug": "参考文章",
-        "link": "#参考文章",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "设计模式的分类",
-        "slug": "设计模式的分类",
-        "link": "#设计模式的分类",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "如何学习设计模式",
-        "slug": "如何学习设计模式",
-        "link": "#如何学习设计模式",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "面对对象设计原则",
-        "slug": "面对对象设计原则",
-        "link": "#面对对象设计原则",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "设计模式的类型",
-        "slug": "设计模式的类型",
-        "link": "#设计模式的类型",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/1.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第10节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/10.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第11节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/11.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第12节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/12.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第13节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/13.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第14节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/14.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第15节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/15.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第16节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/16.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第17节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/17.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第18节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/18.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第19节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/19.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第2节 单一职责原则",
-    "headers": [
-      {
-        "level": 2,
-        "title": "什么是单一职责原则",
-        "slug": "什么是单一职责原则",
-        "link": "#什么是单一职责原则",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "代码",
-        "slug": "代码",
-        "link": "#代码",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/2.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第20节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/20.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第21节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/21.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第22节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/22.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第23节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/23.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第24节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/24.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第25节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/25.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第26节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/26.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第27节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/27.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第28节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/28.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第29节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/29.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第3节 开闭原则",
-    "headers": [
-      {
-        "level": 2,
-        "title": "原则",
-        "slug": "原则",
-        "link": "#原则",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "没有使用开闭原则",
-        "slug": "没有使用开闭原则",
-        "link": "#没有使用开闭原则",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "实现架构层，基于抽象层业务封装",
-        "slug": "实现架构层-基于抽象层业务封装",
-        "link": "#实现架构层-基于抽象层业务封装",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/3.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第30节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/30.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第31节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/31.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第32节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/32.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第33节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/33.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第34节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/34.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第35节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/35.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第36节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/36.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第37节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/37.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第38节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/38.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第39节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/39.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第4节 依赖倒转原则",
-    "headers": [
-      {
-        "level": 2,
-        "title": "原则",
-        "slug": "原则",
-        "link": "#原则",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "没有使用依赖倒转",
-        "slug": "没有使用依赖倒转",
-        "link": "#没有使用依赖倒转",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "使用依赖倒转",
-        "slug": "使用依赖倒转",
-        "link": "#使用依赖倒转",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/4.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第40节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/40.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第41节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/41.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第42节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/42.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第43节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/43.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第44节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/44.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第45节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/45.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第46节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/46.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第47节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/47.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第48节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/48.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第49节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/49.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第5节 合成复用原则",
-    "headers": [
-      {
-        "level": 2,
-        "title": "原则",
-        "slug": "原则",
-        "link": "#原则",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "继承和组合",
-        "slug": "继承和组合",
-        "link": "#继承和组合",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "使用合并复用",
-        "slug": "使用合并复用",
-        "link": "#使用合并复用",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/5.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第50节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/50.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第51节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/51.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第52节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/52.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第53节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/53.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第54节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/54.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第55节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/55.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第56节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/56.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第57节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/57.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第58节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/58.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第59节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/59.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第6节 迪米特法则",
-    "headers": [
-      {
-        "level": 2,
-        "title": "原则",
-        "slug": "原则",
-        "link": "#原则",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/6.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第60节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/60.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第61节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/61.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第62节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/62.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第63节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/63.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第64节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/64.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第65节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/65.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第66节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/66.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第67节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/67.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第68节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/68.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第69节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/69.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第7节 工厂模式（创建型模式）",
-    "headers": [
-      {
-        "level": 2,
-        "title": "创建形模式",
-        "slug": "创建形模式",
-        "link": "#创建形模式",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "简单工厂模式",
-        "slug": "简单工厂模式",
-        "link": "#简单工厂模式",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "简单工厂模式设计",
-        "slug": "简单工厂模式设计",
-        "link": "#简单工厂模式设计",
-        "children": [
-          {
-            "level": 3,
-            "title": "简单工厂方法模式的优缺点",
-            "slug": "简单工厂方法模式的优缺点",
-            "link": "#简单工厂方法模式的优缺点",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/7.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第70节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/70.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第71节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/71.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第72节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/72.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第73节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/73.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第74节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/74.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第75节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/75.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第76节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/76.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第77节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/77.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第78节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/78.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第79节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/79.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第8节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/8.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第80节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/80.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第81节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/81.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第82节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/82.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第83节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/83.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第84节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/84.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第85节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/85.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第86节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/86.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第87节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/87.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第88节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/88.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第89节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/89.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第9节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/9.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第90节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/90.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第91节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/91.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第92节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/92.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第93节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/93.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第94节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/94.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第95节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/95.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第96节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/96.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第97节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/97.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第98节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/98.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第99节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/go-advancend/design/99.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -8726,6 +7552,57 @@ export const searchIndex = [
       },
       {
         "level": 2,
+        "title": "性能优化分析工具",
+        "slug": "性能优化分析工具",
+        "link": "#性能优化分析工具",
+        "children": [
+          {
+            "level": 3,
+            "title": "优化建议",
+            "slug": "优化建议",
+            "link": "#优化建议",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "性能分析工具 pprof",
+            "slug": "性能分析工具-pprof",
+            "link": "#性能分析工具-pprof",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "pprof项目实战",
+            "slug": "pprof项目实战",
+            "link": "#pprof项目实战",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "性能调优实战",
+        "slug": "性能调优实战",
+        "link": "#性能调优实战",
+        "children": [
+          {
+            "level": 3,
+            "title": "使用",
+            "slug": "使用",
+            "link": "#使用",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "过程和原理",
+            "slug": "过程和原理",
+            "link": "#过程和原理",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
         "title": "END 链接",
         "slug": "end-链接",
         "link": "#end-链接",
@@ -8737,7 +7614,7 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "第29节",
+    "title": "第29节 Go语言框架三件套（Web/RPC/GORM)",
     "headers": [
       {
         "level": 3,
@@ -8751,6 +7628,191 @@ export const searchIndex = [
         "title": "Go语言100篇进阶",
         "slug": "go语言100篇进阶",
         "link": "#go语言100篇进阶",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "ORM、GORM",
+        "slug": "orm、gorm",
+        "link": "#orm、gorm",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "GROM",
+        "slug": "grom",
+        "link": "#grom",
+        "children": [
+          {
+            "level": 3,
+            "title": "驱动方式链接",
+            "slug": "驱动方式链接",
+            "link": "#驱动方式链接",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "First 使用详细",
+            "slug": "first-使用详细",
+            "link": "#first-使用详细",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "更新数据",
+            "slug": "更新数据",
+            "link": "#更新数据",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "删除",
+            "slug": "删除",
+            "link": "#删除",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "事务",
+            "slug": "事务",
+            "link": "#事务",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "GORM Hook",
+            "slug": "gorm-hook",
+            "link": "#gorm-hook",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Gorm 性能提高",
+            "slug": "gorm-性能提高",
+            "link": "#gorm-性能提高",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "GORM生态",
+            "slug": "gorm生态",
+            "link": "#gorm生态",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "Kitex",
+        "slug": "kitex",
+        "link": "#kitex",
+        "children": [
+          {
+            "level": 3,
+            "title": "定义 IDL",
+            "slug": "定义-idl",
+            "link": "#定义-idl",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "生成代码",
+            "slug": "生成代码",
+            "link": "#生成代码",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Kitex 服务注册与发现",
+            "slug": "kitex-服务注册与发现",
+            "link": "#kitex-服务注册与发现",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "生态",
+            "slug": "生态",
+            "link": "#生态",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "Hertz",
+        "slug": "hertz",
+        "link": "#hertz",
+        "children": [
+          {
+            "level": 3,
+            "title": "项目源码",
+            "slug": "项目源码",
+            "link": "#项目源码",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "架构设计",
+            "slug": "架构设计",
+            "link": "#架构设计",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "应用层",
+            "slug": "应用层",
+            "link": "#应用层",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "路由层",
+            "slug": "路由层",
+            "link": "#路由层",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "协议层",
+            "slug": "协议层",
+            "link": "#协议层",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "传输层",
+            "slug": "传输层",
+            "link": "#传输层",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Hertz 中间件",
+            "slug": "hertz-中间件",
+            "link": "#hertz-中间件",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Hertz代码生成工具",
+            "slug": "hertz代码生成工具",
+            "link": "#hertz代码生成工具",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Hertz 性能",
+            "slug": "hertz-性能",
+            "link": "#hertz-性能",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "笔记项目",
+        "slug": "笔记项目",
+        "link": "#笔记项目",
         "children": []
       },
       {
@@ -8802,7 +7864,7 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "第30节",
+    "title": "第30节 Mysql",
     "headers": [
       {
         "level": 3,
@@ -8816,6 +7878,13 @@ export const searchIndex = [
         "title": "Go语言100篇进阶",
         "slug": "go语言100篇进阶",
         "link": "#go语言100篇进阶",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "学习专栏",
+        "slug": "学习专栏",
+        "link": "#学习专栏",
         "children": []
       },
       {
@@ -8831,7 +7900,7 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "第31节",
+    "title": "第31节 程序中的错误处理",
     "headers": [
       {
         "level": 3,
@@ -8849,6 +7918,62 @@ export const searchIndex = [
       },
       {
         "level": 2,
+        "title": "前言",
+        "slug": "前言",
+        "link": "#前言",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "多返回值",
+        "slug": "多返回值",
+        "link": "#多返回值",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "资源清理",
+        "slug": "资源清理",
+        "link": "#资源清理",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "异常捕捉处理",
+        "slug": "异常捕捉处理",
+        "link": "#异常捕捉处理",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "错误返回码 vs 异常捕捉",
+        "slug": "错误返回码-vs-异常捕捉",
+        "link": "#错误返回码-vs-异常捕捉",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "异步编程世界里的错误处理",
+        "slug": "异步编程世界里的错误处理",
+        "link": "#异步编程世界里的错误处理",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Go 语言的 Promise",
+        "slug": "go-语言的-promise",
+        "link": "#go-语言的-promise",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "错误处理的实践",
+        "slug": "错误处理的实践",
+        "link": "#错误处理的实践",
+        "children": []
+      },
+      {
+        "level": 2,
         "title": "END 链接",
         "slug": "end-链接",
         "link": "#end-链接",
@@ -8860,7 +7985,7 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "第32节",
+    "title": "第32节 go语言1.20发布",
     "headers": [
       {
         "level": 3,
@@ -8874,6 +7999,55 @@ export const searchIndex = [
         "title": "Go语言100篇进阶",
         "slug": "go语言100篇进阶",
         "link": "#go语言100篇进阶",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "开始",
+        "slug": "开始",
+        "link": "#开始",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "语言的变化",
+        "slug": "语言的变化",
+        "link": "#语言的变化",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "性能提升",
+        "slug": "性能提升",
+        "link": "#性能提升",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "OS 兼容版本",
+        "slug": "os-兼容版本",
+        "link": "#os-兼容版本",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Tool",
+        "slug": "tool",
+        "link": "#tool",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "标准库",
+        "slug": "标准库",
+        "link": "#标准库",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "其他的一些内容",
+        "slug": "其他的一些内容",
+        "link": "#其他的一些内容",
         "children": []
       },
       {
@@ -9700,6 +8874,1646 @@ export const searchIndex = [
       }
     ],
     "path": "/go-advancend/markdown/9.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第1节 设计模式概述",
+    "headers": [
+      {
+        "level": 2,
+        "title": "设计模式定义",
+        "slug": "设计模式定义",
+        "link": "#设计模式定义",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "参考文章",
+        "slug": "参考文章",
+        "link": "#参考文章",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "设计模式的分类",
+        "slug": "设计模式的分类",
+        "link": "#设计模式的分类",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "如何学习设计模式",
+        "slug": "如何学习设计模式",
+        "link": "#如何学习设计模式",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "面对对象设计原则",
+        "slug": "面对对象设计原则",
+        "link": "#面对对象设计原则",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "设计模式的类型",
+        "slug": "设计模式的类型",
+        "link": "#设计模式的类型",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/1.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第10节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/10.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第11节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/11.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第12节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/12.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第13节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/13.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第14节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/14.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第15节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/15.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第16节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/16.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第17节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/17.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第18节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/18.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第19节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/19.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第2节 单一职责原则",
+    "headers": [
+      {
+        "level": 2,
+        "title": "什么是单一职责原则",
+        "slug": "什么是单一职责原则",
+        "link": "#什么是单一职责原则",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "代码",
+        "slug": "代码",
+        "link": "#代码",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/2.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第20节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/20.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第21节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/21.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第22节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/22.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第23节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/23.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第24节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/24.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第25节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/25.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第26节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/26.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第27节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/27.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第28节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/28.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第29节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/29.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第3节 开闭原则",
+    "headers": [
+      {
+        "level": 2,
+        "title": "原则",
+        "slug": "原则",
+        "link": "#原则",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "没有使用开闭原则",
+        "slug": "没有使用开闭原则",
+        "link": "#没有使用开闭原则",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "实现架构层，基于抽象层业务封装",
+        "slug": "实现架构层-基于抽象层业务封装",
+        "link": "#实现架构层-基于抽象层业务封装",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/3.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第30节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/30.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第31节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/31.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第32节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/32.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第33节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/33.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第34节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/34.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第35节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/35.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第36节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/36.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第37节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/37.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第38节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/38.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第39节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/39.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第4节 依赖倒转原则",
+    "headers": [
+      {
+        "level": 2,
+        "title": "原则",
+        "slug": "原则",
+        "link": "#原则",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "没有使用依赖倒转",
+        "slug": "没有使用依赖倒转",
+        "link": "#没有使用依赖倒转",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "使用依赖倒转",
+        "slug": "使用依赖倒转",
+        "link": "#使用依赖倒转",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/4.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第40节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/40.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第41节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/41.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第42节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/42.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第43节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/43.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第44节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/44.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第45节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/45.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第46节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/46.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第47节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/47.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第48节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/48.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第49节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/49.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第5节 合成复用原则",
+    "headers": [
+      {
+        "level": 2,
+        "title": "原则",
+        "slug": "原则",
+        "link": "#原则",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "继承和组合",
+        "slug": "继承和组合",
+        "link": "#继承和组合",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "使用合并复用",
+        "slug": "使用合并复用",
+        "link": "#使用合并复用",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/5.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第50节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/50.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第51节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/51.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第52节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/52.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第53节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/53.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第54节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/54.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第55节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/55.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第56节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/56.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第57节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/57.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第58节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/58.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第59节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/59.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第6节 迪米特法则",
+    "headers": [
+      {
+        "level": 2,
+        "title": "原则",
+        "slug": "原则",
+        "link": "#原则",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/6.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第60节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/60.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第61节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/61.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第62节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/62.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第63节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/63.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第64节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/64.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第65节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/65.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第66节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/66.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第67节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/67.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第68节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/68.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第69节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/69.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第7节 工厂模式（创建型模式）",
+    "headers": [
+      {
+        "level": 2,
+        "title": "创建形模式",
+        "slug": "创建形模式",
+        "link": "#创建形模式",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "简单工厂模式",
+        "slug": "简单工厂模式",
+        "link": "#简单工厂模式",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "简单工厂模式设计",
+        "slug": "简单工厂模式设计",
+        "link": "#简单工厂模式设计",
+        "children": [
+          {
+            "level": 3,
+            "title": "简单工厂方法模式的优缺点",
+            "slug": "简单工厂方法模式的优缺点",
+            "link": "#简单工厂方法模式的优缺点",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/7.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第70节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/70.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第71节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/71.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第72节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/72.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第73节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/73.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第74节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/74.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第75节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/75.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第76节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/76.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第77节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/77.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第78节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/78.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第79节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/79.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第8节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/8.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第80节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/80.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第81节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/81.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第82节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/82.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第83节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/83.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第84节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/84.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第85节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/85.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第86节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/86.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第87节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/87.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第88节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/88.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第89节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/89.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第9节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/9.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第90节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/90.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第91节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/91.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第92节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/92.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第93节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/93.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第94节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/94.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第95节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/95.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第96节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/96.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第97节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/97.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第98节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/98.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第99节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/go-advancend/design/99.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -15183,6 +15997,20 @@ export const searchIndex = [
         "children": [
           {
             "level": 3,
+            "title": "MariaDB",
+            "slug": "mariadb",
+            "link": "#mariadb",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Redis",
+            "slug": "redis",
+            "link": "#redis",
+            "children": []
+          },
+          {
+            "level": 3,
             "title": "安装和配置 MariaDB",
             "slug": "安装和配置-mariadb",
             "link": "#安装和配置-mariadb",
@@ -15201,14 +16029,63 @@ export const searchIndex = [
             "slug": "安装和配置-mongodb",
             "link": "#安装和配置-mongodb",
             "children": []
+          },
+          {
+            "level": 3,
+            "title": "安装和配置 IAM 系统",
+            "slug": "安装和配置-iam-系统",
+            "link": "#安装和配置-iam-系统",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "安装和配置 iam-apiserver",
+            "slug": "安装和配置-iam-apiserver",
+            "link": "#安装和配置-iam-apiserver",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "安装 iamctl",
+            "slug": "安装-iamctl",
+            "link": "#安装-iamctl",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "安装和配置 iam-authz-server",
+            "slug": "安装和配置-iam-authz-server",
+            "link": "#安装和配置-iam-authz-server",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "安装和配置 iam-pump",
+            "slug": "安装和配置-iam-pump",
+            "link": "#安装和配置-iam-pump",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "安装 man 文件",
+            "slug": "安装-man-文件",
+            "link": "#安装-man-文件",
+            "children": []
           }
         ]
       },
       {
         "level": 2,
-        "title": "安装和配置 IAM 系统",
-        "slug": "安装和配置-iam-系统",
-        "link": "#安装和配置-iam-系统",
+        "title": "一键安装",
+        "slug": "一键安装",
+        "link": "#一键安装",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "总结",
+        "slug": "总结",
+        "link": "#总结",
         "children": []
       },
       {
@@ -15374,8 +16251,166 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "第3节",
+    "title": "第3节 设计规范",
     "headers": [
+      {
+        "level": 2,
+        "title": "哪些需要规范",
+        "slug": "哪些需要规范",
+        "link": "#哪些需要规范",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "开源规范",
+        "slug": "开源规范",
+        "link": "#开源规范",
+        "children": [
+          {
+            "level": 3,
+            "title": "开源协议",
+            "slug": "开源协议",
+            "link": "#开源协议",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "开源规范特点",
+            "slug": "开源规范特点",
+            "link": "#开源规范特点",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "README 文档",
+            "slug": "readme-文档",
+            "link": "#readme-文档",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "文档规范",
+        "slug": "文档规范",
+        "link": "#文档规范",
+        "children": [
+          {
+            "level": 3,
+            "title": "项目结构",
+            "slug": "项目结构",
+            "link": "#项目结构",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "API 接口文档规范",
+        "slug": "api-接口文档规范",
+        "link": "#api-接口文档规范",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "版本规范",
+        "slug": "版本规范",
+        "link": "#版本规范",
+        "children": [
+          {
+            "level": 3,
+            "title": "什么是语义化版本规范（SemVer）？",
+            "slug": "什么是语义化版本规范-semver",
+            "link": "#什么是语义化版本规范-semver",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "语义化版本控制规范",
+            "slug": "语义化版本控制规范",
+            "link": "#语义化版本控制规范",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "如何确定版本号？",
+            "slug": "如何确定版本号",
+            "link": "#如何确定版本号",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "Commit 规范",
+        "slug": "commit-规范",
+        "link": "#commit-规范",
+        "children": [
+          {
+            "level": 3,
+            "title": "Commit Message 的规范有哪些？",
+            "slug": "commit-message-的规范有哪些",
+            "link": "#commit-message-的规范有哪些",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Header",
+            "slug": "header",
+            "link": "#header",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Body",
+            "slug": "body",
+            "link": "#body",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Footer",
+            "slug": "footer",
+            "link": "#footer",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Revert Commit",
+            "slug": "revert-commit",
+            "link": "#revert-commit",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Commit 相关的 3 个重要内容",
+            "slug": "commit-相关的-3-个重要内容",
+            "link": "#commit-相关的-3-个重要内容",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "合并提交操作示例",
+            "slug": "合并提交操作示例",
+            "link": "#合并提交操作示例",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "修改 Commit Message",
+            "slug": "修改-commit-message",
+            "link": "#修改-commit-message",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "Commit Message 规范自动化",
+        "slug": "commit-message-规范自动化",
+        "link": "#commit-message-规范自动化",
+        "children": []
+      },
       {
         "level": 2,
         "title": "END 链接",
@@ -15539,8 +16574,151 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "第4节",
+    "title": "第4节 Go语言项目设计",
     "headers": [
+      {
+        "level": 2,
+        "title": "目录结构",
+        "slug": "目录结构",
+        "link": "#目录结构",
+        "children": [
+          {
+            "level": 3,
+            "title": "平铺式结构",
+            "slug": "平铺式结构",
+            "link": "#平铺式结构",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "结构式结构",
+            "slug": "结构式结构",
+            "link": "#结构式结构",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Go 应用 ：主要存放前后端代码",
+            "slug": "go-应用-主要存放前后端代码",
+            "link": "#go-应用-主要存放前后端代码",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Go 应用：主要存放测试相关的文件和代码",
+            "slug": "go-应用-主要存放测试相关的文件和代码",
+            "link": "#go-应用-主要存放测试相关的文件和代码",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Go 应用：存放跟应用部署相关的文件",
+            "slug": "go-应用-存放跟应用部署相关的文件",
+            "link": "#go-应用-存放跟应用部署相关的文件",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "项目管理：存放用来管理 Go 项目的各类文件",
+            "slug": "项目管理-存放用来管理-go-项目的各类文件",
+            "link": "#项目管理-存放用来管理-go-项目的各类文件",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "文档：主要存放项目的各类文档",
+            "slug": "文档-主要存放项目的各类文档",
+            "link": "#文档-主要存放项目的各类文档",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "合理的多人开发流",
+        "slug": "合理的多人开发流",
+        "link": "#合理的多人开发流",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "研发流程",
+        "slug": "研发流程",
+        "link": "#研发流程",
+        "children": [
+          {
+            "level": 3,
+            "title": "需求阶段",
+            "slug": "需求阶段",
+            "link": "#需求阶段",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "设计阶段",
+            "slug": "设计阶段",
+            "link": "#设计阶段",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "开发阶段",
+            "slug": "开发阶段",
+            "link": "#开发阶段",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "测试阶段",
+            "slug": "测试阶段",
+            "link": "#测试阶段",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "发布阶段",
+            "slug": "发布阶段",
+            "link": "#发布阶段",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "运营阶段",
+            "slug": "运营阶段",
+            "link": "#运营阶段",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "如何管理应用生命周期",
+        "slug": "如何管理应用生命周期",
+        "link": "#如何管理应用生命周期",
+        "children": [
+          {
+            "level": 3,
+            "title": "研发模式",
+            "slug": "研发模式",
+            "link": "#研发模式",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "CI/CD：自动化构建和部署应用",
+            "slug": "ci-cd-自动化构建和部署应用",
+            "link": "#ci-cd-自动化构建和部署应用",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "DevOps：研发运维一体化",
+            "slug": "devops-研发运维一体化",
+            "link": "#devops-研发运维一体化",
+            "children": []
+          }
+        ]
+      },
       {
         "level": 2,
         "title": "END 链接",
@@ -15704,8 +16882,143 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "第5节",
+    "title": "第5节 设计并写出优雅的Go语言项目",
     "headers": [
+      {
+        "level": 2,
+        "title": "Go语言",
+        "slug": "go语言",
+        "link": "#go语言",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "如何开发出一个优雅的Go语言项目",
+        "slug": "如何开发出一个优雅的go语言项目",
+        "link": "#如何开发出一个优雅的go语言项目",
+        "children": [
+          {
+            "level": 3,
+            "title": "编写高质量的Go语言项目",
+            "slug": "编写高质量的go语言项目",
+            "link": "#编写高质量的go语言项目",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "代码规范",
+            "slug": "代码规范",
+            "link": "#代码规范",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "代码质量",
+            "slug": "代码质量",
+            "link": "#代码质量",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "编程的内功",
+            "slug": "编程的内功",
+            "link": "#编程的内功",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "高效管理项目",
+            "slug": "高效管理项目",
+            "link": "#高效管理项目",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "高效的开发流程",
+            "slug": "高效的开发流程",
+            "link": "#高效的开发流程",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "使用 Makefile 管理项目",
+            "slug": "使用-makefile-管理项目",
+            "link": "#使用-makefile-管理项目",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "自动生成代码（低代码）",
+            "slug": "自动生成代码-低代码",
+            "link": "#自动生成代码-低代码",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "善于借助工具",
+            "slug": "善于借助工具",
+            "link": "#善于借助工具",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "对接CICD",
+            "slug": "对接cicd",
+            "link": "#对接cicd",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "编写高质量的项目文档",
+            "slug": "编写高质量的项目文档",
+            "link": "#编写高质量的项目文档",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "总结",
+            "slug": "总结",
+            "link": "#总结",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "设计模式",
+        "slug": "设计模式",
+        "link": "#设计模式",
+        "children": [
+          {
+            "level": 3,
+            "title": "创建型模式",
+            "slug": "创建型模式",
+            "link": "#创建型模式",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "结构型模式",
+            "slug": "结构型模式",
+            "link": "#结构型模式",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "行为型模式",
+            "slug": "行为型模式",
+            "link": "#行为型模式",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "总结",
+            "slug": "总结-1",
+            "link": "#总结-1",
+            "children": []
+          }
+        ]
+      },
       {
         "level": 2,
         "title": "END 链接",
@@ -15869,8 +17182,101 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "第6节",
+    "title": "第6节 API 风格设计",
     "headers": [
+      {
+        "level": 2,
+        "title": "RESTful API",
+        "slug": "restful-api",
+        "link": "#restful-api",
+        "children": [
+          {
+            "level": 3,
+            "title": "是什么",
+            "slug": "是什么",
+            "link": "#是什么",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "RESTful API 设计原则",
+            "slug": "restful-api-设计原则",
+            "link": "#restful-api-设计原则",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "REST 示例",
+            "slug": "rest-示例",
+            "link": "#rest-示例",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "总结",
+            "slug": "总结",
+            "link": "#总结",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "如何设计应用的RPC API 风格",
+        "slug": "如何设计应用的rpc-api-风格",
+        "link": "#如何设计应用的rpc-api-风格",
+        "children": [
+          {
+            "level": 3,
+            "title": "RPC 介绍",
+            "slug": "rpc-介绍",
+            "link": "#rpc-介绍",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "gRPC",
+            "slug": "grpc",
+            "link": "#grpc",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "gRPC 特点",
+            "slug": "grpc-特点",
+            "link": "#grpc-特点",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Protocol Buffers",
+            "slug": "protocol-buffers",
+            "link": "#protocol-buffers",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "gRPC 示例",
+            "slug": "grpc-示例",
+            "link": "#grpc-示例",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "RESTful VS gRPC",
+        "slug": "restful-vs-grpc",
+        "link": "#restful-vs-grpc",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "总结",
+        "slug": "总结-1",
+        "link": "#总结-1",
+        "children": []
+      },
       {
         "level": 2,
         "title": "END 链接",

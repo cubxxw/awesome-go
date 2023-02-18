@@ -9,7 +9,7 @@
 <p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://nsddd.top/" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
 </blockquote>
 <hr>
-<nav class="table-of-contents"><ul><li><router-link to="#前言">前言</router-link></li><li><router-link to="#基本开发环境">基本开发环境</router-link><ul><li><router-link to="#用户权限">用户权限</router-link></li><li><router-link to="#添加-sudoers">添加 sudoers</router-link></li><li><router-link to="#配置-home-bashrc-文件">配置 $HOME/.bashrc 文件</router-link></li><li><router-link to="#安装-git">安装 git</router-link></li></ul></li><li><router-link to="#go语言环境变量设置和含义">go语言环境变量设置和含义</router-link></li><li><router-link to="#vim-go-plug">vim go-plug</router-link></li><li><router-link to="#protobuf-编译环境安装">ProtoBuf 编译环境安装</router-link></li><li><router-link to="#iam手动部署">IAM手动部署</router-link><ul><li><router-link to="#下载项目代码">下载项目代码</router-link></li></ul></li><li><router-link to="#安装和配置数据库">安装和配置数据库</router-link><ul><li><router-link to="#安装和配置-mariadb">安装和配置 MariaDB</router-link></li><li><router-link to="#安装redis">安装redis</router-link></li><li><router-link to="#安装和配置-mongodb">安装和配置 MongoDB</router-link></li></ul></li><li><router-link to="#安装和配置-iam-系统">安装和配置 IAM 系统</router-link></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
+<nav class="table-of-contents"><ul><li><router-link to="#前言">前言</router-link></li><li><router-link to="#基本开发环境">基本开发环境</router-link><ul><li><router-link to="#用户权限">用户权限</router-link></li><li><router-link to="#添加-sudoers">添加 sudoers</router-link></li><li><router-link to="#配置-home-bashrc-文件">配置 $HOME/.bashrc 文件</router-link></li><li><router-link to="#安装-git">安装 git</router-link></li></ul></li><li><router-link to="#go语言环境变量设置和含义">go语言环境变量设置和含义</router-link></li><li><router-link to="#vim-go-plug">vim go-plug</router-link></li><li><router-link to="#protobuf-编译环境安装">ProtoBuf 编译环境安装</router-link></li><li><router-link to="#iam手动部署">IAM手动部署</router-link><ul><li><router-link to="#下载项目代码">下载项目代码</router-link></li></ul></li><li><router-link to="#安装和配置数据库">安装和配置数据库</router-link><ul><li><router-link to="#mariadb">MariaDB</router-link></li><li><router-link to="#redis">Redis</router-link></li><li><router-link to="#安装和配置-mariadb">安装和配置 MariaDB</router-link></li><li><router-link to="#安装redis">安装redis</router-link></li><li><router-link to="#安装和配置-mongodb">安装和配置 MongoDB</router-link></li><li><router-link to="#安装和配置-iam-系统">安装和配置 IAM 系统</router-link></li><li><router-link to="#安装和配置-iam-apiserver">安装和配置 iam-apiserver</router-link></li><li><router-link to="#安装-iamctl">安装 iamctl</router-link></li><li><router-link to="#安装和配置-iam-authz-server">安装和配置 iam-authz-server</router-link></li><li><router-link to="#安装和配置-iam-pump">安装和配置 iam-pump</router-link></li><li><router-link to="#安装-man-文件">安装 man 文件</router-link></li></ul></li><li><router-link to="#一键安装">一键安装</router-link></li><li><router-link to="#总结">总结</router-link></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
 <p>[TOC]</p>
 <h2 id="前言" tabindex="-1"><a class="header-anchor" href="#前言" aria-hidden="true">#</a> 前言</h2>
 <ul>
@@ -102,10 +102,10 @@ $ <span class="token function">git</span> <span class="token parameter variable"
 <span class="token comment"># Configure for git</span>
 <span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span>/usr/local/libexec/git-core:<span class="token variable">$PATHEOF</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>配置 Git。我们直接执行如下命令配置 Git</p>
-<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ <span class="token function">git</span> config <span class="token parameter variable">--global</span> user.name <span class="token string">"Xinwei Xiong"</span>    <span class="token comment"># 用户名改成自己的</span>
-$ <span class="token function">git</span> config <span class="token parameter variable">--global</span> user.email <span class="token string">"3293172751nss@gmail.com"</span>    <span class="token comment"># 邮箱改成自己的</span>
-$ <span class="token function">git</span> config <span class="token parameter variable">--global</span> credential.helper store    <span class="token comment"># 设置 Git，保存用户名和密码</span>
-$ <span class="token function">git</span> config <span class="token parameter variable">--global</span> core.longpaths <span class="token boolean">true</span> <span class="token comment"># 解决 Git 中 'Filename too long' 的错误</span>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token function">git</span> config <span class="token parameter variable">--global</span> user.name <span class="token string">"Xinwei Xiong"</span>    <span class="token comment"># 用户名改成自己的</span>
+<span class="token function">git</span> config <span class="token parameter variable">--global</span> user.email <span class="token string">"3293172751nss@gmail.com"</span>    <span class="token comment"># 邮箱改成自己的</span>
+<span class="token function">git</span> config <span class="token parameter variable">--global</span> credential.helper store    <span class="token comment"># 设置 Git，保存用户名和密码</span>
+<span class="token function">git</span> config <span class="token parameter variable">--global</span> core.longpaths <span class="token boolean">true</span> <span class="token comment"># 解决 Git 中 'Filename too long' 的错误</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>除了按照上述步骤配置 Git 之外，我们还有几点需要注意。首先，在 Git 中，我们会把非 ASCII 字符叫做 Unusual 字符。这类字符在 Git 输出到终端的时候默认是用 8 进制转义字符输出的（以防乱码），但现在的终端多数都支持直接显示非 ASCII 字符，所以我们可以关闭掉这个特性，具体的命令如下：</p>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token function">git</span> config <span class="token parameter variable">--global</span> core.quotepath off
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>其次，GitHub 限制最大只能克隆 100M 的单个文件，为了能够克隆大于 100M 的文件，我们还需要安装 Git Large File Storage，安装方式如下：</p>
@@ -172,21 +172,33 @@ $ go <span class="token function">install</span> github.com/golang/protobuf/prot
 $ <span class="token function">git</span> clone https://github.com/cubxxw/iam.git
 $ go work use ./iam
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>设置别名和环境变量：</strong></p>
-<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token comment"># Alias for quick access</span>
-<span class="token builtin class-name">export</span> <span class="token assign-left variable">GOSRC</span><span class="token operator">=</span><span class="token string">"<span class="token variable">$WORKSPACE</span>/"</span>
-<span class="token builtin class-name">export</span> <span class="token assign-left variable">IAM_ROOT</span><span class="token operator">=</span><span class="token string">"<span class="token environment constant">$HOME</span>/workspces/iam"</span>
-<span class="token builtin class-name">alias</span> <span class="token assign-left variable">mm</span><span class="token operator">=</span><span class="token string">"cd <span class="token environment constant">$HOME</span>/workspces"</span>
-<span class="token builtin class-name">alias</span> <span class="token assign-left variable">i</span><span class="token operator">=</span><span class="token string">"cd <span class="token environment constant">$HOME</span>/workspces/iam"</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>在安装配置IAM系统之前需要你执行以下命令export <code v-pre>going</code> 用户的密码，这里假设密码是 <code v-pre>iam59!z$</code>：</p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token function">tee</span> <span class="token parameter variable">-a</span> <span class="token environment constant">$HOME</span>/.bashrc <span class="token operator">&lt;&lt;</span> <span class="token string">'EOF'
+# Alias for quick access
+export GOSRC="$WORKSPACE/"
+export IAM_ROOT="$HOME/workspces/iam"
+alias mm="cd $HOME/workspces"
+alias i="cd $HOME/workspces/iam"
+EOF</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>在安装配置IAM系统之前需要你执行以下命令export <code v-pre>going</code> 用户的密码，这里假设密码是 <code v-pre>iam59!z$</code>：</p>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token builtin class-name">export</span> <span class="token assign-left variable">LINUX_PASSWORD</span><span class="token operator">=</span><span class="token string">'iam59!z$'</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>在项目开发中，像密码、密钥 Key 这类敏感信息，一般不会直接硬编码在系统中，而是通过环境变量的方式来使用。现网应用的配置文件是存放在一个安全的网络环境中，并且有访问授权流程，比较安全，这种配置文件中是可以配置密码等敏感信息的。</p>
 <h2 id="安装和配置数据库" tabindex="-1"><a class="header-anchor" href="#安装和配置数据库" aria-hidden="true">#</a> 安装和配置数据库</h2>
 <p>因为 IAM 系统用到了 MariaDB、Redis、MongoDB 数据库来存储数据，而 IAM 服务在启动时会先尝试连接这些数据库，所以为了避免启动时连接数据库失败，这里我们先来安装需要的数据库。</p>
-<p>IAM 组件的安装配置都是通过环境变量文件 <code v-pre>scripts/install/environment.sh</code> 进行配置的，所以你需要先配置好 <code v-pre>scripts/install/environment.sh</code>。文件中的环境变量都有注释，你可以根据注释来配置。当然，你也可以直接使用<code v-pre>environment.sh</code>中配置的默认值，以提高你的安装效率。</p>
-<p><code v-pre>scripts/install/environment.sh</code>文件中配置MariaDB用户名的配置语句如下：</p>
-<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token builtin class-name">readonly</span> <span class="token assign-left variable">MARIADB_USERNAME</span><span class="token operator">=</span><span class="token variable">${MARIADB_USERNAME<span class="token operator">:-</span>iam}</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p><code v-pre>readonly</code>说明<code v-pre>MARIADB_USERNAME</code>只能被赋值一次。<code v-pre>${MARIADB_USERNAME:-iam}</code>使用了Bash shell的变量扩展语法，其语法格式为<code v-pre>${待测变量:-默认值}</code>，表示：如果待测变量不存在或其值为空，则返回默认值，否则返回待测变量的值。</p>
-<h3 id="安装和配置-mariadb" tabindex="-1"><a class="header-anchor" href="#安装和配置-mariadb" aria-hidden="true">#</a> 安装和配置 MariaDB</h3>
+<h3 id="mariadb" tabindex="-1"><a class="header-anchor" href="#mariadb" aria-hidden="true">#</a> MariaDB</h3>
+<p><strong>mysql:</strong></p>
+<blockquote>
+<p>IAM 会把 REST 资源的定义信息存储在关系型数据库中，关系型数据库我选择了 MariaDB。为啥选择 MariaDB，而不是 MySQL 呢？。选择 MariaDB 一方面是因为它是发展最快的 MySQL 分支，相比 MySQL，它加入了很多新的特性，并且它能够完全兼容 MySQL，包括 API 和命令行。另一方面是因为 MariaDB 是开源的，而且迭代速度很快。</p>
+</blockquote>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token builtin class-name">cd</span> <span class="token variable">$IAM_ROOT</span>
+./scripts/install/mariadb.sh iam::mariadb::install
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="redis" tabindex="-1"><a class="header-anchor" href="#redis" aria-hidden="true">#</a> Redis</h3>
+<p>在 IAM 系统中，由于 iam-authz-server 是从 iam-apiserver 拉取并缓存用户的密钥 / 策略信息的，因此同一份密钥 / 策略数据会分别存在 2 个服务中，这可能会出现数据不一致的情况。数据不一致会带来一些问题，例如当我们通过 iam-apiserver 创建了一对密钥，但是这对密钥还没有被 iam-authz-server 缓存，这时候通过这对密钥访问 iam-authz-server 就会访问失败。</p>
+<p>为了保证数据的一致性，我们可以使用 Redis 的发布订阅 (pub/sub) 功能进行消息通知。同时，iam-authz-server 也会将授权审计日志缓存到 Redis 中，所以也需要安装 Redis key-value 数据库。我们可以通过以下命令来安装和配置 Redis，并将 Redis 的初始密码设置为 <code v-pre>iam59!z$</code> ：</p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ <span class="token builtin class-name">cd</span> <span class="token variable">$IAM_ROOT</span>
+$ ./scripts/install/redis.sh iam::redis::install
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>这里我们要注意，scripts/install/redis.sh 脚本中 iam::redis::install 函数对 Redis 做了一些配置，例如修改 Redis 使其以守护进程的方式运行、修改 Redis 的密码为 <code v-pre>iam59!z$</code>等，详细配置可参考函数 <code v-pre>iam::redis::install</code> 函数。</p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code> $ redis-cli <span class="token parameter variable">-h</span> <span class="token number">127.0</span>.0.1 <span class="token parameter variable">-p</span> <span class="token number">6379</span> <span class="token parameter variable">-a</span> <span class="token string">'iam59!z$'</span> <span class="token comment"># 连接 Redis，-h 指定主机，-p 指定监听端口，-a 指定登录密码</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3 id="安装和配置-mariadb" tabindex="-1"><a class="header-anchor" href="#安装和配置-mariadb" aria-hidden="true">#</a> 安装和配置 MariaDB</h3>
 <ul>
 <li><a href="https://github.com/MariaDB/server" target="_blank" rel="noopener noreferrer">开源的 GitHub 地址<ExternalLinkIcon/></a></li>
 </ul>
@@ -212,41 +224,55 @@ $ go work use ./iam
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>redis-cli <span class="token parameter variable">-h</span> <span class="token number">127.0</span>.0.1 <span class="token parameter variable">-p</span> <span class="token number">6379</span> <span class="token parameter variable">-a</span> <span class="token string">'iam59!z$'</span> 
 <span class="token comment"># 连接 Redis，-h 指定主机，-p 指定监听端口，-a 指定登录密码</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="安装和配置-mongodb" tabindex="-1"><a class="header-anchor" href="#安装和配置-mongodb" aria-hidden="true">#</a> 安装和配置 MongoDB</h3>
-<p>因为 iam-pump 会将 iam-authz-server 产生的数据处理后存储在 MongoDB 中，所以我们也需要安装 MongoDB 数据库。主要分两步安装：首先安装 MongoDB，然后再创建 MongoDB 账号。</p>
+<p>因为 iam-pump 会将 iam-authz-server 产生的数据处理后存储在 MongoDB 中，所以我们也需要安装 MongoDB 数据库。主要分两步安装：</p>
+<ol>
+<li>首先安装 MongoDB</li>
+<li>然后再创建 MongoDB 账号</li>
+</ol>
 <h4 id="第-1-步-安装-mongodb" tabindex="-1"><a class="header-anchor" href="#第-1-步-安装-mongodb" aria-hidden="true">#</a> 第 1 步，安装 MongoDB</h4>
 <p>首先，我们可以通过以下 4 步来安装 MongoDB。</p>
-<ol>
-<li>配置 MongoDB yum 源，并安装 MongoDB。</li>
-</ol>
+<p><strong>配置 MongoDB yum 源，并安装 MongoDB。</strong></p>
 <p>CentOS8.x 系统默认没有配置安装 MongoDB 需要的 yum 源，所以我们需要先配置好 yum 源再安装：</p>
-<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token function">sudo</span> <span class="token function">tee</span> /etc/yum.repos.d/mongodb-org-5.0.repo<span class="token operator">&lt;&lt;</span><span class="token string">'EOF'</span><span class="token punctuation">[</span>mongodb-org-5.0<span class="token punctuation">]</span>name<span class="token operator">=</span>MongoDB <span class="token assign-left variable">Repositorybaseurl</span><span class="token operator">=</span>https://repo.mongodb.org/yum/redhat/<span class="token variable">$releasever</span>/mongodb-org/5.0/x86_64/gpgcheck<span class="token operator">=</span>1enabled<span class="token operator">=</span>1gpgkey<span class="token operator">=</span>https://www.mongodb.org/static/pgp/server-5.0.ascEOF $ <span class="token function">sudo</span> yum <span class="token function">install</span> <span class="token parameter variable">-y</span> mongodb-org
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><ol>
-<li>关闭 SELinux。</li>
-</ol>
-<p>在安装的过程中，SELinux 有可能会阻止 MongoDB 访问/sys/fs/cgroup，所以我们还需要关闭 SELinux：</p>
-<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token function">sudo</span> setenforce <span class="token number">0</span>$ <span class="token function">sudo</span> <span class="token function">sed</span> <span class="token parameter variable">-i</span> <span class="token string">'s/SELINUX=.*$/SELINUX=disabled/'</span> /etc/selinux/config <span class="token comment"># 永久关闭 SELINUX</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><ol>
-<li>开启外网访问权限和登录验证。</li>
-</ol>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ <span class="token function">sudo</span> <span class="token function">tee</span> /etc/yum.repos.d/mongodb-org-5.0.repo<span class="token operator">&lt;&lt;</span><span class="token string">'EOF'
+[mongodb-org-5.0]
+name=MongoDB Repository
+baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/5.0/x86_64/
+gpgcheck=1
+enabled=1
+gpgkey=https://www.mongodb.org/static/pgp/server-5.0.asc
+EOF</span>
+ 
+$ <span class="token function">sudo</span> yum <span class="token function">install</span> <span class="token parameter variable">-y</span> mongodb-org
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>关闭 SELinux</strong>。</p>
+<p>在安装的过程中，SELinux 有可能会阻止 MongoDB 访问 <code v-pre>/sys/fs/cgroup</code>，所以我们还需要关闭 SELinux：</p>
+<blockquote>
+<p>SELinux(Security-Enhanced Linux 或 Security-Enhanced Linux)是一种安全控制机制，由NSA公司开发，可以在Linux系统上提供更强大的安全性。它使用标签来区分操作系统上的文件和目录，并且可以在系统上实施特定的安全策略，以确保系统的安全。</p>
+</blockquote>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ <span class="token function">sudo</span> setenforce <span class="token number">0</span>
+$ <span class="token function">sudo</span> <span class="token function">sed</span> <span class="token parameter variable">-i</span> <span class="token string">'s/^SELINUX=.*$/SELINUX=disabled/'</span> /etc/selinux/config <span class="token comment"># 永久关闭 SELINUX</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>开启外网访问权限和登录验证</strong>。</p>
 <p>MongoDB 安装完之后，默认情况下是不会开启外网访问权限和登录验证，为了方便使用，我建议你先开启这些功能，执行如下命令开启：</p>
-<div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>$ sudo sed -i '/bindIp/{s/127.0.0.1/0.0.0.0/}' /etc/mongod.conf$ sudo sed -i '/#security/asecurity:n  authorization: enabled' /etc/mongod.conf
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><ol>
-<li>启动 MongoDB。</li>
-</ol>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ <span class="token function">sudo</span> <span class="token function">sed</span> <span class="token parameter variable">-i</span> <span class="token string">'/bindIp/{s/127.0.0.1/0.0.0.0/}'</span> /etc/mongod.conf
+$ <span class="token function">sudo</span> <span class="token function">sed</span> <span class="token parameter variable">-i</span> <span class="token string">'/^#security/a\security:\n  authorization: enabled'</span> /etc/mongod.conf
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>启动 MongoDB。</strong></p>
 <p>配置完 MongoDB 之后，我们就可以启动它了，具体的命令如下：</p>
-<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token function">sudo</span> systemctl start mongod$ <span class="token function">sudo</span> systemctl <span class="token builtin class-name">enable</span> mongod 
-<span class="token comment"># 设置开机启动$ sudo systemctl status mongod </span>
-<span class="token comment"># 查看 mongod 运行状态，如果输出中包含 active (running)字样说明 mongod 成功启动</span>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ <span class="token function">sudo</span> systemctl start mongod
+$ <span class="token function">sudo</span> systemctl <span class="token builtin class-name">enable</span> mongod <span class="token comment"># 设置开机启动</span>
+$ <span class="token function">sudo</span> systemctl status mongod <span class="token comment"># 查看 mongod 运行状态，如果输出中包含 active (running)字样说明 mongod 成功启动</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>安装完 MongoDB 后，我们就可以通过 <code v-pre>mongo</code> 命令登录 MongoDB Shell。如果没有报错，就说明 MongoDB 被成功安装了。</p>
-<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>mongosh <span class="token parameter variable">--quiet</span> "mongodb://127.0.0.1:27017<span class="token operator">&amp;</span>quot<span class="token punctuation">;</span>test<span class="token operator">></span>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>mongosh <span class="token parameter variable">--quiet</span> "mongodb://127.0.0.1:27017<span class="token operator">&amp;</span>quot
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h4 id="第-2-步-创建-mongodb-账号" tabindex="-1"><a class="header-anchor" href="#第-2-步-创建-mongodb-账号" aria-hidden="true">#</a> 第 2 步，创建 MongoDB 账号</h4>
 <p>安装完 MongoDB 之后，默认是没有用户账号的，为了方便 IAM 服务使用，我们需要先创建好管理员账号，通过管理员账户登录 MongoDB，我们可以执行创建普通用户、数据库等操作。</p>
-<ol>
-<li>创建管理员账户。</li>
-</ol>
+<p><strong>创建管理员账户</strong>。</p>
 <p>首先，我们通过 <code v-pre>use admin</code> 指令切换到 admin 数据库，再通过 <code v-pre>db.auth(&quot;用户名&quot;，&quot;用户密码&quot;)</code> 验证用户登录权限。如果返回 1 表示验证成功；如果返回 0 表示验证失败。具体的命令如下：</p>
-<div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>$ mongosh --quiet "mongodb://127.0.0.1:27017&amp;quot;test> use adminswitched to db adminadmin> db.createUser({user:"root",pwd:"iam59!z$",roles:["root"]}){ ok: 1 }admin> db.auth("root", "iam59!z$"){ ok: 1 }
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>此外，如果想删除用户，可以使用 <code v-pre>db.dropUser(&quot;用户名&quot;)</code> 命令。</p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ mongosh <span class="token parameter variable">--quiet</span> <span class="token string">"mongodb://127.0.0.1:27017"</span>
+test<span class="token operator">></span> use admin 
+switched to db admin
+admin<span class="token operator">></span> db.createUser<span class="token punctuation">(</span><span class="token punctuation">{</span>user:<span class="token string">"root"</span>,pwd:<span class="token string">"iam59!z$"</span>,roles:<span class="token punctuation">[</span><span class="token string">"root"</span><span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span> ok: <span class="token number">1</span> <span class="token punctuation">}</span>
+admin<span class="token operator">></span> db.auth<span class="token punctuation">(</span><span class="token string">"root"</span>, <span class="token string">"iam59!z$"</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span> ok: <span class="token number">1</span> <span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>此外，如果想删除用户，可以使用 <code v-pre>db.dropUser(&quot;用户名&quot;)</code> 命令。</p>
 <p><code v-pre>db.createUser</code> 用到了以下 3 个参数。</p>
 <ul>
 <li>user: 用户名。</li>
@@ -257,15 +283,473 @@ $ go work use ./iam
 <ol>
 <li>创建 iam 用户，命令如下：</li>
 </ol>
-<div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>$ mongosh --quiet mongodb://root:'iam59!z$'@127.0.0.1:27017/iam_analytics?authSource=admin # 用管理员账户连接 MongoDBiam_analytics> db.createUser({user:"iam",pwd:"iam59!z$",roles:["dbOwner"]}){ ok: 1 }iam_analytics> db.auth("iam", "iam59!z$"){ ok: 1 }
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>创建完 iam 普通用户后，我们就可以通过 iam 用户登录 MongoDB 了：</p>
-<div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>$ mongosh --quiet mongodb://iam:'iam59!z$'@127.0.0.1:27017/iam_analytics?authSource=iam_analytics
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ mongosh <span class="token parameter variable">--quiet</span> mongodb://root:<span class="token string">'iam59!z$'</span>@127.0.0.1:27017/iam_analytics?authSource<span class="token operator">=</span>admin <span class="token comment"># 用管理员账户连接 MongoDB</span>
+iam_analytics<span class="token operator">></span> db.createUser<span class="token punctuation">(</span><span class="token punctuation">{</span>user:<span class="token string">"iam"</span>,pwd:<span class="token string">"iam59!z$"</span>,roles:<span class="token punctuation">[</span><span class="token string">"dbOwner"</span><span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span> ok: <span class="token number">1</span> <span class="token punctuation">}</span>
+iam_analytics<span class="token operator">></span> db.auth<span class="token punctuation">(</span><span class="token string">"iam"</span>, <span class="token string">"iam59!z$"</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span> ok: <span class="token number">1</span> <span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>创建完 iam 普通用户后，我们就可以通过 iam 用户登录 MongoDB 了：</p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ mongosh <span class="token parameter variable">--quiet</span> mongodb://iam:<span class="token string">'iam59!z$'</span>@127.0.0.1:27017/iam_analytics?authSource<span class="token operator">=</span>iam_analytics
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>至此，我们成功安装了 IAM 系统需要的数据库 MariaDB、Redis 和 MongoDB。</p>
-<h2 id="安装和配置-iam-系统" tabindex="-1"><a class="header-anchor" href="#安装和配置-iam-系统" aria-hidden="true">#</a> 安装和配置 IAM 系统</h2>
+<h3 id="安装和配置-iam-系统" tabindex="-1"><a class="header-anchor" href="#安装和配置-iam-系统" aria-hidden="true">#</a> 安装和配置 IAM 系统</h3>
 <p>要想完成 IAM 系统的安装，我们还需要安装和配置 iam-apiserver、iam-authz-server、iam-pump 和 iamctl。这些组件的功能我们在<a href="https://time.geekbang.org/column/article/377998" target="_blank" rel="noopener noreferrer">第1讲<ExternalLinkIcon/></a>详细讲过，如果不记得你可以翻回去看看。</p>
 <blockquote>
 <p>提示：IAM 项目我会长期维护、定期更新，欢迎你 Star &amp; Contributing。</p>
 </blockquote>
+<p><strong>准备工作：</strong></p>
+<p>在开始安装之前，我们需要先做一些准备工作，主要有 5 步。</p>
+<ol>
+<li>初始化 MariaDB 数据库，创建 iam 数据库。</li>
+<li>配置 scripts/install/environment.sh。</li>
+<li>创建需要的目录。</li>
+<li>创建 CA 根证书和密钥。</li>
+<li>配置 hosts。</li>
+</ol>
+<h4 id="第-1-步-初始化-mariadb-数据库-创建-iam-数据库。" tabindex="-1"><a class="header-anchor" href="#第-1-步-初始化-mariadb-数据库-创建-iam-数据库。" aria-hidden="true">#</a> 第 1 步，初始化 MariaDB 数据库，创建 iam 数据库。</h4>
+<p>安装完 MariaDB 数据库之后，我们需要在 MariaDB 数据库中创建 IAM 系统需要的数据库、表和存储过程，以及创建 SQL 语句保存在 IAM 代码仓库中的 <code v-pre>configs/iam.sql</code> 文件中。具体的创建步骤如下。</p>
+<p><strong>登录数据库并创建 iam 用户。</strong></p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ <span class="token builtin class-name">cd</span> <span class="token variable">$IAM_ROOT</span>
+$ mysql <span class="token parameter variable">-h127.0.0.1</span> <span class="token parameter variable">-P3306</span> <span class="token parameter variable">-uroot</span> -p<span class="token string">'iam59!z$'</span> <span class="token comment"># 连接 MariaDB，-h 指定主机，-P 指定监听端口，-u 指定登录用户，-p 指定登录密码</span>
+MariaDB <span class="token punctuation">[</span><span class="token punctuation">(</span>none<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token operator">></span> grant all on iam.* TO iam@127.0.0.1 identified by <span class="token string">'iam59!z$'</span><span class="token punctuation">;</span>
+Query OK, <span class="token number">0</span> rows affected <span class="token punctuation">(</span><span class="token number">0.000</span> sec<span class="token punctuation">)</span>
+MariaDB <span class="token punctuation">[</span><span class="token punctuation">(</span>none<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token operator">></span> flush privileges<span class="token punctuation">;</span>
+Query OK, <span class="token number">0</span> rows affected <span class="token punctuation">(</span><span class="token number">0.000</span> sec<span class="token punctuation">)</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>用 iam 用户登录 MariaDB，执行 iam.sql 文件，创建 iam 数据库。</strong></p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ mysql <span class="token parameter variable">-h127.0.0.1</span> <span class="token parameter variable">-P3306</span> <span class="token parameter variable">-uiam</span> -p<span class="token string">'iam59!z$'</span>
+MariaDB <span class="token punctuation">[</span><span class="token punctuation">(</span>none<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token operator">></span> <span class="token builtin class-name">source</span> configs/iam.sql<span class="token punctuation">;</span>
+MariaDB <span class="token punctuation">[</span>iam<span class="token punctuation">]</span><span class="token operator">></span> show databases<span class="token punctuation">;</span>
++--------------------+
+<span class="token operator">|</span> Database           <span class="token operator">|</span>
++--------------------+
+<span class="token operator">|</span> iam                <span class="token operator">|</span>
+<span class="token operator">|</span> information_schema <span class="token operator">|</span>
++--------------------+
+<span class="token number">2</span> rows <span class="token keyword">in</span> <span class="token builtin class-name">set</span> <span class="token punctuation">(</span><span class="token number">0.000</span> sec<span class="token punctuation">)</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>上面的命令会创建 iam 数据库，并创建以下数据库资源。</p>
+<ul>
+<li>表：
+<ul>
+<li>user 是用户表，用来存放用户信息；</li>
+<li>secret 是密钥表，用来存放密钥信息；</li>
+<li>policy 是策略表，用来存放授权策略信息；</li>
+<li>policy_audit 是策略历史表，被删除的策略会被转存到该表。</li>
+</ul>
+</li>
+<li>admin 用户：在 user 表中，我们需要创建一个管理员用户，用户名是 admin，密码是 <code v-pre>Admin@2021</code>。</li>
+<li>存储过程：删除用户时会自动删除该用户所属的密钥和策略信息。</li>
+</ul>
+<h4 id="第-2-步-配置-scripts-install-environment-sh。" tabindex="-1"><a class="header-anchor" href="#第-2-步-配置-scripts-install-environment-sh。" aria-hidden="true">#</a> 第 2 步，配置 scripts/install/environment.sh。</h4>
+<p>IAM 组件的安装配置都是通过环境变量文件 <a href="scripts/install/environment.sh">scripts/install/environment.sh</a> 进行配置的，所以我们要先配置好 scripts/install/environment.sh 文件。这里，你可以直接使用默认值，提高你的安装效率。</p>
+<h4 id="第-3-步-创建需要的目录。" tabindex="-1"><a class="header-anchor" href="#第-3-步-创建需要的目录。" aria-hidden="true">#</a> 第 3 步，创建需要的目录。</h4>
+<p>在安装和运行 IAM 系统的时候，我们需要将配置、二进制文件和数据文件存放到指定的目录。所以我们需要先创建好这些目录，创建步骤如下。</p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ <span class="token builtin class-name">cd</span> <span class="token variable">$IAM_ROOT</span>
+$ <span class="token builtin class-name">source</span> scripts/install/environment.sh
+$ <span class="token function">sudo</span> <span class="token function">mkdir</span> <span class="token parameter variable">-p</span> <span class="token variable">${IAM_DATA_DIR}</span>/<span class="token punctuation">{</span>iam-apiserver,iam-authz-server,iam-pump<span class="token punctuation">}</span> <span class="token comment"># 创建 Systemd WorkingDirectory 目录</span>
+$ <span class="token function">sudo</span> <span class="token function">mkdir</span> <span class="token parameter variable">-p</span> <span class="token variable">${IAM_INSTALL_DIR}</span>/bin <span class="token comment">#创建 IAM 系统安装目录</span>
+$ <span class="token function">sudo</span> <span class="token function">mkdir</span> <span class="token parameter variable">-p</span> <span class="token variable">${IAM_CONFIG_DIR}</span>/cert <span class="token comment"># 创建 IAM 系统配置文件存放目录</span>
+$ <span class="token function">sudo</span> <span class="token function">mkdir</span> <span class="token parameter variable">-p</span> <span class="token variable">${IAM_LOG_DIR}</span> <span class="token comment"># 创建 IAM 日志文件存放目录</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="第-4-步-创建-ca-根证书和密钥。" tabindex="-1"><a class="header-anchor" href="#第-4-步-创建-ca-根证书和密钥。" aria-hidden="true">#</a> 第 4 步， 创建 CA 根证书和密钥。</h4>
+<p>为了确保安全，IAM 系统各组件需要使用 x509 证书对通信进行加密和认证。所以，这里我们需要先创建 CA 证书。CA 根证书是所有组件共享的，只需要创建一个 CA 证书，后续创建的所有证书都由它签名。</p>
+<p>我们可以使用 CloudFlare 的 PKI 工具集 cfssl 来创建所有的证书。</p>
+<p><strong>安装 cfssl 工具集。</strong></p>
+<p>我们可以直接安装 cfssl 已经编译好的二进制文件，cfssl 工具集中包含很多工具，这里我们需要安装 cfssl、cfssljson、cfssl-certinfo，功能如下。</p>
+<ol>
+<li>cfssl：证书签发工具。</li>
+<li>cfssljson：将 cfssl 生成的证书（json 格式）变为文件承载式证书。</li>
+</ol>
+<p>这两个工具的安装方法如下：</p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ <span class="token builtin class-name">cd</span> <span class="token variable">$IAM_ROOT</span>
+$ ./scripts/install/install.sh iam::install::install_cfssl
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>创建配置文件。</strong></p>
+<p>CA 配置文件是用来配置根证书的使用场景 (profile) 和具体参数 (usage、过期时间、服务端认证、客户端认证、加密等)，可以在签名其它证书时用来指定特定场景：</p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ <span class="token builtin class-name">cd</span> <span class="token variable">$IAM_ROOT</span>
+$ <span class="token function">tee</span> ca-config.json <span class="token operator">&lt;&lt;</span> <span class="token string">EOF
+{
+  "signing": {
+    "default": {
+      "expiry": "87600h"
+    },
+    "profiles": {
+      "iam": {
+        "usages": [
+          "signing",
+          "key encipherment",
+          "server auth",
+          "client auth"
+        ],
+        "expiry": "876000h"
+      }
+    }
+  }
+}
+EOF</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>上面的 JSON 配置中，有一些字段解释如下。</p>
+<ul>
+<li>signing：表示该证书可用于签名其它证书（生成的 ca.pem 证书中 CA=TRUE）。</li>
+<li>server auth：表示 client 可以用该证书对 server 提供的证书进行验证。</li>
+<li>client auth：表示 server 可以用该证书对 client 提供的证书进行验证。</li>
+<li>expiry：876000h，证书有效期设置为 100 年。</li>
+</ul>
+<p><strong>创建证书签名请求文件。</strong></p>
+<p>我们创建用来生成 CA 证书签名请求（CSR）的 JSON 配置文件：</p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>
+$ <span class="token builtin class-name">cd</span> <span class="token variable">$IAM_ROOT</span>
+$ <span class="token function">tee</span> ca-csr.json <span class="token operator">&lt;&lt;</span> <span class="token string">EOF
+{
+  "CN": "iam-ca",
+  "key": {
+    "algo": "rsa",
+    "size": 2048
+  },
+  "names": [
+    {
+      "C": "CN",
+      "ST": "BeiJing",
+      "L": "BeiJing",
+      "O": "marmotedu",
+      "OU": "iam"
+    }
+  ],
+  "ca": {
+    "expiry": "876000h"
+  }
+}
+EOF</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>上面的 JSON 配置中，有一些字段解释如下。</strong></p>
+<ul>
+<li>C：Country，国家。</li>
+<li>ST：State，省份。</li>
+<li>L：Locality (L) or City，城市。</li>
+<li>CN：Common Name，iam-apiserver 从证书中提取该字段作为请求的用户名 (User Name) ，浏览器使用该字段验证网站是否合法。</li>
+<li>O：Organization，iam-apiserver 从证书中提取该字段作为请求用户所属的组 (Group)。</li>
+<li>OU：Company division (or Organization Unit – OU)，部门 / 单位。</li>
+</ul>
+<p>除此之外，还有两点需要我们注意。</p>
+<ul>
+<li>不同证书 csr 文件的 CN、C、ST、L、O、OU 组合必须不同，否则可能出现 PEER'S CERTIFICATE HAS AN INVALID SIGNATURE 错误。</li>
+<li>后续创建证书的 csr 文件时，CN、OU 都不相同（C、ST、L、O 相同），以达到区分的目的。</li>
+<li>创建 CA 证书和私钥</li>
+</ul>
+<p>首先，我们通过 cfssl gencert 命令来创建：</p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ <span class="token builtin class-name">cd</span> <span class="token variable">$IAM_ROOT</span>
+$ <span class="token builtin class-name">source</span> scripts/install/environment.sh
+$ cfssl gencert <span class="token parameter variable">-initca</span> ca-csr.json <span class="token operator">|</span> cfssljson <span class="token parameter variable">-bare</span> ca
+$ <span class="token function">ls</span> ca*
+ca-config.json  ca.csr  ca-csr.json  ca-key.pem  ca.pem
+$ <span class="token function">sudo</span> <span class="token function">mv</span> ca* <span class="token variable">${IAM_CONFIG_DIR}</span>/cert <span class="token comment"># 需要将证书文件拷贝到指定文件夹下（分发证书），方便各组件引用</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>上述命令会创建运行 CA 所必需的文件 ca-key.pem（私钥）和 ca.pem（证书），还会生成 ca.csr（证书签名请求），用于交叉签名或重新签名。</p>
+<p>创建完之后，我们可以通过 cfssl certinfo 命名查看 cert 和 csr 信息：</p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ cfssl certinfo <span class="token parameter variable">-cert</span> <span class="token variable">${IAM_CONFIG_DIR}</span>/cert/ca.pem <span class="token comment"># 查看 cert(证书信息)</span>
+$ cfssl certinfo <span class="token parameter variable">-csr</span> <span class="token variable">${IAM_CONFIG_DIR}</span>/cert/ca.csr <span class="token comment"># 查看 CSR(证书签名请求)信息</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="第-5-步-配置-hosts。" tabindex="-1"><a class="header-anchor" href="#第-5-步-配置-hosts。" aria-hidden="true">#</a> 第 5 步，配置 hosts。</h4>
+<p>iam 通过域名访问 API 接口，因为这些域名没有注册过，还不能在互联网上解析，所以需要配置 hosts，具体的操作如下：</p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ <span class="token function">sudo</span> <span class="token function">tee</span> <span class="token parameter variable">-a</span> /etc/hosts <span class="token operator">&lt;&lt;</span><span class="token string">EOF
+127.0.0.1 iam.api.marmotedu.com
+127.0.0.1 iam.authz.marmotedu.com
+EOF</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="安装和配置-iam-apiserver" tabindex="-1"><a class="header-anchor" href="#安装和配置-iam-apiserver" aria-hidden="true">#</a> 安装和配置 iam-apiserver</h3>
+<p>完成了准备工作之后，我们就可以安装 IAM 系统的各个组件了。首先我们通过以下 3 步来安装 iam-apiserver 服务。</p>
+<h4 id="第-1-步-创建-iam-apiserver-证书和私钥。" tabindex="-1"><a class="header-anchor" href="#第-1-步-创建-iam-apiserver-证书和私钥。" aria-hidden="true">#</a> 第 1 步，创建 iam-apiserver 证书和私钥。</h4>
+<p>其它服务为了安全都是通过 HTTPS 协议访问 iam-apiserver，所以我们要先创建 iam-apiserver 证书和私钥。</p>
+<p><strong>创建证书签名请求</strong>：</p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ <span class="token builtin class-name">cd</span> <span class="token variable">$IAM_ROOT</span>
+$ <span class="token builtin class-name">source</span> scripts/install/environment.sh
+$ <span class="token function">tee</span> iam-apiserver-csr.json <span class="token operator">&lt;&lt;</span><span class="token string">EOF
+{
+  "CN": "iam-apiserver",
+  "key": {
+    "algo": "rsa",
+    "size": 2048
+  },
+  "names": [
+    {
+      "C": "CN",
+      "ST": "BeiJing",
+      "L": "BeiJing",
+      "O": "marmotedu",
+      "OU": "iam-apiserver"
+    }
+  ],
+  "hosts": [
+    "127.0.0.1",
+    "localhost",
+    "iam.api.marmotedu.com"
+  ]
+}
+EOF</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>代码中的 hosts 字段是用来指定授权使用该证书的 IP 和域名列表，上面的 hosts 列出了 iam-apiserver 服务的 IP 和域名。</p>
+<p><strong>生成证书和私钥</strong>：</p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ cfssl gencert <span class="token parameter variable">-ca</span><span class="token operator">=</span><span class="token variable">${IAM_CONFIG_DIR}</span>/cert/ca.pem <span class="token punctuation">\</span>
+  -ca-key<span class="token operator">=</span><span class="token variable">${IAM_CONFIG_DIR}</span>/cert/ca-key.pem <span class="token punctuation">\</span>
+  <span class="token parameter variable">-config</span><span class="token operator">=</span><span class="token variable">${IAM_CONFIG_DIR}</span>/cert/ca-config.json <span class="token punctuation">\</span>
+  <span class="token parameter variable">-profile</span><span class="token operator">=</span>iam iam-apiserver-csr.json <span class="token operator">|</span> cfssljson <span class="token parameter variable">-bare</span> iam-apiserver
+$ <span class="token function">sudo</span> <span class="token function">mv</span> iam-apiserver*pem <span class="token variable">${IAM_CONFIG_DIR}</span>/cert 
+<span class="token comment"># 将生成的证书和私钥文件拷贝到配置文件目录</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="第-2-步-安装并运行-iam-apiserver。" tabindex="-1"><a class="header-anchor" href="#第-2-步-安装并运行-iam-apiserver。" aria-hidden="true">#</a> 第 2 步，安装并运行 iam-apiserver。</h4>
+<p>iam-apiserver 作为 iam 系统的核心组件，需要第一个安装。</p>
+<p><strong>安装 iam-apiserver 可执行程序：</strong></p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ <span class="token builtin class-name">cd</span> <span class="token variable">$IAM_ROOT</span>
+$ <span class="token builtin class-name">source</span> scripts/install/environment.sh
+$ <span class="token function">make</span> build <span class="token assign-left variable">BINS</span><span class="token operator">=</span>iam-apiserver
+$ <span class="token function">sudo</span> <span class="token function">cp</span> _output/platforms/linux/amd64/iam-apiserver <span class="token variable">${IAM_INSTALL_DIR}</span>/bin
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>生成并安装 iam-apiserver 的配置文件（iam-apiserver.yaml）：</strong></p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ ./scripts/genconfig.sh scripts/install/environment.sh configs/iam-apiserver.yaml <span class="token operator">></span> iam-apiserver.yaml
+$ <span class="token function">sudo</span> <span class="token function">mv</span> iam-apiserver.yaml <span class="token variable">${IAM_CONFIG_DIR}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>创建并安装 iam-apiserver systemd unit 文件：</strong></p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ ./scripts/genconfig.sh scripts/install/environment.sh init/iam-apiserver.service <span class="token operator">></span> iam-apiserver.service
+$ <span class="token function">sudo</span> <span class="token function">mv</span> iam-apiserver.service /etc/systemd/system/
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>启动 iam-apiserver 服务：</strong></p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ <span class="token function">sudo</span> systemctl daemon-reload
+$ <span class="token function">sudo</span> systemctl <span class="token builtin class-name">enable</span> iam-apiserver
+$ <span class="token function">sudo</span> systemctl restart iam-apiserver
+$ systemctl status iam-apiserver <span class="token comment"># 查看 iam-apiserver 运行状态，如果输出中包含 active (running)字样说明 iam-apiserver 成功启动</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="第-3-步-测试-iam-apiserver-是否成功安装。" tabindex="-1"><a class="header-anchor" href="#第-3-步-测试-iam-apiserver-是否成功安装。" aria-hidden="true">#</a> 第 3 步，测试 iam-apiserver 是否成功安装。</h4>
+<p>测试 iam-apiserver 主要是测试 RESTful 资源的 CURD：<strong>用户 CURD、密钥 CURD、授权策略 CURD。</strong></p>
+<p>首先，我们需要获取访问 iam-apiserver 的 Token，请求如下 API 访问：</p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ <span class="token function">curl</span> <span class="token parameter variable">-s</span> <span class="token parameter variable">-XPOST</span> -H<span class="token string">'Content-Type: application/json'</span> -d<span class="token string">'{"username":"admin","password":"Admin@2021"}'</span> http://127.0.0.1:8080/login <span class="token operator">|</span> jq <span class="token parameter variable">-r</span> .token
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJpYW0uYXBpLm1hcm1vdGVkdS5jb20iLCJleHAiOjE2NzY2MzI5MzcsImlkZW50aXR5IjoiYWRtaW4iLCJpc3MiOiJpYW0tYXBpc2VydmVyIiwib3JpZ19pYXQiOjE2NzY1NDY1MzcsInN1YiI6ImFkbWluIn0.FprBR_QLI_LS8Y087mat88tIRIQyWrYDo41RsRmnQjE
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>代码中下面的 HTTP 请求通过<code v-pre>-H'Authorization: Bearer &lt;Token&gt;'</code> 指定认证头信息，将上面请求的 Token 替换 <code v-pre>&lt;Token&gt;</code> 。</p>
+<p><strong>用户 CURD:</strong></p>
+<p>创建用户、列出用户、获取用户详细信息、修改用户、删除单个用户、批量删除用户，请求方法如下：</p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token comment"># 创建用户</span>
+$ <span class="token function">curl</span> <span class="token parameter variable">-s</span> <span class="token parameter variable">-XPOST</span> -H<span class="token string">'Content-Type: application/json'</span> -H<span class="token string">'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJpYW0uYXBpLm1hcm1vdGVkdS5jb20iLCJleHAiOjE2NzY2MzI5MzcsImlkZW50aXR5IjoiYWRtaW4iLCJpc3MiOiJpYW0tYXBpc2VydmVyIiwib3JpZ19pYXQiOjE2NzY1NDY1MzcsInN1YiI6ImFkbWluIn0.FprBR_QLI_LS8Y087mat88tIRIQyWrYDo41RsRmnQjE'</span> -d<span class="token string">'{"password":"User@2021","metadata":{"name":"colin"},"nickname":"colin","email":"colin@foxmail.com","phone":"1812884xxxx"}'</span> http://127.0.0.1:8080/v1/users
+
+<span class="token comment"># 列出用户</span>
+$ <span class="token function">curl</span> <span class="token parameter variable">-s</span> <span class="token parameter variable">-XGET</span> -H<span class="token string">'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJpYW0uYXBpLm1hcm1vdGVkdS5jb20iLCJleHAiOjE2NzY2MzI5MzcsImlkZW50aXR5IjoiYWRtaW4iLCJpc3MiOiJpYW0tYXBpc2VydmVyIiwib3JpZ19pYXQiOjE2NzY1NDY1MzcsInN1YiI6ImFkbWluIn0.FprBR_QLI_LS8Y087mat88tIRIQyWrYDo41RsRmnQjE'</span> <span class="token string">'http://127.0.0.1:8080/v1/users?offset=0&amp;limit=10'</span>
+
+<span class="token comment"># 获取 colin 用户的详细信息</span>
+$ <span class="token function">curl</span> <span class="token parameter variable">-s</span> <span class="token parameter variable">-XGET</span> -H<span class="token string">'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJpYW0uYXBpLm1hcm1vdGVkdS5jb20iLCJleHAiOjE2NzY2MzI5MzcsImlkZW50aXR5IjoiYWRtaW4iLCJpc3MiOiJpYW0tYXBpc2VydmVyIiwib3JpZ19pYXQiOjE2NzY1NDY1MzcsInN1YiI6ImFkbWluIn0.FprBR_QLI_LS8Y087mat88tIRIQyWrYDo41RsRmnQjE'</span> http://127.0.0.1:8080/v1/users/colin
+
+<span class="token comment"># 修改 colin 用户</span>
+$ <span class="token function">curl</span> <span class="token parameter variable">-s</span> <span class="token parameter variable">-XPUT</span> -H<span class="token string">'Content-Type: application/json'</span> -H<span class="token string">'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJpYW0uYXBpLm1hcm1vdGVkdS5jb20iLCJleHAiOjE2NzY2MzI5MzcsImlkZW50aXR5IjoiYWRtaW4iLCJpc3MiOiJpYW0tYXBpc2VydmVyIiwib3JpZ19pYXQiOjE2NzY1NDY1MzcsInN1YiI6ImFkbWluIn0.FprBR_QLI_LS8Y087mat88tIRIQyWrYDo41RsRmnQjE'</span> -d<span class="token string">'{"nickname":"colin","email":"colin_modified@foxmail.com","phone":"1867274xxxx"}'</span> http://127.0.0.1:8080/v1/users/colin
+
+<span class="token comment"># 删除 colin 用户</span>
+$ <span class="token function">curl</span> <span class="token parameter variable">-s</span> <span class="token parameter variable">-XDELETE</span> -H<span class="token string">'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJpYW0uYXBpLm1hcm1vdGVkdS5jb20iLCJleHAiOjE2NzY2MzI5MzcsImlkZW50aXR5IjoiYWRtaW4iLCJpc3MiOiJpYW0tYXBpc2VydmVyIiwib3JpZ19pYXQiOjE2NzY1NDY1MzcsInN1YiI6ImFkbWluIn0.FprBR_QLI_LS8Y087mat88tIRIQyWrYDo41RsRmnQjE'</span> http://127.0.0.1:8080/v1/users/colin
+
+<span class="token comment"># 批量删除用户</span>
+$ <span class="token function">curl</span> <span class="token parameter variable">-s</span> <span class="token parameter variable">-XDELETE</span> -H<span class="token string">'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJpYW0uYXBpLm1hcm1vdGVkdS5jb20iLCJleHAiOjE2NzY2MzI5MzcsImlkZW50aXR5IjoiYWRtaW4iLCJpc3MiOiJpYW0tYXBpc2VydmVyIiwib3JpZ19pYXQiOjE2NzY1NDY1MzcsInN1YiI6ImFkbWluIn0.FprBR_QLI_LS8Y087mat88tIRIQyWrYDo41RsRmnQjE'</span> <span class="token string">'http://127.0.0.1:8080/v1/users?name=colin&amp;name=mark&amp;name=john'</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>密钥 CURD:</strong></p>
+<p>创建密钥、列出密钥、获取密钥详细信息、修改密钥、删除密钥请求方法如下：</p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>
+<span class="token comment"># 创建 secret0 密钥</span>
+$ <span class="token function">curl</span> <span class="token parameter variable">-s</span> <span class="token parameter variable">-XPOST</span> -H<span class="token string">'Content-Type: application/json'</span> -H<span class="token string">'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJpYW0uYXBpLm1hcm1vdGVkdS5jb20iLCJleHAiOjE2NzY2MzI5MzcsImlkZW50aXR5IjoiYWRtaW4iLCJpc3MiOiJpYW0tYXBpc2VydmVyIiwib3JpZ19pYXQiOjE2NzY1NDY1MzcsInN1YiI6ImFkbWluIn0.FprBR_QLI_LS8Y087mat88tIRIQyWrYDo41RsRmnQjE'</span> -d<span class="token string">'{"metadata":{"name":"secret0"},"expires":0,"description":"admin secret"}'</span> http://127.0.0.1:8080/v1/secrets
+
+<span class="token comment"># 列出所有密钥</span>
+$ <span class="token function">curl</span> <span class="token parameter variable">-s</span> <span class="token parameter variable">-XGET</span> -H<span class="token string">'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJpYW0uYXBpLm1hcm1vdGVkdS5jb20iLCJleHAiOjE2NzY2MzI5MzcsImlkZW50aXR5IjoiYWRtaW4iLCJpc3MiOiJpYW0tYXBpc2VydmVyIiwib3JpZ19pYXQiOjE2NzY1NDY1MzcsInN1YiI6ImFkbWluIn0.FprBR_QLI_LS8Y087mat88tIRIQyWrYDo41RsRmnQjE'</span> http://127.0.0.1:8080/v1/secrets
+
+<span class="token comment"># 获取 secret0 密钥的详细信息</span>
+$ <span class="token function">curl</span> <span class="token parameter variable">-s</span> <span class="token parameter variable">-XGET</span> -H<span class="token string">'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJpYW0uYXBpLm1hcm1vdGVkdS5jb20iLCJleHAiOjE2NzY2MzI5MzcsImlkZW50aXR5IjoiYWRtaW4iLCJpc3MiOiJpYW0tYXBpc2VydmVyIiwib3JpZ19pYXQiOjE2NzY1NDY1MzcsInN1YiI6ImFkbWluIn0.FprBR_QLI_LS8Y087mat88tIRIQyWrYDo41RsRmnQjE'</span> http://127.0.0.1:8080/v1/secrets/secret0
+
+<span class="token comment"># 修改 secret0 密钥</span>
+$ <span class="token function">curl</span> <span class="token parameter variable">-s</span> <span class="token parameter variable">-XPUT</span> -H<span class="token string">'Content-Type: application/json'</span> -H<span class="token string">'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJpYW0uYXBpLm1hcm1vdGVkdS5jb20iLCJleHAiOjE2NzY2MzI5MzcsImlkZW50aXR5IjoiYWRtaW4iLCJpc3MiOiJpYW0tYXBpc2VydmVyIiwib3JpZ19pYXQiOjE2NzY1NDY1MzcsInN1YiI6ImFkbWluIn0.FprBR_QLI_LS8Y087mat88tIRIQyWrYDo41RsRmnQjE'</span> -d<span class="token string">'{"metadata":{"name":"secret0"},"expires":0,"description":"admin secret(modified)"}'</span> http://127.0.0.1:8080/v1/secrets/secret0
+
+<span class="token comment"># 删除 secret0 密钥</span>
+$ <span class="token function">curl</span> <span class="token parameter variable">-s</span> <span class="token parameter variable">-XDELETE</span> -H<span class="token string">'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJpYW0uYXBpLm1hcm1vdGVkdS5jb20iLCJleHAiOjE2NzY2MzI5MzcsImlkZW50aXR5IjoiYWRtaW4iLCJpc3MiOiJpYW0tYXBpc2VydmVyIiwib3JpZ19pYXQiOjE2NzY1NDY1MzcsInN1YiI6ImFkbWluIn0.FprBR_QLI_LS8Y087mat88tIRIQyWrYDo41RsRmnQjE'</span> http://127.0.0.1:8080/v1/secrets/secret0
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>这里我们要注意，因为密钥属于重要资源，被删除会导致所有的访问请求失败，所以密钥不支持批量删除。</p>
+<p><strong>授权策略 CURD:</strong></p>
+<p>创建策略、列出策略、获取策略详细信息、修改策略、删除策略请求方法如下：</p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token comment"># 创建策略</span>
+$ <span class="token function">curl</span> <span class="token parameter variable">-s</span> <span class="token parameter variable">-XPOST</span> -H<span class="token string">'Content-Type: application/json'</span> -H<span class="token string">'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJpYW0uYXBpLm1hcm1vdGVkdS5jb20iLCJleHAiOjE2NzY2MzI5MzcsImlkZW50aXR5IjoiYWRtaW4iLCJpc3MiOiJpYW0tYXBpc2VydmVyIiwib3JpZ19pYXQiOjE2NzY1NDY1MzcsInN1YiI6ImFkbWluIn0.FprBR_QLI_LS8Y087mat88tIRIQyWrYDo41RsRmnQjE'</span> -d<span class="token string">'{"metadata":{"name":"policy0"},"policy":{"description":"One policy to rule them all.","subjects":["users:&lt;peter|ken>","users:maria","groups:admins"],"actions":["delete","&lt;create|update>"],"effect":"allow","resources":["resources:articles:&lt;.*>","resources:printer"],"conditions":{"remoteIPAddress":{"type":"CIDRCondition","options":{"cidr":"192.168.0.1/16"}}}}}'</span> http://127.0.0.1:8080/v1/policies
+
+<span class="token comment"># 列出所有策略</span>
+$ <span class="token function">curl</span> <span class="token parameter variable">-s</span> <span class="token parameter variable">-XGET</span> -H<span class="token string">'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJpYW0uYXBpLm1hcm1vdGVkdS5jb20iLCJleHAiOjE2NzY2MzI5MzcsImlkZW50aXR5IjoiYWRtaW4iLCJpc3MiOiJpYW0tYXBpc2VydmVyIiwib3JpZ19pYXQiOjE2NzY1NDY1MzcsInN1YiI6ImFkbWluIn0.FprBR_QLI_LS8Y087mat88tIRIQyWrYDo41RsRmnQjE'</span> http://127.0.0.1:8080/v1/policies
+
+<span class="token comment"># 获取 policy0 策略的详细信息</span>
+$ <span class="token function">curl</span> <span class="token parameter variable">-s</span> <span class="token parameter variable">-XGET</span> -H<span class="token string">'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJpYW0uYXBpLm1hcm1vdGVkdS5jb20iLCJleHAiOjE2NzY2MzI5MzcsImlkZW50aXR5IjoiYWRtaW4iLCJpc3MiOiJpYW0tYXBpc2VydmVyIiwib3JpZ19pYXQiOjE2NzY1NDY1MzcsInN1YiI6ImFkbWluIn0.FprBR_QLI_LS8Y087mat88tIRIQyWrYDo41RsRmnQjE'</span> http://127.0.0.1:8080/v1/policies/policy0
+
+<span class="token comment"># 修改 policy0 策略</span>
+$ <span class="token function">curl</span> <span class="token parameter variable">-s</span> <span class="token parameter variable">-XPUT</span> -H<span class="token string">'Content-Type: application/json'</span> -H<span class="token string">'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJpYW0uYXBpLm1hcm1vdGVkdS5jb20iLCJleHAiOjE2NzY2MzI5MzcsImlkZW50aXR5IjoiYWRtaW4iLCJpc3MiOiJpYW0tYXBpc2VydmVyIiwib3JpZ19pYXQiOjE2NzY1NDY1MzcsInN1YiI6ImFkbWluIn0.FprBR_QLI_LS8Y087mat88tIRIQyWrYDo41RsRmnQjE'</span> -d<span class="token string">'{"metadata":{"name":"policy0"},"policy":{"description":"One policy to rule them all(modified).","subjects":["users:&lt;peter|ken>","users:maria","groups:admins"],"actions":["delete","&lt;create|update>"],"effect":"allow","resources":["resources:articles:&lt;.*>","resources:printer"],"conditions":{"remoteIPAddress":{"type":"CIDRCondition","options":{"cidr":"192.168.0.1/16"}}}}}'</span> http://127.0.0.1:8080/v1/policies/policy0
+
+<span class="token comment"># 删除 policy0 策略</span>
+$ <span class="token function">curl</span> <span class="token parameter variable">-s</span> <span class="token parameter variable">-XDELETE</span> -H<span class="token string">'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJpYW0uYXBpLm1hcm1vdGVkdS5jb20iLCJleHAiOjE2NzY2MzI5MzcsImlkZW50aXR5IjoiYWRtaW4iLCJpc3MiOiJpYW0tYXBpc2VydmVyIiwib3JpZ19pYXQiOjE2NzY1NDY1MzcsInN1YiI6ImFkbWluIn0.FprBR_QLI_LS8Y087mat88tIRIQyWrYDo41RsRmnQjE'</span> http://127.0.0.1:8080/v1/policies/policy0
+
+<span class="token comment"># 创建策略</span>
+$ <span class="token function">curl</span> <span class="token parameter variable">-s</span> <span class="token parameter variable">-XPOST</span> -H<span class="token string">'Content-Type: application/json'</span> -H<span class="token string">'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJpYW0uYXBpLm1hcm1vdGVkdS5jb20iLCJleHAiOjE2NzY2MzI5MzcsImlkZW50aXR5IjoiYWRtaW4iLCJpc3MiOiJpYW0tYXBpc2VydmVyIiwib3JpZ19pYXQiOjE2NzY1NDY1MzcsInN1YiI6ImFkbWluIn0.FprBR_QLI_LS8Y087mat88tIRIQyWrYDo41RsRmnQjE'</span> -d<span class="token string">'{"metadata":{"name":"policy0"},"policy":{"description":"One policy to rule them all.","subjects":["users:&lt;peter|ken>","users:maria","groups:admins"],"actions":["delete","&lt;create|update>"],"effect":"allow","resources":["resources:articles:&lt;.*>","resources:printer"],"conditions":{"remoteIPAddress":{"type":"CIDRCondition","options":{"cidr":"192.168.0.1/16"}}}}}'</span> http://127.0.0.1:8080/v1/policies
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="安装-iamctl" tabindex="-1"><a class="header-anchor" href="#安装-iamctl" aria-hidden="true">#</a> 安装 iamctl</h3>
+<p>上面，我们安装了 iam 系统的 API 服务。但是想要访问 iam 服务，我们还需要安装客户端工具 iamctl。具体来说，我们可以通过 3 步完成 iamctl 的安装和配置。</p>
+<h4 id="第-1-步-创建-iamctl-证书和私钥。" tabindex="-1"><a class="header-anchor" href="#第-1-步-创建-iamctl-证书和私钥。" aria-hidden="true">#</a> 第 1 步，创建 iamctl 证书和私钥。</h4>
+<p>iamctl 使用 https 协议与 iam-apiserver 进行安全通信，iam-apiserver 对 iamctl 请求包含的证书进行认证和授权。iamctl 后续用于 iam 系统访问和管理，所以这里创建具有最高权限的 admin 证书。</p>
+<p><strong>创建证书签名请求</strong>。</p>
+<p>下面创建的证书只会被 iamctl 当作 client 证书使用，所以 hosts 字段为空。代码如下：</p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ <span class="token builtin class-name">cd</span> <span class="token variable">$IAM_ROOT</span>
+$ <span class="token builtin class-name">source</span> scripts/install/environment.sh
+$ <span class="token function">cat</span> <span class="token operator">></span> admin-csr.json <span class="token operator">&lt;&lt;</span><span class="token string">EOF
+{
+  "CN": "admin",
+  "key": {
+    "algo": "rsa",
+    "size": 2048
+  },
+  "names": [
+    {
+      "C": "CN",
+      "ST": "BeiJing",
+      "L": "BeiJing",
+      "O": "marmotedu",
+      "OU": "iamctl"
+    }
+  ],
+  "hosts": []
+}
+EOF</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>生成证书和私钥：</strong></p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ cfssl gencert <span class="token parameter variable">-ca</span><span class="token operator">=</span><span class="token variable">${IAM_CONFIG_DIR}</span>/cert/ca.pem <span class="token punctuation">\</span>
+  -ca-key<span class="token operator">=</span><span class="token variable">${IAM_CONFIG_DIR}</span>/cert/ca-key.pem <span class="token punctuation">\</span>
+  <span class="token parameter variable">-config</span><span class="token operator">=</span><span class="token variable">${IAM_CONFIG_DIR}</span>/cert/ca-config.json <span class="token punctuation">\</span>
+  <span class="token parameter variable">-profile</span><span class="token operator">=</span>iam admin-csr.json <span class="token operator">|</span> cfssljson <span class="token parameter variable">-bare</span> admin
+$ <span class="token function">mkdir</span> <span class="token parameter variable">-p</span> <span class="token variable"><span class="token variable">$(</span><span class="token function">dirname</span> $<span class="token punctuation">{</span>CONFIG_USER_CLIENT_CERTIFICATE<span class="token punctuation">}</span><span class="token variable">)</span></span> <span class="token variable"><span class="token variable">$(</span><span class="token function">dirname</span> $<span class="token punctuation">{</span>CONFIG_USER_CLIENT_KEY<span class="token punctuation">}</span><span class="token variable">)</span></span> <span class="token comment"># 创建客户端证书存放的目录</span>
+$ <span class="token function">mv</span> admin.pem <span class="token variable">${CONFIG_USER_CLIENT_CERTIFICATE}</span> <span class="token comment"># 安装 TLS 的客户端证书</span>
+$ <span class="token function">mv</span> admin-key.pem <span class="token variable">${CONFIG_USER_CLIENT_KEY}</span> <span class="token comment"># 安装 TLS 的客户端私钥文件</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="第-2-步-安装-iamctl。" tabindex="-1"><a class="header-anchor" href="#第-2-步-安装-iamctl。" aria-hidden="true">#</a> 第 2 步，安装 iamctl。</h4>
+<p>iamctl 是 IAM 系统的客户端工具，其安装位置和 iam-apiserver、iam-authz-server、iam-pump 位置不同，为了能够在 shell 下直接运行 iamctl 命令，我们需要将 iamctl 安装到<code v-pre>$HOME/bin</code> 下，同时将 iamctl 的配置存放在默认加载的目录下：<code v-pre>$HOME/.iam</code>。主要分 2 步进行。</p>
+<p><strong>安装 iamctl 可执行程序：</strong></p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ <span class="token builtin class-name">cd</span> <span class="token variable">$IAM_ROOT</span>
+$ <span class="token builtin class-name">source</span> scripts/install/environment.sh
+$ <span class="token function">make</span> build <span class="token assign-left variable">BINS</span><span class="token operator">=</span>iamctl
+$ <span class="token function">cp</span> _output/platforms/linux/amd64/iamctl <span class="token environment constant">$HOME</span>/bin
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>生成并安装 iamctl 的配置文件（iamctl.yaml）：</strong></p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ ./scripts/genconfig.sh scripts/install/environment.sh configs/iamctl.yaml<span class="token operator">></span> iamctl.yaml
+$ <span class="token function">mkdir</span> <span class="token parameter variable">-p</span> <span class="token environment constant">$HOME</span>/.iam
+$ <span class="token function">mv</span> iamctl.yaml <span class="token environment constant">$HOME</span>/.iam
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>因为 iamctl 是一个客户端工具，可能会在多台机器上运行。为了简化部署 iamctl 工具的复杂度，我们可以把 config 配置文件中跟 CA 认证相关的 CA 文件内容用 base64 加密后，放置在 config 配置文件中。具体的思路就是把 config 文件中的配置项 client-certificate、client-key、certificate-authority 分别用如下配置项替换 client-certificate-data、client-key-data、certificate-authority-data。这些配置项的值可以通过对 CA 文件使用 base64 加密获得。</p>
+<p>假如，certificate-authority 值为<code v-pre>/etc/iam/cert/ca.pem</code>，则 certificate-authority-data 的值为 <code v-pre>cat &quot;/etc/iam/cert/ca.pem&quot; | base64 | tr -d '\r\n'</code>，其它-data 变量的值类似。这样当我们再部署 iamctl 工具时，只需要拷贝 iamctl 和配置文件，而不用再拷贝 CA 文件了。</p>
+<h4 id="第-3-步-测试-iamctl-是否成功安装。" tabindex="-1"><a class="header-anchor" href="#第-3-步-测试-iamctl-是否成功安装。" aria-hidden="true">#</a> 第 3 步，测试 iamctl 是否成功安装。</h4>
+<p>执行 <code v-pre>iamctl user list</code> 可以列出预创建的 admin 用户，如下图所示：</p>
+<p><img src="http://sm.nsddd.top/sm202302161945373.png" alt="image-20230216194553152"></p>
+<h3 id="安装和配置-iam-authz-server" tabindex="-1"><a class="header-anchor" href="#安装和配置-iam-authz-server" aria-hidden="true">#</a> 安装和配置 iam-authz-server</h3>
+<p>接下来，我们需要安装另外一个核心组件：iam-authz-server，可以通过以下 3 步来安装。</p>
+<h4 id="第-1-步-创建-iam-authz-server-证书和私钥。" tabindex="-1"><a class="header-anchor" href="#第-1-步-创建-iam-authz-server-证书和私钥。" aria-hidden="true">#</a> 第 1 步，创建 iam-authz-server 证书和私钥。</h4>
+<p><strong>创建证书签名请求：</strong></p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ <span class="token builtin class-name">cd</span> <span class="token variable">$IAM_ROOT</span>
+$ <span class="token builtin class-name">source</span> scripts/install/environment.sh
+$ <span class="token function">tee</span> iam-authz-server-csr.json <span class="token operator">&lt;&lt;</span><span class="token string">EOF
+{
+  "CN": "iam-authz-server",
+  "key": {
+    "algo": "rsa",
+    "size": 2048
+  },
+  "names": [
+    {
+      "C": "CN",
+      "ST": "BeiJing",
+      "L": "BeiJing",
+      "O": "marmotedu",
+      "OU": "iam-authz-server"
+    }
+  ],
+  "hosts": [
+    "127.0.0.1",
+    "localhost",
+    "iam.authz.marmotedu.com"
+  ]
+}
+EOF</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>代码中的 hosts 字段指定授权使用该证书的 IP 和域名列表，上面的 hosts 列出了 iam-authz-server 服务的 IP 和域名。</p>
+<p><strong>生成证书和私钥：</strong></p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ cfssl gencert <span class="token parameter variable">-ca</span><span class="token operator">=</span><span class="token variable">${IAM_CONFIG_DIR}</span>/cert/ca.pem <span class="token punctuation">\</span>
+  -ca-key<span class="token operator">=</span><span class="token variable">${IAM_CONFIG_DIR}</span>/cert/ca-key.pem <span class="token punctuation">\</span>
+  <span class="token parameter variable">-config</span><span class="token operator">=</span><span class="token variable">${IAM_CONFIG_DIR}</span>/cert/ca-config.json <span class="token punctuation">\</span>
+  <span class="token parameter variable">-profile</span><span class="token operator">=</span>iam iam-authz-server-csr.json <span class="token operator">|</span> cfssljson <span class="token parameter variable">-bare</span> iam-authz-server
+$ <span class="token function">sudo</span> <span class="token function">mv</span> iam-authz-server*pem <span class="token variable">${IAM_CONFIG_DIR}</span>/cert <span class="token comment"># 将生成的证书和私钥文件拷贝到配置文件目录</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="第-2-步-安装并运行-iam-authz-server。" tabindex="-1"><a class="header-anchor" href="#第-2-步-安装并运行-iam-authz-server。" aria-hidden="true">#</a> 第 2 步，安装并运行 iam-authz-server。</h4>
+<p>安装 iam-authz-server 步骤和安装 iam-apiserver 步骤基本一样，也需要 4 步。</p>
+<p><strong>安装 iam-authz-server 可执行程序：</strong></p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ <span class="token builtin class-name">cd</span> <span class="token variable">$IAM_ROOT</span>
+$ <span class="token builtin class-name">source</span> scripts/install/environment.sh
+$ <span class="token function">make</span> build <span class="token assign-left variable">BINS</span><span class="token operator">=</span>iam-authz-server
+$ <span class="token function">sudo</span> <span class="token function">cp</span> _output/platforms/linux/amd64/iam-authz-server <span class="token variable">${IAM_INSTALL_DIR}</span>/bin
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>生成并安装 iam-authz-server 的配置文件（iam-authz-server.yaml）：</strong></p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ ./scripts/genconfig.sh scripts/install/environment.sh configs/iam-authz-server.yaml <span class="token operator">></span> iam-authz-server.yaml
+$ <span class="token function">sudo</span> <span class="token function">mv</span> iam-authz-server.yaml <span class="token variable">${IAM_CONFIG_DIR}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>创建并安装 iam-authz-server systemd unit 文件：</strong></p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ ./scripts/genconfig.sh scripts/install/environment.sh init/iam-authz-server.service <span class="token operator">></span> iam-authz-server.service
+$ <span class="token function">sudo</span> <span class="token function">mv</span> iam-authz-server.service /etc/systemd/system/
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>启动 iam-authz-server 服务：</strong></p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ <span class="token function">sudo</span> systemctl daemon-reload
+$ <span class="token function">sudo</span> systemctl <span class="token builtin class-name">enable</span> iam-authz-server
+$ <span class="token function">sudo</span> systemctl restart iam-authz-server
+$ systemctl status iam-authz-server 
+<span class="token comment"># 查看 iam-authz-server 运行状态，如果输出中包含 active (running)字样说明 iam-authz-server 成功启动。</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="第-3-步-测试-iam-authz-server-是否成功安装。" tabindex="-1"><a class="header-anchor" href="#第-3-步-测试-iam-authz-server-是否成功安装。" aria-hidden="true">#</a> 第 3 步，测试 iam-authz-server 是否成功安装。</h4>
+<p><strong>重新登陆系统，并获取访问令牌</strong></p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ <span class="token assign-left variable">token</span><span class="token operator">=</span><span class="token variable"><span class="token variable">`</span><span class="token function">curl</span> <span class="token parameter variable">-s</span> <span class="token parameter variable">-XPOST</span> -H<span class="token string">'Content-Type: application/json'</span> -d<span class="token string">'{"username":"admin","password":"Admin@2021"}'</span> http://127.0.0.1:8080/login <span class="token operator">|</span> jq <span class="token parameter variable">-r</span> .token<span class="token variable">`</span></span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p><strong>创建授权策略:</strong></p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ <span class="token function">curl</span> <span class="token parameter variable">-s</span> <span class="token parameter variable">-XPOST</span> -H<span class="token string">"Content-Type: application/json"</span> -H<span class="token string">"Authorization: Bearer <span class="token variable">$token</span>"</span> -d<span class="token string">'{"metadata":{"name":"authztest"},"policy":{"description":"One policy to rule them all.","subjects":["users:&lt;peter|ken>","users:maria","groups:admins"],"actions":["delete","&lt;create|update>"],"effect":"allow","resources":["resources:articles:&lt;.*>","resources:printer"],"conditions":{"remoteIPAddress":{"type":"CIDRCondition","options":{"cidr":"192.168.0.1/16"}}}}}'</span> http://127.0.0.1:8080/v1/policies
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p><strong>创建密钥，并从命令的输出中提取 secretID 和 secretKey</strong></p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ <span class="token function">curl</span> <span class="token parameter variable">-s</span> <span class="token parameter variable">-XPOST</span> -H<span class="token string">"Content-Type: application/json"</span> -H<span class="token string">"Authorization: Bearer <span class="token variable">$token</span>"</span> -d<span class="token string">'{"metadata":{"name":"authztest"},"expires":0,"description":"admin secret"}'</span> http://127.0.0.1:8080/v1/secrets
+<span class="token punctuation">{</span><span class="token string">"metadata"</span>:<span class="token punctuation">{</span><span class="token string">"id"</span>:23,<span class="token string">"instanceID"</span><span class="token builtin class-name">:</span><span class="token string">"secret-yj8m30"</span>,<span class="token string">"name"</span><span class="token builtin class-name">:</span><span class="token string">"authztest"</span>,<span class="token string">"createdAt"</span><span class="token builtin class-name">:</span><span class="token string">"2023-02-16T19:55:29.407+08:00"</span>,<span class="token string">"updatedAt"</span><span class="token builtin class-name">:</span><span class="token string">"2023-02-16T19:55:29.407+08:00"</span><span class="token punctuation">}</span>,<span class="token string">"username"</span><span class="token builtin class-name">:</span><span class="token string">"admin"</span>,<span class="token string">"secretID"</span><span class="token builtin class-name">:</span><span class="token string">"Ouk0bP2SX36f5FgpGWnFZy6Tpom89VEljtUo"</span>,<span class="token string">"secretKey"</span><span class="token builtin class-name">:</span><span class="token string">"uIhkIKQ7GA7eSCIdjNYQgvRoE3d6n9bo"</span>,<span class="token string">"expires"</span>:0,<span class="token string">"description"</span><span class="token builtin class-name">:</span><span class="token string">"admin secret"</span><span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>生成访问 iam-authz-server 的 token</strong></p>
+<p>iamctl 提供了 jwt sigin 命令，可以根据 secretID 和 secretKey 签发 Token，方便你使用。</p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ iamctl jwt sign Ouk0bP2SX36f5FgpGWnFZy6Tpom89VEljtUo uIhkIKQ7GA7eSCIdjNYQgvRoE3d6n9bo <span class="token comment"># iamctl jwt sign $secretID $secretKey，替换成上一步创建的密钥对</span>
+eyJhbGciOiJIUzI1NiIsImtpZCI6Ik91azBiUDJTWDM2ZjVGZ3BHV25GWnk2VHBvbTg5VkVsanRVbyIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJpYW0uYXV0aHoubWFybW90ZWR1LmNvbSIsImV4cCI6MTY3NjU1NTg3NywiaWF0IjoxNjc2NTQ4Njc3LCJpc3MiOiJpYW1jdGwiLCJuYmYiOjE2NzY1NDg2Nzd9.CdbBrm9-mErgysb5xwa0EQPboQWnXJpXOBZZk6K6M9E
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>如果你的开发过程中有些重复性的操作，为了方便使用，也可以将这些操作以 iamctl 子命令的方式集成到 iamctl 命令行中。</p>
+<p><strong>测试资源授权是否通过</strong></p>
+<p>我们可以通过请求 /v1/authz 来完成资源授权：</p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ <span class="token function">curl</span> <span class="token parameter variable">-s</span> <span class="token parameter variable">-XPOST</span> -H<span class="token string">'Content-Type: application/json'</span> -H<span class="token string">'Authorization: Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6Ik91azBiUDJTWDM2ZjVGZ3BHV25GWnk2VHBvbTg5VkVsanRVbyIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJpYW0uYXV0aHoubWFybW90ZWR1LmNvbSIsImV4cCI6MTY3NjU1NTg3NywiaWF0IjoxNjc2NTQ4Njc3LCJpc3MiOiJpYW1jdGwiLCJuYmYiOjE2NzY1NDg2Nzd9.CdbBrm9-mErgysb5xwa0EQPboQWnXJpXOBZZk6K6M9E'</span> -d<span class="token string">'{"subject":"users:maria","action":"delete","resource":"resources:articles:ladon-introduction","context":{"remoteIPAddress":"192.168.0.5"}}'</span> http://127.0.0.1:9090/v1/authz
+<span class="token punctuation">{</span><span class="token string">"allowed"</span>:true<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>如果授权通过会返回：<code v-pre>{&quot;allowed&quot;:true}</code> 。</p>
+<h3 id="安装和配置-iam-pump" tabindex="-1"><a class="header-anchor" href="#安装和配置-iam-pump" aria-hidden="true">#</a> 安装和配置 iam-pump</h3>
+<p>安装 iam-pump 步骤和安装 iam-apiserver、iam-authz-server 步骤基本一样，具体步骤如下。</p>
+<p><strong>第 1 步，安装 iam-pump 可执行程序。</strong></p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ <span class="token builtin class-name">cd</span> <span class="token variable">$IAM_ROOT</span>
+$ <span class="token builtin class-name">source</span> scripts/install/environment.sh
+$ <span class="token function">make</span> build <span class="token assign-left variable">BINS</span><span class="token operator">=</span>iam-pump
+$ <span class="token function">sudo</span> <span class="token function">cp</span> _output/platforms/linux/amd64/iam-pump <span class="token variable">${IAM_INSTALL_DIR}</span>/bin
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>第 2 步，生成并安装 iam-pump 的配置文件（iam-pump.yaml）。</strong></p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ ./scripts/genconfig.sh scripts/install/environment.sh configs/iam-pump.yaml <span class="token operator">></span> iam-pump.yaml
+$ <span class="token function">sudo</span> <span class="token function">mv</span> iam-pump.yaml <span class="token variable">${IAM_CONFIG_DIR}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>第 3 步，创建并安装 iam-pump systemd unit 文件。</strong></p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ ./scripts/genconfig.sh scripts/install/environment.sh init/iam-pump.service <span class="token operator">></span> iam-pump.service
+$ <span class="token function">sudo</span> <span class="token function">mv</span> iam-pump.service /etc/systemd/system/
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>第 4 步，启动 iam-pump 服务。</strong></p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ <span class="token function">sudo</span> systemctl daemon-reload
+$ <span class="token function">sudo</span> systemctl <span class="token builtin class-name">enable</span> iam-pump
+$ <span class="token function">sudo</span> systemctl restart iam-pump
+$ systemctl status iam-pump <span class="token comment"># 查看 iam-pump 运行状态，如果输出中包含 active (running)字样说明 iam-pump 成功启动。</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>第 5 步，测试 iam-pump 是否成功安装。</strong></p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ <span class="token function">curl</span> http://127.0.0.1:7070/healthz
+<span class="token punctuation">{</span><span class="token string">"status"</span><span class="token builtin class-name">:</span> <span class="token string">"ok"</span><span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>经过上面这 5 个步骤，如果返回 <code v-pre>{“status”: “ok”}</code> 就说明 iam-pump 服务健康</p>
+<h3 id="安装-man-文件" tabindex="-1"><a class="header-anchor" href="#安装-man-文件" aria-hidden="true">#</a> 安装 man 文件</h3>
+<p>IAM 系统通过组合调用包：<a href="">github.com/cpuguy83/go-md2man/v2/md2man</a> 和 <a href="https://github.com/spf13/cobra" target="_blank" rel="noopener noreferrer">github.com/spf13/cobra<ExternalLinkIcon/></a> 的相关函数生成了各个组件的 man1 文件，主要分 3 步实现。</p>
+<p><strong>第 1 步，生成各个组件的 man1 文件。</strong></p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ <span class="token builtin class-name">cd</span> <span class="token variable">$IAM_ROOT</span>
+$ ./scripts/update-generated-docs.sh
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>第 2 步，安装生成的 man1 文件。</strong></p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ <span class="token function">sudo</span> <span class="token function">cp</span> docs/man/man1/* /usr/share/man/man1/
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p><strong>第 3 步，检查是否成功安装 man1 文件。</strong></p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ <span class="token function">man</span> iam-apiserver
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><blockquote>
+<p><strong>执行 man iam-apiserver 命令后，会弹出 man 文档界面，如下图所示：</strong></p>
+<p><img src="http://sm.nsddd.top/sm202302162006542.png" alt="image-20230216200626281"></p>
+</blockquote>
+<p>至此，IAM 系统所有组件都已经安装成功了，你可以通过 iamctl version 查看客户端和服务端版本，代码如下：</p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ iamctl version <span class="token parameter variable">-o</span> yaml
+clientVersion:
+  buildDate: <span class="token string">"2023-02-16T11:43:40Z"</span>
+  compiler: gc
+  gitCommit: f39d4105e563c01fb4869bbaf1b19f5afa944400
+  gitTreeState: dirty
+  gitVersion: f39d410
+  goVersion: go1.18.3
+  platform: linux/amd64
+serverVersion:
+  buildDate: <span class="token string">"2023-02-16T11:18:53Z"</span>
+  compiler: gc
+  gitCommit: f39d4105e563c01fb4869bbaf1b19f5afa944400
+  gitTreeState: dirty
+  gitVersion: f39d410
+  goVersion: go1.18.3
+  platform: linux/amd64
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="一键安装" tabindex="-1"><a class="header-anchor" href="#一键安装" aria-hidden="true">#</a> 一键安装</h2>
+<p><strong>除此之外，还可以一键安装：</strong></p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ <span class="token builtin class-name">export</span> <span class="token assign-left variable">LINUX_PASSWORD</span><span class="token operator">=</span><span class="token string">'iam59!z$'</span> <span class="token comment"># 重要：这里要 export going 用户的密码</span>
+$ <span class="token assign-left variable">version</span><span class="token operator">=</span>latest <span class="token operator">&amp;&amp;</span> <span class="token function">curl</span> https://marmotedu-1254073058.cos.ap-beijing.myqcloud.com/iam-release/<span class="token variable">${version}</span>/iam.tar.gz <span class="token operator">|</span> <span class="token function">tar</span> <span class="token parameter variable">-xz</span> <span class="token parameter variable">-C</span> / tmp/       
+$ <span class="token builtin class-name">cd</span> /tmp/iam/ <span class="token operator">&amp;&amp;</span> ./scripts/install/install.sh iam::install::install
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="总结" tabindex="-1"><a class="header-anchor" href="#总结" aria-hidden="true">#</a> 总结</h2>
+<p>⚠️ 所有组件设置的密码都是 <code v-pre>iam59!z$</code></p>
+<p><img src="http://sm.nsddd.top/sm202302162007692.png" alt="image-20230216200735600"></p>
 <h2 id="end-链接" tabindex="-1"><a class="header-anchor" href="#end-链接" aria-hidden="true">#</a> END 链接</h2>
 <ul><li><div><a href = '1.md' style='float:left'>⬆️上一节🔗  </a><a href = '3.md' style='float: right'>  ️下一节🔗</a></div></li></ul>
 <ul>

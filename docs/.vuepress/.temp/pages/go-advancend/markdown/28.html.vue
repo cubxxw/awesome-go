@@ -372,6 +372,99 @@ Size of myStruct2<span class="token punctuation">:</span> <span class="token num
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>🚀 编译结果如下：</p>
 <div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token number">100</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>这个例子中，我们创建了一个int64类型的变量counter，并在100个goroutine中并发地执行AddInt64函数对其进行自增操作。由于 AddInt64函数是原子的，所以不会发生竞态条件。在所有goroutine执行完毕后，counter的值应该为100，并且不会受到其它线程的影响。</p>
+<h2 id="性能优化分析工具" tabindex="-1"><a class="header-anchor" href="#性能优化分析工具" aria-hidden="true">#</a> 性能优化分析工具</h2>
+<h3 id="优化建议" tabindex="-1"><a class="header-anchor" href="#优化建议" aria-hidden="true">#</a> 优化建议</h3>
+<p><strong>Go语言性能调优有以下几点建议:</strong></p>
+<ol>
+<li>使用 Go 的内置性能分析工具，如 pprof，可以帮助诊断程序中的性能瓶颈。</li>
+<li>避免使用高开销的操作，例如过多的内存分配和字符串连接。</li>
+<li>使用 Go 协程，可以提高程序的并发性能。</li>
+<li>使用 Go 的编译器优化，例如禁用内联（-gcflags=-l）和优化级别（-O）。</li>
+<li>使用 Go 的原生并发类型，如 channel，而不是使用第三方库。</li>
+<li>使用 Go 的垃圾回收器，可以减少内存分配和回收的开销。</li>
+<li>尽量避免使用反射。</li>
+<li>可以使用 cgo调用C语言代码来提升性能</li>
+</ol>
+<p><strong>优化原则：</strong></p>
+<ol>
+<li>优化最热点的代码: 通过性能分析工具（例如 pprof）来识别程序中的性能瓶颈并优化。</li>
+<li>尽量减少不必要的操作: 比如内存分配、字符串连接等高开销操作。</li>
+<li>使用合适的数据结构和算法: 例如使用 hash 表代替暴力查找，使用优化后的算法等。</li>
+<li>使用并发和并行技术: 例如使用 Go 协程、channel 来提高程序的并发性能。</li>
+<li>尽量避免使用反射: 使用反射会带来性能上的代价。</li>
+<li>使用编译器优化: 例如禁用内联、使用优化级别等。</li>
+<li>利用硬件加速: 例如使用 GPU 加速等。</li>
+<li>优先使用高效的第三方库: 使用高效的第三方库可以减少代码量并提高性能。</li>
+<li>经常进行性能测试和监控: 性能优化不是一次性的，需要经常进行性能测试和监控，及时发现并解决性能问题。</li>
+</ol>
+<h3 id="性能分析工具-pprof" tabindex="-1"><a class="header-anchor" href="#性能分析工具-pprof" aria-hidden="true">#</a> 性能分析工具 pprof</h3>
+<p>pprof是 Go 语言的性能分析工具，它可以帮助诊断程序中的性能瓶颈。</p>
+<p>使用方法:</p>
+<ol>
+<li>在程序中导入 &quot;net/http/pprof&quot; 包</li>
+<li>启动 pprof HTTP 服务器，通常是在 main 函数中调用 <code v-pre>go func() { log.Println(http.ListenAndServe(&quot;localhost:6060&quot;, nil)) }()</code></li>
+<li>使用浏览器或命令行工具访问 pprof 的 HTTP 服务器，例如： <code v-pre>http://localhost:6060/debug/pprof/</code></li>
+<li>通过 pprof 提供的不同的 web页面 或 命令行工具 查看性能统计信息</li>
+</ol>
+<p>pprof 支持多种类型的性能分析，包括 CPU profile、memory profile、block profile、goroutine profile、threadcreate profile、heap profile等.</p>
+<p><img src="http://sm.nsddd.top/sm202301181539789.png" alt="image-20230118153922625"></p>
+<h3 id="pprof项目实战" tabindex="-1"><a class="header-anchor" href="#pprof项目实战" aria-hidden="true">#</a> pprof项目实战</h3>
+<p>将最开始的项目 clone 到本地，在这个项目中，写了一些造成性能问题的代码炸弹。</p>
+<p><strong>编译并保持链接：</strong></p>
+<div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>go run main.go
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p><strong>浏览器查看指标：</strong></p>
+<ul>
+<li>http://localhost:6060/debug/pprof/</li>
+</ul>
+<p><strong>pprof命令排查：</strong></p>
+<blockquote>
+<p>保持连接，另开终端：</p>
+</blockquote>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>go tool pprof <span class="token string">"http://localhost:6060/debug/pprof/profile?seconds=10"</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h4 id="topn-—-查看占用资源最多的函数" tabindex="-1"><a class="header-anchor" href="#topn-—-查看占用资源最多的函数" aria-hidden="true">#</a> topN — 查看占用资源最多的函数：</h4>
+<p><img src="http://sm.nsddd.top/sm202301181622460.png" alt="image-20230118162256355"></p>
+<p>📜 对上面的解释：</p>
+<ul>
+<li>flat = cum，函数中没有调用其他的函数</li>
+<li>flat = 0，函数中只有其他函数的调用</li>
+</ul>
+<h4 id="list命令" tabindex="-1"><a class="header-anchor" href="#list命令" aria-hidden="true">#</a> list命令</h4>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token punctuation">(</span>pprof<span class="token punctuation">)</span> list Eat
+Total: <span class="token number">2</span>.77s
+ROUTINE <span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span> github.com/wolfogre/go-pprof-practice/animal/felidae/tiger.<span class="token punctuation">(</span>*Tiger<span class="token punctuation">)</span>.Eat <span class="token keyword">in</span> D:<span class="token punctuation">\</span>文档<span class="token punctuation">\</span>my<span class="token punctuation">\</span>go-pprof-practice<span class="token punctuation">\</span>animal<span class="token punctuation">\</span>felidae<span class="token punctuation">\</span>tiger<span class="token punctuation">\</span>tiger.go
+     <span class="token number">2</span>.73s      <span class="token number">2</span>.74s <span class="token punctuation">(</span>flat, cum<span class="token punctuation">)</span> <span class="token number">98.92</span>% of Total
+         <span class="token builtin class-name">.</span>          <span class="token builtin class-name">.</span>     <span class="token number">19</span>:<span class="token punctuation">}</span>
+         <span class="token builtin class-name">.</span>          <span class="token builtin class-name">.</span>     <span class="token number">20</span>:
+         <span class="token builtin class-name">.</span>          <span class="token builtin class-name">.</span>     <span class="token number">21</span>:func <span class="token punctuation">(</span>t *Tiger<span class="token punctuation">)</span> <span class="token function-name function">Eat</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+         <span class="token builtin class-name">.</span>          <span class="token builtin class-name">.</span>     <span class="token number">22</span>:   log.Println<span class="token punctuation">(</span>t.Name<span class="token punctuation">(</span><span class="token punctuation">)</span>, <span class="token string">"eat"</span><span class="token punctuation">)</span>
+         <span class="token builtin class-name">.</span>          <span class="token builtin class-name">.</span>     <span class="token number">23</span>:   loop :<span class="token operator">=</span> <span class="token number">10000000000</span>
+     <span class="token number">2</span>.73s      <span class="token number">2</span>.74s     <span class="token number">24</span>:   <span class="token keyword">for</span> i :<span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> loop<span class="token punctuation">;</span> i++ <span class="token punctuation">{</span>
+         <span class="token builtin class-name">.</span>          <span class="token builtin class-name">.</span>     <span class="token number">25</span>:           // <span class="token keyword">do</span> nothing
+         <span class="token builtin class-name">.</span>          <span class="token builtin class-name">.</span>     <span class="token number">26</span>:   <span class="token punctuation">}</span>
+         <span class="token builtin class-name">.</span>          <span class="token builtin class-name">.</span>     <span class="token number">27</span>:<span class="token punctuation">}</span>
+         <span class="token builtin class-name">.</span>          <span class="token builtin class-name">.</span>     <span class="token number">28</span>:
+         <span class="token builtin class-name">.</span>          <span class="token builtin class-name">.</span>     <span class="token number">29</span>:func <span class="token punctuation">(</span>t *Tiger<span class="token punctuation">)</span> <span class="token function-name function">Drink</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token punctuation">(</span>pprof<span class="token punctuation">)</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>问题出在第 24 L</strong></p>
+<h4 id="调用关系可视化" tabindex="-1"><a class="header-anchor" href="#调用关系可视化" aria-hidden="true">#</a> 调用关系可视化</h4>
+<p><img src="http://sm.nsddd.top/sm202301181636935.png" alt="image-20230118163659804"></p>
+<p><strong>解决后，发现协程数下降：</strong></p>
+<p><img src="http://sm.nsddd.top/sm202301181639282.png" alt="image-20230118163915913"></p>
+<h2 id="性能调优实战" tabindex="-1"><a class="header-anchor" href="#性能调优实战" aria-hidden="true">#</a> 性能调优实战</h2>
+<p>pprof是性能调试工具，可以生成类似火焰图、堆栈图，内存分析图等。</p>
+<p>整个分析的过程分为两步：1. 导出数据，2. 分析数据。</p>
+<h3 id="使用" tabindex="-1"><a class="header-anchor" href="#使用" aria-hidden="true">#</a> 使用</h3>
+<p>allocs：查看过去所有内存分配的样本。</p>
+<p>block：查看导致阻塞同步的堆栈跟踪。</p>
+<p>cmdline： 当前程序的命令行的完整调用路径。</p>
+<p>goroutine：查看当前所有运行的 goroutines 堆栈跟踪。</p>
+<p>heap：查看活动对象的内存分配情况。</p>
+<p>mutex：查看导致互斥锁的竞争持有者的堆栈跟踪。</p>
+<p>profile： 默认进行 30s 的 CPU Profiling，得到一个分析用的 profile 文件。</p>
+<p>threadcreate：查看创建新 OS 线程的堆栈跟踪。</p>
+<p>trace：<a href="https://mp.weixin.qq.com/s/I9xSMxy32cALSNQAN8wlnQ" target="_blank" rel="noopener noreferrer">mp.weixin.qq.com/s/I9xSMxy32…<ExternalLinkIcon/></a></p>
+<h3 id="过程和原理" tabindex="-1"><a class="header-anchor" href="#过程和原理" aria-hidden="true">#</a> 过程和原理</h3>
+<p><img src="http://sm.nsddd.top/sm202301181641399.png" alt="image-20230118164157274"></p>
 <h2 id="end-链接" tabindex="-1"><a class="header-anchor" href="#end-链接" aria-hidden="true">#</a> END 链接</h2>
 <ul>
 <li><RouterLink to="/go-advancend/">回到目录</RouterLink></li>

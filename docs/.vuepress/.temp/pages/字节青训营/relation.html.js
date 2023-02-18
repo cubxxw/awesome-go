@@ -1,0 +1,1 @@
+export const data = JSON.parse("{\"key\":\"v-16e52f41\",\"path\":\"/%E5%AD%97%E8%8A%82%E9%9D%92%E8%AE%AD%E8%90%A5/relation.html\",\"title\":\"relation/action/ 实现\",\"lang\":\"zh-CN\",\"frontmatter\":{},\"excerpt\":\"\",\"headers\":[],\"git\":{\"updatedTime\":null,\"contributors\":[]},\"filePathRelative\":\"字节青训营/relation.md\"}")

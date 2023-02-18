@@ -25,21 +25,32 @@
 <li><a href="https://vfchdrh6q6.feishu.cn/docx/doxcnwTuJ3CbOFDhQan4EQBrKWg" target="_blank" rel="noopener noreferrer">项目文档<ExternalLinkIcon/></a>   <a href="https://github.com/ACking-you/byte_douyin_project" target="_blank" rel="noopener noreferrer">https://github.com/ACking-you/byte_douyin_project<ExternalLinkIcon/></a></li>
 <li><a href="https://github.com/a76yyyy/tiktok" target="_blank" rel="noopener noreferrer">抖音项目<ExternalLinkIcon/></a></li>
 <li><a href="https://github.com/tik-listen/tiktok" target="_blank" rel="noopener noreferrer">使用了Kubernetes的tiktok<ExternalLinkIcon/></a></li>
+<li><a href="https://gitee.com/douyinxm/douyin" target="_blank" rel="noopener noreferrer">小团队的 tiktok 设计<ExternalLinkIcon/></a></li>
 </ul>
 <h2 id="设计稿" tabindex="-1"><a class="header-anchor" href="#设计稿" aria-hidden="true">#</a> 设计稿</h2>
+<p><strong>基础接口：</strong></p>
 <ul>
-<li>[x] <a href="https://rll0wlkrr7.feishu.cn/docx/HPLidzk8EooQyWxsBmGcN6vNneh" target="_blank" rel="noopener noreferrer">用户注册接口设计<ExternalLinkIcon/></a></li>
-<li>[x] <a href="https://tkz5v5lygv.feishu.cn/docx/EFkudxjWRoD7UMx5XLyc6ASrn5e" target="_blank" rel="noopener noreferrer">互动接口 - 点赞操作<ExternalLinkIcon/></a></li>
-<li>[x] <a href="https://hardcore.feishu.cn/docx/PLXtdM1tkoXCK2xH0oIctWAOnLc" target="_blank" rel="noopener noreferrer">视频流接口设计<ExternalLinkIcon/></a></li>
-<li>[x] <a href="https://m8x44j2c67.feishu.cn/docx/XOcAd43dqolCS2xR8Kec2UzYnfb" target="_blank" rel="noopener noreferrer">用户登陆接口设计<ExternalLinkIcon/></a></li>
-<li>[x] 用户信息接口</li>
-<li>[ ] 视频投稿接口</li>
-<li>[ ] 发布列表接口</li>
-<li>[x] 评论接口</li>
-<li>[ ] 社交接口</li>
-<li>[ ] 用户关注列表</li>
-<li>[ ] 用户粉丝列表</li>
-<li>[ ] 用户友好列表</li>
+<li>[x] <a href="https://rll0wlkrr7.feishu.cn/docx/HPLidzk8EooQyWxsBmGcN6vNneh" target="_blank" rel="noopener noreferrer">douyin/user/register/ 用户注册接口设计<ExternalLinkIcon/></a></li>
+<li>[x] <a href="https://m8x44j2c67.feishu.cn/docx/XOcAd43dqolCS2xR8Kec2UzYnfb" target="_blank" rel="noopener noreferrer">douyin/user/login/ 用户登陆接口设计<ExternalLinkIcon/></a></li>
+<li>[x] <a href="https://xvfqxk3bib.feishu.cn/docx/QXWhdNQLqopwUbx6rWycqP8AnLe" target="_blank" rel="noopener noreferrer">douyin/user/ 用户信息接口<ExternalLinkIcon/></a></li>
+<li>[x] <a href="https://hardcore.feishu.cn/docx/PLXtdM1tkoXCK2xH0oIctWAOnLc" target="_blank" rel="noopener noreferrer">douyin/feed/ 视频流接口设计<ExternalLinkIcon/></a></li>
+<li>[ ] douyin/push/list/ 发布列表接口</li>
+</ul>
+<p><strong>互动接口：</strong></p>
+<ul>
+<li>[x] <a href="https://tkz5v5lygv.feishu.cn/docx/EFkudxjWRoD7UMx5XLyc6ASrn5e" target="_blank" rel="noopener noreferrer">douyin/favorit/action/ 互动接口 - 点赞操作<ExternalLinkIcon/></a></li>
+<li>douyin/favorite/list/ 喜欢列表</li>
+<li>[x] douyin/comment/action/ 评论操作</li>
+<li>[ ] douyin/comment/list/ 视频评论列表</li>
+</ul>
+<p><strong>社交接口：</strong></p>
+<ul>
+<li>[ ] douyin/relation/action/ 用户关注操作</li>
+<li>[ ] douyin/relation/follow/list/ 用户关注列表</li>
+<li>[ ] douyin/relation/follower/list/ 用户粉丝列表</li>
+<li>[ ] douyin/relation/friend/list/  用户好友列表</li>
+<li>[ ] douyin/message/action/ 发送信息</li>
+<li>[ ] douyin/message/chat/ 聊天记录</li>
 </ul>
 <hr>
 <h3 id="模块设计" tabindex="-1"><a class="header-anchor" href="#模块设计" aria-hidden="true">#</a> 模块设计</h3>
