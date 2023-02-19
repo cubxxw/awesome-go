@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "6",
+      "path": "docs/projects/projects/6.md"
+    },
+    {
+      "basename": "7",
+      "path": "docs/projects/projects/7.md"
+    },
+    {
+      "basename": "8",
+      "path": "docs/projects/projects/8.md"
+    },
+    {
       "basename": "抖音项目资源",
       "path": "docs/字节青训营/抖音项目资源.md"
     },
@@ -187,14 +199,6 @@
     {
       "basename": "2",
       "path": "docker/Cloud-Native-k8s/2.md"
-    },
-    {
-      "basename": "slide",
-      "path": "default/slide.md"
-    },
-    {
-      "basename": "会议记录模板",
-      "path": "template/会议记录模板.md"
     }
   ],
   "omittedPaths": [],
