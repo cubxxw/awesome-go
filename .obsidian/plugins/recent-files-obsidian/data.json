@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "Go语言项目实战",
+      "path": "Go语言项目实战.md"
+    },
+    {
+      "basename": "项目管理从理论到实践",
+      "path": "项目管理从理论到实践.md"
+    },
+    {
       "basename": "6",
       "path": "docs/projects/projects/6.md"
     },
@@ -11,14 +19,6 @@
     {
       "basename": "8",
       "path": "docs/projects/projects/8.md"
-    },
-    {
-      "basename": "抖音项目资源",
-      "path": "docs/字节青训营/抖音项目资源.md"
-    },
-    {
-      "basename": "码上掘金主题创作活动",
-      "path": "docs/字节青训营/码上掘金主题创作活动.md"
     },
     {
       "basename": "22",
@@ -81,20 +81,8 @@
       "path": "docs/go-advancend/markdown/13.md"
     },
     {
-      "basename": "Go语言项目实战",
-      "path": "Go语言项目实战.md"
-    },
-    {
       "basename": "go_route",
       "path": "docs/go-advancend/go_route.md"
-    },
-    {
-      "basename": "字节青训营进阶面试准备",
-      "path": "docs/字节青训营/字节青训营进阶面试准备.md"
-    },
-    {
-      "basename": "青训营题库",
-      "path": "docs/字节青训营/青训营题库.md"
     },
     {
       "basename": "20230106-周五",
@@ -195,10 +183,6 @@
     {
       "basename": "5",
       "path": "docker/Cloud-Native-k8s/5.md"
-    },
-    {
-      "basename": "2",
-      "path": "docker/Cloud-Native-k8s/2.md"
     }
   ],
   "omittedPaths": [],

@@ -9,7 +9,7 @@
 <p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://nsddd.top/" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
 </blockquote>
 <hr>
-<nav class="table-of-contents"><ul><li><router-link to="#restful-api">RESTful API</router-link><ul><li><router-link to="#是什么">是什么</router-link></li><li><router-link to="#restful-api-设计原则">RESTful API 设计原则</router-link></li><li><router-link to="#rest-示例">REST 示例</router-link></li><li><router-link to="#总结">总结</router-link></li></ul></li><li><router-link to="#如何设计应用的rpc-api-风格">如何设计应用的RPC API 风格</router-link><ul><li><router-link to="#rpc-介绍">RPC 介绍</router-link></li><li><router-link to="#grpc">gRPC</router-link></li><li><router-link to="#grpc-特点">gRPC 特点</router-link></li><li><router-link to="#protocol-buffers">Protocol Buffers</router-link></li><li><router-link to="#grpc-示例">gRPC 示例</router-link></li></ul></li><li><router-link to="#restful-vs-grpc">RESTful VS gRPC</router-link></li><li><router-link to="#总结-1">总结</router-link></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
+<nav class="table-of-contents"><ul><li><router-link to="#restful-api">RESTful API</router-link><ul><li><router-link to="#是什么">是什么</router-link></li><li><router-link to="#restful-api-设计原则">RESTful API 设计原则</router-link></li><li><router-link to="#rest-示例">REST 示例</router-link></li><li><router-link to="#总结">总结</router-link></li></ul></li><li><router-link to="#如何设计应用的rpc-api-风格">如何设计应用的RPC API 风格</router-link><ul><li><router-link to="#rpc-介绍">RPC 介绍</router-link></li><li><router-link to="#grpc">gRPC</router-link></li><li><router-link to="#grpc-特点">gRPC 特点</router-link></li><li><router-link to="#protocol-buffers">Protocol Buffers</router-link></li><li><router-link to="#grpc-示例">gRPC 示例</router-link></li><li><router-link to="#执">执</router-link></li><li><router-link to="#演练">演练</router-link></li></ul></li><li><router-link to="#grpc-原理">gRPC 原理</router-link><ul><li><router-link to="#proto-文件">Proto 文件</router-link></li><li><router-link to="#massage">massage</router-link></li><li><router-link to="#字段规则">字段规则</router-link></li><li><router-link to="#信息号">信息号</router-link></li><li><router-link to="#嵌套信息">嵌套信息</router-link></li><li><router-link to="#server-main">Server main</router-link></li><li><router-link to="#client-main">client main</router-link></li><li><router-link to="#认证-安全传输">认证-安全传输</router-link></li></ul></li><li><router-link to="#restful-vs-grpc">RESTful VS gRPC</router-link></li><li><router-link to="#总结-1">总结</router-link><ul><li><router-link to="#补充-kite-x">补充 Kite X</router-link></li></ul></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
 <p>[TOC]</p>
 <h2 id="restful-api" tabindex="-1"><a class="header-anchor" href="#restful-api" aria-hidden="true">#</a> RESTful API</h2>
 <p>绝大部分的 Go 后端服务需要编写 API 接口，对外提供服务。所以在开发之前，我们需要确定一种 API 风格。API 风格也可以理解为 API 类型，目前业界常用的 API 风格有三种：REST、RPC 和 GraphQL。我们需要根据项目需求，并结合 API 风格的特点，确定使用哪种 API 风格，这对以后的编码实现、通信方式和通信效率都有很大的影响。</p>
@@ -226,7 +226,7 @@ pong
 </blockquote>
 <p>Protocol Buffers 的主要特性有下面这几个。</p>
 <ul>
-<li>更快的数据传输速度：protobuf 在传输时，会将数据序列化为二进制数据，和 XML、JSON 的文本传输格式相比，这可以节省大量的 IO 操作，从而提高数据传输速度。</li>
+<li>更快的数据传输速度：protobuf 在传输时，会将数据序列化为二进制数据，和 XML、JSON 的文本传输格式相比，这可以节省大量的 IO 操作（更少的内存），从而提高数据传输速度。</li>
 <li>跨平台多语言：protobuf 自带的编译工具 protoc 可以基于 protobuf 定义文件，编译出不同语言的客户端或者服务端，供程序直接调用，因此可以满足多语言需求的场景。</li>
 <li>具有非常好的扩展性和兼容性，可以更新已有的数据结构，而不破坏和影响原有的程序。</li>
 <li>基于 IDL 文件定义服务，通过 proto3 工具生成指定语言的数据结构、服务端和客户端接口。</li>
@@ -261,8 +261,7 @@ pong
 <li>实现 gRPC 客户端。</li>
 </ol>
 <p><strong>位置在：https://github.com/marmotedu/gopractise-demo/tree/main/apistyle/greeter</strong></p>
-<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>
-$ tree
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ tree
 ├── client
 │   └── main.go
 ├── helloworld
@@ -270,9 +269,9 @@ $ tree
 │   └── helloworld.proto
 └── server
     └── main.go
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>client 目录存放 Client 端的代码，helloworld 目录用来存放服务的 IDL 定义，server 目录用来存放 Server 端的代码。</p>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>client 目录存放 Client 端的代码，helloworld 目录用来存放服务的 IDL 定义，server 目录用来存放 Server 端的代码。</p>
 <h4 id="定义-grpc-服务" tabindex="-1"><a class="header-anchor" href="#定义-grpc-服务" aria-hidden="true">#</a> 定义 gRPC 服务</h4>
-<p>首先，需要定义我们的服务。进入 helloworld 目录，新建文件 helloworld.proto：</p>
+<p>首先，需要定义我们的服务。进入 helloworld 目录，新建文件 <code v-pre>helloworld.proto</code>：</p>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ <span class="token builtin class-name">cd</span> helloworld
 $ <span class="token function">touch</span> helloworld.proto
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>输入以下内容：</strong></p>
@@ -318,7 +317,7 @@ EOF
   <span class="token builtin">string</span> name <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="生成客户端和服务器代码" tabindex="-1"><a class="header-anchor" href="#生成客户端和服务器代码" aria-hidden="true">#</a> 生成客户端和服务器代码</h4>
-<p>接下来，我们需要根据.proto 服务定义生成 gRPC 客户端和服务器接口。我们可以使用 protoc 编译工具，并指定使用其 Go 语言插件来生成：</p>
+<p>接下来，我们需要根据 <code v-pre>.proto</code> 服务定义生成 gRPC 客户端和服务器接口。我们可以使用 <code v-pre>protoc</code> 编译工具，并指定使用其 Go 语言插件来生成：</p>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ protoc -I. <span class="token parameter variable">--go_out</span><span class="token operator">=</span>plugins<span class="token operator">=</span>grpc:<span class="token variable">$GOPATH</span>/src helloworld.proto
 $ <span class="token function">ls</span>
 helloworld.pb.go  helloworld.proto
@@ -369,8 +368,8 @@ $ <span class="token function">vi</span> main.go
 <span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>上面的代码实现了我们上一步根据服务定义生成的 Go 接口。</p>
 <p>我们先定义了一个 Go 结构体 server，并为 server 结构体添加<code v-pre>SayHello(context.Context, pb.HelloRequest) (pb.HelloReply, error)</code>方法，也就是说 server 是 GreeterServer 接口（位于 <code v-pre>helloworld.pb.go</code> 文件中）的一个实现。</p>
-<p>在我们实现了 gRPC 服务所定义的方法之后，就可以通过 <code v-pre>net.Listen(...)</code> 指定监听客户端请求的端口；接着，通过 <code v-pre>grpc.NewServer()</code> 创建一个 gRPC Server 实例，并通过 <code v-pre>pb.RegisterGreeterServer(s, &amp;server{})</code> 将该服务注册到 gRPC 框架中；最后，通过 s.Serve(lis) 启动 gRPC 服务。</p>
-<p>创建完 main.go 文件后，在当前目录下执行 go run main.go ，启动 gRPC 服务。</p>
+<p>在我们实现了 gRPC 服务所定义的方法之后，就可以通过 <code v-pre>net.Listen(...)</code> 指定监听客户端请求的端口；接着，通过 <code v-pre>grpc.NewServer()</code> 创建一个 gRPC Server 实例，并通过 <code v-pre>pb.RegisterGreeterServer(s, &amp;server{})</code> 将该服务注册到 gRPC 框架中；最后，通过 <code v-pre>s.Serve(lis)</code> 启动 gRPC 服务。</p>
+<p>创建完 main.go 文件后，在当前+ 下执行 <code v-pre>go run main.go</code> ，启动 gRPC 服务。</p>
 <h4 id="实现-grpc-客户端" tabindex="-1"><a class="header-anchor" href="#实现-grpc-客户端" aria-hidden="true">#</a> 实现 gRPC 客户端</h4>
 <p>打开一个新的 Linux 终端，进入 client 目录，新建 main.go 文件：</p>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ <span class="token builtin class-name">cd</span> <span class="token punctuation">..</span>/client
@@ -460,14 +459,13 @@ $ <span class="token function">vi</span> main.go
   log<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"Greeting: %s"</span><span class="token punctuation">,</span> r<span class="token punctuation">.</span>Message<span class="token punctuation">)</span>
 <span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>在上面的代码中，我们通过如下代码创建了一个 gRPC 连接，用来跟服务端进行通信：</p>
-<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code>
-<span class="token comment">// Set up a connection to the server.</span>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token comment">// Set up a connection to the server.</span>
 conn<span class="token punctuation">,</span> err <span class="token operator">:=</span> grpc<span class="token punctuation">.</span><span class="token function">Dial</span><span class="token punctuation">(</span>address<span class="token punctuation">,</span> grpc<span class="token punctuation">.</span><span class="token function">WithInsecure</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> grpc<span class="token punctuation">.</span><span class="token function">WithBlock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 <span class="token keyword">if</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
     log<span class="token punctuation">.</span><span class="token function">Fatalf</span><span class="token punctuation">(</span><span class="token string">"did not connect: %v"</span><span class="token punctuation">,</span> err<span class="token punctuation">)</span>
 <span class="token punctuation">}</span>
 <span class="token keyword">defer</span> conn<span class="token punctuation">.</span><span class="token function">Close</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>在创建连接时，我们可以指定不同的选项，用来控制创建连接的方式，例如 <code v-pre>grpc.WithInsecure()</code>、<code v-pre>grpc.WithBlock()</code> 等。gRPC 支持很多选项，更多的选项可以参考 grpc 仓库下dialoptions.go文件中以 With 开头的函数。</p>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>在创建连接时，我们可以指定不同的选项，用来控制创建连接的方式，例如 <code v-pre>grpc.WithInsecure()</code>、<code v-pre>grpc.WithBlock()</code> 等。gRPC 支持很多选项，更多的选项可以参考 grpc 仓库下dialoptions.go文件中以 With 开头的函数。</p>
 <p>连接建立起来之后，我们需要创建一个客户端 stub，用来执行 RPC 请求<code v-pre>c := pb.NewGreeterClient(conn)</code>。创建完成之后，我们就可以像调用本地函数一样，调用远程的方法了。例如，下面一段代码通过 c.SayHello 这种本地式调用方式调用了远端的 SayHello 接口：</p>
 <div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code>r<span class="token punctuation">,</span> err <span class="token operator">:=</span> c<span class="token punctuation">.</span><span class="token function">SayHello</span><span class="token punctuation">(</span>ctx<span class="token punctuation">,</span> <span class="token operator">&amp;</span>pb<span class="token punctuation">.</span>HelloRequest<span class="token punctuation">{</span>Name<span class="token punctuation">:</span> name<span class="token punctuation">}</span><span class="token punctuation">)</span>
 <span class="token keyword">if</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
@@ -476,20 +474,19 @@ conn<span class="token punctuation">,</span> err <span class="token operator">:=
 log<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"Greeting: %s"</span><span class="token punctuation">,</span> r<span class="token punctuation">.</span>Message<span class="token punctuation">)</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>从上面的调用格式中，我们可以看到 RPC 调用具有下面两个特点。</p>
 <ul>
-<li>调用方便：RPC 屏蔽了底层的网络通信细节，使得调用 RPC 就像调用本地方法一样方便，调用方式跟大家所熟知的调用类的方法一致：ClassName.ClassFuc(params)。</li>
+<li>调用方便：RPC 屏蔽了底层的网络通信细节，使得调用 RPC 就像调用本地方法一样方便，调用方式跟大家所熟知的调用类的方法一致：<code v-pre>ClassName.ClassFuc(params)</code>。</li>
 <li>不需要打包和解包：RPC 调用的入参和返回的结果都是 Go 的结构体，不需要对传入参数进行打包操作，也不需要对返回参数进行解包操作，简化了调用步骤。</li>
 </ul>
 <p>最后，创建完 main.go 文件后，在当前目录下，执行 go run main.go 发起 RPC 调用：</p>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ go run main.go
 <span class="token number">2020</span>/10/17 07:55:00 Greeting: Hello world
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>至此，我们用四个步骤，创建并调用了一个 gRPC 服务。接下来我再给大家讲解一个在具体场景中的注意事项。</p>
-<p>在做服务开发时，我们经常会遇到一种场景：定义一个接口，接口会通过判断是否传入某个参数，决定接口行为。例如，我们想提供一个 GetUser 接口，期望 GetUser 接口在传入 username 参数时，根据 username 查询用户的信息，如果没有传入 username，则默认根据 userId 查询用户信息。</p>
+<p>在做服务开发时，我们经常会遇到一种场景：<strong>定义一个接口，接口会通过判断是否传入某个参数，决定接口行为。例如，我们想提供一个 GetUser 接口，期望 GetUser 接口在传入 username 参数时，根据 username 查询用户的信息，如果没有传入 username，则默认根据 userId 查询用户信息。</strong></p>
 <p>这时候，我们需要判断客户端有没有传入 username 参数。我们不能根据 username 是否为空值来判断，因为我们不能区分客户端传的是空值，还是没有传 username 参数。这是由 Go 语言的语法特性决定的：如果客户端没有传入 username 参数，Go 会默认赋值为所在类型的零值，而字符串类型的零值就是空字符串。</p>
 <p>那我们怎么判断客户端有没有传入 username 参数呢？最好的方法是通过指针来判断，如果是 nil 指针就说明没有传入，非 nil 指针就说明传入，具体实现步骤如下：</p>
 <p>编写 protobuf 定义文件。</p>
-<p>新建 user.proto 文件，内容如下:</p>
-<div class="language-protobuf ext-protobuf line-numbers-mode"><pre v-pre class="language-protobuf"><code>
-<span class="token keyword">syntax</span> <span class="token operator">=</span> <span class="token string">"proto3"</span><span class="token punctuation">;</span>
+<p><strong>新建 user.proto 文件，内容如下:</strong></p>
+<div class="language-protobuf ext-protobuf line-numbers-mode"><pre v-pre class="language-protobuf"><code><span class="token keyword">syntax</span> <span class="token operator">=</span> <span class="token string">"proto3"</span><span class="token punctuation">;</span>
 
 <span class="token keyword">package</span> proto<span class="token punctuation">;</span>
 <span class="token keyword">option</span> go_package <span class="token operator">=</span> <span class="token string">"github.com/marmotedu/gopractise-demo/protobuf/user"</span><span class="token punctuation">;</span>
@@ -514,11 +511,11 @@ log<span class="token punctuation">.</span><span class="token function">Printf</
   <span class="token builtin">string</span> sex <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
   <span class="token builtin">string</span> phone <span class="token operator">=</span> <span class="token number">6</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>你需要注意，这里我们在需要设置为可选字段的前面添加了 optional 标识。</p>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>你需要注意，这里我们在需要设置为可选字段的前面添加了 optional 标识。</p>
 <p>使用 protoc 工具编译 protobuf 文件。</p>
-<p>在执行 protoc 命令时，需要传入--experimental_allow_proto3_optional参数以打开 optional 选项，编译命令如下：</p>
+<p>在执行 protoc 命令时，需要传入<code v-pre>--experimental_allow_proto3_optional</code>参数以打开 optional 选项，编译命令如下：</p>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ protoc <span class="token parameter variable">--experimental_allow_proto3_optional</span> <span class="token parameter variable">--go_out</span><span class="token operator">=</span>plugins<span class="token operator">=</span>grpc:. user.proto
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>上述编译命令会生成 user.pb.go 文件，其中的 GetUserRequest 结构体定义如下：</p>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>上述编译命令会生成 <code v-pre>user.pb.go</code> 文件，其中的 GetUserRequest 结构体定义如下：</p>
 <div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code>
 <span class="token keyword">type</span> GetUserRequest <span class="token keyword">struct</span> <span class="token punctuation">{</span>
     state         protoimpl<span class="token punctuation">.</span>MessageState
@@ -554,14 +551,272 @@ log<span class="token punctuation">.</span><span class="token function">Printf</
     <span class="token keyword">return</span> store<span class="token punctuation">.</span><span class="token function">Client</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Users</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">GetUserByID</span><span class="token punctuation">(</span>r<span class="token punctuation">.</span>Class<span class="token punctuation">,</span> r<span class="token punctuation">.</span>UserId<span class="token punctuation">)</span>
 <span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>总之，在 GetUser 方法中，我们可以通过判断 r.Username 是否为 nil，来判断客户端是否传入了 Username 参数。</p>
+<h3 id="执" tabindex="-1"><a class="header-anchor" href="#执" aria-hidden="true">#</a> 执</h3>
+<p>在编写完上面的内容后，在 helloworld/proto 目录中执行如下命令：</p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>protoc <span class="token parameter variable">--go_out</span><span class="token operator">=</span>. helloworld. proto <span class="token comment">#java : --java_ouot</span>
+protoc --go-grpc_out<span class="token operator">=</span>. helloworld.proto
+protoc -I. <span class="token parameter variable">--go_out</span><span class="token operator">=</span>. helloworld.proto
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><img src="http://sm.nsddd.top/sm202302191408194.png" alt="image-20230219140850022"></p>
+<h3 id="演练" tabindex="-1"><a class="header-anchor" href="#演练" aria-hidden="true">#</a> 演练</h3>
+<p><strong>总结一下，一共就两部：</strong></p>
+<p>写一个 proto 的约束：</p>
+<div class="language-protobuf ext-protobuf line-numbers-mode"><pre v-pre class="language-protobuf"><code><span class="token keyword">syntax</span> <span class="token operator">=</span> <span class="token string">"proto3"</span><span class="token punctuation">;</span>
+
+<span class="token comment">// go_package 这部分的内容是关于最后生成的Go语言代码的包名和路径的设置，这里的意思是生成的Go语言代码的包名是server，路径是当前目录。</span>
+<span class="token keyword">option</span> go_package <span class="token operator">=</span> <span class="token string">".;server"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">package</span> helloworld<span class="token punctuation">;</span>
+
+<span class="token comment">// The greeting service definition.</span>
+<span class="token comment">// 在这里定义了一个服务 Greeter，这个服务有一个方法 SayHello，这个方法的请求参数是 HelloRequest，返回值是 HelloReply。</span>
+<span class="token keyword">service</span> <span class="token class-name">Greeter</span> <span class="token punctuation">{</span>
+  <span class="token comment">// Sends a greeting</span>
+  <span class="token keyword">rpc</span> <span class="token function">SayHello</span> <span class="token punctuation">(</span><span class="token class-name">HelloRequest</span><span class="token punctuation">)</span> <span class="token keyword">returns</span> <span class="token punctuation">(</span><span class="token class-name">HelloReply</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// The request message containing the user's name.</span>
+<span class="token comment">// 在这里定义了一个请求参数 HelloRequest，这个参数只有一个字段 name，类型是 string，这个字段的标号是 1。</span>
+<span class="token keyword">message</span> <span class="token class-name">HelloRequest</span> <span class="token punctuation">{</span>
+  <span class="token builtin">string</span> name <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token comment">//int64 age = 2;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// The response message containing the greetings</span>
+<span class="token comment">// 在这里定义了一个返回值 HelloReply，这个参数只有一个字段 message，类型是 string，这个字段的标号是 1。</span>
+<span class="token keyword">message</span> <span class="token class-name">HelloReply</span> <span class="token punctuation">{</span>
+  <span class="token builtin">string</span> message <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>使用命令生成代码：</p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>protoc <span class="token parameter variable">--go_out</span><span class="token operator">=</span>. helloworld. proto <span class="token comment">#java : --java_ouot</span>
+protoc -I. <span class="token parameter variable">--go_out</span><span class="token operator">=</span>. helloworld.proto
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>远程过程调用实现一般使用的是 <code v-pre>_grpc. pb. go</code> 文件中的代码。</strong></p>
+<h2 id="grpc-原理" tabindex="-1"><a class="header-anchor" href="#grpc-原理" aria-hidden="true">#</a> gRPC 原理</h2>
+<h3 id="proto-文件" tabindex="-1"><a class="header-anchor" href="#proto-文件" aria-hidden="true">#</a> Proto 文件</h3>
+<p>Proto 文件是 gRPC 中的一种文件类型，用于定义数据结构和服务的接口。Proto 文件使用 Protocol Buffers 语言编写，它是一种轻量级的数据序列化格式和协议，可用于在不同的平台和语言之间进行数据交换。</p>
+<p>Proto 文件通常包含两个主要部分：**消息定义和服务定义。**消息定义描述了数据结构，它们类似于在其他编程语言中使用的结构体或类。**服务定义描述了在 gRPC 中使用的 RPC 服务的接口。**服务定义由一个或多个 RPC 方法组成，每个 RPC 方法指定了请求和响应消息类型以及其它选项。</p>
+<div class="language-protobuf ext-protobuf line-numbers-mode"><pre v-pre class="language-protobuf"><code><span class="token keyword">syntax</span> <span class="token operator">=</span> <span class="token string">"proto3"</span><span class="token punctuation">;</span>
+
+<span class="token keyword">message</span> <span class="token class-name">HelloRequest</span> <span class="token punctuation">{</span>
+  <span class="token builtin">string</span> name <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">message</span> <span class="token class-name">HelloResponse</span> <span class="token punctuation">{</span>
+  <span class="token builtin">string</span> message <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">service</span> <span class="token class-name">Greeter</span> <span class="token punctuation">{</span>
+  <span class="token keyword">rpc</span> <span class="token function">SayHello</span> <span class="token punctuation">(</span><span class="token class-name">HelloRequest</span><span class="token punctuation">)</span> <span class="token keyword">returns</span> <span class="token punctuation">(</span><span class="token class-name">HelloResponse</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>该 Proto 文件定义了一个包含一个服务的简单示例。该服务名为 <code v-pre>Greeter</code>，其中包含一个 RPC 方法 <code v-pre>SayHello</code>，该方法将接受 <code v-pre>HelloRequest</code> 消息并返回 <code v-pre>HelloResponse</code> 消息。<code v-pre>HelloRequest</code> 消息包含一个字符串字段 <code v-pre>name</code>，<code v-pre>HelloResponse</code> 消息包含一个字符串字段 <code v-pre>message</code>。</p>
+<p>要使用该 <code v-pre>Proto</code> 文件创建 <code v-pre>gRPC</code> 客户端和服务器，可以使用 <code v-pre>Protocol Buffers</code> 编译器将其编译成客户端和服务器代码的实现，该实现将在指定的编程语言中生成。生成的代码包含所需的客户端和服务器代码，使它们能够相互通信，并且生成的代码的 <code v-pre>API</code> 与所选的编程语言的语法和风格相符。</p>
+<h3 id="massage" tabindex="-1"><a class="header-anchor" href="#massage" aria-hidden="true">#</a> massage</h3>
+<p>在 gRPC 中，message 是指 Proto 文件中定义的数据结构。类似于在其他编程语言中使用的类或结构体，它是一个包含多个字段的结构。每个字段包含一个名称和一个类型，并且可以有一个或多个修饰符，如可选或必需。</p>
+<p>在 Proto 文件中，message 的语法如下所示：</p>
+<div class="language-protobuf ext-protobuf line-numbers-mode"><pre v-pre class="language-protobuf"><code><span class="token keyword">message</span> <span class="token class-name">MessageName</span> <span class="token punctuation">{</span>
+  <span class="token positional-class-name class-name">field_type1</span> field_name1 <span class="token operator">=</span> field_number1 <span class="token punctuation">[</span>field_options1<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token positional-class-name class-name">field_type2</span> field_name2 <span class="token operator">=</span> field_number2 <span class="token punctuation">[</span>field_options2<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token comment">// ...</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>其中，MessageName 是 message 的名称，field_name1 和 field_name2 是字段的名称，field_type1 和 field_type2 是字段的类型，而 field_number1 和 field_number2 则是字段的数字标识符**。字段数字标识符必须是 message 中唯一的，并且在 1 到 2^29-1 的范围内。**方括号中的 field_options 是可选的字段选项，用于指定字段的特定行为。</p>
+<p>在消息定义中，可以使用以下几种字段类型：</p>
+<ul>
+<li>基本数据类型，如 int32、bool、string 等。</li>
+<li>枚举类型，用于枚举一组可选值。</li>
+<li>其他自定义 message 类型，用于在消息中嵌套使用其他消息类型。</li>
+<li>重复类型，如 repeated int32，用于定义一个包含多个相同类型的值的数组。</li>
+</ul>
+<p>下面是一个示例 message 定义：</p>
+<div class="language-protobuf ext-protobuf line-numbers-mode"><pre v-pre class="language-protobuf"><code><span class="token keyword">message</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>
+  <span class="token builtin">string</span> name <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token builtin">int32</span> id <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+  <span class="token builtin">string</span> email <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>该 message 定义了一个包含三个字段的结构，分别是 name、id 和 email。name 和 email 字段是字符串类型，id 字段是 int32 类型。它们分别使用数字标识符 1、2 和 3 进行标识。在编写 message 定义时，应该根据消息的具体内容选择合适的字段类型和选项。</p>
+<h3 id="字段规则" tabindex="-1"><a class="header-anchor" href="#字段规则" aria-hidden="true">#</a> 字段规则</h3>
+<p>在 gRPC 中，字段规则用于指定字段的行为方式，包括可选、必需和重复三种规则。</p>
+<p><strong>可选字段（Optional Fields）</strong></p>
+<p>可选字段表示该字段不需要在每个消息中都存在。如果消息中缺少该字段，则 gRPC 库将使用默认值填充该字段。在 Proto 文件中，可选字段使用方括号包含数字标识符。</p>
+<p>例如，以下是一个可选字段的示例：</p>
+<div class="language-protobuf ext-protobuf line-numbers-mode"><pre v-pre class="language-protobuf"><code><span class="token keyword">message</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>
+  <span class="token builtin">string</span> name <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token builtin">int32</span> id <span class="token operator">=</span> <span class="token number">2</span> <span class="token punctuation">[</span><span class="token annotation">default</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token builtin">string</span> email <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>在这个例子中，id 字段是一个可选字段，并且具有默认值 0。如果消息中未指定 id 字段的值，则默认为 0。</p>
+<p><strong>必需字段（Required Fields）:</strong></p>
+<p>必需字段表示该字段必须在每个消息中都存在，并且没有默认值。**如果消息中缺少必需字段，则 gRPC 库将抛出一个异常。**在 Proto 文件中，必需字段不使用任何方括号。</p>
+<p>例如，以下是一个必需字段的示例：</p>
+<div class="language-protobuf ext-protobuf line-numbers-mode"><pre v-pre class="language-protobuf"><code><span class="token keyword">message</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>
+  <span class="token builtin">string</span> name <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token keyword">required</span> <span class="token builtin">int32</span> id <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+  <span class="token builtin">string</span> email <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>重复字段（Repeated Fields）</strong></p>
+<p>重复字段表示该字段可以在消息中出现多次，形成一个数组。在 Proto 文件中，重复字段使用关键字 repeated。</p>
+<div class="language-protobuf ext-protobuf line-numbers-mode"><pre v-pre class="language-protobuf"><code><span class="token keyword">message</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>
+  <span class="token builtin">string</span> name <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token keyword">repeated</span> <span class="token positional-class-name class-name">PhoneNumber</span> phone <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">message</span> <span class="token class-name">PhoneNumber</span> <span class="token punctuation">{</span>
+  <span class="token builtin">string</span> number <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token builtin">string</span> type <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>在这个例子中，phone 字段是一个重复字段，它可以包含多个 PhoneNumber 类型的值。每个 PhoneNumber 类型的值包含 number 和 type 两个字段。重复字段在处理消息中包含多个值的情况时非常有用。</p>
+<h3 id="信息号" tabindex="-1"><a class="header-anchor" href="#信息号" aria-hidden="true">#</a> 信息号</h3>
+<p>在 gRPC 中，信息号用于标识消息中的字段。每个字段都有一个唯一的信息号，用于在消息中标识该字段。信息号必须是在消息中唯一的，并且在 1 到 2^29-1 的范围内。</p>
+<p>在 Proto 文件中，信息号是在字段名称和字段类型之间使用等号（=）指定的，如下所示：</p>
+<div class="language-protobuf ext-protobuf line-numbers-mode"><pre v-pre class="language-protobuf"><code><span class="token keyword">message</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>
+  <span class="token builtin">string</span> name <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token builtin">int32</span> id <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+  <span class="token builtin">string</span> email <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>在这个例子中，name 字段的信息号为 1，id 字段的信息号为 2，email 字段的信息号为 3。当编写 Proto 文件时，应该使用具有描述性的信息号名称来标识字段，以便其他人可以轻松地理解消息结构。</p>
+<p>在使用 gRPC 库时，应该使用相应语言的 API 来访问消息中的字段。API 通常会使用与消息定义中相同的名称来标识字段，而不是使用信息号。因此，即使消息的定义更改了，API 也可以保持不变。</p>
+<h3 id="嵌套信息" tabindex="-1"><a class="header-anchor" href="#嵌套信息" aria-hidden="true">#</a> 嵌套信息</h3>
+<p>在 gRPC 中，可以在消息中嵌套其他消息。嵌套信息是一个包含其他消息的消息，它在消息结构中有助于组织数据和将数据分组到逻辑单元中。</p>
+<p>在 Proto 文件中，可以通过在消息中定义其他消息来创建嵌套消息。以下是一个示例，其中 PhoneNumber 是一个嵌套在 Person 消息中的消息：</p>
+<div class="language-protobuf ext-protobuf line-numbers-mode"><pre v-pre class="language-protobuf"><code><span class="token keyword">message</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>
+  <span class="token builtin">string</span> name <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token builtin">int32</span> id <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+  <span class="token builtin">string</span> email <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+  <span class="token keyword">message</span> <span class="token class-name">PhoneNumber</span> <span class="token punctuation">{</span>
+    <span class="token builtin">string</span> number <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token builtin">string</span> type <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">message</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>
+  <span class="token builtin">string</span> name <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token builtin">int32</span> id <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+  <span class="token builtin">string</span> email <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+  <span class="token keyword">message</span> <span class="token class-name">PhoneNumber</span> <span class="token punctuation">{</span>
+    <span class="token builtin">string</span> number <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token builtin">string</span> type <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>在这个例子中，PhoneNumber 消息是嵌套在 Person 消息中的，它具有 number 和 type 两个字段。在使用 gRPC 库时，可以使用适当的 API 来访问嵌套消息中的字段。</p>
+<p>嵌套信息可以嵌套在其他信息中，形成更复杂的数据结构。在使用嵌套消息时，应该使用具有描述性的名称和良好的组织结构来使消息定义易于理解和维护。</p>
+<h3 id="server-main" tabindex="-1"><a class="header-anchor" href="#server-main" aria-hidden="true">#</a> Server main</h3>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token comment">/*
+ * @Description: my first grpc server
+ * @Author: Xinwei Xiong 3293172751nss@gmail.com
+ * @Date: 2023-02-18 15:36:08
+ * @LastEditTime: 2023-02-19 06:41:42
+ * @FilePath: /test/server/main.go
+ * @Github_Address: https://github.com/3293172751/cs-awesome-Block_Chain
+ * Copyright (c) 2023 by ${git_name_email}, All Rights Reserved. @blog: http://nsddd.top
+ */</span>
+<span class="token comment">// Package main implements a server for Greeter service.</span>
+<span class="token keyword">package</span> main
+
+<span class="token keyword">import</span> <span class="token punctuation">(</span>
+	<span class="token string">"context"</span>
+	<span class="token string">"log"</span>
+	<span class="token string">"net"</span>
+
+	pb <span class="token string">"github.com/marmotedu/gopractise-demo/apistyle/greeter/helloworld"</span>
+	<span class="token string">"google.golang.org/grpc"</span>
+<span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> <span class="token punctuation">(</span>
+	port <span class="token operator">=</span> <span class="token string">":50051"</span>
+<span class="token punctuation">)</span>
+
+<span class="token comment">// server is used to implement helloworld.GreeterServer.</span>
+<span class="token keyword">type</span> server <span class="token keyword">struct</span> <span class="token punctuation">{</span>
+	pb<span class="token punctuation">.</span>UnimplementedGreeterServer
+<span class="token punctuation">}</span>
+
+<span class="token comment">// SayHello implements helloworld.GreeterServer</span>
+<span class="token keyword">func</span> <span class="token punctuation">(</span>s <span class="token operator">*</span>server<span class="token punctuation">)</span> <span class="token function">SayHello</span><span class="token punctuation">(</span>ctx context<span class="token punctuation">.</span>Context<span class="token punctuation">,</span> in <span class="token operator">*</span>pb<span class="token punctuation">.</span>HelloRequest<span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token operator">*</span>pb<span class="token punctuation">.</span>HelloReply<span class="token punctuation">,</span> <span class="token builtin">error</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	log<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"Received: %v"</span><span class="token punctuation">,</span> in<span class="token punctuation">.</span><span class="token function">GetName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token keyword">return</span> <span class="token operator">&amp;</span>pb<span class="token punctuation">.</span>HelloReply<span class="token punctuation">{</span>Message<span class="token punctuation">:</span> <span class="token string">"Hello "</span> <span class="token operator">+</span> in<span class="token punctuation">.</span><span class="token function">GetName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token boolean">nil</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token comment">// 开启端口</span>
+	lis<span class="token punctuation">,</span> err <span class="token operator">:=</span> net<span class="token punctuation">.</span><span class="token function">Listen</span><span class="token punctuation">(</span><span class="token string">"tcp"</span><span class="token punctuation">,</span> port<span class="token punctuation">)</span>
+	<span class="token keyword">if</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+		log<span class="token punctuation">.</span><span class="token function">Fatalf</span><span class="token punctuation">(</span><span class="token string">"failed to listen: %v"</span><span class="token punctuation">,</span> err<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token comment">// 创建grpc服务</span>
+	s <span class="token operator">:=</span> grpc<span class="token punctuation">.</span><span class="token function">NewServer</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+	<span class="token comment">// 注册服务</span>
+	pb<span class="token punctuation">.</span><span class="token function">RegisterGreeterServer</span><span class="token punctuation">(</span>s<span class="token punctuation">,</span> <span class="token operator">&amp;</span>server<span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+	<span class="token keyword">if</span> err <span class="token operator">:=</span> s<span class="token punctuation">.</span><span class="token function">Serve</span><span class="token punctuation">(</span>lis<span class="token punctuation">)</span><span class="token punctuation">;</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+		log<span class="token punctuation">.</span><span class="token function">Fatalf</span><span class="token punctuation">(</span><span class="token string">"failed to serve: %v"</span><span class="token punctuation">,</span> err<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="client-main" tabindex="-1"><a class="header-anchor" href="#client-main" aria-hidden="true">#</a> client main</h3>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token comment">// Package main implements a client for Greeter service.</span>
+<span class="token keyword">package</span> main
+
+<span class="token keyword">import</span> <span class="token punctuation">(</span>
+	<span class="token string">"context"</span>
+	<span class="token string">"log"</span>
+	<span class="token string">"os"</span>
+	<span class="token string">"time"</span>
+
+	pb <span class="token string">"github.com/marmotedu/gopractise-demo/apistyle/greeter/helloworld"</span>
+	<span class="token string">"google.golang.org/grpc"</span>
+<span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> <span class="token punctuation">(</span>
+	address     <span class="token operator">=</span> <span class="token string">"localhost:50051"</span>
+	defaultName <span class="token operator">=</span> <span class="token string">"world"</span>
+<span class="token punctuation">)</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token comment">// Set up a connection to the server.</span>
+	conn<span class="token punctuation">,</span> err <span class="token operator">:=</span> grpc<span class="token punctuation">.</span><span class="token function">Dial</span><span class="token punctuation">(</span>address<span class="token punctuation">,</span> grpc<span class="token punctuation">.</span><span class="token function">WithInsecure</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> grpc<span class="token punctuation">.</span><span class="token function">WithBlock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+	<span class="token keyword">if</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+		log<span class="token punctuation">.</span><span class="token function">Fatalf</span><span class="token punctuation">(</span><span class="token string">"did not connect: %v"</span><span class="token punctuation">,</span> err<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+	<span class="token keyword">defer</span> conn<span class="token punctuation">.</span><span class="token function">Close</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	c <span class="token operator">:=</span> pb<span class="token punctuation">.</span><span class="token function">NewGreeterClient</span><span class="token punctuation">(</span>conn<span class="token punctuation">)</span>
+
+	<span class="token comment">// Contact the server and print out its response.</span>
+	name <span class="token operator">:=</span> defaultName
+	<span class="token keyword">if</span> <span class="token function">len</span><span class="token punctuation">(</span>os<span class="token punctuation">.</span>Args<span class="token punctuation">)</span> <span class="token operator">></span> <span class="token number">1</span> <span class="token punctuation">{</span>
+		name <span class="token operator">=</span> os<span class="token punctuation">.</span>Args<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+	<span class="token punctuation">}</span>
+	ctx<span class="token punctuation">,</span> cancel <span class="token operator">:=</span> context<span class="token punctuation">.</span><span class="token function">WithTimeout</span><span class="token punctuation">(</span>context<span class="token punctuation">.</span><span class="token function">Background</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> time<span class="token punctuation">.</span>Second<span class="token punctuation">)</span>
+	<span class="token keyword">defer</span> <span class="token function">cancel</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	r<span class="token punctuation">,</span> err <span class="token operator">:=</span> c<span class="token punctuation">.</span><span class="token function">SayHello</span><span class="token punctuation">(</span>ctx<span class="token punctuation">,</span> <span class="token operator">&amp;</span>pb<span class="token punctuation">.</span>HelloRequest<span class="token punctuation">{</span>Name<span class="token punctuation">:</span> name<span class="token punctuation">}</span><span class="token punctuation">)</span>
+	<span class="token keyword">if</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+		log<span class="token punctuation">.</span><span class="token function">Fatalf</span><span class="token punctuation">(</span><span class="token string">"could not greet: %v"</span><span class="token punctuation">,</span> err<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+	log<span class="token punctuation">.</span><span class="token function">Printf</span><span class="token punctuation">(</span><span class="token string">"Greeting: %s"</span><span class="token punctuation">,</span> r<span class="token punctuation">.</span>Message<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="认证-安全传输" tabindex="-1"><a class="header-anchor" href="#认证-安全传输" aria-hidden="true">#</a> 认证-安全传输</h3>
+<p>gRPC 认证</p>
+<p><strong>认证不是说的是用户身份认证，而是多个server和client之间，如何辨别对方是谁，并且可以安全的进行数据传输的认证：</strong></p>
+<ul>
+<li>SSL / TLS 认证方式（采用 http2）</li>
+<li>基于 Token 的认证方式 （基于安全连接）</li>
+<li>不采用任何措施的连接，这是不安全的连接（默认采用 http1 )</li>
+<li>自定义身份认证</li>
+</ul>
+<p><img src="http://sm.nsddd.top/sm202302191458105.png" alt="image-20230219145801018"></p>
 <h2 id="restful-vs-grpc" tabindex="-1"><a class="header-anchor" href="#restful-vs-grpc" aria-hidden="true">#</a> RESTful VS gRPC</h2>
 <p><img src="http://sm.nsddd.top/sm202302190004730.png" alt="image-20230219000421566"></p>
-<p>当然，更多的时候，RESTful API 和 gRPC API 是一种合作的关系，对内业务使用 gRPC API，对外业务使用 RESTful API，如下图所示：</p>
+<p>当然，更多的时候，RESTful API 和 gRPC API 是 一种合作的关系，对内业务使用 gRPC API，对外业务使用 RESTful API，如下图所示：</p>
 <p><img src="http://sm.nsddd.top/sm202302190004405.png" alt="image-20230219000447320"></p>
 <h2 id="总结-1" tabindex="-1"><a class="header-anchor" href="#总结-1" aria-hidden="true">#</a> 总结</h2>
 <p>在 Go 项目开发中，我们可以选择使用 RESTful API 风格和 RPC API 风格，这两种服务都用得很多。其中，RESTful API 风格因为规范、易理解、易用，所以适合用在需要对外提供 API 接口的场景中。而 RPC API 因为性能比较高、调用方便，更适合用在内部业务中。</p>
 <p>RESTful API 使用的是 HTTP 协议，而 RPC API 使用的是 RPC 协议。目前，有很多 RPC 协议可供你选择，而我推荐你使用 gRPC，因为它很轻量，同时性能很高、很稳定，是一个优秀的 RPC 框架。所以目前业界用的最多的还是 gRPC 协议，腾讯、阿里等大厂内部很多核心的线上服务用的就是 gRPC。</p>
 <p>除了使用 gRPC 协议，在进行 Go 项目开发前，你也可以了解业界一些其他的优秀 Go RPC 框架，比如腾讯的 tars-go、阿里的 dubbo-go、Facebook 的 thrift、rpcx 等，你可以在项目开发之前一并调研，根据实际情况进行选择。</p>
+<h3 id="补充-kite-x" tabindex="-1"><a class="header-anchor" href="#补充-kite-x" aria-hidden="true">#</a> 补充 Kite X</h3>
+<p>KiteX 是字节跳动框架组研发的下一代高性能、强可扩展性的 Go RPC 框架。除具备丰富的服务治理特性外，相比其他框架还有以下特点：集成了自研的网络库 Netpoll；支持多消息协议（Thrift、Protobuf）和多交互方式（Ping-Pong、Oneway、 Streaming）；提供了更加灵活可扩展的代码生成器。</p>
+<p>它是一个<strong>支持多协议的 Golang RPC 框架</strong>，从网络库、序列化库到框架的实现<strong>基本完全自研</strong>的。特别地，Kitex 对 gRPC 协议的支持使用了 gRPC 官方的源码，但是我们对 gRPC 的实现做了<strong>深度且定制的优化</strong>，所以 Kitex 支持的 gRPC 协议性能优于 gRPC 官方框架。同时这也是 Kitex 与目前已经开源的、支持 gRPC 协议的其他 Golang 框架的主要差异。如果用户想使用 gRPC 又对性能有很高的要求，那么 Kitex 框架将会是一个很不错的选择。</p>
+<p>继 Kitex 开源后，今年 CloudWeGo 又陆续开源了 Golang HTTP 框架 Hertz，Rust RPC 框架 Volo，同时围绕这些微服务框架和微服务的一些通用能力，我们还开源了一些高性能的基础库。关于更多 CloudWeGo 开源的子项目，可以进入 CloudWeGo 官网详细了解。</p>
 <h2 id="end-链接" tabindex="-1"><a class="header-anchor" href="#end-链接" aria-hidden="true">#</a> END 链接</h2>
 <ul><li><div><a href = '5.md' style='float:left'>⬆️上一节🔗  </a><a href = '7.md' style='float: right'>  ️下一节🔗</a></div></li></ul>
 <ul>
