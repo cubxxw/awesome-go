@@ -308,7 +308,7 @@ Success
 <div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>vpath &lt;pattern> &lt;directories>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>为符合模式<code v-pre>&lt;pattern&gt;</code>的文件指定搜索目录<code v-pre>&lt;directories&gt;</code>。</p>
 <div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>vpath &lt;pattern>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>清除符合模式<pattern>的文件的搜索目录。</p>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>清除符合模式<code v-pre>&lt;pattern&gt;</code>的文件的搜索目录。</p>
 <div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>vpath
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>清除所有已被设置好了的文件搜索目录。</p>
 <h3 id="help-target" tabindex="-1"><a class="header-anchor" href="#help-target" aria-hidden="true">#</a> Help target</h3>

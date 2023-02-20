@@ -1,0 +1,1 @@
+import{_ as t,o as a,c as o,a as e,e as c}from"./app.64dac66d.js";const r={},n=e("h1",{id:"go-project-example",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#go-project-example","aria-hidden":"true"},"#"),c(" go-project-example")],-1),s=[n];function _(d,i){return a(),o("div",null,s)}const h=t(r,[["render",_],["__file","index.html.vue"]]);export{h as default};
