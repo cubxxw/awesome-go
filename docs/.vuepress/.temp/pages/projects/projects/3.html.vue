@@ -85,8 +85,7 @@
 </ul>
 <h3 id="readme-文档" tabindex="-1"><a class="header-anchor" href="#readme-文档" aria-hidden="true">#</a> README 文档</h3>
 <p><strong>一个规范：</strong></p>
-<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>
-<span class="token comment"># 项目名称</span>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token comment"># 项目名称</span>
 
 <span class="token operator">&lt;</span><span class="token operator">!</span>-- 写一段简短的话描述项目 --<span class="token operator">></span>
 
@@ -135,7 +134,7 @@
 <span class="token comment">## 许可证</span>
 
 <span class="token operator">&lt;</span><span class="token operator">!</span>-- 这里链接上该项目的开源许可证 --<span class="token operator">></span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>推荐一个在线的 README 文档生成网站：</strong></p>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>推荐一个在线的 README 文档生成网站：</strong></p>
 <ul>
 <li><a href="https://readme.so" target="_blank" rel="noopener noreferrer">readme.so<ExternalLinkIcon/></a></li>
 </ul>
@@ -222,7 +221,7 @@ docs
 <ul>
 <li>主版本号（MAJOR）：当做了不兼容的 API 修改。</li>
 <li>次版本号（MINOR）：当做了向下兼容的功能性新增及修改。这里有个不成文的约定需要你注意，<strong>偶数为稳定版本，奇数为开发版本。</strong></li>
-<li>修订号（PATCH）：当做了向下兼容的问题修正。</li>
+<li><strong>修订号（PATCH）</strong>：当做了向下兼容的问题修正。</li>
 </ul>
 <p>例如，v1.2.3 是一个语义化版本号，版本号中每个数字的具体含义见下图：</p>
 <p><img src="http://sm.nsddd.top/sm202302162107454.png" alt="image-20230216210737375"></p>
@@ -279,11 +278,11 @@ docs
 </ul>
 <p><strong>那我们该怎么写出符合 Angular 规范的 Commit Message 呢？</strong></p>
 <p>在 Angular 规范中，Commit Message 包含三个部分，分别是 Header、Body 和 Footer，格式如下：</p>
-<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token operator">&lt;</span>type<span class="token operator">></span><span class="token punctuation">[</span>optional scope<span class="token punctuation">]</span>: <span class="token operator">&lt;</span>description<span class="token operator">></span>
-// 空行-
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token operator">&lt;</span><span class="token keyword">type</span><span class="token operator">></span><span class="token punctuation">[</span>optional scope<span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token operator">&lt;</span>description<span class="token operator">></span>
+<span class="token comment">// 空行-</span>
 <span class="token punctuation">[</span>optional body<span class="token punctuation">]</span>
-// 空行
-<span class="token punctuation">[</span>optional footer<span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">]</span>
+<span class="token comment">// 空行</span>
+<span class="token punctuation">[</span>optional <span class="token function">footer</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">]</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>**其中，Header 是必需的，Body 和 Footer 可以省略。 ** 在以上规范中，必须用括号 () 括起来， [] 后必须紧跟冒号 ，冒号后必须紧跟空格，2 个空行也是必需的。</p>
 <p>在实际开发中，为了使 Commit Message 在 GitHub 或者其他 Git 工具上更加易读，我们往往会限制每行 message 的长度。根据需要，可以限制为 50/72/100 个字符，这里我将长度限制在 72 个字符以内（也有一些开发者会将长度限制为 100，你可根据需要自行选择）。</p>
 <p><strong>以下是一个符合 Angular 规范的 Commit Message：</strong></p>

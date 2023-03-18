@@ -1,7 +1,7 @@
 <template><div><ul>
 <li><a href="https://github.com/3293172751" target="_blank" rel="noopener noreferrer">author<ExternalLinkIcon/></a></li>
 </ul>
-<h1 id="第34节" tabindex="-1"><a class="header-anchor" href="#第34节" aria-hidden="true">#</a> 第34节</h1>
+<h1 id="第34节-database-sql-及-gorm-相关解读" tabindex="-1"><a class="header-anchor" href="#第34节-database-sql-及-gorm-相关解读" aria-hidden="true">#</a> 第34节 Database/sql 及 GORM 相关解读</h1>
 <ul>
 <li><RouterLink to="/go-advancend/">回到目录</RouterLink></li>
 <li><RouterLink to="/go-advancend/markdown/33.html">上一节</RouterLink></li>
@@ -13,6 +13,7 @@
 <h3 id="go语言100篇进阶" tabindex="-1"><a class="header-anchor" href="#go语言100篇进阶" aria-hidden="true">#</a> <strong><a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/README.md" target="_blank" rel="noopener noreferrer">Go语言100篇进阶<ExternalLinkIcon/></a></strong></h3>
 <hr>
 <p>[TOC]</p>
+<h2 id="理解-database-sql" tabindex="-1"><a class="header-anchor" href="#理解-database-sql" aria-hidden="true">#</a> 理解 Database / sql</h2>
 <h2 id="end-链接" tabindex="-1"><a class="header-anchor" href="#end-链接" aria-hidden="true">#</a> END 链接</h2>
 <ul>
 <li><RouterLink to="/go-advancend/">回到目录</RouterLink></li>

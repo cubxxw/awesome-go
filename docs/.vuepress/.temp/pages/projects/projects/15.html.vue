@@ -1,7 +1,7 @@
 <template><div><ul>
 <li><a href="https://github.com/cubxxw/iam" target="_blank" rel="noopener noreferrer">🔥 开源地址<ExternalLinkIcon/></a></li>
 </ul>
-<h1 id="第15节" tabindex="-1"><a class="header-anchor" href="#第15节" aria-hidden="true">#</a> 第15节</h1>
+<h1 id="第15节-如何构建一个优秀的企业应用框架" tabindex="-1"><a class="header-anchor" href="#第15节-如何构建一个优秀的企业应用框架" aria-hidden="true">#</a> 第15节 如何构建一个优秀的企业应用框架</h1>
 <br>
 <div><a href = '14.md' style='float:left'>⬆️上一节🔗  </a><a href = '16.md' style='float: right'>  ⬇️下一节🔗</a></div>
 <br>
@@ -9,8 +9,385 @@
 <p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://nsddd.top/" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
 </blockquote>
 <hr>
-<nav class="table-of-contents"><ul><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
+<nav class="table-of-contents"><ul><li><router-link to="#go语言开发工程师痛点">Go语言开发工程师痛点</router-link></li><li><router-link to="#构建应用的基础-应用的三大基本功能">构建应用的基础：应用的三大基本功能</router-link></li><li><router-link to="#iam-apiserver-是如何构建应用框架的">iam-apiserver 是如何构建应用框架的</router-link></li><li><router-link to="#app-包设计和实现">App 包设计和实现</router-link><ul><li><router-link to="#第-1-步-构建应用">第 1 步：构建应用</router-link></li><li><router-link to="#第-2-步-命令行程序构建">第 2 步：命令行程序构建</router-link></li><li><router-link to="#第-3-步-命令行参数解析">第 3 步：命令行参数解析</router-link></li><li><router-link to="#第-4-步-配置文件解析">第 4 步：配置文件解析</router-link></li></ul></li><li><router-link to="#这样构建的应用程序-有哪些优秀特性">这样构建的应用程序，有哪些优秀特性？</router-link></li><li><router-link to="#如果你想自己构建应用-需要注意些什么">如果你想自己构建应用，需要注意些什么？</router-link></li><li><router-link to="#总结">总结</router-link></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
 <p>[TOC]</p>
+<h2 id="go语言开发工程师痛点" tabindex="-1"><a class="header-anchor" href="#go语言开发工程师痛点" aria-hidden="true">#</a> Go语言开发工程师痛点</h2>
+<p><strong>遇到的问题：</strong></p>
+<ol>
+<li>重复。同样的功能却每次都要重新开发，浪费非常多的时间和精力不说，每次实现的代码质量更是参差不齐。</li>
+<li>理解成本高。相同的功能，有 N 个服务对应着 N 种不同的实现方式，如果功能升级，或者有新成员加入，都可能得重新理解 N 次。</li>
+<li>功能升级的开发工作量大。一个应用由 N 个服务组成，如果要升级其中的某个功能，你需要同时更新 N 个服务的代码。</li>
+</ol>
+<p>想要解决上面这些问题，一个比较好的思路是：找出相同的功能，然后用一种优雅的方式去实现它，并通过 Go 包的形式，供所有的服务使用。</p>
+<p>如果你也面临这些问题，并且正在寻找解决方法，那么你可以认真学习今天这一讲。我会带你找出服务的通用功能，并给出优雅的构建方式，帮助你一劳永逸地解决这些问题。在提高开发效率的同时，也能提高你的代码质量。</p>
+<h2 id="构建应用的基础-应用的三大基本功能" tabindex="-1"><a class="header-anchor" href="#构建应用的基础-应用的三大基本功能" aria-hidden="true">#</a> 构建应用的基础：应用的三大基本功能</h2>
+<p>我们目前见到的 Go 后端服务，基本上可以分为 API 服务和非 API 服务两类。</p>
+<ul>
+<li>API 服务：通过对外提供 HTTP/RPC 接口来完成指定的功能。比如订单服务，通过调用创建订单的 API 接口，来创建商品订单。</li>
+<li>非 API 服务：通过监听、定时运行等方式，而不是通过 API 调用来完成某些任务。比如数据处理服务，定时从 Redis 中获取数据，处理后存入后端存储中。再比如消息处理服务，监听消息队列（如 NSQ/Kafka/RabbitMQ），收到消息后进行处理。</li>
+</ul>
+<p><strong>举例：</strong></p>
+<blockquote>
+<p><strong>API类型项目:</strong></p>
+<p>API指的是应用程序编程接口，API类型项目通常提供一组API接口供其他应用程序或服务使用。以下是一些属于API类型项目的示例：</p>
+<ul>
+<li>Gin：是一个Web框架，提供了一组API接口来构建RESTful风格的Web服务。Gin具有高性能和易用性的特点，被广泛用于构建API服务。</li>
+<li>gRPC：是一种高性能、开源的RPC框架，支持多种编程语言。gRPC基于HTTP/2协议，使用Protocol Buffers作为数据序列化格式，可以方便地构建分布式系统。</li>
+<li>AWS SDK for Go：是Amazon Web Services官方提供的Go语言开发工具包，包含了各种AWS服务的API接口，可以帮助开发人员方便地使用AWS云服务。</li>
+</ul>
+<p><strong>非API类型项目:</strong></p>
+<p>非API类型项目通常是一些独立的、功能完整的程序，不提供API接口供其他应用程序使用。以下是一些属于非API类型项目的示例：</p>
+<ul>
+<li>Docker：是一个开源的容器化平台，可以将应用程序和其依赖打包成一个可移植的容器，方便地部署和运行在任何主机上。Docker本身不提供API接口，但可以通过Docker API来管理Docker容器和镜像。</li>
+<li>Etcd：是一个分布式键值存储系统，可以用于配置管理、服务发现、共享锁等场景。Etcd不提供API接口，但提供了一组gRPC接口供客户端使用。</li>
+<li>Hugo：是一个静态网站生成器，可以将Markdown格式的文本转换为静态网页。Hugo本身不提供API接口，但可以通过命令行工具来生成静态网页。</li>
+</ul>
+</blockquote>
+<p>对于 API 服务和非 API 服务来说，它们的启动流程基本一致，都可以分为三步：</p>
+<ul>
+<li>应用框架的构建，这是最基础的一步。</li>
+<li>应用初始化。</li>
+<li>服务启动。</li>
+</ul>
+<p><img src="http://sm.nsddd.top/sm202302222138795.png" alt="image-20230222213853711"></p>
+<p>图中，命令行程序、命令行参数解析和配置文件解析，是所有服务都需要具备的功能，这些功能有机结合到一起，共同构成了应用框架。</p>
+<p>所以，我们要构建的任何一个应用程序，至少要具备命令行程序、命令行参数解析和配置文件解析这 3 种功能。</p>
+<ul>
+<li>命令行程序：用来启动一个应用。命令行程序需要实现诸如应用描述、help、参数校验等功能。根据需要，还可以实现命令自动补全、打印命令行参数等高级功能。</li>
+<li>命令行参数解析：用来在启动时指定应用程序的命令行参数，以控制应用的行为。</li>
+<li>配置文件解析：用来解析不同格式的配置文件。</li>
+</ul>
+<p><strong>另外，上述 3 类功能跟业务关系不大，可以抽象成一个统一的框架。应用初始化、创建 API/ 非 API 服务、启动服务，跟业务联系比较紧密，难以抽象成一个统一的框架。</strong></p>
+<h2 id="iam-apiserver-是如何构建应用框架的" tabindex="-1"><a class="header-anchor" href="#iam-apiserver-是如何构建应用框架的" aria-hidden="true">#</a> iam-apiserver 是如何构建应用框架的</h2>
+<p>这里，我通过讲解 iam-apiserver 的应用构建方式，来给你讲解下如何构建应用。iam-apiserver 程序的 main 函数位于 apiserver.go 文件中，其构建代码可以简化为：</p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">import</span> <span class="token punctuation">(</span>
+    <span class="token operator">...</span>
+    <span class="token string">"github.com/marmotedu/iam/internal/apiserver"</span>
+    <span class="token string">"github.com/marmotedu/iam/pkg/app"</span>
+<span class="token punctuation">)</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token operator">...</span>
+    apiserver<span class="token punctuation">.</span><span class="token function">NewApp</span><span class="token punctuation">(</span><span class="token string">"iam-apiserver"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Run</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> commandDesc <span class="token operator">=</span> <span class="token string">`The IAM API server validates and configures data ...`</span>
+
+<span class="token comment">// NewApp creates a App object with default parameters.</span>
+<span class="token keyword">func</span> <span class="token function">NewApp</span><span class="token punctuation">(</span>basename <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token operator">*</span>app<span class="token punctuation">.</span>App <span class="token punctuation">{</span>
+    opts <span class="token operator">:=</span> options<span class="token punctuation">.</span><span class="token function">NewOptions</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    application <span class="token operator">:=</span> app<span class="token punctuation">.</span><span class="token function">NewApp</span><span class="token punctuation">(</span><span class="token string">"IAM API Server"</span><span class="token punctuation">,</span>
+        basename<span class="token punctuation">,</span>
+        app<span class="token punctuation">.</span><span class="token function">WithOptions</span><span class="token punctuation">(</span>opts<span class="token punctuation">)</span><span class="token punctuation">,</span>
+        app<span class="token punctuation">.</span><span class="token function">WithDescription</span><span class="token punctuation">(</span>commandDesc<span class="token punctuation">)</span><span class="token punctuation">,</span>
+        app<span class="token punctuation">.</span><span class="token function">WithDefaultValidArgs</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        app<span class="token punctuation">.</span><span class="token function">WithRunFunc</span><span class="token punctuation">(</span><span class="token function">run</span><span class="token punctuation">(</span>opts<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span>
+
+    <span class="token keyword">return</span> application
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">run</span><span class="token punctuation">(</span>opts <span class="token operator">*</span>options<span class="token punctuation">.</span>Options<span class="token punctuation">)</span> app<span class="token punctuation">.</span>RunFunc <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">func</span><span class="token punctuation">(</span>basename <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token builtin">error</span> <span class="token punctuation">{</span>
+        log<span class="token punctuation">.</span><span class="token function">Init</span><span class="token punctuation">(</span>opts<span class="token punctuation">.</span>Log<span class="token punctuation">)</span>
+        <span class="token keyword">defer</span> log<span class="token punctuation">.</span><span class="token function">Flush</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+        cfg<span class="token punctuation">,</span> err <span class="token operator">:=</span> config<span class="token punctuation">.</span><span class="token function">CreateConfigFromOptions</span><span class="token punctuation">(</span>opts<span class="token punctuation">)</span>
+        <span class="token keyword">if</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> err
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">return</span> <span class="token function">Run</span><span class="token punctuation">(</span>cfg<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>可以看到，我们是通过调用包 <code v-pre>github.com/marmotedu/iam/pkg/app</code> 来构建应用的。也就是说，<strong>我们将构建应用的功能抽象成了一个 Go 包，通过 Go 包可以提高代码的封装性和复用性。</strong> <code v-pre>iam-authz-server</code> 和 <code v-pre>iam-pump</code> 组件也都是通过 <a href="https://github.com/marmotedu/iam/pkg/app" target="_blank" rel="noopener noreferrer">github.com/marmotedu/iam/pkg/app<ExternalLinkIcon/></a> 来构建应用的。</p>
+<p>构建应用的流程也很简单，只需要创建一个 application 实例即可：</p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code>opts <span class="token operator">:=</span> options<span class="token punctuation">.</span><span class="token function">NewOptions</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+application <span class="token operator">:=</span> app<span class="token punctuation">.</span><span class="token function">NewApp</span><span class="token punctuation">(</span><span class="token string">"IAM API Server"</span><span class="token punctuation">,</span>
+    basename<span class="token punctuation">,</span>
+    app<span class="token punctuation">.</span><span class="token function">WithOptions</span><span class="token punctuation">(</span>opts<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    app<span class="token punctuation">.</span><span class="token function">WithDescription</span><span class="token punctuation">(</span>commandDesc<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    app<span class="token punctuation">.</span><span class="token function">WithDefaultValidArgs</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    app<span class="token punctuation">.</span><span class="token function">WithRunFunc</span><span class="token punctuation">(</span><span class="token function">run</span><span class="token punctuation">(</span>opts<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>在创建应用实例时，我传入了下面这些参数。</p>
+<ul>
+<li><code v-pre>IAM API Server</code>：应用的简短描述。</li>
+<li><code v-pre>basename</code>：应用的二进制文件名。</li>
+<li><code v-pre>opts</code>：应用的命令行选项。</li>
+<li><code v-pre>commandDesc</code>：应用的详细描述。</li>
+<li><code v-pre>run(opts)</code>：应用的启动函数，初始化应用，并最终启动 HTTP 和 GRPC Web 服务。</li>
+</ul>
+<p>创建应用时，你还可以根据需要来配置应用实例，比如 iam-apiserver 组件在创建应用时，指定了 <code v-pre>WithDefaultValidArgs</code> 来校验命令行非选项参数的默认校验逻辑。</p>
+<p>可以看到，iam-apiserver 通过简单的几行代码，就创建出了一个应用。之所以这么方便，是因为应用框架的构建代码都封装在了 <a href="https://github.com/marmotedu/iam/pkg/app" target="_blank" rel="noopener noreferrer">github.com/marmotedu/iam/pkg/app<ExternalLinkIcon/></a> 包中。接下来，我们来重点看下 <a href="https://github.com/marmotedu/iam/pkg/app" target="_blank" rel="noopener noreferrer">github.com/marmotedu/iam/pkg/app<ExternalLinkIcon/></a> 包是如何实现的。为了方便描述，我在下文中统称为 App 包。</p>
+<h2 id="app-包设计和实现" tabindex="-1"><a class="header-anchor" href="#app-包设计和实现" aria-hidden="true">#</a> App 包设计和实现</h2>
+<p>我们先来看下 App 包目录下的文件：</p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token punctuation">[</span>colin@dev iam<span class="token punctuation">]</span>$ <span class="token function">ls</span> pkg/app/
+app.go  cmd.go  config.go  doc.go  flag.go  help.go  options.go
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p><code v-pre>pkg/app</code> 目录下的 5 个主要文件是 app.go、cmd.go、config.go、flag.go、options.go，分别实现了应用程序框架中的应用、命令行程序、命令行参数解析、配置文件解析和命令行选项 5 个部分，具体关系如下图所示：</p>
+<p><img src="http://sm.nsddd.top/sm202302222216577.png" alt="img"></p>
+<p>我再来解释下这张图。应用由命令行程序、命令行参数解析、配置文件解析三部分组成，命令行参数解析功能通过命令行选项来构建，二者通过接口解耦合：</p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">type</span> CliOptions <span class="token keyword">interface</span> <span class="token punctuation">{</span>    
+    <span class="token comment">// AddFlags adds flags to the specified FlagSet object.    </span>
+    <span class="token comment">// AddFlags(fs *pflag.FlagSet)    </span>
+    <span class="token function">Flags</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">(</span>fss cliflag<span class="token punctuation">.</span>NamedFlagSets<span class="token punctuation">)</span>    
+    <span class="token function">Validate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">error</span>    
+<span class="token punctuation">}</span>    
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>通过接口，应用可以定制自己独有的命令行参数。接下来，我们再来看下如何具体构建应用的每一部分。</p>
+<h3 id="第-1-步-构建应用" tabindex="-1"><a class="header-anchor" href="#第-1-步-构建应用" aria-hidden="true">#</a> 第 1 步：构建应用</h3>
+<p>APP 包提供了 <a href="https://github.com/marmotedu/iam/blob/v1.0.4/pkg/app/app.go#L157" target="_blank" rel="noopener noreferrer">NewApp<ExternalLinkIcon/></a> 函数来创建一个应用：</p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">func</span> <span class="token function">NewApp</span><span class="token punctuation">(</span>name <span class="token builtin">string</span><span class="token punctuation">,</span> basename <span class="token builtin">string</span><span class="token punctuation">,</span> opts <span class="token operator">...</span>Option<span class="token punctuation">)</span> <span class="token operator">*</span>App <span class="token punctuation">{</span>
+    a <span class="token operator">:=</span> <span class="token operator">&amp;</span>App<span class="token punctuation">{</span>
+        name<span class="token punctuation">:</span>     name<span class="token punctuation">,</span>
+        basename<span class="token punctuation">:</span> basename<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+ 
+    <span class="token keyword">for</span> <span class="token boolean">_</span><span class="token punctuation">,</span> o <span class="token operator">:=</span> <span class="token keyword">range</span> opts <span class="token punctuation">{</span>
+        <span class="token function">o</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+ 
+    a<span class="token punctuation">.</span><span class="token function">buildCommand</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+ 
+    <span class="token keyword">return</span> a
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>NewApp 中使用了设计模式中的选项模式，来动态地配置 APP，支持 WithRunFunc、WithDescription、WithValidArgs 等选项。</p>
+<h3 id="第-2-步-命令行程序构建" tabindex="-1"><a class="header-anchor" href="#第-2-步-命令行程序构建" aria-hidden="true">#</a> 第 2 步：命令行程序构建</h3>
+<p>这一步，我们会使用 Cobra 包来构建应用的命令行程序。</p>
+<p>NewApp 最终会调用 <a href="https://github.com/marmotedu/iam/blob/v1.0.4/pkg/app/app.go#L172" target="_blank" rel="noopener noreferrer">buildCommand<ExternalLinkIcon/></a> 方法来创建 Cobra Command 类型的命令，命令的功能通过指定 Cobra Command 类型的各个字段来实现。通常可以指定：Use、Short、Long、SilenceUsage、SilenceErrors、RunE、Args 等字段。</p>
+<p>在 buildCommand 函数中，也会根据应用的设置添加不同的命令行参数，例如：</p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">if</span> <span class="token operator">!</span>a<span class="token punctuation">.</span>noConfig <span class="token punctuation">{</span>
+    <span class="token function">addConfigFlag</span><span class="token punctuation">(</span>a<span class="token punctuation">.</span>basename<span class="token punctuation">,</span> namedFlagSets<span class="token punctuation">.</span><span class="token function">FlagSet</span><span class="token punctuation">(</span><span class="token string">"global"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span> 
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>上述代码的意思是：如果我们设置了 <code v-pre>noConfig=false</code>，那么就会在命令行参数 global 分组中添加以下命令行选项：</p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>-c, <span class="token parameter variable">--config</span> FILE                                                        Read configuration from specified FILE, support JSON, TOML, YAML, HCL, or Java properties formats.
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>为了更加易用和人性化，命令还具有如下 3 个功能。</p>
+<ul>
+<li><strong>帮助信息</strong>：执行 <code v-pre>-h/--help</code> 时，输出的帮助信息。通过 <code v-pre>cmd.SetHelpFunc</code> 函数可以指定帮助信息。</li>
+<li><strong>使用信息（可选）</strong>：当用户提供无效的标志或命令时，向用户显示“使用信息”。通过 <code v-pre>cmd.SetUsageFunc</code> 函数，可以指定使用信息。如果不想每次输错命令打印一大堆 usage 信息，你可以通过设置 <code v-pre>SilenceUsage: true</code> 来关闭掉 usage。</li>
+<li><strong>版本信息</strong>：打印应用的版本。知道应用的版本号，对故障排查非常有帮助。通过 <code v-pre>verflag.AddFlags</code> 可以指定版本信息。例如，App 包通过 <code v-pre>github.com/marmotedu/component-base/pkg/version</code> 指定了以下版本信息：</li>
+</ul>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ ./iam-apiserver <span class="token parameter variable">--version</span>
+  gitVersion: v0.3.0
+   gitCommit: ccc31e292f66e6bad94efb1406b5ced84e64675c
+gitTreeState: dirty
+   buildDate: <span class="token number">2020</span>-12-17T12:24:37Z
+   goVersion: go1.15.1
+    compiler: gc
+    platform: linux/amd64
+$ ./iam-apiserver <span class="token parameter variable">--version</span><span class="token operator">=</span>raw
+version.Info<span class="token punctuation">{</span>GitVersion:<span class="token string">"v0.3.0"</span>, GitCommit:<span class="token string">"ccc31e292f66e6bad94efb1406b5ced84e64675c"</span>, GitTreeState:<span class="token string">"dirty"</span>, BuildDate:<span class="token string">"2020-12-17T12:24:37Z"</span>, GoVersion:<span class="token string">"go1.15.1"</span>, Compiler:<span class="token string">"gc"</span>, Platform:<span class="token string">"linux/amd64"</span><span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>接下来，再来看下应用需要实现的另外一个重要功能，也就是命令行参数解析。</p>
+<h3 id="第-3-步-命令行参数解析" tabindex="-1"><a class="header-anchor" href="#第-3-步-命令行参数解析" aria-hidden="true">#</a> 第 3 步：命令行参数解析</h3>
+<p>App 包在构建应用和执行应用两个阶段来实现命令行参数解析。</p>
+<p>**我们先看构建应用这个阶段。**App 包在 <a href="https://github.com/marmotedu/iam/blob/v1.0.4/pkg/app/app.go#L172" target="_blank" rel="noopener noreferrer">buildCommand<ExternalLinkIcon/></a> 方法中通过以下代码段，给应用添加了命令行参数：</p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">var</span> namedFlagSets cliflag<span class="token punctuation">.</span>NamedFlagSets
+<span class="token keyword">if</span> a<span class="token punctuation">.</span>options <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+    namedFlagSets <span class="token operator">=</span> a<span class="token punctuation">.</span>options<span class="token punctuation">.</span><span class="token function">Flags</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    fs <span class="token operator">:=</span> cmd<span class="token punctuation">.</span><span class="token function">Flags</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">for</span> <span class="token boolean">_</span><span class="token punctuation">,</span> f <span class="token operator">:=</span> <span class="token keyword">range</span> namedFlagSets<span class="token punctuation">.</span>FlagSets <span class="token punctuation">{</span>
+        fs<span class="token punctuation">.</span><span class="token function">AddFlagSet</span><span class="token punctuation">(</span>f<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+ 
+    <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+ 
+<span class="token keyword">if</span> <span class="token operator">!</span>a<span class="token punctuation">.</span>noVersion <span class="token punctuation">{</span>
+    verflag<span class="token punctuation">.</span><span class="token function">AddFlags</span><span class="token punctuation">(</span>namedFlagSets<span class="token punctuation">.</span><span class="token function">FlagSet</span><span class="token punctuation">(</span><span class="token string">"global"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">if</span> <span class="token operator">!</span>a<span class="token punctuation">.</span>noConfig <span class="token punctuation">{</span>
+    <span class="token function">addConfigFlag</span><span class="token punctuation">(</span>a<span class="token punctuation">.</span>basename<span class="token punctuation">,</span> namedFlagSets<span class="token punctuation">.</span><span class="token function">FlagSet</span><span class="token punctuation">(</span><span class="token string">"global"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+globalflag<span class="token punctuation">.</span><span class="token function">AddGlobalFlags</span><span class="token punctuation">(</span>namedFlagSets<span class="token punctuation">.</span><span class="token function">FlagSet</span><span class="token punctuation">(</span><span class="token string">"global"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> cmd<span class="token punctuation">.</span><span class="token function">Name</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>namedFlagSets 中引用了 Pflag 包，上述代码先通过 <code v-pre>a.options.Flags()</code> 创建并返回了一批 <code v-pre>FlagSet</code>，<code v-pre>a.options.Flags()</code> 函数会将 FlagSet 进行分组。通过一个 for 循环，将 namedFlagSets 中保存的 FlagSet 添加到 Cobra 应用框架中的 FlagSet 中。</p>
+<p>buildCommand 还会根据应用的配置，选择性添加一些 flag。例如，在 global 分组下添加 <code v-pre>--version</code> 和 <code v-pre>--config</code> 选项。</p>
+<p>执行 <code v-pre>-h</code> 打印命令行参数如下：</p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>
+<span class="token punctuation">..</span>
+ 
+Usage:
+  iam-apiserver <span class="token punctuation">[</span>flags<span class="token punctuation">]</span>
+ 
+Generic flags:
+ 
+      <span class="token parameter variable">--server.healthz</span>               Add self readiness check and <span class="token function">install</span> /healthz router. <span class="token punctuation">(</span>default <span class="token boolean">true</span><span class="token punctuation">)</span>
+      --server.max-ping-count int    The max number of <span class="token function">ping</span> attempts when server failed to startup. <span class="token punctuation">(</span>default <span class="token number">3</span><span class="token punctuation">)</span>
+ 
+<span class="token punctuation">..</span>.
+ 
+Global flags:
+ 
+  -h, <span class="token parameter variable">--help</span>                     <span class="token builtin class-name">help</span> <span class="token keyword">for</span> iam-apiserver
+      <span class="token parameter variable">--version</span> version<span class="token punctuation">[</span><span class="token operator">=</span>true<span class="token punctuation">]</span>   Print version information and quit.
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>这里有两个技巧，你可以借鉴。</p>
+<p>第一个技巧，<strong>将 flag 分组</strong>。</p>
+<p>一个大型系统，可能会有很多个 flag，例如 <code v-pre>kube-apiserver</code> 就有 200 多个 flag，这时对 flag 分组就很有必要了。通过分组，我们可以很快地定位到需要的分组及该分组具有的标志。例如，我们想了解 MySQL 有哪些标志，可以找到 MySQL 分组：</p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>
+Mysql flags:
+ 
+      <span class="token parameter variable">--mysql.database</span> string
+                Database name <span class="token keyword">for</span> the server to use.
+      <span class="token parameter variable">--mysql.host</span> string
+                MySQL <span class="token function">service</span> <span class="token function">host</span> address. If left blank, the following related mysql options will be ignored. <span class="token punctuation">(</span>default <span class="token string">"127.0.0.1:3306"</span><span class="token punctuation">)</span>
+      --mysql.log-mode int
+                Specify gorm log level. <span class="token punctuation">(</span>default <span class="token number">1</span><span class="token punctuation">)</span>
+      <span class="token punctuation">..</span>.
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>第二个技巧，<strong>flag 的名字带有层级关系</strong>。这样不仅可以知道该 flag 属于哪个分组，而且能够避免重名。例如：</p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ ./iam-apiserver <span class="token parameter variable">-h</span> <span class="token operator">|</span><span class="token function">grep</span> <span class="token function">host</span>
+      <span class="token parameter variable">--mysql.host</span> string                         MySQL <span class="token function">service</span> <span class="token function">host</span> address. If left blank, the following related mysql options will be ignored. <span class="token punctuation">(</span>default <span class="token string">"127.0.0.1:3306"</span><span class="token punctuation">)</span>
+      <span class="token parameter variable">--redis.host</span> string                   Hostname of your Redis server. <span class="token punctuation">(</span>default <span class="token string">"127.0.0.1"</span><span class="token punctuation">)</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>对于 MySQL 和 Redis， 都可以指定相同的 host 标志，通过 <code v-pre>--mysql.host</code> 也可以知道该 flag 隶属于 mysql 分组，代表的是 MySQL 的 host。</p>
+<p>**我们再看应用执行阶段。**这时会通过 viper.Unmarshal，将配置 Unmarshal 到 Options 变量中。这样我们就可以使用 Options 变量中的值，来执行后面的业务逻辑。</p>
+<p>我们传入的 Options 是一个实现了 <a href="https://github.com/marmotedu/iam/blob/v1.0.4/pkg/app/options.go#L13" target="_blank" rel="noopener noreferrer">CliOptions<ExternalLinkIcon/></a> 接口的结构体变量，CliOptions 接口定义为：</p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">type</span> CliOptions <span class="token keyword">interface</span> <span class="token punctuation">{</span>
+    <span class="token function">Flags</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">(</span>fss cliflag<span class="token punctuation">.</span>NamedFlagSets<span class="token punctuation">)</span>
+    <span class="token function">Validate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">error</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>因为 Options 实现了 Validate 方法，所以我们就可以在应用框架中调用 Validate 方法来校验参数是否合法。另外，我们还可以通过以下代码，来判断选项是否可补全和打印：如果可以补全，则补全选项；如果可以打印，则打印选项的内容。实现代码如下：</p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">func</span> <span class="token punctuation">(</span>a <span class="token operator">*</span>App<span class="token punctuation">)</span> <span class="token function">applyOptionRules</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">error</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> completeableOptions<span class="token punctuation">,</span> ok <span class="token operator">:=</span> a<span class="token punctuation">.</span>options<span class="token punctuation">.</span><span class="token punctuation">(</span>CompleteableOptions<span class="token punctuation">)</span><span class="token punctuation">;</span> ok <span class="token punctuation">{</span>  
+        <span class="token keyword">if</span> err <span class="token operator">:=</span> completeableOptions<span class="token punctuation">.</span><span class="token function">Complete</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> err                     
+        <span class="token punctuation">}</span>                                                   
+    <span class="token punctuation">}</span>                    
+                                                                               
+    <span class="token keyword">if</span> errs <span class="token operator">:=</span> a<span class="token punctuation">.</span>options<span class="token punctuation">.</span><span class="token function">Validate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token function">len</span><span class="token punctuation">(</span>errs<span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token number">0</span> <span class="token punctuation">{</span>                           
+        <span class="token keyword">return</span> errors<span class="token punctuation">.</span><span class="token function">NewAggregate</span><span class="token punctuation">(</span>errs<span class="token punctuation">)</span>                                            
+    <span class="token punctuation">}</span>                                                            
+                                        
+    <span class="token keyword">if</span> printableOptions<span class="token punctuation">,</span> ok <span class="token operator">:=</span> a<span class="token punctuation">.</span>options<span class="token punctuation">.</span><span class="token punctuation">(</span>PrintableOptions<span class="token punctuation">)</span><span class="token punctuation">;</span> ok <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>a<span class="token punctuation">.</span>silence <span class="token punctuation">{</span>
+        log<span class="token punctuation">.</span><span class="token function">Infof</span><span class="token punctuation">(</span><span class="token string">"%v Config: `%s`"</span><span class="token punctuation">,</span> progressMessage<span class="token punctuation">,</span> printableOptions<span class="token punctuation">.</span><span class="token function">String</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>                                                     
+                                                     
+    <span class="token keyword">return</span> <span class="token boolean">nil</span>                                             
+<span class="token punctuation">}</span>       
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>通过配置补全，可以确保一些重要的配置项具有默认值，当这些配置项没有被配置时，程序也仍然能够正常启动。一个大型项目，有很多配置项，我们不可能对每一个配置项都进行配置。所以，给重要配置项设置默认值，就显得很重要了。</p>
+<p>这里，我们来看下 iam-apiserver 提供的 Validate 方法：</p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code>
+<span class="token keyword">func</span> <span class="token punctuation">(</span>s <span class="token operator">*</span>ServerRunOptions<span class="token punctuation">)</span> <span class="token function">Validate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">error</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> errs <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token builtin">error</span>
+
+    errs <span class="token operator">=</span> <span class="token function">append</span><span class="token punctuation">(</span>errs<span class="token punctuation">,</span> s<span class="token punctuation">.</span>GenericServerRunOptions<span class="token punctuation">.</span><span class="token function">Validate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">...</span><span class="token punctuation">)</span>
+    errs <span class="token operator">=</span> <span class="token function">append</span><span class="token punctuation">(</span>errs<span class="token punctuation">,</span> s<span class="token punctuation">.</span>GrpcOptions<span class="token punctuation">.</span><span class="token function">Validate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">...</span><span class="token punctuation">)</span>
+    errs <span class="token operator">=</span> <span class="token function">append</span><span class="token punctuation">(</span>errs<span class="token punctuation">,</span> s<span class="token punctuation">.</span>InsecureServing<span class="token punctuation">.</span><span class="token function">Validate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">...</span><span class="token punctuation">)</span>
+    errs <span class="token operator">=</span> <span class="token function">append</span><span class="token punctuation">(</span>errs<span class="token punctuation">,</span> s<span class="token punctuation">.</span>SecureServing<span class="token punctuation">.</span><span class="token function">Validate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">...</span><span class="token punctuation">)</span>
+    errs <span class="token operator">=</span> <span class="token function">append</span><span class="token punctuation">(</span>errs<span class="token punctuation">,</span> s<span class="token punctuation">.</span>MySQLOptions<span class="token punctuation">.</span><span class="token function">Validate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">...</span><span class="token punctuation">)</span>
+    errs <span class="token operator">=</span> <span class="token function">append</span><span class="token punctuation">(</span>errs<span class="token punctuation">,</span> s<span class="token punctuation">.</span>RedisOptions<span class="token punctuation">.</span><span class="token function">Validate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">...</span><span class="token punctuation">)</span>
+    errs <span class="token operator">=</span> <span class="token function">append</span><span class="token punctuation">(</span>errs<span class="token punctuation">,</span> s<span class="token punctuation">.</span>JwtOptions<span class="token punctuation">.</span><span class="token function">Validate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">...</span><span class="token punctuation">)</span>
+    errs <span class="token operator">=</span> <span class="token function">append</span><span class="token punctuation">(</span>errs<span class="token punctuation">,</span> s<span class="token punctuation">.</span>Log<span class="token punctuation">.</span><span class="token function">Validate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">...</span><span class="token punctuation">)</span>
+    errs <span class="token operator">=</span> <span class="token function">append</span><span class="token punctuation">(</span>errs<span class="token punctuation">,</span> s<span class="token punctuation">.</span>FeatureOptions<span class="token punctuation">.</span><span class="token function">Validate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">...</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">return</span> errs
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>可以看到，每个配置分组，都实现了 <code v-pre>Validate()</code> 函数，对自己负责的配置进行校验。通过这种方式，程序会更加清晰。因为只有配置提供者才更清楚如何校验自己的配置项，所以最好的做法是将配置的校验放权给配置提供者（分组）。</p>
+<h3 id="第-4-步-配置文件解析" tabindex="-1"><a class="header-anchor" href="#第-4-步-配置文件解析" aria-hidden="true">#</a> 第 4 步：配置文件解析</h3>
+<p>在 buildCommand 函数中，通过addConfigFlag调用，添加了 <code v-pre>-c, --config FILE</code> 命令行参数，用来指定配置文件：</p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token function">addConfigFlag</span><span class="token punctuation">(</span>a<span class="token punctuation">.</span>basename<span class="token punctuation">,</span> namedFlagSets<span class="token punctuation">.</span><span class="token function">FlagSet</span><span class="token punctuation">(</span><span class="token string">"global"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>addConfigFlag函数代码如下：</p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">func</span> <span class="token function">addConfigFlag</span><span class="token punctuation">(</span>basename <span class="token builtin">string</span><span class="token punctuation">,</span> fs <span class="token operator">*</span>pflag<span class="token punctuation">.</span>FlagSet<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    fs<span class="token punctuation">.</span><span class="token function">AddFlag</span><span class="token punctuation">(</span>pflag<span class="token punctuation">.</span><span class="token function">Lookup</span><span class="token punctuation">(</span>configFlagName<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    viper<span class="token punctuation">.</span><span class="token function">AutomaticEnv</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    viper<span class="token punctuation">.</span><span class="token function">SetEnvPrefix</span><span class="token punctuation">(</span>strings<span class="token punctuation">.</span><span class="token function">Replace</span><span class="token punctuation">(</span>strings<span class="token punctuation">.</span><span class="token function">ToUpper</span><span class="token punctuation">(</span>basename<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"-"</span><span class="token punctuation">,</span> <span class="token string">"_"</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    viper<span class="token punctuation">.</span><span class="token function">SetEnvKeyReplacer</span><span class="token punctuation">(</span>strings<span class="token punctuation">.</span><span class="token function">NewReplacer</span><span class="token punctuation">(</span><span class="token string">"."</span><span class="token punctuation">,</span> <span class="token string">"_"</span><span class="token punctuation">,</span> <span class="token string">"-"</span><span class="token punctuation">,</span> <span class="token string">"_"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    cobra<span class="token punctuation">.</span><span class="token function">OnInitialize</span><span class="token punctuation">(</span><span class="token keyword">func</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> cfgFile <span class="token operator">!=</span> <span class="token string">""</span> <span class="token punctuation">{</span>
+            viper<span class="token punctuation">.</span><span class="token function">SetConfigFile</span><span class="token punctuation">(</span>cfgFile<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            viper<span class="token punctuation">.</span><span class="token function">AddConfigPath</span><span class="token punctuation">(</span><span class="token string">"."</span><span class="token punctuation">)</span>
+
+            <span class="token keyword">if</span> names <span class="token operator">:=</span> strings<span class="token punctuation">.</span><span class="token function">Split</span><span class="token punctuation">(</span>basename<span class="token punctuation">,</span> <span class="token string">"-"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token function">len</span><span class="token punctuation">(</span>names<span class="token punctuation">)</span> <span class="token operator">></span> <span class="token number">1</span> <span class="token punctuation">{</span>
+                viper<span class="token punctuation">.</span><span class="token function">AddConfigPath</span><span class="token punctuation">(</span>filepath<span class="token punctuation">.</span><span class="token function">Join</span><span class="token punctuation">(</span>homedir<span class="token punctuation">.</span><span class="token function">HomeDir</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"."</span><span class="token operator">+</span>names<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span>
+
+            viper<span class="token punctuation">.</span><span class="token function">SetConfigName</span><span class="token punctuation">(</span>basename<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">if</span> err <span class="token operator">:=</span> viper<span class="token punctuation">.</span><span class="token function">ReadInConfig</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+            <span class="token boolean">_</span><span class="token punctuation">,</span> <span class="token boolean">_</span> <span class="token operator">=</span> fmt<span class="token punctuation">.</span><span class="token function">Fprintf</span><span class="token punctuation">(</span>os<span class="token punctuation">.</span>Stderr<span class="token punctuation">,</span> <span class="token string">"Error: failed to read configuration file(%s): %v\n"</span><span class="token punctuation">,</span> cfgFile<span class="token punctuation">,</span> err<span class="token punctuation">)</span>
+            os<span class="token punctuation">.</span><span class="token function">Exit</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>addConfigFlag 函数中，指定了 Cobra Command 在执行命令之前，需要做的初始化工作：</p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code>
+<span class="token keyword">func</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> cfgFile <span class="token operator">!=</span> <span class="token string">""</span> <span class="token punctuation">{</span>
+    viper<span class="token punctuation">.</span><span class="token function">SetConfigFile</span><span class="token punctuation">(</span>cfgFile<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    viper<span class="token punctuation">.</span><span class="token function">AddConfigPath</span><span class="token punctuation">(</span><span class="token string">"."</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">if</span> names <span class="token operator">:=</span> strings<span class="token punctuation">.</span><span class="token function">Split</span><span class="token punctuation">(</span>basename<span class="token punctuation">,</span> <span class="token string">"-"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token function">len</span><span class="token punctuation">(</span>names<span class="token punctuation">)</span> <span class="token operator">></span> <span class="token number">1</span> <span class="token punctuation">{</span>
+      viper<span class="token punctuation">.</span><span class="token function">AddConfigPath</span><span class="token punctuation">(</span>filepath<span class="token punctuation">.</span><span class="token function">Join</span><span class="token punctuation">(</span>homedir<span class="token punctuation">.</span><span class="token function">HomeDir</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"."</span><span class="token operator">+</span>names<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+    viper<span class="token punctuation">.</span><span class="token function">SetConfigName</span><span class="token punctuation">(</span>basename<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">if</span> err <span class="token operator">:=</span> viper<span class="token punctuation">.</span><span class="token function">ReadInConfig</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
+    <span class="token boolean">_</span><span class="token punctuation">,</span> <span class="token boolean">_</span> <span class="token operator">=</span> fmt<span class="token punctuation">.</span><span class="token function">Fprintf</span><span class="token punctuation">(</span>os<span class="token punctuation">.</span>Stderr<span class="token punctuation">,</span> <span class="token string">"Error: failed to read configuration file(%s): %v\n"</span><span class="token punctuation">,</span> cfgFile<span class="token punctuation">,</span> err<span class="token punctuation">)</span>
+    os<span class="token punctuation">.</span><span class="token function">Exit</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>上述代码实现了以下功能：</p>
+<ul>
+<li>如果命令行参数中没有指定配置文件的路径，则加载默认路径下的配置文件，通过 viper.AddConfigPath、viper.SetConfigName 来设置配置文件搜索路径和配置文件名。通过设置默认的配置文件，可以使我们不用携带任何命令行参数，即可运行程序。</li>
+<li>支持环境变量，通过 viper.SetEnvPrefix 来设置环境变量前缀，避免跟系统中的环境变量重名。通过 viper.SetEnvKeyReplacer 重写了 Env 键。</li>
+</ul>
+<p>上面，我们给应用添加了配置文件的命令行参数，并设置在命令执行前，读取配置文件。在命令执行时，会将配置文件中的配置项和命令行参数绑定，并将 Viper 的配置 Unmarshal 到传入的 Options 中：</p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">if</span> <span class="token operator">!</span>a<span class="token punctuation">.</span>noConfig <span class="token punctuation">{</span>    
+    <span class="token keyword">if</span> err <span class="token operator">:=</span> viper<span class="token punctuation">.</span><span class="token function">BindPFlags</span><span class="token punctuation">(</span>cmd<span class="token punctuation">.</span><span class="token function">Flags</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>    
+        <span class="token keyword">return</span> err    
+    <span class="token punctuation">}</span>    
+    
+    <span class="token keyword">if</span> err <span class="token operator">:=</span> viper<span class="token punctuation">.</span><span class="token function">Unmarshal</span><span class="token punctuation">(</span>a<span class="token punctuation">.</span>options<span class="token punctuation">)</span><span class="token punctuation">;</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>    
+        <span class="token keyword">return</span> err    
+    <span class="token punctuation">}</span>  
+<span class="token punctuation">}</span>  
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>Viper 的配置是命令行参数和配置文件配置 merge 后的配置。如果在配置文件中指定了 MySQL 的 host 配置，并且也同时指定了 <code v-pre>--mysql.host</code> 参数，则会优先取命令行参数设置的值。这里需要注意的是，不同于 YAML 格式的分级方式，配置项是通过点号 <code v-pre>.</code> 来分级的。</p>
+<p>至此，我们已经成功构建了一个优秀的应用框架，接下来我们看下这个应用框架具有哪些优点吧。</p>
+<h2 id="这样构建的应用程序-有哪些优秀特性" tabindex="-1"><a class="header-anchor" href="#这样构建的应用程序-有哪些优秀特性" aria-hidden="true">#</a> 这样构建的应用程序，有哪些优秀特性？</h2>
+<p>借助 Cobra 自带的能力，构建出的应用天然具备帮助信息、使用信息、子命令、子命令自动补全、非选项参数校验、命令别名、PreRun、PostRun 等功能，这些功能对于一个应用来说是非常有用的。</p>
+<p>Cobra 可以集成 Pflag，通过将创建的 Pflag FlagSet 绑定到 Cobra 命令的 FlagSet 中，使得 Pflag 支持的标志能直接集成到 Cobra 命令中。集成到命令中有很多好处，例如：<code v-pre>cobra -h</code> 可以打印出所有设置的 flag，Cobra Command 命令提供的 GenBashCompletion 方法，可以实现命令行选项的自动补全。</p>
+<p>通过 viper.BindPFlags 和 viper.ReadInConfig 函数，可以统一配置文件、命令行参数的配置项，使得应用的配置项更加清晰好记。面对不同场景可以选择不同的配置方式，使配置更加灵活。例如：配置 HTTPS 的绑定端口，可以通过 <code v-pre>--secure.bind-port</code> 配置，也可以通过配置文件配置（命令行参数优先于配置文件）：</p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code>secure<span class="token punctuation">:</span>        
+	bind<span class="token operator">-</span>port<span class="token punctuation">:</span> <span class="token number">8080</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>可以通过 <code v-pre>viper.GetString(&quot;secure.bind-port&quot;)</code> 这类方式获取应用的配置，获取方式更加灵活，而且全局可用。</p>
+<p>将应用框架的构建方法实现成了一个 Go 包，通过 Go 包可以提高应用构建代码的封装性和复用性。</p>
+<h2 id="如果你想自己构建应用-需要注意些什么" tabindex="-1"><a class="header-anchor" href="#如果你想自己构建应用-需要注意些什么" aria-hidden="true">#</a> 如果你想自己构建应用，需要注意些什么？</h2>
+<p>当然，你也可以使用其他方式构建你的应用程序。比如，我就见过很多开发者使用如下方式来构建应用：直接在 <code v-pre>main.go</code> 文件中通过 <code v-pre>gopkg.in/yaml.v3</code> 包解析配置，通过 Go 标准库的 flag 包简单地添加一些命令行参数，例如<code v-pre>--help</code>、<code v-pre>--config</code>、<code v-pre>--version</code>。</p>
+<p>但是，在你自己独立构建应用程序时，很可能会踩这么 3 个坑：</p>
+<ul>
+<li>构建的应用功能简单，扩展性差，导致后期扩展复杂。</li>
+<li>构建的应用没有帮助信息和使用信息，或者信息格式杂乱，增加应用的使用难度。</li>
+<li>命令行选项和配置文件支持的配置项相互独立，导致配合应用程序的时候，不知道该使用哪种方式来配置。</li>
+</ul>
+<p>在我看来，对于小的应用，自己根据需要构建没什么问题，但是对于一个大型项目的话，还是在应用开发之初，就采用一些功能多、扩展性强的优秀包。这样，以后随着应用的迭代，可以零成本地进行功能添加和扩展，同时也能体现我们的专业性和技术深度，提高代码质量。</p>
+<p>如果你有特殊需求，一定要自己构建应用框架，那么我有以下几个建议：</p>
+<ul>
+<li>应用框架应该清晰易读、扩展性强。</li>
+<li>应用程序应该至少支持如下命令行选项：<code v-pre>-h</code> 打印帮助信息；<code v-pre>-v</code> 打印应用程序的版本；<code v-pre>-c</code> 支持指定配置文件的路径。</li>
+<li>如果你的应用有很多命令行选项，那么建议支持 <code v-pre>--secure.bind-port</code> 这样的长选项，通过选项名字，就可以知道选项的作用。</li>
+<li>配置文件使用 <code v-pre>yaml</code> 格式，<code v-pre>yaml</code> 格式的配置文件，能支持复杂的配置，还清晰易读。</li>
+<li>如果你有多个服务，那么要保持所有服务的应用构建方式是一致的。</li>
+</ul>
+<h2 id="总结" tabindex="-1"><a class="header-anchor" href="#总结" aria-hidden="true">#</a> 总结</h2>
+<p>一个应用框架由命令、命令行参数解析、配置文件解析 3 部分功能组成，我们可以通过 Cobra 来构建命令，通过 Pflag 来解析命令行参数，通过 Viper 来解析配置文件。一个项目，可能包含多个应用，这些应用都需要通过 Cobra、Viper、Pflag 来构建。为了不重复造轮子，简化应用的构建，我们可以将这些功能实现为一个 Go 包，方便直接调用构建应用。</p>
+<p>IAM 项目的应用都是通过 <code v-pre>github.com/marmotedu/iam/pkg/app</code> 包来构建的，在构建时，调用 App 包提供的 NewApp 函数，来构建一个应用：</p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">func</span> <span class="token function">NewApp</span><span class="token punctuation">(</span>basename <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token operator">*</span>app<span class="token punctuation">.</span>App <span class="token punctuation">{</span>
+    opts <span class="token operator">:=</span> options<span class="token punctuation">.</span><span class="token function">NewOptions</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    application <span class="token operator">:=</span> app<span class="token punctuation">.</span><span class="token function">NewApp</span><span class="token punctuation">(</span><span class="token string">"IAM API Server"</span><span class="token punctuation">,</span>
+        basename<span class="token punctuation">,</span>
+        app<span class="token punctuation">.</span><span class="token function">WithOptions</span><span class="token punctuation">(</span>opts<span class="token punctuation">)</span><span class="token punctuation">,</span>
+        app<span class="token punctuation">.</span><span class="token function">WithDescription</span><span class="token punctuation">(</span>commandDesc<span class="token punctuation">)</span><span class="token punctuation">,</span>
+        app<span class="token punctuation">.</span><span class="token function">WithDefaultValidArgs</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        app<span class="token punctuation">.</span><span class="token function">WithRunFunc</span><span class="token punctuation">(</span><span class="token function">run</span><span class="token punctuation">(</span>opts<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span>
+
+    <span class="token keyword">return</span> application
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>在构建应用时，只需要提供应用简短/详细描述、应用二进制文件名称和命令行选项即可。App 包会根据 Options 提供的 <code v-pre>Flags()</code> 方法，来给应用添加命令行选项。命令行选项中提供了 <code v-pre>-c, --config</code> 选项来指定配置文件，App 包也会加载并解析这个配置文件，并将配置文件和命令行选项相同配置项进行 Merge，最终将配置项的值保存在传入的 Options 变量中，供业务代码使用。</p>
+<p>最后，如果你想自己构建应用，我给出了一些我的建议：设计一个清晰易读、易扩展的应用框架；支持一些常见的选项，例如 <code v-pre>-h</code>， <code v-pre>-v</code>， <code v-pre>-c</code> 等；如果应用的命令行选项比较多，建议使用 <code v-pre>--secure.bind-port</code> 这样的长选项。</p>
 <h2 id="end-链接" tabindex="-1"><a class="header-anchor" href="#end-链接" aria-hidden="true">#</a> END 链接</h2>
 <ul><li><div><a href = '14.md' style='float:left'>⬆️上一节🔗  </a><a href = '16.md' style='float: right'>  ️下一节🔗</a></div></li></ul>
 <ul>

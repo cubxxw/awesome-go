@@ -1,7 +1,7 @@
 <template><div><ul>
 <li><a href="https://github.com/3293172751" target="_blank" rel="noopener noreferrer">author<ExternalLinkIcon/></a></li>
 </ul>
-<h1 id="第41节" tabindex="-1"><a class="header-anchor" href="#第41节" aria-hidden="true">#</a> 第41节</h1>
+<h1 id="第41节-微服务篇-微服务概览与治理" tabindex="-1"><a class="header-anchor" href="#第41节-微服务篇-微服务概览与治理" aria-hidden="true">#</a> 第41节 微服务篇 - 微服务概览与治理</h1>
 <ul>
 <li><RouterLink to="/go-advancend/">回到目录</RouterLink></li>
 <li><RouterLink to="/go-advancend/markdown/40.html">上一节</RouterLink></li>

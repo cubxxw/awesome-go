@@ -9,7 +9,7 @@
 <p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://nsddd.top/" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
 </blockquote>
 <hr>
-<nav class="table-of-contents"><ul><li><router-link to="#低质量的makefile">低质量的makefile</router-link></li><li><router-link to="#makefile-如何工作">makefile 如何工作</router-link><ul><li><router-link to="#build-and-run">Build and Run</router-link></li><li><router-link to="#cleaning-and-drying">Cleaning and DRYing</router-link></li><li><router-link to="#phony-targets">PHONY targets</router-link></li><li><router-link to="#recursive-make-targets">Recursive Make targets</router-link></li><li><router-link to="#targets-for-docker-commands">Targets for Docker commands</router-link></li><li><router-link to="#符号">@ 符号</router-link></li><li><router-link to="#文件搜索-vpath">文件搜索 VPATH</router-link></li><li><router-link to="#help-target">Help target</router-link></li><li><router-link to="#conclusion-结论">Conclusion 结论</router-link></li></ul></li><li><router-link to="#熟练makefile语法">熟练makefile语法</router-link></li><li><router-link to="#设计makefile结构">设计Makefile结构</router-link></li><li><router-link to="#掌握-makefile-编写技巧">掌握 Makefile 编写技巧</router-link><ul><li><router-link to="#技巧-1-善用通配符和自动变量">技巧 1：善用通配符和自动变量</router-link></li><li><router-link to="#技巧-2-善用函数">技巧 2：善用函数</router-link></li><li><router-link to="#技巧-3-依赖需要用到的工具">技巧 3：依赖需要用到的工具</router-link></li><li><router-link to="#技巧-4-把常用功能放在-makefile-中-不常用的放在分类-makefile-中">技巧 4：把常用功能放在 /Makefile 中，不常用的放在分类 Makefile 中</router-link></li><li><router-link to="#技巧-5-编写可扩展的-makefile">技巧 5：编写可扩展的 Makefile</router-link></li><li><router-link to="#技巧-6-将所有输出存放在一个目录下-方便清理和查找">技巧 6：将所有输出存放在一个目录下，方便清理和查找</router-link></li><li><router-link to="#技巧-7-使用带层级的命名方式">技巧 7：使用带层级的命名方式</router-link></li><li><router-link to="#技巧-8-做好目标拆分">技巧 8：做好目标拆分</router-link></li><li><router-link to="#技巧-9-设置-options">技巧 9：设置 OPTIONS</router-link></li><li><router-link to="#技巧-10-定义环境变量">技巧 10：定义环境变量</router-link></li><li><router-link to="#技巧-11-自己调用自己">技巧 11：自己调用自己</router-link></li></ul></li><li><router-link to="#总结">总结</router-link></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
+<nav class="table-of-contents"><ul><li><router-link to="#低质量的makefile">低质量的makefile</router-link></li><li><router-link to="#makefile-如何工作">makefile 如何工作</router-link><ul><li><router-link to="#build-and-run">Build and Run</router-link></li><li><router-link to="#cleaning-and-drying">Cleaning and DRYing</router-link></li><li><router-link to="#phony-targets">PHONY targets</router-link></li><li><router-link to="#recursive-make-targets">Recursive Make targets</router-link></li><li><router-link to="#targets-for-docker-commands">Targets for Docker commands</router-link></li><li><router-link to="#符号">@ 符号</router-link></li><li><router-link to="#文件搜索-vpath">文件搜索 VPATH</router-link></li><li><router-link to="#help-target">Help target</router-link></li><li><router-link to="#conclusion-结论">Conclusion 结论</router-link></li></ul></li><li><router-link to="#熟练makefile语法">熟练makefile语法</router-link><ul><li><router-link to="#常用的-makefile-核心语法">常用的 Makefile 核心语法</router-link></li><li><router-link to="#makefile-支持的通配符">makefile 支持的通配符</router-link></li><li><router-link to="#变量">变量</router-link></li><li><router-link to="#函数">函数</router-link></li><li><router-link to="#引入其他-makefile">引入其他 Makefile</router-link></li></ul></li><li><router-link to="#设计makefile结构">设计Makefile结构</router-link></li><li><router-link to="#掌握-makefile-编写技巧">掌握 Makefile 编写技巧</router-link><ul><li><router-link to="#技巧-1-善用通配符和自动变量">技巧 1：善用通配符和自动变量</router-link></li><li><router-link to="#技巧-2-善用函数">技巧 2：善用函数</router-link></li><li><router-link to="#技巧-3-依赖需要用到的工具">技巧 3：依赖需要用到的工具</router-link></li><li><router-link to="#技巧-4-把常用功能放在-makefile-中-不常用的放在分类-makefile-中">技巧 4：把常用功能放在 /Makefile 中，不常用的放在分类 Makefile 中</router-link></li><li><router-link to="#技巧-5-编写可扩展的-makefile">技巧 5：编写可扩展的 Makefile</router-link></li><li><router-link to="#技巧-6-将所有输出存放在一个目录下-方便清理和查找">技巧 6：将所有输出存放在一个目录下，方便清理和查找</router-link></li><li><router-link to="#技巧-7-使用带层级的命名方式">技巧 7：使用带层级的命名方式</router-link></li><li><router-link to="#技巧-8-做好目标拆分">技巧 8：做好目标拆分</router-link></li><li><router-link to="#技巧-9-设置-options">技巧 9：设置 OPTIONS</router-link></li><li><router-link to="#技巧-10-定义环境变量">技巧 10：定义环境变量</router-link></li><li><router-link to="#技巧-11-自己调用自己">技巧 11：自己调用自己</router-link></li></ul></li><li><router-link to="#总结">总结</router-link></li><li><router-link to="#end-链接">END 链接</router-link><ul><li><router-link to="#links">LInks</router-link></li></ul></li></ul></nav>
 <p>[TOC]</p>
 <h2 id="低质量的makefile" tabindex="-1"><a class="header-anchor" href="#低质量的makefile" aria-hidden="true">#</a> 低质量的makefile</h2>
 <p>低质量的 Makefile 文件是什么样的;</p>
@@ -275,13 +275,13 @@ Makefile:33: *** ENV not set, allowed values - <span class="token variable"><spa
 $ <span class="token assign-left variable">ENV</span><span class="token operator">=</span>staging <span class="token function">make</span> docker-push
 Success
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>本质上，您要确保docker-push目标具有安全保障，该保障可检查调用目标的用户是否已为ENV变量指定值。</p>
-<h3 id="符号" tabindex="-1"><a class="header-anchor" href="#符号" aria-hidden="true">#</a> @ 符号</h3>
-<p>项目的 <code v-pre>makefile</code> 中很容易看到 @ 符号的存在，它的意义不同寻常：</p>
+<h3 id="符号" tabindex="-1"><a class="header-anchor" href="#符号" aria-hidden="true">#</a> <code v-pre>@</code> 符号</h3>
+<p>项目的 <code v-pre>makefile</code> 中很容易看到 <code v-pre>@</code> 符号的存在，它的意义不同寻常：</p>
 <div class="language-makefile ext-makefile line-numbers-mode"><pre v-pre class="language-makefile"><code><span class="token comment">## build: Build source code for host platform.</span>
 <span class="token builtin-target builtin">.PHONY</span><span class="token punctuation">:</span> build
 <span class="token target symbol">build</span><span class="token punctuation">:</span>
 	<span class="token operator">@</span><span class="token variable">$</span><span class="token punctuation">(</span>MAKE<span class="token punctuation">)</span> go.build
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>在Makefile中，@符号用于 <strong>抑制Make命令的输出</strong>。当在Makefile中使用@符号时，<strong>Make将不会打印出该行命令的输出结果，而是仅仅执行该命令。</strong></p>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>在Makefile中，<code v-pre>@</code>符号用于 <strong>抑制Make命令的输出</strong>。当在Makefile中使用<code v-pre>@</code>符号时，<strong>Make将不会打印出该行命令的输出结果，而是仅仅执行该命令。</strong></p>
 <p>在Go语言项目中，我们通常使用Makefile来构建和管理项目。下面是一个简单的Go语言项目Makefile示例：</p>
 <div class="language-makefile ext-makefile line-numbers-mode"><pre v-pre class="language-makefile"><code><span class="token comment"># 编译二进制文件</span>
 <span class="token target symbol">build</span><span class="token punctuation">:</span>
@@ -483,6 +483,179 @@ help: Makefile
   @sed <span class="token parameter variable">-n</span> <span class="token string">'s/^##//p'</span> $<span class="token operator">&lt;</span> <span class="token operator">|</span> <span class="token function">column</span> <span class="token parameter variable">-t</span> <span class="token parameter variable">-s</span> <span class="token string">':'</span> <span class="token operator">|</span> <span class="token function">sed</span> <span class="token parameter variable">-e</span> <span class="token string">'s/^/ /'</span>
   @echo <span class="token string">"<span class="token variable">$$</span>USAGE_OPTIONS"</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>上面的 help 命令，通过解析 Makefile 文件中的 <code v-pre>##</code> 注释，获取支持的命令。通过这种方式，我们以后新加命令时，就不用再对 help 命令进行修改了。</p>
+<h3 id="常用的-makefile-核心语法" tabindex="-1"><a class="header-anchor" href="#常用的-makefile-核心语法" aria-hidden="true">#</a> 常用的 Makefile 核心语法</h3>
+<p>大多数的 make 都支持“makefile”和“Makefile”这两种文件名，但我建议使用“Makefile”。因为这个文件名第一个字符大写，会很明显，容易辨别。make 也支持 <code v-pre>-f</code> 和 <code v-pre>--file</code> 参数来指定其他文件名，比如 <code v-pre>make -f golang.mk</code> 或者 <code v-pre>make --file golang.mk</code> 。</p>
+<h3 id="makefile-支持的通配符" tabindex="-1"><a class="header-anchor" href="#makefile-支持的通配符" aria-hidden="true">#</a> makefile 支持的通配符</h3>
+<p>Makefile 支持三种类型的通配符，他们是：<code v-pre>*，? 和~</code></p>
+<ol>
+<li><strong><code v-pre>*</code>通配符：</strong></li>
+</ol>
+<p>*通配符代表任意长度的字符序列，可以匹配任意长度的文件名或路径名中的任意字符。例如，可以使用以下规则来匹配所有.c文件：</p>
+<div class="language-makefile ext-makefile line-numbers-mode"><pre v-pre class="language-makefile"><code>SRCS <span class="token operator">:=</span> <span class="token variable">$</span><span class="token punctuation">(</span><span class="token function">wildcard</span> *.c<span class="token punctuation">)</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>这条规则将会将当前目录下所有以<code v-pre>.c</code>为后缀的文件名赋值给变量SRCS，使得我们可以方便地引用这些文件。</p>
+<ol start="2">
+<li><strong><code v-pre>?</code>通配符：</strong></li>
+</ol>
+<p>?通配符代表任意单个字符，可以匹配任意长度的文件名或路径名中的一个字符。例如，可以使用以下规则来匹配所有三个字符长的<code v-pre>.txt</code>文件：</p>
+<div class="language-makefile ext-makefile line-numbers-mode"><pre v-pre class="language-makefile"><code>SRCS <span class="token operator">:=</span> <span class="token variable">$</span><span class="token punctuation">(</span><span class="token function">wildcard</span> ???.txt<span class="token punctuation">)</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>这条规则将会将当前目录下所有文件名长度为3，并以.txt为后缀的文件名赋值给变量SRCS。</p>
+<ol start="3">
+<li><strong><code v-pre>~</code>通配符：</strong></li>
+</ol>
+<p>~通配符代表当前用户的<code v-pre>home</code>目录，可以用来指定文件路径。例如，可以使用以下规则来指定当前用户的<code v-pre>home</code>目录：</p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token variable"><span class="token variable">$(</span><span class="token environment constant">HOME</span><span class="token variable">)</span></span>/myprogram
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>这条规则将会将当前用户的home目录路径和myprogram字符串拼接起来，从而得到一个完整的路径名，使得我们可以方便地引用home目录下的文件或路径。</p>
+<h3 id="变量" tabindex="-1"><a class="header-anchor" href="#变量" aria-hidden="true">#</a> 变量</h3>
+<p>变量，可能是 Makefile 中使用最频繁的语法了，Makefile 支持变量赋值、多行变量和环境变量。另外，Makefile 还内置了一些特殊变量和自动化变量。</p>
+<p><strong>变量赋值 ：</strong></p>
+<p>Makefile 也可以像其他语言一样支持变量。在使用变量时，会像 shell 变量一样原地展开，然后再执行替换后的内容。</p>
+<p>Makefile 可以通过变量声明来声明一个变量，变量在声明时需要赋予一个初值，比如<code v-pre>ROOT_PACKAGE=github.com/marmotedu/iam</code>。</p>
+<p>引用变量时可以通过<code v-pre>$()</code>或者<code v-pre>${}</code>方式引用。我的建议是，用<code v-pre>$()</code>方式引用变量，例如<code v-pre>$(ROOT_PACKAGE)</code>，也建议整个 makefile 的变量引用方式保持一致。</p>
+<p>变量会像 bash 变量一样，在使用它的地方展开。比如：</p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token assign-left variable">GO</span><span class="token operator">=</span>go
+build:
+    <span class="token variable"><span class="token variable">$(</span>GO<span class="token variable">)</span></span> build <span class="token parameter variable">-v</span> <span class="token builtin class-name">.</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>展开后为：</p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token assign-left variable">GO</span><span class="token operator">=</span>go
+build:
+    go build <span class="token parameter variable">-v</span> <span class="token builtin class-name">.</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>Makefile 有四种的赋值方式：</strong></p>
+<p><strong><code v-pre>=</code> 最基本的赋值方法。</strong></p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>BASE_IMAGE <span class="token operator">=</span> alpine:3.10
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><blockquote>
+<p>💡 注意：使用 <code v-pre>=</code> 赋值的时候，取值到的并非是程序依次执行的值，而是最终的值</p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>A <span class="token operator">=</span> a
+B <span class="token operator">=</span> <span class="token variable"><span class="token variable">$(</span>A<span class="token variable">)</span></span> b
+A <span class="token operator">=</span> c
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>B 最后的值为 c b，而不是 a b。也就是说，在用变量给变量赋值时，右边变量的取值，取的是最终的变量值。</p>
+</blockquote>
+<p><strong>和go一样，<code v-pre>:=</code>直接赋值，赋予当前位置的值。</strong></p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>A <span class="token operator">=</span> a
+B :<span class="token operator">=</span> <span class="token variable"><span class="token variable">$(</span>A<span class="token variable">)</span></span> b
+A <span class="token operator">=</span> c
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>B 最后的值为 a b。通过 <code v-pre>:=</code> 的赋值方式，可以避免 <code v-pre>=</code> 赋值带来的潜在的不一致。</p>
+<p><strong><code v-pre>?=</code> 表示如果该变量没有被赋值，则赋予等号后的值。</strong></p>
+<p><strong>例如：</strong></p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>PLATFORMS ?<span class="token operator">=</span> linux_amd64 linux_arm64
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p><strong><code v-pre>+=</code>表示将等号后面的值添加到前面的变量上。</strong></p>
+<div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>MAKEFLAGS += --no-print-directory
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p><strong>Makefile 还支持多行变量。可以通过 define 关键字设置多行变量，变量中允许换行。定义方式为：</strong></p>
+<div class="language-makefile ext-makefile line-numbers-mode"><pre v-pre class="language-makefile"><code><span class="token keyword">define</span> 变量名
+变量内容
+...
+<span class="token keyword">endef</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>变量的内容可以包含函数、命令、文字或是其他变量。例如，我们可以定义一个 <code v-pre>USAGE_OPTIONS</code> 变量：</p>
+<div class="language-makefile ext-makefile line-numbers-mode"><pre v-pre class="language-makefile"><code><span class="token keyword">define</span> USAGE_OPTIONS
+
+<span class="token target symbol">Options</span><span class="token punctuation">:</span>
+  DEBUG        Whether to generate debug symbols. Default is 0.
+  BINS         The binaries to build. Default is all of cmd.
+  ...
+  V            Set to 1 enable verbose build. Default is 0.
+<span class="token keyword">endef</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>Makefile 还支持环境变量。在 Makefile 中，有两种环境变量，分别是 Makefile 预定义的环境变量和自定义的环境变量。</p>
+<p>其中，自定义的环境变量可以覆盖 Makefile 预定义的环境变量。默认情况下，Makefile 中定义的环境变量只在当前 Makefile 有效，如果想向下层传递（Makefile 中调用另一个 Makefile），需要使用 export 关键字来声明。</p>
+<div class="language-makefile ext-makefile line-numbers-mode"><pre v-pre class="language-makefile"><code>...
+<span class="token keyword">export</span> USAGE_OPTIONS
+...
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>此外，Makefile 还支持两种内置的变量：特殊变量和自动化变量。</p>
+<p>特殊变量是 make 提前定义好的，可以在 makefile 中直接引用。特殊变量列表如下：</p>
+<p><img src="http://sm.nsddd.top/sm202302201636940.png" alt="image-20230220163605753"></p>
+<p>Makefile 还支持自动化变量。自动化变量可以提高我们编写 Makefile 的效率和质量。</p>
+<p><strong>自动化变量：</strong></p>
+<p>这时就可以用到自动化变量。所谓自动化变量，就是这种变量会把模式中所定义的一系列的文件自动地挨个取出，一直到所有符合模式的文件都取完为止。这种自动化变量只应出现在规则的命令中。Makefile 中支持的自动化变量见下表。</p>
+<p><img src="http://sm.nsddd.top/sm202303181839805.png" alt="image-20230220163723550"></p>
+<p>上面这些自动化变量中，<code v-pre>$*</code>是用得最多的。<code v-pre>$*</code> 对于构造有关联的文件名是比较有效的。如果目标中没有模式的定义，那么 <code v-pre>$*</code> 也就不能被推导出。但是，如果目标文件的后缀是 make 所识别的，那么 <code v-pre>$*</code> 就是除了后缀的那一部分。例如：如果目标是 <code v-pre>foo.c</code> ，因为.c 是 make 所能识别的后缀名，所以 <code v-pre>$*</code> 的值就是 foo。</p>
+<p><strong>条件语句：</strong></p>
+<p>Makefile 也支持条件语句。这里先看一个示例。</p>
+<p>下面的例子判断变量ROOT_PACKAGE是否为空，如果为空，则输出错误信息，不为空则打印变量值：</p>
+<div class="language-makefile ext-makefile line-numbers-mode"><pre v-pre class="language-makefile"><code><span class="token keyword">ifeq</span> <span class="token punctuation">(</span><span class="token variable">$</span><span class="token punctuation">(</span>ROOT_PACKAGE<span class="token punctuation">)</span>,<span class="token punctuation">)</span>
+<span class="token variable">$</span><span class="token punctuation">(</span><span class="token function">error</span> the variable ROOT_PACKAGE must be set prior to including golang.mk<span class="token punctuation">)</span>
+<span class="token keyword">else</span>
+<span class="token variable">$</span><span class="token punctuation">(</span><span class="token function">info</span> the value of ROOT_PACKAGE is <span class="token variable">$</span><span class="token punctuation">(</span>ROOT_PACKAGE<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">endif</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>条件语句的语法为：</p>
+<div class="language-makefile ext-makefile line-numbers-mode"><pre v-pre class="language-makefile"><code>
+<span class="token comment"># if ...</span>
+&lt;conditional-directive>
+&lt;text-if-true>
+<span class="token keyword">endif</span>
+<span class="token comment"># if ... else ...</span>
+&lt;conditional-directive>
+&lt;text-if-true>
+<span class="token keyword">else</span>
+&lt;text-if-false>
+<span class="token keyword">endif</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>例如，判断两个值是否相等：</p>
+<div class="language-makefile ext-makefile line-numbers-mode"><pre v-pre class="language-makefile"><code>
+<span class="token keyword">ifeq</span> 条件表达式
+...
+<span class="token keyword">else</span>
+...
+<span class="token keyword">endif</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul>
+<li>ifeq 表示条件语句的开始，并指定一个条件表达式。表达式包含两个参数，参数之间用逗号分隔，并且表达式用圆括号括起来。</li>
+<li>else 表示条件表达式为假的情况。</li>
+<li>endif 表示一个条件语句的结束，任何一个条件表达式都应该以 endif 结束。</li>
+<li>表示条件关键字，有 4 个关键字：ifeq、ifneq、ifdef、ifndef。</li>
+</ul>
+<p><strong>为了加深你的理解，我们分别来看下这 4 个关键字的例子。</strong></p>
+<p>ifeq：条件判断，判断是否相等。</p>
+<div class="language-makefile ext-makefile line-numbers-mode"><pre v-pre class="language-makefile"><code><span class="token keyword">ifeq</span> <span class="token punctuation">(</span>&lt;arg1>, &lt;arg2><span class="token punctuation">)</span>
+<span class="token keyword">ifeq</span> <span class="token string">'&lt;arg1>'</span> <span class="token string">'&lt;arg2>'</span>
+<span class="token keyword">ifeq</span> <span class="token string">"&lt;arg1>"</span> <span class="token string">"&lt;arg2>"</span>
+<span class="token keyword">ifeq</span> <span class="token string">"&lt;arg1>"</span> <span class="token string">'&lt;arg2>'</span>
+<span class="token keyword">ifeq</span> <span class="token string">'&lt;arg1>'</span> <span class="token string">"&lt;arg2>"</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>比较 arg1 和 arg2 的值是否相同，如果相同则为真。也可以用 make 函数 / 变量替代 arg1 或 arg2，例如 <code v-pre>ifeq ($(origin ROOT_DIR),undefined) </code>或 <code v-pre>ifeq ($(ROOT_PACKAGE),)</code> 。origin 函数会在之后专门讲函数的一讲中介绍到。</p>
+<p>ifneq：条件判断，判断是否不相等。</p>
+<div class="language-makefile ext-makefile line-numbers-mode"><pre v-pre class="language-makefile"><code><span class="token keyword">ifneq</span> <span class="token punctuation">(</span>&lt;arg1>, &lt;arg2><span class="token punctuation">)</span>
+<span class="token keyword">ifneq</span> <span class="token string">'&lt;arg1>'</span> <span class="token string">'&lt;arg2>'</span>
+<span class="token keyword">ifneq</span> <span class="token string">"&lt;arg1>"</span> <span class="token string">"&lt;arg2>"</span>
+<span class="token keyword">ifneq</span> <span class="token string">"&lt;arg1>"</span> <span class="token string">'&lt;arg2>'</span>
+<span class="token keyword">ifneq</span> <span class="token string">'&lt;arg1>'</span> <span class="token string">"&lt;arg2>"</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>比较 arg1 和 arg2 的值是否不同，如果不同则为真。</p>
+<p>ifdef：条件判断，判断变量是否已定义。</p>
+<div class="language-makefile ext-makefile line-numbers-mode"><pre v-pre class="language-makefile"><code><span class="token keyword">ifdef</span> &lt;variable-name>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>如果值非空，则表达式为真，否则为假。也可以是函数的返回值。</p>
+<p>ifndef：条件判断，判断变量是否未定义。</p>
+<div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>ifndef &lt;variable-name>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>如果值为空，则表达式为真，否则为假。也可以是函数的返回值。</p>
+<h3 id="函数" tabindex="-1"><a class="header-anchor" href="#函数" aria-hidden="true">#</a> 函数</h3>
+<p>我们先来看下自定义函数。 make 解释器提供了一系列的函数供 Makefile 调用，这些函数是 Makefile 的预定义函数。我们可以通过 define 关键字来自定义一个函数。自定义函数的语法为：</p>
+<div class="language-makefile ext-makefile line-numbers-mode"><pre v-pre class="language-makefile"><code><span class="token keyword">define</span> 函数名
+函数体
+<span class="token keyword">endef</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>💡简单的一个案例如下：</strong></p>
+<div class="language-makefile ext-makefile line-numbers-mode"><pre v-pre class="language-makefile"><code><span class="token keyword">define</span> Foo
+    <span class="token operator">@</span>echo <span class="token string">"my name is $(0)"</span>
+    <span class="token operator">@</span>echo <span class="token string">"param is $(1)"</span>
+<span class="token keyword">endef</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>define 本质上是定义一个多行变量，可以在 call 的作用下当作函数来使用，在其他位置使用只能作为多行变量来使用，例如：</p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>var :<span class="token operator">=</span> <span class="token variable"><span class="token variable">$(</span>call Foo<span class="token variable">)</span></span>
+new :<span class="token operator">=</span> <span class="token variable"><span class="token variable">$(</span>Foo<span class="token variable">)</span></span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>预定义函数：</strong></p>
+<p>再来看下预定义函数。 刚才提到，make 编译器也定义了很多函数，这些函数叫作预定义函数，调用语法和变量类似，语法为：</p>
+<div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>$(&lt;function> &lt;arguments>)
+OR
+${&lt;function> &lt;arguments>}
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><code v-pre>&lt;function&gt; </code> 是函数名，<code v-pre>&lt;arguments&gt;</code> 是函数参数，参数间用逗号分割。函数的参数也可以是变量。</p>
+<p>💡简单的一个案例如下：</p>
+<div class="language-makefile ext-makefile line-numbers-mode"><pre v-pre class="language-makefile"><code>PLATFORM <span class="token operator">=</span> linux_amd64
+GOOS <span class="token operator">:=</span> <span class="token variable">$</span><span class="token punctuation">(</span><span class="token function">word</span> 1, <span class="token variable">$</span><span class="token punctuation">(</span><span class="token function">subst</span> _, ,<span class="token variable">$</span><span class="token punctuation">(</span>PLATFORM<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>上面的例子用到了两个函数：word 和 subst。word 函数有两个参数，1 和 subst 函数的输出。subst 函数将 PLATFORM 变量值中的 <code v-pre>_</code> 替换成空格（替换后的 PLATFORM 值为 linux amd64）。word 函数取 linux amd64 字符串中的第一个单词。所以最后 GOOS 的值为 linux。</p>
+<p>Makefile 预定义函数能够帮助我们实现很多强大的功能，在编写 Makefile 的过程中，如果有功能需求，可以优先使用这些函数。如果你想使用这些函数，那就需要知道有哪些函数，以及它们实现的功能。</p>
+<p><img src="http://sm.nsddd.top/sm202302201721492.jpeg" alt="img"></p>
+<h3 id="引入其他-makefile" tabindex="-1"><a class="header-anchor" href="#引入其他-makefile" aria-hidden="true">#</a> 引入其他 Makefile</h3>
+<p>在 Makefile 中，我们可以通过关键字 include，把别的 makefile 包含进来，类似于 C 语言的#include，被包含的文件会插入在当前的位置。include 用法为include ，示例如下：</p>
+<div class="language-makefile ext-makefile line-numbers-mode"><pre v-pre class="language-makefile"><code><span class="token keyword">include</span> scripts/make-rules/common.mk
+<span class="token keyword">include</span> scripts/make-rules/golang.mk
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>include 也可以包含通配符include scripts/make-rules/*。make 命令会按下面的顺序查找 makefile 文件：</p>
+<ul>
+<li>如果是绝对或相对路径，就直接根据路径 include 进来。</li>
+<li>如果 make 执行时，有<code v-pre>-I</code>或<code v-pre>--include-dir</code>参数，那么 make 就会在这个参数所指定的目录下去找。</li>
+<li>如果目录<code v-pre>&lt;prefix&gt;/include</code>（一般是/usr/local/bin或/usr/include）存在的话，make 也会去找。</li>
+</ul>
+<p>如果有文件没有找到，make 会生成一条警告信息，但不会马上出现致命错误，而是继续载入其他的文件。一旦完成 makefile 的读取，make 会再重试这些没有找到或是不能读取的文件。如果还是不行，make 才会出现一条致命错误信息。如果你想让 <code v-pre>make</code> 忽略那些无法读取的文件继续执行，可以在 i<code v-pre>n</code>clude 前加一个减号<code v-pre>-</code>，如<code v-pre>-include</code> 。</p>
 <h2 id="设计makefile结构" tabindex="-1"><a class="header-anchor" href="#设计makefile结构" aria-hidden="true">#</a> 设计Makefile结构</h2>
 <p>对于大型项目来说，需要管理的内容很多，所有管理功能都集成在一个 Makefile 中，可能会导致 Makefile 很大，难以阅读和维护，所以建议采用分层的设计方法，<strong>根目录下的 Makefile 聚合所有的 Makefile 命令，具体实现则按功能分类，放在另外的 Makefile 中。</strong></p>
 <p>我们经常会在 Makefile 命令中集成 shell 脚本，但如果 shell 脚本过于复杂，也会导致 Makefile 内容过多，难以阅读和维护。并且在 Makefile 中集成复杂的 shell 脚本，编写体验也很差。对于这种情况，<strong>可以将复杂的 shell 命令封装在 shell 脚本中，供 Makefile 直接调用，而一些简单的命令则可以直接集成在 Makefile 中。</strong></p>
@@ -606,12 +779,12 @@ BINARY_UNIX<span class="token operator">=</span><span class="token variable">$</
 <div class="language-makefile ext-makefile line-numbers-mode"><pre v-pre class="language-makefile"><code><span class="token target symbol">tools.verify.%</span><span class="token punctuation">:</span>
   <span class="token operator">@</span>if ! which <span class="token variable">$*</span> &amp;>/dev/null<span class="token punctuation">;</span> then <span class="token variable">$</span><span class="token punctuation">(</span>MAKE<span class="token punctuation">)</span> tools.install.<span class="token variable">$*;</span> fi
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p><code v-pre>make tools.verify.swagger</code>, <code v-pre>make tools.verify.mockgen</code>等均可以使用上面定义的规则，%分别代表了<code v-pre>swagger</code>和<code v-pre>mockgen</code>。</p>
-<p>如果不使用%，则我们需要分别为tools.verify.swagger和tools.verify.mockgen定义规则，很麻烦，后面修改也困难。</p>
+<p>如果不使用<code v-pre>%</code>，则我们需要分别为<code v-pre>tools.verify.swagger</code>和<code v-pre>tools.verify.mockgen</code>定义规则，很麻烦，后面修改也困难。</p>
 <p>另外，这里也能看出<code v-pre>tools.verify.%</code>这种命名方式的好处：tools 说明依赖的定义位于<code v-pre>scripts/make-rules/tools.mk</code> Makefile 中；verify说明<code v-pre>tools.verify.%</code>伪目标属于 verify 分类，主要用来验证工具是否安装。通过这种命名方式，你可以很容易地知道目标位于哪个 Makefile 文件中，以及想要完成的功能。</p>
 <p>另外，上面的定义中还用到了自动变量<code v-pre>$*</code>，用来指代被匹配的值<code v-pre>swagger</code>、<code v-pre>mockgen</code>。</p>
 <h3 id="技巧-2-善用函数" tabindex="-1"><a class="header-anchor" href="#技巧-2-善用函数" aria-hidden="true">#</a> 技巧 2：善用函数</h3>
 <p>Makefile 自带的函数能够帮助我们实现很多强大的功能。所以，在我们编写 Makefile 的过程中，如果有功能需求，可以优先使用这些函数。我把常用的函数以及它们实现的功能整理在了 <a href="https://github.com/marmotedu/geekbang-go/blob/master/makefile/Makefile%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0%E5%88%97%E8%A1%A8.md" target="_blank" rel="noopener noreferrer">Makefile<ExternalLinkIcon/></a> 常用函数列表 中，你可以参考下。</p>
-<p>IAM 的 Makefile 文件中大量使用了上述函数，如果你想查看这些函数的具体使用方法和场景，可以参考 IAM 项目的 Makefile 文件 make-rules。</p>
+<p>IAM 的 Makefile 文件中大量使用了上述函数，如果你想查看这些函数的具体使用方法和场景，可以参考 IAM 项目的 Makefile 文件 <code v-pre>make-rules</code>。</p>
 <h3 id="技巧-3-依赖需要用到的工具" tabindex="-1"><a class="header-anchor" href="#技巧-3-依赖需要用到的工具" aria-hidden="true">#</a> 技巧 3：依赖需要用到的工具</h3>
 <p>如果 Makefile 某个目标的命令中用到了某个工具，可以将该工具放在目标的依赖中。这样，当执行该目标时，就可以指定检查系统是否安装该工具，如果没有安装则自动安装，从而实现更高程度的自动化。例如，<code v-pre>/Makefile</code> 文件中，<code v-pre>format</code> 伪目标，定义如下：</p>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>.PHONY: <span class="token function">format</span>
@@ -620,14 +793,14 @@ format: tools.verify.golines tools.verify.goimports
   @<span class="token variable"><span class="token variable">$(</span>FIND<span class="token variable">)</span></span> <span class="token parameter variable">-type</span> f <span class="token parameter variable">-name</span> <span class="token string">'*.go'</span> <span class="token operator">|</span> <span class="token variable"><span class="token variable">$(</span>XARGS<span class="token variable">)</span></span> gofmt <span class="token parameter variable">-s</span> <span class="token parameter variable">-w</span>
   @<span class="token variable"><span class="token variable">$(</span>FIND<span class="token variable">)</span></span> <span class="token parameter variable">-type</span> f <span class="token parameter variable">-name</span> <span class="token string">'*.go'</span> <span class="token operator">|</span> <span class="token variable"><span class="token variable">$(</span>XARGS<span class="token variable">)</span></span> goimports <span class="token parameter variable">-w</span> <span class="token parameter variable">-local</span> <span class="token variable"><span class="token variable">$(</span>ROOT_PACKAGE<span class="token variable">)</span></span>
   @<span class="token variable"><span class="token variable">$(</span>FIND<span class="token variable">)</span></span> <span class="token parameter variable">-type</span> f <span class="token parameter variable">-name</span> <span class="token string">'*.go'</span> <span class="token operator">|</span> <span class="token variable"><span class="token variable">$(</span>XARGS<span class="token variable">)</span></span> golines <span class="token parameter variable">-w</span> --max-len<span class="token operator">=</span><span class="token number">120</span> --reformat-tags --shorten-comments --ignore-generated <span class="token builtin class-name">.</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>你可以看到，format 依赖<code v-pre>tools.verify.golines tools.verify.goimports</code>。我们再来看下tools.verify.golines的定义：</p>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>你可以看到，format 依赖<code v-pre>tools.verify.golines tools.verify.goimports</code>。我们再来看下<code v-pre>tools.verify.golines</code>的定义：</p>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>tools.verify.%:
   @if <span class="token operator">!</span> <span class="token function">which</span> <span class="token variable">$*</span> <span class="token operator">&amp;></span>/dev/null<span class="token punctuation">;</span> <span class="token keyword">then</span> <span class="token variable"><span class="token variable">$(</span>MAKE<span class="token variable">)</span></span> tools.install.<span class="token variable">$*</span><span class="token punctuation">;</span> <span class="token keyword">fi</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>再来看下tools.install.$*规则：</p>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>再来看下<code v-pre>tools.install.$*</code>规则：</p>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>.PHONY: install.golines
 install.golines:
   @<span class="token variable"><span class="token variable">$(</span>GO<span class="token variable">)</span></span> get <span class="token parameter variable">-u</span> github.com/segmentio/golines
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>通过tools.verify.%规则定义，我们可以知道，tools.verify.%会先检查工具是否安装，如果没有安装，就会执行tools.install.$*来安装。如此一来，当我们执行tools.verify.%目标时，如果系统没有安装 golines 命令，就会自动调用go get安装，提高了 Makefile 的自动化程度。</p>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>通过<code v-pre>tools.verify.%</code>规则定义，我们可以知道，<code v-pre>tools.verify.%</code>会先检查工具是否安装，如果没有安装，就会执行<code v-pre>tools.install.$*</code>来安装。如此一来，当我们执行<code v-pre>tools.verify.%</code>目标时，如果系统没有安装 golines 命令，就会自动调用go get安装，提高了 Makefile 的自动化程度。</p>
 <h3 id="技巧-4-把常用功能放在-makefile-中-不常用的放在分类-makefile-中" tabindex="-1"><a class="header-anchor" href="#技巧-4-把常用功能放在-makefile-中-不常用的放在分类-makefile-中" aria-hidden="true">#</a> 技巧 4：把常用功能放在 /Makefile 中，不常用的放在分类 Makefile 中</h3>
 <p>一个项目，尤其是大型项目，有很多需要管理的地方，其中大部分都可以通过 Makefile 实现自动化操作。不过，为了保持 <code v-pre>/Makefile</code> 文件的整洁性，我们不能把所有的命令都添加在 <code v-pre>/Makefile</code> 文件中。</p>
 <p>一个比较好的建议是，将常用功能放在 /Makefile 中，不常用的放在分类 Makefile 中，并在 /Makefile 中 include 这些分类 Makefile。</p>
@@ -673,12 +846,12 @@ BINS <span class="token operator">?=</span> <span class="token variable">$</span
   <span class="token operator">@</span>mkdir -p <span class="token variable">$</span><span class="token punctuation">(</span>OUTPUT_DIR<span class="token punctuation">)</span>/platforms/<span class="token variable">$</span><span class="token punctuation">(</span>OS<span class="token punctuation">)</span>/<span class="token variable">$</span><span class="token punctuation">(</span>ARCH<span class="token punctuation">)</span>
   <span class="token operator">@</span>CGO_ENABLED<span class="token operator">=</span>0 GOOS<span class="token operator">=</span><span class="token variable">$</span><span class="token punctuation">(</span>OS<span class="token punctuation">)</span> GOARCH<span class="token operator">=</span><span class="token variable">$</span><span class="token punctuation">(</span>ARCH<span class="token punctuation">)</span> <span class="token variable">$</span><span class="token punctuation">(</span>GO<span class="token punctuation">)</span> build <span class="token variable">$</span><span class="token punctuation">(</span>GO_BUILD_FLAGS<span class="token punctuation">)</span> -o <span class="token variable">$</span><span class="token punctuation">(</span>OUTPUT_DIR<span class="token punctuation">)</span>/platforms/<span class="token variable">$</span><span class="token punctuation">(</span>OS<span class="token punctuation">)</span>/<span class="token variable">$</span><span class="token punctuation">(</span>ARCH<span class="token punctuation">)</span>/<span class="token variable">$</span><span class="token punctuation">(</span>COMMAND<span class="token punctuation">)</span><span class="token variable">$</span><span class="token punctuation">(</span>GO_OUT_EXT<span class="token punctuation">)</span> <span class="token variable">$</span><span class="token punctuation">(</span>ROOT_PACKAGE<span class="token punctuation">)</span>/cmd/<span class="token variable">$</span><span class="token punctuation">(</span>COMMAND<span class="token punctuation">)</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>当执行make go.build 时，会执行 go.build 的依赖 <code v-pre>$(addprefix go.build., $(addprefix $(PLATFORM)., $(BINS))</code>) ,<code v-pre>addprefix</code>函数最终返回字符串 <code v-pre>go.build.linux_amd64.iamctl go.build.linux_amd64.iam-authz-server go.build.linux_amd64.iam-apiserver ...</code> ，这时候就会执行 <code v-pre>go.build.%</code> 伪目标。</p>
-<p>在 go.build.% 伪目标中，通过 eval、word、subst 函数组合，算出了 COMMAND 的值 <code v-pre>iamctl/iam-apiserver/iam-authz-server/...</code>，最终通过 <code v-pre>$(ROOT_PACKAGE)/cmd/$(COMMAND)</code> 定位到需要构建的组件的 main 函数所在目录。</p>
+<p>在 <code v-pre>go.build.%</code> 伪目标中，通过 eval、word、subst 函数组合，算出了 COMMAND 的值 <code v-pre>iamctl/iam-apiserver/iam-authz-server/...</code>，最终通过 <code v-pre>$(ROOT_PACKAGE)/cmd/$(COMMAND)</code> 定位到需要构建的组件的 main 函数所在目录。</p>
 <p>上述实现中有两个技巧，你可以注意下。首先，通过</p>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>COMMANDS ?<span class="token operator">=</span> <span class="token variable"><span class="token variable">$(</span>filter-out %.md, <span class="token punctuation">$(</span>wildcard $<span class="token punctuation">{</span>ROOT_DIR<span class="token punctuation">}</span>/cmd/*<span class="token punctuation">)</span><span class="token variable">)</span></span>
 BINS ?<span class="token operator">=</span> <span class="token variable"><span class="token variable">$(</span>foreach cmd,$<span class="token punctuation">{</span>COMMANDS<span class="token punctuation">}</span>,<span class="token punctuation">$(</span>notdir $<span class="token punctuation">{</span>cmd<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token variable">)</span></span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>获取到了 cmd/ 目录下的所有组件名。</p>
-<p>接着，通过使用通配符和自动变量，自动匹配到go.build.linux_amd64.iam-authz-server 这类伪目标并构建。</p>
+<p>接着，通过使用通配符和自动变量，自动匹配到<code v-pre>go.build.linux_amd64.iam-authz-server</code> 这类伪目标并构建。</p>
 <p>可以看到，想要编写一个可扩展的 Makefile，熟练掌握 Makefile 的用法是基础，更多的是需要我们动脑思考如何去编写 Makefile。</p>
 <h3 id="技巧-6-将所有输出存放在一个目录下-方便清理和查找" tabindex="-1"><a class="header-anchor" href="#技巧-6-将所有输出存放在一个目录下-方便清理和查找" aria-hidden="true">#</a> 技巧 6：将所有输出存放在一个目录下，方便清理和查找</h3>
 <p>在执行 Makefile 的过程中，会输出各种各样的文件，例如 Go 编译后的二进制文件、测试覆盖率数据等，我建议你把这些文件统一放在一个目录下，方便后期的清理和查找。通常我们可以把它们放在<code v-pre>_output</code>这类目录下，这样清理时就很方便，只需要清理<code v-pre>_output</code>文件夹就可以，例如：</p>
@@ -737,15 +910,15 @@ endef
 MAKEFLAGS <span class="token operator">+=</span> --no-print-directory    
 <span class="token keyword">endif</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>当然，我们还可以通过下面的方法来使用 V ：</p>
-<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>ifeq <span class="token punctuation">(</span><span class="token variable"><span class="token variable">$(</span>origin V<span class="token variable">)</span></span>, undefined<span class="token punctuation">)</span>                                
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>ifeq <span class="token punctuation">(</span><span class="token variable"><span class="token variable">$(</span>origin V<span class="token variable">)</span></span>, undefined<span class="token punctuation">)</span>                               
+
 MAKEFLAGS <span class="token operator">+=</span> --no-print-directory              
 endif
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>上面，我介绍了 V OPTION，我们在 Makefile 中通过判断有没有定义 V ，来执行不同的操作。其实还有一种 OPTION，这种 OPTION 的值我们在 Makefile 中是直接使用的，例如BINS。针对这种 OPTION，我们可以通过以下方式来使用：</p>
-<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>
-BINS ?<span class="token operator">=</span> <span class="token variable"><span class="token variable">$(</span>foreach cmd,$<span class="token punctuation">{</span>COMMANDS<span class="token punctuation">}</span>,<span class="token punctuation">$(</span>notdir $<span class="token punctuation">{</span>cmd<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token variable">)</span></span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>上面，我介绍了 <code v-pre>VOPTION</code>，我们在 <code v-pre>Makefile</code> 中通过判断有没有定义 <code v-pre>V</code> ，来执行不同的操作。其实还有一种 <code v-pre>OPTION</code>，这种 <code v-pre>OPTION</code> 的值我们在 Makefile 中是直接使用的，例如 <code v-pre>BINS</code>。针对这种 <code v-pre>OPTION</code>，我们可以通过以下方式来使用：</p>
+<div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>BINS ?<span class="token operator">=</span> <span class="token variable"><span class="token variable">$(</span>foreach cmd,$<span class="token punctuation">{</span>COMMANDS<span class="token punctuation">}</span>,<span class="token punctuation">$(</span>notdir $<span class="token punctuation">{</span>cmd<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token variable">)</span></span>
 <span class="token punctuation">..</span>.
 go.build: go.build.verify <span class="token variable"><span class="token variable">$(</span>addprefix go.build., <span class="token punctuation">$(</span>addprefix <span class="token punctuation">$(</span>PLATFORM<span class="token punctuation">)</span>., <span class="token punctuation">$(</span>BINS<span class="token punctuation">)</span><span class="token variable">)</span></span><span class="token punctuation">)</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>也就是说，通过 ?= 来判断 BINS 变量有没有被赋值，如果没有，则赋予等号后的值。接下来，就可以在 Makefile 规则中使用它。</p>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>也就是说，通过 <code v-pre>?=</code> 来判断 BINS 变量有没有被赋值，如果没有，则赋予等号后的值。接下来，就可以在 Makefile 规则中使用它。</p>
 <h3 id="技巧-10-定义环境变量" tabindex="-1"><a class="header-anchor" href="#技巧-10-定义环境变量" aria-hidden="true">#</a> 技巧 10：定义环境变量</h3>
 <p>我们可以在 Makefile 中定义一些环境变量，例如：</p>
 <div class="language-makefile ext-makefile line-numbers-mode"><pre v-pre class="language-makefile"><code>GO <span class="token operator">:=</span> go                                          
@@ -773,7 +946,7 @@ XARGS <span class="token operator">:=</span> xargs --no-run-if-empty
 <span class="token operator">=</span><span class="token operator">=</span><span class="token operator">=</span><span class="token operator">=</span><span class="token operator">=</span><span class="token operator">=</span><span class="token operator">=</span><span class="token operator">=</span><span class="token operator">=</span><span class="token operator">=</span><span class="token operator">=</span>> Installing codegen
 <span class="token target symbol">make[1]</span><span class="token punctuation">:</span> Entering directory `/home/colin/workspace/golang/src/github.com/marmotedu/iam'
 <span class="token target symbol">make[1]</span><span class="token punctuation">:</span> Leaving directory `/home/colin/workspace/golang/src/github.com/marmotedu/iam'
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>如果觉得 Entering directory 这类信息很烦人，可以通过设置 MAKEFLAGS += --no-print-directory 来禁止 Makefile 打印这些信息。</p>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>如果觉得 Entering directory 这类信息很烦人，可以通过设置 <code v-pre>MAKEFLAGS += --no-print-directory</code> 来禁止 Makefile 打印这些信息。</p>
 <h2 id="总结" tabindex="-1"><a class="header-anchor" href="#总结" aria-hidden="true">#</a> 总结</h2>
 <p><strong>规范的 Makefile  文件需要的步骤：</strong></p>
 <ol>
@@ -794,6 +967,13 @@ XARGS <span class="token operator">:=</span> xargs --no-run-if-empty
 <li>
 <p>✴️版权声明 © ：本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>
 </li>
+</ul>
+<h3 id="links" tabindex="-1"><a class="header-anchor" href="#links" aria-hidden="true">#</a> LInks</h3>
+<ul>
+<li>https://time.geekbang.org/column/article/389115</li>
+<li>https://github.com/cubxxw/iam/blob/master/Makefile</li>
+<li>https://seisman.github.io/how-to-write-makefile/rules.html</li>
+<li>https://colynn.github.io/2020-03-03-using_makefile/</li>
 </ul>
 </div></template>
 

@@ -442,7 +442,7 @@ $ <span class="token function">git</span> commit
 </ul>
 <p>尽管这些应用生命周期管理技术有很多不同，但是它们彼此支持、相互联系。研发模式专注于开发过程，DevOps 技术里的 CI/CD 专注于流程，Ops 则专注于实战。</p>
 <p><img src="http://sm.nsddd.top/sm202302171549330.png" alt="image-20230217154926256"></p>
-<p>也就是按照这样的顺序：研发模式（瀑布模式 -&gt; 迭代模式 -&gt; 敏捷模式） -&gt; CI/CD -&gt; DevOps。</p>
+<p>也就是按照这样的顺序：<code v-pre>研发模式（瀑布模式 -&gt; 迭代模式 -&gt; 敏捷模式） -&gt; CI/CD -&gt; DevOps</code>。</p>
 <h3 id="研发模式" tabindex="-1"><a class="header-anchor" href="#研发模式" aria-hidden="true">#</a> 研发模式</h3>
 <p>研发模式主要有三种，演进顺序为瀑布模式 -&gt; 迭代模式 -&gt; 敏捷模式，现在我们逐一看下。</p>
 <h4 id="瀑布模式" tabindex="-1"><a class="header-anchor" href="#瀑布模式" aria-hidden="true">#</a> 瀑布模式</h4>

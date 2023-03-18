@@ -307,7 +307,7 @@ Size of myStruct<span class="token punctuation">:</span> <span class="token numb
 <span class="token punctuation">{</span>example2 <span class="token punctuation">[</span><span class="token number">1</span> <span class="token number">2</span> <span class="token number">3</span> <span class="token number">4</span> <span class="token number">5</span> <span class="token number">6</span> <span class="token number">7</span> <span class="token number">8</span> <span class="token number">9</span> <span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">}</span>
 Size of myStruct2<span class="token punctuation">:</span> <span class="token number">40</span> bytes
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>这里使用了空结构体作为占位符，减少了结构体的内存占用。</p>
-<p>还有就是它可以用来标记某种类型, 例如：</p>
+<p><strong>还有就是它可以用来标记某种类型, 例如：</strong></p>
 <div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">type</span> MyType <span class="token keyword">struct</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
 
 <span class="token keyword">func</span> <span class="token punctuation">(</span>t MyType<span class="token punctuation">)</span><span class="token function">DoSomething</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
