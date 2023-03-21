@@ -803,8 +803,8 @@ install.golines:
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>通过<code v-pre>tools.verify.%</code>规则定义，我们可以知道，<code v-pre>tools.verify.%</code>会先检查工具是否安装，如果没有安装，就会执行<code v-pre>tools.install.$*</code>来安装。如此一来，当我们执行<code v-pre>tools.verify.%</code>目标时，如果系统没有安装 golines 命令，就会自动调用go get安装，提高了 Makefile 的自动化程度。</p>
 <h3 id="技巧-4-把常用功能放在-makefile-中-不常用的放在分类-makefile-中" tabindex="-1"><a class="header-anchor" href="#技巧-4-把常用功能放在-makefile-中-不常用的放在分类-makefile-中" aria-hidden="true">#</a> 技巧 4：把常用功能放在 /Makefile 中，不常用的放在分类 Makefile 中</h3>
 <p>一个项目，尤其是大型项目，有很多需要管理的地方，其中大部分都可以通过 Makefile 实现自动化操作。不过，为了保持 <code v-pre>/Makefile</code> 文件的整洁性，我们不能把所有的命令都添加在 <code v-pre>/Makefile</code> 文件中。</p>
-<p>一个比较好的建议是，将常用功能放在 /Makefile 中，不常用的放在分类 Makefile 中，并在 /Makefile 中 include 这些分类 Makefile。</p>
-<p>例如，IAM 项目的 /Makefile 集成了format、lint、test、build等常用命令，而将<code v-pre>gen.errcode.code、gen.errcode.doc</code>这类不常用的功能放在 <code v-pre>scripts/make-rules/gen.mk</code> 文件中。当然，我们也可以直接执行 make gen.errcode.code来执行gen.errcode.code伪目标。通过这种方式，既可以保证 /Makefile 的简洁、易维护，又可以通过make命令来运行伪目标，更加灵活。</p>
+<p>一个比较好的建议是，将常用功能放在 <code v-pre>/Makefile</code> 中，不常用的放在分类 Makefile 中，并在 <code v-pre>/Makefile</code> 中 include 这些分类 Makefile。</p>
+<p>例如，IAM 项目的 <code v-pre>/Makefile</code> 集成了format、lint、test、build等常用命令，而将<code v-pre>gen.errcode.code、gen.errcode.doc</code>这类不常用的功能放在 <code v-pre>scripts/make-rules/gen.mk</code> 文件中。当然，我们也可以直接执行 make gen.errcode.code来执行gen.errcode.code伪目标。通过这种方式，既可以保证 /Makefile 的简洁、易维护，又可以通过make命令来运行伪目标，更加灵活。</p>
 <h3 id="技巧-5-编写可扩展的-makefile" tabindex="-1"><a class="header-anchor" href="#技巧-5-编写可扩展的-makefile" aria-hidden="true">#</a> 技巧 5：编写可扩展的 Makefile</h3>
 <p>什么叫可扩展的 Makefile 呢？在我看来，可扩展的 Makefile 包含两层含义：</p>
 <ul>

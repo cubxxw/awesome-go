@@ -255,21 +255,6 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "Go语言进阶—高级篇代码",
-    "headers": [
-      {
-        "level": 2,
-        "title": "基础篇代码在下面",
-        "slug": "基础篇代码在下面",
-        "link": "#基础篇代码在下面",
-        "children": []
-      }
-    ],
-    "path": "/code/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "",
     "headers": [
       {
@@ -360,275 +345,6 @@ export const searchIndex = [
       }
     ],
     "path": "/go-advancend/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "MIT 6.824 DistributedSystem~",
-    "headers": [
-      {
-        "level": 2,
-        "title": "🏄‍♂️ 目录结构",
-        "slug": "🏄‍♂️-目录结构",
-        "link": "#🏄‍♂️-目录结构",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "🧷 参考文献",
-        "slug": "🧷-参考文献",
-        "link": "#🧷-参考文献",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "⚡Go语言基础篇",
-        "slug": "⚡go语言基础篇",
-        "link": "#⚡go语言基础篇",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "⚡Go语言高级篇",
-        "slug": "⚡go语言高级篇",
-        "link": "#⚡go语言高级篇",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "🐶往下看",
-        "slug": "🐶往下看",
-        "link": "#🐶往下看",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "📚目录",
-        "slug": "📚目录",
-        "link": "#📚目录",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "前言",
-        "slug": "前言",
-        "link": "#前言",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Go语言基础篇—番外篇",
-        "slug": "go语言基础篇—番外篇",
-        "link": "#go语言基础篇—番外篇",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Go语言基础",
-        "slug": "go语言基础",
-        "link": "#go语言基础",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Go语言面对对象",
-        "slug": "go语言面对对象",
-        "link": "#go语言面对对象",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Go语言高级",
-        "slug": "go语言高级",
-        "link": "#go语言高级",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Go语言进阶",
-        "slug": "go语言进阶",
-        "link": "#go语言进阶",
-        "children": [
-          {
-            "level": 3,
-            "title": "Go网络编程和并发编程",
-            "slug": "go网络编程和并发编程",
-            "link": "#go网络编程和并发编程",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Go连接数据库",
-            "slug": "go连接数据库",
-            "link": "#go连接数据库",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Redis",
-            "slug": "redis",
-            "link": "#redis",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "go操作ETCD",
-            "slug": "go操作etcd",
-            "link": "#go操作etcd",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Go - zookeeper",
-            "slug": "go-zookeeper",
-            "link": "#go-zookeeper",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "go操作kafka",
-            "slug": "go操作kafka",
-            "link": "#go操作kafka",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "go操作RabbitMQ",
-            "slug": "go操作rabbitmq",
-            "link": "#go操作rabbitmq",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "go操作ElasticSearch",
-            "slug": "go操作elasticsearch",
-            "link": "#go操作elasticsearch",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Go语言常用包",
-            "slug": "go语言常用包",
-            "link": "#go语言常用包",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "beego框架",
-            "slug": "beego框架",
-            "link": "#beego框架",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Go高级",
-            "slug": "go高级",
-            "link": "#go高级",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "密码学",
-            "slug": "密码学",
-            "link": "#密码学",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "高级技巧",
-            "slug": "高级技巧",
-            "link": "#高级技巧",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "总结",
-            "slug": "总结",
-            "link": "#总结",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "🧭导航",
-        "slug": "🧭导航",
-        "link": "#🧭导航",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "📖Go语言",
-        "slug": "📖go语言",
-        "link": "#📖go语言",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "📚CS系列",
-        "slug": "📚cs系列",
-        "link": "#📚cs系列",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "📘开发必备技术",
-        "slug": "📘开发必备技术",
-        "link": "#📘开发必备技术",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "📔区块链导航",
-        "slug": "📔区块链导航",
-        "link": "#📔区块链导航",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "🅱️区块链教程",
-        "slug": "🅱️区块链教程",
-        "link": "#🅱️区块链教程",
-        "children": [
-          {
-            "level": 3,
-            "title": "🗃️项目",
-            "slug": "🗃️项目",
-            "link": "#🗃️项目",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "✨参与贡献💕",
-        "slug": "✨参与贡献💕",
-        "link": "#✨参与贡献💕",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "",
-        "slug": "",
-        "link": "#",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "/ Recent activity",
-        "slug": "recent-activity",
-        "link": "#recent-activity",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "版权声明 ©",
-        "slug": "版权声明-©",
-        "link": "#版权声明-©",
-        "children": []
-      }
-    ],
-    "path": "/mit-6-824/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -1615,13 +1331,6 @@ export const searchIndex = [
       }
     ],
     "path": "/Gomd_super/zhenze.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "IAM",
-    "headers": [],
-    "path": "/projects/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -5046,6 +4755,282 @@ export const searchIndex = [
     "extraFields": []
   },
   {
+    "title": "MIT 6.824 DistributedSystem~",
+    "headers": [
+      {
+        "level": 2,
+        "title": "🏄‍♂️ 目录结构",
+        "slug": "🏄‍♂️-目录结构",
+        "link": "#🏄‍♂️-目录结构",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "🧷 参考文献",
+        "slug": "🧷-参考文献",
+        "link": "#🧷-参考文献",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "⚡Go语言基础篇",
+        "slug": "⚡go语言基础篇",
+        "link": "#⚡go语言基础篇",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "⚡Go语言高级篇",
+        "slug": "⚡go语言高级篇",
+        "link": "#⚡go语言高级篇",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "🐶往下看",
+        "slug": "🐶往下看",
+        "link": "#🐶往下看",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "📚目录",
+        "slug": "📚目录",
+        "link": "#📚目录",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "前言",
+        "slug": "前言",
+        "link": "#前言",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Go语言基础篇—番外篇",
+        "slug": "go语言基础篇—番外篇",
+        "link": "#go语言基础篇—番外篇",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Go语言基础",
+        "slug": "go语言基础",
+        "link": "#go语言基础",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Go语言面对对象",
+        "slug": "go语言面对对象",
+        "link": "#go语言面对对象",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Go语言高级",
+        "slug": "go语言高级",
+        "link": "#go语言高级",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Go语言进阶",
+        "slug": "go语言进阶",
+        "link": "#go语言进阶",
+        "children": [
+          {
+            "level": 3,
+            "title": "Go网络编程和并发编程",
+            "slug": "go网络编程和并发编程",
+            "link": "#go网络编程和并发编程",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Go连接数据库",
+            "slug": "go连接数据库",
+            "link": "#go连接数据库",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Redis",
+            "slug": "redis",
+            "link": "#redis",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "go操作ETCD",
+            "slug": "go操作etcd",
+            "link": "#go操作etcd",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Go - zookeeper",
+            "slug": "go-zookeeper",
+            "link": "#go-zookeeper",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "go操作kafka",
+            "slug": "go操作kafka",
+            "link": "#go操作kafka",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "go操作RabbitMQ",
+            "slug": "go操作rabbitmq",
+            "link": "#go操作rabbitmq",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "go操作ElasticSearch",
+            "slug": "go操作elasticsearch",
+            "link": "#go操作elasticsearch",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Go语言常用包",
+            "slug": "go语言常用包",
+            "link": "#go语言常用包",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "beego框架",
+            "slug": "beego框架",
+            "link": "#beego框架",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Go高级",
+            "slug": "go高级",
+            "link": "#go高级",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "密码学",
+            "slug": "密码学",
+            "link": "#密码学",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "高级技巧",
+            "slug": "高级技巧",
+            "link": "#高级技巧",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "总结",
+            "slug": "总结",
+            "link": "#总结",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "🧭导航",
+        "slug": "🧭导航",
+        "link": "#🧭导航",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "📖Go语言",
+        "slug": "📖go语言",
+        "link": "#📖go语言",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "📚CS系列",
+        "slug": "📚cs系列",
+        "link": "#📚cs系列",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "📘开发必备技术",
+        "slug": "📘开发必备技术",
+        "link": "#📘开发必备技术",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "📔区块链导航",
+        "slug": "📔区块链导航",
+        "link": "#📔区块链导航",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "🅱️区块链教程",
+        "slug": "🅱️区块链教程",
+        "link": "#🅱️区块链教程",
+        "children": [
+          {
+            "level": 3,
+            "title": "🗃️项目",
+            "slug": "🗃️项目",
+            "link": "#🗃️项目",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "✨参与贡献💕",
+        "slug": "✨参与贡献💕",
+        "link": "#✨参与贡献💕",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "",
+        "slug": "",
+        "link": "#",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "/ Recent activity",
+        "slug": "recent-activity",
+        "link": "#recent-activity",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "版权声明 ©",
+        "slug": "版权声明-©",
+        "link": "#版权声明-©",
+        "children": []
+      }
+    ],
+    "path": "/mit-6-824/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "IAM",
+    "headers": [],
+    "path": "/projects/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "笔试信息",
     "headers": [
       {
@@ -5330,56 +5315,6 @@ export const searchIndex = [
       }
     ],
     "path": "/%E5%AD%97%E8%8A%82%E9%9D%92%E8%AE%AD%E8%90%A5/%E9%9D%92%E8%AE%AD%E8%90%A5%E9%A2%98%E5%BA%93.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "go-by-example",
-    "headers": [
-      {
-        "level": 3,
-        "title": "点此查看配套学员手册",
-        "slug": "点此查看配套学员手册",
-        "link": "#点此查看配套学员手册",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "点此在线运行代码",
-        "slug": "点此在线运行代码",
-        "link": "#点此在线运行代码",
-        "children": []
-      },
-      {
-        "level": 3,
-        "title": "目录结构",
-        "slug": "目录结构",
-        "link": "#目录结构",
-        "children": []
-      }
-    ],
-    "path": "/code/go-by-example/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "CONTRIBUTING",
-    "headers": [],
-    "path": "/code/go-http-demo/CONTRIBUTING.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Go-HTTP-Demo",
-    "headers": [],
-    "path": "/code/go-http-demo/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "go-project-example",
-    "headers": [],
-    "path": "/code/go-project-example/",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -10797,6 +10732,136 @@ export const searchIndex = [
       },
       {
         "level": 2,
+        "title": "微服务概念",
+        "slug": "微服务概念",
+        "link": "#微服务概念",
+        "children": [
+          {
+            "level": 3,
+            "title": "组件服务化",
+            "slug": "组件服务化",
+            "link": "#组件服务化",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "基础措施自动化",
+            "slug": "基础措施自动化",
+            "link": "#基础措施自动化",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "可用性 & 兼容性设计",
+            "slug": "可用性-兼容性设计",
+            "link": "#可用性-兼容性设计",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "微服务设计",
+        "slug": "微服务设计",
+        "link": "#微服务设计",
+        "children": [
+          {
+            "level": 3,
+            "title": "API Gateway",
+            "slug": "api-gateway",
+            "link": "#api-gateway",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "跨横切面",
+            "slug": "跨横切面",
+            "link": "#跨横切面",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Mircoservice 划分",
+            "slug": "mircoservice-划分",
+            "link": "#mircoservice-划分",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "命令端",
+            "slug": "命令端",
+            "link": "#命令端",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "查询端",
+            "slug": "查询端",
+            "link": "#查询端",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "gRPC 和 服务发现",
+        "slug": "grpc-和-服务发现",
+        "link": "#grpc-和-服务发现",
+        "children": [
+          {
+            "level": 3,
+            "title": "服务发现",
+            "slug": "服务发现",
+            "link": "#服务发现",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "客户端发现架构图",
+            "slug": "客户端发现架构图",
+            "link": "#客户端发现架构图",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "服务端发现架构图",
+            "slug": "服务端发现架构图",
+            "link": "#服务端发现架构图",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "多集群",
+        "slug": "多集群",
+        "link": "#多集群",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "多租户",
+        "slug": "多租户",
+        "link": "#多租户",
+        "children": [
+          {
+            "level": 3,
+            "title": "染色发布",
+            "slug": "染色发布",
+            "link": "#染色发布",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "多租户本质描述",
+            "slug": "多租户本质描述",
+            "link": "#多租户本质描述",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
         "title": "END 链接",
         "slug": "end-链接",
         "link": "#end-链接",
@@ -11301,826 +11366,6 @@ export const searchIndex = [
       }
     ],
     "path": "/go-advancend/markdown/9.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Lecture 1 introduction",
-    "headers": [
-      {
-        "level": 2,
-        "title": "分布式问题",
-        "slug": "分布式问题",
-        "link": "#分布式问题",
-        "children": [
-          {
-            "level": 3,
-            "title": "使用的技术",
-            "slug": "使用的技术",
-            "link": "#使用的技术",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "课程",
-        "slug": "课程",
-        "link": "#课程",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "我们需要讨论",
-        "slug": "我们需要讨论",
-        "link": "#我们需要讨论",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "我们需要解决",
-        "slug": "我们需要解决",
-        "link": "#我们需要解决",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "课程结构",
-        "slug": "课程结构",
-        "link": "#课程结构",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/mit-6-824/MIT6-824/1.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第10节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/mit-6-824/MIT6-824/10.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第11节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/mit-6-824/MIT6-824/11.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第12节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/mit-6-824/MIT6-824/12.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第13节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/mit-6-824/MIT6-824/13.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第14节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/mit-6-824/MIT6-824/14.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第15节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/mit-6-824/MIT6-824/15.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第16节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/mit-6-824/MIT6-824/16.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第17节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/mit-6-824/MIT6-824/17.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第18节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/mit-6-824/MIT6-824/18.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第19节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/mit-6-824/MIT6-824/19.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第2节 分布式系统抽象和工具",
-    "headers": [
-      {
-        "level": 2,
-        "title": "分布式系统",
-        "slug": "分布式系统",
-        "link": "#分布式系统",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/mit-6-824/MIT6-824/2.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第20节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/mit-6-824/MIT6-824/20.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第21节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/mit-6-824/MIT6-824/21.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第22节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/mit-6-824/MIT6-824/22.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第23节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/mit-6-824/MIT6-824/23.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第24节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/mit-6-824/MIT6-824/24.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第25节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/mit-6-824/MIT6-824/25.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第26节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/mit-6-824/MIT6-824/26.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第27节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/mit-6-824/MIT6-824/27.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第28节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/mit-6-824/MIT6-824/28.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第29节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/mit-6-824/MIT6-824/29.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第3节 SAC",
-    "headers": [
-      {
-        "level": 2,
-        "title": "可扩展性（Scalability）",
-        "slug": "可扩展性-scalability",
-        "link": "#可扩展性-scalability",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "可用性（Availability）",
-        "slug": "可用性-availability",
-        "link": "#可用性-availability",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "一致性（Consistency）",
-        "slug": "一致性-consistency",
-        "link": "#一致性-consistency",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/mit-6-824/MIT6-824/3.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第30节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/mit-6-824/MIT6-824/30.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第31节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/mit-6-824/MIT6-824/31.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第32节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/mit-6-824/MIT6-824/32.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第33节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/mit-6-824/MIT6-824/33.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第34节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/mit-6-824/MIT6-824/34.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第35节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/mit-6-824/MIT6-824/35.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第36节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/mit-6-824/MIT6-824/36.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第37节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/mit-6-824/MIT6-824/37.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第38节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/mit-6-824/MIT6-824/38.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第39节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/mit-6-824/MIT6-824/39.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第4节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/mit-6-824/MIT6-824/4.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第40节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/mit-6-824/MIT6-824/40.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第41节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/mit-6-824/MIT6-824/41.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第42节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/mit-6-824/MIT6-824/42.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第43节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/mit-6-824/MIT6-824/43.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第44节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/mit-6-824/MIT6-824/44.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第45节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/mit-6-824/MIT6-824/45.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第46节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/mit-6-824/MIT6-824/46.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第47节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/mit-6-824/MIT6-824/47.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第48节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/mit-6-824/MIT6-824/48.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第49节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/mit-6-824/MIT6-824/49.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第5节 分布式操作系统",
-    "headers": [
-      {
-        "level": 2,
-        "title": "什么是分布式系统",
-        "slug": "什么是分布式系统",
-        "link": "#什么是分布式系统",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "内核",
-        "slug": "内核",
-        "link": "#内核",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/mit-6-824/MIT6-824/5.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第6节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/mit-6-824/MIT6-824/6.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第7节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/mit-6-824/MIT6-824/7.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第8节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/mit-6-824/MIT6-824/8.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "第9节",
-    "headers": [
-      {
-        "level": 2,
-        "title": "END 链接",
-        "slug": "end-链接",
-        "link": "#end-链接",
-        "children": []
-      }
-    ],
-    "path": "/mit-6-824/MIT6-824/9.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -16447,6 +15692,826 @@ export const searchIndex = [
       }
     ],
     "path": "/Gomd_super/markdown/99.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "Lecture 1 introduction",
+    "headers": [
+      {
+        "level": 2,
+        "title": "分布式问题",
+        "slug": "分布式问题",
+        "link": "#分布式问题",
+        "children": [
+          {
+            "level": 3,
+            "title": "使用的技术",
+            "slug": "使用的技术",
+            "link": "#使用的技术",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "课程",
+        "slug": "课程",
+        "link": "#课程",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "我们需要讨论",
+        "slug": "我们需要讨论",
+        "link": "#我们需要讨论",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "我们需要解决",
+        "slug": "我们需要解决",
+        "link": "#我们需要解决",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "课程结构",
+        "slug": "课程结构",
+        "link": "#课程结构",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/mit-6-824/MIT6-824/1.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第10节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/mit-6-824/MIT6-824/10.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第11节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/mit-6-824/MIT6-824/11.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第12节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/mit-6-824/MIT6-824/12.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第13节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/mit-6-824/MIT6-824/13.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第14节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/mit-6-824/MIT6-824/14.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第15节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/mit-6-824/MIT6-824/15.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第16节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/mit-6-824/MIT6-824/16.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第17节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/mit-6-824/MIT6-824/17.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第18节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/mit-6-824/MIT6-824/18.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第19节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/mit-6-824/MIT6-824/19.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第2节 分布式系统抽象和工具",
+    "headers": [
+      {
+        "level": 2,
+        "title": "分布式系统",
+        "slug": "分布式系统",
+        "link": "#分布式系统",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/mit-6-824/MIT6-824/2.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第20节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/mit-6-824/MIT6-824/20.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第21节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/mit-6-824/MIT6-824/21.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第22节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/mit-6-824/MIT6-824/22.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第23节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/mit-6-824/MIT6-824/23.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第24节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/mit-6-824/MIT6-824/24.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第25节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/mit-6-824/MIT6-824/25.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第26节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/mit-6-824/MIT6-824/26.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第27节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/mit-6-824/MIT6-824/27.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第28节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/mit-6-824/MIT6-824/28.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第29节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/mit-6-824/MIT6-824/29.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第3节 SAC",
+    "headers": [
+      {
+        "level": 2,
+        "title": "可扩展性（Scalability）",
+        "slug": "可扩展性-scalability",
+        "link": "#可扩展性-scalability",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "可用性（Availability）",
+        "slug": "可用性-availability",
+        "link": "#可用性-availability",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "一致性（Consistency）",
+        "slug": "一致性-consistency",
+        "link": "#一致性-consistency",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/mit-6-824/MIT6-824/3.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第30节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/mit-6-824/MIT6-824/30.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第31节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/mit-6-824/MIT6-824/31.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第32节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/mit-6-824/MIT6-824/32.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第33节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/mit-6-824/MIT6-824/33.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第34节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/mit-6-824/MIT6-824/34.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第35节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/mit-6-824/MIT6-824/35.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第36节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/mit-6-824/MIT6-824/36.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第37节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/mit-6-824/MIT6-824/37.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第38节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/mit-6-824/MIT6-824/38.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第39节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/mit-6-824/MIT6-824/39.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第4节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/mit-6-824/MIT6-824/4.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第40节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/mit-6-824/MIT6-824/40.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第41节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/mit-6-824/MIT6-824/41.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第42节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/mit-6-824/MIT6-824/42.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第43节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/mit-6-824/MIT6-824/43.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第44节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/mit-6-824/MIT6-824/44.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第45节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/mit-6-824/MIT6-824/45.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第46节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/mit-6-824/MIT6-824/46.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第47节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/mit-6-824/MIT6-824/47.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第48节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/mit-6-824/MIT6-824/48.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第49节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/mit-6-824/MIT6-824/49.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第5节 分布式操作系统",
+    "headers": [
+      {
+        "level": 2,
+        "title": "什么是分布式系统",
+        "slug": "什么是分布式系统",
+        "link": "#什么是分布式系统",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "内核",
+        "slug": "内核",
+        "link": "#内核",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/mit-6-824/MIT6-824/5.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第6节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/mit-6-824/MIT6-824/6.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第7节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/mit-6-824/MIT6-824/7.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第8节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/mit-6-824/MIT6-824/8.html",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
+    "title": "第9节",
+    "headers": [
+      {
+        "level": 2,
+        "title": "END 链接",
+        "slug": "end-链接",
+        "link": "#end-链接",
+        "children": []
+      }
+    ],
+    "path": "/mit-6-824/MIT6-824/9.html",
     "pathLocale": "/",
     "extraFields": []
   },
@@ -23292,171 +23357,6 @@ export const searchIndex = [
       }
     ],
     "path": "/projects/projects/99.html",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "Go-mod包 & 多模块工作区（Workspaces）",
-    "headers": [
-      {
-        "level": 2,
-        "title": "⚡ go mod",
-        "slug": "⚡-go-mod",
-        "link": "#⚡-go-mod",
-        "children": [
-          {
-            "level": 3,
-            "title": "包的导入方式",
-            "slug": "包的导入方式",
-            "link": "#包的导入方式",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Go-mod方式管理包",
-            "slug": "go-mod方式管理包",
-            "link": "#go-mod方式管理包",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "项目开始~",
-            "slug": "项目开始",
-            "link": "#项目开始",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "为代码启用依赖项跟踪",
-            "slug": "为代码启用依赖项跟踪",
-            "link": "#为代码启用依赖项跟踪",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "所出现问题",
-            "slug": "所出现问题",
-            "link": "#所出现问题",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "github导入包",
-            "slug": "github导入包",
-            "link": "#github导入包",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "远程推送到github上",
-            "slug": "远程推送到github上",
-            "link": "#远程推送到github上",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "⚡ go workspace",
-        "slug": "⚡-go-workspace",
-        "link": "#⚡-go-workspace",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Why you need it？",
-        "slug": "why-you-need-it",
-        "link": "#why-you-need-it",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "简单上手",
-        "slug": "简单上手",
-        "link": "#简单上手",
-        "children": [
-          {
-            "level": 3,
-            "title": "文件内容",
-            "slug": "文件内容",
-            "link": "#文件内容",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "如何调用",
-            "slug": "如何调用",
-            "link": "#如何调用",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "调用 utils",
-            "slug": "调用-utils",
-            "link": "#调用-utils",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "go work 支持命令",
-        "slug": "go-work-支持命令",
-        "link": "#go-work-支持命令",
-        "children": [
-          {
-            "level": 3,
-            "title": "go.work 文件结构",
-            "slug": "go-work-文件结构",
-            "link": "#go-work-文件结构",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "如何使用",
-            "slug": "如何使用",
-            "link": "#如何使用",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "如何禁用工作区",
-            "slug": "如何禁用工作区",
-            "link": "#如何禁用工作区",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "开发流程演示",
-        "slug": "开发流程演示",
-        "link": "#开发流程演示",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "总结",
-        "slug": "总结",
-        "link": "#总结",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "参考文献",
-        "slug": "参考文献",
-        "link": "#参考文献",
-        "children": []
-      }
-    ],
-    "path": "/code/go-http-demo/vendor/github.com/3293172751/go-mod/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
-    "title": "glog",
-    "headers": [],
-    "path": "/code/go-http-demo/vendor/github.com/golang/glog/",
     "pathLocale": "/",
     "extraFields": []
   },
