@@ -29,7 +29,7 @@
  * @Date: 2022-10-04 21:37:41
  * @LastEditTime: 2022-10-24 18:44:31
  * @FilePath: \code\go-super\20-main.go
- * @Github_Address: https://github.com/3293172751/cs-awesome-Block_Chain
+ * @Github_Address: https://github.com/cubxxw/awesome-cs-cloudnative-blockchain
  * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://nsddd.top
  */</span>
 <span class="token keyword">package</span> main
@@ -264,7 +264,7 @@ fmt<span class="token punctuation">.</span><span class="token function">Println<
  * @Date: 2022-10-04 21:37:41
  * @LastEditTime: 2022-10-24 18:53:16
  * @FilePath: \code\go-super\21-main.go
- * @Github_Address: https://github.com/3293172751/cs-awesome-Block_Chain
+ * @Github_Address: https://github.com/cubxxw/awesome-cs-cloudnative-blockchain
  * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://nsddd.top
  */</span>
 <span class="token keyword">package</span> main

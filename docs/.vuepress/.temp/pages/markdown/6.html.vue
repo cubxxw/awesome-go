@@ -176,7 +176,7 @@ res3= -10
  * @Date: 2022-10-04 21:37:41
  * @LastEditTime: 2022-10-24 12:15:22
  * @FilePath: \code\go-super\8-main.go
- * @Github_Address: https://github.com/3293172751/cs-awesome-Block_Chain
+ * @Github_Address: https://github.com/cubxxw/awesome-cs-cloudnative-blockchain
  * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://nsddd.top
  */</span>
 <span class="token keyword">package</span> main
@@ -619,7 +619,7 @@ foo0 val = 11
  * @Date: 2022-10-04 21:37:41
  * @LastEditTime: 2022-10-24 16:13:14
  * @FilePath: \code\go-super\11-main.go
- * @Github_Address: https://github.com/3293172751/cs-awesome-Block_Chain
+ * @Github_Address: https://github.com/cubxxw/awesome-cs-cloudnative-blockchain
  * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://nsddd.top
  */</span>
 <span class="token keyword">package</span> main
@@ -972,7 +972,7 @@ fmt.Printf("unix时间戳为=%v \n unixnano时间搓=%v",now.unix(),now.unixnano
  * @Date: 2022-10-04 21:37:41
  * @LastEditTime: 2022-10-24 16:24:23
  * @FilePath: \code\go-super\12-main.go
- * @Github_Address: https://github.com/3293172751/cs-awesome-Block_Chain
+ * @Github_Address: https://github.com/cubxxw/awesome-cs-cloudnative-blockchain
  * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://nsddd.top
  */</span>
 <span class="token keyword">package</span> main
@@ -1012,7 +1012,7 @@ exit status 2
  * @Date: 2022-10-04 21:37:41
  * @LastEditTime: 2022-10-24 16:29:01
  * @FilePath: \code\go-super\12-main.go
- * @Github_Address: https://github.com/3293172751/cs-awesome-Block_Chain
+ * @Github_Address: https://github.com/cubxxw/awesome-cs-cloudnative-blockchain
  * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://nsddd.top
  */</span>
 <span class="token keyword">package</span> main
@@ -1105,7 +1105,7 @@ num <span class="token operator">:=</span> <span class="token number">10</span><
  * @Date: 2022-10-04 21:37:41
  * @LastEditTime: 2022-10-24 16:45:55
  * @FilePath: \code\go-super\14-main.go
- * @Github_Address: https://github.com/3293172751/cs-awesome-Block_Chain
+ * @Github_Address: https://github.com/cubxxw/awesome-cs-cloudnative-blockchain
  * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://nsddd.top
  */</span>
 <span class="token keyword">package</span> main

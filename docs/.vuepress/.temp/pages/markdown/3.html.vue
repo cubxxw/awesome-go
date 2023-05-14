@@ -514,7 +514,7 @@ A<span class="token operator">^</span>B <span class="token operator">=</span> <s
 <p>❤️注意：<strong>在计算机运算的时候，都是以补码的方式来运算的</strong></p>
 <h3 id="_10-3-golang-中的位运算" tabindex="-1"><a class="header-anchor" href="#_10-3-golang-中的位运算" aria-hidden="true">#</a> 10.3 golang 中的位运算</h3>
 <div class="custom-container warning"><p class="custom-container-title">注意</p>
-<p><a href="https://github.com/3293172751/cs-awesome-Block_Chain/blob/master/Gomd_super/bitwise.md" target="_blank" rel="noopener noreferrer">⚡ 强烈推荐位运算技巧，下面讲的是方法<ExternalLinkIcon/></a></p>
+<p><a href="https://github.com/cubxxw/awesome-cs-cloudnative-blockchain/blob/master/Gomd_super/bitwise.md" target="_blank" rel="noopener noreferrer">⚡ 强烈推荐位运算技巧，下面讲的是方法<ExternalLinkIcon/></a></p>
 </div>
 <p>Go 语言支持的位运算符如下表所示。假定 A 为60，B 为13：</p>
 <table>

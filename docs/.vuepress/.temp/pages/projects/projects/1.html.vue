@@ -61,7 +61,7 @@
 <p>我们可以看到，在上面的流程中，IAM 使用到了 3 种系统资源：<strong>用户（User）、密钥（Secret）和策略（Policy）</strong>，它们映射到程序设计中就是 3 种 [[RESTful]] 资源：</p>
 <blockquote>
 <p>RESTful 是 Representational State Transfer 的缩写。它是一种软件架构风格，用于构建网络应用程序。RESTful应用程序通过一组简单的，统一的约定来实现资源的状态转移，这些约定由 HTTP 协议提供。这些约定包括使用 HTTP 方法（如 GET、POST、PUT和DELETE）来执行操作，以及使用 HTTP 状态码来表示结果。</p>
-<p>RESTful API是一种符合REST规范的API，通常采用HTTP协议，用于进行资源的查询和操作，并通过JSON或XML格式进行数据传输.</p>
+<p>RESTful API是一种符合REST规范的API，通常采用HTTP协议，用于进行资源的查询和操作，并通过JSON或XML格式进行数据传输。</p>
 </blockquote>
 <ol>
 <li>用户（User）：实现对用户的增、删、改、查、修改密码、批量修改等操作。</li>
@@ -78,7 +78,7 @@
 <li><strong>iam-apiserver</strong>：核心组件，通过 RESTful API 完成用户、密钥和授权策略的增删改查。</li>
 <li><strong>iam-authz-server</strong>：授权服务，从 iam-apiserver 拉取密钥和授权策略，并缓存在内存中，用户通过请求 iam-authz-server 提供的 /v1/authz 接口来完成资源的授权。/v1/authz 接口会查询缓存的授权策略，根据这些策略决定授权是否通过。iam-authz-server 也会将授权日志上报的 Redis 中。</li>
 <li><strong>iam-pump</strong>：从 redis 中拉取缓存的授权日志，分析后存入 mongo 数据库中。</li>
-<li><strong>iam-watcher</strong>：分布式作业服务，间隔一定时间查询MariaDB数据库，执行一些业务逻辑处理，例如：从policy_audit表中删除超过指定天数的授权策略、禁用超过指定天数还没有登录过的用户。</li>
+<li><strong>iam-watcher</strong>：分布式作业服务，间隔一定时间查询 MariaDB 数据库，执行一些业务逻辑处理，例如：从 policy_audit 表中删除超过指定天数的授权策略、禁用超过指定天数还没有登录过的用户。</li>
 <li><strong>marmotedu-sdk-go</strong>：IAM 的 golang sdk，参考了 kubernetes 的 client-go，封装了 iam-apiserver 和 iam-authz-server 的所有 RESTful API，方便用户调用。</li>
 <li><strong>iamctl</strong>：IAM 的客户端，参考了 kubernetes 的客户端工具 kubectl，通过 marmotedu-sdk-go 访问 iam-apiserver 和 iam-authz-server。iamctl 封装了 iam-apiserver 的所有 RESTful API，还封装了其它功能。用户可以通过命令行的方式访问 iam-apiserver。</li>
 <li><strong>redis</strong>：缓存数据库，用来缓存密钥和授权策略，降低访问延时。同时也会缓存授权日志，作为运营系统的数据来源。</li>
@@ -89,16 +89,16 @@
 <ul>
 <li><strong>app</strong>：第三方应用，是 IAM 的使用方，通过 RESTful API 或者 marmotedu-sdk-go 调用 iam-authz-server 提供的 /v1/authz 接口完成对资源的授权。</li>
 <li><strong>iam-webconsole</strong>：IAM 的前端，通过 RESTful API 调用 iam-apiserver 实现用户、密钥和策略的增删改查。</li>
-<li><strong>iam-operating-system</strong>：IAM 运营系统，可以用来展示运营数据或者对 IAM 进行运营类管理，比如提供上帝视角查看所有用户的资源，调整某个用户下密钥的最大个数等。</li>
+<li><strong>iam-operating-system</strong>： IAM 运营系统，可以用来展示运营数据或者对 IAM 进行运营类管理，比如提供上帝视角查看所有用户的资源，调整某个用户下密钥的最大个数等。</li>
 <li><strong>Loadbalance</strong>：负载均衡器，可以是 Nginx、Haproxy 或者 API 网关，后端挂载多个 iam-apiserver 和 iam-authz-server 实例，实现 iam-apiserver 和 iam-authz-server 组件的高可用。</li>
 </ul>
 <p><strong>能力说明：</strong></p>
 <ul>
 <li><strong>RESTful 资源管理</strong> IAM 支持对user、secret、policy资源进行CRUD管理。</li>
-<li><strong>资源授权</strong> 可以对资源访问进行授权。</li>
-<li><strong>授权日志处理</strong> 支持对授权日志进行处理并展示。</li>
-<li><strong>命令行工具</strong> 通过iamctl命令行工具，可以很方便的进行各类操作。</li>
-<li><strong>分布式作业</strong> iam-watcher为IAM项目的分布式作业服务，可以实现异步任务，并插件化的添加新的任务类型。</li>
+<li><strong>资源授权</strong>  可以对资源访问进行授权。</li>
+<li><strong>授权日志处理</strong>  支持对授权日志进行处理并展示。</li>
+<li><strong>命令行工具</strong>  通过iamctl命令行工具，可以很方便的进行各类操作。</li>
+<li><strong>分布式作业</strong>  iam-watcher为IAM项目的分布式作业服务，可以实现异步任务，并插件化的添加新的任务类型。</li>
 </ul>
 </blockquote>
 <p>此外，IAM 系统为存储数据使用到的 3 种数据库的说明如下所示。</p>
@@ -121,13 +121,13 @@
 <p>其中，前端负责页面的展示以及数据的加载和渲染，后端只负责返回前端需要的数据。iam-operating-system 前后端分离架构如下图所示。</p>
 <p><img src="http://sm.nsddd.top/sm202301152214453.png" alt="image-20230115221432369"></p>
 <p>采用了前后端分离架构之后，当你通过浏览器请求前端 ops-webconsole 时，ops-webconsole 会先请求静态文件服务器加载静态文件，比如 HTML、CSS 和 JavaScript，然后它会执行 JavaScript，通过负载均衡请求后端数据，最后把后端返回的数据渲染到前端页面中。</p>
-<p>采用前后端分离的架构，让前后端通过 RESTful API 通信，会带来以下 5 点好处：</p>
+<p>采用前后端分离的架构，让前后端通过 <code v-pre>RESTful API</code> 通信，会带来以下 5 点好处：</p>
 <ol>
-<li>可以让前、后端人员各自专注在自己业务的功能开发上，让专业的人做专业的事，来提高代码质量和开发效率</li>
-<li>前后端可并行开发和发布，这也能提高开发和发布效率，加快产品迭代速度</li>
-<li>前后端组件、代码分开，职责分明，可以增加代码的维护性和可读性，减少代码改动引起的 Bug 概率，同时也能快速定位 Bug</li>
-<li>前端 JavaScript 可以处理后台的数据，减少对后台服务器的压力</li>
-<li>可根据需要选择性水平扩容前端或者后端来节约成本</li>
+<li>可以让前、后端人员各自专注在自己业务的功能开发上，让专业的人做专业的事，来提高代码质量和开发效率。</li>
+<li>前后端可并行开发和发布，这也能提高开发和发布效率，加快产品迭代速度。</li>
+<li>前后端组件、代码分开，职责分明，可以增加代码的维护性和可读性，减少代码改动引起的 Bug 概率，同时也能快速定位 Bug。</li>
+<li>前端 JavaScript 可以处理后台的数据，减少对后台服务器的压力。</li>
+<li>可根据需要选择性水平扩容前端或者后端来节约成本。</li>
 </ol>
 <h3 id="mvc-软件架构" tabindex="-1"><a class="header-anchor" href="#mvc-软件架构" aria-hidden="true">#</a> MVC 软件架构</h3>
 <p>但是，如果运营系统功能比较少，采用前后端分离框架的弊反而大于利，比如前后端分离要同时维护 2 个组件会导致部署更复杂，并且前后端分离将人员也分开了，这会增加一定程度的沟通成本。同时，因为代码中也需要实现前后端交互的逻辑，所以会引入一定的开发量。</p>

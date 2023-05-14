@@ -9,8 +9,8 @@
 <blockquote>
 <p>❤️💕💕Go语言高级篇章,在此之前建议您先了解基础和进阶篇。Myblog:<a href="http://nsddd.top/" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
 </blockquote>
-<h3 id="go语言基础篇" tabindex="-1"><a class="header-anchor" href="#go语言基础篇" aria-hidden="true">#</a> <strong><a href="https://github.com/3293172751/Block_Chain/blob/master/TOC.md" target="_blank" rel="noopener noreferrer">Go语言基础篇<ExternalLinkIcon/></a></strong></h3>
-<h3 id="go语言100篇进阶" tabindex="-1"><a class="header-anchor" href="#go语言100篇进阶" aria-hidden="true">#</a> <strong><a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/README.md" target="_blank" rel="noopener noreferrer">Go语言100篇进阶<ExternalLinkIcon/></a></strong></h3>
+<h3 id="go语言基础篇" tabindex="-1"><a class="header-anchor" href="#go语言基础篇" aria-hidden="true">#</a> <strong><a href="https://github.com/cubxxw/awesome-cs-cloudnative-blockchain/blob/master/TOC.md" target="_blank" rel="noopener noreferrer">Go语言基础篇<ExternalLinkIcon/></a></strong></h3>
+<h3 id="go语言100篇进阶" tabindex="-1"><a class="header-anchor" href="#go语言100篇进阶" aria-hidden="true">#</a> <strong><a href="https://github.com/cubxxw/awesome-cs-cloudnative-blockchain/blob/master/Gomd_super/README.md" target="_blank" rel="noopener noreferrer">Go语言100篇进阶<ExternalLinkIcon/></a></strong></h3>
 <hr>
 <p>[TOC]</p>
 <h2 id="cobra-简介" tabindex="-1"><a class="header-anchor" href="#cobra-简介" aria-hidden="true">#</a> cobra 简介</h2>
@@ -41,7 +41,7 @@
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>cobra init clid  <span class="token parameter variable">-a</span> xiongxinwei <span class="token parameter variable">-l</span> MIT 
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><div class="custom-container warning"><p class="custom-container-title">📜 对上面的解释</p>
 <ul>
-<li>默认使用的  <a href="https://github.com/c-ub/cub/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">Apache License 2.0 <ExternalLinkIcon/></a>© 协议</li>
+<li>默认使用的  <a href="https://github.com/kubecub/cub/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">Apache License 2.0 <ExternalLinkIcon/></a>© 协议</li>
 <li>可以指定作者 <code v-pre>-a</code></li>
 <li>可以指定协议 <code v-pre>-l</code>  (MIT / Apache)</li>
 </ul>
@@ -507,7 +507,7 @@ x is  <span class="token number">1102</span>
 </ul>
 <hr>
 <ul>
-<li><a href="https://github.com/3293172751/Block_Chain/blob/master/Git/git-contributor.md" target="_blank" rel="noopener noreferrer">参与贡献❤️💕💕<ExternalLinkIcon/></a></li>
+<li><a href="https://github.com/cubxxw/awesome-cs-cloudnative-blockchain/blob/master/Git/git-contributor.md" target="_blank" rel="noopener noreferrer">参与贡献❤️💕💕<ExternalLinkIcon/></a></li>
 </ul>
 </div></template>
 

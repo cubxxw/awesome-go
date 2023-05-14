@@ -154,7 +154,7 @@ main hello word10
  * @Date: 2022-10-04 21:37:41
  * @LastEditTime: 2022-10-25 11:25:21
  * @FilePath: \code\go-super\33-main.go
- * @Github_Address: https://github.com/3293172751/cs-awesome-Block_Chain
+ * @Github_Address: https://github.com/cubxxw/awesome-cs-cloudnative-blockchain
  * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://nsddd.top
  */</span>
 <span class="token keyword">package</span> main
@@ -198,7 +198,7 @@ main hello word10
  * @Date: 2022-10-04 21:37:41
  * @LastEditTime: 2022-10-25 12:04:16
  * @FilePath: \code\go-super\33-main.go
- * @Github_Address: https://github.com/3293172751/cs-awesome-Block_Chain
+ * @Github_Address: https://github.com/cubxxw/awesome-cs-cloudnative-blockchain
  * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://nsddd.top
  */</span>
 <span class="token keyword">package</span> main

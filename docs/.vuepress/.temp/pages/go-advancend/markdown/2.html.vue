@@ -8,8 +8,8 @@
 </ul>
 <blockquote>
 <p>❤️💕💕Go语言高级篇章,在此之前建议您先了解基础和进阶篇。Myblog:<a href="http://nsddd.top/" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
-<h3 id="go语言基础篇" tabindex="-1"><a class="header-anchor" href="#go语言基础篇" aria-hidden="true">#</a> <strong><a href="https://github.com/3293172751/Block_Chain/blob/master/TOC.md" target="_blank" rel="noopener noreferrer">Go语言基础篇<ExternalLinkIcon/></a></strong></h3>
-<h3 id="go语言100篇进阶" tabindex="-1"><a class="header-anchor" href="#go语言100篇进阶" aria-hidden="true">#</a> <strong><a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/README.md" target="_blank" rel="noopener noreferrer">Go语言100篇进阶<ExternalLinkIcon/></a></strong></h3>
+<h3 id="go语言基础篇" tabindex="-1"><a class="header-anchor" href="#go语言基础篇" aria-hidden="true">#</a> <strong><a href="https://github.com/cubxxw/awesome-cs-cloudnative-blockchain/blob/master/TOC.md" target="_blank" rel="noopener noreferrer">Go语言基础篇<ExternalLinkIcon/></a></strong></h3>
+<h3 id="go语言100篇进阶" tabindex="-1"><a class="header-anchor" href="#go语言100篇进阶" aria-hidden="true">#</a> <strong><a href="https://github.com/cubxxw/awesome-cs-cloudnative-blockchain/blob/master/Gomd_super/README.md" target="_blank" rel="noopener noreferrer">Go语言100篇进阶<ExternalLinkIcon/></a></strong></h3>
 </blockquote>
 <hr>
 <p>[TOC]</p>
@@ -20,7 +20,7 @@
 <hr>
 <h3 id="参考链接" tabindex="-1"><a class="header-anchor" href="#参考链接" aria-hidden="true">#</a> 参考链接</h3>
 <ul>
-<li><a href="https://github.com/3293172751/Block_Chain/blob/master/markdown/%E5%B9%B6%E5%8F%91.md" target="_blank" rel="noopener noreferrer">并发学习<ExternalLinkIcon/></a></li>
+<li><a href="https://github.com/cubxxw/awesome-cs-cloudnative-blockchain/blob/master/markdown/%E5%B9%B6%E5%8F%91.md" target="_blank" rel="noopener noreferrer">并发学习<ExternalLinkIcon/></a></li>
 <li><a href="https://github.com/3293172751/os" target="_blank" rel="noopener noreferrer">操作系统学习<ExternalLinkIcon/></a></li>
 </ul>
 <p><strong>项目会完整发布到GitHub仓库，有需要的可以在GitHub上面⭐收藏，fock进行贡献</strong></p>
@@ -150,7 +150,7 @@ msg <span class="token operator">:=</span> <span class="token operator">&lt;-</s
 </ul>
 <hr>
 <ul>
-<li><a href="https://github.com/3293172751/Block_Chain/blob/master/Git/git-contributor.md" target="_blank" rel="noopener noreferrer">参与贡献❤️💕💕<ExternalLinkIcon/></a></li>
+<li><a href="https://github.com/cubxxw/awesome-cs-cloudnative-blockchain/blob/master/Git/git-contributor.md" target="_blank" rel="noopener noreferrer">参与贡献❤️💕💕<ExternalLinkIcon/></a></li>
 </ul>
 </div></template>
 

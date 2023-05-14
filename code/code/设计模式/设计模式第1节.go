@@ -4,7 +4,7 @@
  * @Date: 2022-10-26 20:08:39
  * @LastEditTime: 2022-10-26 20:15:04
  * @FilePath: \code\设计模式\设计模式第1节.go
- * @Github_Address: https://github.com/3293172751/cs-awesome-Block_Chain
+ * @Github_Address: https://github.com/cubxxw/awesome-cs-cloudnative-blockchain
  * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://nsddd.top
  */
 package main

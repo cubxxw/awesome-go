@@ -5,7 +5,7 @@
 <div class="custom-container danger"><p class="custom-container-title">预备知识点</p>
 <ul>
 <li>
-<p><a href="https://github.com/3293172751/cs-awesome-Block_Chain/blob/master/web/README.md" target="_blank" rel="noopener noreferrer">此章节预备计算机网络知识<ExternalLinkIcon/></a></p>
+<p><a href="https://github.com/cubxxw/awesome-cs-cloudnative-blockchain/blob/master/web/README.md" target="_blank" rel="noopener noreferrer">此章节预备计算机网络知识<ExternalLinkIcon/></a></p>
 </li>
 <li>
 <p><a href="https://go.nsddd.top" target="_blank" rel="noopener noreferrer">此章节预备Go语言基础知识<ExternalLinkIcon/></a></p>

@@ -56,7 +56,7 @@
 <li>开关级别：启动应用程序时，期望哪些输出级别的日志被打印。例如，使用 <code v-pre>glog 时 -v=4</code> ，说明了只有日志级别高于 4 的日志才会被打印。</li>
 </ul>
 <p>如果开关级别设置为 L ，只有输出级别 <code v-pre>&gt;=L</code> 时，日志才会被打印。例如，开关级别为 Warn，则只会记录 <code v-pre>Warn</code>、<code v-pre>Error</code> 、<code v-pre>Panic</code> 和 <code v-pre>Fatal</code> 级别的日志。具体的输出关系如下图所示：
-<img src="https://img-blog.csdnimg.cn/f290482f7933473bb6ed8ea515765a43.png" alt="在这里插入图片描述"></p>
+<img src="http://sm.nsddd.top/sm202304181832774.png" alt="在这里插入图片描述"></p>
 <h4 id="支持自定义配置" tabindex="-1"><a class="header-anchor" href="#支持自定义配置" aria-hidden="true">#</a> 支持自定义配置</h4>
 <p>不同的运行环境，需要不同的日志输出配置，例如：开发测试环境为了能够方便地 Debug，需要设置日志级别为 Debug 级别；现网环境为了提高应用程序的性能，则需要设置日志级别为 Info 级别。又比如，现网环境为了方便日志采集，通常会输出 <code v-pre>JSON</code> 格式的日志；开发测试环境为了方便查看日志，会输出 <code v-pre>TEXT</code> 格式的日志。所以，我们的日志包需要能够被配置，还要不同环境采用不同的配置。通过配置，可以在不重新编译代码的情况下，改变记录日志的行为。</p>
 <h4 id="支持输出到标准输出和文件" tabindex="-1"><a class="header-anchor" href="#支持输出到标准输出和文件" aria-hidden="true">#</a> 支持输出到标准输出和文件</h4>
@@ -125,8 +125,7 @@
 <p>在开发、测试时开启颜色输出，不同级别的日志会被不同颜色标识，这样我们可以很轻松地发现一些 Error、Warn 级别的日志，方便开发调试。发布到生产环境时，可以关闭颜色输出，以提高性能。</p>
 <h4 id="兼容标准库-log-包" tabindex="-1"><a class="header-anchor" href="#兼容标准库-log-包" aria-hidden="true">#</a> 兼容标准库 log 包</h4>
 <p>一些早期的 Go 项目大量使用了标准库 log 包，如果我们的日志库能够兼容标准库 log 包，我们就可以很容易地替换掉标准库 log 包。例如，logrus 就兼容标准库 log 包。这里，我们来看一个使用了标准库 log 包的代码：</p>
-<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code>
-<span class="token keyword">package</span> main
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">package</span> main
 
 <span class="token keyword">import</span> <span class="token punctuation">(</span>
     <span class="token string">"log"</span>
@@ -136,9 +135,8 @@
     log<span class="token punctuation">.</span><span class="token function">Print</span><span class="token punctuation">(</span><span class="token string">"call Print: line1"</span><span class="token punctuation">)</span>
     log<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"call Println: line2"</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>只需要使用<code v-pre>log &quot;github.com/sirupsen/logrus&quot;</code>替换&quot;log&quot;就可以完成标准库 log 包的切换：</p>
-<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code>
-<span class="token keyword">package</span> main
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>只需要使用<code v-pre>log &quot;github.com/sirupsen/logrus&quot;</code>替换&quot;log&quot;就可以完成标准库 log 包的切换：</p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">package</span> main
 
 <span class="token keyword">import</span> <span class="token punctuation">(</span>
     log <span class="token string">"github.com/sirupsen/logrus"</span>
@@ -148,7 +146,7 @@
     log<span class="token punctuation">.</span><span class="token function">Print</span><span class="token punctuation">(</span><span class="token string">"call Print: line1"</span><span class="token punctuation">)</span>
     log<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"call Println: line2"</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="支持输出到不同的位置" tabindex="-1"><a class="header-anchor" href="#支持输出到不同的位置" aria-hidden="true">#</a> 支持输出到不同的位置</h4>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="支持输出到不同的位置" tabindex="-1"><a class="header-anchor" href="#支持输出到不同的位置" aria-hidden="true">#</a> 支持输出到不同的位置</h4>
 <p>在分布式系统中，一个服务会被部署在多台机器上，这时候如果我们要查看日志，就需要分别登录不同的机器查看，非常麻烦。我们更希望将日志统一投递到 Elasticsearch 上，在 Elasticsearch 上查看日志。</p>
 <p>我们还可能需要从日志中分析某个接口的调用次数、某个用户的请求次数等信息，这就需要我们能够对日志进行处理。一般的做法是将日志投递到 Kafka，数据处理服务消费 Kafka 中保存的日志，从而分析出调用次数等信息。</p>
 <p>以上两种场景，分别需要把日志投递到 <code v-pre>Elasticsearch</code>、<code v-pre>Kafka</code> 等组件，如果我们的日志包支持将日志投递到不同的目的端，那会是一项非常让人期待的功能：</p>

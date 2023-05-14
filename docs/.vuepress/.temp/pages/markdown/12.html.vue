@@ -207,7 +207,7 @@ func (struct_name_variable struct_name) method_namen() [return_type] {
  * @Date: 2022-10-04 21:37:41
  * @LastEditTime: 2022-10-25 09:11:10
  * @FilePath: \code\go-super\27-main.go
- * @Github_Address: https://github.com/3293172751/cs-awesome-Block_Chain
+ * @Github_Address: https://github.com/cubxxw/awesome-cs-cloudnative-blockchain
  * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://nsddd.top
  */</span>
 <span class="token keyword">package</span> main

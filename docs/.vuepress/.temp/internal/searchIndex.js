@@ -9642,27 +9642,27 @@ export const searchIndex = [
       },
       {
         "level": 2,
-        "title": "一、Golang “调度器” 的由来？#",
+        "title": "一、Golang “调度器” 的由来",
         "slug": "一、golang-调度器-的由来",
         "link": "#一、golang-调度器-的由来",
         "children": [
           {
             "level": 3,
-            "title": "(1) 单进程时代不需要调度器#",
+            "title": "(1) 单进程时代不需要调度器",
             "slug": "_1-单进程时代不需要调度器",
             "link": "#_1-单进程时代不需要调度器",
             "children": []
           },
           {
             "level": 3,
-            "title": "(2) 多进程 / 线程时代有了调度器需求#",
+            "title": "(2) 多进程 / 线程时代有了调度器需求",
             "slug": "_2-多进程-线程时代有了调度器需求",
             "link": "#_2-多进程-线程时代有了调度器需求",
             "children": []
           },
           {
             "level": 3,
-            "title": "(3) 协程来提高 CPU 利用率#",
+            "title": "(3) 协程来提高 CPU 利用率",
             "slug": "_3-协程来提高-cpu-利用率",
             "link": "#_3-协程来提高-cpu-利用率",
             "children": []
@@ -9671,7 +9671,7 @@ export const searchIndex = [
       },
       {
         "level": 2,
-        "title": "N:1 关系#",
+        "title": "N:1 关系",
         "slug": "n-1-关系",
         "link": "#n-1-关系",
         "children": []
@@ -9722,34 +9722,34 @@ export const searchIndex = [
       },
       {
         "level": 2,
-        "title": "有关 P 和 M 的个数问题#",
+        "title": "有关 P 和 M 的个数问题",
         "slug": "有关-p-和-m-的个数问题",
         "link": "#有关-p-和-m-的个数问题",
         "children": []
       },
       {
         "level": 2,
-        "title": "P 和 M 何时会被创建#",
+        "title": "P 和 M 何时会被创建",
         "slug": "p-和-m-何时会被创建",
         "link": "#p-和-m-何时会被创建",
         "children": [
           {
             "level": 3,
-            "title": "(2) 调度器的设计策略#",
+            "title": "(2) 调度器的设计策略",
             "slug": "_2-调度器的设计策略",
             "link": "#_2-调度器的设计策略",
             "children": []
           },
           {
             "level": 3,
-            "title": "(3) go func () 调度流程#",
+            "title": "(3) go func () 调度流程",
             "slug": "_3-go-func-调度流程",
             "link": "#_3-go-func-调度流程",
             "children": []
           },
           {
             "level": 3,
-            "title": "(4) 调度器的生命周期#",
+            "title": "(4) 调度器的生命周期",
             "slug": "_4-调度器的生命周期",
             "link": "#_4-调度器的生命周期",
             "children": []
@@ -22642,6 +22642,50 @@ export const searchIndex = [
       },
       {
         "level": 2,
+        "title": "Makefile 多线程",
+        "slug": "makefile-多线程",
+        "link": "#makefile-多线程",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Makefile 参数",
+        "slug": "makefile-参数",
+        "link": "#makefile-参数",
+        "children": [
+          {
+            "level": 3,
+            "title": "常用的参数",
+            "slug": "常用的参数",
+            "link": "#常用的参数",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "补充：Makefile Go语言交叉编译",
+        "slug": "补充-makefile-go语言交叉编译",
+        "link": "#补充-makefile-go语言交叉编译",
+        "children": [
+          {
+            "level": 3,
+            "title": "获取版本号",
+            "slug": "获取版本号",
+            "link": "#获取版本号",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "实现交叉编译",
+            "slug": "实现交叉编译",
+            "link": "#实现交叉编译",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
         "title": "总结",
         "slug": "总结",
         "link": "#总结",
@@ -22853,7 +22897,29 @@ export const searchIndex = [
         "title": "第四步，版权检查",
         "slug": "第四步-版权检查",
         "link": "#第四步-版权检查",
-        "children": []
+        "children": [
+          {
+            "level": 3,
+            "title": "如何安装 addlicense？",
+            "slug": "如何安装-addlicense",
+            "link": "#如何安装-addlicense",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "如何使用 addlicense？",
+            "slug": "如何使用-addlicense",
+            "link": "#如何使用-addlicense",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "支持的许可证类型",
+            "slug": "支持的许可证类型",
+            "link": "#支持的许可证类型",
+            "children": []
+          }
+        ]
       },
       {
         "level": 2,

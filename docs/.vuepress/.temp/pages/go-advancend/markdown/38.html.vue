@@ -9,8 +9,8 @@
 <blockquote>
 <p>❤️💕💕Go语言高级篇章,在此之前建议您先了解基础和进阶篇。Myblog:<a href="http://nsddd.top/" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
 </blockquote>
-<h2 id="go语言基础篇" tabindex="-1"><a class="header-anchor" href="#go语言基础篇" aria-hidden="true">#</a> <strong><a href="https://github.com/3293172751/Block_Chain/blob/master/TOC.md" target="_blank" rel="noopener noreferrer">Go语言基础篇<ExternalLinkIcon/></a></strong></h2>
-<h2 id="go语言100篇进阶" tabindex="-1"><a class="header-anchor" href="#go语言100篇进阶" aria-hidden="true">#</a> <strong><a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/README.md" target="_blank" rel="noopener noreferrer">Go语言100篇进阶<ExternalLinkIcon/></a></strong></h2>
+<h2 id="go语言基础篇" tabindex="-1"><a class="header-anchor" href="#go语言基础篇" aria-hidden="true">#</a> <strong><a href="https://github.com/cubxxw/awesome-cs-cloudnative-blockchain/blob/master/TOC.md" target="_blank" rel="noopener noreferrer">Go语言基础篇<ExternalLinkIcon/></a></strong></h2>
+<h2 id="go语言100篇进阶" tabindex="-1"><a class="header-anchor" href="#go语言100篇进阶" aria-hidden="true">#</a> <strong><a href="https://github.com/cubxxw/awesome-cs-cloudnative-blockchain/blob/master/Gomd_super/README.md" target="_blank" rel="noopener noreferrer">Go语言100篇进阶<ExternalLinkIcon/></a></strong></h2>
 <hr>
 <p>[TOC]</p>
 <h2 id="前言" tabindex="-1"><a class="header-anchor" href="#前言" aria-hidden="true">#</a> 前言</h2>
@@ -31,8 +31,8 @@
 <p><code v-pre>第一章</code> Golang 调度器的由来</p>
 <p><code v-pre>第二章</code> Goroutine 调度器的 GMP 模型及设计思想</p>
 <p><code v-pre>第三章</code> Goroutine 调度场景过程全图文解析</p>
-<h2 id="一、golang-调度器-的由来" tabindex="-1"><a class="header-anchor" href="#一、golang-调度器-的由来" aria-hidden="true">#</a> 一、Golang “调度器” 的由来？<a href="#a19960">#</a></h2>
-<h3 id="_1-单进程时代不需要调度器" tabindex="-1"><a class="header-anchor" href="#_1-单进程时代不需要调度器" aria-hidden="true">#</a> (1) 单进程时代不需要调度器<a href="#e9b84b">#</a></h3>
+<h2 id="一、golang-调度器-的由来" tabindex="-1"><a class="header-anchor" href="#一、golang-调度器-的由来" aria-hidden="true">#</a> 一、Golang “调度器” 的由来</h2>
+<h3 id="_1-单进程时代不需要调度器" tabindex="-1"><a class="header-anchor" href="#_1-单进程时代不需要调度器" aria-hidden="true">#</a> (1) 单进程时代不需要调度器</h3>
 <p>我们知道，一切的软件都是跑在操作系统上，真正用来干活 (计算) 的是 CPU。早期的操作系统每个程序就是一个进程，直到一个程序运行完，才能进行下一个进程，就是 “单进程时代”</p>
 <p>一切的程序只能串行发生。<br>
 <img src="https://cdn.learnku.com/uploads/images/202003/11/58489/06IoYRyruP.png!large" alt=""></p>
@@ -47,31 +47,28 @@
 </ol>
 <p>那么能不能有多个进程来宏观一起来执行多个任务呢？</p>
 <p>后来操作系统就具有了<strong>最早的并发能力：多进程并发</strong>，当一个进程阻塞的时候，切换到另外等待执行的进程，这样就能尽量把 CPU 利用起来，CPU 就不浪费了。</p>
-<h3 id="_2-多进程-线程时代有了调度器需求" tabindex="-1"><a class="header-anchor" href="#_2-多进程-线程时代有了调度器需求" aria-hidden="true">#</a> (2) 多进程 / 线程时代有了调度器需求<a href="#80b97a">#</a></h3>
+<h3 id="_2-多进程-线程时代有了调度器需求" tabindex="-1"><a class="header-anchor" href="#_2-多进程-线程时代有了调度器需求" aria-hidden="true">#</a> (2) 多进程 / 线程时代有了调度器需求</h3>
 <p><img src="https://cdn.learnku.com/uploads/images/202003/11/58489/sLve6TagD3.png!large" alt=""></p>
 <p>在多进程 / 多线程的操作系统中，就解决了阻塞的问题，因为一个进程阻塞 cpu 可以立刻切换到其他进程中去执行，而且调度 cpu 的算法可以保证在运行的进程都可以被分配到 cpu 的运行时间片。这样从宏观来看，似乎多个进程是在同时被运行。</p>
 <p>但新的问题就又出现了，进程拥有太多的资源，进程的创建、切换、销毁，都会占用很长的时间，CPU 虽然利用起来了，但如果进程过多，CPU 有很大的一部分都被用来进行进程调度了。</p>
 <p><strong>怎么才能提高 CPU 的利用率呢？</strong></p>
-<p>但是对于 Linux 操作系统来讲，cpu 对进程的态度和线程的态度是一样的。<br>
-<img src="https://cdn.learnku.com/uploads/images/202003/11/58489/dNWd00AiEZ.png!large" alt=""></p>
+<p>但是对于 Linux 操作系统来讲，cpu 对进程的态度和线程的态度是一样的。  <img src="http://sm.nsddd.top/sm202304141352813.png" alt="sadfa"></p>
 <p>很明显，CPU 调度切换的是进程和线程。尽管线程看起来很美好，但实际上多线程开发设计会变得更加复杂，要考虑很多同步竞争等问题，如锁、竞争冲突等。</p>
-<h3 id="_3-协程来提高-cpu-利用率" tabindex="-1"><a class="header-anchor" href="#_3-协程来提高-cpu-利用率" aria-hidden="true">#</a> (3) 协程来提高 CPU 利用率<a href="#49925f">#</a></h3>
+<h3 id="_3-协程来提高-cpu-利用率" tabindex="-1"><a class="header-anchor" href="#_3-协程来提高-cpu-利用率" aria-hidden="true">#</a> (3) 协程来提高 CPU 利用率</h3>
 <p>多进程、多线程已经提高了系统的并发能力，但是在当今互联网高并发场景下，为每个任务都创建一个线程是不现实的，因为会消耗大量的内存 (进程虚拟内存会占用 4GB [32 位操作系统], 而线程也要大约 4MB)。</p>
-<p>大量的进程 / 线程出现了新的问题</p>
+<p>大量的 <strong>进程 / 线程</strong> 出现了新的问题</p>
 <ul>
 <li>高内存占用</li>
 <li>调度的高消耗 CPU</li>
 </ul>
-<p>好了，然后工程师们就发现，其实一个线程分为 “内核态 “线程和” 用户态 “线程。</p>
+<p>好了，然后工程师们就发现，其实一个线程分为 “<strong>内核态</strong> “线程和” <strong>用户态</strong> “线程。</p>
 <p>一个 “用户态线程” 必须要绑定一个 “内核态线程”，但是 CPU 并不知道有 “用户态线程” 的存在，它只知道它运行的是一个 “内核态线程”(Linux 的 PCB 进程控制块)。</p>
 <p><img src="https://cdn.learnku.com/uploads/images/202003/11/58489/TfStmYsfyF.png!large" alt=""></p>
 <p>这样，我们再去细化去分类一下，内核线程依然叫 “线程 (thread)”，用户线程叫 “协程 (co-routine)”.</p>
 <p><img src="https://cdn.learnku.com/uploads/images/202003/11/58489/vgzlKzvOUL.png!large" alt=""></p>
 <p>看到这里，我们就要开脑洞了，既然一个协程 (co-routine) 可以绑定一个线程 (thread)，那么能不能多个协程 (co-routine) 绑定一个或者多个线程 (thread) 上呢。</p>
 <p>之后，我们就看到了有 3 种协程和线程的映射关系：</p>
-<blockquote>
-<h2 id="n-1-关系" tabindex="-1"><a class="header-anchor" href="#n-1-关系" aria-hidden="true">#</a> N:1 关系<a href="#35c656">#</a></h2>
-</blockquote>
+<h2 id="n-1-关系" tabindex="-1"><a class="header-anchor" href="#n-1-关系" aria-hidden="true">#</a> N:1 关系</h2>
 <p>N 个协程绑定 1 个线程，优点就是<strong>协程在用户态线程即完成切换，不会陷入到内核态，这种切换非常的轻量快速</strong>。但也有很大的缺点，1 个进程的所有协程都绑定在 1 个线程上</p>
 <p>缺点：</p>
 <ul>
@@ -133,9 +130,7 @@
 <li><strong>M</strong>：线程想运行任务就得获取 P，从 P 的本地队列获取 G，P 队列为空时，M 也会尝试从全局队列<strong>拿</strong>一批 G 放到 P 的本地队列，或从其他 P 的本地队列<strong>偷</strong>一半放到自己 P 的本地队列。M 运行 G，G 执行之后，M 会从 P 获取下一个 G，不断重复下去。</li>
 </ol>
 <p><strong>Goroutine 调度器和 OS 调度器是通过 M 结合起来的，每个 M 都代表了 1 个内核线程，OS 调度器负责把内核线程分配到 CPU 的核上执行</strong>。</p>
-<blockquote>
-<h2 id="有关-p-和-m-的个数问题" tabindex="-1"><a class="header-anchor" href="#有关-p-和-m-的个数问题" aria-hidden="true">#</a> 有关 P 和 M 的个数问题<a href="#cee2c4">#</a></h2>
-</blockquote>
+<h2 id="有关-p-和-m-的个数问题" tabindex="-1"><a class="header-anchor" href="#有关-p-和-m-的个数问题" aria-hidden="true">#</a> 有关 P 和 M 的个数问题</h2>
 <p>1、P 的数量：</p>
 <ul>
 <li>由启动时环境变量 <code v-pre>$GOMAXPROCS</code> 或者是由 <code v-pre>runtime</code> 的方法 <code v-pre>GOMAXPROCS()</code> 决定。这意味着在程序执行的任意时刻都只有 <code v-pre>$GOMAXPROCS</code> 个 goroutine 在同时运行。</li>
@@ -147,12 +142,10 @@
 <li>一个 M 阻塞了，会创建新的 M。</li>
 </ul>
 <p>M 与 P 的数量没有绝对关系，一个 M 阻塞，P 就会去创建或者切换另一个 M，所以，即使 P 的默认数量是 1，也有可能会创建很多个 M 出来。</p>
-<blockquote>
-<h2 id="p-和-m-何时会被创建" tabindex="-1"><a class="header-anchor" href="#p-和-m-何时会被创建" aria-hidden="true">#</a> P 和 M 何时会被创建<a href="#257bcb">#</a></h2>
-</blockquote>
+<h2 id="p-和-m-何时会被创建" tabindex="-1"><a class="header-anchor" href="#p-和-m-何时会被创建" aria-hidden="true">#</a> P 和 M 何时会被创建</h2>
 <p>1、P 何时创建：在确定了 P 的最大数量 n 后，运行时系统会根据这个数量创建 n 个 P。</p>
 <p>2、M 何时创建：没有足够的 M 来关联 P 并运行其中的可运行的 G。比如所有的 M 此时都阻塞住了，而 P 中还有很多就绪任务，就会去寻找空闲的 M，而没有空闲的，就会去创建新的 M。</p>
-<h3 id="_2-调度器的设计策略" tabindex="-1"><a class="header-anchor" href="#_2-调度器的设计策略" aria-hidden="true">#</a> (2) 调度器的设计策略<a href="#4852af">#</a></h3>
+<h3 id="_2-调度器的设计策略" tabindex="-1"><a class="header-anchor" href="#_2-调度器的设计策略" aria-hidden="true">#</a> (2) 调度器的设计策略</h3>
 <p><strong>复用线程</strong>：避免频繁的创建、销毁线程，而是对线程的复用。</p>
 <p>1）work stealing 机制</p>
 <p>当本线程无可运行的 G 时，尝试从其他线程绑定的 P 偷取 G，而不是销毁线程。</p>
@@ -161,7 +154,7 @@
 <p><strong>利用并行</strong>：<code v-pre>GOMAXPROCS</code> 设置 P 的数量，最多有 <code v-pre>GOMAXPROCS</code> 个线程分布在多个 CPU 上同时运行。<code v-pre>GOMAXPROCS</code> 也限制了并发的程度，比如 <code v-pre>GOMAXPROCS = 核数/2</code>，则最多利用了一半的 CPU 核进行并行。</p>
 <p><strong>抢占</strong>：在 coroutine 中要等待一个协程主动让出 CPU 才执行下一个协程，在 Go 中，一个 goroutine 最多占用 CPU 10ms，防止其他 goroutine 被饿死，这就是 goroutine 不同于 coroutine 的一个地方。</p>
 <p><strong>全局 G 队列</strong>：在新的调度器中依然有全局 G 队列，但功能已经被弱化了，当 M 执行 work stealing 从其他 P 偷不到 G 时，它可以从全局 G 队列获取 G。</p>
-<h3 id="_3-go-func-调度流程" tabindex="-1"><a class="header-anchor" href="#_3-go-func-调度流程" aria-hidden="true">#</a> (3) go func () 调度流程<a href="#cd748d">#</a></h3>
+<h3 id="_3-go-func-调度流程" tabindex="-1"><a class="header-anchor" href="#_3-go-func-调度流程" aria-hidden="true">#</a> (3) go func () 调度流程</h3>
 <p><img src="https://cdn.learnku.com/uploads/images/202003/11/58489/a4vWtvRWGQ.jpeg!large" alt="asd"></p>
 <p>从上图我们可以分析出几个结论：</p>
 <p>1、我们通过 go func () 来创建一个 goroutine；</p>
@@ -170,8 +163,8 @@
 <p>4、一个 M 调度 G 执行的过程是一个循环机制；</p>
 <p>5、当 M 执行某一个 G 时候如果发生了 syscall 或则其余阻塞操作，M 会阻塞，如果当前有一些 G 在执行，runtime 会把这个线程 M 从 P 中摘除 (detach)，然后再创建一个新的操作系统的线程 (如果有空闲的线程可用就复用空闲线程) 来服务于这个 P；</p>
 <p>6、当 M 系统调用结束时候，这个 G 会尝试获取一个空闲的 P 执行，并放入到这个 P 的本地队列。如果获取不到 P，那么这个线程 M 变成休眠状态， 加入到空闲线程中，然后这个 G 会被放入全局队列中。</p>
-<h3 id="_4-调度器的生命周期" tabindex="-1"><a class="header-anchor" href="#_4-调度器的生命周期" aria-hidden="true">#</a> (4) 调度器的生命周期<a href="#17f58b">#</a></h3>
-<p><img src="https://cdn.learnku.com/uploads/images/202003/11/58489/j37FX8nek9.png!large" alt=""></p>
+<h3 id="_4-调度器的生命周期" tabindex="-1"><a class="header-anchor" href="#_4-调度器的生命周期" aria-hidden="true">#</a> (4) 调度器的生命周期</h3>
+<p><img src="http://sm.nsddd.top/sm202304141355191.png" alt="sdf"></p>
 <p>特殊的 M0 和 G0</p>
 <p><strong>M0</strong></p>
 <p><code v-pre>M0</code> 是启动程序后的编号为 0 的主线程，这个 M 对应的实例会在全局变量 runtime.m0 中，不需要在 heap 上分配，M0 负责执行初始化操作和启动第一个 G， 在之后 M0 就和其他的 M 一样了。</p>
@@ -248,8 +241,8 @@ Hello World
 
 
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>我们可以通过浏览器打开 <code v-pre>http://127.0.0.1:33479</code> 网址，点击 <code v-pre>view trace</code> 能够看见可视化的调度流程。</p>
-<p><img src="https://cdn.learnku.com/uploads/images/202003/11/58489/Xr9qi3emlx.png!large" alt=""></p>
-<p><img src="https://cdn.learnku.com/uploads/images/202003/11/58489/vYyO9YJmam.png!large" alt=""></p>
+<p><img src="http://sm.nsddd.top/sm202304141355516.png" alt="sdf"></p>
+<p><img src="http://sm.nsddd.top/sm202304141355785.png" alt="sd"></p>
 <p><strong>G 信息</strong></p>
 <p>点击 Goroutines 那一行可视化的数据条，我们会看到一些详细的信息。</p>
 <p><img src="https://cdn.learnku.com/uploads/images/202003/11/58489/QLm0KK1hhd.png!large" alt=""></p>
@@ -376,7 +369,7 @@ github: <a href="https://github.com/aceld" target="_blank" rel="noopener norefer
 </ul>
 <hr>
 <ul>
-<li><a href="https://github.com/3293172751/Block_Chain/blob/master/Git/git-contributor.md" target="_blank" rel="noopener noreferrer">参与贡献❤️💕💕<ExternalLinkIcon/></a></li>
+<li><a href="https://github.com/cubxxw/awesome-cs-cloudnative-blockchain/blob/master/Git/git-contributor.md" target="_blank" rel="noopener noreferrer">参与贡献❤️💕💕<ExternalLinkIcon/></a></li>
 </ul>
 </div></template>
 

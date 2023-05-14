@@ -4,7 +4,7 @@
 <div class="custom-container tip"><p class="custom-container-title">Socket 介绍</p>
 <p><code v-pre>Socket</code>是BSD UNIX的进程通信机制，通常也称作”套接字”，用于描述IP地址和端口，是一个通信链的句柄。<code v-pre>Socket</code>可以理解为<code v-pre>TCP/IP</code>网络的<code v-pre>API</code>，它定义了许多函数或例程，程序员可以用它们来开发<code v-pre>TCP/IP</code>网络上的应用程序。电脑上运行的应用程序通常通过”套接字”向网络发出请求或者应答网络请求。</p>
 <ul>
-<li><strong><a href="https://github.com/3293172751/cs-awesome-Block_Chain/blob/master/web/README.md" target="_blank" rel="noopener noreferrer">套接字编程详细讲解篇<ExternalLinkIcon/></a></strong></li>
+<li><strong><a href="https://github.com/cubxxw/awesome-cs-cloudnative-blockchain/blob/master/web/README.md" target="_blank" rel="noopener noreferrer">套接字编程详细讲解篇<ExternalLinkIcon/></a></strong></li>
 </ul>
 </div>
 <h2 id="socket图解" tabindex="-1"><a class="header-anchor" href="#socket图解" aria-hidden="true">#</a> socket图解</h2>

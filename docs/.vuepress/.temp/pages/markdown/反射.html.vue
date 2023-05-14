@@ -57,7 +57,7 @@
  * @Date: 2022-10-04 21:37:41
  * @LastEditTime: 2022-10-26 16:08:30
  * @FilePath: \code\go-super\48-main.go
- * @Github_Address: https://github.com/3293172751/cs-awesome-Block_Chain
+ * @Github_Address: https://github.com/cubxxw/awesome-cs-cloudnative-blockchain
  * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://nsddd.top
  */</span>
 <span class="token keyword">package</span> main
@@ -120,7 +120,7 @@
  * @Date: 2022-10-04 21:37:41
  * @LastEditTime: 2022-10-24 19:37:14
  * @FilePath: \code\go-super\23-main.go
- * @Github_Address: https://github.com/3293172751/cs-awesome-Block_Chain
+ * @Github_Address: https://github.com/cubxxw/awesome-cs-cloudnative-blockchain
  * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://nsddd.top
  */</span>
 <span class="token keyword">package</span> main
@@ -197,7 +197,7 @@
  * @Date: 2022-10-04 21:37:41
  * @LastEditTime: 2022-10-24 20:01:45
  * @FilePath: \code\go-super\24-main.go
- * @Github_Address: https://github.com/3293172751/cs-awesome-Block_Chain
+ * @Github_Address: https://github.com/cubxxw/awesome-cs-cloudnative-blockchain
  * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://nsddd.top
  */</span>
 <span class="token keyword">package</span> main
@@ -652,7 +652,7 @@ struct has <span class="token number">3</span> methods
  * @Date: 2022-10-04 21:37:41
  * @LastEditTime: 2022-10-26 17:16:24
  * @FilePath: \code\go-super\51-main.go
- * @Github_Address: https://github.com/3293172751/cs-awesome-Block_Chain
+ * @Github_Address: https://github.com/cubxxw/awesome-cs-cloudnative-blockchain
  * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://nsddd.top
  */</span>
 <span class="token keyword">package</span> main

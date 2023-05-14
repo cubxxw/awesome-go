@@ -8,19 +8,19 @@
 </ul>
 <blockquote>
 <p>❤️💕💕Go语言高级篇章,在此之前建议您先了解基础和进阶篇。Myblog:<a href="http://nsddd.top/" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
-<h3 id="go语言基础篇" tabindex="-1"><a class="header-anchor" href="#go语言基础篇" aria-hidden="true">#</a> <strong><a href="https://github.com/3293172751/Block_Chain/blob/master/TOC.md" target="_blank" rel="noopener noreferrer">Go语言基础篇<ExternalLinkIcon/></a></strong></h3>
-<h3 id="go语言100篇进阶" tabindex="-1"><a class="header-anchor" href="#go语言100篇进阶" aria-hidden="true">#</a> <strong><a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/README.md" target="_blank" rel="noopener noreferrer">Go语言100篇进阶<ExternalLinkIcon/></a></strong></h3>
+<h3 id="go语言基础篇" tabindex="-1"><a class="header-anchor" href="#go语言基础篇" aria-hidden="true">#</a> <strong><a href="https://github.com/cubxxw/awesome-cs-cloudnative-blockchain/blob/master/TOC.md" target="_blank" rel="noopener noreferrer">Go语言基础篇<ExternalLinkIcon/></a></strong></h3>
+<h3 id="go语言100篇进阶" tabindex="-1"><a class="header-anchor" href="#go语言100篇进阶" aria-hidden="true">#</a> <strong><a href="https://github.com/cubxxw/awesome-cs-cloudnative-blockchain/blob/master/Gomd_super/README.md" target="_blank" rel="noopener noreferrer">Go语言100篇进阶<ExternalLinkIcon/></a></strong></h3>
 </blockquote>
 <hr>
 <p>[TOC]</p>
 <h2 id="内存管理" tabindex="-1"><a class="header-anchor" href="#内存管理" aria-hidden="true">#</a> 内存管理</h2>
 <p>程序中的数据和变量都会被分配到程序所在的虚拟内存中</p>
-<p>内存空间包含两个重要区域：</p>
+<p><strong>内存空间包含两个重要区域：</strong></p>
 <ul>
 <li>栈区（Stack）</li>
 <li>堆区（Heap）</li>
 </ul>
-<p>函数调用的参数、返回值以及局部变量大都会被分配到栈上，这部分内存会由编译器进行管理；不同编程语言使用不同的方法管理堆区的内存，C++ 等编程语言会由工程师主动申请和释放内存，Go 以及 Java 等编程语言会由工程师和编译器共同管理，堆中的对象由内存分配器分配并由垃圾收集器回收。</p>
+<p>函数调用的参数、返回值以及局部变量大都会被分配到栈上，这部分内存会由编译器进行管理；不同编程语言使用不同的方法管理堆区的内存，C++ 等编程语言会由工程师主动申请和释放内存，Go 以及 Java 等 编程语言 会由工程师和编译器共同管理，堆中的对象由内存分配器分配并由垃圾收集器回收。</p>
 <blockquote>
 <p>对于 Java 和 Golang 所推崇的内存管理方式是： 手动管理麻烦而且容易出错。我有能力来帮你做内存管理</p>
 <p>对于 C 和 CPP 所推崇的内存管理的方式是： 内存管理太重要了，所以如果交给机器管理我不能放心。</p>
@@ -28,8 +28,8 @@
 <h2 id="设计原理" tabindex="-1"><a class="header-anchor" href="#设计原理" aria-hidden="true">#</a> 设计原理</h2>
 <p>内存管理一般包含三个不同的组件，分别是用户程序（Mutator）、分配器（Allocator）和收集器（Collector），当用户程序申请内存时，它会通过内存分配器申请新内存，而分配器会负责从堆中初始化相应的内存区域。</p>
 <p><img src="http://sm.nsddd.top/sm202303011635560.png" alt="image-20230301163511423"></p>
-<p>在前两节，我们学习到了 Heap：</p>
-<p><code v-pre>Heap</code>：堆空间。这个就是程序里动态分配的空间。linux下使用malloc调用扩展（用brk/sbrk扩展内存空间），free函数释放（也就是缩减内存空间）</p>
+<p>在前两节，我们学习到了 <code v-pre>Heap</code>：</p>
+<p><code v-pre>Heap</code>：堆空间。这个就是程序里动态分配的空间。linux下使用 malloc 调用扩展（用brk/sbrk 扩展内存空间），free 函数释放（也就是缩减内存空间）</p>
 <p>对于 Go语言 来说，就是有 Conllector（垃圾回收器），回收内存空间，经常去扫描。</p>
 <ul>
 <li>初始化连续内存块作为堆</li>
@@ -147,7 +147,7 @@
 </ul>
 <hr>
 <ul>
-<li><a href="https://github.com/3293172751/Block_Chain/blob/master/Git/git-contributor.md" target="_blank" rel="noopener noreferrer">参与贡献❤️💕💕<ExternalLinkIcon/></a></li>
+<li><a href="https://github.com/cubxxw/awesome-cs-cloudnative-blockchain/blob/master/Git/git-contributor.md" target="_blank" rel="noopener noreferrer">参与贡献❤️💕💕<ExternalLinkIcon/></a></li>
 </ul>
 <h3 id="links" tabindex="-1"><a class="header-anchor" href="#links" aria-hidden="true">#</a> Links</h3>
 <p>Memory management in Go generally consists of three different components: the user program (Mutator), allocator, and collector. When a user program requests memory, it does so through the memory allocator, and when the memory is no longer needed, it is returned to the allocator.</p>

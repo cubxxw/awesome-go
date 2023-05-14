@@ -3,7 +3,7 @@
 <blockquote>
 <p>学习资料很全，推荐！！！！</p>
 </blockquote>
-<p><a href="https://github.com/3293172751/Block_Chain" target="_blank" rel="noopener noreferrer">😶‍🌫️我的学习笔记（Github）<ExternalLinkIcon/></a></p>
+<p><a href="https://github.com/cubxxw/awesome-cs-cloudnative-blockchain" target="_blank" rel="noopener noreferrer">😶‍🌫️我的学习笔记（Github）<ExternalLinkIcon/></a></p>
 <p align='center'>
 <a href="https://www.linkedin.cn/injobs/in/xiongxinwei-xiong-7606a0227" target="_blank"><img src="https://img.shields.io/badge/linkedin-xiongxinwei-yellowgreen?logo=linkedin"></a>
 <a href="https://twitter.com/xxw3293172751" target="_blank"><img src="https://img.shields.io/badge/twitter-%40xxw3293172751-informational?logo=twitter"></a>
@@ -35,11 +35,11 @@
 <h2 id="前期知识" tabindex="-1"><a class="header-anchor" href="#前期知识" aria-hidden="true">#</a> 前期知识</h2>
 <blockquote>
 <ul>
-<li>[x] <a href="https://github.com/3293172751/Block_Chain/blob/master/TOC.md" target="_blank" rel="noopener noreferrer">Go语言基础篇<ExternalLinkIcon/></a></li>
-<li>[x] <a href="https://github.com/3293172751/Block_Chain/blob/master/Gomd_super/README.md" target="_blank" rel="noopener noreferrer">Go语言100篇进阶<ExternalLinkIcon/></a>（可选）</li>
+<li>[x] <a href="https://github.com/cubxxw/awesome-cs-cloudnative-blockchain/blob/master/TOC.md" target="_blank" rel="noopener noreferrer">Go语言基础篇<ExternalLinkIcon/></a></li>
+<li>[x] <a href="https://github.com/cubxxw/awesome-cs-cloudnative-blockchain/blob/master/Gomd_super/README.md" target="_blank" rel="noopener noreferrer">Go语言100篇进阶<ExternalLinkIcon/></a>（可选）</li>
 <li>[x] <a href="https://github.com/3293172751/os" target="_blank" rel="noopener noreferrer">操作系统学习<ExternalLinkIcon/></a></li>
 <li>[x] <a href="https://github.com/3293172751/CS_COURSE/blob/master/linux/README.md" target="_blank" rel="noopener noreferrer">Linux的基础知识<ExternalLinkIcon/></a></li>
-<li>[x] <a href="https://github.com/3293172751/Block_Chain/blob/master/%E6%B1%87%E7%BC%96/README.md" target="_blank" rel="noopener noreferrer">汇编语言的学习<ExternalLinkIcon/></a></li>
+<li>[x] <a href="https://github.com/cubxxw/awesome-cs-cloudnative-blockchain/blob/master/%E6%B1%87%E7%BC%96/README.md" target="_blank" rel="noopener noreferrer">汇编语言的学习<ExternalLinkIcon/></a></li>
 </ul>
 </blockquote>
 <h2 id="📜目录" tabindex="-1"><a class="header-anchor" href="#📜目录" aria-hidden="true">#</a> 📜目录</h2>

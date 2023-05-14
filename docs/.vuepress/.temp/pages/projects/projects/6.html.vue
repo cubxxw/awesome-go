@@ -706,7 +706,7 @@ protoc -I. <span class="token parameter variable">--go_out</span><span class="to
  * @Date: 2023-02-18 15:36:08
  * @LastEditTime: 2023-02-19 06:41:42
  * @FilePath: /test/server/main.go
- * @Github_Address: https://github.com/3293172751/cs-awesome-Block_Chain
+ * @Github_Address: https://github.com/cubxxw/awesome-cs-cloudnative-blockchain
  * Copyright (c) 2023 by ${git_name_email}, All Rights Reserved. @blog: http://nsddd.top
  */</span>
 <span class="token comment">// Package main implements a server for Greeter service.</span>

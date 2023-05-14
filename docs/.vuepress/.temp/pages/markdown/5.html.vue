@@ -241,7 +241,7 @@ n<span class="token operator">=</span> <span class="token number">3</span>
 <p>主函数执行完毕后，此时主函数的空间也被回收了，回收时main中空间n1还是10</p>
 <h2 id="函数-包" tabindex="-1"><a class="header-anchor" href="#函数-包" aria-hidden="true">#</a> 函数 -- 包</h2>
 <div class="custom-container danger"><p class="custom-container-title">强烈推荐🔥</p>
-<p>⚡<a href="https://github.com/3293172751/cs-awesome-Block_Chain/blob/master/Gomd_super/mod.md" target="_blank" rel="noopener noreferrer">推荐mod教程，mod是Golang新出的包<ExternalLinkIcon/></a></p>
+<p>⚡<a href="https://github.com/cubxxw/awesome-cs-cloudnative-blockchain/blob/master/Gomd_super/mod.md" target="_blank" rel="noopener noreferrer">推荐mod教程，mod是Golang新出的包<ExternalLinkIcon/></a></p>
 </div>
 <p><strong>在开发中，可能会有成百上千的函数，我们可以选择用一个<code v-pre>.go</code>文件，或者多个文件（对数据库操作的函数或者是对不常用的函数封装、引入</strong></p>
 <p><strong>或者是两个或者多个函数共同开发一个Go项目，此时在同一个文件里面定义相同的函数名会报错，但是如果是在两个多个多个文件包里，就不是冲突了</strong></p>

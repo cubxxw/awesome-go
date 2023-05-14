@@ -9,7 +9,7 @@
 <p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://nsddd.top/" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
 </blockquote>
 <hr>
-<nav class="table-of-contents"><ul><li><router-link to="#开始">开始</router-link></li><li><router-link to="#第一步-新建分支">第一步：新建分支</router-link></li><li><router-link to="#第二步-添加自动化命令">第二步，添加自动化命令</router-link></li><li><router-link to="#第三步-生成代码">第三步，生成代码</router-link></li><li><router-link to="#第四步-版权检查">第四步，版权检查</router-link></li><li><router-link to="#第五步-代码格式化">第五步，代码格式化</router-link></li><li><router-link to="#第六步-静态代码检查">第六步，静态代码检查</router-link></li><li><router-link to="#第七步-单元测试">第七步，单元测试</router-link></li><li><router-link to="#第八步-构建">第八步，构建</router-link></li><li><router-link to="#代码提交">代码提交</router-link><ul><li><router-link to="#github-action-配置">Github Action 配置</router-link></li></ul></li><li><router-link to="#测试阶段">测试阶段</router-link></li><li><router-link to="#iam-项目的-makefile-项目管理技巧">IAM 项目的 Makefile 项目管理技巧</router-link><ul><li><router-link to="#help-自动解析">help 自动解析</router-link></li><li><router-link to="#options-中指定变量值">Options 中指定变量值</router-link></li><li><router-link to="#自动生成-changelog">自动生成 CHANGELOG</router-link></li><li><router-link to="#自动生成版本号">自动生成版本号</router-link></li><li><router-link to="#保持行为一致">保持行为一致</router-link></li></ul></li><li><router-link to="#总结">总结</router-link></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
+<nav class="table-of-contents"><ul><li><router-link to="#开始">开始</router-link></li><li><router-link to="#第一步-新建分支">第一步：新建分支</router-link></li><li><router-link to="#第二步-添加自动化命令">第二步，添加自动化命令</router-link></li><li><router-link to="#第三步-生成代码">第三步，生成代码</router-link></li><li><router-link to="#第四步-版权检查">第四步，版权检查</router-link><ul><li><router-link to="#如何安装-addlicense">如何安装 addlicense？</router-link></li><li><router-link to="#如何使用-addlicense">如何使用 addlicense？</router-link></li><li><router-link to="#支持的许可证类型">支持的许可证类型</router-link></li></ul></li><li><router-link to="#第五步-代码格式化">第五步，代码格式化</router-link></li><li><router-link to="#第六步-静态代码检查">第六步，静态代码检查</router-link></li><li><router-link to="#第七步-单元测试">第七步，单元测试</router-link></li><li><router-link to="#第八步-构建">第八步，构建</router-link></li><li><router-link to="#代码提交">代码提交</router-link><ul><li><router-link to="#github-action-配置">Github Action 配置</router-link></li></ul></li><li><router-link to="#测试阶段">测试阶段</router-link></li><li><router-link to="#iam-项目的-makefile-项目管理技巧">IAM 项目的 Makefile 项目管理技巧</router-link><ul><li><router-link to="#help-自动解析">help 自动解析</router-link></li><li><router-link to="#options-中指定变量值">Options 中指定变量值</router-link></li><li><router-link to="#自动生成-changelog">自动生成 CHANGELOG</router-link></li><li><router-link to="#自动生成版本号">自动生成版本号</router-link></li><li><router-link to="#保持行为一致">保持行为一致</router-link></li></ul></li><li><router-link to="#总结">总结</router-link></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
 <p>[TOC]</p>
 <h2 id="开始" tabindex="-1"><a class="header-anchor" href="#开始" aria-hidden="true">#</a> 开始</h2>
 <p><strong>开发阶段主要要做的两件事情分别是代码开发和代码提交两个部分。</strong></p>
@@ -43,7 +43,7 @@ Command <span class="token function">file</span> generated: internal/iamctl/cmd/
                 helloworld<span class="token punctuation">.</span><span class="token function">NewCmdHelloworld</span><span class="token punctuation">(</span>f<span class="token punctuation">,</span> ioStreams<span class="token punctuation">)</span><span class="token punctuation">,</span>
             <span class="token punctuation">}</span><span class="token punctuation">,</span>
         <span class="token punctuation">}</span><span class="token punctuation">,</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>这些操作中包含了 low code 的思想。使用代码自动生成这一技术。这样做有两个好处：</p>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>这些操作中包含了 <code v-pre>low code</code> 的思想。使用代码自动生成这一技术。这样做有两个好处：</p>
 <ul>
 <li>一方面能够提高我们的代码开发效率；</li>
 <li>另一方面也能够保证规范，减少手动操作可能带来的错误。</li>
@@ -53,7 +53,7 @@ Command <span class="token function">file</span> generated: internal/iamctl/cmd/
 <div class="language-makefile ext-makefile line-numbers-mode"><pre v-pre class="language-makefile"><code>$ make gen
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>如果改动不涉及代码生成，可以不执行make gen操作。 make gen 执行的其实是 gen.run 伪目标：</p>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>gen.run: gen.clean gen.errcode gen.docgo.doc
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>可以看到，当执行 <code v-pre>make gen.ru</code>n 时，其实会先清理之前生成的文件，再分别自动生成 error code 和 doc.go 文件。</p>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>可以看到，当执行 <code v-pre>make gen.run</code> 时，其实会先清理之前生成的文件，再分别自动生成 error code 和 doc.go 文件。</p>
 <p>这里需要注意，通过<code v-pre>make gen</code> 生成的存量代码要具有幂等性。只有这样，才能确保每次生成的代码是一样的，避免不一致带来的问题。</p>
 <p>我们可以将更多的与自动生成代码相关的功能放在 <code v-pre>gen.mk Makefile</code> 中。例如：</p>
 <ul>
@@ -74,6 +74,33 @@ Command <span class="token function">file</span> generated: internal/iamctl/cmd/
 <span class="token target symbol">install.addlicense</span><span class="token punctuation">:</span>        
   <span class="token operator">@</span><span class="token variable">$</span><span class="token punctuation">(</span>GO<span class="token punctuation">)</span> get -u github.com/marmotedu/addlicense
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>通过这种方式，可以使 make copyright.verify 尽可能自动化，减少手动介入的概率。</p>
+<h3 id="如何安装-addlicense" tabindex="-1"><a class="header-anchor" href="#如何安装-addlicense" aria-hidden="true">#</a> 如何安装 addlicense？</h3>
+<p>在终端中输入以下命令即可安装 addlicense：</p>
+<div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>go get -u github.com/google/addlicense
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3 id="如何使用-addlicense" tabindex="-1"><a class="header-anchor" href="#如何使用-addlicense" aria-hidden="true">#</a> 如何使用 addlicense？</h3>
+<p>在终端中进入您的项目目录，然后输入以下命令：</p>
+<div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>addlicense -c "许可证类型" 文件名
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>例如，如果您想要为您的项目添加 MIT 许可证，您可以输入以下命令：</p>
+<div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>addlicense -c "MIT" LICENSE
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>接下来，addlicense 会自动在 LICENSE 文件中添加 MIT 许可证条款。</p>
+<p>以下是 addlicense 可接受的参数：</p>
+<ul>
+<li><code v-pre>c</code>：指定要添加的许可证类型。例如，<code v-pre>c &quot;MIT&quot;</code> 表示添加 MIT 许可证。</li>
+<li><code v-pre>l</code>：指定许可证的链接。例如，<code v-pre>l &quot;&lt;https://opensource.org/licenses/MIT&gt;&quot;</code> 表示添加 MIT 许可证链接。</li>
+<li><code v-pre>f</code>：指定要添加许可证的文件列表。例如，<code v-pre>f &quot;LICENSE, README.md&quot;</code> 表示在 LICENSE 和 <a href="http://readme.md/" target="_blank" rel="noopener noreferrer">README.md<ExternalLinkIcon/></a> 文件中添加许可证。</li>
+</ul>
+<p>您可以在 GitHub 上查看 addlicense 的完整文档，以获取更多参数及使用方法。</p>
+<h3 id="支持的许可证类型" tabindex="-1"><a class="header-anchor" href="#支持的许可证类型" aria-hidden="true">#</a> 支持的许可证类型</h3>
+<p>addlicense 支持许多常见的许可证类型，例如：</p>
+<ul>
+<li>MIT</li>
+<li>Apache</li>
+<li>BSD-2-Clause</li>
+<li>BSD-3-Clause</li>
+<li>GPL-2.0</li>
+<li>GPL-3.0</li>
+</ul>
+<p>您可以在 GitHub 上查看 addlicense 的完整文档，以获取更</p>
 <h2 id="第五步-代码格式化" tabindex="-1"><a class="header-anchor" href="#第五步-代码格式化" aria-hidden="true">#</a> 第五步，代码格式化</h2>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ <span class="token function">make</span> <span class="token function">format</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>执行make format会依次执行以下格式化操作：</p>
@@ -222,15 +249,15 @@ help: Makefile
 <h3 id="options-中指定变量值" tabindex="-1"><a class="header-anchor" href="#options-中指定变量值" aria-hidden="true">#</a> Options 中指定变量值</h3>
 <p>通过以下赋值方式，变量可以在 <code v-pre>Makefile options</code> 中被指定：</p>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>ifeq <span class="token punctuation">(</span><span class="token variable"><span class="token variable">$(</span>origin COVERAGE<span class="token variable">)</span></span>,undefined<span class="token punctuation">)</span>    
-COVERAGE :<span class="token operator">=</span> <span class="token number">60</span>    
-endif   
+COVERAGE :<span class="token operator">=</span> <span class="token number">60</span>  
+endif
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>例如，如果我们执行<code v-pre>make</code> ，则 <code v-pre>COVERAGE</code> 设置为默认值 <code v-pre>60</code>；如果我们执行<code v-pre>make COVERAGE=90</code> ，则 COVERAGE 值为 90。通过这种方式，我们可以更灵活地控制 Makefile 的行为。</p>
 <h3 id="自动生成-changelog" tabindex="-1"><a class="header-anchor" href="#自动生成-changelog" aria-hidden="true">#</a> 自动生成 CHANGELOG</h3>
 <p>一个项目最好有 CHANGELOG 用来展示每个版本之间的变更内容，作为 Release Note 的一部分。但是，如果每次都要手动编写 CHANGELOG，会很麻烦，也不容易坚持，所以这里我们可以借助<a href="https://github.com/git-chglog/git-chglog" target="_blank" rel="noopener noreferrer">git-chglog<ExternalLinkIcon/></a>工具来自动生成。</p>
 <p>IAM 项目的 git-chglog 工具的配置文件放在<code v-pre>.chglog</code>目录下，在学习 git-chglog 工具时，你可以参考下。</p>
 <h3 id="自动生成版本号" tabindex="-1"><a class="header-anchor" href="#自动生成版本号" aria-hidden="true">#</a> 自动生成版本号</h3>
 <p>一个项目也需要有一个版本号，当前用得比较多的是语义化版本号规范。但如果靠开发者手动打版本号，工作效率低不说，经常还会出现漏打、打的版本号不规范等问题。所以最好的办法是，版本号也通过工具自动生成。在 IAM 项目中，采用了<a href="https://github.com/arnaud-deprez/gsemver" target="_blank" rel="noopener noreferrer">gsemver<ExternalLinkIcon/></a>工具来自动生成版本号。</p>
-<p>整个 IAM 项目的版本号，都是通过<a href="scripts/ensure_tag.sh">scripts/ensure_tag.sh</a>脚本来生成的：</p>
+<p>整个 IAM 项目的版本号，都是通过scripts/ensure_tag.sh脚本来生成的：</p>
 <div class="language-makefile ext-makefile line-numbers-mode"><pre v-pre class="language-makefile"><code>version<span class="token operator">=</span>v`gsemver bump`
 if [ -z <span class="token string">"`git tag -l $version`"</span> ]<span class="token punctuation">;</span>then
   git tag -a -m <span class="token string">"release version $version"</span> <span class="token variable">$version</span>

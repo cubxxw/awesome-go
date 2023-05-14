@@ -23,7 +23,7 @@ cd ../blog/dist
 
 # git初始化，每次初始化不影响推送
 git init
-git remote add origin https://github.com/3293172751/awesome-docker
+git remote add origin https://github.com/cubxxw/awesome-cloud-native
 git branch blog
 git switch blog
 git add -A

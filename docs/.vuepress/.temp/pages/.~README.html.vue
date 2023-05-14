@@ -1,4 +1,4 @@
-<template><div><h1 id="菜鸟的成长手册" tabindex="-1"><a class="header-anchor" href="#菜鸟的成长手册" aria-hidden="true">#</a> 菜鸟的成长手册<a href="https://github.com/3293172751/cs-awesome-Block_Chain" target="_blank" rel="noopener noreferrer"><img src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg" alt="Awesome"><ExternalLinkIcon/></a></h1>
+<template><div><h1 id="菜鸟的成长手册" tabindex="-1"><a class="header-anchor" href="#菜鸟的成长手册" aria-hidden="true">#</a> 菜鸟的成长手册<a href="https://github.com/cubxxw/awesome-cs-cloudnative-blockchain" target="_blank" rel="noopener noreferrer"><img src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg" alt="Awesome"><ExternalLinkIcon/></a></h1>
 <p><a href="https://www.facebook.com/profile.php?id=100034435372354" target="_blank" rel="noopener noreferrer">Facebook<ExternalLinkIcon/></a> | <a href="https://telsacoin.io/" target="_blank" rel="noopener noreferrer">Website<ExternalLinkIcon/></a> | <a href="http://nsddd.top" target="_blank" rel="noopener noreferrer">Blog<ExternalLinkIcon/></a> | <a href="https://t.me/smile3293172751" target="_blank" rel="noopener noreferrer">Telegram<ExternalLinkIcon/></a> | <a href="https://twitter.com/xxw3293172751" target="_blank" rel="noopener noreferrer">Twitter<ExternalLinkIcon/></a> | <a href="https://www.linkedin.cn/injobs/in/xiongxinwei-xiong-7606a0227" target="_blank" rel="noopener noreferrer">Linkedin<ExternalLinkIcon/></a> | <a href="https://liberapay.com/xiongxinwei/donate" target="_blank" rel="noopener noreferrer">Donate<ExternalLinkIcon/></a></p>
 <p align='center'>
 <a href="https://www.linkedin.cn/injobs/in/xiongxinwei-xiong-7606a0227" target="_blank"><img src="https://img.shields.io/badge/linkedin-xiongxinwei-yellowgreen?logo=linkedin&style=flat-square"></a>
@@ -15,17 +15,17 @@
 <br>
 <ul>
 <li>
-<p>🔍<a href="https://github.com/3293172751/Block_Chain/wiki" target="_blank" rel="noopener noreferrer"><strong>快速指南(wike) — 仓库总结</strong><ExternalLinkIcon/></a></p>
+<p>🔍<a href="https://github.com/cubxxw/awesome-cs-cloudnative-blockchain/wiki" target="_blank" rel="noopener noreferrer"><strong>快速指南(wike) — 仓库总结</strong><ExternalLinkIcon/></a></p>
 </li>
 <li>
-<p>🔗<a href="https://gitee.com/xxw3293172751/Block_Chain" target="_blank" rel="noopener noreferrer"><strong>中国大陆加速地址（Gitee平台）</strong><ExternalLinkIcon/></a></p>
+<p>🔗<a href="https://gitee.com/xxwcubxxw/awesome-cs-cloudnative-blockchain" target="_blank" rel="noopener noreferrer"><strong>中国大陆加速地址（Gitee平台）</strong><ExternalLinkIcon/></a></p>
 </li>
 <li>
 <p>📵<a href="https://xxw.nsddd.top/s/wRSz" target="_blank" rel="noopener noreferrer"><strong>不限速在线个人云盘</strong><ExternalLinkIcon/></a></p>
 <p align='center'>
-<a href="https://gitee.com/xxw3293172751/Block_Chain"><img src="https://img.shields.io/badge/gitee-%40xxw3293172751-green?logo=gitee" title="国内gitee镜像加速"></a>
+<a href="https://gitee.com/xxwcubxxw/awesome-cs-cloudnative-blockchain"><img src="https://img.shields.io/badge/gitee-%40xxw3293172751-green?logo=gitee" title="国内gitee镜像加速"></a>
 <a href="https://wakatime.com/@3293172751/projects/hngzsvjxqc?start=2022-03-30&end=2022-04-05" title="项目的进展时长" > <img src="http://wakatime.com/badge/user/c445b3c6-a2bc-43a2-a24a-0828a17244b4/project/79cf7f10-4f61-42b7-92a8-dfc71cb99f4c.svg"></a>
-<a href="https://github.com/3293172751/cs-awesome-Block_Chain/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/3293172751/cs-awesome-Block_Chain?style=plastic"></a>
+<a href="https://github.com/cubxxw/awesome-cs-cloudnative-blockchain/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/cubxxw/awesome-cs-cloudnative-blockchain?style=plastic"></a>
 <a href="https://xxw.nsddd.top/s/wRSz"><img alt="个人网盘不限速" src="https://img.shields.io/badge/cloud-xiongxinwei-red?logo=iCloud" title="个人网盘不限速下载浏览"></a>
 </p>
 </li>
@@ -84,7 +84,7 @@
 </ul>
 </blockquote>
 <h2 id="cs系列" tabindex="-1"><a class="header-anchor" href="#cs系列" aria-hidden="true">#</a> CS系列</h2>
-<p>CS 系列选自<a href="https://github.com/3293172751/awesome-cs-course" target="_blank" rel="noopener noreferrer">🎉awesome-cs-course<ExternalLinkIcon/></a>，内容涵盖 计算机操作系统、csapp系列、算法和数据结构、计算机网络、<code v-pre>linux</code>、<code v-pre>java</code>、<code v-pre>python</code>、<code v-pre>C/C++</code>、<code v-pre>vuepress</code>、<code v-pre>gitbook</code>、<code v-pre>nodejs</code>、<code v-pre>vuejs</code>、<code v-pre>halo</code>、<code v-pre>redis``hugo</code>、<code v-pre>nginx</code>、<code v-pre>nosql</code>、<code v-pre>mysql</code>、<code v-pre>JavaScript</code>、<code v-pre>git</code>、<code v-pre>markdown</code>、<code v-pre>web</code>前端等笔记，更多移步到<a href="https://github.com/3293172751/CS_COURSE" target="_blank" rel="noopener noreferrer">AWESOME系列CS仓库地址<ExternalLinkIcon/></a></p>
+<p>CS 系列选自<a href="https://github.com/cubxxw/awesome-cs-course" target="_blank" rel="noopener noreferrer">🎉awesome-cs-course<ExternalLinkIcon/></a>，内容涵盖 计算机操作系统、csapp系列、算法和数据结构、计算机网络、<code v-pre>linux</code>、<code v-pre>java</code>、<code v-pre>python</code>、<code v-pre>C/C++</code>、<code v-pre>vuepress</code>、<code v-pre>gitbook</code>、<code v-pre>nodejs</code>、<code v-pre>vuejs</code>、<code v-pre>halo</code>、<code v-pre>redis``hugo</code>、<code v-pre>nginx</code>、<code v-pre>nosql</code>、<code v-pre>mysql</code>、<code v-pre>JavaScript</code>、<code v-pre>git</code>、<code v-pre>markdown</code>、<code v-pre>web</code>前端等笔记，更多移步到<a href="https://github.com/3293172751/CS_COURSE" target="_blank" rel="noopener noreferrer">AWESOME系列CS仓库地址<ExternalLinkIcon/></a></p>
 <ul>
 <li>
 <p>[x] <RouterLink to="/%E6%B1%87%E7%BC%96/">汇编学习🔥</RouterLink></p>
@@ -171,7 +171,7 @@
   <b>c-universal blockchain（CUB-链学）</b>    
 </p>
 <div align="center">
-<a href="https://github.com/C-UB">
+<a href="https://github.com/kubecub">
 	<img src="https://sm.nsddd.top//typora/twitter_header_photo_1.png?mail:3293172751@qq.com" alt="twitter_header_photo_1" style="zoom: 20%;" />
 </a></div>
 <p>基于区块链的全民学习平台C-Universal Blockchain在保障用户安全，信息的完整性同时为大众带来更多的选择，笔记分享，视频分享，版权保护，以及其他的关于学信数据、电子证书、荣誉证明、成绩证明、信息授权的相关工具。</p>
@@ -179,7 +179,7 @@
 <ul>
 <li>[ ] <del><a href=""> 🖱️GLinux内核(未开始)</a></del></li>
 <li>[x] <RouterLink to="/C_Universal_Brockchain/"> 🖱️C-Universal Brockchain</RouterLink></li>
-<li>[x] <a href="https://github.com/C-UB" target="_blank" rel="noopener noreferrer"> 🖱️C-Universal Brockchain（链学）组织地址<ExternalLinkIcon/></a></li>
+<li>[x] <a href="https://github.com/kubecub" target="_blank" rel="noopener noreferrer"> 🖱️C-Universal Brockchain（链学）组织地址<ExternalLinkIcon/></a></li>
 </ul>
 <hr>
 <h2 id="参与贡献💕" tabindex="-1"><a class="header-anchor" href="#参与贡献💕" aria-hidden="true">#</a> 参与贡献💕</h2>
@@ -189,15 +189,13 @@
 <li><a href="https://github.com/3293172751/CS_COURSE/blob/master/markdown/README.md" target="_blank" rel="noopener noreferrer">你需要学会使用markdown🖱️<ExternalLinkIcon/></a></li>
 <li><a href="https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/" target="_blank" rel="noopener noreferrer">符合Google代码规范<ExternalLinkIcon/></a></li>
 </ul>
-<font size = 2>如果你也想对本项目做出贡献，那么你可以先把该项目进行 [fork](https://github.com/3293172751/cs-awesome-Block_Chain/fork)或者 `git clone` 到本地（推荐先用 [fock](https://github.com/3293172751/cs-awesome-Block_Chain/fork)到自己仓库，然后再clone到本地，对本地进行操作，最后从自己仓库贡献，然后自己建立一个分支 `your-branch`，然后上传资料到 对应目录 下，图片信息可以上传到` /images`，然后更新 `README`。 </font><h2 id="recent-activity" tabindex="-1"><a class="header-anchor" href="#recent-activity" aria-hidden="true">#</a> <a href="https://repography.com" target="_blank" rel="noopener noreferrer"><img src="https://images.repography.com/logo.svg" alt="Repography logo"><ExternalLinkIcon/></a> / Recent activity <a href="https://repography.com" target="_blank" rel="noopener noreferrer"><img src="https://images.repography.com/26892425/3293172751/Block_Chain/recent-activity/04864df8cf8f1f104b2b9453e0b47498_badge.svg" alt="Time period"><ExternalLinkIcon/></a></h2>
+<font size = 2>如果你也想对本项目做出贡献，那么你可以先把该项目进行 [fork](https://github.com/cubxxw/awesome-cs-cloudnative-blockchain/fork)或者 `git clone` 到本地（推荐先用 [fock](https://github.com/cubxxw/awesome-cs-cloudnative-blockchain/fork)到自己仓库，然后再clone到本地，对本地进行操作，最后从自己仓库贡献，然后自己建立一个分支 `your-branch`，然后上传资料到 对应目录 下，图片信息可以上传到` /images`，然后更新 `README`。 </font><h2 id="recent-activity" tabindex="-1"><a class="header-anchor" href="#recent-activity" aria-hidden="true">#</a> <a href="https://repography.com" target="_blank" rel="noopener noreferrer"><img src="https://images.repography.com/logo.svg" alt="Repography logo"><ExternalLinkIcon/></a> / Recent activity <a href="https://repography.com" target="_blank" rel="noopener noreferrer"><img src="https://images.repography.com/26892425/cubxxw/awesome-cs-cloudnative-blockchain/recent-activity/04864df8cf8f1f104b2b9453e0b47498_badge.svg" alt="Time period"><ExternalLinkIcon/></a></h2>
 <p><img src="https://repobeats.axiom.co/api/embed/7053fe17b2bd9f88a0015474635e09cff7dc1ee2.svg" alt="Alt" title="Repobeats analytics image"></p>
-<p><a href="https://github.com/3293172751/Block_Chain/commits" target="_blank" rel="noopener noreferrer"><img src="https://images.repography.com/26892425/3293172751/Block_Chain/recent-activity/04864df8cf8f1f104b2b9453e0b47498_timeline.svg" alt="Timeline graph"><ExternalLinkIcon/></a>
-<a href="https://github.com/3293172751/Block_Chain/issues" target="_blank" rel="noopener noreferrer"><img src="https://images.repography.com/26892425/3293172751/Block_Chain/recent-activity/04864df8cf8f1f104b2b9453e0b47498_issues.svg" alt="Issue status graph"><ExternalLinkIcon/></a>
-<a href="https://github.com/3293172751/Block_Chain/pulls" target="_blank" rel="noopener noreferrer"><img src="https://images.repography.com/26892425/3293172751/Block_Chain/recent-activity/04864df8cf8f1f104b2b9453e0b47498_prs.svg" alt="Pull request status graph"><ExternalLinkIcon/></a>
-<img src="https://images.repography.com/26892425/3293172751/Block_Chain/recent-activity/04864df8cf8f1f104b2b9453e0b47498_words.svg" alt="Trending topics"></p>
+<p><a href="https://github.com/cubxxw/awesome-cs-cloudnative-blockchain/commits" target="_blank" rel="noopener noreferrer"><img src="https://images.repography.com/26892425/cubxxw/awesome-cs-cloudnative-blockchain/recent-activity/04864df8cf8f1f104b2b9453e0b47498_timeline.svg" alt="Timeline graph"><ExternalLinkIcon/></a>
+<a href="https://github.com/cubxxw/awesome-cs-cloudnative-blockchain/issues" target="_blank" rel="noopener noreferrer"><img src="https://images.repography.com/26892425/cubxxw/awesome-cs-cloudnative-blockchain/recent-activity/04864df8cf8f1f104b2b9453e0b47498_issues.svg" alt="Issue status graph"><ExternalLinkIcon/></a>
+<a href="https://github.com/cubxxw/awesome-cs-cloudnative-blockchain/pulls" target="_blank" rel="noopener noreferrer"><img src="https://images.repography.com/26892425/cubxxw/awesome-cs-cloudnative-blockchain/recent-activity/04864df8cf8f1f104b2b9453e0b47498_prs.svg" alt="Pull request status graph"><ExternalLinkIcon/></a>
+<img src="https://images.repography.com/26892425/cubxxw/awesome-cs-cloudnative-blockchain/recent-activity/04864df8cf8f1f104b2b9453e0b47498_words.svg" alt="Trending topics"></p>
 <h2 id="版权声明-©" tabindex="-1"><a class="header-anchor" href="#版权声明-©" aria-hidden="true">#</a> 版权声明 ©</h2>
 <p><a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer"><img src="https://sm.nsddd.top//typora/cs-awesome-Block_Chain?mail:3293172751@qq.com" alt="GitHub license"><ExternalLinkIcon/></a></p>
 <p>本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>
 </div></template>
-
-
