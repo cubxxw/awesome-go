@@ -1335,6 +1335,275 @@ export const searchIndex = [
     "extraFields": []
   },
   {
+    "title": "MIT 6.824 DistributedSystem~",
+    "headers": [
+      {
+        "level": 2,
+        "title": "🏄‍♂️ 目录结构",
+        "slug": "🏄‍♂️-目录结构",
+        "link": "#🏄‍♂️-目录结构",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "🧷 参考文献",
+        "slug": "🧷-参考文献",
+        "link": "#🧷-参考文献",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "⚡Go语言基础篇",
+        "slug": "⚡go语言基础篇",
+        "link": "#⚡go语言基础篇",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "⚡Go语言高级篇",
+        "slug": "⚡go语言高级篇",
+        "link": "#⚡go语言高级篇",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "🐶往下看",
+        "slug": "🐶往下看",
+        "link": "#🐶往下看",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "📚目录",
+        "slug": "📚目录",
+        "link": "#📚目录",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "前言",
+        "slug": "前言",
+        "link": "#前言",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Go语言基础篇—番外篇",
+        "slug": "go语言基础篇—番外篇",
+        "link": "#go语言基础篇—番外篇",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Go语言基础",
+        "slug": "go语言基础",
+        "link": "#go语言基础",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Go语言面对对象",
+        "slug": "go语言面对对象",
+        "link": "#go语言面对对象",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Go语言高级",
+        "slug": "go语言高级",
+        "link": "#go语言高级",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Go语言进阶",
+        "slug": "go语言进阶",
+        "link": "#go语言进阶",
+        "children": [
+          {
+            "level": 3,
+            "title": "Go网络编程和并发编程",
+            "slug": "go网络编程和并发编程",
+            "link": "#go网络编程和并发编程",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Go连接数据库",
+            "slug": "go连接数据库",
+            "link": "#go连接数据库",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Redis",
+            "slug": "redis",
+            "link": "#redis",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "go操作ETCD",
+            "slug": "go操作etcd",
+            "link": "#go操作etcd",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Go - zookeeper",
+            "slug": "go-zookeeper",
+            "link": "#go-zookeeper",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "go操作kafka",
+            "slug": "go操作kafka",
+            "link": "#go操作kafka",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "go操作RabbitMQ",
+            "slug": "go操作rabbitmq",
+            "link": "#go操作rabbitmq",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "go操作ElasticSearch",
+            "slug": "go操作elasticsearch",
+            "link": "#go操作elasticsearch",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Go语言常用包",
+            "slug": "go语言常用包",
+            "link": "#go语言常用包",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "beego框架",
+            "slug": "beego框架",
+            "link": "#beego框架",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "Go高级",
+            "slug": "go高级",
+            "link": "#go高级",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "密码学",
+            "slug": "密码学",
+            "link": "#密码学",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "高级技巧",
+            "slug": "高级技巧",
+            "link": "#高级技巧",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "总结",
+            "slug": "总结",
+            "link": "#总结",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "🧭导航",
+        "slug": "🧭导航",
+        "link": "#🧭导航",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "📖Go语言",
+        "slug": "📖go语言",
+        "link": "#📖go语言",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "📚CS系列",
+        "slug": "📚cs系列",
+        "link": "#📚cs系列",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "📘开发必备技术",
+        "slug": "📘开发必备技术",
+        "link": "#📘开发必备技术",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "📔区块链导航",
+        "slug": "📔区块链导航",
+        "link": "#📔区块链导航",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "🅱️区块链教程",
+        "slug": "🅱️区块链教程",
+        "link": "#🅱️区块链教程",
+        "children": [
+          {
+            "level": 3,
+            "title": "🗃️项目",
+            "slug": "🗃️项目",
+            "link": "#🗃️项目",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "✨参与贡献💕",
+        "slug": "✨参与贡献💕",
+        "link": "#✨参与贡献💕",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "",
+        "slug": "",
+        "link": "#",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "/ Recent activity",
+        "slug": "recent-activity",
+        "link": "#recent-activity",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "版权声明 ©",
+        "slug": "版权声明-©",
+        "link": "#版权声明-©",
+        "children": []
+      }
+    ],
+    "path": "/mit-6-824/",
+    "pathLocale": "/",
+    "extraFields": []
+  },
+  {
     "title": "go语言基本语法和数据类型",
     "headers": [
       {
@@ -4755,275 +5024,6 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "MIT 6.824 DistributedSystem~",
-    "headers": [
-      {
-        "level": 2,
-        "title": "🏄‍♂️ 目录结构",
-        "slug": "🏄‍♂️-目录结构",
-        "link": "#🏄‍♂️-目录结构",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "🧷 参考文献",
-        "slug": "🧷-参考文献",
-        "link": "#🧷-参考文献",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "⚡Go语言基础篇",
-        "slug": "⚡go语言基础篇",
-        "link": "#⚡go语言基础篇",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "⚡Go语言高级篇",
-        "slug": "⚡go语言高级篇",
-        "link": "#⚡go语言高级篇",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "🐶往下看",
-        "slug": "🐶往下看",
-        "link": "#🐶往下看",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "📚目录",
-        "slug": "📚目录",
-        "link": "#📚目录",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "前言",
-        "slug": "前言",
-        "link": "#前言",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Go语言基础篇—番外篇",
-        "slug": "go语言基础篇—番外篇",
-        "link": "#go语言基础篇—番外篇",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Go语言基础",
-        "slug": "go语言基础",
-        "link": "#go语言基础",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Go语言面对对象",
-        "slug": "go语言面对对象",
-        "link": "#go语言面对对象",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Go语言高级",
-        "slug": "go语言高级",
-        "link": "#go语言高级",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "Go语言进阶",
-        "slug": "go语言进阶",
-        "link": "#go语言进阶",
-        "children": [
-          {
-            "level": 3,
-            "title": "Go网络编程和并发编程",
-            "slug": "go网络编程和并发编程",
-            "link": "#go网络编程和并发编程",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Go连接数据库",
-            "slug": "go连接数据库",
-            "link": "#go连接数据库",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Redis",
-            "slug": "redis",
-            "link": "#redis",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "go操作ETCD",
-            "slug": "go操作etcd",
-            "link": "#go操作etcd",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Go - zookeeper",
-            "slug": "go-zookeeper",
-            "link": "#go-zookeeper",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "go操作kafka",
-            "slug": "go操作kafka",
-            "link": "#go操作kafka",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "go操作RabbitMQ",
-            "slug": "go操作rabbitmq",
-            "link": "#go操作rabbitmq",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "go操作ElasticSearch",
-            "slug": "go操作elasticsearch",
-            "link": "#go操作elasticsearch",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Go语言常用包",
-            "slug": "go语言常用包",
-            "link": "#go语言常用包",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "beego框架",
-            "slug": "beego框架",
-            "link": "#beego框架",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "Go高级",
-            "slug": "go高级",
-            "link": "#go高级",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "密码学",
-            "slug": "密码学",
-            "link": "#密码学",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "高级技巧",
-            "slug": "高级技巧",
-            "link": "#高级技巧",
-            "children": []
-          },
-          {
-            "level": 3,
-            "title": "总结",
-            "slug": "总结",
-            "link": "#总结",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "🧭导航",
-        "slug": "🧭导航",
-        "link": "#🧭导航",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "📖Go语言",
-        "slug": "📖go语言",
-        "link": "#📖go语言",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "📚CS系列",
-        "slug": "📚cs系列",
-        "link": "#📚cs系列",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "📘开发必备技术",
-        "slug": "📘开发必备技术",
-        "link": "#📘开发必备技术",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "📔区块链导航",
-        "slug": "📔区块链导航",
-        "link": "#📔区块链导航",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "🅱️区块链教程",
-        "slug": "🅱️区块链教程",
-        "link": "#🅱️区块链教程",
-        "children": [
-          {
-            "level": 3,
-            "title": "🗃️项目",
-            "slug": "🗃️项目",
-            "link": "#🗃️项目",
-            "children": []
-          }
-        ]
-      },
-      {
-        "level": 2,
-        "title": "✨参与贡献💕",
-        "slug": "✨参与贡献💕",
-        "link": "#✨参与贡献💕",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "",
-        "slug": "",
-        "link": "#",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "/ Recent activity",
-        "slug": "recent-activity",
-        "link": "#recent-activity",
-        "children": []
-      },
-      {
-        "level": 2,
-        "title": "版权声明 ©",
-        "slug": "版权声明-©",
-        "link": "#版权声明-©",
-        "children": []
-      }
-    ],
-    "path": "/mit-6-824/",
-    "pathLocale": "/",
-    "extraFields": []
-  },
-  {
     "title": "IAM",
     "headers": [],
     "path": "/projects/",
@@ -5376,8 +5376,36 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "第10节",
+    "title": "第10节 原型模式",
     "headers": [
+      {
+        "level": 2,
+        "title": "way",
+        "slug": "way",
+        "link": "#way",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "实现方法",
+        "slug": "实现方法",
+        "link": "#实现方法",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "完整代码",
+        "slug": "完整代码",
+        "link": "#完整代码",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "优点",
+        "slug": "优点",
+        "link": "#优点",
+        "children": []
+      },
       {
         "level": 2,
         "title": "END 链接",
@@ -5391,8 +5419,43 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "第11节",
+    "title": "第11节 结构型模式（适配器模式）",
     "headers": [
+      {
+        "level": 2,
+        "title": "结构型模式",
+        "slug": "结构型模式",
+        "link": "#结构型模式",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "什么是适配器",
+        "slug": "什么是适配器",
+        "link": "#什么是适配器",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "演示",
+        "slug": "演示",
+        "link": "#演示",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "场景",
+        "slug": "场景",
+        "link": "#场景",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "优缺点",
+        "slug": "优缺点",
+        "link": "#优缺点",
+        "children": []
+      },
       {
         "level": 2,
         "title": "END 链接",
@@ -5406,8 +5469,36 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "第12节",
+    "title": "第12节 桥接模式",
     "headers": [
+      {
+        "level": 2,
+        "title": "why",
+        "slug": "why",
+        "link": "#why",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "简单实现",
+        "slug": "简单实现",
+        "link": "#简单实现",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "逻辑实现",
+        "slug": "逻辑实现",
+        "link": "#逻辑实现",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "优缺点",
+        "slug": "优缺点",
+        "link": "#优缺点",
+        "children": []
+      },
       {
         "level": 2,
         "title": "END 链接",
@@ -5421,8 +5512,43 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "第13节",
+    "title": "第13节 对像树模式",
     "headers": [
+      {
+        "level": 2,
+        "title": "why",
+        "slug": "why",
+        "link": "#why",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "基本概念",
+        "slug": "基本概念",
+        "link": "#基本概念",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "用法",
+        "slug": "用法",
+        "link": "#用法",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "实现方式",
+        "slug": "实现方式",
+        "link": "#实现方式",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "优势和应用",
+        "slug": "优势和应用",
+        "link": "#优势和应用",
+        "children": []
+      },
       {
         "level": 2,
         "title": "END 链接",
@@ -5436,8 +5562,51 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "第14节",
+    "title": "第14节 装饰器模式",
     "headers": [
+      {
+        "level": 2,
+        "title": "why",
+        "slug": "why",
+        "link": "#why",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "装饰模式中的角色和职责",
+        "slug": "装饰模式中的角色和职责",
+        "link": "#装饰模式中的角色和职责",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "代码的实现逻辑",
+        "slug": "代码的实现逻辑",
+        "link": "#代码的实现逻辑",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "优缺点",
+        "slug": "优缺点",
+        "link": "#优缺点",
+        "children": [
+          {
+            "level": 3,
+            "title": "优点",
+            "slug": "优点",
+            "link": "#优点",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "缺点",
+            "slug": "缺点",
+            "link": "#缺点",
+            "children": []
+          }
+        ]
+      },
       {
         "level": 2,
         "title": "END 链接",
@@ -5451,8 +5620,58 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "第15节",
+    "title": "第15节 管道模式",
     "headers": [
+      {
+        "level": 2,
+        "title": "管道模式",
+        "slug": "管道模式",
+        "link": "#管道模式",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "管道的基本结构",
+        "slug": "管道的基本结构",
+        "link": "#管道的基本结构",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "管道模式的应用",
+        "slug": "管道模式的应用",
+        "link": "#管道模式的应用",
+        "children": [
+          {
+            "level": 3,
+            "title": "数据过滤",
+            "slug": "数据过滤",
+            "link": "#数据过滤",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "数据转换",
+            "slug": "数据转换",
+            "link": "#数据转换",
+            "children": []
+          }
+        ]
+      },
+      {
+        "level": 2,
+        "title": "案例",
+        "slug": "案例",
+        "link": "#案例",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "优缺点",
+        "slug": "优缺点",
+        "link": "#优缺点",
+        "children": []
+      },
       {
         "level": 2,
         "title": "END 链接",
@@ -5534,6 +5753,28 @@ export const searchIndex = [
         "slug": "什么是单一职责原则",
         "link": "#什么是单一职责原则",
         "children": []
+      },
+      {
+        "level": 2,
+        "title": "Go语言中通常如何实现单例模式",
+        "slug": "go语言中通常如何实现单例模式",
+        "link": "#go语言中通常如何实现单例模式",
+        "children": [
+          {
+            "level": 3,
+            "title": "懒汉式",
+            "slug": "懒汉式",
+            "link": "#懒汉式",
+            "children": []
+          },
+          {
+            "level": 3,
+            "title": "饿汉式",
+            "slug": "饿汉式",
+            "link": "#饿汉式",
+            "children": []
+          }
+        ]
       },
       {
         "level": 2,
@@ -6468,6 +6709,13 @@ export const searchIndex = [
       },
       {
         "level": 2,
+        "title": "抽象工厂",
+        "slug": "抽象工厂",
+        "link": "#抽象工厂",
+        "children": []
+      },
+      {
+        "level": 2,
         "title": "END 链接",
         "slug": "end-链接",
         "link": "#end-链接",
@@ -6629,8 +6877,36 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "第8节",
+    "title": "第8节 建造者模式",
     "headers": [
+      {
+        "level": 2,
+        "title": "建造者模式定义",
+        "slug": "建造者模式定义",
+        "link": "#建造者模式定义",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "完整代码",
+        "slug": "完整代码",
+        "link": "#完整代码",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "为什么要使用构建者模式",
+        "slug": "为什么要使用构建者模式",
+        "link": "#为什么要使用构建者模式",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "深入刨析建造者模式",
+        "slug": "深入刨析建造者模式",
+        "link": "#深入刨析建造者模式",
+        "children": []
+      },
       {
         "level": 2,
         "title": "END 链接",
@@ -6794,8 +7070,57 @@ export const searchIndex = [
     "extraFields": []
   },
   {
-    "title": "第9节",
+    "title": "第9节 配置模式",
     "headers": [
+      {
+        "level": 2,
+        "title": "why",
+        "slug": "why",
+        "link": "#why",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "配置模式概述",
+        "slug": "配置模式概述",
+        "link": "#配置模式概述",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "Go语言中的配置模式",
+        "slug": "go语言中的配置模式",
+        "link": "#go语言中的配置模式",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "配置模式初级写法",
+        "slug": "配置模式初级写法",
+        "link": "#配置模式初级写法",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "数据库的配置模式高级写法",
+        "slug": "数据库的配置模式高级写法",
+        "link": "#数据库的配置模式高级写法",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "常见写法",
+        "slug": "常见写法",
+        "link": "#常见写法",
+        "children": []
+      },
+      {
+        "level": 2,
+        "title": "总结",
+        "slug": "总结",
+        "link": "#总结",
+        "children": []
+      },
       {
         "level": 2,
         "title": "END 链接",

@@ -20,9 +20,9 @@
 </div>
 <h2 id="设计模式的分类" tabindex="-1"><a class="header-anchor" href="#设计模式的分类" aria-hidden="true">#</a> 设计模式的分类</h2>
 <div class="custom-container danger"><p class="custom-container-title">GoF提出的设计模式有23个，包括：</p>
-<p>（1）创建型(Creational)模式：如何创建对象；</p>
-<p>（2）结构型(Structural )模式：如何实现类或对象的组合；</p>
-<p>（3）行为型(Behavioral)模式：类或对象怎样交互以及怎样分配职责。</p>
+<p>（1）<strong>创建型(Creational)模式</strong>：如何创建对象；</p>
+<p>（2）<strong>结构型(Structural )模式</strong>：如何实现类或对象的组合；</p>
+<p>（3）<strong>行为型(Behavioral)模式</strong>：类或对象怎样交互以及怎样分配职责。</p>
 <p>有一个“简单工厂模式”不属于GoF 23种设计模式，但大部分的设计模式书籍都会对它进行专门的介绍。</p>
 <p>设计模式目前种类： <code v-pre>GoF的23种   + “简单工厂模式” = 24种</code>。</p>
 </div>

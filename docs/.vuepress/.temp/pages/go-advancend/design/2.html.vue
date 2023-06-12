@@ -13,7 +13,55 @@
 <div class="custom-container tip"><p class="custom-container-title">单一职责原则</p>
 <p>类的职责单一，对外只提供一种功能，二引起类变化的原因都只有一个</p>
 </div>
-<h2 id="代码" tabindex="-1"><a class="header-anchor" href="#代码" aria-hidden="true">#</a> 代码</h2>
+<h2 id="go语言中通常如何实现单例模式" tabindex="-1"><a class="header-anchor" href="#go语言中通常如何实现单例模式" aria-hidden="true">#</a> Go语言中通常如何实现单例模式</h2>
+<p>在Go语言中，可以使用懒汉式或饿汉式来实现单例模式。</p>
+<h3 id="懒汉式" tabindex="-1"><a class="header-anchor" href="#懒汉式" aria-hidden="true">#</a> 懒汉式</h3>
+<p>在懒汉式中，实例对象不会在程序初始化时被创建，而是在第一次调用该实例对象时才会被创建。这种方式可以避免不必要的资源浪费。下面是一个使用懒汉式实现单例模式的示例代码：</p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">package</span> main
+
+<span class="token keyword">import</span> <span class="token punctuation">(</span>
+	<span class="token string">"fmt"</span>
+	<span class="token string">"sync"</span>
+<span class="token punctuation">)</span>
+
+<span class="token keyword">type</span> singleton <span class="token keyword">struct</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+<span class="token keyword">var</span> instance <span class="token operator">*</span>singleton
+<span class="token keyword">var</span> once sync<span class="token punctuation">.</span>Once
+
+<span class="token keyword">func</span> <span class="token function">GetInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span>singleton <span class="token punctuation">{</span>
+	once<span class="token punctuation">.</span><span class="token function">Do</span><span class="token punctuation">(</span><span class="token keyword">func</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		instance <span class="token operator">=</span> <span class="token operator">&amp;</span>singleton<span class="token punctuation">{</span><span class="token punctuation">}</span>
+	<span class="token punctuation">}</span><span class="token punctuation">)</span>
+	<span class="token keyword">return</span> instance
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	s1 <span class="token operator">:=</span> <span class="token function">GetInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	s2 <span class="token operator">:=</span> <span class="token function">GetInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>s1<span class="token punctuation">,</span> s2<span class="token punctuation">)</span>
+
+	<span class="token comment">// if s1 == s2</span>
+	<span class="token keyword">if</span> s1 <span class="token operator">==</span> s2 <span class="token punctuation">{</span>
+		fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"s1 == s2"</span><span class="token punctuation">)</span> <span class="token comment">// yes</span>
+	<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+		fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"s1 != s2"</span><span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>在上述实现中，<code v-pre>once</code>对象保证了<code v-pre>GetInstance()</code>函数只会被执行一次。第一次调用<code v-pre>GetInstance()</code>函数时，<code v-pre>once.Do()</code>方法会执行传递给它的匿名函数，该匿名函数会创建一个新的<code v-pre>singleton</code>对象，并将它赋值给<code v-pre>instance</code>变量。之后再次调用<code v-pre>GetInstance()</code>函数时，就会直接返回已经创建好的<code v-pre>instance</code>变量。</p>
+<h3 id="饿汉式" tabindex="-1"><a class="header-anchor" href="#饿汉式" aria-hidden="true">#</a> 饿汉式</h3>
+<p>在饿汉式中，实例对象在程序初始化时就会被创建。这种方式可以保证在任何时候都能够获得该实例对象，但是可能会造成不必要的资源浪费。下面是一个使用饿汉式实现单例模式的示例代码：</p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">package</span> singleton
+
+<span class="token keyword">type</span> singleton <span class="token keyword">struct</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+<span class="token keyword">var</span> instance <span class="token operator">*</span>singleton <span class="token operator">=</span> <span class="token operator">&amp;</span>singleton<span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token function">GetInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span>singleton <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> instance
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="代码" tabindex="-1"><a class="header-anchor" href="#代码" aria-hidden="true">#</a> 代码</h2>
 <p>💡简单的一个案例如下：</p>
 <div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token comment">/*
  * @Description: 单一职责原则

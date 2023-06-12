@@ -25,6 +25,8 @@ export const pagesData = {
   "v-e936e1ca": () => import(/* webpackChunkName: "v-e936e1ca" */"D:/文档/最近的/awesome-golang/docs/.vuepress/.temp/pages/Gomd_super/index.html.js").then(({ data }) => data),
   // path: /Gomd_super/zhenze.html
   "v-7297ae5c": () => import(/* webpackChunkName: "v-7297ae5c" */"D:/文档/最近的/awesome-golang/docs/.vuepress/.temp/pages/Gomd_super/zhenze.html.js").then(({ data }) => data),
+  // path: /mit-6-824/
+  "v-60a7cafa": () => import(/* webpackChunkName: "v-60a7cafa" */"D:/文档/最近的/awesome-golang/docs/.vuepress/.temp/pages/mit-6-824/index.html.js").then(({ data }) => data),
   // path: /markdown/1.html
   "v-64c6c762": () => import(/* webpackChunkName: "v-64c6c762" */"D:/文档/最近的/awesome-golang/docs/.vuepress/.temp/pages/markdown/1.html.js").then(({ data }) => data),
   // path: /markdown/10.html
@@ -101,8 +103,6 @@ export const pagesData = {
   "v-a7c03efc": () => import(/* webpackChunkName: "v-a7c03efc" */"D:/文档/最近的/awesome-golang/docs/.vuepress/.temp/pages/markdown/反射.html.js").then(({ data }) => data),
   // path: /markdown/%E5%B9%B6%E5%8F%91.html
   "v-01dce1e5": () => import(/* webpackChunkName: "v-01dce1e5" */"D:/文档/最近的/awesome-golang/docs/.vuepress/.temp/pages/markdown/并发.html.js").then(({ data }) => data),
-  // path: /mit-6-824/
-  "v-60a7cafa": () => import(/* webpackChunkName: "v-60a7cafa" */"D:/文档/最近的/awesome-golang/docs/.vuepress/.temp/pages/mit-6-824/index.html.js").then(({ data }) => data),
   // path: /projects/
   "v-6dc367c8": () => import(/* webpackChunkName: "v-6dc367c8" */"D:/文档/最近的/awesome-golang/docs/.vuepress/.temp/pages/projects/index.html.js").then(({ data }) => data),
   // path: /%E5%AD%97%E8%8A%82%E9%9D%92%E8%AE%AD%E8%90%A5/%E5%AD%97%E8%8A%82%E9%9D%92%E8%AE%AD%E8%90%A5%E8%BF%9B%E9%98%B6%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87.html

@@ -120,10 +120,8 @@
 	fruit <span class="token operator">=</span> <span class="token function">NewFruit</span><span class="token punctuation">(</span><span class="token string">"banana"</span><span class="token punctuation">)</span>
 	fruit<span class="token punctuation">.</span><span class="token function">GetFruit</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 	fruit<span class="token punctuation">.</span><span class="token function">String</span><span class="token punctuation">(</span><span class="token string">"banana"</span><span class="token punctuation">)</span>
-
 <span class="token punctuation">}</span>
-
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>🚀 编译结果如下：</p>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>🚀 编译结果如下：</p>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token punctuation">[</span>Running<span class="token punctuation">]</span> go run <span class="token string">"d:\文档\最近的<span class="token entity" title="\a">\a</span>wesome-golang\docs<span class="token entity" title="\c">\c</span>ode\go-super\84-main.go"</span>
 我是苹果
 我是橘子
@@ -258,6 +256,88 @@ banana
 <p>客户端只知道传入工厂类的参数，对于如何创建对象并不关心。</p>
 </li>
 </ol>
+<h2 id="抽象工厂" tabindex="-1"><a class="header-anchor" href="#抽象工厂" aria-hidden="true">#</a> 抽象工厂</h2>
+<p>Go语言的抽象工厂模式（Abstract Factory Pattern）是一种创建型设计模式，它提供了一个接口，用于创建一系列相关或相互依赖的对象，而不需要指定它们的具体类。换句话说，抽象工厂模式为创建一组相关的对象提供了一个统一的接口，而客户端代码只需使用该接口就可以与这些对象交互，从而降低了代码的耦合度。</p>
+<div class="custom-container tip"><p class="custom-container-title">简单来说</p>
+<p>抽象工厂模式就是将多个工厂类的接口进行抽象，然后再用一个 工厂类 来封装这些工厂的接口。在创建具体对象的时候，我们通常需要使用其他对象和数据结构，因此，我们还需要定义一些相关 <strong>产品接口</strong> 和 <strong>产品结构体</strong></p>
+</div>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token comment">// 抽象工厂接口</span>
+<span class="token keyword">type</span> AbstractFactory <span class="token keyword">interface</span> <span class="token punctuation">{</span>
+    <span class="token function">CreateProductA</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ProductA
+    <span class="token function">CreateProductB</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ProductB
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 具体工厂1</span>
+<span class="token keyword">type</span> ConcreteFactory1 <span class="token keyword">struct</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token punctuation">(</span>f <span class="token operator">*</span>ConcreteFactory1<span class="token punctuation">)</span> <span class="token function">CreateProductA</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ProductA <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token operator">&amp;</span>ConcreteProductA1<span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token punctuation">(</span>f <span class="token operator">*</span>ConcreteFactory1<span class="token punctuation">)</span> <span class="token function">CreateProductB</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ProductB <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token operator">&amp;</span>ConcreteProductB1<span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 具体工厂2</span>
+<span class="token keyword">type</span> ConcreteFactory2 <span class="token keyword">struct</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token punctuation">(</span>f <span class="token operator">*</span>ConcreteFactory2<span class="token punctuation">)</span> <span class="token function">CreateProductA</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ProductA <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token operator">&amp;</span>ConcreteProductA2<span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token punctuation">(</span>f <span class="token operator">*</span>ConcreteFactory2<span class="token punctuation">)</span> <span class="token function">CreateProductB</span><span class="token punctuation">(</span><span class="token punctuation">)</span> ProductB <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token operator">&amp;</span>ConcreteProductB2<span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 抽象产品A接口</span>
+<span class="token keyword">type</span> ProductA <span class="token keyword">interface</span> <span class="token punctuation">{</span>
+    <span class="token function">GetName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 具体产品A1</span>
+<span class="token keyword">type</span> ConcreteProductA1 <span class="token keyword">struct</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token punctuation">(</span>p <span class="token operator">*</span>ConcreteProductA1<span class="token punctuation">)</span> <span class="token function">GetName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">"ConcreteProductA1"</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 具体产品A2</span>
+<span class="token keyword">type</span> ConcreteProductA2 <span class="token keyword">struct</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token punctuation">(</span>p <span class="token operator">*</span>ConcreteProductA2<span class="token punctuation">)</span> <span class="token function">GetName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">string</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">"ConcreteProductA2"</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 抽象产品B接口</span>
+<span class="token keyword">type</span> ProductB <span class="token keyword">interface</span> <span class="token punctuation">{</span>
+    <span class="token function">GetPrice</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">float64</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 具体产品B1</span>
+<span class="token keyword">type</span> ConcreteProductB1 <span class="token keyword">struct</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token punctuation">(</span>p <span class="token operator">*</span>ConcreteProductB1<span class="token punctuation">)</span> <span class="token function">GetPrice</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">float64</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token number">10.0</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 具体产品B2</span>
+<span class="token keyword">type</span> ConcreteProductB2 <span class="token keyword">struct</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+<span class="token keyword">func</span> <span class="token punctuation">(</span>p <span class="token operator">*</span>ConcreteProductB2<span class="token punctuation">)</span> <span class="token function">GetPrice</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token builtin">float64</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token number">20.0</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>在上面的代码中，我们定义了一个抽象工厂接口 <code v-pre>AbstractFactory</code>，以及两个具体工厂 <code v-pre>ConcreteFactory1</code> 和 <code v-pre>ConcreteFactory2</code>。每个具体工厂都实现了 <code v-pre>CreateProductA</code> 和 <code v-pre>CreateProductB</code> 方法，用于创建不同类型的产品。</p>
+<p>同时，我们还定义了抽象产品A和产品B接口 <code v-pre>ProductA</code> 和 <code v-pre>ProductB</code>，以及它们的具体实现类 <code v-pre>ConcreteProductA1</code>、<code v-pre>ConcreteProductA2</code>、<code v-pre>ConcreteProductB1</code> 和 <code v-pre>ConcreteProductB2</code>。这些具体产品类包含了各自的实现细节，实现了抽象产品接口定义的方法。</p>
+<p>通过以上实现，客户端可以使用工厂接口 <code v-pre>AbstractFactory</code> 创建一组相关的对象，而无需关心具体的实现细节。例如：</p>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token comment">// 根据需要选择合适的工厂~</span>
+factory1 <span class="token operator">:=</span> <span class="token operator">&amp;</span>ConcreteFactory1<span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+productA <span class="token operator">:=</span> factory1<span class="token punctuation">.</span><span class="token function">CreateProductA</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+productB <span class="token operator">:=</span> factory1<span class="token punctuation">.</span><span class="token function">CreateProductB</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>productA<span class="token punctuation">.</span><span class="token function">GetName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// 输出: ConcreteProductA1</span>
+fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>productB<span class="token punctuation">.</span><span class="token function">GetPrice</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// 输出: 10.0</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>客户端代码只需要使用抽象工厂接口 <code v-pre>AbstractFactory</code>，以及该接口定义的创建产品方法 <code v-pre>CreateProductA</code> 和 <code v-pre>CreateProductB</code>，即可创建一组相关的对象。具体的产品实现由具体工厂类负责。</p>
 <h2 id="end-链接" tabindex="-1"><a class="header-anchor" href="#end-链接" aria-hidden="true">#</a> END 链接</h2>
 <ul><li><div><a href = '6.md' style='float:left'>⬆️上一节🔗</a><a href = '8.md' style='float: right'>⬇️下一节🔗</a></div></li></ul>
 <ul>
