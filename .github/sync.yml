@@ -1,0 +1,22 @@
+# https://github.com/BetaHuhn/repo-file-sync-action
+# Synchronization for the.github repository
+group:
+  # first group：common to all warehouses
+  # TODO: add the required warehouse here
+  - repos: |
+      cubxxw/awesome-cs-cloudnative-blockchain@master
+    files: 
+      # - source: .gitingore
+      #   dest: .gitingore
+      #   replace: false
+      - source: docs/
+        dest: awesome-golang/
+        replace: true
+        exclude: |
+          *.go
+          .vuepress
+          .*
+          README.md
+      - source: README.md
+        dest: awesome-golang/README.md
+        replace: true
