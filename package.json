@@ -28,6 +28,6 @@
   "dependencies": {
     "@vssue/api-github-v3": "^1.4.7",
     "@vssue/api-github-v4": "^1.4.7",
-    "vuepress-plugin-md-enhance": "^1.30.0"
+    "vuepress-plugin-md-enhance": "^2.0.0-beta.174"
   }
 }
