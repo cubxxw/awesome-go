@@ -1,7 +1,7 @@
 ---
 home: true
 lang: zh-CN
-title: Cub链学社（c-universal blockchain）
+title: Cub链学社（c-universal blockchain） 
 description: docker学习
 heroImage: https://sm.nsddd.top//typora/logo_transparent.png?mail:3293172751@qq.com
 heroText: Golang
