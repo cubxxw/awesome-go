@@ -7,7 +7,7 @@
 <li><RouterLink to="/go-advancend/markdown/39.html">上一节</RouterLink></li>
 </ul>
 <blockquote>
-<p>❤️💕💕Go语言高级篇章,在此之前建议您先了解基础和进阶篇。Myblog:<a href="http://nsddd.top/" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
+<p>❤️💕💕Go语言高级篇章,在此之前建议您先了解基础和进阶篇。Myblog:<a href="http://cubxxw.com/" target="_blank" rel="noopener noreferrer">http://cubxxw.com<ExternalLinkIcon/></a></p>
 </blockquote>
 <h3 id="go语言基础篇" tabindex="-1"><a class="header-anchor" href="#go语言基础篇" aria-hidden="true">#</a> <strong><a href="https://github.com/cubxxw/awesome-cs-cloudnative-blockchain/blob/master/TOC.md" target="_blank" rel="noopener noreferrer">Go语言基础篇<ExternalLinkIcon/></a></strong></h3>
 <h3 id="go语言100篇进阶" tabindex="-1"><a class="header-anchor" href="#go语言100篇进阶" aria-hidden="true">#</a> <strong><a href="https://github.com/cubxxw/awesome-cs-cloudnative-blockchain/blob/master/Gomd_super/README.md" target="_blank" rel="noopener noreferrer">Go语言100篇进阶<ExternalLinkIcon/></a></strong></h3>
@@ -36,7 +36,7 @@
 <p>从图中可以得出处理速度与存储容量是成反比的。也就是说，性能越大的计算机硬件资源，越是稀缺，所以合理的利用和分配就越重要。</p>
 <p>比如内存与硬盘的对比，因为硬盘的容量是非常廉价的，虽然内存目前也可以用到 10G 级别的使用，但是从处理速度来看的话，两者的差距还是相差甚大的，具体如表 1 所示。</p>
 <h3 id="表-1-硬盘与内存对比表" tabindex="-1"><a class="header-anchor" href="#表-1-硬盘与内存对比表" aria-hidden="true">#</a> 表 1 硬盘与内存对比表</h3>
-<p><img src="http://sm.nsddd.top/sm202303031006244.png" alt="image-20230303100620097"></p>
+<p><img src="http://sm.cubxxw.com/sm202303031006244.png" alt="image-20230303100620097"></p>
 <p>所以将大部分程序逻辑临时用的数据，全部都存在内存之中，比如，变量、全局变量、函数跳转地址、静态库、执行代码、临时开辟的内存结构体（对象）等。</p>
 <h2 id="_2-内存为什么需要管理" tabindex="-1"><a class="header-anchor" href="#_2-内存为什么需要管理" aria-hidden="true">#</a> 2 内存为什么需要管理</h2>
 <p>当存储的东西越来越多，也就发现物理内存的容量依然是不够用，那么对物理内存的利用率和合理的分配，管理就变得非常的重要。</p>

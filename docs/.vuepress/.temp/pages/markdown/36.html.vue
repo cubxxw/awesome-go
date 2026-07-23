@@ -81,7 +81,7 @@ docker run -d -p 8082:8080 --network xiongxinwei@mail_network  --name tomcat82 b
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h2 id="docker-下创建自定义网络-并在运行容器时绑定网络和ip" tabindex="-1"><a class="header-anchor" href="#docker-下创建自定义网络-并在运行容器时绑定网络和ip" aria-hidden="true">#</a> docker 下创建自定义网络，并在运行容器时绑定网络和ip</h2>
 <p>Docker安装后，默认会创建三种网络类型，bridge、host和none，可通过如下命令查看</p>
 <div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>　　docker network ls 
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p><img src="https://sm.nsddd.top//typora/720144-20210209104212204-1769428363.png?mail:3293172751@qq.com" alt="img"></p>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p><img src="https://sm.cubxxw.com//typora/720144-20210209104212204-1769428363.png?mail:3293172751@qq.com" alt="img"></p>
 <h3 id="bridge-网络桥接" tabindex="-1"><a class="header-anchor" href="#bridge-网络桥接" aria-hidden="true">#</a> bridge:网络桥接</h3>
 <p>默认情况下启动、创建容器都是用该模式，所以每次Docker容器重启时会按照顺序获取对应ip地址，这就导致容器每次重启，ip都发生变化</p>
 <h3 id="none-无指定网络" tabindex="-1"><a class="header-anchor" href="#none-无指定网络" aria-hidden="true">#</a> none：无指定网络</h3>
@@ -101,7 +101,7 @@ docker run -d -p 8082:8080 --network xiongxinwei@mail_network  --name tomcat82 b
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token function">docker</span> network <span class="token function">ls</span>
 <span class="token function">docker</span> network inspect mynetwork
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>使用docker network inspect mynetwork 查看网络信息</p>
-<p><img src="https://sm.nsddd.top//typora/720144-20210209105133125-1384179463.png?mail:3293172751@qq.com" alt="img"></p>
+<p><img src="https://sm.cubxxw.com//typora/720144-20210209105133125-1384179463.png?mail:3293172751@qq.com" alt="img"></p>
 <p>使用新的网络类型创建并启动容器</p>
 <div class="language-docker ext-docker line-numbers-mode"><pre v-pre class="language-docker"><code>docker run -d --name=consul -p 8500:8500 \
 --net=mynetwork --ip=192.168.0.2 \
@@ -140,7 +140,7 @@ docker run -d -p 8082:8080 --network xiongxinwei@mail_network  --name tomcat82 b
 </tbody>
 </table>
 <p><strong>我们尝试查看一下自定义网络详情</strong></p>
-<p><img src="https://sm.nsddd.top//typora/image-20220916205821816.png?mail:3293172751@qq.com" alt="image-20220916205821816"></p>
+<p><img src="https://sm.cubxxw.com//typora/image-20220916205821816.png?mail:3293172751@qq.com" alt="image-20220916205821816"></p>
 <h2 id="查看tomcat81的ip" tabindex="-1"><a class="header-anchor" href="#查看tomcat81的ip" aria-hidden="true">#</a> 查看tomcat81的ip</h2>
 <div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>root@ubuntu:/text# docker exec -it tomcat81 bash
 root@83cabf17ff0b:/usr/local/tomcat# ip addr

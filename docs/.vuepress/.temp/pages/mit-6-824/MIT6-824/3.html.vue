@@ -6,7 +6,7 @@
 <div><a href = '2.md' style='float:left'>⬆️上一节🔗  </a><a href = '4.md' style='float: right'>  ⬇️下一节🔗</a></div>
 <br>
 <blockquote>
-<p>❤️💕💕⚠️ According to the MIT 6.824 Collaboration policy, which prevents students from obtaining Solutions through GitHub, the source repository is for personal use only, and the documentation uses an open source protocol for learning. Myblog:<a href="http://nsddd.top/" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
+<p>❤️💕💕⚠️ According to the MIT 6.824 Collaboration policy, which prevents students from obtaining Solutions through GitHub, the source repository is for personal use only, and the documentation uses an open source protocol for learning. Myblog:<a href="http://cubxxw.com/" target="_blank" rel="noopener noreferrer">http://cubxxw.com<ExternalLinkIcon/></a></p>
 </blockquote>
 <hr>
 <nav class="table-of-contents"><ul><li><router-link to="#可扩展性-scalability">可扩展性（Scalability）</router-link></li><li><router-link to="#可用性-availability">可用性（Availability）</router-link></li><li><router-link to="#一致性-consistency">一致性（Consistency）</router-link></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
@@ -14,16 +14,16 @@
 <h2 id="可扩展性-scalability" tabindex="-1"><a class="header-anchor" href="#可扩展性-scalability" aria-hidden="true">#</a> 可扩展性（Scalability）</h2>
 <p>另一个在很多论文中都出现过重要的话题，就是性能。</p>
 <p>通常来说，构建分布式系统的目的是为了获取人们常常提到的可扩展的加速。所以，我们这里追求的是可扩展性（Scalability）。而我这里说的可扩展或者可扩展性指的是，如果我用一台计算机解决了一些问题，当我买了第二台计算机，我只需要一半的时间就可以解决这些问题，或者说每分钟可以解决两倍数量的问题。两台计算机构成的系统如果有两倍性能或者吞吐，就是我说的可扩展性。</p>
-<p><img src="http://sm.nsddd.top/smimage-20221118224720719.png" alt="image-20221118224720719"></p>
+<p><img src="http://sm.cubxxw.com/smimage-20221118224720719.png" alt="image-20221118224720719"></p>
 <p>这是一个很强大的特性。如果你构建了一个系统，并且只要增加计算机的数量，系统就能相应提高性能或者吞吐量，这将会是一个巨大的成果，因为计算机只需要花钱就可以买到。如果不增加计算机，就需要花钱雇程序员来重构这些系统，进而使这些系统有更高的性能，更高的运行效率，或者应用一个更好的算法之类的。花钱请程序员来修补这些代码，使它们运行的更快，通常会是一个昂贵的方法。我们还是希望能够通过从十台计算机提升到一千台计算机，就能扛住一百倍的流量。</p>
 <p>所以，当人们使用一整个机房的计算机来构建大型网站的时候，为了获取对应的性能，必须要时刻考虑可扩展性。你需要仔细设计系统，才能获得与计算机数量匹配的性能。</p>
 <p>我在课程中可能经常会画图来说明，比如我们来看这样一个图。假设我们建立了一个常规网站，一般来说一个网站有一个 HTTP服务器，还有一些用户和浏览器，用户与一个基于Python或者PHP的web服务器通信，web服务器进而跟一些数据库进行交互。</p>
-<p><img src="http://sm.nsddd.top/smimage-20221118224731489.png" alt="image-20221118224731489"></p>
+<p><img src="http://sm.cubxxw.com/smimage-20221118224731489.png" alt="image-20221118224731489"></p>
 <p>当你只有1-2个用户时，一台计算机就可以运行web服务器和数据，或者一台计算机运行web服务器，一台计算机运行数据库。但是有可能你的网站一夜之间就火了起来，你发现可能有一亿人要登录你的网站。你该怎么修改你的网站，使它能够在一台计算机上支持一亿个用户？你可以花费大量时间极致优化你的网站，但是很显然你没有那个时间。所以，为了提升性能，你要做的第一件事情就是购买更多的web服务器，然后把不同用户分到不同服务器上。这样，一部分用户可以去访问第一台web服务器，另一部分去访问第二台web服务器。因为你正在构建的是类似于Reddit的网站，所有的用户最终都需要看到相同的数据。所以，所有的web服务器都与后端数据库通信。这样，很长一段时间你都可以通过添加web服务器来并行的提高web服务器的代码效率。</p>
-<p><img src="http://sm.nsddd.top/smimage-20221118225308937.png" alt="image-20221118225308937"></p>
+<p><img src="http://sm.cubxxw.com/smimage-20221118225308937.png" alt="image-20221118225308937"></p>
 <p>只要单台web服务器没有给数据库带来太多的压力，你可以在出现问题前添加很多web服务器，但是这种可扩展性并不是无限的。很可能在某个时间点你有了10台，20台，甚至100台web服务器，它们都在和同一个数据库通信。现在，数据库突然成为了瓶颈，并且增加更多的web服务器都无济于事了。所以很少有可以通过无限增加计算机来获取完整的可扩展性的场景。因为在某个临界点，你在系统中添加计算机的位置将不再是瓶颈了。在我们的例子中，如果你有了很多的web服务器，那么瓶颈就会转移到了别的地方，这里是从web服务器移到了数据库。</p>
 <p>这时，你几乎是必然要做一些重构工作。但是只有一个数据库时，很难重构它。而虽然可以将一个数据库拆分成多个数据库（进而提升性能），但是这需要大量的工作。</p>
-<p><img src="http://sm.nsddd.top/smimage-20221118224742401.png" alt="image-20221118224742401"></p>
+<p><img src="http://sm.cubxxw.com/smimage-20221118224742401.png" alt="image-20221118224742401"></p>
 <p>我们在本课程中，会看到很多有关分布式存储系统的例子，因为相关论文或者系统的作者都在运行大型网站，而单个数据库或者存储服务器不能支撑这样规模的网站（所以才需要分布式存储）。</p>
 <p>所以，有关扩展性是这样：我们希望可以通过增加机器的方式来实现扩展，但是现实中这很难实现，需要一些架构设计来将这个可扩展性无限推进下去。</p>
 <h2 id="可用性-availability" tabindex="-1"><a class="header-anchor" href="#可用性-availability" aria-hidden="true">#</a> 可用性（Availability）</h2>
@@ -66,7 +66,7 @@
 <p><RouterLink to="/mit-6-824/">Ⓜ️回到目录🏠</RouterLink></p>
 </li>
 <li>
-<p><a href="https://nsddd.top/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
+<p><a href="https://cubxxw.com/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
 </li>
 <li>
 <p>✴️版权声明 © ：本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>

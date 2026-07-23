@@ -59,7 +59,7 @@
 2014/11/06 18:18:35 [INFO] ./quickstart is running...
 2014/11/06 18:18:35 [app.go:96] [I] http server Running on :8080
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>这样我们的应用已经在 <code v-pre>8080</code> 端口(beego 的默认端口)跑起来了.你是不是觉得很神奇，为什么没有 nginx 和 apache 居然可以自己干这个事情？是的，Go 其实已经做了网络层的东西，beego 只是封装了一下，所以可以做到不需要 nginx 和 apache。让我们打开浏览器看看效果吧：</p>
-<p><img src="http://sm.nsddd.top/sms5exAdFElpkSh1v.png" alt="img"></p>
+<p><img src="http://sm.cubxxw.com/sms5exAdFElpkSh1v.png" alt="img"></p>
 <h2 id="go-mod" tabindex="-1"><a class="header-anchor" href="#go-mod" aria-hidden="true">#</a> go mod</h2>
 <p>我们当然是可以使用 Go mod</p>
 <div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>PS D:\文档\最近的\awesome-golang\docs\code\beego> tree 
@@ -92,7 +92,7 @@ D:.
 <p><RouterLink to="/Gomd_super/">Ⓜ️回到首页🏠</RouterLink></p>
 </li>
 <li>
-<p><a href="https://nsddd.top/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
+<p><a href="https://cubxxw.com/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
 </li>
 <li>
 <p>✴️版权声明 © :本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>

@@ -6,7 +6,7 @@
 <div><a href = '0.md' style='float:left'>⬆️上一节🔗  </a><a href = '2.md' style='float: right'>  ⬇️下一节🔗</a></div>
 <br>
 <blockquote>
-<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://nsddd.top/" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
+<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://cubxxw.com/" target="_blank" rel="noopener noreferrer">http://cubxxw.com<ExternalLinkIcon/></a></p>
 </blockquote>
 <hr>
 <nav class="table-of-contents"><ul><li><router-link to="#前言">前言</router-link></li><li><router-link to="#开始">开始</router-link></li><li><router-link to="#iam系统架构是什么样的">IAM系统架构是什么样的</router-link><ul><li><router-link to="#第-1-步-创建平台资源">第 1 步，创建平台资源</router-link></li><li><router-link to="#第-2-步-请求-api-完成资源授权">第 2 步，请求 API 完成资源授权</router-link></li><li><router-link to="#第-3-步-授权日志数据分析">第 3 步，授权日志数据分析</router-link></li><li><router-link to="#第-4-步-运营平台授权数据展示">第 4 步，运营平台授权数据展示</router-link></li></ul></li><li><router-link to="#iam-软件架构模式">IAM 软件架构模式</router-link><ul><li><router-link to="#前后端分离架构">前后端分离架构</router-link></li><li><router-link to="#mvc-软件架构">MVC 软件架构</router-link></li></ul></li><li><router-link to="#总结">总结</router-link></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
@@ -17,7 +17,7 @@
 <p><a href="https://github.com/cubxxw/cs-awesome-Block_Chain" target="_blank" rel="noopener noreferrer">⭕ 📚 菜鸟成长手册🚀 CS系列 、云原生系列、区块链系列、web3系列🔥、Golang系列💡<ExternalLinkIcon/></a></p>
 </li>
 <li>
-<p><a href="https://go.nsddd.top/" target="_blank" rel="noopener noreferrer">🚤 Go语言基础-进阶<ExternalLinkIcon/></a></p>
+<p><a href="https://go.cubxxw.com/" target="_blank" rel="noopener noreferrer">🚤 Go语言基础-进阶<ExternalLinkIcon/></a></p>
 </li>
 <li>
 <p><a href="https://github.com/cubxxw/cs-awesome-Block_Chain/blob/master/TOC.md" target="_blank" rel="noopener noreferrer">🖱️GO 基础部分🔥<ExternalLinkIcon/></a></p>
@@ -29,7 +29,7 @@
 <p><a href="https://github.com/cubxxw/cs-awesome-Block_Chain/blob/master/go-advancend/README.md" target="_blank" rel="noopener noreferrer">🖱️Go 高级篇<ExternalLinkIcon/></a></p>
 </li>
 <li>
-<p><a href="https://docker.nsddd.top/" target="_blank" rel="noopener noreferrer">🚤 docker &amp; k8s &amp; 云原生<ExternalLinkIcon/></a></p>
+<p><a href="https://docker.cubxxw.com/" target="_blank" rel="noopener noreferrer">🚤 docker &amp; k8s &amp; 云原生<ExternalLinkIcon/></a></p>
 </li>
 </ul>
 <h2 id="开始" tabindex="-1"><a class="header-anchor" href="#开始" aria-hidden="true">#</a> 开始</h2>
@@ -57,7 +57,7 @@
 <li>因为 IAM 通过授权策略完成授权，所以用户需要在 IAM 中创建授权策略。</li>
 <li>请求 IAM 提供的授权接口，IAM 会根据用户的请求内容和授权策略来决定一个授权请求是否被允许。</li>
 </ol>
-<p><img src="http://sm.nsddd.top/sm202301142137316.png" alt="image-20230114213702111"></p>
+<p><img src="http://sm.cubxxw.com/sm202301142137316.png" alt="image-20230114213702111"></p>
 <p>我们可以看到，在上面的流程中，IAM 使用到了 3 种系统资源：<strong>用户（User）、密钥（Secret）和策略（Policy）</strong>，它们映射到程序设计中就是 3 种 [[RESTful]] 资源：</p>
 <blockquote>
 <p>RESTful 是 Representational State Transfer 的缩写。它是一种软件架构风格，用于构建网络应用程序。RESTful应用程序通过一组简单的，统一的约定来实现资源的状态转移，这些约定由 HTTP 协议提供。这些约定包括使用 HTTP 方法（如 GET、POST、PUT和DELETE）来执行操作，以及使用 HTTP 状态码来表示结果。</p>
@@ -69,9 +69,9 @@
 <li>策略（Policy）：实现对策略的增、删、改、查、批量删除操作。</li>
 </ol>
 <h2 id="iam系统架构是什么样的" tabindex="-1"><a class="header-anchor" href="#iam系统架构是什么样的" aria-hidden="true">#</a> IAM系统架构是什么样的</h2>
-<p><img src="http://sm.nsddd.top/sm202301171416484.png" alt="image-20230117141609306"></p>
+<p><img src="http://sm.cubxxw.com/sm202301171416484.png" alt="image-20230117141609306"></p>
 <p>总的来说，IAM 架构中包括 9 大组件和 3 大数据库。我将这些组件和功能都总结在下面的表格中。这里面，我们主要记住 5 个核心组件，包括 <code v-pre>iam-apiserver</code>、<code v-pre>iam-authz-server</code>、<code v-pre>iam-pump</code>、<code v-pre>marmotedu-sdk-go</code> 和 <code v-pre>iamctl</code> 的功能，还有 3 个数据库 Redis、MySQL 和 MongoDB 的功能。</p>
-<p><img src="http://sm.nsddd.top/sm202301151706727.png" alt="image-20230115170558726"></p>
+<p><img src="http://sm.cubxxw.com/sm202301151706727.png" alt="image-20230115170558726"></p>
 <blockquote>
 <p>前 5 个组件是我们需要实现的核心组件。后 4 个组件是一些旁路组件，不影响项目的使用。如果感兴趣，你可以自行实现。</p>
 <ul>
@@ -102,7 +102,7 @@
 </ul>
 </blockquote>
 <p>此外，IAM 系统为存储数据使用到的 3 种数据库的说明如下所示。</p>
-<p><img src="http://sm.nsddd.top/sm202301152126726.png" alt="image-20230115212651665"></p>
+<p><img src="http://sm.cubxxw.com/sm202301152126726.png" alt="image-20230115212651665"></p>
 <h3 id="第-1-步-创建平台资源" tabindex="-1"><a class="header-anchor" href="#第-1-步-创建平台资源" aria-hidden="true">#</a> 第 1 步，创建平台资源</h3>
 <p>用户通过 iam-webconsole（RESTful API）或 iamctl（sdk marmotedu-sdk-go）客户端请求 iam-apiserver 提供的 RESTful API 接口完成用户、密钥、授权策略的增删改查，iam-apiserver 会将这些资源数据持久化存储在 MySQL 数据库中。</p>
 <p>而且，<strong>为了确保通信安全，客户端访问服务端都是通过 HTTPS 协议来访问的。</strong></p>
@@ -119,7 +119,7 @@
 <h3 id="前后端分离架构" tabindex="-1"><a class="header-anchor" href="#前后端分离架构" aria-hidden="true">#</a> 前后端分离架构</h3>
 <p>因为 IAM 系统采用的就是 [[前后端分离]] 的架构，所以我们就以 IAM 的运营系统 iam-operating-system 为例来详细说说这个架构。一般来说，运营系统的功能可多可少，对于一些具有复杂功能的运营系统，我们可以采用前后端分离的架构。</p>
 <p>其中，前端负责页面的展示以及数据的加载和渲染，后端只负责返回前端需要的数据。iam-operating-system 前后端分离架构如下图所示。</p>
-<p><img src="http://sm.nsddd.top/sm202301152214453.png" alt="image-20230115221432369"></p>
+<p><img src="http://sm.cubxxw.com/sm202301152214453.png" alt="image-20230115221432369"></p>
 <p>采用了前后端分离架构之后，当你通过浏览器请求前端 ops-webconsole 时，ops-webconsole 会先请求静态文件服务器加载静态文件，比如 HTML、CSS 和 JavaScript，然后它会执行 JavaScript，通过负载均衡请求后端数据，最后把后端返回的数据渲染到前端页面中。</p>
 <p>采用前后端分离的架构，让前后端通过 <code v-pre>RESTful API</code> 通信，会带来以下 5 点好处：</p>
 <ol>
@@ -131,7 +131,7 @@
 </ol>
 <h3 id="mvc-软件架构" tabindex="-1"><a class="header-anchor" href="#mvc-软件架构" aria-hidden="true">#</a> MVC 软件架构</h3>
 <p>但是，如果运营系统功能比较少，采用前后端分离框架的弊反而大于利，比如前后端分离要同时维护 2 个组件会导致部署更复杂，并且前后端分离将人员也分开了，这会增加一定程度的沟通成本。同时，因为代码中也需要实现前后端交互的逻辑，所以会引入一定的开发量。</p>
-<p><img src="http://sm.nsddd.top/sm202301152217948.png" alt="image-20230115221707852"></p>
+<p><img src="http://sm.cubxxw.com/sm202301152217948.png" alt="image-20230115221707852"></p>
 <p>[[MVC]] 的全名是 Model View Controller，它是一种架构模式，分为 Model、View、Controller 三层，每一层的功能如下：</p>
 <ul>
 <li>View（视图）：提供给用户的操作界面，用来处理数据的显示。</li>
@@ -159,7 +159,7 @@
 <p><RouterLink to="/projects/">Ⓜ️回到目录🏠</RouterLink></p>
 </li>
 <li>
-<p><a href="https://nsddd.top/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
+<p><a href="https://cubxxw.com/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
 </li>
 <li>
 <p>✴️版权声明 © ：本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>

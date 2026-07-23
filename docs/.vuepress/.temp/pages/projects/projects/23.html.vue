@@ -6,7 +6,7 @@
 <div><a href = '22.md' style='float:left'>⬆️上一节🔗  </a><a href = '24.md' style='float: right'>  ⬇️下一节🔗</a></div>
 <br>
 <blockquote>
-<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://nsddd.top/" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
+<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://cubxxw.com/" target="_blank" rel="noopener noreferrer">http://cubxxw.com<ExternalLinkIcon/></a></p>
 </blockquote>
 <hr>
 <nav class="table-of-contents"><ul><li><router-link to="#前言">前言</router-link></li><li><router-link to="#iam-authz-server的功能介绍">iam-authz-server的功能介绍</router-link><ul><li><router-link to="#github-com-ory-ladon包介绍">github.com/ory/ladon包介绍</router-link></li><li><router-link to="#iam-authz-server使用方法介绍">iam-authz-server使用方法介绍</router-link></li></ul></li><li><router-link to="#iam-authz-server的代码实现">iam-authz-server的代码实现</router-link><ul><li><router-link to="#iam-authz-server的配置处理">iam-authz-server的配置处理</router-link></li><li><router-link to="#iam-authz-server启动流程设计">iam-authz-server启动流程设计</router-link></li><li><router-link to="#iam-authz-server-的-restful-api请求处理流程">iam-authz-server 的 RESTful API请求处理流程</router-link></li><li><router-link to="#iam-authz-server的代码架构">iam-authz-server的代码架构</router-link></li></ul></li><li><router-link to="#iam-authz-server关键代码分析">iam-authz-server关键代码分析</router-link><ul><li><router-link to="#资源授权">资源授权</router-link></li><li><router-link to="#缓存设计">缓存设计</router-link></li><li><router-link to="#数据一致性">数据一致性</router-link></li></ul></li><li><router-link to="#总结">总结</router-link></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
@@ -198,10 +198,10 @@ Claims:
 <h3 id="iam-authz-server启动流程设计" tabindex="-1"><a class="header-anchor" href="#iam-authz-server启动流程设计" aria-hidden="true">#</a> iam-authz-server启动流程设计</h3>
 <p>接下来，我们来详细看下iam-authz-server的启动流程。</p>
 <p>iam-authz-server的启动流程也和iam-apiserver基本保持一致。二者比较大的不同在于Options参数配置和应用初始化内容。另外，和iam-apiserver相比，iam-authz-server只提供了REST API服务。启动流程如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202303042314376.jpeg" alt="img"></p>
+<p><img src="http://sm.cubxxw.com/sm202303042314376.jpeg" alt="img"></p>
 <h3 id="iam-authz-server-的-restful-api请求处理流程" tabindex="-1"><a class="header-anchor" href="#iam-authz-server-的-restful-api请求处理流程" aria-hidden="true">#</a> iam-authz-server 的 RESTful API请求处理流程</h3>
 <p>iam-authz-server的请求处理流程也是清晰、规范的，具体流程如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202303042314667.jpeg" alt="img"></p>
+<p><img src="http://sm.cubxxw.com/sm202303042314667.jpeg" alt="img"></p>
 <p>**首先，**我们通过API调用（<code v-pre>&lt;HTTP Method&gt; + &lt;HTTP Request Path&gt;</code>）请求iam-authz-server提供的RESTful API接口 <code v-pre>POST /v1/authz</code> 。</p>
 <p>**接着，**Gin Web框架接收到HTTP请求之后，会通过认证中间件完成请求的认证，iam-authz-server采用了Bearer认证方式。</p>
 <p>**然后，**请求会被我们加载的一系列中间件所处理，例如跨域、RequestID、Dump等中间件。</p>
@@ -217,7 +217,7 @@ Claims:
 <li>仓库层（Repository）</li>
 </ul>
 <p>从控制层、业务层到仓库层，从左到右层级依次加深。模型层独立于其他层，可供其他层引用。如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202303042315040.jpeg" alt="img"></p>
+<p><img src="http://sm.cubxxw.com/sm202303042315040.jpeg" alt="img"></p>
 <p>iam-authz-server 和 iam-apiserver 的代码架构有这三点不同：</p>
 <ul>
 <li>iam-authz-server 客户端不支持前端和命令行。</li>
@@ -248,7 +248,7 @@ Claims:
   core<span class="token punctuation">.</span><span class="token function">WriteResponse</span><span class="token punctuation">(</span>c<span class="token punctuation">,</span> <span class="token boolean">nil</span><span class="token punctuation">,</span> rsp<span class="token punctuation">)</span>
 <span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>该函数使用 <code v-pre>github.com/ory/ladon</code> 包进行资源访问授权，授权流程如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202303042316433.jpeg" alt="img"></p>
+<p><img src="http://sm.cubxxw.com/sm202303042316433.jpeg" alt="img"></p>
 <p><strong>具体分为以下几个步骤：</strong></p>
 <p>第一步，在Authorize方法中调用 <code v-pre>c.ShouldBind(&amp;r)</code> ，将API请求参数解析到 <code v-pre>ladon.Request</code> 类型的结构体变量中。</p>
 <p>第二步，调用<a href="https://github.com/marmotedu/iam/blob/v1.0.4/internal/authzserver/authorization/authorizer.go#L21" target="_blank" rel="noopener noreferrer">authorization.NewAuthorizer<ExternalLinkIcon/></a>函数，该函数会创建并返回包含Manager和AuditLogger字段的<a href="https://github.com/marmotedu/iam/blob/v1.0.4/internal/authzserver/authorization/authorizer.go#L16" target="_blank" rel="noopener noreferrer">Authorizer<ExternalLinkIcon/></a>类型的变量。</p>
@@ -305,7 +305,7 @@ Claims:
 <p>为了降低请求延时，LogRejectedAccessRequest和LogGrantedAccessRequest会将授权记录存储在Redis中，之后由iam-pump进程读取Redis，并将授权记录持久化存储在MongoDB中。</p>
 <h3 id="缓存设计" tabindex="-1"><a class="header-anchor" href="#缓存设计" aria-hidden="true">#</a> 缓存设计</h3>
 <p>iam-authz-server主要用来做资源访问授权，属于数据流的组件，对接口访问性能有比较高的要求，所以该组件采用了缓存的机制。如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202303042320793.jpeg" alt="img"></p>
+<p><img src="http://sm.cubxxw.com/sm202303042320793.jpeg" alt="img"></p>
 <p>iam-authz-server组件通过<strong>缓存密钥和授权策略信息</strong>到内存中，加快密钥和授权策略的查询速度。通过<strong>缓存授权记录</strong>到内存中，提高了授权数据的写入速度，从而大大降低了授权请求接口的延时。</p>
 <p>上面的缓存机制用到了Redis key-value存储，所以在iam-authz-server初始化阶段，需要先建立Redis连接（位于<a href="https://github.com/marmotedu/iam/blob/v1.0.5/internal/authzserver/server.go#L132" target="_blank" rel="noopener noreferrer">initialize<ExternalLinkIcon/></a>函数中）：</p>
 <div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">go</span> storage<span class="token punctuation">.</span><span class="token function">ConnectToRedis</span><span class="token punctuation">(</span>ctx<span class="token punctuation">,</span> s<span class="token punctuation">.</span><span class="token function">buildStorageConfig</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
@@ -368,7 +368,7 @@ Claims:
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="reloadloop协程" tabindex="-1"><a class="header-anchor" href="#reloadloop协程" aria-hidden="true">#</a> reloadLoop协程</h4>
 <p>通过<a href="https://github.com/marmotedu/iam/blob/v1.0.5/internal/authzserver/load/load.go#L81" target="_blank" rel="noopener noreferrer">reloadLoop<ExternalLinkIcon/></a>函数启动一个timer定时器，每隔1秒会检查 <code v-pre>requeue</code> 切片是否为空，如果不为空，则调用 <code v-pre>l.DoReload</code> 方法，从<code v-pre>iam-apiserver</code>中拉取密钥和策略，并缓存在内存中。</p>
 <p>密钥和策略的缓存模型如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202303042324045.jpeg" alt="img"></p>
+<p><img src="http://sm.cubxxw.com/sm202303042324045.jpeg" alt="img"></p>
 <p><strong>密钥和策略缓存的具体流程如下：</strong></p>
 <p>接收上游消息（这里是从Redis中接收），将消息缓存到切片或者带缓冲的channel中，并启动一个消费协程去消费这些消息。这里的消费协程是reloadLoop，reloadLoop会每隔1s判断 <code v-pre>requeue</code> 切片是否长度为0，如果不为0，则执行 <code v-pre>l.DoReload()</code> 缓存密钥和策略。</p>
 <p><strong>讲完了密钥和策略缓存，再来看下授权日志缓存。</strong></p>
@@ -456,12 +456,12 @@ workerBufferSize <span class="token operator">:=</span> recordsBufferSize <span 
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>其中，options.PoolSize由命令行参数 <code v-pre>--analytics.pool-size</code> 指定，代表worker 的个数，默认 50；options.RecordsBufferSize由命令行参数 <code v-pre>--analytics.records-buffer-size</code> 指定，代表缓存的授权日志消息数。也就是说，我们把缓存的记录平均分配给所有的worker。</p>
 <p>当recordsBuffer存满或者达到投递最大时间后，调用 <code v-pre>r.Store.AppendToSetPipelined(analyticsKeyName, recordsBuffer)</code> 将记录批量发送给Redis，为了提高传输速率，这里将日志内容编码为msgpack格式后再传输。</p>
 <p>上面的缓存方法可以抽象成一个缓存模型，满足实际开发中的大部分需要异步转存的场景，如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202303042326755.jpeg" alt="img"></p>
+<p><img src="http://sm.cubxxw.com/sm202303042326755.jpeg" alt="img"></p>
 <p>Producer将数据投递到带缓冲的channel中，后端有多个worker消费channel中的数据，并进行批量投递。你可以设置批量投递的条件，一般至少包含<strong>最大投递日志数</strong>和<strong>最大投递时间间隔</strong>这两个。</p>
 <p>通过以上缓冲模型，你可以将日志转存的时延降到最低。</p>
 <h3 id="数据一致性" tabindex="-1"><a class="header-anchor" href="#数据一致性" aria-hidden="true">#</a> 数据一致性</h3>
 <p>上面介绍了 iam-authz-server的 <code v-pre>/v1/authz</code> 接口，为了最大化地提高性能，采用了大量的缓存设计。因为数据会分别在持久化存储和内存中都存储一份，就可能会出现数据不一致的情况。所以，我们也要确保缓存中的数据和数据库中的数据是一致的。数据一致性架构如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202303042326342.jpeg" alt="img"></p>
+<p><img src="http://sm.cubxxw.com/sm202303042326342.jpeg" alt="img"></p>
 <p><strong>密钥和策略同步流程如下：</strong></p>
 <ol>
 <li>通过iam-webconsole请求iam-apiserver创建（或更新、删除）密钥（或策略）。</li>
@@ -488,7 +488,7 @@ workerBufferSize <span class="token operator">:=</span> recordsBufferSize <span 
 <p><RouterLink to="/projects/">Ⓜ️回到目录🏠</RouterLink></p>
 </li>
 <li>
-<p><a href="https://nsddd.top/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
+<p><a href="https://cubxxw.com/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
 </li>
 <li>
 <p>✴️版权声明 © ：本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>

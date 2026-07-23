@@ -1,6 +1,6 @@
 {
-    "index_name": "go.nsddd.top",
-    "start_urls": [{ "url": "https://go.nsddd.top/"}],
+    "index_name": "go.cubxxw.com",
+    "start_urls": [{ "url": "https://go.cubxxw.com/"}],
     "selectors": {
       "lvl0": ".sidebar-heading.active",
       "lvl1": ".theme-default-content h1",

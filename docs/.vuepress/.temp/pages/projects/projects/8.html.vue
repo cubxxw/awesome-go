@@ -6,7 +6,7 @@
 <div><a href = '7.md' style='float:left'>⬆️上一节🔗  </a><a href = '9.md' style='float: right'>  ⬇️下一节🔗</a></div>
 <br>
 <blockquote>
-<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://nsddd.top/" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
+<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://cubxxw.com/" target="_blank" rel="noopener noreferrer">http://cubxxw.com<ExternalLinkIcon/></a></p>
 </blockquote>
 <hr>
 <nav class="table-of-contents"><ul><li><router-link to="#开始">开始</router-link></li><li><router-link to="#第一步-新建分支">第一步：新建分支</router-link></li><li><router-link to="#第二步-添加自动化命令">第二步，添加自动化命令</router-link></li><li><router-link to="#第三步-生成代码">第三步，生成代码</router-link></li><li><router-link to="#第四步-版权检查">第四步，版权检查</router-link><ul><li><router-link to="#如何安装-addlicense">如何安装 addlicense？</router-link></li><li><router-link to="#如何使用-addlicense">如何使用 addlicense？</router-link></li><li><router-link to="#支持的许可证类型">支持的许可证类型</router-link></li></ul></li><li><router-link to="#第五步-代码格式化">第五步，代码格式化</router-link></li><li><router-link to="#第六步-静态代码检查">第六步，静态代码检查</router-link></li><li><router-link to="#第七步-单元测试">第七步，单元测试</router-link></li><li><router-link to="#第八步-构建">第八步，构建</router-link></li><li><router-link to="#代码提交">代码提交</router-link><ul><li><router-link to="#github-action-配置">Github Action 配置</router-link></li></ul></li><li><router-link to="#测试阶段">测试阶段</router-link></li><li><router-link to="#iam-项目的-makefile-项目管理技巧">IAM 项目的 Makefile 项目管理技巧</router-link><ul><li><router-link to="#help-自动解析">help 自动解析</router-link></li><li><router-link to="#options-中指定变量值">Options 中指定变量值</router-link></li><li><router-link to="#自动生成-changelog">自动生成 CHANGELOG</router-link></li><li><router-link to="#自动生成版本号">自动生成版本号</router-link></li><li><router-link to="#保持行为一致">保持行为一致</router-link></li></ul></li><li><router-link to="#总结">总结</router-link></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
@@ -18,7 +18,7 @@
 <p><strong>基于 develop 新建一个分支 <code v-pre>feature/helloworld</code></strong></p>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ <span class="token function">git</span> checkout <span class="token parameter variable">-b</span> feature/helloworld develop
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>⚠️ <strong>这里需要注意</strong>：新建的 branch 名要符合 Git Flow 工作流中的分支命名规则。否则，在 git commit 阶段，会因为 <code v-pre>branch</code> 不规范导致 <code v-pre>commit</code> 失败。IAM 项目的分支命令规则具体如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202302200959749.png" alt="image-20230220095937613"></p>
+<p><img src="http://sm.cubxxw.com/sm202302200959749.png" alt="image-20230220095937613"></p>
 <blockquote>
 <p>IAM 项目通过 <code v-pre>pre-commit githooks</code> 来确保分支名是符合规范的。在 IAM 项目根目录下执行 <code v-pre>git commit</code> 命令，git 会自动执行<code v-pre>pre-commit</code>脚本，该脚本会检查当前 branch 的名字是否符合规范。</p>
 </blockquote>
@@ -163,7 +163,7 @@ $ <span class="token function">git</span> push origin feature/helloworld
 --subject-maxlen<span class="token operator">=</span><span class="token number">72</span>
 --body-regex<span class="token operator">=</span>^<span class="token punctuation">(</span><span class="token punctuation">[</span>^<span class="token punctuation">\</span>r<span class="token punctuation">\</span>n<span class="token punctuation">]</span><span class="token punctuation">{</span><span class="token number">0,72</span><span class="token punctuation">}</span><span class="token punctuation">(</span><span class="token punctuation">\</span>r?<span class="token punctuation">\</span>n<span class="token operator">|</span>$<span class="token punctuation">))</span>*$
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>IAM 项目配置了 GitHub Actions，当有代码被 push 后，会触发 CI 流水线，流水线会执行make all目标。GitHub Actions CI 流程执行记录如下图：</p>
-<p><img src="http://sm.nsddd.top/sm202302202032620.png" alt="image-20230220203225172"></p>
+<p><img src="http://sm.cubxxw.com/sm202302202032620.png" alt="image-20230220203225172"></p>
 <p>如果 CI 不通过，就需要修改代码，直到 CI 流水线通过为止。</p>
 <h3 id="github-action-配置" tabindex="-1"><a class="header-anchor" href="#github-action-配置" aria-hidden="true">#</a> Github Action 配置</h3>
 <p><strong>这里，我们来看下 GitHub Actions 的配置：</strong></p>
@@ -193,22 +193,22 @@ $ <span class="token function">git</span> push origin feature/helloworld
 <p>GitHub Actions 也执行了 make all 目标，和手动操作执行的 make all 目标保持一致，这样做是为了让线上的 CI 流程和本地的 CI 流程完全保持一致。这样，当我们在本地执行 make 命令通过后，在线上也会通过。保持一个一致的执行流程和执行结果很重要。否则，本地执行 make 通过，但是线上却不通过，岂不很让人头疼？</p>
 <p><strong>第二步，提交 pull request。</strong></p>
 <p>登陆 GitHub，基于 feature/helloworld 创建 pull request，并指定 Reviewers 进行 code review。具体操作如下图：</p>
-<p><img src="http://sm.nsddd.top/sm202302202041557.png" alt="image-20230220204115977"></p>
+<p><img src="http://sm.cubxxw.com/sm202302202041557.png" alt="image-20230220204115977"></p>
 <p>当有新的 pull request 被创建后，也会触发 CI 流水线。</p>
 <p><strong>第三步，创建完 pull request 后，就可以通知 reviewers 来 review 代码，GitHub 也会发站内信。</strong></p>
 <p><strong>第四步，Reviewers 对代码进行 review。</strong></p>
 <blockquote>
 <p>Reviewer 通过 <code v-pre>review github diff</code> 后的内容，并结合 CI 流程是否通过添加评论，并选择 Comment（仅评论）、Approve（通过）、Request Changes（不通过，需要修改），如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202302202043133.png" alt="image-20230220204310055"></p>
+<p><img src="http://sm.cubxxw.com/sm202302202043133.png" alt="image-20230220204310055"></p>
 </blockquote>
 <p>如果 review 不通过，feature 开发者可以直接在 <code v-pre>feature/helloworld</code> 分支修正代码，并 push 到远端的 <code v-pre>feature/helloworld</code> 分支，然后通知 reviewers 再次 review。因为有 push 事件发生，所以会触发 GitHub Actions CI 流水线。</p>
 <p><strong>第五步，code review 通过后，maintainer 就可以将新的代码合并到 develop 分支。</strong></p>
 <p>使用 Create a merge commit 的方式，将 pull request 合并到 develop 分支，如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202302202044187.png" alt="image-20230220204403904"></p>
+<p><img src="http://sm.cubxxw.com/sm202302202044187.png" alt="image-20230220204403904"></p>
 <p><code v-pre>Create a merge commit</code> 的实际操作是 <code v-pre>git merge --no-ff</code>，<code v-pre>feature/helloworld</code> 分支上所有的 commit 都会加到 develop 分支上，并且会生成一个 merge commit。使用这种方式，可以清晰地知道是谁做了哪些提交，回溯历史的时候也会更加方便。</p>
 <p><strong>第六步，合并到 develop 分支后，触发 CI 流程。</strong></p>
 <p>到这里，开发阶段的操作就全部完成了，整体流程如下：</p>
-<p><img src="http://sm.nsddd.top/sm202302202045792.png" alt="image-20230220204511699"></p>
+<p><img src="http://sm.cubxxw.com/sm202302202045792.png" alt="image-20230220204511699"></p>
 <p>合并到 develop 分支之后，我们就可以进入开发阶段的下一阶段，也就是测试阶段了。</p>
 <h2 id="测试阶段" tabindex="-1"><a class="header-anchor" href="#测试阶段" aria-hidden="true">#</a> 测试阶段</h2>
 <p>在测试阶段，开发人员主要负责提供测试包和修复测试期间发现的 bug，这个过程中也可能会发现一些新的需求或变动点，所以需要合理评估这些新的需求或变动点是否要放在当前迭代修改。</p>
@@ -301,7 +301,7 @@ b62db1f: subject does not match regex <span class="token punctuation">[</span>^<
 <p><RouterLink to="/projects/">Ⓜ️回到目录🏠</RouterLink></p>
 </li>
 <li>
-<p><a href="https://nsddd.top/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
+<p><a href="https://cubxxw.com/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
 </li>
 <li>
 <p>✴️版权声明 © ：本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>

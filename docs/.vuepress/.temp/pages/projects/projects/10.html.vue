@@ -6,7 +6,7 @@
 <div><a href = '9.md' style='float:left'>⬆️上一节🔗  </a><a href = '11.md' style='float: right'>  ⬇️下一节🔗</a></div>
 <br>
 <blockquote>
-<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://nsddd.top/" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
+<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://cubxxw.com/" target="_blank" rel="noopener noreferrer">http://cubxxw.com<ExternalLinkIcon/></a></p>
 </blockquote>
 <hr>
 <nav class="table-of-contents"><ul><li><router-link to="#开始">开始</router-link><ul><li><router-link to="#为什么需要-swagger">为什么需要 Swagger</router-link></li><li><router-link to="#swagger-和-openapi-的区别">Swagger 和 OpenAPI 的区别</router-link></li></ul></li><li><router-link to="#用-go-swagger-来生成-swagger-api-文档">用 go-swagger 来生成 Swagger API 文档</router-link><ul><li><router-link to="#go-swagger">go-swagger</router-link></li><li><router-link to="#项目状态">项目状态</router-link></li></ul></li><li><router-link to="#swagger-上手">Swagger 上手</router-link><ul><li><router-link to="#安装-swagger-工具">安装 Swagger 工具</router-link></li><li><router-link to="#swagger-命令行工具介绍">swagger 命令行工具介绍</router-link></li></ul></li><li><router-link to="#如何使用-swagger-命令生成-swagger-文档">如何使用 swagger 命令生成 Swagger 文档？</router-link><ul><li><router-link to="#swagger-注释">Swagger 注释</router-link></li><li><router-link to="#parameter-注释">Parameter 注释</router-link></li><li><router-link to="#response-注释">Response 注释</router-link></li><li><router-link to="#解析注释生成-swagger-文档">解析注释生成 Swagger 文档</router-link></li></ul></li><li><router-link to="#go-swagger-其他常用功能介绍">go-swagger 其他常用功能介绍</router-link><ul><li><router-link to="#对比-swagger-文档">对比 Swagger 文档</router-link></li><li><router-link to="#生成服务端代码">生成服务端代码</router-link></li><li><router-link to="#生成客户端代码">生成客户端代码</router-link></li><li><router-link to="#验证-swagger-文档是否合法">验证 Swagger 文档是否合法</router-link></li><li><router-link to="#合并-swagger-文档">合并 Swagger 文档</router-link></li></ul></li><li><router-link to="#iam-swagger-文档">IAM Swagger 文档</router-link></li><li><router-link to="#总结">总结</router-link></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
@@ -101,7 +101,7 @@ version<span class="token punctuation">:</span> v0<span class="token punctuation
 commit<span class="token punctuation">:</span> <span class="token punctuation">(</span>unknown<span class="token punctuation">,</span> mod sum<span class="token punctuation">:</span> <span class="token string">"h1:cPrWLSXY6ZdcgfRicOj0lANg72TkTHz6uv/OlUdzO5U="</span><span class="token punctuation">)</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="swagger-命令行工具介绍" tabindex="-1"><a class="header-anchor" href="#swagger-命令行工具介绍" aria-hidden="true">#</a> swagger 命令行工具介绍</h3>
 <p>swagger 命令格式为<code v-pre>swagger [OPTIONS]</code> 。可以通过swagger -h查看 swagger 使用帮助。swagger 提供的子命令及功能见下表：</p>
-<img src="http://sm.nsddd.top/sm202302211206119.png" alt="sadfasfdaijfoaisjfdoisa" style="zoom:33%;" />
+<img src="http://sm.cubxxw.com/sm202302211206119.png" alt="sadfasfdaijfoaisjfdoisa" style="zoom:33%;" />
 <h2 id="如何使用-swagger-命令生成-swagger-文档" tabindex="-1"><a class="header-anchor" href="#如何使用-swagger-命令生成-swagger-文档" aria-hidden="true">#</a> 如何使用 swagger 命令生成 Swagger 文档？</h2>
 <p>go-swagger 通过解析源码中的注释来生成 <a href="https://github.com/go-swagger/go-swagger" target="_blank" rel="noopener noreferrer">Swagger 文档<ExternalLinkIcon/></a>，go-swagger 的详细注释语法可参考官方文档。常用的有如下几类注释语法：</p>
 <p>go-swagger 是一个用于生成 RESTful API 的工具，它支持使用 Swagger 规范（OpenAPI 规范）来定义 API 的接口和模型。在使用 go-swagger 时，我们可以使用特定的注释语法来定义 API 的信息和参数，以下是常用的几类注释语法和示例：</p>
@@ -293,7 +293,7 @@ $ swagger serve --no-open <span class="token parameter variable">-F</span><span 
 <li><code v-pre>–port</code>：指定启动的 HTTP 服务监听端口。</li>
 </ul>
 <p><strong>打开浏览器，访问http://localhost:36666/docs ，如下图所示：</strong></p>
-<p><img src="http://sm.nsddd.top/sm202302212108643.png" alt="image-20230221210845527"></p>
+<p><img src="http://sm.cubxxw.com/sm202302212108643.png" alt="image-20230221210845527"></p>
 <p>如果我们想要 JSON 格式的 Swagger 文档，可执行如下命令，将生成的 swagger.yaml 转换为 swagger.json：</p>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ swagger generate spec <span class="token parameter variable">-i</span> ./swagger.yaml <span class="token parameter variable">-o</span> ./swagger.json
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>接下来，我们就可以编写 API 接口的定义文件（位于<a href="https://github.com/marmotedu/gopractise-demo/blob/main/swagger/docs/user.go" target="_blank" rel="noopener noreferrer">gopractise-demo/swagger/docs/user.go<ExternalLinkIcon/></a>文件中）：</p>
@@ -364,9 +364,9 @@ $ swagger serve --no-open <span class="token parameter variable">-F</span><span 
 $ swagger serve --no-open <span class="token parameter variable">-F</span><span class="token operator">=</span>swagger <span class="token parameter variable">--port</span> <span class="token number">36666</span> swagger.yaml
 <span class="token number">2020</span>/10/20 <span class="token number">23</span>:28:30 serving docs at http://localhost:36666/docs
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>打开浏览器，访问 http://localhost:36666/docs ，如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202302212110077.png" alt="image-20230221211008018"></p>
+<p><img src="http://sm.cubxxw.com/sm202302212110077.png" alt="image-20230221211008018"></p>
 <p>上面我们生成了 swagger 风格的 UI 界面，我们也可以使用 redoc 风格的 UI 界面，如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202302212110146.png" alt="image-20230221211020081"></p>
+<p><img src="http://sm.cubxxw.com/sm202302212110146.png" alt="image-20230221211020081"></p>
 <h2 id="go-swagger-其他常用功能介绍" tabindex="-1"><a class="header-anchor" href="#go-swagger-其他常用功能介绍" aria-hidden="true">#</a> go-swagger 其他常用功能介绍</h2>
 <p>上面，我介绍了 swagger 最常用的 generate、serve 命令，关于 swagger 其他有用的命令，这里也简单介绍一下。</p>
 <h3 id="对比-swagger-文档" tabindex="-1"><a class="header-anchor" href="#对比-swagger-文档" aria-hidden="true">#</a> 对比 Swagger 文档</h3>
@@ -419,9 +419,9 @@ swagger.serve: tools.verify.swagger
 $ <span class="token function">make</span> serve-swagger
 <span class="token number">2020</span>/10/21 06:45:03 serving docs at http://localhost:36666/docs
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>打开浏览器，打开http://x.x.x.x:36666/docs查看 Swagger 文档，x.x.x.x 是服务器的 IP 地址，如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202302212125283.png" alt="image-20230221212439191"></p>
+<p><img src="http://sm.cubxxw.com/sm202302212125283.png" alt="image-20230221212439191"></p>
 <p>IAM 的 Swagger 文档，还可以通过在 iam 源码根目录下执行go generate ./...命令生成，为此，我们需要在 iam/cmd/genswaggertypedocs/swagger_type_docs.go 文件中，添加//go:generate注释。如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202302212126949.png" alt="image-20230221212605891"></p>
+<p><img src="http://sm.cubxxw.com/sm202302212126949.png" alt="image-20230221212605891"></p>
 <h2 id="总结" tabindex="-1"><a class="header-anchor" href="#总结" aria-hidden="true">#</a> 总结</h2>
 <p>在做 Go 服务开发时，我们要向前端或用户提供 API 文档，手动编写 API 文档工作量大，也难以维护。所以，现在很多项目都是自动生成 Swagger 格式的 API 文档。提到 Swagger，很多开发者不清楚其和 OpenAPI 的区别，所以我也给你总结了：OpenAPI 是一个 API 规范，Swagger 则是实现规范的工具。</p>
 <p>Go-Swagger是一个用于构建RESTful API服务的工具，它能够自动生成Swagger文档和客户端代码，并提供了丰富的API开发工具和框架。下面是对Go-Swagger的总结：</p>
@@ -441,7 +441,7 @@ $ <span class="token function">make</span> serve-swagger
 <p><RouterLink to="/projects/">Ⓜ️回到目录🏠</RouterLink></p>
 </li>
 <li>
-<p><a href="https://nsddd.top/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
+<p><a href="https://cubxxw.com/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
 </li>
 <li>
 <p>✴️版权声明 © ：本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>

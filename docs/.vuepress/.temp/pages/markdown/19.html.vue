@@ -9,7 +9,7 @@
 <hr>
 <p><strong>区块链技术（也称之为分布式账本技术）</strong>，是一种互联网数据库技术，其特点是去中心化，公开透明，让每一个人均可参与的数据库记录</p>
 <blockquote>
-<p>❤️💕💕关于区块链技术，可以关注我，共同学习更多的区块链技术。博客<a href="http://nsddd.top" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
+<p>❤️💕💕关于区块链技术，可以关注我，共同学习更多的区块链技术。博客<a href="http://cubxxw.com" target="_blank" rel="noopener noreferrer">http://cubxxw.com<ExternalLinkIcon/></a></p>
 </blockquote>
 <hr>
 <details class="custom-container details"><summary>不同的协程如何通信？</summary>
@@ -62,7 +62,7 @@ intchan 本身的地址：0xc00000e028
  * @LastEditTime: 2022-10-25 14:39:30
  * @FilePath: \code\go-super\37-main.go
  * @Github_Address: https://github.com/cubxxw/awesome-cs-cloudnative-blockchain
- * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://nsddd.top
+ * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://cubxxw.com
  */</span>
 <span class="token keyword">package</span> main
 
@@ -160,13 +160,13 @@ num <span class="token operator">=</span>  <span class="token number">150</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>💡 上面的方法不需要关闭管道。</p>
 </div>
 <details class="custom-container details"><summary>截图案例</summary>
-<p><img src="http://sm.nsddd.top/smimage-20221025150553321.png" alt="image-20221025150553321"></p>
-<p><img src="http://sm.nsddd.top/smimage-20221025150456599.png" alt="image-20221025150456599"></p>
-<p><img src="http://sm.nsddd.top/smimage-20221025150403386.png" alt="image-20221025150403386"></p>
-<p><img src="http://sm.nsddd.top/smimage-20221025150523179.png" alt="image-20221025150523179"></p>
-<p><img src="http://sm.nsddd.top/smimage-20221025151321673.png" alt="image-20221025151321673"></p>
-<p><img src="http://sm.nsddd.top/smimage-20221025151331434.png" alt="image-20221025151331434"></p>
-<p><img src="http://sm.nsddd.top/smimage-20221025150718790.png" alt="image-20221025150718790"></p>
+<p><img src="http://sm.cubxxw.com/smimage-20221025150553321.png" alt="image-20221025150553321"></p>
+<p><img src="http://sm.cubxxw.com/smimage-20221025150456599.png" alt="image-20221025150456599"></p>
+<p><img src="http://sm.cubxxw.com/smimage-20221025150403386.png" alt="image-20221025150403386"></p>
+<p><img src="http://sm.cubxxw.com/smimage-20221025150523179.png" alt="image-20221025150523179"></p>
+<p><img src="http://sm.cubxxw.com/smimage-20221025151321673.png" alt="image-20221025151321673"></p>
+<p><img src="http://sm.cubxxw.com/smimage-20221025151331434.png" alt="image-20221025151331434"></p>
+<p><img src="http://sm.cubxxw.com/smimage-20221025150718790.png" alt="image-20221025150718790"></p>
 </details>
 <blockquote>
 <p>管道是一个应用类型，使用函数变化的是地址</p>
@@ -490,7 +490,7 @@ main线程退出
  * @LastEditTime: 2022-10-25 16:55:49
  * @FilePath: \code\go-super\39-main.go
  * @Github_Address: https://github.com/cubxxw/awesome-cs-cloudnative-blockchain
- * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://nsddd.top
+ * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://cubxxw.com
  */</span>
 <span class="token keyword">package</span> main
 
@@ -564,7 +564,7 @@ main.main<span class="token punctuation">(</span><span class="token punctuation"
  * @LastEditTime: 2022-10-25 17:16:21
  * @FilePath: \code\go-super\40-main.go
  * @Github_Address: https://github.com/cubxxw/awesome-cs-cloudnative-blockchain
- * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://nsddd.top
+ * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://cubxxw.com
  */</span>
 <span class="token keyword">package</span> main
 
@@ -641,7 +641,7 @@ main.main<span class="token punctuation">(</span><span class="token punctuation"
  * @LastEditTime: 2022-10-25 17:29:28
  * @FilePath: \code\go-super\41-main.go
  * @Github_Address: https://github.com/cubxxw/awesome-cs-cloudnative-blockchain
- * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://nsddd.top
+ * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://cubxxw.com
  */</span>
 <span class="token keyword">package</span> main
 
@@ -739,7 +739,7 @@ label          <span class="token comment">//标签，重新读取数据</span>
  * @LastEditTime: 2022-10-25 17:50:10
  * @FilePath: \code\go-super\44-main.go
  * @Github_Address: https://github.com/cubxxw/awesome-cs-cloudnative-blockchain
- * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://nsddd.top
+ * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://cubxxw.com
  */</span>
 <span class="token keyword">package</span> main
 
@@ -793,7 +793,7 @@ label          <span class="token comment">//标签，重新读取数据</span>
  * @LastEditTime: 2022-10-25 18:13:35
  * @FilePath: \code\go-super\45-main.go
  * @Github_Address: https://github.com/cubxxw/awesome-cs-cloudnative-blockchain
- * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://nsddd.top
+ * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://cubxxw.com
  */</span>
 <span class="token keyword">package</span> main
 
@@ -870,7 +870,7 @@ mutex<span class="token punctuation">.</span><span class="token function">Unlock
  * @LastEditTime: 2022-10-25 18:26:07
  * @FilePath: \code\go-super\45-main.go
  * @Github_Address: https://github.com/cubxxw/awesome-cs-cloudnative-blockchain
- * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://nsddd.top
+ * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://cubxxw.com
  */</span>
 <span class="token keyword">package</span> main
 
@@ -1038,7 +1038,7 @@ the count is  <span class="token number">102</span>
 <p><RouterLink to="/">Ⓜ️回到目录🏠</RouterLink></p>
 </li>
 <li>
-<p><a href="https://nsddd.top/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
+<p><a href="https://cubxxw.com/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
 </li>
 <li>
 <p>✴️版权声明 © :本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>

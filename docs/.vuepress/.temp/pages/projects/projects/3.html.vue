@@ -6,7 +6,7 @@
 <div><a href = '2.md' style='float:left'>⬆️上一节🔗  </a><a href = '4.md' style='float: right'>  ⬇️下一节🔗</a></div>
 <br>
 <blockquote>
-<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://nsddd.top/" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
+<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://cubxxw.com/" target="_blank" rel="noopener noreferrer">http://cubxxw.com<ExternalLinkIcon/></a></p>
 </blockquote>
 <hr>
 <nav class="table-of-contents"><ul><li><router-link to="#哪些需要规范">哪些需要规范</router-link></li><li><router-link to="#开源规范">开源规范</router-link><ul><li><router-link to="#开源协议">开源协议</router-link></li><li><router-link to="#开源规范特点">开源规范特点</router-link></li><li><router-link to="#readme-文档">README 文档</router-link></li></ul></li><li><router-link to="#文档规范">文档规范</router-link><ul><li><router-link to="#项目结构">项目结构</router-link></li></ul></li><li><router-link to="#api-接口文档规范">API 接口文档规范</router-link></li><li><router-link to="#版本规范">版本规范</router-link><ul><li><router-link to="#什么是语义化版本规范-semver">什么是语义化版本规范（SemVer）？</router-link></li><li><router-link to="#语义化版本控制规范">语义化版本控制规范</router-link></li><li><router-link to="#如何确定版本号">如何确定版本号？</router-link></li></ul></li><li><router-link to="#commit-规范">Commit 规范</router-link><ul><li><router-link to="#commit-message-的规范有哪些">Commit Message 的规范有哪些？</router-link></li><li><router-link to="#header">Header</router-link></li><li><router-link to="#body">Body</router-link></li><li><router-link to="#footer">Footer</router-link></li><li><router-link to="#revert-commit">Revert Commit</router-link></li><li><router-link to="#commit-相关的-3-个重要内容">Commit 相关的 3 个重要内容</router-link></li><li><router-link to="#合并提交操作示例">合并提交操作示例</router-link></li><li><router-link to="#修改-commit-message">修改 Commit Message</router-link></li></ul></li><li><router-link to="#commit-message-规范自动化">Commit Message 规范自动化</router-link></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
@@ -17,7 +17,7 @@
 <li>非编码类规范，主要包括开源规范、文档规范、版本规范、Commit 规范和发布规范。</li>
 <li>编码类规范，则主要包括目录规范、代码规范、接口规范、日志规范和错误码规范。</li>
 </ol>
-<p><img src="http://sm.nsddd.top/sm202302162016460.png" alt="image-20230216201601399"></p>
+<p><img src="http://sm.cubxxw.com/sm202302162016460.png" alt="image-20230216201601399"></p>
 <h2 id="开源规范" tabindex="-1"><a class="header-anchor" href="#开源规范" aria-hidden="true">#</a> 开源规范</h2>
 <p><strong>原因：</strong></p>
 <ol>
@@ -39,7 +39,7 @@
 </ul>
 </blockquote>
 <p>那具体如何选择适合自己的开源协议呢？你可以参考乌克兰程序员 Paul Bagwell 画的这张图：</p>
-<p><img src="http://sm.nsddd.top/sm202302162018046.png" alt="image-20230216201803996"></p>
+<p><img src="http://sm.cubxxw.com/sm202302162018046.png" alt="image-20230216201803996"></p>
 <h3 id="开源规范特点" tabindex="-1"><a class="header-anchor" href="#开源规范特点" aria-hidden="true">#</a> 开源规范特点</h3>
 <p><strong>一切能让项目变得更优秀的规范，都应该属于开源规范。</strong></p>
 <p>开源项目的代码，除了要遵守上面所说的编码类规范和非编码类规范之外，还要遵守下面几个规范。</p>
@@ -182,7 +182,7 @@ docs
 <p>在项目初期，接口文档可以解耦前后端，让前后端并行开发：前端只需要按照接口文档实现调用逻辑，后端只需要按照接口文档提供功能。</p>
 <p>当前后端都开发完成之后，我们就可以直接进行联调，提高开发效率。在项目后期，接口文档可以提供给使用者，不仅可以降低组件的使用门槛，还能够减少沟通成本。</p>
 <p>接口文档有四种编写方式，包括编写 Word 格式文档、借助工具编写、通过注释生成和编写 Markdown 格式文档。具体的实现方式见下表：</p>
-<p><img src="http://sm.nsddd.top/sm202302162048445.png" alt="image-20230216204817373"></p>
+<p><img src="http://sm.cubxxw.com/sm202302162048445.png" alt="image-20230216204817373"></p>
 <p><strong>其中，通过注释生成和编写 Markdown 格式文档这 2 种方式用得最多。</strong></p>
 <ul>
 <li>相比通过注释生成的方式，编写 Markdown 格式的接口文档，能表达更丰富的内容和格式，不需要在代码中添加大量注释。</li>
@@ -224,9 +224,9 @@ docs
 <li><strong>修订号（PATCH）</strong>：当做了向下兼容的问题修正。</li>
 </ul>
 <p>例如，v1.2.3 是一个语义化版本号，版本号中每个数字的具体含义见下图：</p>
-<p><img src="http://sm.nsddd.top/sm202302162107454.png" alt="image-20230216210737375"></p>
+<p><img src="http://sm.cubxxw.com/sm202302162107454.png" alt="image-20230216210737375"></p>
 <p>你可能还看过这么一种版本号：<code v-pre>v1.2.3-alpha</code>。这其实是把先行版本号（Pre-release）和版本编译元数据，作为延伸加到了主版本号。次版本号.修订号的后面，格式为 <code v-pre>X.Y.Z[-先行版本号][+版本编译元数据]</code>，如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202302162108985.png" alt="image-20230216210806930"></p>
+<p><img src="http://sm.cubxxw.com/sm202302162108985.png" alt="image-20230216210806930"></p>
 <p>我们来分别看下先行版本号和版本编译元数据是什么意思。先行版本号意味着，该版本不稳定，可能存在兼容性问题，</p>
 <p>格式为：<code v-pre>X.Y.Z-[一连串以句点分隔的标识符] </code>，比如下面这几个例子：</p>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token number">1.0</span>.0-alpha
@@ -308,9 +308,9 @@ Breaks foo.bar api, foo.baz should be used instead
 <li>Production：这类修改会影响最终的用户和生产环境的代码。所以对于这种改动，我们一定要慎重，并在提交前做好充分的测试。</li>
 </ul>
 <p>我在这里列出了 Angular 规范中的常见 type 和它们所属的类别，你在提交 Commit Message 的时候，一定要注意区分它的类别。举个例子，我们在做 Code Review 时，如果遇到 Production 类型的代码，一定要认真 Review，因为这种类型，会影响到现网用户的使用和现网应用的功能。</p>
-<p><img src="http://sm.nsddd.top/sm202302162131312.png" alt="image-20230216213135207"></p>
+<p><img src="http://sm.cubxxw.com/sm202302162131312.png" alt="image-20230216213135207"></p>
 <p>有这么多 type，我们该如何确定一个 commit 所属的 type 呢？这里我们可以通过下面这张图来确定。</p>
-<p><img src="http://sm.nsddd.top/sm202302162132745.png" alt="image-20230216213207684"></p>
+<p><img src="http://sm.cubxxw.com/sm202302162132745.png" alt="image-20230216213207684"></p>
 <p>如果我们变更了应用代码，比如某个 Go 函数代码，那这次修改属于代码类。在代码类中，有 4 种具有明确变更意图的类型：feat、fix、perf 和 style；如果我们的代码变更不属于这 4 类，那就全都归为 refactor 类，也就是优化代码。</p>
 <p>如果我们变更了非应用代码，例如更改了文档，那它属于非代码类。在非代码类中，有 3 种具有明确变更意图的类型：test、ci、docs；如果我们的非代码变更不属于这 3 类，那就全部归入到 chore 类。</p>
 <p>Angular 的 Commit Message 规范提供了大部分的 type，在实际开发中，我们可以使用部分 type，或者扩展添加我们自己的 type。但无论选择哪种方式，我们一定要保证一个项目中的 type 类型一致。</p>
@@ -385,10 +385,10 @@ This reverts commit 079360c7cfc830ea8a6e13f4c8b8114febc9b48a.
 <p><strong>git rebase 命令介绍：</strong></p>
 <p>git rebase 的最大作用是它可以重写历史。</p>
 <p>我们通常会通过 <code v-pre>git rebase -i</code> 使用 git rebase 命令，-i 参数表示交互（interactive），该命令会进入到一个交互界面中，其实就是 Vim 编辑器。在该界面中，我们可以对里面的 commit 做一些操作，交互界面如图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202302162152678.png" alt="image-20230216215218600"></p>
+<p><img src="http://sm.cubxxw.com/sm202302162152678.png" alt="image-20230216215218600"></p>
 <p>这个交互界面会首先列出给定之前（不包括，越下面越新）的所有 commit，每个 commit 前面有一个操作命令，默认是 pick。我们可以选择不同的 commit，并修改 commit 前面的命令，来对该 commit 执行不同的变更操作。</p>
 <p><strong>git rebase 支持的变更操作如下：</strong></p>
-<p><img src="http://sm.nsddd.top/sm202302162152795.png" alt="image-20230216215246718"></p>
+<p><img src="http://sm.cubxxw.com/sm202302162152795.png" alt="image-20230216215246718"></p>
 <p>在上面的 7 个命令中，squash 和 fixup 可以用来合并 commit。例如用 squash 来合并，我们只需要把要合并的 commit 前面的动词，改成 squash（或者 s）即可。你可以看看下面的示例：</p>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>pick 07c5abd Introduce OpenPGP and teach basic usage
 s de9b1eb Fix PostChecker::Post<span class="token comment">#urls</span>
@@ -444,9 +444,9 @@ fc70a21 feat<span class="token punctuation">(</span>user<span class="token punct
 <p>接着，我们合并所有 commit。在上一步中，我们知道 <code v-pre>fc70a21</code>是 feature/user分支的第一个 commit ID，其父 commit ID 是 <code v-pre>7157e9e</code>，我们需要将<code v-pre>7157e9e</code>之前的所有分支 进行合并，这时我们可以执行：</p>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ <span class="token function">git</span> rebase <span class="token parameter variable">-i</span> 7157e9e
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>执行命令后，我们会进入到一个交互界面，在该界面中，我们可以将需要合并的 4 个 commit，都执行 squash 操作，如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202302162206948.png" alt="image-20230216220652890"></p>
+<p><img src="http://sm.cubxxw.com/sm202302162206948.png" alt="image-20230216220652890"></p>
 <p>修改完成后执行:wq 保存，会跳转到一个新的交互页面，在该页面，我们可以编辑 Commit Message，编辑后的内容如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202302162208078.png" alt="image-20230216220820024"></p>
+<p><img src="http://sm.cubxxw.com/sm202302162208078.png" alt="image-20230216220820024"></p>
 <p>#开头的行是 git 的注释，我们可以忽略掉，在 rebase 后，这些行将会消失掉。修改完成后执行<code v-pre>:wq</code> 保存，就完成了合并提交操作。</p>
 <p><strong>除此之外，这里有 2 个点需要我们注意：</strong></p>
 <ul>
@@ -488,7 +488,7 @@ $ <span class="token function">git</span> commit <span class="token parameter va
 418bd4 docs<span class="token punctuation">(</span>docs<span class="token punctuation">)</span>: append <span class="token builtin class-name">test</span> line <span class="token string">'update$i'</span> to README.md
 89651d4 docs<span class="token punctuation">(</span>doc<span class="token punctuation">)</span>: <span class="token function">add</span> README.md
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>可以看到，最近一次的 Commit Message 是 <code v-pre>docs(docs): append test line 'update$i' to README.md</code>，其中 <code v-pre>update$i</code> 正常应该是 update1。</p>
-<p><img src="http://sm.nsddd.top/sm202302162213838.png" alt="image-20230216221259985"></p>
+<p><img src="http://sm.cubxxw.com/sm202302162213838.png" alt="image-20230216221259985"></p>
 <p>修改完成后执行:wq 保存，退出编辑器之后，会在命令行显示，该 commit 的 message 的更新结果如下：</p>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token punctuation">[</span>master 55892fa<span class="token punctuation">]</span> docs<span class="token punctuation">(</span>docs<span class="token punctuation">)</span>: append <span class="token builtin class-name">test</span> line <span class="token string">'update1'</span> to README.md
  Date: Fri Sep <span class="token number">18</span> <span class="token number">13</span>:40:42 <span class="token number">2020</span> +0800
@@ -513,9 +513,9 @@ a38f808 docs<span class="token punctuation">(</span>docs<span class="token punct
 <li>
 <p>修改倒数第 3 次提交 commit 的 message。<code v-pre>git rebase -i 倒数第三次 hash</code></p>
 <p>然后会进入一个交互界面。在交互界面中，修改最近一次的 Commit Message。这里我们使用 reword 或者 r，保留倒数第 3 次的变更信息，但是修改其 message，如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202302162218248.png" alt="image-20230216221800182"></p>
+<p><img src="http://sm.cubxxw.com/sm202302162218248.png" alt="image-20230216221800182"></p>
 <p>修改完成后执行:wq 保存，还会跳转到一个新的交互页面，如下图所示</p>
-<p><img src="http://sm.nsddd.top/sm202302162218931.png" alt="image-20230216221817875"></p>
+<p><img src="http://sm.cubxxw.com/sm202302162218931.png" alt="image-20230216221817875"></p>
 </li>
 <li>
 <p>查看倒数第 3 次 commit 的 message 是否被更新。<code v-pre>git log --oneline</code></p>
@@ -529,7 +529,7 @@ a38f808 docs<span class="token punctuation">(</span>docs<span class="token punct
 <h2 id="commit-message-规范自动化" tabindex="-1"><a class="header-anchor" href="#commit-message-规范自动化" aria-hidden="true">#</a> Commit Message 规范自动化</h2>
 <p>其实，到这里我们也就意识到了一点：Commit Message 规范如果靠文档去约束，就会严重依赖开发者的代码素养，并不能真正保证提交的 commit 是符合规范的。</p>
 <p>但是可以通过工具检测：</p>
-<p><img src="http://sm.nsddd.top/sm202302162219088.png" alt="image-20230216221936012"></p>
+<p><img src="http://sm.cubxxw.com/sm202302162219088.png" alt="image-20230216221936012"></p>
 <p>这些自动化功能可以分为以下 2 类：</p>
 <ol>
 <li>Commit Message 生成和检查功能：生成符合 Angular 规范的 Commit Message、Commit Message 提交前检查、历史 Commit Message 检查。</li>
@@ -547,7 +547,7 @@ a38f808 docs<span class="token punctuation">(</span>docs<span class="token punct
 <p><RouterLink to="/projects/">Ⓜ️回到目录🏠</RouterLink></p>
 </li>
 <li>
-<p><a href="https://nsddd.top/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
+<p><a href="https://cubxxw.com/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
 </li>
 <li>
 <p>✴️版权声明 © ：本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>

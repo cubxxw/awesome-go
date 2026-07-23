@@ -6,7 +6,7 @@
 <div><a href = '17.md' style='float:left'>⬆️上一节🔗  </a><a href = '19.md' style='float: right'>  ⬇️下一节🔗</a></div>
 <br>
 <blockquote>
-<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://nsddd.top/" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
+<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://cubxxw.com/" target="_blank" rel="noopener noreferrer">http://cubxxw.com<ExternalLinkIcon/></a></p>
 </blockquote>
 <hr>
 <nav class="table-of-contents"><ul><li><router-link to="#如何设计iam项目的认证功能">如何设计IAM项目的认证功能？</router-link></li><li><router-link to="#iam项目是如何实现basic认证的">IAM项目是如何实现Basic认证的？</router-link><ul><li><router-link to="#loginhandler">LoginHandler</router-link></li><li><router-link to="#refreshhandler">RefreshHandler</router-link></li><li><router-link to="#logouthandler">LogoutHandler</router-link></li></ul></li><li><router-link to="#iam项目是如何实现bearer认证的">IAM项目是如何实现Bearer认证的？</router-link><ul><li><router-link to="#iam-authz-server-bearer认证实现">iam-authz-server Bearer认证实现</router-link></li><li><router-link to="#iam-apiserver-bearer认证实现">iam-apiserver Bearer认证实现</router-link></li></ul></li><li><router-link to="#iam项目认证功能设计技巧">IAM项目认证功能设计技巧</router-link><ul><li><router-link to="#技巧1-面向接口编程">技巧1：面向接口编程</router-link></li><li><router-link to="#技巧2-使用抽象工厂模式">技巧2：使用抽象工厂模式</router-link></li><li><router-link to="#技巧3-使用策略模式">技巧3：使用策略模式</router-link></li></ul></li><li><router-link to="#总结">总结</router-link></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
@@ -49,7 +49,7 @@
 </ul>
 <p>但是，将密码或密钥缓存在内存中时，就要考虑内存和数据库的数据一致性，这会增加代码实现的复杂度。因为管控流组件对性能延时要求不那么敏感，而数据流组件则一定要实现非常高的接口性能，所以<code v-pre>iam-apiserver</code>在请求到来时查询数据库，而<code v-pre>iam-authz-server</code>则将密钥信息缓存在内存中。</p>
 <p>那在这里，可以总结出一张IAM项目的认证设计图：</p>
-<p><img src="http://sm.nsddd.top/sm202302231537306.jpeg" alt="img"></p>
+<p><img src="http://sm.cubxxw.com/sm202302231537306.jpeg" alt="img"></p>
 <p>另外，为了将控制流和数据流区分开来，密钥的CURD操作也放在了iam-apiserver中，但是iam-authz-server需要用到这些密钥信息。为了解决这个问题，目前的做法是：</p>
 <ul>
 <li>iam-authz-server通过gRPC API请求iam-apiserver，获取所有的密钥信息；</li>
@@ -551,7 +551,7 @@ identity <span class="token operator">:=</span> mw<span class="token punctuation
 <p>执行Basic认证时，iam-apiserver会从HTTP Authorization Header中解析出用户名和密码，将密码再加密，并和数据库中保存的值进行对比。如果不匹配，则认证失败，否则认证成功。认证成功之后，会返回Token，并在Token的Payload部分设置用户名，Key为 username 。</p>
 <p>执行Bearer认证时，iam-apiserver会从JWT Token中解析出Header和Payload，并从Header中获取加密算法。接着，用获取到的加密算法和从配置文件中获取到的密钥对Header.Payload进行再加密，得到Signature，并对比两次的Signature是否相等。如果不相等，则返回 HTTP 401 Unauthorized 错误；如果相等，接下来会判断Token是否过期，如果过期则返回认证不通过，否则认证通过。认证通过之后，会将Payload中的username添加到gin.Context类型的变量中，供后面的业务逻辑使用。</p>
 <p>我绘制了整个流程的示意图，你可以对照着再回顾一遍。</p>
-<p><img src="http://sm.nsddd.top/sm202302231608596.jpeg" alt="img"></p>
+<p><img src="http://sm.cubxxw.com/sm202302231608596.jpeg" alt="img"></p>
 <h2 id="end-链接" tabindex="-1"><a class="header-anchor" href="#end-链接" aria-hidden="true">#</a> END 链接</h2>
 <ul><li><div><a href = '17.md' style='float:left'>⬆️上一节🔗  </a><a href = '19.md' style='float: right'>  ️下一节🔗</a></div></li></ul>
 <ul>
@@ -559,7 +559,7 @@ identity <span class="token operator">:=</span> mw<span class="token punctuation
 <p><RouterLink to="/projects/">Ⓜ️回到目录🏠</RouterLink></p>
 </li>
 <li>
-<p><a href="https://nsddd.top/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
+<p><a href="https://cubxxw.com/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
 </li>
 <li>
 <p>✴️版权声明 © ：本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>

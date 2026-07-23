@@ -9,7 +9,7 @@
 <hr>
 <p><strong>区块链技术（也称之为分布式账本技术）</strong>，是一种互联网数据库技术，其特点是去中心化，公开透明，让每一个人均可参与的数据库记录</p>
 <blockquote>
-<p>❤️💕💕关于区块链技术，可以关注我，共同学习更多的区块链技术。博客<a href="http://nsddd.top" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
+<p>❤️💕💕关于区块链技术，可以关注我，共同学习更多的区块链技术。博客<a href="http://cubxxw.com" target="_blank" rel="noopener noreferrer">http://cubxxw.com<ExternalLinkIcon/></a></p>
 </blockquote>
 <hr>
 <h2 id="文件操作速查" tabindex="-1"><a class="header-anchor" href="#文件操作速查" aria-hidden="true">#</a> 文件操作速查</h2>
@@ -104,7 +104,7 @@ D:<span class="token punctuation">\</span>文档<span class="token punctuation">
  * @LastEditTime: 2022-10-26 17:55:39
  * @FilePath: \code\go-super\53-main.go
  * @Github_Address: https://github.com/cubxxw/awesome-cs-cloudnative-blockchain
- * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://nsddd.top
+ * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://cubxxw.com
  */</span>
 <span class="token keyword">package</span> main
 
@@ -186,7 +186,7 @@ D:<span class="token punctuation">\</span>文档<span class="token punctuation">
 <li>O_SYNC：当进行一系列写操作时，每次都要等待上次的 I/O 操作完成再进行；</li>
 <li>O_TRUNC：如果可能，在打开时清空文件。</li>
 </ul>
-<p>创建一个新文件 golang.txt，并在其中写入 5 句“http://nsddd.top”。</p>
+<p>创建一个新文件 golang.txt，并在其中写入 5 句“http://cubxxw.com”。</p>
 <div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">package</span> main
 
 <span class="token keyword">import</span> <span class="token punctuation">(</span>
@@ -208,7 +208,7 @@ D:<span class="token punctuation">\</span>文档<span class="token punctuation">
     <span class="token comment">//写入文件时，使用带缓存的 *Writer</span>
     write <span class="token operator">:=</span> bufio<span class="token punctuation">.</span><span class="token function">NewWriter</span><span class="token punctuation">(</span>file<span class="token punctuation">)</span>
     <span class="token keyword">for</span> i <span class="token operator">:=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">5</span><span class="token punctuation">;</span> i<span class="token operator">++</span> <span class="token punctuation">{</span>
-        write<span class="token punctuation">.</span><span class="token function">WriteString</span><span class="token punctuation">(</span><span class="token string">"http://nsddd.top\n"</span><span class="token punctuation">)</span>
+        write<span class="token punctuation">.</span><span class="token function">WriteString</span><span class="token punctuation">(</span><span class="token string">"http://cubxxw.com\n"</span><span class="token punctuation">)</span>
     <span class="token punctuation">}</span>
     <span class="token comment">//Flush将缓存的文件真正写入到文件中</span>
     write<span class="token punctuation">.</span><span class="token function">Flush</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
@@ -561,7 +561,7 @@ In <span class="token punctuation">[</span><span class="token number">16</span><
 <p><RouterLink to="/">Ⓜ️回到目录🏠</RouterLink></p>
 </li>
 <li>
-<p><a href="https://nsddd.top/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
+<p><a href="https://cubxxw.com/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
 </li>
 <li>
 <p>✴️版权声明 © :本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>

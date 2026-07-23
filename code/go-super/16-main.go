@@ -5,7 +5,7 @@
  * @LastEditTime: 2022-10-24 17:44:59
  * @FilePath: \code\go-super\16-main.go
  * @Github_Address: https://github.com/cubxxw/awesome-cs-cloudnative-blockchain
- * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://nsddd.top
+ * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://cubxxw.com
  */
 package mian
 

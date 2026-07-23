@@ -6,14 +6,14 @@
 <div><a href = '8.md' style='float:left'>⬆️上一节🔗  </a><a href = '10.md' style='float: right'>  ⬇️下一节🔗</a></div>
 <br>
 <blockquote>
-<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://nsddd.top/" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
+<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://cubxxw.com/" target="_blank" rel="noopener noreferrer">http://cubxxw.com<ExternalLinkIcon/></a></p>
 </blockquote>
 <hr>
 <nav class="table-of-contents"><ul><li><router-link to="#选择-golangci-lint-做静态代码检查">选择 golangci-lint 做静态代码检查</router-link></li><li><router-link to="#命令">命令</router-link><ul><li><router-link to="#run-命令">run 命令</router-link></li><li><router-link to="#cache-命令">cache 命令</router-link></li><li><router-link to="#completion-命令">completion 命令</router-link></li><li><router-link to="#config-命令">config 命令</router-link></li><li><router-link to="#linters-命令">linters 命令</router-link></li></ul></li><li><router-link to="#golangci-lint-配置">golangci-lint 配置</router-link></li><li><router-link to="#如何使用-golangci-lint-进行静态代码检查">如何使用 golangci-lint 进行静态代码检查？</router-link></li><li><router-link to="#golangci-lint-使用技巧">golangci-lint 使用技巧</router-link></li><li><router-link to="#总结">总结</router-link></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
 <p>[TOC]</p>
 <h2 id="选择-golangci-lint-做静态代码检查" tabindex="-1"><a class="header-anchor" href="#选择-golangci-lint-做静态代码检查" aria-hidden="true">#</a> 选择 golangci-lint 做静态代码检查</h2>
 <ul>
-<li><a href="https://nsddd.top/archives/golangci" target="_blank" rel="noopener noreferrer">博客文章地址：<strong>golangci-lin: Fast linters Runner for Go</strong><ExternalLinkIcon/></a></li>
+<li><a href="https://cubxxw.com/archives/golangci" target="_blank" rel="noopener noreferrer">博客文章地址：<strong>golangci-lin: Fast linters Runner for Go</strong><ExternalLinkIcon/></a></li>
 </ul>
 <p>在做 Go 项目开发的过程中，我们肯定需要对 Go 代码做静态代码检查。虽然 Go 命令提供了 go vet 和 go tool vet，但是它们检查的内容还不够全面，我们需要一种更加强大的静态代码检查工具。</p>
 <p><code v-pre>golangci-lint</code>，是目前使用最多，也最受欢迎的静态代码检查工具。</p>
@@ -27,7 +27,7 @@
 <li><strong>良好的输出</strong>：输出的结果带有颜色、代码行号和 linter 标识，易于查看和定位。</li>
 </ul>
 <p><strong>下图是一个 golangci-lint 的检查结果：</strong></p>
-<p><img src="http://sm.nsddd.top/sm202302211020592.png" alt="image-20230221102053513"></p>
+<p><img src="http://sm.cubxxw.com/sm202302211020592.png" alt="image-20230221102053513"></p>
 <p><strong>你可以看到，输出的检查结果中包括如下信息：</strong></p>
 <ul>
 <li>检查出问题的源码文件、行号和错误行内容。</li>
@@ -44,9 +44,9 @@ golangci-lint has version v1.50.1 built from <span class="token punctuation">(</
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>这里注意，为了避免安装失败，强烈建议你安装 <code v-pre>golangci-lint releases page</code> 中的指定版本，例如 v1.41.1。</p>
 <p><strong>除此之外，我们应该定期的检查 golangCI 的版本。</strong></p>
 <p><strong><code v-pre>golangci-link</code> 支持的子命令如下：</strong></p>
-<p><img src="https://sm.nsddd.top/sm202302211046519.png" alt="image-20230221104642416"></p>
+<p><img src="https://sm.cubxxw.com/sm202302211046519.png" alt="image-20230221104642416"></p>
 <p>此外，<code v-pre>golangci-lint</code> 还支持一些全局选项。全局选项是指适用于所有子命令的选项，<code v-pre>golangci-lint</code> 支持的全局选项如下：</p>
-<p><img src="http://sm.nsddd.top/sm202302211048863.png" alt="image-20230221104814768"></p>
+<p><img src="http://sm.cubxxw.com/sm202302211048863.png" alt="image-20230221104814768"></p>
 <h3 id="run-命令" tabindex="-1"><a class="header-anchor" href="#run-命令" aria-hidden="true">#</a> run 命令</h3>
 <p>run 命令执行 <code v-pre>golangci-lint</code>，对代码进行检查，是 <code v-pre>golangci-lint</code> 最为核心的一个命令。run 没有子命令，但有很多选项。run 命令的具体使用方法，我会在讲解如何执行静态代码检查的时候详细介绍。</p>
 <h3 id="cache-命令" tabindex="-1"><a class="header-anchor" href="#cache-命令" aria-hidden="true">#</a> cache 命令</h3>
@@ -75,7 +75,7 @@ $ <span class="token builtin class-name">source</span> ~/.bashrc
 <div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>$ golangci-lint completion zsh > ~/.golangci-lint.zsh
 $ echo "source '$HOME/.golangci-lint.zsh'" >> ~/.zshrc
 $ source ~/.zshrc
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><img src="http://sm.nsddd.top/sm202302211118569.png" alt="image-20230221111851509"></p>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><img src="http://sm.cubxxw.com/sm202302211118569.png" alt="image-20230221111851509"></p>
 <h3 id="config-命令" tabindex="-1"><a class="header-anchor" href="#config-命令" aria-hidden="true">#</a> config 命令</h3>
 <p>config 命令可以打印 golangci-lint 当前使用的配置文件路径，例如：</p>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ golangci-lint config path
@@ -418,7 +418,7 @@ $ golangci-lint run --no-config <span class="token parameter variable">-D</span>
 <p><RouterLink to="/projects/">Ⓜ️回到目录🏠</RouterLink></p>
 </li>
 <li>
-<p><a href="https://nsddd.top/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
+<p><a href="https://cubxxw.com/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
 </li>
 <li>
 <p>✴️版权声明 © ：本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>

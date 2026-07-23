@@ -188,7 +188,7 @@
 <h3 id="token" tabindex="-1"><a class="header-anchor" href="#token" aria-hidden="true">#</a> Token</h3>
 <p>Token 认证，也称为 Bearer Token（Token 令牌）认证，它的实现方案有很多种，我推荐直接使用 JWT Token 方案</p>
 <p>这是 JWT Token 的 RFC 文档：https://www.rfc-editor.org/rfc/rfc7519</p>
-<p><img src="http://sm.nsddd.top/sm202302011715954.png" alt="image-20230201171528673"></p>
+<p><img src="http://sm.cubxxw.com/sm202302011715954.png" alt="image-20230201171528673"></p>
 <p>如果选择 JWT Token 方案，就只需要考虑 Token 各部分需要有什么，同时加密算法选什么</p>
 <p>可以考虑使用第三方jwt库：https://github.com/appleboy/gin-jwt</p>
 <h2 id="目录结构" tabindex="-1"><a class="header-anchor" href="#目录结构" aria-hidden="true">#</a> 目录结构</h2>

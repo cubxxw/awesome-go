@@ -6,7 +6,7 @@
 <div><a href = '5.md' style='float:left'>⬆️上一节🔗  </a><a href = '7.md' style='float: right'>  ⬇️下一节🔗</a></div>
 <br>
 <blockquote>
-<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://nsddd.top/" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
+<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://cubxxw.com/" target="_blank" rel="noopener noreferrer">http://cubxxw.com<ExternalLinkIcon/></a></p>
 </blockquote>
 <hr>
 <nav class="table-of-contents"><ul><li><router-link to="#restful-api">RESTful API</router-link><ul><li><router-link to="#是什么">是什么</router-link></li><li><router-link to="#restful-api-设计原则">RESTful API 设计原则</router-link></li><li><router-link to="#rest-示例">REST 示例</router-link></li><li><router-link to="#总结">总结</router-link></li></ul></li><li><router-link to="#如何设计应用的rpc-api-风格">如何设计应用的RPC API 风格</router-link><ul><li><router-link to="#rpc-介绍">RPC 介绍</router-link></li><li><router-link to="#grpc">gRPC</router-link></li><li><router-link to="#grpc-特点">gRPC 特点</router-link></li><li><router-link to="#protocol-buffers">Protocol Buffers</router-link></li><li><router-link to="#grpc-示例">gRPC 示例</router-link></li><li><router-link to="#执">执</router-link></li><li><router-link to="#演练">演练</router-link></li></ul></li><li><router-link to="#grpc-原理">gRPC 原理</router-link><ul><li><router-link to="#proto-文件">Proto 文件</router-link></li><li><router-link to="#massage">massage</router-link></li><li><router-link to="#字段规则">字段规则</router-link></li><li><router-link to="#信息号">信息号</router-link></li><li><router-link to="#嵌套信息">嵌套信息</router-link></li><li><router-link to="#server-main">Server main</router-link></li><li><router-link to="#client-main">client main</router-link></li><li><router-link to="#认证-安全传输">认证-安全传输</router-link></li></ul></li><li><router-link to="#restful-vs-grpc">RESTful VS gRPC</router-link></li><li><router-link to="#总结-1">总结</router-link><ul><li><router-link to="#补充-kite-x">补充 Kite X</router-link></li></ul></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
@@ -20,7 +20,7 @@
 <h3 id="是什么" tabindex="-1"><a class="header-anchor" href="#是什么" aria-hidden="true">#</a> 是什么</h3>
 <p>在回答“RESTful API 是什么”之前，我们先来看下 REST 是什么意思：REST 代表的是表现层状态转移（REpresentational State Transfer），由 Roy Fielding 在他的论文<a href="https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm" target="_blank" rel="noopener noreferrer">《Architectural Styles and the Design of Network-based Software Architectures》<ExternalLinkIcon/></a>里提出。REST 本身并没有创造新的技术、组件或服务，它只是一种软件架构风格，是一组架构约束条件和原则，而不是技术框架。</p>
 <p><strong>REST 有一系列规范，满足这些规范的 API 均可称为 RESTful API</strong>。REST 规范把所有内容都视为资源，也就是说网络上一切皆资源。REST 架构对资源的操作包括获取、创建、修改和删除，这些操作正好对应 HTTP 协议提供的 GET、POST、PUT 和 DELETE 方法。HTTP 动词与 REST 风格 CRUD 的对应关系见下表：</p>
-<p><img src="http://sm.nsddd.top/sm202302181112478.png" alt="image-20230218111227370"></p>
+<p><img src="http://sm.cubxxw.com/sm202302181112478.png" alt="image-20230218111227370"></p>
 <p>REST 风格虽然适用于很多传输协议，但在实际开发中，由于 REST 天生和 HTTP 协议相辅相成，**因此 HTTP 协议已经成了实现 RESTful API 事实上的标准。**所以，REST 具有以下核心特点：</p>
 <ul>
 <li>以资源 (resource) 为中心，所有的东西都抽象成资源，所有的行为都应该是在资源上的 CRUD 操作。
@@ -76,7 +76,7 @@ DELETE /gists/:id/star <span class="token comment"># github unstar action</span>
 <p>在设计 URI 时，如果你遇到一些不确定的地方，推荐你参考 <a href="https://docs.github.com/en/rest" target="_blank" rel="noopener noreferrer">Github REST API<ExternalLinkIcon/></a></p>
 <h4 id="rest-资源操作映射为-http-方法" tabindex="-1"><a class="header-anchor" href="#rest-资源操作映射为-http-方法" aria-hidden="true">#</a> REST 资源操作映射为 HTTP 方法</h4>
 <p>基本上 RESTful API 都是使用 HTTP 协议原生的 GET、PUT、POST、DELETE 来标识对资源的 CRUD 操作的，形成的规范如下表所示：</p>
-<p><img src="http://sm.nsddd.top/sm202302181131476.png" alt="image-20230218113149402"></p>
+<p><img src="http://sm.cubxxw.com/sm202302181131476.png" alt="image-20230218113149402"></p>
 <p><strong>对资源的操作应该满足安全性和幂等性：</strong></p>
 <ul>
 <li>安全性：不会改变资源状态，可以理解为只读的。</li>
@@ -86,7 +86,7 @@ DELETE /gists/:id/star <span class="token comment"># github unstar action</span>
 <p>幂等性是指一个操作或者函数，无论被调用多少次，其结果都是一样的。举个例子来说，假设你有一个函数可以返回当前日期，那么不管你调用它多少次，它都会返回当前日期：2023-02-18</p>
 </blockquote>
 <p><strong>使用不同 HTTP 方法时，资源操作的安全性和幂等性对照见下表：</strong></p>
-<p><img src="http://sm.nsddd.top/sm202302181133618.png" alt="image-20230218113318572"></p>
+<p><img src="http://sm.cubxxw.com/sm202302181133618.png" alt="image-20230218113318572"></p>
 <blockquote>
 <p>💡 POST方法不是幂等的，因为它会在服务器上创建新资源。这意味着，如果你多次发送相同的POST请求，服务器会创建多个资源，导致每次的结果都不一样。</p>
 </blockquote>
@@ -188,7 +188,7 @@ pong
 <p>如果涉及的软件采用<a href="https://zh.wikipedia.org/wiki/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B" target="_blank" rel="noopener noreferrer">面向对象编程<ExternalLinkIcon/></a>，那么远程过程调用亦可称作<strong>远程调用</strong>或<strong>远程方法调用</strong>，例：<a href="https://zh.wikipedia.org/wiki/Java_RMI" target="_blank" rel="noopener noreferrer">Java RMI<ExternalLinkIcon/></a>。</p>
 <p>RPC是一种<a href="https://zh.wikipedia.org/wiki/%E8%BF%9B%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1" target="_blank" rel="noopener noreferrer">进程间通信<ExternalLinkIcon/></a>的模式，程序分布在不同的<a href="https://zh.wikipedia.org/wiki/%E5%9C%B0%E5%9D%80%E7%A9%BA%E9%97%B4" target="_blank" rel="noopener noreferrer">地址空间<ExternalLinkIcon/></a>里。如果在同一主机里，RPC可以通过不同的虚拟地址空间（即便使用相同的物理地址）进行通讯，而在不同的主机间，则通过不同的物理地址进行交互。许多技术（通常是不兼容）都是基于这种概念而实现的。</p>
 <p>通俗来讲，**就是服务端实现了一个函数，客户端使用 RPC 框架提供的接口，像调用本地函数一样调用这个函数，并获取返回值。**RPC 屏蔽了底层的网络通信细节，使得开发人员无需关注网络编程的细节，可以将更多的时间和精力放在业务逻辑本身的实现上，从而提高开发效率。</p>
-<p><img src="http://sm.nsddd.top/sm202302181221040.png" alt="image-20230218122118946"></p>
+<p><img src="http://sm.cubxxw.com/sm202302181221040.png" alt="image-20230218122118946"></p>
 <p><strong>RPC 调用具体流程如下：</strong></p>
 <ol>
 <li>Client 通过本地调用，调用 Client Stub。</li>
@@ -210,7 +210,7 @@ pong
 </ul>
 <p>这里要注意的是，gRPC 的全称不是 golang Remote Procedure Call，而是 google Remote Procedure Call 🤔。</p>
 <p><strong>gRPC 的调用如下图所示：</strong></p>
-<p><img src="http://sm.nsddd.top/sm202302181230536.png" alt="image-20230218123040470"></p>
+<p><img src="http://sm.cubxxw.com/sm202302181230536.png" alt="image-20230218123040470"></p>
 <p><strong>在 gRPC 中，客户端可以直接调用部署在不同机器上的 gRPC 服务所提供的方法，调用远端的 gRPC 方法就像调用本地的方法一样，非常简单方便，通过 gRPC 调用，我们可以非常容易地构建出一个分布式应用。</strong></p>
 <h3 id="grpc-特点" tabindex="-1"><a class="header-anchor" href="#grpc-特点" aria-hidden="true">#</a> gRPC 特点</h3>
 <p>像很多其他的 RPC 服务一样，gRPC 也是通过 IDL 语言 (IDL是交互式数据语言的缩写，是一种用于数据分析的编程语言)，预先定义好接口（接口的名字、传入参数和返回参数等）。在服务端，gRPC 服务实现我们所定义的接口。在客户端，gRPC 存根提供了跟服务端相同的方法。</p>
@@ -556,7 +556,7 @@ log<span class="token punctuation">.</span><span class="token function">Printf</
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>protoc <span class="token parameter variable">--go_out</span><span class="token operator">=</span>. helloworld. proto <span class="token comment">#java : --java_ouot</span>
 protoc --go-grpc_out<span class="token operator">=</span>. helloworld.proto
 protoc -I. <span class="token parameter variable">--go_out</span><span class="token operator">=</span>. helloworld.proto
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><img src="http://sm.nsddd.top/sm202302191408194.png" alt="image-20230219140850022"></p>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><img src="http://sm.cubxxw.com/sm202302191408194.png" alt="image-20230219140850022"></p>
 <h3 id="演练" tabindex="-1"><a class="header-anchor" href="#演练" aria-hidden="true">#</a> 演练</h3>
 <p><strong>总结一下，一共就两部：</strong></p>
 <p>写一个 proto 的约束：</p>
@@ -707,7 +707,7 @@ protoc -I. <span class="token parameter variable">--go_out</span><span class="to
  * @LastEditTime: 2023-02-19 06:41:42
  * @FilePath: /test/server/main.go
  * @Github_Address: https://github.com/cubxxw/awesome-cs-cloudnative-blockchain
- * Copyright (c) 2023 by ${git_name_email}, All Rights Reserved. @blog: http://nsddd.top
+ * Copyright (c) 2023 by ${git_name_email}, All Rights Reserved. @blog: http://cubxxw.com
  */</span>
 <span class="token comment">// Package main implements a server for Greeter service.</span>
 <span class="token keyword">package</span> main
@@ -804,11 +804,11 @@ protoc -I. <span class="token parameter variable">--go_out</span><span class="to
 <li>不采用任何措施的连接，这是不安全的连接（默认采用 http1 )</li>
 <li>自定义身份认证</li>
 </ul>
-<p><img src="http://sm.nsddd.top/sm202302191458105.png" alt="image-20230219145801018"></p>
+<p><img src="http://sm.cubxxw.com/sm202302191458105.png" alt="image-20230219145801018"></p>
 <h2 id="restful-vs-grpc" tabindex="-1"><a class="header-anchor" href="#restful-vs-grpc" aria-hidden="true">#</a> RESTful VS gRPC</h2>
-<p><img src="http://sm.nsddd.top/sm202302190004730.png" alt="image-20230219000421566"></p>
+<p><img src="http://sm.cubxxw.com/sm202302190004730.png" alt="image-20230219000421566"></p>
 <p>当然，更多的时候，RESTful API 和 gRPC API 是 一种合作的关系，对内业务使用 gRPC API，对外业务使用 RESTful API，如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202302190004405.png" alt="image-20230219000447320"></p>
+<p><img src="http://sm.cubxxw.com/sm202302190004405.png" alt="image-20230219000447320"></p>
 <h2 id="总结-1" tabindex="-1"><a class="header-anchor" href="#总结-1" aria-hidden="true">#</a> 总结</h2>
 <p>在 Go 项目开发中，我们可以选择使用 RESTful API 风格和 RPC API 风格，这两种服务都用得很多。其中，RESTful API 风格因为规范、易理解、易用，所以适合用在需要对外提供 API 接口的场景中。而 RPC API 因为性能比较高、调用方便，更适合用在内部业务中。</p>
 <p>RESTful API 使用的是 HTTP 协议，而 RPC API 使用的是 RPC 协议。目前，有很多 RPC 协议可供你选择，而我推荐你使用 gRPC，因为它很轻量，同时性能很高、很稳定，是一个优秀的 RPC 框架。所以目前业界用的最多的还是 gRPC 协议，腾讯、阿里等大厂内部很多核心的线上服务用的就是 gRPC。</p>
@@ -824,7 +824,7 @@ protoc -I. <span class="token parameter variable">--go_out</span><span class="to
 <p><RouterLink to="/projects/">Ⓜ️回到目录🏠</RouterLink></p>
 </li>
 <li>
-<p><a href="https://nsddd.top/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
+<p><a href="https://cubxxw.com/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
 </li>
 <li>
 <p>✴️版权声明 © ：本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>

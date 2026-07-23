@@ -6,7 +6,7 @@
 <div><a href = '21.md' style='float:left'>⬆️上一节🔗  </a><a href = '23.md' style='float: right'>  ⬇️下一节🔗</a></div>
 <br>
 <blockquote>
-<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://nsddd.top/" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
+<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://cubxxw.com/" target="_blank" rel="noopener noreferrer">http://cubxxw.com<ExternalLinkIcon/></a></p>
 </blockquote>
 <hr>
 <nav class="table-of-contents"><ul><li><router-link to="#开始">开始</router-link></li><li><router-link to="#gorm-基础知识">GORM 基础知识</router-link></li><li><router-link to="#学习-gorm">学习 GORM</router-link></li><li><router-link to="#gorm-常用操作讲解">GORM 常用操作讲解</router-link><ul><li><router-link to="#模型定义">模型定义</router-link></li><li><router-link to="#连接数据库">连接数据库</router-link></li><li><router-link to="#创建记录">创建记录</router-link></li><li><router-link to="#删除记录">删除记录</router-link></li><li><router-link to="#更新数据">更新数据</router-link></li><li><router-link to="#查询数据">查询数据</router-link></li><li><router-link to="#高级查询">高级查询</router-link></li></ul></li><li><router-link to="#原生-sql">原生 SQL</router-link></li><li><router-link to="#gorm-钩子">GORM 钩子</router-link></li><li><router-link to="#iam-apiserver-中的-curd-操作实战">iam-apiserver 中的 CURD 操作实战</router-link></li><li><router-link to="#总结">总结</router-link></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
@@ -355,7 +355,7 @@ db<span class="token punctuation">.</span><span class="token function">Exec</spa
     <span class="token keyword">return</span>
 <span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>GORM 支持的钩子见下表：</strong></p>
-<p><img src="http://sm.nsddd.top/sm202303021249399.png" alt="image-20230302124946236"></p>
+<p><img src="http://sm.cubxxw.com/sm202303021249399.png" alt="image-20230302124946236"></p>
 <h2 id="iam-apiserver-中的-curd-操作实战" tabindex="-1"><a class="header-anchor" href="#iam-apiserver-中的-curd-操作实战" aria-hidden="true">#</a> iam-apiserver 中的 CURD 操作实战</h2>
 <p>接下来，我来介绍下 iam-apiserver 是如何使用 GORM，对数据进行 CURD 操作的。</p>
 <p>首先，我们需要配置连接 MySQL 的各类参数。iam-apiserver 通过<a href="https://github.com/marmotedu/iam/blob/v1.0.4/internal/pkg/options/mysql_options.go#L29" target="_blank" rel="noopener noreferrer">NewMySQLOptions<ExternalLinkIcon/></a>函数创建了一个带有默认值的<a href="https://github.com/marmotedu/iam/blob/v1.0.4/internal/pkg/options/mysql_options.go#L17" target="_blank" rel="noopener noreferrer">MySQLOptions<ExternalLinkIcon/></a>类型的变量，将该变量传给<a href="https://github.com/marmotedu/iam/blob/v1.0.4/pkg/app/app.go#L157" target="_blank" rel="noopener noreferrer">NewApp<ExternalLinkIcon/></a>函数。在 App 框架中，最终会调用 MySQLOptions 提供的 AddFlags 方法，将 MySQLOptions 提供的命令行参数添加到 Cobra 命令行中。</p>
@@ -624,7 +624,7 @@ name, _ := selector.RequiresExactMatch("name")
 <p><RouterLink to="/projects/">Ⓜ️回到目录🏠</RouterLink></p>
 </li>
 <li>
-<p><a href="https://nsddd.top/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
+<p><a href="https://cubxxw.com/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
 </li>
 <li>
 <p>✴️版权声明 © ：本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>

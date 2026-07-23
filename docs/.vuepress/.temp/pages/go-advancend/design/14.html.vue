@@ -5,13 +5,13 @@
 <div><a href = '13.md' style='float:left'>⬆️上一节🔗</a><a href = '15.md' style='float: right'>⬇️下一节🔗</a></div>
 <br>
 <blockquote>
-<p>❤️💕💕Java和Golang的设计模式，设计模式介绍、创建者模式、结构型模式、行为型模式。Myblog:<a href="http://nsddd.top/" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
+<p>❤️💕💕Java和Golang的设计模式，设计模式介绍、创建者模式、结构型模式、行为型模式。Myblog:<a href="http://cubxxw.com/" target="_blank" rel="noopener noreferrer">http://cubxxw.com<ExternalLinkIcon/></a></p>
 </blockquote>
 <hr>
 <p>[TOC]</p>
 <h2 id="why" tabindex="-1"><a class="header-anchor" href="#why" aria-hidden="true">#</a> why</h2>
 <p>装饰模式(Decorator Pattern)：动态地给一个对象增加一些额外的职责，就增加对象功能来说，装饰模式比生成子类实现更为灵活。装饰模式是一种对象结构型模式。</p>
-<p><img src="http://sm.nsddd.top/sm202305142043595.png" alt="image-20230514204330417"></p>
+<p><img src="http://sm.cubxxw.com/sm202305142043595.png" alt="image-20230514204330417"></p>
 <blockquote>
 <p>图片来自 https://www.yuque.com/aceld/lfhu8y/nzlggd</p>
 </blockquote>
@@ -22,7 +22,7 @@
 <p><strong>Component（抽象构件）</strong>：它是具体构件和抽象装饰类的共同父类，声明了在具体构件中实现的业务方法，它的引入可以使客户端以一致的方式处理未被装饰的对象以及装饰之后的对象，实现客户端的透明操作。</p>
 <p><strong>ConcreteComponent（具体构件）</strong>：它是抽象构件类的子类，用于定义具体的构件对象，实现了在抽象构件中声明的方法，装饰器可以给它增加额外的职责（方法）。
 其标准的类图如下所示：</p>
-<p><img src="http://sm.nsddd.top/sm202305142047537.png" alt="image-20230514204708448"></p>
+<p><img src="http://sm.cubxxw.com/sm202305142047537.png" alt="image-20230514204708448"></p>
 <blockquote>
 <p>图片来自 https://www.yuque.com/aceld/lfhu8y/nzlggd</p>
 </blockquote>
@@ -43,7 +43,7 @@
 <p>总结一下，装饰器模式是一种常用的设计模式，它允许我们动态地为一个对象添加新的功能。在Go语言中，我们可以使用函数和闭包来实现装饰器模式，从而让我们的代码更加灵活和易于维护。</p>
 <h2 id="代码的实现逻辑" tabindex="-1"><a class="header-anchor" href="#代码的实现逻辑" aria-hidden="true">#</a> 代码的实现逻辑</h2>
 <p>接下来按照上述手机案例，结合装饰器的设计模式特点，得到对应案例的类图，如下：</p>
-<p><img src="http://sm.nsddd.top/sm202305142052959.png" alt="image-20230514205225859"></p>
+<p><img src="http://sm.cubxxw.com/sm202305142052959.png" alt="image-20230514205225859"></p>
 <p>💡简单的一个案例如下：</p>
 <div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">package</span> main
 
@@ -159,7 +159,7 @@
 <p><RouterLink to="/go-advancend/">Ⓜ️回到目录🏠</RouterLink></p>
 </li>
 <li>
-<p><a href="https://nsddd.top/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
+<p><a href="https://cubxxw.com/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
 </li>
 <li>
 <p>✴️版权声明 © :本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>

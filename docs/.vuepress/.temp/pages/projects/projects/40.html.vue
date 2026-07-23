@@ -6,7 +6,7 @@
 <div><a href = '39.md' style='float:left'>⬆️上一节🔗  </a><a href = '41.md' style='float: right'>  ⬇️下一节🔗</a></div>
 <br>
 <blockquote>
-<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://nsddd.top/" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
+<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://cubxxw.com/" target="_blank" rel="noopener noreferrer">http://cubxxw.com<ExternalLinkIcon/></a></p>
 </blockquote>
 <hr>
 <nav class="table-of-contents"><ul><li><router-link to="#准备工作">准备工作</router-link><ul><li><router-link to="#开通腾讯云容器服务镜像仓库">开通腾讯云容器服务镜像仓库</router-link></li><li><router-link to="#安装docker">安装Docker</router-link></li><li><router-link to="#准备一个kubernetes集群">准备一个Kubernetes集群</router-link></li></ul></li><li><router-link to="#安装iam应用">安装IAM应用</router-link></li><li><router-link to="#测试iam应用">测试IAM应用</router-link></li><li><router-link to="#销毁serverless集群及其资源">销毁Serverless集群及其资源</router-link></li><li><router-link to="#总结">总结</router-link></li><li><router-link to="#课后练习">课后练习</router-link></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
@@ -30,7 +30,7 @@
 <li>登录<a href="https://console.cloud.tencent.com/tke2" target="_blank" rel="noopener noreferrer">容器服务控制台<ExternalLinkIcon/></a>，选择左侧导航栏中的【镜像仓库】&gt;【<a href="https://console.cloud.tencent.com/tke2/registry/user/self" target="_blank" rel="noopener noreferrer">个人版<ExternalLinkIcon/></a>】。</li>
 <li>根据以下提示，填写相关信息，并单击**【开通】**进行初始化。如下图所示：</li>
 </ol>
-<p><img src="https://sm.nsddd.top/sm202303062340322.png" alt="image-20230306234002960"></p>
+<p><img src="https://sm.cubxxw.com/sm202303062340322.png" alt="image-20230306234002960"></p>
 <ul>
 <li>**用户名：**默认是当前用户的账号ID，是你登录到腾讯云Docker镜像仓库的身份，可在 <a href="https://console.cloud.tencent.com/developer" target="_blank" rel="noopener noreferrer">账号信息<ExternalLinkIcon/></a> 页面获取。</li>
 <li>**密码：**是你登录到腾讯云 Docker 镜像仓库的凭证。</li>
@@ -391,7 +391,7 @@ replicaset.apps/iamctl-6fc46b8ccb             <span class="token number">1</span
 <p><RouterLink to="/projects/">Ⓜ️回到目录🏠</RouterLink></p>
 </li>
 <li>
-<p><a href="https://nsddd.top/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
+<p><a href="https://cubxxw.com/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
 </li>
 <li>
 <p>✴️版权声明 © ：本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>

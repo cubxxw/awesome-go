@@ -6,7 +6,7 @@
 <div><a href = '30.md' style='float:left'>⬆️上一节🔗  </a><a href = '32.md' style='float: right'>  ⬇️下一节🔗</a></div>
 <br>
 <blockquote>
-<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://nsddd.top/" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
+<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://cubxxw.com/" target="_blank" rel="noopener noreferrer">http://cubxxw.com<ExternalLinkIcon/></a></p>
 </blockquote>
 <hr>
 <nav class="table-of-contents"><ul><li><router-link to="#开始">开始</router-link></li><li><router-link to="#api性能测试指标">API性能测试指标</router-link></li><li><router-link to="#api性能测试方法">API性能测试方法</router-link><ul><li><router-link to="#wrk安装方法">wrk安装方法</router-link></li><li><router-link to="#wrk使用简介">wrk使用简介</router-link></li></ul></li><li><router-link to="#api-server性能测试实践">API Server性能测试实践</router-link><ul><li><router-link to="#性能测试脚本介绍">性能测试脚本介绍</router-link></li><li><router-link to="#关闭debug配置选项">关闭Debug配置选项</router-link></li><li><router-link to="#使用wrktest-sh测试iam-api接口性能">使用wrktest.sh测试IAM API接口性能</router-link></li></ul></li><li><router-link to="#api-server性能分析">API Server性能分析</router-link><ul><li><router-link to="#api接口性能参考">API接口性能参考</router-link></li></ul></li><li><router-link to="#api-server性能测试注意事项">API Server性能测试注意事项</router-link><ul><li><router-link to="#web框架性能">Web框架性能</router-link></li><li><router-link to="#api接口性能">API接口性能</router-link></li><li><router-link to="#测试环境">测试环境</router-link></li></ul></li><li><router-link to="#总结">总结</router-link></li><li><router-link to="#课后练习">课后练习</router-link></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
@@ -112,7 +112,7 @@ Transfer/sec:     <span class="token number">13</span>.70MB
 <li>测试网络环境：腾讯云VPC内访问，除了性能测试程序外，没有其他资源消耗型业务程序。</li>
 </ul>
 <p>测试架构如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202303052240275.webp" alt="img"></p>
+<p><img src="http://sm.cubxxw.com/sm202303052240275.webp" alt="img"></p>
 <h3 id="性能测试脚本介绍" tabindex="-1"><a class="header-anchor" href="#性能测试脚本介绍" aria-hidden="true">#</a> 性能测试脚本介绍</h3>
 <p>在做API Server的性能测试时，需要先执行wrk，生成性能测试数据。为了能够更直观地查看性能数据，我们还需要以图表的方式展示这些性能数据。这一讲，我使用 <code v-pre>gnuplot</code> 工具来自动化地绘制这些性能图，为此我们需要确保Linux服务器已经安装了 <code v-pre>gnuplot</code> 工具。可以通过以下方式安装：</p>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ <span class="token function">sudo</span> yum <span class="token parameter variable">-y</span> <span class="token function">install</span> gnuplot
@@ -202,9 +202,9 @@ Success rate graphic <span class="token function">file</span> is: /home/colin/_o
 <p>关闭Debug配置选项之后，就可以执行 <code v-pre>wrktest.sh</code> 命令测试API性能了（默认测试的并发数为 <code v-pre>200 500 1000 3000 5000 10000 15000 20000 25000 50000</code>）:</p>
 <div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>$ scripts/wrktest.sh http://10.0.4.57:8080/healthz
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>生成的QPS &amp; TTLB图和成功率图分别如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202303052241784.webp" alt="img"></p>
+<p><img src="http://sm.cubxxw.com/sm202303052241784.webp" alt="img"></p>
 <p>上图中， <code v-pre>X</code> 轴为并发数（Concurrent）， <code v-pre>Y</code> 轴为每秒查询数（QPS）和请求响应时间（TTLB）。</p>
-<p><img src="http://sm.nsddd.top/sm202303052241464.webp" alt="img"></p>
+<p><img src="http://sm.cubxxw.com/sm202303052241464.webp" alt="img"></p>
 <p>上图中， <code v-pre>X</code> 轴为并发数（Concurrent）， <code v-pre>Y</code> 轴为请求成功率。</p>
 <p>通过上面两张图，你可以看到，API Server在并发数为 <code v-pre>200</code> 时，QPS最大；并发数为 <code v-pre>500</code>，平均响应时间为 <code v-pre>56.33ms</code>，成功率为 <code v-pre>100.00%</code> 。在并发数达到 <code v-pre>1000</code> 时，成功率开始下降。一些详细数据从图里看不到，你可以直接查看 <code v-pre>apiserver.dat</code> 文件，里面记录了每个并发下具体的QPS、TTLB和成功率数据。</p>
 <p>现在我们有了API Server的性能数据，那么该API Server的QPS处于什么水平呢？一方面，你可以根据自己的业务需要来对比；另一方面，可以和性能更好的Web框架进行对比，总之需要有个参照。</p>
@@ -324,7 +324,7 @@ github.com/tpkeeper/gin-dump.DumpWithOptions.func1
 <p><RouterLink to="/projects/">Ⓜ️回到目录🏠</RouterLink></p>
 </li>
 <li>
-<p><a href="https://nsddd.top/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
+<p><a href="https://cubxxw.com/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
 </li>
 <li>
 <p>✴️版权声明 © ：本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>

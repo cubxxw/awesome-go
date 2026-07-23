@@ -6,7 +6,7 @@
 <div><a href = '12.md' style='float:left'>⬆️上一节🔗  </a><a href = '14.md' style='float: right'>  ⬇️下一节🔗</a></div>
 <br>
 <blockquote>
-<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://nsddd.top/" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
+<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://cubxxw.com/" target="_blank" rel="noopener noreferrer">http://cubxxw.com<ExternalLinkIcon/></a></p>
 </blockquote>
 <hr>
 <nav class="table-of-contents"><ul><li><router-link to="#优秀的开源日志包">优秀的开源日志包</router-link></li><li><router-link to="#标准库log包使用">标准库log包使用</router-link></li><li><router-link to="#glog">glog</router-link></li><li><router-link to="#logrus介绍">logrus介绍</router-link></li><li><router-link to="#zap包介绍">zap包介绍</router-link><ul><li><router-link to="#zap使用方法">zap使用方法</router-link></li></ul></li><li><router-link to="#其它开源包">其它开源包</router-link></li><li><router-link to="#开源日志包选择">开源日志包选择</router-link></li><li><router-link to="#从0编写一个日志包">从0编写一个日志包</router-link><ul><li><router-link to="#定义日志级别和日志选项">定义日志级别和日志选项</router-link></li><li><router-link to="#创建logger及各级别日志打印方法">创建Logger及各级别日志打印方法</router-link></li><li><router-link to="#将日志输出到支持的输出中">将日志输出到支持的输出中</router-link></li><li><router-link to="#自定义日志输出格式">自定义日志输出格式</router-link></li><li><router-link to="#测试日志包">测试日志包</router-link></li><li><router-link to="#iam项目日志包设计">IAM项目日志包设计</router-link></li><li><router-link to="#总结">总结</router-link></li><li><router-link to="#课后练习">课后练习</router-link></li></ul></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
@@ -970,7 +970,7 @@ log<span class="token punctuation">.</span><span class="token function">L</span>
 <p><RouterLink to="/projects/">Ⓜ️回到目录🏠</RouterLink></p>
 </li>
 <li>
-<p><a href="https://nsddd.top/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
+<p><a href="https://cubxxw.com/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
 </li>
 <li>
 <p>✴️版权声明 © ：本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>

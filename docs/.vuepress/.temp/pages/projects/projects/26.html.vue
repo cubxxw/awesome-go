@@ -6,7 +6,7 @@
 <div><a href = '25.md' style='float:left'>⬆️上一节🔗  </a><a href = '27.md' style='float: right'>  ⬇️下一节🔗</a></div>
 <br>
 <blockquote>
-<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://nsddd.top/" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
+<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://cubxxw.com/" target="_blank" rel="noopener noreferrer">http://cubxxw.com<ExternalLinkIcon/></a></p>
 </blockquote>
 <hr>
 <nav class="table-of-contents"><ul><li><router-link to="#开始">开始</router-link></li><li><router-link to="#marmotedu-sdk-go设计">marmotedu-sdk-go设计</router-link><ul><li><router-link to="#marmotedu-sdk-go客户端设计">marmotedu-sdk-go客户端设计</router-link></li><li><router-link to="#项目级别客户端创建">项目级别客户端创建</router-link></li><li><router-link to="#应用级别客户端创建">应用级别客户端创建</router-link></li><li><router-link to="#服务级别客户端创建">服务级别客户端创建</router-link></li></ul></li><li><router-link to="#marmotedu-sdk-go的实现">marmotedu-sdk-go的实现</router-link><ul><li><router-link to="#restclient客户端实现">RESTClient客户端实现</router-link></li><li><router-link to="#request模块实现">Request模块实现</router-link></li><li><router-link to="#请求认证">请求认证</router-link></li></ul></li><li><router-link to="#总结">总结</router-link></li><li><router-link to="#课后练习">课后练习</router-link></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
@@ -101,7 +101,7 @@ fmt<span class="token punctuation">.</span><span class="token function">Printf</
 <h3 id="marmotedu-sdk-go客户端设计" tabindex="-1"><a class="header-anchor" href="#marmotedu-sdk-go客户端设计" aria-hidden="true">#</a> marmotedu-sdk-go客户端设计</h3>
 <p>在讲客户端创建之前，我们先来看下客户端的设计思路。</p>
 <p>Go项目的组织方式是有层级的：<strong>Project -&gt; Application -&gt; Service</strong>。marmotedu-sdk-go很好地体现了这种层级关系，使得SDK的调用更加易懂、易用。marmotedu-sdk-go的层级关系如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202303042358912.jpeg" alt="img"></p>
+<p><img src="http://sm.cubxxw.com/sm202303042358912.jpeg" alt="img"></p>
 <p>marmotedu-sdk-go定义了3类接口，分别代表了项目、应用和服务级别的API接口：</p>
 <div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code>
 <span class="token comment">// 项目级别的接口</span>
@@ -194,7 +194,7 @@ client<span class="token punctuation">,</span> err <span class="token operator">
 <p>上面我介绍了marmotedu-sdk-go的客户端创建方法，接下来我们再来看下，这些客户端具体是如何执行REST API请求的。</p>
 <h2 id="marmotedu-sdk-go的实现" tabindex="-1"><a class="header-anchor" href="#marmotedu-sdk-go的实现" aria-hidden="true">#</a> marmotedu-sdk-go的实现</h2>
 <p>marmotedu-sdk-go的实现和medu-sdk-go一样，也是采用分层结构，分为API层和基础层。如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202303042359805.jpeg" alt="img"></p>
+<p><img src="http://sm.cubxxw.com/sm202303042359805.jpeg" alt="img"></p>
 <p><a href="https://github.com/marmotedu/marmotedu-sdk-go/blob/v1.0.2/rest/client.go#L95-L105" target="_blank" rel="noopener noreferrer">RESTClient<ExternalLinkIcon/></a>是整个SDK的核心，RESTClient向下通过调用<a href="https://github.com/marmotedu/marmotedu-sdk-go/blob/v1.0.2/rest/request.go#L28-L50" target="_blank" rel="noopener noreferrer">Request<ExternalLinkIcon/></a>模块，来完成HTTP请求方法、请求路径、请求体、认证信息的构建。Request模块最终通过调用<a href="https://github.com/parnurzeal/gorequest" target="_blank" rel="noopener noreferrer">gorequest<ExternalLinkIcon/></a>包提供的方法，完成HTTP的POST、PUT、GET、DELETE等请求，获取HTTP返回结果，并解析到指定的结构体中。RESTClient向上提供 <code v-pre>Post()</code> 、 <code v-pre>Put()</code> 、 <code v-pre>Get()</code> 、 <code v-pre>Delete()</code> 等方法来供客户端完成HTTP请求。</p>
 <p>marmotedu-sdk-go提供了两类客户端，分别是RESTClient客户端和基于RESTClient封装的客户端。</p>
 <ul>
@@ -516,7 +516,7 @@ client<span class="token punctuation">,</span> err <span class="token operator">
 <p><RouterLink to="/projects/">Ⓜ️回到目录🏠</RouterLink></p>
 </li>
 <li>
-<p><a href="https://nsddd.top/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
+<p><a href="https://cubxxw.com/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
 </li>
 <li>
 <p>✴️版权声明 © ：本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>

@@ -175,10 +175,10 @@
 <li>测试结果，通过邮件发送</li>
 </ol>
 <h2 id="基本架构" tabindex="-1"><a class="header-anchor" href="#基本架构" aria-hidden="true">#</a> 基本架构</h2>
-<p><img src="http://sm.nsddd.top/sm202301171355646.png" alt="image-20230117135507489"></p>
-<p><img src="http://sm.nsddd.top/sm202301131326951.png" alt="img_v2_3db35449-e95e-477d-a9a4-0def786ff20g.jpg"></p>
-<p><img src="http://sm.nsddd.top/sm202301131327021.png" alt="img_v2_e48fbcd6-eaa3-4931-893d-3eee7060244g.jpg">
-<img src="http://sm.nsddd.top/sm202301131327106.png" alt="img_v2_60241047-8fe7-42da-910c-2f67c5732a3g.jpg"></p>
+<p><img src="http://sm.cubxxw.com/sm202301171355646.png" alt="image-20230117135507489"></p>
+<p><img src="http://sm.cubxxw.com/sm202301131326951.png" alt="img_v2_3db35449-e95e-477d-a9a4-0def786ff20g.jpg"></p>
+<p><img src="http://sm.cubxxw.com/sm202301131327021.png" alt="img_v2_e48fbcd6-eaa3-4931-893d-3eee7060244g.jpg">
+<img src="http://sm.cubxxw.com/sm202301131327106.png" alt="img_v2_60241047-8fe7-42da-910c-2f67c5732a3g.jpg"></p>
 <p>单体应用，分模块</p>
 <p>八人，分 API 做，涉及联调，自行处理</p>
 <p>第一次 和 第二次提交。针对整体目录结构、目录结构说明文档、大家分析的需求背后所需要的模块的目录结构</p>

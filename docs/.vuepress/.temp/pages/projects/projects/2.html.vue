@@ -6,7 +6,7 @@
 <div><a href = '1.md' style='float:left'>⬆️上一节🔗  </a><a href = '3.md' style='float: right'>  ⬇️下一节🔗</a></div>
 <br>
 <blockquote>
-<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://nsddd.top/" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
+<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://cubxxw.com/" target="_blank" rel="noopener noreferrer">http://cubxxw.com<ExternalLinkIcon/></a></p>
 </blockquote>
 <hr>
 <nav class="table-of-contents"><ul><li><router-link to="#前言">前言</router-link></li><li><router-link to="#基本开发环境">基本开发环境</router-link><ul><li><router-link to="#用户权限">用户权限</router-link></li><li><router-link to="#添加-sudoers">添加 sudoers</router-link></li><li><router-link to="#配置-home-bashrc-文件">配置 $HOME/.bashrc 文件</router-link></li><li><router-link to="#安装-git">安装 git</router-link></li></ul></li><li><router-link to="#go语言环境变量设置和含义">go语言环境变量设置和含义</router-link></li><li><router-link to="#vim-go-plug">vim go-plug</router-link></li><li><router-link to="#protobuf-编译环境安装">ProtoBuf 编译环境安装</router-link></li><li><router-link to="#iam手动部署">IAM手动部署</router-link><ul><li><router-link to="#下载项目代码">下载项目代码</router-link></li></ul></li><li><router-link to="#安装和配置数据库">安装和配置数据库</router-link><ul><li><router-link to="#mariadb">MariaDB</router-link></li><li><router-link to="#redis">Redis</router-link></li><li><router-link to="#安装和配置-mariadb">安装和配置 MariaDB</router-link></li><li><router-link to="#安装redis">安装redis</router-link></li><li><router-link to="#安装和配置-mongodb">安装和配置 MongoDB</router-link></li><li><router-link to="#安装和配置-iam-系统">安装和配置 IAM 系统</router-link></li><li><router-link to="#安装和配置-iam-apiserver">安装和配置 iam-apiserver</router-link></li><li><router-link to="#安装-iamctl">安装 iamctl</router-link></li><li><router-link to="#安装和配置-iam-authz-server">安装和配置 iam-authz-server</router-link></li><li><router-link to="#安装和配置-iam-pump">安装和配置 iam-pump</router-link></li><li><router-link to="#安装-man-文件">安装 man 文件</router-link></li></ul></li><li><router-link to="#一键安装">一键安装</router-link></li><li><router-link to="#总结">总结</router-link></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
@@ -17,7 +17,7 @@
 <p><a href="https://github.com/cubxxw/cs-awesome-Block_Chain" target="_blank" rel="noopener noreferrer">⭕ 📚 菜鸟成长手册🚀 CS系列 、云原生系列、区块链系列、web3系列🔥、Golang系列💡<ExternalLinkIcon/></a></p>
 </li>
 <li>
-<p><a href="https://go.nsddd.top/" target="_blank" rel="noopener noreferrer">🚤 Go语言基础-进阶<ExternalLinkIcon/></a></p>
+<p><a href="https://go.cubxxw.com/" target="_blank" rel="noopener noreferrer">🚤 Go语言基础-进阶<ExternalLinkIcon/></a></p>
 </li>
 <li>
 <p><a href="https://github.com/cubxxw/cs-awesome-Block_Chain/blob/master/TOC.md" target="_blank" rel="noopener noreferrer">🖱️GO 基础部分🔥<ExternalLinkIcon/></a></p>
@@ -29,7 +29,7 @@
 <p><a href="https://github.com/cubxxw/cs-awesome-Block_Chain/blob/master/go-advancend/README.md" target="_blank" rel="noopener noreferrer">🖱️Go 高级篇<ExternalLinkIcon/></a></p>
 </li>
 <li>
-<p><a href="https://docker.nsddd.top/" target="_blank" rel="noopener noreferrer">🚤 docker &amp; k8s &amp; 云原生<ExternalLinkIcon/></a></p>
+<p><a href="https://docker.cubxxw.com/" target="_blank" rel="noopener noreferrer">🚤 docker &amp; k8s &amp; 云原生<ExternalLinkIcon/></a></p>
 </li>
 <li>
 <p>[x] <a href="https://github.com/cubxxw/iam" target="_blank" rel="noopener noreferrer">IAM github地址<ExternalLinkIcon/></a></p>
@@ -125,7 +125,7 @@ export GOPRIVATE=
 export GOSUMDB=off # 关闭校验 Go 依赖包的哈希值
 EOF</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>为什么要增加这么多环境变量呢？这是因为，Go 语言是通过一系列的环境变量来控制 Go 编译器行为的。因此，我们一定要理解每一个环境变量的含义。</p>
-<p><img src="http://sm.nsddd.top/sm202301152355839.png" alt="image-20230115235526661"></p>
+<p><img src="http://sm.cubxxw.com/sm202301152355839.png" alt="image-20230115235526661"></p>
 <p>因为 Go 以后会用 Go modules 来管理依赖，所以我建议你将 GO111MODULE 设置为 on。</p>
 <p>在使用模块的时候，<code v-pre>$GOPATH</code> 是无意义的，不过它还是会把下载的依赖储存在 <code v-pre>$GOPATH/pkg/mod</code> 目录中，也会把 go install 的二进制文件存放在 <code v-pre>$GOPATH/bin</code> 目录中。</p>
 <p>另外，我们还要将 <code v-pre>$GOPATH/bin</code>、<code v-pre>$GOROOT/bin</code> 加入到 Linux 可执行文件搜索路径中。这样一来，我们就可以直接在 bash shell 中执行 go 自带的命令，以及通过 go install 安装的命令。</p>
@@ -133,7 +133,7 @@ EOF</span>
 <p>安装：</p>
 <div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code>git clone <span class="token operator">--</span>depth<span class="token operator">=</span><span class="token number">1</span> https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>github<span class="token punctuation">.</span>com<span class="token operator">/</span>fatih<span class="token operator">/</span>vim<span class="token operator">-</span><span class="token keyword">go</span><span class="token punctuation">.</span>git ~<span class="token operator">/</span><span class="token punctuation">.</span>vim<span class="token operator">/</span>pack<span class="token operator">/</span>plugins<span class="token operator">/</span>start<span class="token operator">/</span>vim<span class="token operator">-</span><span class="token keyword">go</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>vim-go 会用到一些 Go 工具，比如在函数跳转时会用到 guru、godef 工具，在格式化时会用到 goimports，所以你也需要安装这些工具。安装方式如下：执行 <code v-pre>vi /tmp/test.go</code>，然后输入 <code v-pre>:GoInstallBinaries</code> 安装 vim-go 需要的工具。安装后的 Go IDE 常用操作的按键映射如下表所示：</p>
-<p><img src="http://sm.nsddd.top/sm202301161958824.png" alt="image-20230116195849590"></p>
+<p><img src="http://sm.cubxxw.com/sm202301161958824.png" alt="image-20230116195849590"></p>
 <h2 id="protobuf-编译环境安装" tabindex="-1"><a class="header-anchor" href="#protobuf-编译环境安装" aria-hidden="true">#</a> ProtoBuf 编译环境安装</h2>
 <p>接着，我们再来安装 <code v-pre>protobuf</code> 的编译器 <code v-pre>protoc</code>。<code v-pre>protoc</code> 需要 <code v-pre>protoc-gen-go</code> 来完成 Go 语言的代码转换，因此我们需要安装 <code v-pre>protoc</code> 和 <code v-pre>protoc-gen-go</code> 这 2 个工具。它们的安装方法比较简单，你直接看我下面给出的代码和操作注释就可以了。</p>
 <blockquote>
@@ -615,7 +615,7 @@ $ <span class="token function">mv</span> iamctl.yaml <span class="token environm
 <p>假如，certificate-authority 值为<code v-pre>/etc/iam/cert/ca.pem</code>，则 certificate-authority-data 的值为 <code v-pre>cat &quot;/etc/iam/cert/ca.pem&quot; | base64 | tr -d '\r\n'</code>，其它-data 变量的值类似。这样当我们再部署 iamctl 工具时，只需要拷贝 iamctl 和配置文件，而不用再拷贝 CA 文件了。</p>
 <h4 id="第-3-步-测试-iamctl-是否成功安装。" tabindex="-1"><a class="header-anchor" href="#第-3-步-测试-iamctl-是否成功安装。" aria-hidden="true">#</a> 第 3 步，测试 iamctl 是否成功安装。</h4>
 <p>执行 <code v-pre>iamctl user list</code> 可以列出预创建的 admin 用户，如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202302161945373.png" alt="image-20230216194553152"></p>
+<p><img src="http://sm.cubxxw.com/sm202302161945373.png" alt="image-20230216194553152"></p>
 <h3 id="安装和配置-iam-authz-server" tabindex="-1"><a class="header-anchor" href="#安装和配置-iam-authz-server" aria-hidden="true">#</a> 安装和配置 iam-authz-server</h3>
 <p>接下来，我们需要安装另外一个核心组件：iam-authz-server，可以通过以下 3 步来安装。</p>
 <h4 id="第-1-步-创建-iam-authz-server-证书和私钥。" tabindex="-1"><a class="header-anchor" href="#第-1-步-创建-iam-authz-server-证书和私钥。" aria-hidden="true">#</a> 第 1 步，创建 iam-authz-server 证书和私钥。</h4>
@@ -722,7 +722,7 @@ $ ./scripts/update-generated-docs.sh
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ <span class="token function">man</span> iam-apiserver
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><blockquote>
 <p><strong>执行 man iam-apiserver 命令后，会弹出 man 文档界面，如下图所示：</strong></p>
-<p><img src="http://sm.nsddd.top/sm202302162006542.png" alt="image-20230216200626281"></p>
+<p><img src="http://sm.cubxxw.com/sm202302162006542.png" alt="image-20230216200626281"></p>
 </blockquote>
 <p>至此，IAM 系统所有组件都已经安装成功了，你可以通过 iamctl version 查看客户端和服务端版本，代码如下：</p>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ iamctl version <span class="token parameter variable">-o</span> yaml
@@ -749,7 +749,7 @@ $ <span class="token assign-left variable">version</span><span class="token oper
 $ <span class="token builtin class-name">cd</span> /tmp/iam/ <span class="token operator">&amp;&amp;</span> ./scripts/install/install.sh iam::install::install
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="总结" tabindex="-1"><a class="header-anchor" href="#总结" aria-hidden="true">#</a> 总结</h2>
 <p>⚠️ 所有组件设置的密码都是 <code v-pre>iam59!z$</code></p>
-<p><img src="http://sm.nsddd.top/sm202302162007692.png" alt="image-20230216200735600"></p>
+<p><img src="http://sm.cubxxw.com/sm202302162007692.png" alt="image-20230216200735600"></p>
 <h2 id="end-链接" tabindex="-1"><a class="header-anchor" href="#end-链接" aria-hidden="true">#</a> END 链接</h2>
 <ul><li><div><a href = '1.md' style='float:left'>⬆️上一节🔗  </a><a href = '3.md' style='float: right'>  ️下一节🔗</a></div></li></ul>
 <ul>
@@ -757,7 +757,7 @@ $ <span class="token builtin class-name">cd</span> /tmp/iam/ <span class="token 
 <p><RouterLink to="/projects/">Ⓜ️回到目录🏠</RouterLink></p>
 </li>
 <li>
-<p><a href="https://nsddd.top/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
+<p><a href="https://cubxxw.com/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
 </li>
 <li>
 <p>✴️版权声明 © ：本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>

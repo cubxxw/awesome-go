@@ -5,7 +5,7 @@
  * @LastEditTime: 2022-10-24 18:49:02
  * @FilePath: \code\go-super\20-main.go
  * @Github_Address: https://github.com/cubxxw/awesome-cs-cloudnative-blockchain
- * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://nsddd.top
+ * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://cubxxw.com
  */
 package main
 
@@ -29,13 +29,13 @@ func main() {
 	p2 := Person{"Jack", 30, "xiongxinwei@mail.com"}
 	fmt.Println("p2=", p2)
 
-	p3 := &Person{Name: "Mary", Age: 40, Email: "cub@nsddd.top"}
+	p3 := &Person{Name: "Mary", Age: 40, Email: "cub@cubxxw.com"}
 	fmt.Println("p3=", p3)
 
 	p4 := new(Person)
 	p4.Name = "Mike"
 	p4.Age = 50
-	p4.Email = "xxw@nsddd.top"
+	p4.Email = "xxw@cubxxw.com"
 	fmt.Println("p4=", p4)
 
 	fmt.Println("p1.Email =", p1.Email)
@@ -43,8 +43,8 @@ func main() {
 	fmt.Println("p3.Email =", p3.Email)
 	fmt.Println("p4.Email =", p4.Email)
 
-	p1.Email = "x@nsddd.top"            //修改 p1 的 Email
-	fmt.Println("p1.Email =", p1.Email) //p1.Email = x@nsddd.top
+	p1.Email = "x@cubxxw.com"            //修改 p1 的 Email
+	fmt.Println("p1.Email =", p1.Email) //p1.Email = x@cubxxw.com
 
 	//结构体的匿名字段
 	type Address struct {

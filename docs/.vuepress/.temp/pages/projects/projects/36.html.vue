@@ -6,7 +6,7 @@
 <div><a href = '35.md' style='float:left'>⬆️上一节🔗  </a><a href = '37.md' style='float: right'>  ⬇️下一节🔗</a></div>
 <br>
 <blockquote>
-<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://nsddd.top/" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
+<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://cubxxw.com/" target="_blank" rel="noopener noreferrer">http://cubxxw.com<ExternalLinkIcon/></a></p>
 </blockquote>
 <hr>
 <nav class="table-of-contents"><ul><li><router-link to="#软件架构的演进">软件架构的演进</router-link><ul><li><router-link to="#单体架构">单体架构</router-link></li><li><router-link to="#soa架构">SOA架构</router-link></li><li><router-link to="#微服务架构">微服务架构</router-link></li><li><router-link to="#service-mesh">Service Mesh</router-link></li><li><router-link to="#faas架构">FaaS架构</router-link></li></ul></li><li><router-link to="#应用生命周期管理技术-监控告警、日志、调用链">应用生命周期管理技术：监控告警、日志、调用链</router-link><ul><li><router-link to="#监控告警组件-prometheus">监控告警组件：Prometheus</router-link></li><li><router-link to="#统一日志管理框架-efk">统一日志管理框架：EFK</router-link></li><li><router-link to="#调用链跟踪组件-jaeger">调用链跟踪组件：Jaeger</router-link></li></ul></li><li><router-link to="#总结">总结</router-link></li><li><router-link to="#课后练习">课后练习</router-link></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
@@ -207,7 +207,7 @@ $ jaeger-all-in-one --collector.zipkin.host-port<span class="token operator">=</
 <p><RouterLink to="/projects/">Ⓜ️回到目录🏠</RouterLink></p>
 </li>
 <li>
-<p><a href="https://nsddd.top/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
+<p><a href="https://cubxxw.com/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
 </li>
 <li>
 <p>✴️版权声明 © ：本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>

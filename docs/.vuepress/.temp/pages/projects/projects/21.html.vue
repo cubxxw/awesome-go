@@ -6,7 +6,7 @@
 <div><a href = '20.md' style='float:left'>⬆️上一节🔗  </a><a href = '22.md' style='float: right'>  ⬇️下一节🔗</a></div>
 <br>
 <blockquote>
-<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://nsddd.top/" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
+<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://cubxxw.com/" target="_blank" rel="noopener noreferrer">http://cubxxw.com<ExternalLinkIcon/></a></p>
 </blockquote>
 <hr>
 <nav class="table-of-contents"><ul><li><router-link to="#开始">开始</router-link></li><li><router-link to="#应用框架相关的特性">应用框架相关的特性</router-link><ul><li><router-link to="#优雅关停">优雅关停</router-link></li><li><router-link to="#健康检查">健康检查</router-link></li><li><router-link to="#插件化加载中间件">插件化加载中间件</router-link></li></ul></li><li><router-link to="#编程规范相关的特性">编程规范相关的特性</router-link><ul><li><router-link to="#api-版本">API 版本</router-link></li><li><router-link to="#统一的资源元数据">统一的资源元数据</router-link></li><li><router-link to="#统一的返回">统一的返回</router-link></li><li><router-link to="#并发处理模板">并发处理模板</router-link></li></ul></li><li><router-link to="#其他特性">其他特性</router-link><ul><li><router-link to="#插件化选择-json-库">插件化选择 JSON 库</router-link></li><li><router-link to="#调用链实现">调用链实现</router-link></li><li><router-link to="#数据一致性">数据一致性</router-link></li></ul></li><li><router-link to="#总结">总结</router-link></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
@@ -586,7 +586,7 @@ infos <span class="token operator">:=</span> <span class="token function">make</
 <div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">return</span> fmt<span class="token punctuation">.</span><span class="token function">Sprintf</span><span class="token punctuation">(</span><span class="token string">"name: %s, address: %s, phone: %v, sex: %v"</span><span class="token punctuation">,</span> name<span class="token punctuation">,</span> address<span class="token punctuation">,</span> ctx<span class="token punctuation">.</span><span class="token function">Value</span><span class="token punctuation">(</span><span class="token string">"phone"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> ctx<span class="token punctuation">.</span><span class="token function">Value</span><span class="token punctuation">(</span><span class="token string">"sex"</span><span class="token punctuation">)</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3 id="数据一致性" tabindex="-1"><a class="header-anchor" href="#数据一致性" aria-hidden="true">#</a> 数据一致性</h3>
 <p>为了提高 iam-authz-server 的响应性能，我将密钥和授权策略信息缓存在 iam-authz-server 部署机器的内存中。同时，为了实现高可用，我们需要保证 iam-authz-server 启动的实例个数至少为两个。这时候，我们会面临数据一致性的问题：所有 iam-authz-server 缓存的数据要一致，并且跟 iam-apiserver 数据库中保存的一致。iam-apiserver 通过如下方式来实现数据一致性：</p>
-<p><img src="http://sm.nsddd.top/sm202302282227080.jpeg" alt="img"></p>
+<p><img src="http://sm.cubxxw.com/sm202302282227080.jpeg" alt="img"></p>
 <p><strong>具体流程如下：</strong></p>
 <p>第一步，iam-authz-server 启动时，会通过 grpc 调用 iam-apiserver 的 GetSecrets 和 GetPolicies 接口，获取所有的密钥和授权策略信息。</p>
 <p>第二步，当我们通过控制台调用 iam-apiserver 密钥/授权策略的写接口（POST、PUT、DELETE）时，会向 Redis 的 <code v-pre>iam.cluster.notifications</code>通道发送 SecretChanged/PolicyChanged 消息。</p>
@@ -613,7 +613,7 @@ infos <span class="token operator">:=</span> <span class="token function">make</
 <p><RouterLink to="/projects/">Ⓜ️回到目录🏠</RouterLink></p>
 </li>
 <li>
-<p><a href="https://nsddd.top/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
+<p><a href="https://cubxxw.com/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
 </li>
 <li>
 <p>✴️版权声明 © ：本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>

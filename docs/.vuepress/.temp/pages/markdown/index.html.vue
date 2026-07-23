@@ -104,7 +104,7 @@
 </ul>
 <hr>
 <h2 id="✨参与贡献" tabindex="-1"><a class="header-anchor" href="#✨参与贡献" aria-hidden="true">#</a> ✨参与贡献</h2>
-<p><strong><a href="https://nsddd.top/archives/contributors" target="_blank" rel="noopener noreferrer">🫵参与贡献❤️❤️💕💕<ExternalLinkIcon/></a></strong></p>
+<p><strong><a href="https://cubxxw.com/archives/contributors" target="_blank" rel="noopener noreferrer">🫵参与贡献❤️❤️💕💕<ExternalLinkIcon/></a></strong></p>
 <p><strong>要求：</strong></p>
 <ul>
 <li><a href="https://github.com/3293172751/CS_COURSE/blob/master/markdown/README.md" target="_blank" rel="noopener noreferrer"><strong>你需要学会使用markdown🖱️</strong><ExternalLinkIcon/></a></li>

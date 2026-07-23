@@ -6,7 +6,7 @@
 <div><a href = '19.md' style='float:left'>⬆️上一节🔗  </a><a href = '21.md' style='float: right'>  ⬇️下一节🔗</a></div>
 <br>
 <blockquote>
-<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://nsddd.top/" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
+<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://cubxxw.com/" target="_blank" rel="noopener noreferrer">http://cubxxw.com<ExternalLinkIcon/></a></p>
 </blockquote>
 <hr>
 <nav class="table-of-contents"><ul><li><router-link to="#开始">开始</router-link></li><li><router-link to="#iam-apiserver服务介绍">iam-apiserver服务介绍</router-link><ul><li><router-link to="#iam-apiserver功能介绍">iam-apiserver功能介绍</router-link></li><li><router-link to="#iam-apiserver使用方法介绍">iam-apiserver使用方法介绍</router-link></li></ul></li><li><router-link to="#iam-apiserver代码实现">iam-apiserver代码实现</router-link><ul><li><router-link to="#iam-apiserver配置处理">iam-apiserver配置处理</router-link></li><li><router-link to="#iam-apiserver启动流程设计">iam-apiserver启动流程设计</router-link></li><li><router-link to="#iam-apiserver-的rest-api请求处理流程">iam-apiserver 的REST API请求处理流程</router-link></li><li><router-link to="#iam-apiserver代码架构">iam-apiserver代码架构</router-link></li></ul></li><li><router-link to="#总结">总结</router-link></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
@@ -20,13 +20,13 @@
 <h3 id="iam-apiserver功能介绍" tabindex="-1"><a class="header-anchor" href="#iam-apiserver功能介绍" aria-hidden="true">#</a> iam-apiserver功能介绍</h3>
 <p>这里，我们可以通过iam-apiserver提供的RESTful API接口，来看下iam-apiserver具体提供的功能。iam-apiserver提供的RESTful API接口可以分为四类，具体如下：</p>
 <p><strong>认证相关接口</strong></p>
-<p><img src="http://sm.nsddd.top/sm202302271737291.jpeg" alt="图片"></p>
+<p><img src="http://sm.cubxxw.com/sm202302271737291.jpeg" alt="图片"></p>
 <p><strong>用户相关接口</strong></p>
-<p><a href="https://static001.geekbang.org/resource/image/60/24/60f8a05f4cb43cbac84c0fb12c40c824.jpg?wh=1920x1314" target="_blank" rel="noopener noreferrer"><img src="http://sm.nsddd.top/sm202302271738769.jpeg" alt="图片"><ExternalLinkIcon/></a></p>
+<p><a href="https://static001.geekbang.org/resource/image/60/24/60f8a05f4cb43cbac84c0fb12c40c824.jpg?wh=1920x1314" target="_blank" rel="noopener noreferrer"><img src="http://sm.cubxxw.com/sm202302271738769.jpeg" alt="图片"><ExternalLinkIcon/></a></p>
 <p><strong>密钥相关接口</strong></p>
-<p><img src="http://sm.nsddd.top/sm202302271737321.jpeg" alt="图片"></p>
+<p><img src="http://sm.cubxxw.com/sm202302271737321.jpeg" alt="图片"></p>
 <p><strong>策略相关接口</strong></p>
-<p><img src="http://sm.nsddd.top/sm202302271738302.jpeg" alt="图片"></p>
+<p><img src="http://sm.cubxxw.com/sm202302271738302.jpeg" alt="图片"></p>
 <h3 id="iam-apiserver使用方法介绍" tabindex="-1"><a class="header-anchor" href="#iam-apiserver使用方法介绍" aria-hidden="true">#</a> iam-apiserver使用方法介绍</h3>
 <p>上面我介绍了iam-apiserver的功能，接下来就介绍下如何使用这些功能。</p>
 <p>我们可以通过不同的客户端来访问 <code v-pre>iam-apiserver</code>，例如前端、API调用、SDK、iamctl等。这些客户端最终都会执行HTTP请求，调用 <code v-pre>iam-apiserver</code> 提供的RESTful API接口。所以，我们首先需要有一个顺手的REST API客户端工具来执行HTTP请求，完成开发测试。</p>
@@ -51,7 +51,7 @@
 <li>…</li>
 </ul>
 <p><code v-pre>Insomnia</code>界面如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202302271744432.png" alt="图片"></p>
+<p><img src="http://sm.cubxxw.com/sm202302271744432.png" alt="图片"></p>
 <p>当然了，也有很多其他优秀的带UI界面的REST API客户端，例如 Postman、Apifox等，你可以根据需要自行选择。</p>
 <p>接下来，我用对secret资源的CURD操作，来给你演示下 <strong>如何使用iam-apiserver的功能</strong>。你需要执行6步操作。</p>
 <ol>
@@ -128,7 +128,7 @@ $ ./scripts/install/test.sh iam::test::apiserver
 <li>**HTTP/GRPC服务配置：**启动HTTP服务或者GRPC服务需要的配置。</li>
 </ul>
 <p>这三种配置的关系如下图：</p>
-<p><img src="http://sm.nsddd.top/sm202302282136791.jpeg" alt="img"></p>
+<p><img src="http://sm.cubxxw.com/sm202302282136791.jpeg" alt="img"></p>
 <p>Options配置接管命令行选项，应用配置接管整个应用的配置，HTTP/GRPC服务配置接管跟HTTP/GRPC服务相关的配置。这3种配置独立开来，可以解耦命令行选项、应用和应用内的服务，使得这3个部分可以独立扩展，又不相互影响。</p>
 <p>iam-apiserver根据Options配置来构建命令行参数和应用配置。</p>
 <p>我们通过<code v-pre>github.com/marmotedu/iam/pkg/app</code>包的<a href="https://github.com/marmotedu/iam/blob/v1.0.4/pkg/app/app.go#L199" target="_blank" rel="noopener noreferrer">buildCommand<ExternalLinkIcon/></a>方法来构建命令行参数。这里的核心是，通过<a href="https://github.com/marmotedu/iam/blob/v1.0.4/pkg/app/app.go#L157" target="_blank" rel="noopener noreferrer">NewApp<ExternalLinkIcon/></a>函数构建Application实例时，传入的<a href="https://github.com/marmotedu/iam/blob/v1.0.4/internal/apiserver/options/options.go#L19" target="_blank" rel="noopener noreferrer">Options<ExternalLinkIcon/></a>实现了<code v-pre>Flags() (fss cliflag.NamedFlagSets)</code>方法，通过buildCommand方法中的以下代码，将option的Flag添加到cobra实例的FlagSet中：</p>
@@ -187,7 +187,7 @@ extraServer<span class="token punctuation">,</span> err <span class="token opera
 <p>服务启动后，就可以处理请求了。所以接下来，我们再来看下iam-apiserver的RESTAPI请求处理流程。</p>
 <h3 id="iam-apiserver-的rest-api请求处理流程" tabindex="-1"><a class="header-anchor" href="#iam-apiserver-的rest-api请求处理流程" aria-hidden="true">#</a> iam-apiserver 的REST API请求处理流程</h3>
 <p>iam-apiserver的请求处理流程也是清晰、规范的，具体流程如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202302282203119.jpeg" alt="img"></p>
+<p><img src="http://sm.cubxxw.com/sm202302282203119.jpeg" alt="img"></p>
 <p>结合上面这张图，我们来看下iam-apiserver 的REST API请求处理流程，来帮你更好地理解iam-apiserver是如何处理HTTP请求的。</p>
 <p>**首先，**我们通过API调用（<code v-pre>&lt;HTTP Method&gt; + &lt;HTTP Request Path&gt;</code>）请求iam-apiserver提供的RESTful API接口。</p>
 <p>**接着，**Gin Web框架接收到HTTP请求之后，会通过认证中间件完成请求的认证，iam-apiserver提供了Basic认证和Bearer认证两种认证方式。</p>
@@ -204,7 +204,7 @@ extraServer<span class="token punctuation">,</span> err <span class="token opera
 <li>**独立于外部媒介：**实际上，你的业务规则可以简单到根本不去了解外部世界。</li>
 </ul>
 <p>所以，基于这些约束，每一层都必须是独立的和可测试的。iam-apiserver代码架构分为4层：模型层（Models）、控制层（Controller）、业务层 （Service）、仓库层（Repository）。从控制层、业务层到仓库层，从左到右层级依次加深。模型层独立于其他层，可供其他层引用。如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202302282203289.jpeg" alt="img"></p>
+<p><img src="http://sm.cubxxw.com/sm202302282203289.jpeg" alt="img"></p>
 <p>层与层之间导入包时，都有严格的导入关系，这可以防止包的循环导入问题。导入关系如下：</p>
 <ul>
 <li>模型层的包可以被仓库层、业务层和控制层导入；</li>
@@ -229,7 +229,7 @@ extraServer<span class="token punctuation">,</span> err <span class="token opera
   Description <span class="token builtin">string</span> <span class="token string">`json:"description" gorm:"column:description" validate:"description"`</span>
 <span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>之所以将模型层的模型存放在<code v-pre>github.com/marmotedu/api</code>项目中，而不是<code v-pre>github.com/marmotedu/iam</code>项目中，是为了让这些模型能够被其他项目使用。例如，iam的模型可以被<code v-pre>github.com/marmotedu/shippy</code>应用导入。同样，shippy应用的模型也可以被iam项目导入，导入关系如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202302282204303.jpeg" alt="img"></p>
+<p><img src="http://sm.cubxxw.com/sm202302282204303.jpeg" alt="img"></p>
 <p>上面的依赖关系都是单向的，依赖关系清晰，不存在循环依赖的情况。</p>
 <p>要增加shippy的模型定义，只需要在api目录下创建新的目录即可。例如，shippy应用中有一个vessel服务，其模型所在的包可以为<code v-pre>github.com/marmotedu/api/vessel</code>。</p>
 <p>另外，这里的模型既可以作为数据库模型，又可以作为API接口的请求模型（入参、出参）。如果我们能够确保<strong>创建资源时的属性</strong>、<strong>资源保存在数据库中的属性</strong>、<strong>返回资源的属性</strong>三者一致，就可以使用同一个模型。通过使用同一个模型，可以使我们的代码更加简洁、易维护，并能提高开发效率。如果这三个属性有差异，你可以另外新建模型来适配。</p>
@@ -254,7 +254,7 @@ extraServer<span class="token punctuation">,</span> err <span class="token opera
 <span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>业务层 (Service)</strong></p>
 <p>业务层主要用来完成业务逻辑处理，我们可以把所有的业务逻辑处理代码放在业务层。业务层会处理来自控制层的请求，并根据需要请求仓库层完成数据的CURD操作。业务层功能如下图所示：</p>
-<p><a href="https://static001.geekbang.org/resource/image/61/b6/6103c58d837fd81769977bc3c947ffb6.jpg?wh=1796x1236" target="_blank" rel="noopener noreferrer"><img src="http://sm.nsddd.top/sm202302282204294.jpeg" alt="img"><ExternalLinkIcon/></a></p>
+<p><a href="https://static001.geekbang.org/resource/image/61/b6/6103c58d837fd81769977bc3c947ffb6.jpg?wh=1796x1236" target="_blank" rel="noopener noreferrer"><img src="http://sm.cubxxw.com/sm202302282204294.jpeg" alt="img"><ExternalLinkIcon/></a></p>
 <p>iam-apiserver的业务层位于<a href="https://github.com/marmotedu/iam/tree/v1.0.3/internal/apiserver/service" target="_blank" rel="noopener noreferrer">internal/apiserver/service<ExternalLinkIcon/></a>目录下。下面是iam-apiserver业务层中，用来创建密钥的函数：</p>
 <div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">func</span> <span class="token punctuation">(</span>s <span class="token operator">*</span>secretService<span class="token punctuation">)</span> <span class="token function">Create</span><span class="token punctuation">(</span>ctx context<span class="token punctuation">.</span>Context<span class="token punctuation">,</span> secret <span class="token operator">*</span>v1<span class="token punctuation">.</span>Secret<span class="token punctuation">,</span> opts metav1<span class="token punctuation">.</span>CreateOptions<span class="token punctuation">)</span> <span class="token builtin">error</span> <span class="token punctuation">{</span>
     <span class="token keyword">if</span> err <span class="token operator">:=</span> s<span class="token punctuation">.</span>store<span class="token punctuation">.</span><span class="token function">Secrets</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Create</span><span class="token punctuation">(</span>ctx<span class="token punctuation">,</span> secret<span class="token punctuation">,</span> opts<span class="token punctuation">)</span><span class="token punctuation">;</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
@@ -266,7 +266,7 @@ extraServer<span class="token punctuation">,</span> err <span class="token opera
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>可以看到，业务层最终请求仓库层的<code v-pre>s.store</code>的<code v-pre>Create</code>方法，将密钥信息保存在MariaDB数据库中。</p>
 <p><strong>控制层（Controller）</strong></p>
 <p>控制层接收HTTP请求，并进行参数解析、参数校验、逻辑分发处理、请求返回这些操作。控制层会将逻辑分发给业务层，业务层处理后返回，返回数据在控制层中被整合再加工，最终返回给请求方。控制层相当于实现了业务路由的功能。具体流程如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202302282206659.jpeg" alt="img"></p>
+<p><img src="http://sm.cubxxw.com/sm202302282206659.jpeg" alt="img"></p>
 <p>这里我有个建议，不要在控制层写复杂的代码，如果需要，请将这些代码分发到业务层或其他包中。</p>
 <p>iam-apiserver的控制层位于<a href="https://github.com/marmotedu/iam/tree/v1.0.3/internal/apiserver/controller" target="_blank" rel="noopener noreferrer">internal/apiserver/controller<ExternalLinkIcon/></a>目录下。下面是iam-apiserver控制层中创建密钥的代码：</p>
 <div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">func</span> <span class="token punctuation">(</span>s <span class="token operator">*</span>SecretHandler<span class="token punctuation">)</span> <span class="token function">Create</span><span class="token punctuation">(</span>c <span class="token operator">*</span>gin<span class="token punctuation">.</span>Context<span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -458,7 +458,7 @@ extraServer<span class="token punctuation">,</span> err <span class="token opera
 <p><RouterLink to="/projects/">Ⓜ️回到目录🏠</RouterLink></p>
 </li>
 <li>
-<p><a href="https://nsddd.top/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
+<p><a href="https://cubxxw.com/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
 </li>
 <li>
 <p>✴️版权声明 © ：本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>

@@ -6,7 +6,7 @@
 <div><a href = '38.md' style='float:left'>⬆️上一节🔗  </a><a href = '40.md' style='float: right'>  ⬇️下一节🔗</a></div>
 <br>
 <blockquote>
-<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://nsddd.top/" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
+<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://cubxxw.com/" target="_blank" rel="noopener noreferrer">http://cubxxw.com<ExternalLinkIcon/></a></p>
 </blockquote>
 <hr>
 <nav class="table-of-contents"><ul><li><router-link to="#开始">开始</router-link></li><li><router-link to="#为什么选择yaml格式来定义kubernetes资源">为什么选择YAML格式来定义Kubernetes资源？</router-link></li><li><router-link to="#kubernetes-资源定义概述">Kubernetes 资源定义概述</router-link></li><li><router-link to="#常用的kubernetes资源定义">常用的Kubernetes资源定义</router-link><ul><li><router-link to="#pod资源定义">Pod资源定义</router-link></li><li><router-link to="#deployment资源定义">Deployment资源定义</router-link></li><li><router-link to="#configmap资源定义">ConfigMap资源定义</router-link></li><li><router-link to="#service资源定义">Service资源定义</router-link></li></ul></li><li><router-link to="#yaml文件编写技巧">YAML文件编写技巧</router-link></li><li><router-link to="#使用kubernetes-yaml时的一些推荐工具">使用Kubernetes YAML时的一些推荐工具</router-link><ul><li><router-link to="#kubeval">kubeval</router-link></li><li><router-link to="#kube-score">kube-score</router-link></li></ul></li><li><router-link to="#总结">总结</router-link></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
@@ -62,7 +62,7 @@
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>我就是通过<code v-pre>json2yaml</code>在线工具，来转换YAML和JSON的，如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202303062239320.png" alt="图片"></p>
+<p><img src="http://sm.cubxxw.com/sm202303062239320.png" alt="图片"></p>
 <p>在编写 Kubernetes 资源定义文件的过程中，如果因为YAML格式文件中的配置项缩进太深，导致不容易判断配置项的层级，那么，你就可以将其转换成JSON格式，通过JSON格式来判断配置型的层级。</p>
 <p>如果想学习更多关于YAML的知识，你可以参考<a href="https://yaml.org/spec/1.2/spec.html" target="_blank" rel="noopener noreferrer">YAML 1.2 (3rd Edition)<ExternalLinkIcon/></a>。这里，可以先看看我整理的YAML基本语法：</p>
 <ul>
@@ -480,7 +480,7 @@ ERR  - Failed to decode YAML from iam-authz-server.yaml: error unmarshaling JSON
 <p><RouterLink to="/projects/">Ⓜ️回到目录🏠</RouterLink></p>
 </li>
 <li>
-<p><a href="https://nsddd.top/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
+<p><a href="https://cubxxw.com/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
 </li>
 <li>
 <p>✴️版权声明 © ：本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>

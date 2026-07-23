@@ -6,7 +6,7 @@
 <div><a href = '3.md' style='float:left'>⬆️上一节🔗  </a><a href = '5.md' style='float: right'>  ⬇️下一节🔗</a></div>
 <br>
 <blockquote>
-<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://nsddd.top/" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
+<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://cubxxw.com/" target="_blank" rel="noopener noreferrer">http://cubxxw.com<ExternalLinkIcon/></a></p>
 </blockquote>
 <hr>
 <nav class="table-of-contents"><ul><li><router-link to="#目录结构">目录结构</router-link><ul><li><router-link to="#平铺式结构">平铺式结构</router-link></li><li><router-link to="#结构式结构">结构式结构</router-link></li><li><router-link to="#go-应用-主要存放前后端代码">Go 应用 ：主要存放前后端代码</router-link></li><li><router-link to="#go-应用-主要存放测试相关的文件和代码">Go 应用：主要存放测试相关的文件和代码</router-link></li><li><router-link to="#go-应用-存放跟应用部署相关的文件">Go 应用：存放跟应用部署相关的文件</router-link></li><li><router-link to="#项目管理-存放用来管理-go-项目的各类文件">项目管理：存放用来管理 Go 项目的各类文件</router-link></li><li><router-link to="#文档-主要存放项目的各类文档">文档：主要存放项目的各类文档</router-link></li></ul></li><li><router-link to="#合理的多人开发流">合理的多人开发流</router-link></li><li><router-link to="#研发流程">研发流程</router-link><ul><li><router-link to="#需求阶段">需求阶段</router-link></li><li><router-link to="#设计阶段">设计阶段</router-link></li><li><router-link to="#开发阶段">开发阶段</router-link></li><li><router-link to="#测试阶段">测试阶段</router-link></li><li><router-link to="#发布阶段">发布阶段</router-link></li><li><router-link to="#运营阶段">运营阶段</router-link></li></ul></li><li><router-link to="#如何管理应用生命周期">如何管理应用生命周期</router-link><ul><li><router-link to="#研发模式">研发模式</router-link></li><li><router-link to="#ci-cd-自动化构建和部署应用">CI/CD：自动化构建和部署应用</router-link></li><li><router-link to="#devops-研发运维一体化">DevOps：研发运维一体化</router-link></li></ul></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
@@ -152,7 +152,7 @@ glog_file.go  glog.go  glog_test.go  LICENSE  README
 │   └── forked
 └── tools
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>一个 Go 项目包含 3 大部分：Go 应用 、项目管理和文档。所以，我们的项目目录也可以分为这 3 大类。同时，Go 应用又贯穿开发阶段、测试阶段和部署阶段，相应的应用类的目录，又可以按开发流程分为更小的子类。当然了，这些是我建议的目录，Go 项目目录中还有一些不建议的目录。所以整体来看，我们的目录结构可以按下图所示的方式来分类：</p>
-<p><img src="https://sm.nsddd.top/sm202302171204068.png" alt="image-20230217120440924"></p>
+<p><img src="https://sm.cubxxw.com/sm202302171204068.png" alt="image-20230217120440924"></p>
 <h3 id="go-应用-主要存放前后端代码" tabindex="-1"><a class="header-anchor" href="#go-应用-主要存放前后端代码" aria-hidden="true">#</a> Go 应用 ：主要存放前后端代码</h3>
 <ul>
 <li><code v-pre>/web</code> ：前端代码存放目录，主要用来存放 Web 静态资源，服务端模板和单页应用（SPAs）。</li>
@@ -338,7 +338,7 @@ $ <span class="token function">git</span> commit <span class="token parameter va
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ <span class="token function">git</span> push origin feature/rate-limiting
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>在远程仓库上创建 PR（例如：GitHub）。</p>
 <p>进入 GitHub 平台上的项目主页，点击 Compare &amp; pull request 提交 PR，如下图所示。</p>
-<p><img src="https://sm.nsddd.top/sm202302171604080.png" alt="image-20230217145636978"></p>
+<p><img src="https://sm.cubxxw.com/sm202302171604080.png" alt="image-20230217145636978"></p>
 <p><strong>图中的“Merge pull request” 提供了 3 种 merge 方法：</strong></p>
 <ol>
 <li>Create a merge commit：GitHub 的底层操作是 git merge --no-ff。feature 分支上所有的 commit 都会加到 master 分支上，并且会生成一个 merge commit。这种方式可以让我们清晰地知道是谁做了提交，做了哪些提交，回溯历史的时候也会更加方便。</li>
@@ -378,7 +378,7 @@ $ <span class="token function">git</span> commit
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ <span class="token function">git</span> rebase <span class="token parameter variable">-i</span> origin/master
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h2 id="研发流程" tabindex="-1"><a class="header-anchor" href="#研发流程" aria-hidden="true">#</a> 研发流程</h2>
 <p>一个项目从立项到结项，中间会经历很多阶段。业界相对标准的划分，是把研发流程分为六个阶段，分别是需求阶段、设计阶段、开发阶段、测试阶段、发布阶段、运营阶段。其中，开发人员需要参与的阶段有 4 个：设计阶段、开发阶段、测试阶段和发布阶段。下图就是业界相对比较标准的流程：</p>
-<p><img src="http://sm.nsddd.top/sm202302171523567.png" alt="image-20230217152315509"></p>
+<p><img src="http://sm.cubxxw.com/sm202302171523567.png" alt="image-20230217152315509"></p>
 <p>每个阶段结束时，都需要有一个最终的产出物，可以是文档、代码或者部署组件等。这个产出物既是当前阶段的结束里程碑，又是下一阶段的输入。所以说，各个阶段不是割裂的，而是密切联系的整体。每个阶段又细分为很多步骤，这些步骤是需要不同的参与者去完成的工作任务。在完成任务的过程中，可能需要经过多轮的讨论、修改，最终形成定稿。</p>
 <h3 id="需求阶段" tabindex="-1"><a class="header-anchor" href="#需求阶段" aria-hidden="true">#</a> 需求阶段</h3>
 <p>需求阶段是将一个抽象的产品思路具化成一个可实施产品的阶段。在这个阶段，产品人员会讨论产品思路、调研市场需求，并对需求进行分析，整理出一个比较完善的需求文档。最后，产品人员会组织相关人员对需求进行评审，如果评审通过，就会进入设计阶段。</p>
@@ -387,11 +387,11 @@ $ <span class="token function">git</span> commit
 <p>需求阶段的产出物是一个通过评审的详细的需求文档。</p>
 <h3 id="设计阶段" tabindex="-1"><a class="header-anchor" href="#设计阶段" aria-hidden="true">#</a> 设计阶段</h3>
 <p>设计阶段，是整个产品研发过程中非常重要的阶段，包括的内容也比较多，你可以看一下这张表：</p>
-<p><img src="http://sm.nsddd.top/sm202302171524439.png" alt="image-20230217152405344"></p>
+<p><img src="http://sm.cubxxw.com/sm202302171524439.png" alt="image-20230217152405344"></p>
 <p>这里的每一个设计项都应该经过反复的讨论、打磨，最终在团队内达成共识。这样可以确保设计是合理的，并减少返工的概率。这里想提醒你的是，技术方案和实现都要经过认真讨论，并获得一致通过，否则后面因为技术方案设计不当，需要返工，你要承担大部分责任。</p>
 <h3 id="开发阶段" tabindex="-1"><a class="header-anchor" href="#开发阶段" aria-hidden="true">#</a> 开发阶段</h3>
 <p>开发阶段，从它的名字你就知道了，这是开发人员的主战场，同时它可能也是持续时间最长的阶段。在这一阶段，开发人员根据技术设计文档，编码实现产品需求。</p>
-<p><img src="http://sm.nsddd.top/sm202302171524363.png" alt="image-20230217152451273"></p>
+<p><img src="http://sm.cubxxw.com/sm202302171524363.png" alt="image-20230217152451273"></p>
 <p>让我们来详细看下这张图里呈现的步骤。开发阶段又可以分为“开发”和“构建”两部分，我们先来看开发。</p>
 <p>为了提高开发效率，越来越多的开发者采用生成代码的方式来生成一部分代码，所以在真正编译之前可能还需要先生成代码，比如生成 <code v-pre>.pb.go</code> 文件、API 文档、测试用例、错误码等。我的建议是，在项目开发中，你要思考怎么尽可能自动生成代码。这样不仅能提高研发效率，还能减少错误。</p>
 <p>对于一个开源项目，我们可能还需要检查新增的文件是否有版权信息。此外，根据项目不同，开发阶段还可能有其它不同的步骤。在流程的最后，通常会进行静态代码检查、单元测试和编译。编译之后，我们就可以启动服务，并进行自测了。</p>
@@ -414,7 +414,7 @@ $ <span class="token function">git</span> commit
 <p>另外，你也可以及时跟进测试，了解测试同学当前遇到的卡点。因为实际工作中，一些测试同学在遇到卡点时，不善于或者不会及时地跟你同步卡点，往往研发 1 分钟就可以解决的问题，可能要花测试同学几个小时或者更久的时间去解决。</p>
 <h3 id="发布阶段" tabindex="-1"><a class="header-anchor" href="#发布阶段" aria-hidden="true">#</a> 发布阶段</h3>
 <p>发布阶段主要是将软件部署上线，为了保证发布的效率和质量，我们需要遵循一定的发布流程，如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202302171527405.png" alt="image-20230217152749299"></p>
+<p><img src="http://sm.cubxxw.com/sm202302171527405.png" alt="image-20230217152749299"></p>
 <p>首先，开发人员首先需要将经过测试后的代码合并到主干，通常是 master 分支，并生成版本号，然后给最新的 commit 打上版本标签。之后，可以将代码 push 到代码托管平台，并触发 CI 流程，CI 流程一般会执行代码扫描、单元测试、编译，最后将构建产物发布到制品库。CI 流程中，我们可以根据需要添加任意功能。</p>
 <p>编写一些自动化的测试用例，在服务发布到现网之后，对现网服务做一次比较充分的回归测试。通过这个自动化测试，可以以最小的代价，最快速地验证现网功能，从而保障发布质量。</p>
 <h3 id="运营阶段" tabindex="-1"><a class="header-anchor" href="#运营阶段" aria-hidden="true">#</a> 运营阶段</h3>
@@ -423,11 +423,11 @@ $ <span class="token function">git</span> commit
 <li>产品运营：通过一系列的运营活动，比如线下的技术沙龙、线上的免费公开课、提高关键词排名或者输出一些技术推广文章等方式，来推高整个产品的知名度，提高产品的用户数量，并提高月活和日活。</li>
 <li>运维：由运维工程师负责，核心目标是确保系统稳定的运行，如果系统异常，能够及时发现并修复问题。长期目标是通过技术手段或者流程来完善整个系统架构，减少人力投入、提高运维效率，并提高系统的健壮性和恢复能力。</li>
 </ul>
-<p><img src="http://sm.nsddd.top/sm202302171530975.png" alt="image-20230217153017913"></p>
+<p><img src="http://sm.cubxxw.com/sm202302171530975.png" alt="image-20230217153017913"></p>
 <p>在运营阶段，研发人员的主要职责就是协助运维解决现网 Bug，优化部署架构。当然，研发人员可能也需要配合运营人员开发一些运营接口，供运营人员使用。</p>
 <p><strong>分工图：</strong></p>
-<p><img src="http://sm.nsddd.top/sm202302171531553.png" alt="image-20230217153103496"></p>
-<p><img src="http://sm.nsddd.top/sm202302171531152.png" alt="image-20230217153122018"></p>
+<p><img src="http://sm.cubxxw.com/sm202302171531553.png" alt="image-20230217153103496"></p>
+<p><img src="http://sm.cubxxw.com/sm202302171531152.png" alt="image-20230217153122018"></p>
 <h2 id="如何管理应用生命周期" tabindex="-1"><a class="header-anchor" href="#如何管理应用生命周期" aria-hidden="true">#</a> 如何管理应用生命周期</h2>
 <p>采用一些好的工具或方法在应用的整个生命周期中对应用进行管理，以提高应用的研发效率和质量。</p>
 <p>在这里我先整体介绍一下，你先有个大致的印象，一会我们再一个个细讲。我们可以从两个维度来理解应用生命周期管理技术。</p>
@@ -441,14 +441,14 @@ $ <span class="token function">git</span> commit
 </li>
 </ul>
 <p>尽管这些应用生命周期管理技术有很多不同，但是它们彼此支持、相互联系。研发模式专注于开发过程，DevOps 技术里的 CI/CD 专注于流程，Ops 则专注于实战。</p>
-<p><img src="http://sm.nsddd.top/sm202302171549330.png" alt="image-20230217154926256"></p>
+<p><img src="http://sm.cubxxw.com/sm202302171549330.png" alt="image-20230217154926256"></p>
 <p>也就是按照这样的顺序：<code v-pre>研发模式（瀑布模式 -&gt; 迭代模式 -&gt; 敏捷模式） -&gt; CI/CD -&gt; DevOps</code>。</p>
 <h3 id="研发模式" tabindex="-1"><a class="header-anchor" href="#研发模式" aria-hidden="true">#</a> 研发模式</h3>
 <p>研发模式主要有三种，演进顺序为瀑布模式 -&gt; 迭代模式 -&gt; 敏捷模式，现在我们逐一看下。</p>
 <h4 id="瀑布模式" tabindex="-1"><a class="header-anchor" href="#瀑布模式" aria-hidden="true">#</a> 瀑布模式</h4>
 <p>在早期阶段，软件研发普遍采用的是瀑布模式，像我们熟知的 RHEL、Fedora 等系统就是采用瀑布模式。</p>
 <p>瀑布模式按照预先规划好的研发阶段来推进研发进度。比如，按照需求阶段、设计阶段、开发阶段、测试阶段、发布阶段、运营阶段的顺序串行执行开发任务。每个阶段完美完成之后，才会进入到下一阶段，阶段之间通过文档进行交付。整个过程如下图所示。</p>
-<p><img src="http://sm.nsddd.top/sm202302171550258.png" alt="image-20230217155057192"></p>
+<p><img src="http://sm.cubxxw.com/sm202302171550258.png" alt="image-20230217155057192"></p>
 <h4 id="迭代模式" tabindex="-1"><a class="header-anchor" href="#迭代模式" aria-hidden="true">#</a> 迭代模式</h4>
 <p>迭代模式，是一种与瀑布式模式完全相反的开发过程：研发任务被切分为一系列轮次，每一个轮次都是一个迭代，每一次迭代都是一个从设计到实现的完整过程。它不要求每一个阶段的任务都做到最完美，而是先把主要功能搭建起来，然后再通过客户的反馈信息不断完善。</p>
 <p>迭代开发可以帮助产品改进和把控进度，它的灵活性极大地提升了适应需求变化的能力，克服了高风险、难变更、复用性低的特点。</p>
@@ -472,11 +472,11 @@ $ <span class="token function">git</span> commit
 <p>通常来说，持续部署可以自动地将服务部署到测试环境或者预发环境。因为部署到现网环境存在一定的风险，所以如果部署到现网环境，需要手工操作。手工操作的好处是，可以使相关人员评估发布风险，确保发布的正确性。</p>
 <p><strong>最后是持续部署</strong>，持续部署在持续交付的基础上，将经过充分测试的代码自动部署到生产环境，整个流程不再需要相关人员的审核。持续部署强调的是自动化部署，是交付的最高阶段。</p>
 <p>持续集成、持续交付和持续部署强调的是持续性，也就是能够支持频繁的集成、交付和部署，这离不开自动化工具的支持，离开了这些工具，CI/CD 就不再具有可实施性。持续集成的核心点在代码，持续交付的核心点在可交付的产物，持续部署的核心点在自动部署。</p>
-<p><img src="http://sm.nsddd.top/sm202302171554242.png" alt="image-20230217155451187"></p>
+<p><img src="http://sm.cubxxw.com/sm202302171554242.png" alt="image-20230217155451187"></p>
 <h3 id="devops-研发运维一体化" tabindex="-1"><a class="header-anchor" href="#devops-研发运维一体化" aria-hidden="true">#</a> DevOps：研发运维一体化</h3>
 <p>CI/CD 技术的成熟，加速了 DevOps 这种应用生命周期管理技术的成熟和落地。</p>
 <p>DevOps（Development 和 Operations 的组合）是一组过程、方法与系统的统称，用于促进开发（应用程序 / 软件工程）、技术运营和质量保障（QA）部门之间的沟通、协作与整合。这 3 个部门的相互协作，可以提高软件质量、快速发布软件。如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202302171554985.png" alt="image-20230217155420884"></p>
+<p><img src="http://sm.cubxxw.com/sm202302171554985.png" alt="image-20230217155420884"></p>
 <p>要实现 DevOps，需要一些工具或者流程的支持，CI/CD 可以很好地支持 DevOps 这种软件开发模式，如果没有 CI/CD 自动化的工具和流程，DevOps 就是没有意义的，CI/CD 使得 DevOps 变得可行。</p>
 <p><strong>DevOps ！= CI/CD。DevOps 是一组过程、方法和系统的统称，而 CI/CD 只是一种软件构建和发布的技术。</strong></p>
 <p>DevOps 技术之前一直有，但是落地不好，因为没有一个好的工具来实现 DevOps 的理念。但是随着容器、CI/CD 技术的诞生和成熟，DevOps 变得更加容易落地。也就是说，这几年越来越多的人采用 DevOps 手段来提高研发效能。</p>
@@ -489,7 +489,7 @@ $ <span class="token function">git</span> commit
 <p>随着企业微信、钉钉等企业内通讯工具的兴起，最近几年出现了一个新的概念 ChatOps。</p>
 <p>简单来说，ChatOps 就是在一个聊天工具中，发送一条命令给 ChatBot 机器人，然后 ChatBot 会执行预定义的操作。这些操作可以是执行某个工具、调用某个接口等，并返回执行结果。</p>
 <p>这种新型智能工作方式的优势是什么呢？它可以利用 ChatBot 机器人让团队成员和各项辅助工具连接在一起，以沟通驱动的方式完成工作。ChatOps 可以解决人与人、人与工具、工具与工具之间的信息孤岛，从而提高协作体验和工作效率。</p>
-<p><img src="http://sm.nsddd.top/sm202302171557630.png" alt="image-20230217155759553"></p>
+<p><img src="http://sm.cubxxw.com/sm202302171557630.png" alt="image-20230217155759553"></p>
 <p>开发 / 运维 / 测试人员通过 @聊天窗口中的机器人 Bot 来触发任务，机器人后端会通过 API 接口调用等方式对接不同的系统，完成不同的任务，例如持续集成、测试、发布等工作。机器人可以是我们自己研发的，也可以是开源的。目前，业界有很多流行的机器人可供选择，常用的有 Hubot、Lita、Errbot、StackStorm 等。</p>
 <h4 id="gitops-一种实现云原生的持续交付模型" tabindex="-1"><a class="header-anchor" href="#gitops-一种实现云原生的持续交付模型" aria-hidden="true">#</a> GitOps： 一种实现云原生的持续交付模型</h4>
 <p>GitOps 是一种持续交付的方式。它的核心思想是将应用系统的声明性基础架构（YAML）和应用程序存放在 Git 版本库中。将 Git 作为交付流水线的核心，每个开发人员都可以提交拉取请求（Pull Request），并使用 Git 来加速和简化 Kubernetes 的应用程序部署和运维任务。</p>
@@ -501,7 +501,7 @@ $ <span class="token function">git</span> commit
 <li>不可变基础设施：基础设施中的每个组件都可以自动的部署，组件在部署完成后，不能发生变更。如果需要变更，则需要重新部署一个新的组件。例如，Kubernetes 中的 Pod 就是一个不可变基础设施。</li>
 <li>连续同步：不断地查看 Git 存储库，将任何状态更改反映到 Kubernetes 集群中。</li>
 </ul>
-<p><img src="http://sm.nsddd.top/sm202302171600011.png" alt="image-20230217160014949"></p>
+<p><img src="http://sm.cubxxw.com/sm202302171600011.png" alt="image-20230217160014949"></p>
 <p><strong>GitOps 的工作流程如下：</strong></p>
 <ol>
 <li>首先，开发人员开发完代码后推送到 Git 仓库，触发 CI 流程，CI 流程通过编译构建出 Docker 镜像，并将镜像 push 到 Docker 镜像仓库中。Push 动作会触发一个 push 事件，通过 webhook 的形式通知到 Config Updater 服务，Config Updater 服务会从 webhook 请求中获取最新 push 的镜像名，并更新 Git 仓库中的 Kubernetes YAML 文件。</li>
@@ -517,7 +517,7 @@ $ <span class="token function">git</span> commit
 <p><RouterLink to="/projects/">Ⓜ️回到目录🏠</RouterLink></p>
 </li>
 <li>
-<p><a href="https://nsddd.top/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
+<p><a href="https://cubxxw.com/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
 </li>
 <li>
 <p>✴️版权声明 © ：本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>

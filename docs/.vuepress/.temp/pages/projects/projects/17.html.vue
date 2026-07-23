@@ -6,7 +6,7 @@
 <div><a href = '16.md' style='float:left'>⬆️上一节🔗  </a><a href = '18.md' style='float: right'>  ⬇️下一节🔗</a></div>
 <br>
 <blockquote>
-<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://nsddd.top/" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
+<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://cubxxw.com/" target="_blank" rel="noopener noreferrer">http://cubxxw.com<ExternalLinkIcon/></a></p>
 </blockquote>
 <hr>
 <nav class="table-of-contents"><ul><li><router-link to="#认证">认证</router-link></li><li><router-link to="#认证和授权有什么区别">认证和授权有什么区别？</router-link></li><li><router-link to="#四种基本的认证方式">四种基本的认证方式</router-link><ul><li><router-link to="#basic">Basic</router-link></li><li><router-link to="#digest">Digest</router-link></li><li><router-link to="#oauth">OAuth</router-link></li><li><router-link to="#bearer">Bearer</router-link></li></ul></li><li><router-link to="#基于-jwt-的-token-认证机制实现">基于 JWT 的 Token 认证机制实现</router-link><ul><li><router-link to="#jwt-简介">JWT 简介</router-link></li><li><router-link to="#jwt-认证流程">JWT 认证流程</router-link></li><li><router-link to="#jwt-格式">JWT 格式</router-link></li></ul></li><li><router-link to="#总结">总结</router-link></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
@@ -20,7 +20,7 @@
 <p>认证（Authentication，英文缩写 authn）：用来验证某个用户是否具有访问系统的权限。如果认证通过，该用户就可以访问系统，从而创建、修改、删除、查询平台支持的资源。</p>
 <p>授权（Authorization，英文缩写 authz）：用来验证某个用户是否具有访问某个资源的权限，如果授权通过，该用户就能对资源做增删改查等操作。</p>
 <p>这里，我通过下面的图片，来让你明白二者的区别：</p>
-<p><img src="http://sm.nsddd.top/sm202302231446365.jpeg" alt="GO 语言项目开发实战 – 认证机制：应用程序如何进行访问认证？"></p>
+<p><img src="http://sm.cubxxw.com/sm202302231446365.jpeg" alt="GO 语言项目开发实战 – 认证机制：应用程序如何进行访问认证？"></p>
 <p>图中，我们有一个仓库系统，用户 james、colin、aaron 分别创建了 Product-A、Product-B、Product-C。现在用户 colin 通过用户名和密码（认证）成功登陆到仓库系统中，但他尝试访问 Product-A、Product-C 失败，因为这两个产品不属于他（授权失败），但他可以成功访问自己创建的资源 Product-B（授权成功）。由此可见：认证证明了你是谁，授权决定了你能做什么。</p>
 <p>上面，我们介绍了认证和授权的区别。那么接下来，我们就回到这一讲的重心：应用程序如何进行访问认证。</p>
 <h2 id="四种基本的认证方式" tabindex="-1"><a class="header-anchor" href="#四种基本的认证方式" aria-hidden="true">#</a> 四种基本的认证方式</h2>
@@ -42,7 +42,7 @@ $ <span class="token function">curl</span> <span class="token parameter variable
 <li>可以有选择地防止对报文内容的篡改。</li>
 </ol>
 <p>摘要认证的过程见下图：</p>
-<p><img src="http://sm.nsddd.top/sm202302231446882.jpeg" alt="GO 语言项目开发实战 – 认证机制：应用程序如何进行访问认证？"></p>
+<p><img src="http://sm.cubxxw.com/sm202302231446882.jpeg" alt="GO 语言项目开发实战 – 认证机制：应用程序如何进行访问认证？"></p>
 <p>在上图中，完成摘要认证需要下面这四步：</p>
 <ol>
 <li>客户端请求服务端的资源。</li>
@@ -51,7 +51,7 @@ $ <span class="token function">curl</span> <span class="token parameter variable
 <li>服务器将客户端提供的密码摘要与服务器内部计算出的摘要进行对比。如果匹配，就说明客户端知道密码，认证通过，并返回一些与授权会话相关的附加信息，放在 Authorization-Info 中。</li>
 </ol>
 <p><strong>WWW-Authentication头中包含的信息见下表：</strong></p>
-<p><img src="http://sm.nsddd.top/sm202302231447063.jpeg" alt="GO 语言项目开发实战 – 认证机制：应用程序如何进行访问认证？"></p>
+<p><img src="http://sm.cubxxw.com/sm202302231447063.jpeg" alt="GO 语言项目开发实战 – 认证机制：应用程序如何进行访问认证？"></p>
 <p>虽然使用摘要可以避免密码以明文方式发送，一定程度上保护了密码的安全性，但是仅仅隐藏密码并不能保证请求是安全的。因为请求（包括密码摘要）仍然可以被截获，这样就可以重放给服务器，带来安全问题。</p>
 <p>为了防止重放攻击，服务器向客户端发送了密码随机数 nonce，nonce 每次请求都会变化。客户端会根据 nonce 生成密码摘要，这种方式，可以使摘要随着随机数的变化而变化。服务端收到的密码摘要只对特定的随机数有效，而没有密码的话，攻击者就无法计算出正确的摘要，这样我们就可以防止重放攻击。</p>
 <p>摘要认证可以保护密码，比基本认证安全很多。但摘要认证并不能保护内容，所以仍然要与 HTTPS 配合使用，来确保通信的安全。</p>
@@ -77,7 +77,7 @@ $ <span class="token function">curl</span> <span class="token parameter variable
 <li>应用 B 接收到 secretID 和 secretKey，并进行身份验证，验证通过后返回给应用 A 令牌。</li>
 </ol>
 <p><strong>第四种，授权码模式。这种方式就是第三方应用先提前申请一个授权码，然后再使用授权码来获取令牌。相对来说，这种方式安全性更高，前端传送授权码，后端存储令牌，与资源的通信都是在后端，可以避免令牌的泄露导致的安全问题。认证流程如下：</strong></p>
-<p><img src="http://sm.nsddd.top/sm202302231453859.jpeg" alt="GO 语言项目开发实战 – 认证机制：应用程序如何进行访问认证？"></p>
+<p><img src="http://sm.cubxxw.com/sm202302231453859.jpeg" alt="GO 语言项目开发实战 – 认证机制：应用程序如何进行访问认证？"></p>
 <p>A 网站提供一个跳转到 B 网站的链接 <code v-pre>+redirect_url</code>，用户点击后跳转至 B 网站；</p>
 <p>用户携带向 B 网站提前申请的 <code v-pre>client_id</code>，向 B 网站发起身份验证请求；</p>
 <p>用户登录 B 网站，通过验证，授予 A 网站权限，此时网站跳转回 redirect_url，其中会有 B 网站通过验证后的授权码附在该 url 后；</p>
@@ -94,7 +94,7 @@ $ <span class="token function">curl</span> <span class="token parameter variable
 <p>使用 JWT Token 进行认证有很多优点，比如说无需在服务端存储用户数据，可以减轻服务端压力；而且采用 JSON 数据格式，比较易读。除此之外，使用 JWT Token 还有跨语言、轻量级等优点。</p>
 <h3 id="jwt-认证流程" tabindex="-1"><a class="header-anchor" href="#jwt-认证流程" aria-hidden="true">#</a> JWT 认证流程</h3>
 <p>使用 JWT Token 进行认证的流程如下图：</p>
-<p><img src="http://sm.nsddd.top/sm202302231456606.jpeg" alt="GO 语言项目开发实战 – 认证机制：应用程序如何进行访问认证？"></p>
+<p><img src="http://sm.cubxxw.com/sm202302231456606.jpeg" alt="GO 语言项目开发实战 – 认证机制：应用程序如何进行访问认证？"></p>
 <p><strong>具体可以分为四步：</strong></p>
 <ol>
 <li>客户端使用用户名和密码请求登录。</li>
@@ -106,7 +106,7 @@ $ <span class="token function">curl</span> <span class="token parameter variable
 <p>JWT 由三部分组成，分别是 Header、Payload 和 Signature，它们之间用圆点<code v-pre>.</code>连接，并使用 Base64 编码，例如：</p>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>JhdWQiOiJpYW0uYXV0aHoubWFybW90ZWR1LmNvbSIsImV4cCI6MTYwNDE1ODk4NywiaWF0IjoxNjA0MTUxNzg3LCJpc3MiOiJpYW1jdGwiLCJuYmYiOjE2MDQxNTE3ODd9.d_2gj3vyEUlMq1b9A0tJoKdLvMInAEfQmdK7XZkB980
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p><strong>JWT 中，每部分包含的信息见下图：</strong></p>
-<p><img src="http://sm.nsddd.top/sm202302231505816.jpeg" alt="GO 语言项目开发实战 – 认证机制：应用程序如何进行访问认证？"></p>
+<p><img src="http://sm.cubxxw.com/sm202302231505816.jpeg" alt="GO 语言项目开发实战 – 认证机制：应用程序如何进行访问认证？"></p>
 <p>下面我来具体介绍下这三部分，以及它们包含的信息。</p>
 <h4 id="header" tabindex="-1"><a class="header-anchor" href="#header" aria-hidden="true">#</a> Header</h4>
 <p>JWT Token 的 Header 中，包含两部分信息：一是 Token 的类型，二是 Token 所使用的加密算法。</p>
@@ -144,7 +144,7 @@ bm84SnpTYlVJdkdFMiJ9
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="payload-载荷" tabindex="-1"><a class="header-anchor" href="#payload-载荷" aria-hidden="true">#</a> Payload（载荷）</h4>
 <p>Payload 中携带 Token 的具体内容由三部分组成：<strong>JWT 标准中注册的声明（可选）、公共的声明、私有的声明。</strong> 下面来分别看下。</p>
 <p><strong>JWT 标准中注册的声明部分，有以下标准字段：</strong></p>
-<p><img src="http://sm.nsddd.top/sm202302231507274.png" alt="GO 语言项目开发实战 – 认证机制：应用程序如何进行访问认证？"></p>
+<p><img src="http://sm.cubxxw.com/sm202302231507274.png" alt="GO 语言项目开发实战 – 认证机制：应用程序如何进行访问认证？"></p>
 <p><strong>本例中的 payload 内容为：</strong></p>
 <div class="language-json ext-json line-numbers-mode"><pre v-pre class="language-json"><code><span class="token punctuation">{</span>
 
@@ -199,7 +199,7 @@ NjA0MTUxNzg3LCJpc3MiOiJpYW1jdGwiLCJuYmYiOjE2MDQxNTE3ODd9
 <p><RouterLink to="/projects/">Ⓜ️回到目录🏠</RouterLink></p>
 </li>
 <li>
-<p><a href="https://nsddd.top/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
+<p><a href="https://cubxxw.com/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
 </li>
 <li>
 <p>✴️版权声明 © ：本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>

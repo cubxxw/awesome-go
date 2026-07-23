@@ -108,7 +108,7 @@ vi /opt/gitlab/embedded/service/gitlab-rails/config/gitlab.yml
     host: 192.168.124.194
     port: 9980 # 这里改为9980
     https: false
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><img src="http://sm.nsddd.top/smimage-20220924225234548.png?xxw@nsddd.top" alt="image-20220924225234548"></p>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><img src="http://sm.cubxxw.com/smimage-20220924225234548.png?xxw@cubxxw.com" alt="image-20220924225234548"></p>
 <p>🤏让配置生效 并且退出容器</p>
 <div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>gitlab-ctl reconfigure
 exit
@@ -128,14 +128,14 @@ exit
 <div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>gitlab-rails console -e production
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p><strong>查询id为1的用户，id为1的用户是超级管理员：</strong></p>
 <div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>user = User.where(id:1).first
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p><img src="http://sm.nsddd.top/smimage-20220924230110134.png?xxw@nsddd.top" alt="image-20220924230110134"></p>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p><img src="http://sm.cubxxw.com/smimage-20220924230110134.png?xxw@cubxxw.com" alt="image-20220924230110134"></p>
 <p><strong>修改密码为<code v-pre>1234</code>：</strong></p>
 <div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>user.password='1234' 
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p><strong>保存：</strong></p>
 <div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>user.save!
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p><strong>退出：</strong></p>
 <div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>exit
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p><img src="http://sm.nsddd.top/smimage-20220924230332131.png?xxw@nsddd.top" alt="image-20220924230332131"></p>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p><img src="http://sm.cubxxw.com/smimage-20220924230332131.png?xxw@cubxxw.com" alt="image-20220924230332131"></p>
 <h2 id="重置管理员密码" tabindex="-1"><a class="header-anchor" href="#重置管理员密码" aria-hidden="true">#</a> 重置管理员密码</h2>
 <p><strong>进入docker gitlab 容器中</strong></p>
 <div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>docker exec -it gitlab（容器名字） bash
@@ -146,7 +146,7 @@ exit
 user <span class="token operator">=</span> User.where<span class="token punctuation">(</span>id:1<span class="token punctuation">)</span>.first
 <span class="token comment">#或者 通过电子邮件搜索  或者用户名</span>
 user <span class="token operator">=</span> User.find_by<span class="token punctuation">(</span>email:<span class="token string">'admin@example.com'</span><span class="token punctuation">)</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><img src="http://sm.nsddd.top/smsmimage-20220924231302178.png?xxw@nsddd.top" alt="asdf"></p>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><img src="http://sm.cubxxw.com/smsmimage-20220924231302178.png?xxw@cubxxw.com" alt="asdf"></p>
 <p><strong>修改密码</strong></p>
 <blockquote>
 <p>⚠️ 注意：密码不能设置太简单，数据库没办法通过</p>
@@ -157,8 +157,8 @@ user.password_confirmation <span class="token operator">=</span><span class="tok
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>保存退出：wq</strong></p>
 <div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>user.save!
 exit
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p><img src="http://sm.nsddd.top/smimage-20220924232113215.png?xxw@nsddd.top" alt="image-20220924232113215"></p>
-<p><strong>登陆成功😘😘</strong><img src="http://sm.nsddd.top/smimage-20220924233008364.png?xxw@nsddd.top" alt="image-20220924233008364"></p>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p><img src="http://sm.cubxxw.com/smimage-20220924232113215.png?xxw@cubxxw.com" alt="image-20220924232113215"></p>
+<p><strong>登陆成功😘😘</strong><img src="http://sm.cubxxw.com/smimage-20220924233008364.png?xxw@cubxxw.com" alt="image-20220924233008364"></p>
 </div></template>
 
 

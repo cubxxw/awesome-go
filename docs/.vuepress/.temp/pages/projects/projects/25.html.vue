@@ -6,7 +6,7 @@
 <div><a href = '24.md' style='float:left'>⬆️上一节🔗  </a><a href = '26.md' style='float: right'>  ⬇️下一节🔗</a></div>
 <br>
 <blockquote>
-<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://nsddd.top/" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
+<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://cubxxw.com/" target="_blank" rel="noopener noreferrer">http://cubxxw.com<ExternalLinkIcon/></a></p>
 </blockquote>
 <hr>
 <nav class="table-of-contents"><ul><li><router-link to="#开始">开始</router-link></li><li><router-link to="#什么是sdk">什么是SDK？</router-link></li><li><router-link to="#sdk设计方法">SDK设计方法</router-link><ul><li><router-link to="#如何给sdk命名">如何给SDK命名？</router-link></li><li><router-link to="#sdk的目录结构">SDK的目录结构</router-link></li><li><router-link to="#sdk设计方法-1">SDK设计方法</router-link></li></ul></li><li><router-link to="#公有云厂商采用的sdk设计方式">公有云厂商采用的SDK设计方式</router-link><ul><li><router-link to="#api层-创建客户端实例">API层：创建客户端实例</router-link></li><li><router-link to="#基础层-构建并执行http请求">基础层：构建并执行HTTP请求</router-link></li></ul></li><li><router-link to="#总结">总结</router-link></li><li><router-link to="#课后练习">课后练习</router-link></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
@@ -15,7 +15,7 @@
 <p>你好，我是孔令飞。接下来的两讲，我们来看下如何设计和实现一个优秀的Go SDK。</p>
 <p>后端服务通过API接口对外提供应用的功能，但是用户直接调用API接口，需要编写API接口调用的逻辑，并且需要构造入参和解析返回的数据包，使用起来效率低，而且有一定的开发工作量。</p>
 <p>在实际的项目开发中，通常会提供对开发者更友好的SDK包，供客户端调用。很多大型服务在发布时都会伴随着SDK的发布，例如腾讯云很多产品都提供了SDK：</p>
-<p><img src="http://sm.nsddd.top/sm202303042351165.png" alt="图片"></p>
+<p><img src="http://sm.cubxxw.com/sm202303042351165.png" alt="图片"></p>
 <p>既然SDK如此重要，那么如何设计一个优秀的Go SDK呢？这一讲我就来详细介绍一下。</p>
 <h2 id="什么是sdk" tabindex="-1"><a class="header-anchor" href="#什么是sdk" aria-hidden="true">#</a> 什么是SDK？</h2>
 <p>首先，我们来看下什么是SDK。</p>
@@ -27,7 +27,7 @@
 <h3 id="如何给sdk命名" tabindex="-1"><a class="header-anchor" href="#如何给sdk命名" aria-hidden="true">#</a> 如何给SDK命名？</h3>
 <p>在讲设计方法之前，我先来介绍两个重要的知识点：SDK的命名方式和SDK的目录结构。</p>
 <p>SDK的名字目前没有统一的规范，但比较常见的命名方式是 <code v-pre>xxx-sdk-go</code> / <code v-pre>xxx-sdk-python</code> / <code v-pre>xxx-sdk-java</code> 。其中， <code v-pre>xxx</code> 可以是项目名或者组织名，例如腾讯云在GitHub上的组织名为tencentcloud，那它的SDK命名如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202303042351918.png" alt="图片"></p>
+<p><img src="http://sm.cubxxw.com/sm202303042351918.png" alt="图片"></p>
 <h3 id="sdk的目录结构" tabindex="-1"><a class="header-anchor" href="#sdk的目录结构" aria-hidden="true">#</a> SDK的目录结构</h3>
 <p>不同项目SDK的目录结构也不相同，但一般需要包含下面这些文件或目录。目录名可能会有所不同，但目录功能是类似的。</p>
 <ul>
@@ -81,7 +81,7 @@
 <p>根据我的调研，目前有两种SDK设计方式可供参考，一种是各大公有云厂商采用的SDK设计方式，一种是Kubernetes client-go的设计方式。IAM项目分别实现了这两种SDK设计方式，但我还是更倾向于对外提供client-go方式的SDK，我会在下一讲详细介绍它。这两种设计方式的设计思路跟上面介绍的是一致的。</p>
 <h2 id="公有云厂商采用的sdk设计方式" tabindex="-1"><a class="header-anchor" href="#公有云厂商采用的sdk设计方式" aria-hidden="true">#</a> 公有云厂商采用的SDK设计方式</h2>
 <p>这里，我先来简单介绍下公有云厂商采用的SDK设计模式。SDK架构如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202303042351396.jpeg" alt="图片"></p>
+<p><img src="http://sm.cubxxw.com/sm202303042351396.jpeg" alt="图片"></p>
 <p>SDK框架分为两层，分别是API层和基础层。API层主要用来构建客户端实例，并调用客户端实例提供的方法来完成API请求，每一个方法对应一个API接口。API层最终会调用基础层提供的能力，来完成REST API请求。基础层通过依次执行构建请求参数（Builder）、签发并添加认证头（Signer）、执行HTTP请求（Request）三大步骤，来完成具体的REST API请求。</p>
 <p>为了让你更好地理解公有云SDK的设计方式，接下来我会结合一些真实的代码，给你讲解API层和基础层的具体设计，SDK代码见<a href="https://github.com/marmotedu/medu-sdk-go" target="_blank" rel="noopener noreferrer">medu-sdk-go<ExternalLinkIcon/></a>。</p>
 <h3 id="api层-创建客户端实例" tabindex="-1"><a class="header-anchor" href="#api层-创建客户端实例" aria-hidden="true">#</a> API层：创建客户端实例</h3>
@@ -306,7 +306,7 @@ reqUrl <span class="token operator">:=</span> fmt<span class="token punctuation"
 <p><RouterLink to="/projects/">Ⓜ️回到目录🏠</RouterLink></p>
 </li>
 <li>
-<p><a href="https://nsddd.top/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
+<p><a href="https://cubxxw.com/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
 </li>
 <li>
 <p>✴️版权声明 © ：本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>

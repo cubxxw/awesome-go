@@ -6,7 +6,7 @@
 <div><a href = '26.md' style='float:left'>⬆️上一节🔗  </a><a href = '28.md' style='float: right'>  ⬇️下一节🔗</a></div>
 <br>
 <blockquote>
-<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://nsddd.top/" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
+<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://cubxxw.com/" target="_blank" rel="noopener noreferrer">http://cubxxw.com<ExternalLinkIcon/></a></p>
 </blockquote>
 <hr>
 <nav class="table-of-contents"><ul><li><router-link to="#开始">开始</router-link></li><li><router-link to="#常见客户端介绍">常见客户端介绍</router-link></li><li><router-link to="#大型系统客户端-xxxctl-的特点">大型系统客户端（xxxctl）的特点</router-link></li><li><router-link to="#iamctl的核心实现">iamctl的核心实现</router-link><ul><li><router-link to="#iamctl的功能">iamctl的功能</router-link></li><li><router-link to="#代码结构">代码结构</router-link></li><li><router-link to="#命令行选项">命令行选项</router-link></li><li><router-link to="#配置文件解析">配置文件解析</router-link></li></ul></li><li><router-link to="#iamctl中子命令是如何构建的">iamctl中子命令是如何构建的？</router-link><ul><li><router-link to="#命令构建">命令构建</router-link></li><li><router-link to="#自动生成命令">自动生成命令</router-link></li><li><router-link to="#命令自动补全">命令自动补全</router-link></li><li><router-link to="#更友好的输出">更友好的输出</router-link></li></ul></li><li><router-link to="#iamctl是如何进行api调用的">iamctl是如何进行API调用的？</router-link><ul><li><router-link to="#客户端配置文件">客户端配置文件</router-link></li><li><router-link to="#sdk调用">SDK调用</router-link></li><li><router-link to="#rest-api调用">REST API调用</router-link></li></ul></li><li><router-link to="#总结">总结</router-link></li><li><router-link to="#课后练习">课后练习</router-link></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
@@ -40,7 +40,7 @@
 </ul>
 <p>这些其他的各类客户端，都是通过调用API接口使用后端服务的，它们跟前端一样，也不需要后台开发人员开发。</p>
 <p>需要后台开发人员投入工作量进行研发的客户端是SDK和命令行工具。这两类客户端工具有个调用和被调用的顺序，如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202303051016003.jpeg" alt="图片"></p>
+<p><img src="http://sm.cubxxw.com/sm202303051016003.jpeg" alt="图片"></p>
 <p>你可以看到，命令行工具和SDK最终都是通过API接口调用后端服务的，通过这种方式可以保证服务的一致性，并减少为适配多个客户端所带来的额外开发工作量。</p>
 <h2 id="大型系统客户端-xxxctl-的特点" tabindex="-1"><a class="header-anchor" href="#大型系统客户端-xxxctl-的特点" aria-hidden="true">#</a> 大型系统客户端（xxxctl）的特点</h2>
 <p>通过学习kubectl、istioctl、etcdctl这些优秀的命令行工具，可以发现一个大型系统的命令行工具，通常具有下面这些特点：</p>
@@ -98,7 +98,7 @@ Usage:
 <h3 id="iamctl的功能" tabindex="-1"><a class="header-anchor" href="#iamctl的功能" aria-hidden="true">#</a> iamctl的功能</h3>
 <p>iamctl将命令进行了分类。这里，我也建议你对命令进行分类，因为通过分类，不仅可以协助你理解命令的用途，还能帮你快速定位某类命令。另外，当命令很多时，分类也可以使命令看起来更规整。</p>
 <p>iamctl实现的命令如下：</p>
-<p><img src="http://sm.nsddd.top/sm202303051018217.jpeg" alt="图片"></p>
+<p><img src="http://sm.cubxxw.com/sm202303051018217.jpeg" alt="图片"></p>
 <p>更详细的功能，你可以参考 <code v-pre>iamctl -h</code> 。我建议你在实现xxxctl工具时，考虑实现下面这几个功能。</p>
 <ul>
 <li>API功能：平台具有的API功能，都能通过xxxctl方便地进行调用。</li>
@@ -136,13 +136,13 @@ cobra<span class="token punctuation">.</span><span class="token function">OnInit
 </ol>
 <p>这种加载方式具有两个好处。首先是可以手动指定不同的配置文件，这在多环境、多配置下尤为重要。其次是方便使用，可以把配置存放在默认的加载路径中，在执行命令时，就不用再指定 <code v-pre>--iamconfig</code> 参数。</p>
 <p>加载完配置文件之后，就可以通过 <code v-pre>viper.Get&lt;Type&gt;()</code> 函数来获取配置。例如，iamctl使用了以下 <code v-pre>viper.Get&lt;Type&gt;</code> 方法：</p>
-<p><img src="http://sm.nsddd.top/sm202303051019261.png" alt="图片"></p>
+<p><img src="http://sm.cubxxw.com/sm202303051019261.png" alt="图片"></p>
 <h2 id="iamctl中子命令是如何构建的" tabindex="-1"><a class="header-anchor" href="#iamctl中子命令是如何构建的" aria-hidden="true">#</a> iamctl中子命令是如何构建的？</h2>
 <p>讲完了iamctl命令行工具的核心实现，我们再来看看iamctl命令行工具中，子命令是如何构建的。</p>
 <p>命令行工具的核心是命令，有很多种方法可以构建一个命令，但还是有一些比较好的构建方法，值得我们去参考。接下来，我来介绍下如何用比较好的方式去构建命令。</p>
 <h3 id="命令构建" tabindex="-1"><a class="header-anchor" href="#命令构建" aria-hidden="true">#</a> 命令构建</h3>
 <p>命令行工具的核心能力是提供各类命令，来完成不同功能，每个命令构建的方式可以完全不同，但最好能按相同的方式去构建，并抽象成一个模型。如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202303051019014.jpeg" alt="图片"></p>
+<p><img src="http://sm.cubxxw.com/sm202303051019014.jpeg" alt="图片"></p>
 <p>你可以将一个命令行工具提供的命令进行分组。每个分组包含多个命令，每个命令又可以具有多个子命令，子命令和父命令在构建方式上完全一致。</p>
 <p>每个命令可以按下面的四种方式构建。具体代码你可以参考<a href="https://github.com/marmotedu/iam/blob/v1.0.6/internal/iamctl/cmd/user/user_update.go" target="_blank" rel="noopener noreferrer">internal/iamctl/cmd/user/user_update.go<ExternalLinkIcon/></a>。</p>
 <ul>
@@ -227,14 +227,14 @@ Command <span class="token function">file</span> generated: xyz_subcmd2.go
 $ iamctl xyz --b<span class="token operator">&lt;</span>TAB<span class="token operator">></span> <span class="token comment"># 按TAB键，自动补全为：iamctl xyz --bool</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="更友好的输出" tabindex="-1"><a class="header-anchor" href="#更友好的输出" aria-hidden="true">#</a> 更友好的输出</h3>
 <p>在开发命令时，可以通过一些技巧来提高使用体验。我经常会在输出中打印一些彩色输出，或者将一些输出以表格的形式输出，如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202303051029596.png" alt="image-20230305102951543"></p>
+<p><img src="http://sm.cubxxw.com/sm202303051029596.png" alt="image-20230305102951543"></p>
 <p>这里，使用 <code v-pre>github.com/olekukonko/tablewriter</code> 包来实现表格功能，使用 <code v-pre>github.com/fatih/color</code> 包来打印带色彩的字符串。具体使用方法，你可以参考<a href="https://github.com/marmotedu/iam/blob/v1.0.6/internal/iamctl/cmd/validate/validate.go" target="_blank" rel="noopener noreferrer">internal/iamctl/cmd/validate/validate.go<ExternalLinkIcon/></a>文件。</p>
 <p><code v-pre>github.com/fatih/color</code> 包可以给字符串标示颜色，字符串和颜色的对应关系可通过 <code v-pre>iamctl color</code> 来查看，如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202303051030860.png" alt="image-20230305103006800"></p>
+<p><img src="http://sm.cubxxw.com/sm202303051030860.png" alt="image-20230305103006800"></p>
 <h2 id="iamctl是如何进行api调用的" tabindex="-1"><a class="header-anchor" href="#iamctl是如何进行api调用的" aria-hidden="true">#</a> iamctl是如何进行API调用的？</h2>
 <p>上面我介绍了iamctl命令的构建方式，那么这里我们再来看下iamctl是如何请求服务端API接口的。</p>
 <p>Go后端服务的功能通常通过API接口来对外暴露，一个后端服务可能供很多个终端使用，比如浏览器、命令行工具、手机等。为了保持功能的一致性，这些终端都会调用同一套API来完成相同的功能，如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202303051027423.jpeg" alt="this server api cli"></p>
+<p><img src="http://sm.cubxxw.com/sm202303051027423.jpeg" alt="this server api cli"></p>
 <p>如果命令行工具需要用到后端服务的功能，也需要通过API调用的方式。理想情况下，Go后端服务对外暴露的所有API功能，都可以通过命令行工具来完成。一个API接口对应一个命令，API接口的参数映射到命令的参数。</p>
 <p>要调用服务端的API接口，最便捷的方法是通过SDK来调用，对于一些没有实现SDK的接口，也可以直接调用。所以，在命令行工具中，需要支持以下两种调用方式：</p>
 <ul>
@@ -310,7 +310,7 @@ client<span class="token punctuation">,</span> <span class="token boolean">_</sp
 <p><RouterLink to="/projects/">Ⓜ️回到目录🏠</RouterLink></p>
 </li>
 <li>
-<p><a href="https://nsddd.top/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
+<p><a href="https://cubxxw.com/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
 </li>
 <li>
 <p>✴️版权声明 © ：本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>

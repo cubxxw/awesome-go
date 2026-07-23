@@ -6,7 +6,7 @@
 <div><a href = '31.md' style='float:left'>⬆️上一节🔗  </a><a href = '33.md' style='float: right'>  ⬇️下一节🔗</a></div>
 <br>
 <blockquote>
-<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://nsddd.top/" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
+<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://cubxxw.com/" target="_blank" rel="noopener noreferrer">http://cubxxw.com<ExternalLinkIcon/></a></p>
 </blockquote>
 <hr>
 <nav class="table-of-contents"><ul><li><router-link to="#前言">前言</router-link></li><li><router-link to="#部署方案">部署方案</router-link></li><li><router-link to="#nginx安装和配置">Nginx安装和配置</router-link><ul><li><router-link to="#nginx功能简介">Nginx功能简介</router-link></li><li><router-link to="#nginx安装步骤">Nginx安装步骤</router-link></li></ul></li><li><router-link to="#keepalived安装和配置">Keepalived安装和配置</router-link><ul><li><router-link to="#keepalived安装步骤">Keepalived安装步骤</router-link></li><li><router-link to="#keepalived配置文件解析">Keepalived配置文件解析</router-link></li></ul></li><li><router-link to="#总结">总结</router-link></li><li><router-link to="#课后练习">课后练习</router-link></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
@@ -25,9 +25,9 @@
 <p>先来整体看下我们的部署方案。</p>
 <p>这里，我采用<code v-pre>Nginx + Keepalived</code>来部署一个高可用的架构，同时将组件都部署在内网，来保证服务的安全和性能。</p>
 <p>部署需要两台物理机/虚拟机，组件之间通过内网访问。所需的服务器如下表所示：</p>
-<p><img src="https://sm.nsddd.top/sm202303052246418.jpeg" alt="图片"></p>
+<p><img src="https://sm.cubxxw.com/sm202303052246418.jpeg" alt="图片"></p>
 <p>两台服务器均为腾讯云CVM，VIP（Virtual IP，虚拟IP）为<code v-pre>10.0.4.99</code>。部署架构如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202303052246559.jpeg" alt="图片"></p>
+<p><img src="http://sm.cubxxw.com/sm202303052246559.jpeg" alt="图片"></p>
 <p>这里我来具体介绍下图中的部署架构。部署采用的这两台CVM服务器，一主一备，它们共享同一个VIP。同一时刻，VIP只在一台主设备上生效，当主服务器出现故障时，备用服务器会自动接管VIP，继续提供服务。</p>
 <p>主服务器上部署了<code v-pre>iam-apiserver</code>、<code v-pre>iam-authz-server</code>、<code v-pre>iam-pump</code>和数据库<code v-pre>mongodb</code>、<code v-pre>redis</code>、<code v-pre>mysql</code>。备服务器部署了<code v-pre>iam-apiserver</code>、<code v-pre>iam-authz-server</code>和<code v-pre>iam-pump</code>。备服务器中的组件通过内网<code v-pre>10.0.4.20</code>访问主服务器中的数据库组件。</p>
 <p>主备服务器同时安装了Keepalived和Nginx，通过Nginx的反向代理功能和负载均衡功能，实现后端服务<code v-pre>iam-apiserver</code>和<code v-pre>iam-authz-server</code>的高可用，通过Keepalived实现Nginx的高可用。</p>
@@ -210,7 +210,7 @@ vrrp_instance <span class="token builtin class-name">test</span>
 <p><RouterLink to="/projects/">Ⓜ️回到目录🏠</RouterLink></p>
 </li>
 <li>
-<p><a href="https://nsddd.top/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
+<p><a href="https://cubxxw.com/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
 </li>
 <li>
 <p>✴️版权声明 © ：本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>

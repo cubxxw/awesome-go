@@ -8,7 +8,7 @@
 <p><a href="https://github.com/cubxxw/awesome-cs-cloudnative-blockchain/blob/master/web/README.md" target="_blank" rel="noopener noreferrer">此章节预备计算机网络知识<ExternalLinkIcon/></a></p>
 </li>
 <li>
-<p><a href="https://go.nsddd.top" target="_blank" rel="noopener noreferrer">此章节预备Go语言基础知识<ExternalLinkIcon/></a></p>
+<p><a href="https://go.cubxxw.com" target="_blank" rel="noopener noreferrer">此章节预备Go语言基础知识<ExternalLinkIcon/></a></p>
 </li>
 </ul>
 </div>
@@ -16,7 +16,7 @@
 <p>互联网的核心是一系列协议，总称为” 互联网协议”（Internet Protocol Suite），正是这一些协议规定了电脑如何连接和组网。我们理解了这些协议，就理解了互联网的原理。由于这些协议太过庞大和复杂，没有办法在这里一概而全，只能介绍一下我们日常开发中接触较多的几个协议。</p>
 <h2 id="互联网分层模型" tabindex="-1"><a class="header-anchor" href="#互联网分层模型" aria-hidden="true">#</a> 互联网分层模型</h2>
 <p>互联网的逻辑实现被分为好几层。每一层都有自己的功能，就像建筑物一样，每一层都靠下一层支持。用户接触到的只是最上面的那一层，根本不会感觉到下面的几层。要理解互联网就需要自下而上理解每一层的实现的功能。</p>
-<p><img src="http://sm.nsddd.top/smimage-20221004182920446.png" alt="image-20221004182920446"></p>
+<p><img src="http://sm.cubxxw.com/smimage-20221004182920446.png" alt="image-20221004182920446"></p>
 <p>如上图所示，互联网按照不同的模型划分会有不用的分层，但是不论按照什么模型去划分，越往上的层越靠近用户，越往下的层越靠近硬件。在软件开发中我们使用最多的是上图中将互联网划分为五个分层的模型。</p>
 <h2 id="物理层" tabindex="-1"><a class="header-anchor" href="#物理层" aria-hidden="true">#</a> 物理层</h2>
 <p>我们的电脑要与外界互联网通信，需要先把电脑连接网络，我们可以用双绞线、光纤、无线电波等方式。这就叫做” 实物理层”，它就是把电脑连接起来的物理手段。它主要规定了网络的一些电气特性，作用是负责传送 0 和 1 的电信号。</p>
@@ -39,7 +39,7 @@
 <h2 id="应用层" tabindex="-1"><a class="header-anchor" href="#应用层" aria-hidden="true">#</a> 应用层</h2>
 <p>应用程序收到” 传输层” 的数据，接下来就要对数据进行解包。由于互联网是开放架构，数据来源五花八门，必须事先规定好通信的数据格式，否则接收方根本无法获得真正发送的数据内容。” 应用层” 的作用就是规定应用程序使用的数据格式，例如我们 TCP 协议之上常见的 Email、HTTP、FTP 等协议，这些协议就组成了互联网协议的应用层。</p>
 <p>如下图所示，发送方的 HTTP 数据经过互联网的传输过程中会依次添加各层协议的标头信息，接收方收到数据包之后再依次根据协议解包得到数据。</p>
-<p><img src="http://sm.nsddd.top/smimage-20221018195046274.png" alt="image-20221018195046274"></p>
+<p><img src="http://sm.cubxxw.com/smimage-20221018195046274.png" alt="image-20221018195046274"></p>
 <h2 id="go-web编程" tabindex="-1"><a class="header-anchor" href="#go-web编程" aria-hidden="true">#</a> Go web编程</h2>
 <p>HTTP 协议是 Web 工作的核心，所以要了解清楚 Web 的工作方式就需要详细的了解清楚 HTTP 是怎么样工作的。</p>
 <p>HTTP 是一种让 Web 服务器与浏览器 (客户端) 通过 Internet 发送与接收数据的协议，它建立在 TCP 协议之上，一般采用 TCP 的 80 端口。它是一个请求、响应协议 -- 客户端发出一个请求，服务器响应这个请求。在 HTTP 中，客户端总是通过建立一个连接与发送一个 HTTP 请求来发起一个事务。服务器不能主动去与客户端联系，也不能给客户端发出一个回调连接。客户端与服务器端都可以提前中断一个连接。例如，当浏览器下载一个文件时，你可以通过点击 “停止” 键来中断文件的下载，关闭与服务器的 HTTP 连接。</p>
@@ -55,7 +55,7 @@ path           访问资源的路径
 query-string   发送给 http 服务器的数据
 anchor         锚
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>DNS解析:</strong></p>
-<p><img src="http://sm.nsddd.top/smimage-20221018203232449.png" alt="image-20221018203232449"></p>
+<p><img src="http://sm.cubxxw.com/smimage-20221018203232449.png" alt="image-20221018203232449"></p>
 <h3 id="http-请求包-浏览器信息" tabindex="-1"><a class="header-anchor" href="#http-请求包-浏览器信息" aria-hidden="true">#</a> HTTP 请求包（浏览器信息）</h3>
 <p>我们先来看看 Request 包的结构，Request 包分为 3 部分，第一部分叫 Request line（请求行）, 第二部分叫 Request header（请求头）, 第三部分是 body（主体）。header 和 body 之间有个空行，请求包的例子所示：</p>
 <div class="language-http ext-http line-numbers-mode"><pre v-pre class="language-http"><code><span class="token request-line"><span class="token method property">GET</span> <span class="token request-target url">/domains/example/</span> <span class="token http-version property">HTTP/1.1</span></span>      // 请求行: 请求方法 请求 URI HTTP 协议/协议版本
@@ -67,7 +67,7 @@ Accept-Charset：UTF-8,*;q=0.5        // 客户端字符编码集
 // 空行,用于分割请求头和消息体
 // 消息体,请求资源参数,例如 POST 传递的参数
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>展示：</p>
-<p><img src="http://sm.nsddd.top/smimage-20221018203842648.png" alt="image-20221018203842648"></p>
+<p><img src="http://sm.cubxxw.com/smimage-20221018203842648.png" alt="image-20221018203842648"></p>
 <h3 id="http-响应包-服务器信息" tabindex="-1"><a class="header-anchor" href="#http-响应包-服务器信息" aria-hidden="true">#</a> HTTP 响应包（服务器信息）</h3>
 <p>我们再来看看 HTTP 的 response 包，他的结构如下：</p>
 <div class="language-http ext-http line-numbers-mode"><pre v-pre class="language-http"><code><span class="token response-status"><span class="token http-version property">HTTP/1.1</span> <span class="token status-code number">200</span> <span class="token reason-phrase string">OK                     // 状态行</span></span>
@@ -86,7 +86,7 @@ Accept-Charset：UTF-8,*;q=0.5        // 客户端字符编码集
 <p><RouterLink to="/Gomd_super/">Ⓜ️回到首页🏠</RouterLink></p>
 </li>
 <li>
-<p><a href="https://nsddd.top/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
+<p><a href="https://cubxxw.com/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
 </li>
 <li>
 <p>✴️版权声明 © :本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>

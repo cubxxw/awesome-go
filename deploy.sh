@@ -5,7 +5,7 @@
  # @Date: 2022-09-19 20:54:39
  # @LastEditTime: 2022-09-19 20:59:02
  # @FilePath: \undefinedd:\文档\最近的\docker\deploy.sh
- # @blog: https://nsddd.top
+ # @blog: https://cubxxw.com
 ### 
  
 # 确保脚本抛出遇到的错误

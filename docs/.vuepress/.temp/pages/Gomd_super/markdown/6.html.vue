@@ -3,9 +3,9 @@
 <p>[toc]</p>
 <h2 id="postman" tabindex="-1"><a class="header-anchor" href="#postman" aria-hidden="true">#</a> postman</h2>
 <p>我们使用 <code v-pre>postman</code> 工具继续向服务端发送数据，只不过这个发送的是 <code v-pre>Http</code> 的 <code v-pre>Get</code> 请求：
-<img src="http://sm.nsddd.top/smimage-20221101153017273.png" alt="image-20221101153017273"></p>
+<img src="http://sm.cubxxw.com/smimage-20221101153017273.png" alt="image-20221101153017273"></p>
 <p>客户端接收数据：</p>
-<p><img src="http://sm.nsddd.top/smimage-20221101153104058.png" alt="image-20221101153104058"></p>
+<p><img src="http://sm.cubxxw.com/smimage-20221101153104058.png" alt="image-20221101153104058"></p>
 <h2 id="web工作流程" tabindex="-1"><a class="header-anchor" href="#web工作流程" aria-hidden="true">#</a> web工作流程</h2>
 <p>Web服务器的工作原理可以简单地归纳为</p>
 <ul>
@@ -74,7 +74,7 @@
 <span class="token punctuation">}</span>
 
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>🚀 编译结果如下：</strong></p>
-<p><img src="http://sm.nsddd.top/smimage-20221101161420332.png" alt="image-20221101161420332"></p>
+<p><img src="http://sm.cubxxw.com/smimage-20221101161420332.png" alt="image-20221101161420332"></p>
 <h2 id="http-服务端测试" tabindex="-1"><a class="header-anchor" href="#http-服务端测试" aria-hidden="true">#</a> HTTP 服务端测试</h2>
 <div class="custom-container tip"><p class="custom-container-title">提示</p>
 <p>前面我们写的都是请求，接下来我们可以实现一个 <code v-pre>server</code> ，别人来请求，我们来响应~</p>
@@ -132,7 +132,7 @@ Raises:
 
 <span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>🚀 编译结果如下：</p>
-<p><img src="http://sm.nsddd.top/smimage-20221101163255198.png" alt="image-20221101163255198"></p>
+<p><img src="http://sm.cubxxw.com/smimage-20221101163255198.png" alt="image-20221101163255198"></p>
 <h2 id="http-服务端" tabindex="-1"><a class="header-anchor" href="#http-服务端" aria-hidden="true">#</a> HTTP 服务端</h2>
 <div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">package</span> main
 
@@ -203,7 +203,7 @@ Raises:
 <p><RouterLink to="/Gomd_super/">Ⓜ️回到首页🏠</RouterLink></p>
 </li>
 <li>
-<p><a href="https://nsddd.top/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
+<p><a href="https://cubxxw.com/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
 </li>
 <li>
 <p>✴️版权声明 © :本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>

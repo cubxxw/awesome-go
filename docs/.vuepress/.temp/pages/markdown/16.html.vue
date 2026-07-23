@@ -9,7 +9,7 @@
 <hr>
 <p><strong>区块链技术（也称之为分布式账本技术）</strong>，是一种互联网数据库技术，其特点是去中心化，公开透明，让每一个人均可参与的数据库记录</p>
 <blockquote>
-<p>❤️💕💕关于区块链技术，可以关注我，共同学习更多的区块链技术。博客<a href="http://nsddd.top" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
+<p>❤️💕💕关于区块链技术，可以关注我，共同学习更多的区块链技术。博客<a href="http://cubxxw.com" target="_blank" rel="noopener noreferrer">http://cubxxw.com<ExternalLinkIcon/></a></p>
 </blockquote>
 <hr>
 <h2 id="json" tabindex="-1"><a class="header-anchor" href="#json" aria-hidden="true">#</a> JSON</h2>
@@ -66,7 +66,7 @@ document.getElementById(<span class="token string">"demo"</span>).innerHTML = ob
 <details class="custom-container details"><summary>JSON在线解析</summary>
 <p><strong>在我们做复杂的数据的时候可以选择</strong></p>
 <p><a href="http://www.json.cn" target="_blank" rel="noopener noreferrer">🖱️解析网址地址<ExternalLinkIcon/></a></p>
-<p><img src="http://sm.nsddd.top/smimage-20221026181140061.png" alt="image-20221026181140061"></p>
+<p><img src="http://sm.cubxxw.com/smimage-20221026181140061.png" alt="image-20221026181140061"></p>
 </details>
 <h2 id="json序列化-1" tabindex="-1"><a class="header-anchor" href="#json序列化-1" aria-hidden="true">#</a> JSON序列化</h2>
 <h3 id="结构体序列化" tabindex="-1"><a class="header-anchor" href="#结构体序列化" aria-hidden="true">#</a> 结构体序列化</h3>
@@ -441,7 +441,7 @@ slice切片序列化后的结果<span class="token punctuation">:</span><span cl
 <p><RouterLink to="/">Ⓜ️回到目录🏠</RouterLink></p>
 </li>
 <li>
-<p><a href="https://nsddd.top/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
+<p><a href="https://cubxxw.com/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
 </li>
 <li>
 <p>✴️版权声明 © :本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>

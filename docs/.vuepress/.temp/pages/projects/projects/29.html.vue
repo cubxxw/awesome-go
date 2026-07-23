@@ -6,7 +6,7 @@
 <div><a href = '28.md' style='float:left'>⬆️上一节🔗  </a><a href = '30.md' style='float: right'>  ⬇️下一节🔗</a></div>
 <br>
 <blockquote>
-<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://nsddd.top/" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
+<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://cubxxw.com/" target="_blank" rel="noopener noreferrer">http://cubxxw.com<ExternalLinkIcon/></a></p>
 </blockquote>
 <hr>
 <nav class="table-of-contents"><ul><li><router-link to="#示例测试">示例测试</router-link><ul><li><router-link to="#示例测试命名规范">示例测试命名规范</router-link></li><li><router-link to="#大型示例">大型示例</router-link></li></ul></li><li><router-link to="#testmain函数">TestMain函数</router-link></li><li><router-link to="#mock测试">Mock测试</router-link><ul><li><router-link to="#安装gomock">安装GoMock</router-link></li><li><router-link to="#mockgen工具介绍">mockgen工具介绍</router-link></li><li><router-link to="#通过注释使用mockgen">通过注释使用mockgen</router-link></li><li><router-link to="#使用mock代码编写单元测试用例">使用Mock代码编写单元测试用例</router-link></li></ul></li><li><router-link to="#fake测试">Fake测试</router-link></li><li><router-link to="#何时编写和执行单元测试用例">何时编写和执行单元测试用例？</router-link><ul><li><router-link to="#编码前-tdd">编码前：TDD</router-link></li><li><router-link to="#与编码同步进行-增量">与编码同步进行：增量</router-link></li><li><router-link to="#编码后-存量">编码后：存量</router-link></li></ul></li><li><router-link to="#测试覆盖率">测试覆盖率</router-link></li><li><router-link to="#iam项目测试实战">IAM项目测试实战</router-link><ul><li><router-link to="#iam项目是如何运行测试用例的">IAM项目是如何运行测试用例的？</router-link></li><li><router-link to="#iam项目测试案例分享">IAM项目测试案例分享</router-link></li></ul></li><li><router-link to="#其他测试工具-包">其他测试工具/包</router-link><ul><li><router-link to="#测试框架">测试框架</router-link></li><li><router-link to="#mock工具">Mock工具</router-link></li></ul></li><li><router-link to="#总结">总结</router-link></li><li><router-link to="#课后习题">课后习题</router-link></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
@@ -44,7 +44,7 @@ ok      github.com/marmotedu/gopractise-demo/31/test    <span class="token numbe
     <span class="token comment">// Output: olleh</span>
 <span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>Godoc将在<code v-pre>Reverse</code>函数的文档旁边提供此示例，如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202303051046879.png" alt="图片"></p>
+<p><img src="http://sm.cubxxw.com/sm202303051046879.png" alt="图片"></p>
 <p>示例测试名以<code v-pre>Example</code>开头，后面可以不跟任何字符串，也可以跟函数名、类型名或者<code v-pre>类型_方法名</code>，中间用下划线<code v-pre>_</code>连接，例如：</p>
 <div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">func</span> <span class="token function">Example</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token operator">...</span> <span class="token punctuation">}</span> <span class="token comment">// 代表了整个包的示例</span>
 <span class="token keyword">func</span> <span class="token function">ExampleF</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token operator">...</span> <span class="token punctuation">}</span> <span class="token comment">// 函数F的示例</span>
@@ -213,7 +213,7 @@ $ go <span class="token function">install</span> github.com/golang/mock/mockgen
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ mockgen <span class="token parameter variable">-destination</span> spider/mock/mock_spider.go <span class="token parameter variable">-package</span> spider <span class="token parameter variable">-source</span> spider/spider.go
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>上面的命令，Mock了<code v-pre>spider/spider.go</code>文件中定义的<code v-pre>Spider</code>接口，并将Mock代码保存在<code v-pre>spider/mock/mock_spider.go</code>文件中，文件的包名为<code v-pre>spider</code>。</p>
 <p><strong>mockgen工具的参数说明见下表：</strong></p>
-<p><img src="http://sm.nsddd.top/sm202303051051183.jpeg" alt="图片"></p>
+<p><img src="http://sm.cubxxw.com/sm202303051051183.jpeg" alt="图片"></p>
 <ol>
 <li><strong>反射模式</strong></li>
 </ol>
@@ -299,7 +299,7 @@ ok    github.com/marmotedu/gopractise-demo/gomock  <span class="token number">0<
 <h2 id="何时编写和执行单元测试用例" tabindex="-1"><a class="header-anchor" href="#何时编写和执行单元测试用例" aria-hidden="true">#</a> 何时编写和执行单元测试用例？</h2>
 <p>上面，我介绍了Go代码测试的基础知识，这里我再来分享下在做测试时一个比较重要的知识点：何时编写和执行单元测试用例。</p>
 <h3 id="编码前-tdd" tabindex="-1"><a class="header-anchor" href="#编码前-tdd" aria-hidden="true">#</a> 编码前：TDD</h3>
-<p><img src="http://sm.nsddd.top/sm202303051057509.png" alt="图片"></p>
+<p><img src="http://sm.cubxxw.com/sm202303051057509.png" alt="图片"></p>
 <p>Test-Driven Development，也就是测试驱动开发，是敏捷开发的⼀项核心实践和技术，也是⼀种设计方法论。简单来说，TDD原理就是：开发功能代码之前，先编写测试用例代码，然后针对测试用例编写功能代码，使其能够通过。这样做的好处在于，通过测试的执行代码肯定满足需求，而且有助于面向接口编程，降低代码耦合，也极大降低了bug的出现几率。</p>
 <p>然而，TDD的坏处也显而易见：由于测试用例是在进行代码设计之前写的，很有可能限制开发者对代码的整体设计；并且，由于TDD对开发⼈员要求非常高，体现的思想跟传统开发思维也不⼀样，因此实施起来比较困难；此外，因为要先编写测试用例，TDD也可能会影响项目的研发进度。所以，在客观情况不满足的情况下，不应该盲目追求对业务代码使用TDD的开发模式。</p>
 <h3 id="与编码同步进行-增量" tabindex="-1"><a class="header-anchor" href="#与编码同步进行-增量" aria-hidden="true">#</a> 与编码同步进行：增量</h3>
@@ -319,7 +319,7 @@ coverage: <span class="token number">40.0</span>% of statements
 <span class="token keyword">do</span> some cleanup
 ok    github.com/marmotedu/gopractise-demo/test  <span class="token number">0</span>.003s
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>上面的命令在当前目录下生成了<code v-pre>coverage.out</code>覆盖率数据文件。</p>
-<p><img src="http://sm.nsddd.top/sm202303051101145.png" alt="图片"></p>
+<p><img src="http://sm.cubxxw.com/sm202303051101145.png" alt="图片"></p>
 <p><strong>第二步，分析覆盖率文件：</strong></p>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ go tool cover <span class="token parameter variable">-func</span><span class="token operator">=</span>coverage.out
 <span class="token keyword">do</span> some setup
@@ -338,7 +338,7 @@ total:              <span class="token punctuation">(</span>statements<span clas
 <p>我们还可以使用<code v-pre>go tool cover -html</code>生成<code v-pre>HTML</code>格式的分析文件，可以更加清晰地展示代码的测试情况：</p>
 <div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>$ go tool cover -html=coverage.out -o coverage.html
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>上述命令会在当前目录下生成一个<code v-pre>coverage.html</code>文件，用浏览器打开<code v-pre>coverage.html</code>文件，可以更加清晰地看到代码的测试情况，如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202303051102687.png" alt="img"></p>
+<p><img src="http://sm.cubxxw.com/sm202303051102687.png" alt="img"></p>
 <p>通过上图，我们可以知道红色部分的代码没有被测试到，可以让我们接下来有针对性地添加测试用例，而不是一头雾水，不知道需要为哪些代码编写测试用例。</p>
 <p>在Go项目开发中，我们往往会把测试覆盖率作为代码合并的一个强制要求，所以需要在进行代码测试时，同时生成代码覆盖率数据文件。在进行代码测试时，可以通过分析该文件，来判断我们的代码测试覆盖率是否满足要求，如果不满足则代码测试失败。</p>
 <h2 id="iam项目测试实战" tabindex="-1"><a class="header-anchor" href="#iam项目测试实战" aria-hidden="true">#</a> IAM项目测试实战</h2>
@@ -507,7 +507,7 @@ total:              <span class="token punctuation">(</span>statements<span clas
 <p><RouterLink to="/projects/">Ⓜ️回到目录🏠</RouterLink></p>
 </li>
 <li>
-<p><a href="https://nsddd.top/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
+<p><a href="https://cubxxw.com/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
 </li>
 <li>
 <p>✴️版权声明 © ：本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>

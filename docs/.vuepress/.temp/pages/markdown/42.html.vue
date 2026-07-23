@@ -4,7 +4,7 @@
 <h2 id="安装nginx" tabindex="-1"><a class="header-anchor" href="#安装nginx" aria-hidden="true">#</a> 安装nginx</h2>
 <h3 id="搜索nginx镜像" tabindex="-1"><a class="header-anchor" href="#搜索nginx镜像" aria-hidden="true">#</a> 搜索nginx镜像</h3>
 <div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>docker search --limit 3  nginx
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p><img src="https://sm.nsddd.top//typora/image-20220916222258225.png?mail:3293172751@qq.com" alt="image-20220916222258225"></p>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p><img src="https://sm.cubxxw.com//typora/image-20220916222258225.png?mail:3293172751@qq.com" alt="image-20220916222258225"></p>
 <h3 id="拉取nginx镜像" tabindex="-1"><a class="header-anchor" href="#拉取nginx镜像" aria-hidden="true">#</a> 拉取nginx镜像</h3>
 <blockquote>
 <p>也可以不用拉取，运行时docker发现本地没有镜像会自动在远程仓库拉取</p>
@@ -30,7 +30,7 @@
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>在本地主机创建一个映射目录 -p表示递归创建</p>
 <p>然后启动容器，本次启动为了进入容器去复制nginx的配置文件，并不是为了真正的“启动”</p>
 <p>进入nginx容器后，使用<code v-pre>whereis nginx命令</code>查看相关的配置文件位置，找到nginx配置路径，记住路径，然后执行<code v-pre>exit</code> 退出容器，使用</p>
-<p><img src="https://sm.nsddd.top//typora/image-20220916223802934.png?mail:3293172751@qq.com" alt="image-20220916223802934"></p>
+<p><img src="https://sm.cubxxw.com//typora/image-20220916223802934.png?mail:3293172751@qq.com" alt="image-20220916223802934"></p>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token comment">#docker cp 容器id:本地存放配置文件的绝对路径 容器中配置文件存放的路径</span>
 <span class="token function">docker</span> <span class="token function">cp</span> nginx:/etc/nginx/nginx.conf /docker/nginx/conf/nginx.conf
 <span class="token function">docker</span> <span class="token function">cp</span> nginx:/etc/nginx/conf.d /docker/nginx/conf.d
@@ -47,7 +47,7 @@
 <span class="token parameter variable">-v</span> /docker/nginx/logs:/var/log/nginx <span class="token punctuation">\</span>
 <span class="token parameter variable">-d</span>  nginx
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>重新创建一个容器并运行即可。</p>
-<p><img src="https://sm.nsddd.top//typora/image-20220916233240835.png?mail:3293172751@qq.com" alt="image-20220916233240835"></p>
+<p><img src="https://sm.cubxxw.com//typora/image-20220916233240835.png?mail:3293172751@qq.com" alt="image-20220916233240835"></p>
 <p>踩坑记录：-v属性需要在-d之前，具体咋回事说不太清楚，反正-v放到最后是有问题的，无法映射上的。</p>
 <p><strong><code v-pre>--restart=always</code>:设置容器自启动，我们有两种方式设置自启动：</strong></p>
 <ul>

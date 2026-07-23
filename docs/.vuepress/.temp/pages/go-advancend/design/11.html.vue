@@ -5,7 +5,7 @@
 <div><a href = '10.md' style='float:left'>⬆️上一节🔗</a><a href = '12.md' style='float: right'>⬇️下一节🔗</a></div>
 <br>
 <blockquote>
-<p>❤️💕💕Java和Golang的设计模式，设计模式介绍、创建者模式、结构型模式、行为型模式。Myblog:<a href="http://nsddd.top/" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
+<p>❤️💕💕Java和Golang的设计模式，设计模式介绍、创建者模式、结构型模式、行为型模式。Myblog:<a href="http://cubxxw.com/" target="_blank" rel="noopener noreferrer">http://cubxxw.com<ExternalLinkIcon/></a></p>
 </blockquote>
 <hr>
 <p>[TOC]</p>
@@ -78,7 +78,7 @@
 <li><strong>适配器(Adapter)</strong>: 适配器(Adapter)是连接客户端(Client)和被适配者(Adaptee)的桥梁。它实现了目标接口(Target Interface)，并将客户端(Client)请求转换为被适配者(Adaptee)可以理解的形式。适配器(Adapter)通常包装了一个被适配者(Adaptee)对象，并在目标接口(Target Interface)中定义了一个或多个方法来调用适配器(Adapter)的方法。</li>
 <li><strong>被适配者(Adaptee)</strong>: 被适配者(Adaptee)是系统的一部分，它是适配器(Adapter)所要调用的对象。被适配者(Adaptee)有自己独特的接口，但客户端(Client)不知道如何与其进行交互。</li>
 </ul>
-<p><img src="http://sm.nsddd.top/sm202305141822874.png" alt="image-20230514182249730"></p>
+<p><img src="http://sm.cubxxw.com/sm202305141822874.png" alt="image-20230514182249730"></p>
 <h2 id="演示" tabindex="-1"><a class="header-anchor" href="#演示" aria-hidden="true">#</a> 演示</h2>
 <div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token comment">// 目标接口(Target Interface)</span>
 <span class="token keyword">type</span> TargetInterface <span class="token keyword">interface</span> <span class="token punctuation">{</span>
@@ -203,7 +203,7 @@
 <p><RouterLink to="/go-advancend/">Ⓜ️回到目录🏠</RouterLink></p>
 </li>
 <li>
-<p><a href="https://nsddd.top/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
+<p><a href="https://cubxxw.com/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
 </li>
 <li>
 <p>✴️版权声明 © :本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>

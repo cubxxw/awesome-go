@@ -414,7 +414,7 @@ favorite_count: {favorite_count, {video_id, video_published_time}} // 根据点�
 </ol>
 <h3 id="功能详细说明" tabindex="-1"><a class="header-anchor" href="#功能详细说明" aria-hidden="true">#</a> 功能详细说明</h3>
 <h4 id="用户注册流程图" tabindex="-1"><a class="header-anchor" href="#用户注册流程图" aria-hidden="true">#</a> 用户注册流程图</h4>
-<p><img src="http://sm.nsddd.top/sm202301172254455.png" alt="image-20230117225448264"></p>
+<p><img src="http://sm.cubxxw.com/sm202301172254455.png" alt="image-20230117225448264"></p>
 <h4 id="数据库设计-1" tabindex="-1"><a class="header-anchor" href="#数据库设计-1" aria-hidden="true">#</a> 数据库设计</h4>
 <blockquote>
 <p>UserBasic结构体</p>
@@ -467,7 +467,7 @@ favorite_count: {favorite_count, {video_id, video_published_time}} // 根据点�
 <p>Vitess还提供了一些管理工具，可以帮助用户管理分布式数据库集群，包括自动数据迁移、数据重新平衡和监控等。</p>
 <p>Vitess可以在Kubernetes上运行，也可以运行在其他环境中，并且在Youtube、Slack和Airbnb等公司中广泛使用.</p>
 </blockquote>
-<p><img src="http://sm.nsddd.top/sm202301152053808.png" alt="image-20230115205307679"></p>
+<p><img src="http://sm.cubxxw.com/sm202301152053808.png" alt="image-20230115205307679"></p>
 <p><strong>解释一下MySQL的 [[水平扩展]]：</strong></p>
 <blockquote>
 <p>MySQL的水平扩展是指通过增加更多的服务器来扩展数据库容量和性能的过程。这种方式可以通过分片数据库来实现，将数据存储在多个服务器上，而不是所有数据都存储在一台服务器上。这样，当数据量增加或读写请求增加时，可以通过增加更多的服务器来满足需求。</p>
@@ -487,7 +487,7 @@ favorite_count: {favorite_count, {video_id, video_published_time}} // 根据点�
 <p>视频会存储在谷歌数据中心的硬盘中。这些数据由 Google File System 和 BigTable 管理。</p>
 <p>GFS Google File System 是谷歌开发的一个分布式文件系统，用于管理分布式环境中的大规模数据。</p>
 </blockquote>
-<p><img src="http://sm.nsddd.top/sm202301152111662.png" alt="image-20230115211150535"></p>
+<p><img src="http://sm.cubxxw.com/sm202301152111662.png" alt="image-20230115211150535"></p>
 </div></template>
 
 

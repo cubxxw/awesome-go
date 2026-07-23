@@ -10,7 +10,7 @@
 </ul>
 </div>
 <p><strong>架构图：</strong></p>
-<p><img src="http://sm.nsddd.top/smbeego" alt="img"></p>
+<p><img src="http://sm.cubxxw.com/smbeego" alt="img"></p>
 <div class="custom-container tip"><p class="custom-container-title">beego由四部分组成</p>
 <ol>
 <li>基础模块：包括log模块、config模块、governor模块；</li>
@@ -20,7 +20,7 @@
 </ol>
 </div>
 <p><strong>web应用程序：</strong></p>
-<p><img src="http://sm.nsddd.top/smimage-20221120220809190.png" alt="image-20221120220809190"></p>
+<p><img src="http://sm.cubxxw.com/smimage-20221120220809190.png" alt="image-20221120220809190"></p>
 <h2 id="beego-的安装" tabindex="-1"><a class="header-anchor" href="#beego-的安装" aria-hidden="true">#</a> beego 的安装</h2>
 <p>beego 的安装是典型的 Go 安装包的形式：</p>
 <div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>go get github.com/astaxie/beego
@@ -51,7 +51,7 @@
 </ul>
 <h2 id="beego-的-git-分支" tabindex="-1"><a class="header-anchor" href="#beego-的-git-分支" aria-hidden="true">#</a> beego 的 git 分支</h2>
 <p>beego 的 master 分支为相对稳定版本，dev 分支为开发者版本。大致流程如下：</p>
-<p><img src="http://sm.nsddd.top/smryeoKDnVSL2NMbt.png" alt="img"></p>
+<p><img src="http://sm.cubxxw.com/smryeoKDnVSL2NMbt.png" alt="img"></p>
 <h2 id="快速入手" tabindex="-1"><a class="header-anchor" href="#快速入手" aria-hidden="true">#</a> 快速入手</h2>
 <h4 id="create-hello-directory-cd-hello-directory" tabindex="-1"><a class="header-anchor" href="#create-hello-directory-cd-hello-directory" aria-hidden="true">#</a> Create <code v-pre>hello</code> directory, cd <code v-pre>hello</code> directory</h4>
 <div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>mkdir hello
@@ -73,7 +73,7 @@ cd hello
 ./hello
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="go-to-http-localhost-8080" tabindex="-1"><a class="header-anchor" href="#go-to-http-localhost-8080" aria-hidden="true">#</a> Go to <a href="http://localhost:8080/" target="_blank" rel="noopener noreferrer">http://localhost:8080<ExternalLinkIcon/></a></h4>
 <p>Congratulations! You've just built your first <strong>beego</strong> app.</p>
-<p><img src="http://sm.nsddd.top/smimage-20221120222250366.png" alt="image-20221120222250366"></p>
+<p><img src="http://sm.cubxxw.com/smimage-20221120222250366.png" alt="image-20221120222250366"></p>
 <h2 id="bee工具的使用" tabindex="-1"><a class="header-anchor" href="#bee工具的使用" aria-hidden="true">#</a> bee工具的使用</h2>
 <p>bee 工具是一个为了协助快速开发 beego 项目而创建的项目，通过 bee 您可以很容易的进行 beego 项目的 <strong>创建、热编译、开发、测试、和部署</strong> 。</p>
 <h2 id="bee-工具的安装" tabindex="-1"><a class="header-anchor" href="#bee-工具的安装" aria-hidden="true">#</a> bee 工具的安装</h2>
@@ -359,7 +359,7 @@ bee migrate refresh <span class="token punctuation">[</span>-driver<span class="
 <p><RouterLink to="/Gomd_super/">Ⓜ️回到首页🏠</RouterLink></p>
 </li>
 <li>
-<p><a href="https://nsddd.top/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
+<p><a href="https://cubxxw.com/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
 </li>
 <li>
 <p>✴️版权声明 © :本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>

@@ -62,11 +62,11 @@
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ go run main.go
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><blockquote>
 <p>最后访问即可：</p>
-<p><img src="http://sm.nsddd.top/smimage-20221013225622549.png?xxw@nsddd.top" alt="image-20221013225622549"></p>
+<p><img src="http://sm.cubxxw.com/smimage-20221013225622549.png?xxw@cubxxw.com" alt="image-20221013225622549"></p>
 </blockquote>
 <h2 id="开始" tabindex="-1"><a class="header-anchor" href="#开始" aria-hidden="true">#</a> 开始</h2>
 <blockquote>
-<p>不确定如何编写和执行 Go 代码? <a href="https://go.nsddd.top" target="_blank" rel="noopener noreferrer">点击这里<ExternalLinkIcon/></a>.</p>
+<p>不确定如何编写和执行 Go 代码? <a href="https://go.cubxxw.com" target="_blank" rel="noopener noreferrer">点击这里<ExternalLinkIcon/></a>.</p>
 </blockquote>
 <p>首先，创建一个名为 <code v-pre>example.go</code> 的文件</p>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ <span class="token function">touch</span> example.go
@@ -88,7 +88,7 @@
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token comment"># 运行 example.go 并且在浏览器中访问 HOST_IP:8080/ping</span>
 $ go run example.go
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>🚀 编译结果如下：</p>
-<p><img src="http://sm.nsddd.top/smimage-20221013225920708.png?xxw@nsddd.top" alt="image-20221013225920708"></p>
+<p><img src="http://sm.cubxxw.com/smimage-20221013225920708.png?xxw@cubxxw.com" alt="image-20221013225920708"></p>
 <h2 id="hello-word" tabindex="-1"><a class="header-anchor" href="#hello-word" aria-hidden="true">#</a> hello word</h2>
 <div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">package</span> main
 
@@ -110,7 +110,7 @@ $ go run example.go
    <span class="token comment">// Run("里面不指定端口号默认为8080") </span>
    r<span class="token punctuation">.</span><span class="token function">Run</span><span class="token punctuation">(</span><span class="token string">":8000"</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><img src="http://sm.nsddd.top/smimage-20221013230032119.png?xxw@nsddd.top" alt="image-20221013230032119"></p>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><img src="http://sm.cubxxw.com/smimage-20221013230032119.png?xxw@cubxxw.com" alt="image-20221013230032119"></p>
 <h2 id="其他的请求和json" tabindex="-1"><a class="header-anchor" href="#其他的请求和json" aria-hidden="true">#</a> 其他的请求和json</h2>
 <p>💡简单的一个案例如下：</p>
 <div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token comment">// gin</span>
@@ -203,7 +203,7 @@ running<span class="token punctuation">..</span>.
 Please check https://pkg.go.dev/github.com/gin-gonic/gin<span class="token comment">#readme-don-t-trust-all-proxies for details.</span>
 <span class="token punctuation">[</span>GIN-debug<span class="token punctuation">]</span> Listening and serving HTTP on :3001
 <span class="token punctuation">[</span>GIN<span class="token punctuation">]</span> <span class="token number">2022</span>/11/01 - <span class="token number">20</span>:45:41 <span class="token operator">|</span> <span class="token number">200</span> <span class="token operator">|</span>            0s <span class="token operator">|</span>       <span class="token number">127.0</span>.0.1 <span class="token operator">|</span> PUT      <span class="token string">"/put"</span>
-</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><img src="http://sm.nsddd.top/smimage-20221101204631005.png" alt="image-20221101204631005"></p>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><img src="http://sm.cubxxw.com/smimage-20221101204631005.png" alt="image-20221101204631005"></p>
 <h3 id="相应-json-数据并且返回自定义-json-名称" tabindex="-1"><a class="header-anchor" href="#相应-json-数据并且返回自定义-json-名称" aria-hidden="true">#</a> 相应 json 数据并且返回自定义 json 名称</h3>
 <div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token comment">// 定义结构体</span>
 <span class="token keyword">type</span> User <span class="token keyword">struct</span> <span class="token punctuation">{</span>
@@ -402,9 +402,9 @@ r<span class="token punctuation">.</span><span class="token function">GET</span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><details class="custom-container details"><summary>🚀 编译结果如下：</summary>
-<p><img src="http://sm.nsddd.top/smimage-20221102110508517.png" alt="image-20221102110508517"></p>
-<p><img src="http://sm.nsddd.top/smimage-20221102110523505.png" alt="image-20221102110523505"></p>
-<p><img src="http://sm.nsddd.top/smimage-20221102110542458.png" alt="image-20221102110542458"></p>
+<p><img src="http://sm.cubxxw.com/smimage-20221102110508517.png" alt="image-20221102110508517"></p>
+<p><img src="http://sm.cubxxw.com/smimage-20221102110523505.png" alt="image-20221102110523505"></p>
+<p><img src="http://sm.cubxxw.com/smimage-20221102110542458.png" alt="image-20221102110542458"></p>
 </details>
 <h2 id="预定义函数" tabindex="-1"><a class="header-anchor" href="#预定义函数" aria-hidden="true">#</a> 预定义函数</h2>
 <details class="custom-container details"><summary>预定义函数浏览⚡</summary>
@@ -565,12 +565,12 @@ r<span class="token punctuation">.</span><span class="token function">GET</span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>🚀 编译结果如下：</p>
-<p><img src="http://sm.nsddd.top/smimage-20221102115622008.png" alt="image-20221102115622008"></p>
+<p><img src="http://sm.cubxxw.com/smimage-20221102115622008.png" alt="image-20221102115622008"></p>
 <h2 id="加载一个公共的模板" tabindex="-1"><a class="header-anchor" href="#加载一个公共的模板" aria-hidden="true">#</a> 加载一个公共的模板</h2>
 <p>加载一个公共的模板，也可以叫做嵌套 <code v-pre>template</code></p>
 <blockquote>
 <p>我们一个项目里面可能有一个公共的头部或者尾部，就像我们这个仓库一样，每一页都有一个模板：</p>
-<p><img src="http://sm.nsddd.top/smimage-20221102120417428.png" alt="image-20221102120417428"></p>
+<p><img src="http://sm.cubxxw.com/smimage-20221102120417428.png" alt="image-20221102120417428"></p>
 </blockquote>
 <p><strong>在每个html 文件的任意位置都可以使用， 注意后面的 <code v-pre>.</code></strong></p>
 <div class="language-html ext-html line-numbers-mode"><pre v-pre class="language-html"><code><span class="token comment">&lt;!-- 公共模板 头部--></span>
@@ -639,7 +639,7 @@ r<span class="token punctuation">.</span><span class="token function">GET</span>
 	<span class="token punctuation">}</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>🚀 编译结果如下：</p>
-<p><img src="http://sm.nsddd.top/smimage-20221106183736547.png" alt="image-20221106183736547"></p>
+<p><img src="http://sm.cubxxw.com/smimage-20221106183736547.png" alt="image-20221106183736547"></p>
 <p>**同样也可以传递给 html **</p>
 <h2 id="end-链接" tabindex="-1"><a class="header-anchor" href="#end-链接" aria-hidden="true">#</a> END 链接</h2>
 <ul><li><div><a href = '71.md' style='float:left'>⬆️上一节🔗</a><a href = '73.md' style='float: right'>⬇️下一节🔗</a></div></li></ul>
@@ -648,7 +648,7 @@ r<span class="token punctuation">.</span><span class="token function">GET</span>
 <p><RouterLink to="/Gomd_super/">Ⓜ️回到首页🏠</RouterLink></p>
 </li>
 <li>
-<p><a href="https://nsddd.top/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
+<p><a href="https://cubxxw.com/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
 </li>
 <li>
 <p>✴️版权声明 © :本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>

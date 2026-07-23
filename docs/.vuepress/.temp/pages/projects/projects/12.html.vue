@@ -6,7 +6,7 @@
 <div><a href = '11.md' style='float:left'>⬆️上一节🔗  </a><a href = '13.md' style='float: right'>  ⬇️下一节🔗</a></div>
 <br>
 <blockquote>
-<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://nsddd.top/" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
+<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://cubxxw.com/" target="_blank" rel="noopener noreferrer">http://cubxxw.com<ExternalLinkIcon/></a></p>
 </blockquote>
 <hr>
 <nav class="table-of-contents"><ul><li><router-link to="#日志库介绍">日志库介绍</router-link></li><li><router-link to="#如何设计日志包">如何设计日志包</router-link><ul><li><router-link to="#基础功能">基础功能</router-link></li><li><router-link to="#高级功能">高级功能</router-link></li><li><router-link to="#可选功能">可选功能</router-link></li></ul></li><li><router-link to="#设计日志包时需要关注的点">设计日志包时需要关注的点</router-link></li><li><router-link to="#日志记录">日志记录</router-link><ul><li><router-link to="#在何处打印日志">在何处打印日志</router-link></li><li><router-link to="#在哪个日志级别打印日志">在哪个日志级别打印日志？</router-link></li><li><router-link to="#如何记录日志内容">如何记录日志内容</router-link></li></ul></li><li><router-link to="#记录日志的-最佳-实践总结">记录日志的“最佳”实践总结</router-link></li><li><router-link to="#扩展-分布式日志解决方案-efk-elk">扩展：分布式日志解决方案 （EFK/ELK）</router-link></li><li><router-link to="#总结">总结</router-link></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
@@ -49,14 +49,14 @@
 <li>**Info 级别的日志，**可以协助我们 Debug，并记录一些有用的信息，供后期进行分析。</li>
 </ul>
 <p>通常一个日志包至少要实现 6 个级别，我给你提供了一张表格，按优先级从低到高排列如下：
-<img src="http://sm.nsddd.top/sm202302221652290.png" alt="在这里插入图片描述">
+<img src="http://sm.cubxxw.com/sm202302221652290.png" alt="在这里插入图片描述">
 有些日志包，例如 <code v-pre>logrus</code>，还支持 <code v-pre>Trace</code> 日志级别。<code v-pre>Trace</code> 级别比 <code v-pre>Debug</code> 级别还低，能够打印更细粒度的日志信息。在我看来，<code v-pre>Trace</code> 级别不是必须的，你可以根据需要自行选择。打印日志时，一个日志调用其实具有两个属性：</p>
 <ul>
 <li>输出级别：打印日志时，我们期望日志的输出级别。例如，我们调用 <code v-pre>glog.Info(“This is info message”)</code> 打印一条日志，则输出日志级别为 Info。</li>
 <li>开关级别：启动应用程序时，期望哪些输出级别的日志被打印。例如，使用 <code v-pre>glog 时 -v=4</code> ，说明了只有日志级别高于 4 的日志才会被打印。</li>
 </ul>
 <p>如果开关级别设置为 L ，只有输出级别 <code v-pre>&gt;=L</code> 时，日志才会被打印。例如，开关级别为 Warn，则只会记录 <code v-pre>Warn</code>、<code v-pre>Error</code> 、<code v-pre>Panic</code> 和 <code v-pre>Fatal</code> 级别的日志。具体的输出关系如下图所示：
-<img src="http://sm.nsddd.top/sm202304181832774.png" alt="在这里插入图片描述"></p>
+<img src="http://sm.cubxxw.com/sm202304181832774.png" alt="在这里插入图片描述"></p>
 <h4 id="支持自定义配置" tabindex="-1"><a class="header-anchor" href="#支持自定义配置" aria-hidden="true">#</a> 支持自定义配置</h4>
 <p>不同的运行环境，需要不同的日志输出配置，例如：开发测试环境为了能够方便地 Debug，需要设置日志级别为 Debug 级别；现网环境为了提高应用程序的性能，则需要设置日志级别为 Info 级别。又比如，现网环境为了方便日志采集，通常会输出 <code v-pre>JSON</code> 格式的日志；开发测试环境为了方便查看日志，会输出 <code v-pre>TEXT</code> 格式的日志。所以，我们的日志包需要能够被配置，还要不同环境采用不同的配置。通过配置，可以在不重新编译代码的情况下，改变记录日志的行为。</p>
 <h4 id="支持输出到标准输出和文件" tabindex="-1"><a class="header-anchor" href="#支持输出到标准输出和文件" aria-hidden="true">#</a> 支持输出到标准输出和文件</h4>
@@ -81,7 +81,7 @@
 <p>建议在开发联调阶段使用 TEXT 格式的日志，在现网环境使用 JSON 格式的日志。一个优秀的日志库，例如 logrus，除了提供基本的输出格式外，还应该允许开发者自定义日志输出格式。</p>
 <h4 id="能够按级别分类输出" tabindex="-1"><a class="header-anchor" href="#能够按级别分类输出" aria-hidden="true">#</a> 能够按级别分类输出</h4>
 <p>为了能够快速定位到需要的日志，一个比较好的做法是将日志按级别分类输出，至少错误级别的日志可以输出到独立的文件中。这样，出现问题时，可以直接查找错误文件定位问题。例如，<a href="https://github.com/golang/glog" target="_blank" rel="noopener noreferrer">glog<ExternalLinkIcon/></a> 就支持分类输出，如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202302221700579.png" alt="image-20230222170016532"></p>
+<p><img src="http://sm.cubxxw.com/sm202302221700579.png" alt="image-20230222170016532"></p>
 <h4 id="支持结构化日志" tabindex="-1"><a class="header-anchor" href="#支持结构化日志" aria-hidden="true">#</a> 支持结构化日志</h4>
 <p>结构化日志（Structured Logging），就是使用 JSON 或者其他编码方式使日志结构化，这样可以方便后续使用 Filebeat、Logstash Shipper 等各种工具，对日志进行采集、过滤、分析和查找。就像下面这个案例，使用 zap 进行日志打印：</p>
 <div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">package</span> main
@@ -150,7 +150,7 @@
 <p>在分布式系统中，一个服务会被部署在多台机器上，这时候如果我们要查看日志，就需要分别登录不同的机器查看，非常麻烦。我们更希望将日志统一投递到 Elasticsearch 上，在 Elasticsearch 上查看日志。</p>
 <p>我们还可能需要从日志中分析某个接口的调用次数、某个用户的请求次数等信息，这就需要我们能够对日志进行处理。一般的做法是将日志投递到 Kafka，数据处理服务消费 Kafka 中保存的日志，从而分析出调用次数等信息。</p>
 <p>以上两种场景，分别需要把日志投递到 <code v-pre>Elasticsearch</code>、<code v-pre>Kafka</code> 等组件，如果我们的日志包支持将日志投递到不同的目的端，那会是一项非常让人期待的功能：</p>
-<p><img src="http://sm.nsddd.top/sm202302221714536.png" alt="image-20230222171407474"></p>
+<p><img src="http://sm.cubxxw.com/sm202302221714536.png" alt="image-20230222171407474"></p>
 <h2 id="设计日志包时需要关注的点" tabindex="-1"><a class="header-anchor" href="#设计日志包时需要关注的点" aria-hidden="true">#</a> 设计日志包时需要关注的点</h2>
 <p>上面，我们介绍了日志包具备的功能，这些功能可以指导我们完成日志包设计。这里，我们再来看下设计日志包时，我们还需要关注的几个层面：</p>
 <ul>
@@ -228,7 +228,7 @@
 <h4 id="fatal-级别" tabindex="-1"><a class="header-anchor" href="#fatal-级别" aria-hidden="true">#</a> Fatal 级别</h4>
 <p>Fatal 是最高级别的日志，这个级别的日志说明问题已经相当严重，严重到程序无法继续运行，通常是系统级的错误。在开发中也很少使用，除非我们觉得某个错误发生时，整个程序无法继续运行。</p>
 <p>这里用一张图来总结下，如何选择 Debug、Info、Warn、Error、Panic、Fatal 这几种日志级别。
-<img src="http://sm.nsddd.top/sm202302221731344.png" alt="在这里插入图片描述"></p>
+<img src="http://sm.cubxxw.com/sm202302221731344.png" alt="在这里插入图片描述"></p>
 <h3 id="如何记录日志内容" tabindex="-1"><a class="header-anchor" href="#如何记录日志内容" aria-hidden="true">#</a> 如何记录日志内容</h3>
 <p>关于如何记录日志内容，我有几条建议：</p>
 <ul>
@@ -254,7 +254,7 @@
 <h2 id="扩展-分布式日志解决方案-efk-elk" tabindex="-1"><a class="header-anchor" href="#扩展-分布式日志解决方案-efk-elk" aria-hidden="true">#</a> 扩展：分布式日志解决方案 （EFK/ELK）</h2>
 <p>在实际 Go 项目开发中，为了实现高可用，同一个服务至少需要部署两个实例，通过轮询的负载均衡策略转发请求。另外，一个应用又可能包含多个服务。假设我们的应用包含两个服务，每个服务部署两个实例，如果应用出故障，我们可能需要登陆 4（2 x 2）台服务器查看本地的日志文件，定位问题，非常麻烦，会增加故障恢复时间。所以在真实的企业场景中，我们会将这些日志统一收集并展示。</p>
 <p>在业界，日志的收集、处理和展示，早已经有了一套十分流行的日志解决方案：EFK（Elasticsearch + Filebeat + Kibana）或者 ELK（Elasticsearch + Logstash + Kibana），EFK 可以理解为 ELK 的演进版，把日志收集组件从 Logstash 替换成了 Filebeat。用 Filebeat 替换 Logstash，主要原因是 Filebeat 更轻量级，占用的资源更少。关于日志处理架构，你可以参考这张图。</p>
-<p><img src="http://sm.nsddd.top/sm202302221740053.png" alt="在这里插入图片描述">
+<p><img src="http://sm.cubxxw.com/sm202302221740053.png" alt="在这里插入图片描述">
 通过 log 包将日志记录在本地文件中（*.log 文件)，再通过 <code v-pre>Shipper</code> 收集到 <code v-pre>Kafka</code> 中。Shipper 可以根据需要灵活选择，常见的 Shipper 有 <code v-pre>Logstash Shipper</code>、<code v-pre>Flume</code>、<code v-pre>Fluentd</code>、<code v-pre>Filebeat</code>。其中 Filebeat 和 Logstash Shipper 用得最多。Shipper 没有直接将日志投递到 Logstash indexer，或者 Elasticsearch，是因为 Kafka 能够支持更大的吞吐量，起到削峰填谷的作用。</p>
 <p>Kafka 中的日志消息会被 Logstash indexer 消费，处理后投递到 Elasticsearch 中存储起来。Elasticsearch 是实时全文搜索和分析引擎，提供搜集、分析、存储数据三大功能。Elasticsearch 中存储的日志，可以通过 Kibana 提供的图形界面来展示。Kibana 是一个基于 Web 的图形界面，用于搜索、分析和可视化存储在 Elasticsearch 中的日志数据。</p>
 <p>Logstash 负责采集、转换和过滤日志。它支持几乎任何类型的日志，包括系统日志、错误日志和自定义应用程序日志。<code v-pre>Logstash</code> 又分为 Logstash Shipper 和 Logstash indexer。其中，Logstash Shipper 监控并收集日志，并将日志内容发送到 Logstash indexer，然后 Logstash indexer 过滤日志，并将日志提交给 Elasticsearch。</p>
@@ -273,7 +273,7 @@
 <p><RouterLink to="/projects/">Ⓜ️回到目录🏠</RouterLink></p>
 </li>
 <li>
-<p><a href="https://nsddd.top/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
+<p><a href="https://cubxxw.com/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
 </li>
 <li>
 <p>✴️版权声明 © ：本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>

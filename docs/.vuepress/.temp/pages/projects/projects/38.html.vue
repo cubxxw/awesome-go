@@ -6,7 +6,7 @@
 <div><a href = '37.md' style='float:left'>⬆️上一节🔗  </a><a href = '39.md' style='float: right'>  ⬇️下一节🔗</a></div>
 <br>
 <blockquote>
-<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://nsddd.top/" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
+<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://cubxxw.com/" target="_blank" rel="noopener noreferrer">http://cubxxw.com<ExternalLinkIcon/></a></p>
 </blockquote>
 <hr>
 <nav class="table-of-contents"><ul><li><router-link to="#开始">开始</router-link></li><li><router-link to="#docker镜像的构建原理和方式">Docker镜像的构建原理和方式</router-link><ul><li><router-link to="#通过docker-commit命令构建镜像">通过docker commit命令构建镜像</router-link></li><li><router-link to="#通过dockerfile来构建镜像">通过Dockerfile来构建镜像</router-link></li><li><router-link to="#其他制作镜像方式">其他制作镜像方式</router-link></li></ul></li><li><router-link to="#dockerfile指令介绍">Dockerfile指令介绍</router-link></li><li><router-link to="#dockerfile最佳实践">Dockerfile最佳实践</router-link></li><li><router-link to="#总结">总结</router-link></li><li><router-link to="#课后练习">课后练习</router-link></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
@@ -31,7 +31,7 @@
 <h3 id="通过docker-commit命令构建镜像" tabindex="-1"><a class="header-anchor" href="#通过docker-commit命令构建镜像" aria-hidden="true">#</a> 通过<code v-pre>docker commit</code>命令构建镜像</h3>
 <p>我们可以通过<code v-pre>docker commit</code>来构建一个镜像，命令的格式为<code v-pre>docker commit [选项] [&lt;仓库名&gt;[:&lt;标签&gt;]]</code>。</p>
 <p>下图中，我们通过4个步骤构建了Docker镜像<code v-pre>ccr.ccs.tencentyun.com/marmotedu/iam-apiserver-amd64:test</code>：</p>
-<p><img src="http://sm.nsddd.top/sm202303062205203.png" alt="图片"></p>
+<p><img src="http://sm.cubxxw.com/sm202303062205203.png" alt="图片"></p>
 <p>具体步骤如下：</p>
 <ol>
 <li>执行<code v-pre>docker ps</code>获取需要构建镜像的容器ID <code v-pre>48d1dbb89a7f</code>。</li>
@@ -91,7 +91,7 @@
 <p>Docker匹配缓存镜像的规则为：遍历缓存中的基础镜像及其子镜像，检查这些镜像的构建指令是否和当前指令完全一致，如果不一样，则说明缓存不匹配。对于<code v-pre>ADD</code>、<code v-pre>COPY</code>指令，还会根据文件的校验和（checksum）来判断添加到镜像中的文件是否相同，如果不相同，则说明缓存不匹配。</p>
 <p>这里要注意，缓存匹配检查不会检查容器中的文件。比如，当使用<code v-pre>RUN apt-get -y update</code>命令更新了容器中的文件时，缓存策略并不会检查这些文件，来判断缓存是否匹配。</p>
 <p>最后，我们可以通过<code v-pre>docker history</code>命令来查看镜像的构建历史，如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202303062208067.png" alt="图片"></p>
+<p><img src="http://sm.cubxxw.com/sm202303062208067.png" alt="图片"></p>
 <h3 id="其他制作镜像方式" tabindex="-1"><a class="header-anchor" href="#其他制作镜像方式" aria-hidden="true">#</a> 其他制作镜像方式</h3>
 <p>上面介绍的是两种最常用的镜像构建方式，还有一些其他的镜像创建方式，这里我简单介绍两种。</p>
 <p><strong>通过<code v-pre>docker save</code>和<code v-pre>docker load</code>命令构建：</strong></p>
@@ -202,7 +202,7 @@ INSTRUCTION arguments
 <p><RouterLink to="/projects/">Ⓜ️回到目录🏠</RouterLink></p>
 </li>
 <li>
-<p><a href="https://nsddd.top/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
+<p><a href="https://cubxxw.com/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
 </li>
 <li>
 <p>✴️版权声明 © ：本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>

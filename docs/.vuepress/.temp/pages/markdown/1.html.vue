@@ -9,7 +9,7 @@
 <hr>
 <p><strong>区块链技术（也称之为分布式账本技术）</strong>，是一种互联网数据库技术，其特点是去中心化，公开透明，让每一个人均可参与的数据库记录</p>
 <blockquote>
-<p>❤️💕💕关于区块链技术，可以关注我，共同学习更多的区块链技术。博客<a href="http://nsddd.top" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
+<p>❤️💕💕关于区块链技术，可以关注我，共同学习更多的区块链技术。博客<a href="http://cubxxw.com" target="_blank" rel="noopener noreferrer">http://cubxxw.com<ExternalLinkIcon/></a></p>
 </blockquote>
 <hr>
 <h2 id="_1-🐧应用场景" tabindex="-1"><a class="header-anchor" href="#_1-🐧应用场景" aria-hidden="true">#</a> 1. 🐧应用场景</h2>
@@ -18,7 +18,7 @@
 </ol>
 <p>区块链技术（也称之为分布式账本技术），是一种互联网数据库技术，其特点是去中心化，公开透明，让每一个人均可参与的数据库记录</p>
 <blockquote>
-<p>❤️💕💕关于区块链技术，可以关注我或者<a href="http://nsddd.top" target="_blank" rel="noopener noreferrer">博客http://nsddd.top<ExternalLinkIcon/></a></p>
+<p>❤️💕💕关于区块链技术，可以关注我或者<a href="http://cubxxw.com" target="_blank" rel="noopener noreferrer">博客http://cubxxw.com<ExternalLinkIcon/></a></p>
 </blockquote>
 <p>​	2. 后端服务器开发</p>
 <p>如美团后台流量支撑程序</p>
@@ -737,7 +737,7 @@ vname1<span class="token punctuation">,</span> vname2<span class="token punctuat
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><hr>
 <h3 id="值类型和引用类型" tabindex="-1"><a class="header-anchor" href="#值类型和引用类型" aria-hidden="true">#</a> 值类型和引用类型</h3>
 <p>所有像 int、float、bool 和 string 这些基本类型都属于值类型，使用这些类型的变量直接指向存在内存中的值：</p>
-<p><img src="https://sm.nsddd.top//typora/image-20220918203310643.png?mail:3293172751@qq.com" alt="image-20220918203310643"></p>
+<p><img src="https://sm.cubxxw.com//typora/image-20220918203310643.png?mail:3293172751@qq.com" alt="image-20220918203310643"></p>
 <p>当使用等号 <code v-pre>=</code> 将一个变量的值赋值给另一个变量时，如：<code v-pre>j = i</code>，实际上是<strong>在内存中将 i 的值进行了拷贝</strong>：</p>
 <p><img src="https://www.runoob.com/wp-content/uploads/2015/06/4.4.2_fig4.2.jpgrawtrue" alt="4.4.2_fig4.2"></p>
 <p>你可以通过 <code v-pre>&amp;i</code> 来获取变量 i 的内存地址，例如：<code v-pre>0xf840000040</code>（每次的地址都可能不一样）。</p>
@@ -792,7 +792,7 @@ a<span class="token punctuation">,</span> b<span class="token punctuation">,</sp
 <p><RouterLink to="/">Ⓜ️回到目录🏠</RouterLink></p>
 </li>
 <li>
-<p><a href="https://nsddd.top/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
+<p><a href="https://cubxxw.com/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
 </li>
 <li>
 <p>✴️版权声明 © :本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>

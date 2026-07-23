@@ -10,9 +10,9 @@
 <h2 id="a-simple-communication-rule" tabindex="-1"><a class="header-anchor" href="#a-simple-communication-rule" aria-hidden="true">#</a> A simple communication rule</h2>
 <details class="custom-container details"><summary>展开查看基础的代码</summary>
 <p>服务端代码：</p>
-<p><img src="http://sm.nsddd.top/smcode.png" alt="code"></p>
+<p><img src="http://sm.cubxxw.com/smcode.png" alt="code"></p>
 <p>客户端代码：</p>
-<p><img src="http://sm.nsddd.top/smcode1.png" alt="code1"></p>
+<p><img src="http://sm.cubxxw.com/smcode1.png" alt="code1"></p>
 <p>🚀 编译结果如下：</p>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>D:<span class="token punctuation">\</span>文档<span class="token punctuation">\</span>最近的<span class="token punctuation">\</span>awesome-golang<span class="token punctuation">\</span>docs<span class="token punctuation">\</span>code<span class="token punctuation">\</span>go-super<span class="token punctuation">\</span>socket<span class="token operator">></span>go run <span class="token number">57</span>-main.go
 连接服务器成功 <span class="token operator">&amp;</span><span class="token punctuation">{</span><span class="token punctuation">{</span>0xc000004c80<span class="token punctuation">}</span><span class="token punctuation">}</span>
@@ -326,7 +326,7 @@ aFASSaffdF
 <p><RouterLink to="/Gomd_super/">Ⓜ️回到首页🏠</RouterLink></p>
 </li>
 <li>
-<p><a href="https://nsddd.top/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
+<p><a href="https://cubxxw.com/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
 </li>
 <li>
 <p>✴️版权声明 © :本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>

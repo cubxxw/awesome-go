@@ -9,7 +9,7 @@
 <hr>
 <p><strong>区块链技术（也称之为分布式账本技术）</strong>，是一种互联网数据库技术，其特点是去中心化，公开透明，让每一个人均可参与的数据库记录</p>
 <blockquote>
-<p>❤️💕💕关于区块链技术，可以关注我，共同学习更多的区块链技术。博客<a href="http://nsddd.top" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
+<p>❤️💕💕关于区块链技术，可以关注我，共同学习更多的区块链技术。博客<a href="http://cubxxw.com" target="_blank" rel="noopener noreferrer">http://cubxxw.com<ExternalLinkIcon/></a></p>
 </blockquote>
 <hr>
 <h2 id="面对对象编程" tabindex="-1"><a class="header-anchor" href="#面对对象编程" aria-hidden="true">#</a> 面对对象编程</h2>
@@ -30,7 +30,7 @@
  * @LastEditTime: 2022-10-24 18:44:31
  * @FilePath: \code\go-super\20-main.go
  * @Github_Address: https://github.com/cubxxw/awesome-cs-cloudnative-blockchain
- * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://nsddd.top
+ * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://cubxxw.com
  */</span>
 <span class="token keyword">package</span> main
 
@@ -54,13 +54,13 @@
 	p2 <span class="token operator">:=</span> Person<span class="token punctuation">{</span><span class="token string">"Jack"</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">,</span> <span class="token string">"xiongxinwei@mail.com"</span><span class="token punctuation">}</span>
 	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"p2="</span><span class="token punctuation">,</span> p2<span class="token punctuation">)</span>
 
-	p3 <span class="token operator">:=</span> <span class="token operator">&amp;</span>Person<span class="token punctuation">{</span>Name<span class="token punctuation">:</span> <span class="token string">"Mary"</span><span class="token punctuation">,</span> Age<span class="token punctuation">:</span> <span class="token number">40</span><span class="token punctuation">,</span> Email<span class="token punctuation">:</span> <span class="token string">"cub@nsddd.top"</span><span class="token punctuation">}</span>
+	p3 <span class="token operator">:=</span> <span class="token operator">&amp;</span>Person<span class="token punctuation">{</span>Name<span class="token punctuation">:</span> <span class="token string">"Mary"</span><span class="token punctuation">,</span> Age<span class="token punctuation">:</span> <span class="token number">40</span><span class="token punctuation">,</span> Email<span class="token punctuation">:</span> <span class="token string">"cub@cubxxw.com"</span><span class="token punctuation">}</span>
 	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"p3="</span><span class="token punctuation">,</span> p3<span class="token punctuation">)</span>
 
 	p4 <span class="token operator">:=</span> <span class="token function">new</span><span class="token punctuation">(</span>Person<span class="token punctuation">)</span>
 	p4<span class="token punctuation">.</span>Name <span class="token operator">=</span> <span class="token string">"Mike"</span>
 	p4<span class="token punctuation">.</span>Age <span class="token operator">=</span> <span class="token number">50</span>
-	p4<span class="token punctuation">.</span>Email <span class="token operator">=</span> <span class="token string">"xxw@nsddd.top"</span>
+	p4<span class="token punctuation">.</span>Email <span class="token operator">=</span> <span class="token string">"xxw@cubxxw.com"</span>
 	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"p4="</span><span class="token punctuation">,</span> p4<span class="token punctuation">)</span>
 
 	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"p1.Email ="</span><span class="token punctuation">,</span> p1<span class="token punctuation">.</span>Email<span class="token punctuation">)</span>
@@ -73,15 +73,15 @@
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token punctuation">[</span>Running<span class="token punctuation">]</span> go run <span class="token string">"d:\文档\最近的<span class="token entity" title="\a">\a</span>wesome-golang\docs<span class="token entity" title="\c">\c</span>ode\go-super<span class="token entity" title="\20">\20</span>-main.go"</span>
 <span class="token assign-left variable">p1</span><span class="token operator">=</span> <span class="token punctuation">{</span>Tom <span class="token number">20</span> <span class="token number">3293172751</span>@qq.com<span class="token punctuation">}</span>
 <span class="token assign-left variable">p2</span><span class="token operator">=</span> <span class="token punctuation">{</span>Jack <span class="token number">30</span> xiongxinwei@mail.com<span class="token punctuation">}</span>
-<span class="token assign-left variable">p3</span><span class="token operator">=</span> <span class="token operator">&amp;</span><span class="token punctuation">{</span>Mary <span class="token number">40</span> cub@nsddd.top<span class="token punctuation">}</span>
-<span class="token assign-left variable">p4</span><span class="token operator">=</span> <span class="token operator">&amp;</span><span class="token punctuation">{</span>Mike <span class="token number">50</span> xxw@nsddd.top<span class="token punctuation">}</span>
+<span class="token assign-left variable">p3</span><span class="token operator">=</span> <span class="token operator">&amp;</span><span class="token punctuation">{</span>Mary <span class="token number">40</span> cub@cubxxw.com<span class="token punctuation">}</span>
+<span class="token assign-left variable">p4</span><span class="token operator">=</span> <span class="token operator">&amp;</span><span class="token punctuation">{</span>Mike <span class="token number">50</span> xxw@cubxxw.com<span class="token punctuation">}</span>
 p1.Email <span class="token operator">=</span> <span class="token number">3293172751</span>@qq.com
 p2.Email <span class="token operator">=</span> xiongxinwei@mail.com
-p3.Email <span class="token operator">=</span> cub@nsddd.top
-p4.Email <span class="token operator">=</span> xxw@nsddd.top
+p3.Email <span class="token operator">=</span> cub@cubxxw.com
+p4.Email <span class="token operator">=</span> xxw@cubxxw.com
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>结构体的值改变：</strong></p>
-<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code>	p1<span class="token punctuation">.</span>Email <span class="token operator">=</span> <span class="token string">"x@nsddd.top"</span> <span class="token comment">//修改 p1 的 Email</span>
-	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"p1.Email ="</span><span class="token punctuation">,</span> p1<span class="token punctuation">.</span>Email<span class="token punctuation">)</span> <span class="token comment">//p1.Email = x@nsddd.top</span>
+<div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code>	p1<span class="token punctuation">.</span>Email <span class="token operator">=</span> <span class="token string">"x@cubxxw.com"</span> <span class="token comment">//修改 p1 的 Email</span>
+	fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span><span class="token string">"p1.Email ="</span><span class="token punctuation">,</span> p1<span class="token punctuation">.</span>Email<span class="token punctuation">)</span> <span class="token comment">//p1.Email = x@cubxxw.com</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div></details>
 <p><strong>案例联系：</strong></p>
 <div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">package</span> main
@@ -265,7 +265,7 @@ fmt<span class="token punctuation">.</span><span class="token function">Println<
  * @LastEditTime: 2022-10-24 18:53:16
  * @FilePath: \code\go-super\21-main.go
  * @Github_Address: https://github.com/cubxxw/awesome-cs-cloudnative-blockchain
- * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://nsddd.top
+ * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://cubxxw.com
  */</span>
 <span class="token keyword">package</span> main
 
@@ -734,7 +734,7 @@ c= {{lihua 100} 20}
 <p><RouterLink to="/">Ⓜ️回到目录🏠</RouterLink></p>
 </li>
 <li>
-<p><a href="https://nsddd.top/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
+<p><a href="https://cubxxw.com/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
 </li>
 <li>
 <p>✴️版权声明 © :本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>

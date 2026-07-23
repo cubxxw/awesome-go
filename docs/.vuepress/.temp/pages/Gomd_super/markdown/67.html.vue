@@ -13,7 +13,7 @@
 	beego<span class="token punctuation">.</span><span class="token function">Run</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>我们看到 main 函数是入口函数，但是我们知道 Go 的执行过程是如下图所示的方式：</p>
-<p><img src="http://sm.nsddd.top/smimage-20221120221004281.png" alt="image-20221120221004281"></p>
+<p><img src="http://sm.cubxxw.com/smimage-20221120221004281.png" alt="image-20221120221004281"></p>
 <p>这里我们就看到了我们引入了一个包 <code v-pre>_ &quot;quickstart/routers&quot;</code>,这个包只引入执行了里面的 init 函数，那么让我们看看这个里面做了什么事情：</p>
 <div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>package routers
 
@@ -68,7 +68,7 @@ func init() {
 <p><RouterLink to="/Gomd_super/">Ⓜ️回到首页🏠</RouterLink></p>
 </li>
 <li>
-<p><a href="https://nsddd.top/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
+<p><a href="https://cubxxw.com/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
 </li>
 <li>
 <p>✴️版权声明 © :本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>

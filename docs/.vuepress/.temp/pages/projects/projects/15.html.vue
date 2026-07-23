@@ -6,7 +6,7 @@
 <div><a href = '14.md' style='float:left'>⬆️上一节🔗  </a><a href = '16.md' style='float: right'>  ⬇️下一节🔗</a></div>
 <br>
 <blockquote>
-<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://nsddd.top/" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
+<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://cubxxw.com/" target="_blank" rel="noopener noreferrer">http://cubxxw.com<ExternalLinkIcon/></a></p>
 </blockquote>
 <hr>
 <nav class="table-of-contents"><ul><li><router-link to="#go语言开发工程师痛点">Go语言开发工程师痛点</router-link></li><li><router-link to="#构建应用的基础-应用的三大基本功能">构建应用的基础：应用的三大基本功能</router-link></li><li><router-link to="#iam-apiserver-是如何构建应用框架的">iam-apiserver 是如何构建应用框架的</router-link></li><li><router-link to="#app-包设计和实现">App 包设计和实现</router-link><ul><li><router-link to="#第-1-步-构建应用">第 1 步：构建应用</router-link></li><li><router-link to="#第-2-步-命令行程序构建">第 2 步：命令行程序构建</router-link></li><li><router-link to="#第-3-步-命令行参数解析">第 3 步：命令行参数解析</router-link></li><li><router-link to="#第-4-步-配置文件解析">第 4 步：配置文件解析</router-link></li></ul></li><li><router-link to="#这样构建的应用程序-有哪些优秀特性">这样构建的应用程序，有哪些优秀特性？</router-link></li><li><router-link to="#如果你想自己构建应用-需要注意些什么">如果你想自己构建应用，需要注意些什么？</router-link></li><li><router-link to="#总结">总结</router-link></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
@@ -49,7 +49,7 @@
 <li>应用初始化。</li>
 <li>服务启动。</li>
 </ul>
-<p><img src="http://sm.nsddd.top/sm202302222138795.png" alt="image-20230222213853711"></p>
+<p><img src="http://sm.cubxxw.com/sm202302222138795.png" alt="image-20230222213853711"></p>
 <p>图中，命令行程序、命令行参数解析和配置文件解析，是所有服务都需要具备的功能，这些功能有机结合到一起，共同构成了应用框架。</p>
 <p>所以，我们要构建的任何一个应用程序，至少要具备命令行程序、命令行参数解析和配置文件解析这 3 种功能。</p>
 <ul>
@@ -125,7 +125,7 @@ application <span class="token operator">:=</span> app<span class="token punctua
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token punctuation">[</span>colin@dev iam<span class="token punctuation">]</span>$ <span class="token function">ls</span> pkg/app/
 app.go  cmd.go  config.go  doc.go  flag.go  help.go  options.go
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p><code v-pre>pkg/app</code> 目录下的 5 个主要文件是 app.go、cmd.go、config.go、flag.go、options.go，分别实现了应用程序框架中的应用、命令行程序、命令行参数解析、配置文件解析和命令行选项 5 个部分，具体关系如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202302222216577.png" alt="img"></p>
+<p><img src="http://sm.cubxxw.com/sm202302222216577.png" alt="img"></p>
 <p>我再来解释下这张图。应用由命令行程序、命令行参数解析、配置文件解析三部分组成，命令行参数解析功能通过命令行选项来构建，二者通过接口解耦合：</p>
 <div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">type</span> CliOptions <span class="token keyword">interface</span> <span class="token punctuation">{</span>    
     <span class="token comment">// AddFlags adds flags to the specified FlagSet object.    </span>
@@ -395,7 +395,7 @@ Mysql flags:
 <p><RouterLink to="/projects/">Ⓜ️回到目录🏠</RouterLink></p>
 </li>
 <li>
-<p><a href="https://nsddd.top/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
+<p><a href="https://cubxxw.com/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
 </li>
 <li>
 <p>✴️版权声明 © ：本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>

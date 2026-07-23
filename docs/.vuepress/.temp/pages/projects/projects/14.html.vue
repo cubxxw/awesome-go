@@ -6,7 +6,7 @@
 <div><a href = '13.md' style='float:left'>⬆️上一节🔗  </a><a href = '15.md' style='float: right'>  ⬇️下一节🔗</a></div>
 <br>
 <blockquote>
-<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://nsddd.top/" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
+<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://cubxxw.com/" target="_blank" rel="noopener noreferrer">http://cubxxw.com<ExternalLinkIcon/></a></p>
 </blockquote>
 <hr>
 <nav class="table-of-contents"><ul><li><router-link to="#如何构建应用框架">如何构建应用框架</router-link></li><li><router-link to="#命令行参数解析工具-pflag-使用介绍">命令行参数解析工具：Pflag 使用介绍</router-link><ul><li><router-link to="#pflag-包-flag-定义">Pflag 包 Flag 定义</router-link></li><li><router-link to="#pflag-包-flagset-定义">Pflag 包 FlagSet 定义</router-link></li><li><router-link to="#pflag-使用方法">Pflag 使用方法</router-link></li></ul></li><li><router-link to="#配置解析神器-viper-使用介绍">配置解析神器：Viper 使用介绍</router-link><ul><li><router-link to="#读入配置">读入配置</router-link></li><li><router-link to="#读取配置">读取配置</router-link></li></ul></li><li><router-link to="#现代化的命令行框架-cobra-全解">现代化的命令行框架：Cobra 全解</router-link><ul><li><router-link to="#使用-cobra-库创建命令">使用 Cobra 库创建命令</router-link></li><li><router-link to="#使用标志-1">使用标志</router-link></li><li><router-link to="#非选项参数验证">非选项参数验证</router-link></li></ul></li><li><router-link to="#prerun-and-postrun-hooks">PreRun and PostRun Hooks</router-link></li><li><router-link to="#总结">总结</router-link></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
@@ -171,7 +171,7 @@ pflag<span class="token punctuation">.</span><span class="token function">BoolVa
 <p>创建一个 Flag 后，可以为这个 Flag 设置<code v-pre>pflag.NoOptDefVal</code>。如果一个 Flag 具有 NoOptDefVal，并且该 Flag 在命令行上没有设置这个 Flag 的值，则该标志将设置为 NoOptDefVal 指定的值。例如：</p>
 <div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">var</span> ip <span class="token operator">=</span> pflag<span class="token punctuation">.</span><span class="token function">IntP</span><span class="token punctuation">(</span><span class="token string">"flagname"</span><span class="token punctuation">,</span> <span class="token string">"f"</span><span class="token punctuation">,</span> <span class="token number">1234</span><span class="token punctuation">,</span> <span class="token string">"help message"</span><span class="token punctuation">)</span>pflag<span class="token punctuation">.</span><span class="token function">Lookup</span><span class="token punctuation">(</span><span class="token string">"flagname"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>NoOptDefVal <span class="token operator">=</span> <span class="token string">"4321"</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>上面的代码会产生结果，具体你可以参照下表：</p>
-<p><a href="https://static001.geekbang.org/resource/image/fe/3f/fe76a52906c35b49b890225d1f5fc93f.png?wh=1428x336" target="_blank" rel="noopener noreferrer"><img src="http://sm.nsddd.top/sm202302222038386.png" alt="img"><ExternalLinkIcon/></a></p>
+<p><a href="https://static001.geekbang.org/resource/image/fe/3f/fe76a52906c35b49b890225d1f5fc93f.png?wh=1428x336" target="_blank" rel="noopener noreferrer"><img src="http://sm.cubxxw.com/sm202302222038386.png" alt="img"><ExternalLinkIcon/></a></p>
 <h4 id="弃用标志或者标志的简写" tabindex="-1"><a class="header-anchor" href="#弃用标志或者标志的简写" aria-hidden="true">#</a> 弃用标志或者标志的简写</h4>
 <p>Pflag 可以弃用标志或者标志的简写。弃用的标志或标志简写在帮助文本中会被隐藏，并在使用不推荐的标志或简写时打印正确的用法提示。例如，弃用名为 logmode 的标志，并告知用户应该使用哪个标志代替：</p>
 <div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token comment">// deprecate a flag by specifying its name and a usage messagepflag.CommandLine.MarkDeprecated("logmode", "please use --log-mode instead")</span>
@@ -640,7 +640,7 @@ rootCmd<span class="token punctuation">.</span><span class="token function">Mark
 <p><RouterLink to="/projects/">Ⓜ️回到目录🏠</RouterLink></p>
 </li>
 <li>
-<p><a href="https://nsddd.top/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
+<p><a href="https://cubxxw.com/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
 </li>
 <li>
 <p>✴️版权声明 © ：本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>

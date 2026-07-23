@@ -7,7 +7,7 @@
 <li><RouterLink to="/go-advancend/markdown/37.html">上一节</RouterLink></li>
 </ul>
 <blockquote>
-<p>❤️💕💕Go语言高级篇章,在此之前建议您先了解基础和进阶篇。Myblog:<a href="http://nsddd.top/" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
+<p>❤️💕💕Go语言高级篇章,在此之前建议您先了解基础和进阶篇。Myblog:<a href="http://cubxxw.com/" target="_blank" rel="noopener noreferrer">http://cubxxw.com<ExternalLinkIcon/></a></p>
 </blockquote>
 <h2 id="go语言基础篇" tabindex="-1"><a class="header-anchor" href="#go语言基础篇" aria-hidden="true">#</a> <strong><a href="https://github.com/cubxxw/awesome-cs-cloudnative-blockchain/blob/master/TOC.md" target="_blank" rel="noopener noreferrer">Go语言基础篇<ExternalLinkIcon/></a></strong></h2>
 <h2 id="go语言100篇进阶" tabindex="-1"><a class="header-anchor" href="#go语言100篇进阶" aria-hidden="true">#</a> <strong><a href="https://github.com/cubxxw/awesome-cs-cloudnative-blockchain/blob/master/Gomd_super/README.md" target="_blank" rel="noopener noreferrer">Go语言100篇进阶<ExternalLinkIcon/></a></strong></h2>
@@ -52,7 +52,7 @@
 <p>在多进程 / 多线程的操作系统中，就解决了阻塞的问题，因为一个进程阻塞 cpu 可以立刻切换到其他进程中去执行，而且调度 cpu 的算法可以保证在运行的进程都可以被分配到 cpu 的运行时间片。这样从宏观来看，似乎多个进程是在同时被运行。</p>
 <p>但新的问题就又出现了，进程拥有太多的资源，进程的创建、切换、销毁，都会占用很长的时间，CPU 虽然利用起来了，但如果进程过多，CPU 有很大的一部分都被用来进行进程调度了。</p>
 <p><strong>怎么才能提高 CPU 的利用率呢？</strong></p>
-<p>但是对于 Linux 操作系统来讲，cpu 对进程的态度和线程的态度是一样的。  <img src="http://sm.nsddd.top/sm202304141352813.png" alt="sadfa"></p>
+<p>但是对于 Linux 操作系统来讲，cpu 对进程的态度和线程的态度是一样的。  <img src="http://sm.cubxxw.com/sm202304141352813.png" alt="sadfa"></p>
 <p>很明显，CPU 调度切换的是进程和线程。尽管线程看起来很美好，但实际上多线程开发设计会变得更加复杂，要考虑很多同步竞争等问题，如锁、竞争冲突等。</p>
 <h3 id="_3-协程来提高-cpu-利用率" tabindex="-1"><a class="header-anchor" href="#_3-协程来提高-cpu-利用率" aria-hidden="true">#</a> (3) 协程来提高 CPU 利用率</h3>
 <p>多进程、多线程已经提高了系统的并发能力，但是在当今互联网高并发场景下，为每个任务都创建一个线程是不现实的，因为会消耗大量的内存 (进程虚拟内存会占用 4GB [32 位操作系统], 而线程也要大约 4MB)。</p>
@@ -164,7 +164,7 @@
 <p>5、当 M 执行某一个 G 时候如果发生了 syscall 或则其余阻塞操作，M 会阻塞，如果当前有一些 G 在执行，runtime 会把这个线程 M 从 P 中摘除 (detach)，然后再创建一个新的操作系统的线程 (如果有空闲的线程可用就复用空闲线程) 来服务于这个 P；</p>
 <p>6、当 M 系统调用结束时候，这个 G 会尝试获取一个空闲的 P 执行，并放入到这个 P 的本地队列。如果获取不到 P，那么这个线程 M 变成休眠状态， 加入到空闲线程中，然后这个 G 会被放入全局队列中。</p>
 <h3 id="_4-调度器的生命周期" tabindex="-1"><a class="header-anchor" href="#_4-调度器的生命周期" aria-hidden="true">#</a> (4) 调度器的生命周期</h3>
-<p><img src="http://sm.nsddd.top/sm202304141355191.png" alt="sdf"></p>
+<p><img src="http://sm.cubxxw.com/sm202304141355191.png" alt="sdf"></p>
 <p>特殊的 M0 和 G0</p>
 <p><strong>M0</strong></p>
 <p><code v-pre>M0</code> 是启动程序后的编号为 0 的主线程，这个 M 对应的实例会在全局变量 runtime.m0 中，不需要在 heap 上分配，M0 负责执行初始化操作和启动第一个 G， 在之后 M0 就和其他的 M 一样了。</p>
@@ -241,8 +241,8 @@ Hello World
 
 
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>我们可以通过浏览器打开 <code v-pre>http://127.0.0.1:33479</code> 网址，点击 <code v-pre>view trace</code> 能够看见可视化的调度流程。</p>
-<p><img src="http://sm.nsddd.top/sm202304141355516.png" alt="sdf"></p>
-<p><img src="http://sm.nsddd.top/sm202304141355785.png" alt="sd"></p>
+<p><img src="http://sm.cubxxw.com/sm202304141355516.png" alt="sdf"></p>
+<p><img src="http://sm.cubxxw.com/sm202304141355785.png" alt="sd"></p>
 <p><strong>G 信息</strong></p>
 <p>点击 Goroutines 那一行可视化的数据条，我们会看到一些详细的信息。</p>
 <p><img src="https://cdn.learnku.com/uploads/images/202003/11/58489/QLm0KK1hhd.png!large" alt=""></p>

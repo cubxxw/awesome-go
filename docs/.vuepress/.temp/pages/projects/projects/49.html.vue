@@ -6,7 +6,7 @@
 <div><a href = '48.md' style='float:left'>⬆️上一节🔗  </a><a href = '50.md' style='float: right'>  ⬇️下一节🔗</a></div>
 <br>
 <blockquote>
-<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://nsddd.top/" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
+<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://cubxxw.com/" target="_blank" rel="noopener noreferrer">http://cubxxw.com<ExternalLinkIcon/></a></p>
 </blockquote>
 <hr>
 <nav class="table-of-contents"><ul><li><router-link to="#走的更远">走的更远</router-link></li><li><router-link to="#开发者阶段">开发者阶段</router-link><ul><li><router-link to="#第一步-基础语法学习">第一步：基础语法学习</router-link></li><li><router-link to="#第二步-认真研究一个优秀的项目">第二步：认真研究一个优秀的项目</router-link></li><li><router-link to="#第三步-项目实战">第三步：项目实战</router-link></li></ul></li><li><router-link to="#架构师阶段">架构师阶段</router-link></li><li><router-link to="#创业者阶段">创业者阶段</router-link></li><li><router-link to="#写在最后">写在最后</router-link></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
@@ -168,7 +168,7 @@
 <p><RouterLink to="/projects/">Ⓜ️回到目录🏠</RouterLink></p>
 </li>
 <li>
-<p><a href="https://nsddd.top/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
+<p><a href="https://cubxxw.com/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
 </li>
 <li>
 <p>✴️版权声明 © ：本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>

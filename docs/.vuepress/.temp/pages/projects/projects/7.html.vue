@@ -6,7 +6,7 @@
 <div><a href = '6.md' style='float:left'>⬆️上一节🔗  </a><a href = '8.md' style='float: right'>  ⬇️下一节🔗</a></div>
 <br>
 <blockquote>
-<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://nsddd.top/" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
+<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://cubxxw.com/" target="_blank" rel="noopener noreferrer">http://cubxxw.com<ExternalLinkIcon/></a></p>
 </blockquote>
 <hr>
 <nav class="table-of-contents"><ul><li><router-link to="#低质量的makefile">低质量的makefile</router-link></li><li><router-link to="#makefile-如何工作">makefile 如何工作</router-link><ul><li><router-link to="#build-and-run">Build and Run</router-link></li><li><router-link to="#cleaning-and-drying">Cleaning and DRYing</router-link></li><li><router-link to="#phony-targets">PHONY targets</router-link></li><li><router-link to="#recursive-make-targets">Recursive Make targets</router-link></li><li><router-link to="#targets-for-docker-commands">Targets for Docker commands</router-link></li><li><router-link to="#符号">@ 符号</router-link></li><li><router-link to="#文件搜索-vpath">文件搜索 VPATH</router-link></li><li><router-link to="#help-target">Help target</router-link></li><li><router-link to="#conclusion-结论">Conclusion 结论</router-link></li></ul></li><li><router-link to="#熟练makefile语法">熟练makefile语法</router-link><ul><li><router-link to="#常用的-makefile-核心语法">常用的 Makefile 核心语法</router-link></li><li><router-link to="#makefile-支持的通配符">makefile 支持的通配符</router-link></li><li><router-link to="#变量">变量</router-link></li><li><router-link to="#函数">函数</router-link></li><li><router-link to="#引入其他-makefile">引入其他 Makefile</router-link></li></ul></li><li><router-link to="#设计makefile结构">设计Makefile结构</router-link></li><li><router-link to="#掌握-makefile-编写技巧">掌握 Makefile 编写技巧</router-link><ul><li><router-link to="#技巧-1-善用通配符和自动变量">技巧 1：善用通配符和自动变量</router-link></li><li><router-link to="#技巧-2-善用函数">技巧 2：善用函数</router-link></li><li><router-link to="#技巧-3-依赖需要用到的工具">技巧 3：依赖需要用到的工具</router-link></li><li><router-link to="#技巧-4-把常用功能放在-makefile-中-不常用的放在分类-makefile-中">技巧 4：把常用功能放在 /Makefile 中，不常用的放在分类 Makefile 中</router-link></li><li><router-link to="#技巧-5-编写可扩展的-makefile">技巧 5：编写可扩展的 Makefile</router-link></li><li><router-link to="#技巧-6-将所有输出存放在一个目录下-方便清理和查找">技巧 6：将所有输出存放在一个目录下，方便清理和查找</router-link></li><li><router-link to="#技巧-7-使用带层级的命名方式">技巧 7：使用带层级的命名方式</router-link></li><li><router-link to="#技巧-8-做好目标拆分">技巧 8：做好目标拆分</router-link></li><li><router-link to="#技巧-9-设置-options">技巧 9：设置 OPTIONS</router-link></li><li><router-link to="#技巧-10-定义环境变量">技巧 10：定义环境变量</router-link></li><li><router-link to="#技巧-11-自己调用自己">技巧 11：自己调用自己</router-link></li></ul></li><li><router-link to="#makefile-多线程">Makefile 多线程</router-link></li><li><router-link to="#makefile-参数">Makefile 参数</router-link><ul><li><router-link to="#常用的参数">常用的参数</router-link></li></ul></li><li><router-link to="#补充-makefile-go语言交叉编译">补充：Makefile Go语言交叉编译</router-link><ul><li><router-link to="#获取版本号">获取版本号</router-link></li><li><router-link to="#实现交叉编译">实现交叉编译</router-link></li></ul></li><li><router-link to="#总结">总结</router-link></li><li><router-link to="#end-链接">END 链接</router-link><ul><li><router-link to="#links">LInks</router-link></li></ul></li></ul></nav>
@@ -34,7 +34,7 @@
 <li>掌握方法，用好 <code v-pre>Makefile</code> 的编写技巧。</li>
 </ul>
 <h2 id="makefile-如何工作" tabindex="-1"><a class="header-anchor" href="#makefile-如何工作" aria-hidden="true">#</a> makefile 如何工作</h2>
-<p><img src="http://sm.nsddd.top/sm202302192223604.png" alt="image-20230219222355491"></p>
+<p><img src="http://sm.cubxxw.com/sm202302192223604.png" alt="image-20230219222355491"></p>
 <p><strong>makefile规则：</strong></p>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>target <span class="token punctuation">..</span>. <span class="token builtin class-name">:</span> prerequisites <span class="token punctuation">..</span>.
     <span class="token builtin class-name">command</span>
@@ -556,7 +556,7 @@ A <span class="token operator">=</span> c
 ...
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>此外，Makefile 还支持两种内置的变量：特殊变量和自动化变量。</p>
 <p>特殊变量是 make 提前定义好的，可以在 makefile 中直接引用。特殊变量列表如下：</p>
-<p><img src="http://sm.nsddd.top/sm202302201636940.png" alt="image-20230220163605753"></p>
+<p><img src="http://sm.cubxxw.com/sm202302201636940.png" alt="image-20230220163605753"></p>
 <p>Makefile 还支持自动化变量。自动化变量可以提高我们编写 Makefile 的效率和质量。</p>
 <p><strong>自动化变量：</strong></p>
 <p>自动化变量也叫做系统变量，这个是非常有用的，一个好的 Makefile 工作者不亚于 bash 的脚本小子，自动化变量占比非常高：</p>
@@ -616,7 +616,7 @@ test1.o:test1.c test1.h
 test2.o:test2.c test2.h
          gcc <span class="token parameter variable">-o</span> <span class="token variable">$@</span> $<span class="token operator">&lt;</span>  <span class="token comment">#等同于gcc -o test2.o test2.c</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>这时就可以用到自动化变量。所谓自动化变量，就是这种变量会把模式中所定义的一系列的文件自动地挨个取出，一直到所有符合模式的文件都取完为止。这种自动化变量只应出现在规则的命令中。Makefile 中支持的自动化变量见下表。</p>
-<p><img src="http://sm.nsddd.top/sm202303181839805.png" alt="image-20230220163723550"></p>
+<p><img src="http://sm.cubxxw.com/sm202303181839805.png" alt="image-20230220163723550"></p>
 <p>上面这些自动化变量中，<code v-pre>$*</code>是用得最多的。<code v-pre>$*</code> 对于构造有关联的文件名是比较有效的。如果目标中没有模式的定义，那么 <code v-pre>$*</code> 也就不能被推导出。但是，如果目标文件的后缀是 make 所识别的，那么 <code v-pre>$*</code> 就是除了后缀的那一部分。例如：如果目标是 <code v-pre>foo.c</code> ，因为.c 是 make 所能识别的后缀名，所以 <code v-pre>$*</code> 的值就是 foo。</p>
 <blockquote>
 <p><code v-pre>$*</code> 是一个自动变量，表示目标的名称，即这个规则被应用于哪个目标。例如，如果在命令行上输入 <code v-pre>make tools.install.foo</code>，那么 <code v-pre>$*</code> 的值将是 <code v-pre>foo</code>。在 Makefile 规则中，可以使用 <code v-pre>$*</code> 来引用目标名称，例如：</p>
@@ -700,7 +700,7 @@ OR
 GOOS <span class="token operator">:=</span> <span class="token variable">$</span><span class="token punctuation">(</span><span class="token function">word</span> 1, <span class="token variable">$</span><span class="token punctuation">(</span><span class="token function">subst</span> _, ,<span class="token variable">$</span><span class="token punctuation">(</span>PLATFORM<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>上面的例子用到了两个函数：word 和 subst。word 函数有两个参数，1 和 subst 函数的输出。subst 函数将 PLATFORM 变量值中的 <code v-pre>_</code> 替换成空格（替换后的 PLATFORM 值为 linux amd64）。word 函数取 <code v-pre>linux amd64</code> 字符串中的第一个单词。所以最后 GOOS 的值为 linux。</p>
 <p>Makefile 预定义函数能够帮助我们实现很多强大的功能，在编写 Makefile 的过程中，如果有功能需求，可以优先使用这些函数。如果你想使用这些函数，那就需要知道有哪些函数，以及它们实现的功能。</p>
-<p><img src="http://sm.nsddd.top/sm202302201721492.jpeg" alt="img"></p>
+<p><img src="http://sm.cubxxw.com/sm202302201721492.jpeg" alt="img"></p>
 <h3 id="引入其他-makefile" tabindex="-1"><a class="header-anchor" href="#引入其他-makefile" aria-hidden="true">#</a> 引入其他 Makefile</h3>
 <p>在 Makefile 中，我们可以通过关键字 include，把别的 makefile 包含进来，类似于 C 语言的<code v-pre>#include</code>，被包含的文件会插入在当前的位置。include 用法为 include ，示例如下：</p>
 <div class="language-makefile ext-makefile line-numbers-mode"><pre v-pre class="language-makefile"><code><span class="token keyword">include</span> scripts/make-rules/common.mk
@@ -716,7 +716,7 @@ GOOS <span class="token operator">:=</span> <span class="token variable">$</span
 <p>对于大型项目来说，需要管理的内容很多，所有管理功能都集成在一个 Makefile 中，可能会导致 Makefile 很大，难以阅读和维护，所以建议采用分层的设计方法，<strong>根目录下的 Makefile 聚合所有的 Makefile 命令，具体实现则按功能分类，放在另外的 Makefile 中。</strong></p>
 <p>我们经常会在 Makefile 命令中集成 shell 脚本，但如果 shell 脚本过于复杂，也会导致 Makefile 内容过多，难以阅读和维护。并且在 Makefile 中集成复杂的 shell 脚本，编写体验也很差。对于这种情况，<strong>可以将复杂的 shell 命令封装在 shell 脚本中，供 Makefile 直接调用，而一些简单的命令则可以直接集成在 Makefile 中。</strong></p>
 <p><strong>推荐的 Makefile 结构：</strong></p>
-<p><img src="https://sm.nsddd.top/sm202302191533699.png" alt="image-20230219153332640"></p>
+<p><img src="https://sm.cubxxw.com/sm202302191533699.png" alt="image-20230219153332640"></p>
 <p>在上面的 Makefile 组织方式中，根目录下的 Makefile 聚合了项目所有的管理功能，这些管理功能通过 Makefile 伪目标的方式实现。同时，还将这些伪目标进行分类，把相同类别的伪目标放在同一个 Makefile 中，这样可以使得 Makefile 更容易维护。对于复杂的命令，则编写成独立的 shell 脚本，并在 Makefile 命令中调用这些 shell 脚本。</p>
 <p>举个例子，下面是 IAM 项目的 Makefile 组织结构：</p>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>
@@ -1225,7 +1225,7 @@ build:
 <p><RouterLink to="/projects/">Ⓜ️回到目录🏠</RouterLink></p>
 </li>
 <li>
-<p><a href="https://nsddd.top/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
+<p><a href="https://cubxxw.com/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
 </li>
 <li>
 <p>✴️版权声明 © ：本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>

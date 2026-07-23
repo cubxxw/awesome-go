@@ -5,7 +5,7 @@
  * @LastEditTime: 2022-10-24 20:01:45
  * @FilePath: \code\go-super\24-main.go
  * @Github_Address: https://github.com/cubxxw/awesome-cs-cloudnative-blockchain
- * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://nsddd.top
+ * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://cubxxw.com
  */
 package main
 
@@ -31,7 +31,7 @@ func main() {
 	var c = &ConfigList{}
 
 	//定义一个json
-	jsonBody := `{"configs":[{"id":"1","性别":["asfd","asfd"],"年龄":20,"姓名":"Tom"},{"id":"2","性别":["asfd","asfd","asfd"],"年龄":30,"姓名":"Jack"}],"id":"3","性别":["asfd","asfd","asfd","as"],"年龄":40,"姓名":"Rose","email":"\tnsddd.top"}`
+	jsonBody := `{"configs":[{"id":"1","性别":["asfd","asfd"],"年龄":20,"姓名":"Tom"},{"id":"2","性别":["asfd","asfd","asfd"],"年龄":30,"姓名":"Jack"}],"id":"3","性别":["asfd","asfd","asfd","as"],"年龄":40,"姓名":"Rose","email":"\tcubxxw.com"}`
 
 	if err := json.Unmarshal([]byte(jsonBody), c); err != nil {
 		defer func() {

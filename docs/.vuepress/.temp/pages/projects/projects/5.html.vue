@@ -6,7 +6,7 @@
 <div><a href = '4.md' style='float:left'>⬆️上一节🔗  </a><a href = '6.md' style='float: right'>  ⬇️下一节🔗</a></div>
 <br>
 <blockquote>
-<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://nsddd.top/" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
+<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://cubxxw.com/" target="_blank" rel="noopener noreferrer">http://cubxxw.com<ExternalLinkIcon/></a></p>
 </blockquote>
 <hr>
 <nav class="table-of-contents"><ul><li><router-link to="#go语言">Go语言</router-link></li><li><router-link to="#如何开发出一个优雅的go语言项目">如何开发出一个优雅的Go语言项目</router-link><ul><li><router-link to="#编写高质量的go语言项目">编写高质量的Go语言项目</router-link></li><li><router-link to="#项目结构">项目结构</router-link></li><li><router-link to="#代码规范">代码规范</router-link></li><li><router-link to="#代码质量">代码质量</router-link></li><li><router-link to="#编程的内功">编程的内功</router-link></li><li><router-link to="#高效管理项目">高效管理项目</router-link></li><li><router-link to="#高效的开发流程">高效的开发流程</router-link></li><li><router-link to="#使用-makefile-管理项目">使用 Makefile 管理项目</router-link></li><li><router-link to="#自动生成代码-低代码">自动生成代码（低代码）</router-link></li><li><router-link to="#善于借助工具">善于借助工具</router-link></li><li><router-link to="#对接cicd">对接CICD</router-link></li><li><router-link to="#编写高质量的项目文档">编写高质量的项目文档</router-link></li><li><router-link to="#总结">总结</router-link></li></ul></li><li><router-link to="#设计模式">设计模式</router-link><ul><li><router-link to="#创建型模式">创建型模式</router-link></li><li><router-link to="#结构型模式">结构型模式</router-link></li><li><router-link to="#行为型模式">行为型模式</router-link></li><li><router-link to="#总结-1">总结</router-link></li></ul></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
@@ -16,7 +16,7 @@
 <p>在我的 Go 开发生涯中，我见过各种各样的代码问题，例如：代码不规范，难以阅读；函数共享性差，代码重复率高；不是面向接口编程，代码扩展性差，代码不可测；代码质量低下。究其原因，是因为这些代码的开发者很少花时间去认真研究如何开发一个优雅的 Go 项目，更多时间是埋头在需求开发中。</p>
 <h2 id="如何开发出一个优雅的go语言项目" tabindex="-1"><a class="header-anchor" href="#如何开发出一个优雅的go语言项目" aria-hidden="true">#</a> 如何开发出一个优雅的Go语言项目</h2>
 <p>先来看第一个问题。Go 项目是一个偏工程化的概念，不仅包含了 Go 应用，还包含了项目管理和项目文档：</p>
-<p><img src="http://sm.nsddd.top/sm202302171619883.png" alt="image-20230217161911829"></p>
+<p><img src="http://sm.cubxxw.com/sm202302171619883.png" alt="image-20230217161911829"></p>
 <p>这就来到了第二个问题，一个优雅的 Go 项目，不仅要求我们的 Go 应用是优雅的，还要确保我们的项目管理和文档也是优雅的。这样，我们根据前面几讲学到的 Go 设计规范，很容易就能总结出一个优雅的 Go 应用需要具备的特点：</p>
 <ul>
 <li>符合 Go 编码规范和最佳实践；</li>
@@ -26,17 +26,17 @@
 </ul>
 <p>解决了这两个问题，让我们回到这一讲的核心问题：如何写出优雅的 Go 项目？</p>
 <p>写出一个优雅的 Go 项目，在我看来，就是用“最佳实践”的方式去实现 Go 项目中的 Go 应用、项目管理和项目文档。具体来说，就是编写高质量的 Go 应用、高效管理项目、编写高质量的项目文档。</p>
-<p><img src="http://sm.nsddd.top/sm202302171633540.png" alt="image-20230217163339479"></p>
+<p><img src="http://sm.cubxxw.com/sm202302171633540.png" alt="image-20230217163339479"></p>
 <h3 id="编写高质量的go语言项目" tabindex="-1"><a class="header-anchor" href="#编写高质量的go语言项目" aria-hidden="true">#</a> 编写高质量的Go语言项目</h3>
 <p>基于我的研发经验，要编写一个高质量的 Go 应用，其实可以归纳为 5 个方面：代码结构、代码规范、代码质量、编程哲学和软件设计方法，见下图。</p>
-<p><img src="http://sm.nsddd.top/sm202302171634575.png" alt="image-20230217163414536"></p>
+<p><img src="http://sm.cubxxw.com/sm202302171634575.png" alt="image-20230217163414536"></p>
 <h3 id="项目结构" tabindex="-1"><a class="header-anchor" href="#项目结构" aria-hidden="true">#</a> 项目结构</h3>
 <p>为什么先说代码结构呢？因为组织合理的代码结构是一个项目的门面。我们可以通过两个手段来组织代码结构。</p>
 <p>第一个手段是，组织一个好的目录结构。</p>
 <p>第二个手段是，选择一个好的模块拆分方法。做好模块拆分，可以使项目内模块职责分明，做到低耦合高内聚。</p>
 <p>那么 Go 项目开发中，如何拆分模块呢？目前业界有两种拆分方法，<strong>分别是按层拆分和按功能拆分</strong>。</p>
 <p>首先，我们看下按层拆分，最典型的是 <strong>MVC 架构中的模块拆分方式</strong>。在 MVC 架构中，我们将服务中的不同组件按访问顺序，拆分成了 Model、View 和 Controller 三层。</p>
-<img src="http://sm.nsddd.top/sm202302171642302.png" alt="image-20230217164204214" style="zoom: 25%;" />
+<img src="http://sm.cubxxw.com/sm202302171642302.png" alt="image-20230217164204214" style="zoom: 25%;" />
 <p><strong>每层完成不同的功能：</strong></p>
 <ul>
 <li>View（视图）是提供给用户的操作界面，用来处理数据的显示。</li>
@@ -61,7 +61,7 @@ layers
 <blockquote>
 <p>比如，一个订单系统，我们可以根据不同功能将其拆分成用户（user）、订单（order）和计费（billing）3 个模块，每一个模块提供独立的功能，功能更单一：</p>
 </blockquote>
-<img src="http://sm.nsddd.top/sm202302171644290.png" alt="image-20230217164426213" style="zoom:25%;" />
+<img src="http://sm.cubxxw.com/sm202302171644290.png" alt="image-20230217164426213" style="zoom:25%;" />
 <p>下面是该订单系统的代码目录结构：</p>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ tree pkg
 $ tree <span class="token parameter variable">--noreport</span> <span class="token parameter variable">-L</span> <span class="token number">2</span> pkg
@@ -99,7 +99,7 @@ pkg
 </ul>
 <p>如果函数 A 依赖数据库连接、第三方服务，那么在单元测试环境下执行单元测试就会失败，函数就没法测试，函数是不可测的。</p>
 <p>解决方法也很简单：将依赖的数据库、第三方服务等抽象成接口，在被测代码中调用接口的方法，在测试时传入 mock 类型，从而将数据库、第三方服务等依赖从具体的被测函数中解耦出去。如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202302171724729.png" alt="image-20230217172449662"></p>
+<p><img src="http://sm.cubxxw.com/sm202302171724729.png" alt="image-20230217172449662"></p>
 <p>为了提高代码的可测性，降低单元测试的复杂度，对 function 和 mock 的要求是：</p>
 <ul>
 <li>要尽可能减少 function 中的依赖，让 function 只依赖必要的模块。编写一个功能单一、职责分明的函数，会有利于减少依赖。</li>
@@ -315,23 +315,23 @@ $ go tool cover <span class="token parameter variable">-func</span> ./coverage.o
 <blockquote>
 <p>这里解释下什么叫组合：一个结构体嵌到另一个结构体，称作组合。例如一个结构体包含了一个匿名结构体，就说这个结构体组合了该匿名结构体。</p>
 </blockquote>
-<p><img src="http://sm.nsddd.top/sm202302171914684.png" alt="image-20230217191438539"></p>
+<p><img src="http://sm.cubxxw.com/sm202302171914684.png" alt="image-20230217191438539"></p>
 <h4 id="软件设计方法" tabindex="-1"><a class="header-anchor" href="#软件设计方法" aria-hidden="true">#</a> 软件设计方法</h4>
 <p>接下来，我们继续学习编写高质量 Go 代码的第二项内功，也就是让编写的代码遵循一些业界沉淀下来的，优秀的软件设计方法。</p>
 <p>优秀的软件设计方法有很多，其中有两类方法对我们代码质量的提升特别有帮助，分别是设计模式（Design pattern）和 SOLID 原则。</p>
 <p>在我看来，设计模式可以理解为业界针对一些特定的场景总结出来的最佳实现方式。它的特点是解决的场景比较具体，实施起来会比较简单；而 SOLID 原则更侧重设计原则，需要我们彻底理解，并在编写代码时多思考和落地。</p>
 <p><strong>我们先了解下有哪些设计模式。</strong></p>
 <p>在软件领域，沉淀了一些比较优秀的设计模式，其中最受欢迎的是 GOF 设计模式。<strong>GOF 设计模式中包含了 3 大类（创建型模式、结构型模式、行为型模式）</strong>，共 25 种经典的、可以解决常见软件设计问题的设计方案。这 25 种设计方案同样也适用于 Go 语言开发的项目。</p>
-<p><img src="http://sm.nsddd.top/sm202302171934475.png" alt="image-20230217193435403"></p>
+<p><img src="http://sm.cubxxw.com/sm202302171934475.png" alt="image-20230217193435403"></p>
 <p>如果说设计模式解决的是具体的场景，那么 SOLID 原则就是我们设计应用代码时的指导方针。</p>
 <p>SOLID 原则，是由罗伯特·C·马丁在 21 世纪早期引入的，包括了面向对象编程和面向对象设计的五个基本原则：</p>
-<p><img src="http://sm.nsddd.top/sm202302171934277.png" alt="image-20230217193452221"></p>
+<p><img src="http://sm.cubxxw.com/sm202302171934277.png" alt="image-20230217193452221"></p>
 <p>遵循 SOLID 原则可以确保我们设计的代码是易维护、易扩展、易阅读的。SOLID 原则同样也适用于 Go 程序设计。</p>
 <p>如果你需要更详细地了解 SOLID 原则，可以参考下<a href="https://github.com/marmotedu/geekbang-go/blob/master/SOLID%E5%8E%9F%E5%88%99%E4%BB%8B%E7%BB%8D.md" target="_blank" rel="noopener noreferrer">SOLID<ExternalLinkIcon/></a> 原则介绍这篇文章。</p>
 <p>到这里，我们就学完了“编写高质量的 Go 应用”这部分内容。接下来，我们再来学习下如何高效管理 Go 项目，以及如何编写高质量的项目文档。这里面的大部分内容，之前我们都有学习过，因为它们是“如何写出优雅的 Go 项目”的重要组成部分，所以，这里我仍然会简单介绍下它们。</p>
 <h3 id="高效管理项目" tabindex="-1"><a class="header-anchor" href="#高效管理项目" aria-hidden="true">#</a> 高效管理项目</h3>
 <p>不同团队、不同项目会采用不同的方法来管理项目，在我看来比较重要的有 3 点，分别是制定一个高效的开发流程、使用 Makefile 管理项目和将项目管理自动化。我们可以通过自动生成代码、借助工具、对接 CI/CD 系统等方法来将项目管理自动化。具体见下图：</p>
-<p><img src="http://sm.nsddd.top/sm202302171937765.png" alt="image-20230217193704705"></p>
+<p><img src="http://sm.cubxxw.com/sm202302171937765.png" alt="image-20230217193704705"></p>
 <h3 id="高效的开发流程" tabindex="-1"><a class="header-anchor" href="#高效的开发流程" aria-hidden="true">#</a> 高效的开发流程</h3>
 <p>高效管理项目的第一步，就是要有一个高效的开发流程，这可以提高开发效率、减少软件维护成本。你可以回想一下设计开发流程的知识，如果印象比较模糊了，一定要回去复习下 08 讲的内容，因为这部分很重要 。</p>
 <h3 id="使用-makefile-管理项目" tabindex="-1"><a class="header-anchor" href="#使用-makefile-管理项目" aria-hidden="true">#</a> 使用 Makefile 管理项目</h3>
@@ -383,7 +383,7 @@ $ go tool cover <span class="token parameter variable">-func</span> ./coverage.o
 <li>利用工具的确定性，可以确保执行结果的一致性。例如，使用 golangci-lint 对代码进行检查，可以确保不同开发者开发的代码至少都遵循 golangci-lint 的代码检查规范。</li>
 <li>有利于实现自动化，可以将工具集成到 CI/CD 流程中，触发流水线自动执行。</li>
 </ol>
-<p><img src="http://sm.nsddd.top/sm202302171940286.png" alt="image-20230217194024208"></p>
+<p><img src="http://sm.cubxxw.com/sm202302171940286.png" alt="image-20230217194024208"></p>
 <p>所有这些工具都可以通过下面的方式安装。</p>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ <span class="token builtin class-name">cd</span> <span class="token variable">$IAM_ROOT</span>
 $ <span class="token function">make</span> tools.install
@@ -393,12 +393,12 @@ $ <span class="token function">make</span> tools.install
 <h3 id="编写高质量的项目文档" tabindex="-1"><a class="header-anchor" href="#编写高质量的项目文档" aria-hidden="true">#</a> 编写高质量的项目文档</h3>
 <p>最后，一个优雅的项目，还应该有完善的文档。例如 README.md、安装文档、开发文档、使用文档、API 接口文档、设计文档等等。</p>
 <h3 id="总结" tabindex="-1"><a class="header-anchor" href="#总结" aria-hidden="true">#</a> 总结</h3>
-<p><img src="http://sm.nsddd.top/sm202302171942019.png" alt="image-20230217194253953"></p>
+<p><img src="http://sm.cubxxw.com/sm202302171942019.png" alt="image-20230217194253953"></p>
 <h2 id="设计模式" tabindex="-1"><a class="header-anchor" href="#设计模式" aria-hidden="true">#</a> 设计模式</h2>
 <p>在软件开发中，经常会遇到各种各样的编码场景，这些场景往往重复发生，因此具有典型性。针对这些典型场景，我们可以自己编码解决，也可以采取更为省时省力的方式：直接采用设计模式。</p>
 <p>设计模式是啥呢？简单来说，就是将软件开发中需要重复性解决的编码场景，按最佳实践的方式抽象成一个模型，模型描述的解决方法就是设计模式。使用设计模式，可以使代码更易于理解，保证代码的重用性和可靠性。</p>
 <p>在软件领域，GoF（四人帮，全拼 Gang of Four）首次系统化提出了 3 大类、共 25 种可复用的经典设计方案，来解决常见的软件设计问题，为可复用软件设计奠定了一定的理论基础。</p>
-<p><img src="http://sm.nsddd.top/sm202302171943155.png" alt="image-20230217194334099"></p>
+<p><img src="http://sm.cubxxw.com/sm202302171943155.png" alt="image-20230217194334099"></p>
 <h3 id="创建型模式" tabindex="-1"><a class="header-anchor" href="#创建型模式" aria-hidden="true">#</a> 创建型模式</h3>
 <p>首先来看创建型模式（Creational Patterns），它提供了一种在创建对象的同时隐藏创建逻辑的方式，而不是使用 new 运算符直接实例化对象。</p>
 <p>这种类型的设计模式里，单例模式和工厂模式（具体包括简单工厂模式、抽象工厂模式和工厂方法模式三种）在 Go 项目开发中比较常用。我们先来看单例模式。</p>
@@ -936,7 +936,7 @@ teen <span class="token operator">:=</span> <span class="token function">newTeen
 <p>如果结构体参数比较少，可以慎重考虑要不要采用选项模式。</p>
 <h3 id="总结-1" tabindex="-1"><a class="header-anchor" href="#总结-1" aria-hidden="true">#</a> 总结</h3>
 <p>设计模式，是业界沉淀下来的针对特定场景的最佳解决方案。在软件领域，GoF 首次系统化提出了 3 大类设计模式：创建型模式、结构型模式、行为型模式。</p>
-<p><img src="http://sm.nsddd.top/sm202302172212156.png" alt="image-20230217221217982"></p>
+<p><img src="http://sm.cubxxw.com/sm202302172212156.png" alt="image-20230217221217982"></p>
 <h2 id="end-链接" tabindex="-1"><a class="header-anchor" href="#end-链接" aria-hidden="true">#</a> END 链接</h2>
 <ul><li><div><a href = '4.md' style='float:left'>⬆️上一节🔗  </a><a href = '6.md' style='float: right'>  ️下一节🔗</a></div></li></ul>
 <ul>
@@ -944,7 +944,7 @@ teen <span class="token operator">:=</span> <span class="token function">newTeen
 <p><RouterLink to="/projects/">Ⓜ️回到目录🏠</RouterLink></p>
 </li>
 <li>
-<p><a href="https://nsddd.top/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
+<p><a href="https://cubxxw.com/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
 </li>
 <li>
 <p>✴️版权声明 © ：本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>

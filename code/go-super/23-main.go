@@ -5,7 +5,7 @@
  * @LastEditTime: 2022-10-24 19:37:14
  * @FilePath: \code\go-super\23-main.go
  * @Github_Address: https://github.com/cubxxw/awesome-cs-cloudnative-blockchain
- * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://nsddd.top
+ * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://cubxxw.com
  */
 package main
 
@@ -49,7 +49,7 @@ func main() {
 			Age:     40,
 			Name:    "Rose",
 		},
-		Email: "	nsddd.top",
+		Email: "	cubxxw.com",
 	}
 	fmt.Println(configList)
 

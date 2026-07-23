@@ -6,7 +6,7 @@
 <div><a href = '29.md' style='float:left'>⬆️上一节🔗  </a><a href = '31.md' style='float: right'>  ⬇️下一节🔗</a></div>
 <br>
 <blockquote>
-<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://nsddd.top/" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
+<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://cubxxw.com/" target="_blank" rel="noopener noreferrer">http://cubxxw.com<ExternalLinkIcon/></a></p>
 </blockquote>
 <hr>
 <nav class="table-of-contents"><ul><li><router-link to="#生成性能数据文件">生成性能数据文件</router-link><ul><li><router-link to="#通过命令行生成性能数据文件">通过命令行生成性能数据文件</router-link></li><li><router-link to="#通过代码生成性能数据文件">通过代码生成性能数据文件</router-link></li><li><router-link to="#通过net-http-pprof生成性能数据文件">通过net/http/pprof生成性能数据文件</router-link></li></ul></li><li><router-link to="#性能分析">性能分析</router-link><ul><li><router-link to="#pprof工具介绍">pprof工具介绍</router-link></li><li><router-link to="#生成性能数据">生成性能数据</router-link></li><li><router-link to="#cpu性能分析">CPU性能分析</router-link></li><li><router-link to="#内存性能分析">内存性能分析</router-link></li></ul></li><li><router-link to="#总结">总结</router-link></li><li><router-link to="#课后练习">课后练习</router-link></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
@@ -90,7 +90,7 @@ ok    github.com/marmotedu/iam/internal/apiserver/service/v1  <span class="token
     pprof<span class="token punctuation">.</span><span class="token function">Register</span><span class="token punctuation">(</span>s<span class="token punctuation">.</span>Engine<span class="token punctuation">)</span>
 <span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>上面的代码根据配置<code v-pre>--feature.profiling</code>来判断是否开启HTTP性能分析功能。我们开启完HTTP性能分析，启动HTTP服务iam-apiserver后，即可访问<code v-pre>http:// x.x.x.x:8080/debug/pprof</code>（<code v-pre>x.x.x.x</code>是Linux服务器的地址）来查看profiles信息。profiles信息如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202303051108399.png" alt="图片"></p>
+<p><img src="http://sm.cubxxw.com/sm202303051108399.png" alt="图片"></p>
 <p><em>我们可以通过以下命令，来获取CPU性能数据文件：</em></p>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ <span class="token function">curl</span> http://127.0.0.1:8080/debug/pprof/profile <span class="token parameter variable">-o</span> cpu.profile
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>执行完上面的命令后，需要等待30s，pprof会采集这30s内的性能数据，我们需要在这段时间内向服务器连续发送多次请求，请求的频度可以根据我们的场景来决定。30s之后，<code v-pre>/debug/pprof/profile</code>接口会生成CPU profile文件，被curl命令保存在当前目录下的cpu.profile文件中。</p>
@@ -122,7 +122,7 @@ ok    github.com/marmotedu/iam/internal/apiserver/service/v1  <span class="token
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>第二步，执行<code v-pre>go tool pprof</code>生成调用图：</p>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ go tool pprof <span class="token parameter variable">-svg</span> cpu.profile <span class="token operator">></span> cpu.svg  <span class="token comment"># svg 格式$ go tool pprof -pdf cpu.profile > cpu.pdf # pdf 格式$ go tool pprof -png cpu.profile > cpu.png # png 格式</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>以上命令会生成<code v-pre>cpu.pdf</code>、<code v-pre>cpu.svg</code>和<code v-pre>cpu.png</code>文件，文件中绘制了函数调用关系以及其他采样数据。如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202303051111612.png" alt="图片"></p>
+<p><img src="http://sm.cubxxw.com/sm202303051111612.png" alt="图片"></p>
 <p>这张图片由有向线段和矩形组成。我们先来看有向线段的含义。</p>
 <p>有向线段描述了函数的调用关系，矩形包含了CPU采样数据。从图中，我们看到没箭头的一端调用了有箭头的一端，可以知道<code v-pre>v1.(*userService).List</code>函数调用了<code v-pre>fake.(*policies).List</code>。</p>
 <p>线段旁边的数字<code v-pre>90ms</code>则说明，<code v-pre>v1.(*userService).List</code>调用<code v-pre>fake.(*policies).List</code>函数，在采样周期内，一共耗用了<code v-pre>90ms</code>。通过函数调用关系，我们可以知道某个函数调用了哪些函数，并且调用这些函数耗时多久。</p>
@@ -136,7 +136,7 @@ ok    github.com/marmotedu/iam/internal/apiserver/service/v1  <span class="token
 <li>累积采样时间，以及它在采样总数中所占的比例。累积采样时间是指采样点落在该函数，以及被它直接或者间接调用的函数中的总时间。</li>
 </ul>
 <p>我们可以通过<code v-pre>OutDir</code>函数来解释本地采样时间和累积采样时间这两个概念。<code v-pre>OutDir</code>函数如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202303051111655.png" alt="图片"></p>
+<p><img src="http://sm.cubxxw.com/sm202303051111655.png" alt="图片"></p>
 <p>整个函数的执行耗时，我们可以认为是累积采样时间，包含了白色部分的代码耗时和红色部分的函数调用耗时。白色部分的代码耗时，可以认为是本地采样时间。</p>
 <p>通过累积采样时间，我们可以知道函数的总调用时间，累积采样时间越大，说明调用它所花费的CPU时间越多。但你要注意，这并不一定说明这个函数本身是有问题的，也有可能是函数所调用的函数性能有瓶颈，这时候我们应该根据函数调用关系顺藤摸瓜，去寻找这个函数直接或间接调用的函数中最耗费CPU时间的那些。</p>
 <p>如果函数的本地采样时间很大，就说明这个函数自身耗时（除去调用其他函数的耗时）很大，这时候需要我们分析这个函数自身的代码，而不是这个函数直接或者间接调用函数的代码。</p>
@@ -146,7 +146,7 @@ ok    github.com/marmotedu/iam/internal/apiserver/service/v1  <span class="token
 <p><code v-pre>go tool pprof</code>提供了<code v-pre>-http</code>参数，可以使我们通过浏览器浏览采样图和火焰图。执行以下命令：</p>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ go tool pprof <span class="token parameter variable">-http</span><span class="token operator">=</span><span class="token string">"0.0.0.0:8081"</span> v1.test cpu.profile
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>然后访问<code v-pre>http://x.x.x.x:8081/</code>（<code v-pre>x.x.x.x</code>是执行<code v-pre>go tool pprof</code>命令所在服务器的IP地址），则会在浏览器显示各类采样视图数据，如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202303051111697.png" alt="图片"></p>
+<p><img src="http://sm.cubxxw.com/sm202303051111697.png" alt="图片"></p>
 <p>上面的UI页面提供了不同的采样数据视图：</p>
 <ul>
 <li>Top，类似于 linux top 的形式，从高到低排序。</li>
@@ -157,7 +157,7 @@ ok    github.com/marmotedu/iam/internal/apiserver/service/v1  <span class="token
 <li>Disassemble：显示所有的总量。</li>
 </ul>
 <p>接下来，我们主要来分析火焰图。在UI界面选择<strong>Flame Graph（VIEW -&gt; Flame Graph）</strong>，就会展示火焰图，如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202303051111256.png" alt="图片"></p>
+<p><img src="http://sm.cubxxw.com/sm202303051111256.png" alt="图片"></p>
 <p>火焰图主要有下面这几个特征：</p>
 <ul>
 <li>每一列代表一个调用栈，每一个格子代表一个函数。</li>
@@ -184,7 +184,7 @@ Entering interactive mode <span class="token punctuation">(</span>type <span cla
 <li>(pprof)，命令行提示，表示当前在<code v-pre>go tool</code>的<code v-pre>pprof</code>工具命令行中，<code v-pre>go tool</code>还包括<code v-pre>cgo</code>、<code v-pre>doc</code>、<code v-pre>pprof</code>、<code v-pre>trace</code>等多种命令。</li>
 </ul>
 <p>执行<code v-pre>go tool pprof</code>命令后，会进入一个交互shell。在这个交互shell中，我们可以执行多个命令，最常用的命令有三个，如下表所示：</p>
-<p><img src="http://sm.nsddd.top/sm202303051112473.jpeg" alt="图片"></p>
+<p><img src="http://sm.cubxxw.com/sm202303051112473.jpeg" alt="图片"></p>
 <p>我们在交互界面中执行<code v-pre>top</code>命令，可以查看性能样本数据：</p>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token punctuation">(</span>pprof<span class="token punctuation">)</span> <span class="token function">top</span>
 Showing nodes accounting <span class="token keyword">for</span> 350ms, <span class="token number">79.55</span>% of 440ms total
@@ -239,10 +239,10 @@ Showing <span class="token function">top</span> <span class="token number">20</s
          <span class="token number">0</span>     <span class="token number">0</span>% <span class="token number">63.64</span>%       40ms  <span class="token number">9.09</span>%  runtime.resettimer <span class="token punctuation">(</span>inline<span class="token punctuation">)</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>从上面的输出可知，<code v-pre>v1.BenchmarkListUser</code>、<code v-pre>testing.(*B).launch</code>、<code v-pre>testing.(*B).runN</code>的本地采样时间占比分别为<code v-pre>0%</code>、<code v-pre>0%</code>、<code v-pre>0%</code>，但是三者的累积采样时间占比却比较高，分别为<code v-pre>22.73%</code>、<code v-pre>22.73%</code>、<code v-pre>22.73%</code>。</p>
 <p>本地采样时间占比很小，但是累积采样时间占比很高，说明这3个函数耗时多是因为调用了其他函数，它们自身几乎没有耗时。根据采样图，我们可以看到函数的调用关系，具体如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202303051112424.jpeg" alt="图片"></p>
+<p><img src="http://sm.cubxxw.com/sm202303051112424.jpeg" alt="图片"></p>
 <p>从采样图中，可以知道最终<code v-pre>v1.BenchmarkListUser</code>调用了<code v-pre>v1.(*userService).List</code>函数。<code v-pre>v1.(*userService).List</code>函数是我们编写的函数，该函数的本地采样时间占比为<code v-pre>2.27%</code>，但是累积采样时间占比却高达<code v-pre>22.73%</code>，说明<code v-pre>v1.(*userService).List</code>调用其他函数耗用了大量的CPU时间。</p>
 <p>再观察采样图，可以看出<code v-pre>v1.(*userService).List</code>耗时久是因为调用了<code v-pre>fake.(*policies).List</code>函数。我们也可以通过<code v-pre>list</code>命令查看函数内部的耗时情况：</p>
-<p><img src="http://sm.nsddd.top/sm202303051112930.png" alt="图片"></p>
+<p><img src="http://sm.cubxxw.com/sm202303051112930.png" alt="图片"></p>
 <p><code v-pre>list userService.*List</code>会列出<code v-pre>userService</code>结构体<code v-pre>List</code>方法内部代码的耗时情况，从上图也可以看到，<code v-pre>u.store.Policies().List</code>耗时最多。<code v-pre>fake.(*policies).List</code>的本地采样时间占比为<code v-pre>15.91%</code>，说明<code v-pre>fake.(*policies).List</code>函数本身可能存在瓶颈。走读<code v-pre>fake.(*policies).List</code>代码可知，该函数是查询数据库的函数，查询数据库会有延时。继续查看<code v-pre>v1.(*userService).List</code>代码，我们可以发现以下调用逻辑：</p>
 <div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">func</span> <span class="token punctuation">(</span>u <span class="token operator">*</span>userService<span class="token punctuation">)</span> <span class="token function">ListWithBadPerformance</span><span class="token punctuation">(</span>ctx context<span class="token punctuation">.</span>Context<span class="token punctuation">,</span> opts metav1<span class="token punctuation">.</span>ListOptions<span class="token punctuation">)</span> <span class="token punctuation">(</span><span class="token operator">*</span>v1<span class="token punctuation">.</span>UserList<span class="token punctuation">,</span> <span class="token builtin">error</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token operator">...</span>
@@ -348,7 +348,7 @@ Showing <span class="token function">top</span> <span class="token number">10</s
 <p><RouterLink to="/projects/">Ⓜ️回到目录🏠</RouterLink></p>
 </li>
 <li>
-<p><a href="https://nsddd.top/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
+<p><a href="https://cubxxw.com/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
 </li>
 <li>
 <p>✴️版权声明 © ：本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>

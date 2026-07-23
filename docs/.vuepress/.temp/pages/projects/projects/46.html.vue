@@ -6,7 +6,7 @@
 <div><a href = '45.md' style='float:left'>⬆️上一节🔗  </a><a href = '47.md' style='float: right'>  ⬇️下一节🔗</a></div>
 <br>
 <blockquote>
-<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://nsddd.top/" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
+<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://cubxxw.com/" target="_blank" rel="noopener noreferrer">http://cubxxw.com<ExternalLinkIcon/></a></p>
 </blockquote>
 <hr>
 <nav class="table-of-contents"><ul><li><router-link to="#如何排障">如何排障？</router-link><ul><li><router-link to="#发现问题">发现问题</router-link></li><li><router-link to="#定位问题">定位问题</router-link></li><li><router-link to="#解决问题">解决问题</router-link></li></ul></li><li><router-link to="#iam常见故障及解决办法">IAM常见故障及解决办法</router-link></li><li><router-link to="#总结">总结</router-link></li><li><router-link to="#课后练习">课后练习</router-link></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
@@ -14,7 +14,7 @@
 <p>今天我们更新一期特别放送作为加餐。在部署和使用IAM的过程中，难免会出现一些异常(也称为故障、问题)。这时候，就需要我们能够定位故障，并修复故障。这里，我总结了一些IAM的排障方法，以及一些常见故障的解决方法，供你参考。</p>
 <h2 id="如何排障" tabindex="-1"><a class="header-anchor" href="#如何排障" aria-hidden="true">#</a> 如何排障？</h2>
 <p>首先，我们需要发现问题，然后定位问题。我们可能需要经过多轮分析排查才能定位到问题的根因，最后去解决问题。排障流程如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202303071741286.png" alt="image-20230307174145120"></p>
+<p><img src="http://sm.cubxxw.com/sm202303071741286.png" alt="image-20230307174145120"></p>
 <p>如果想排查问题并解决问题，你还需要具备这两个基本能力：能够理解错误日志的内容；根据错误日志，找出解决方案。</p>
 <p>我们举个例子来说吧。有以下错误：</p>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code><span class="token punctuation">[</span>going@dev iam<span class="token punctuation">]</span>$ mysql <span class="token parameter variable">-h127.0.0.1</span> <span class="token parameter variable">-uroot</span> -p<span class="token string">'iam59!z$'</span>
@@ -203,7 +203,7 @@ runtime.main
     <span class="token keyword">return</span> cacheServer<span class="token punctuation">,</span> <span class="token boolean">nil</span>
 <span class="token punctuation">}</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>我们不难分析出，是<code v-pre>store == nil</code>导致<code v-pre>cacheServer</code>没有被初始化。再来看下store的初始化代码，并加一些Debug日志，如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202303071810106.png" alt="图片"></p>
+<p><img src="http://sm.cubxxw.com/sm202303071810106.png" alt="图片"></p>
 <p>我们添加完Debug代码后，就可以重新编译并运行程序了。</p>
 <p>这里有个小技巧：可以在错误返回的位置添加Debug日志，这样能大概率帮助你定位到出错的位置，例如：</p>
 <div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">if</span> err <span class="token operator">!=</span> <span class="token boolean">nil</span> <span class="token punctuation">{</span>
@@ -214,7 +214,7 @@ runtime.main
 <p>*这里为了调试、看日志方便，我们直接在Linux终端的前端运行iam-apiserver：</p>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ <span class="token function">sudo</span> /opt/iam/bin/iam-apiserver <span class="token parameter variable">--config</span><span class="token operator">=</span>/etc/iam/iam-apiserver.yaml
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>查看我们添加的Debug日志打印的内容，如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202303071813916.png" alt="图片"></p>
+<p><img src="http://sm.cubxxw.com/sm202303071813916.png" alt="图片"></p>
 <p>从Debug日志中，可以看到用来创建MySQL实例的端口是错误的，正确的端口应该是<code v-pre>3306</code>，而不是<code v-pre>3309</code>。MySQL服务器的端口是在iam-apiserver.yaml中配置的。修改iam-apiserver.yaml为正确的配置，并启动：</p>
 <div class="language-bash ext-sh line-numbers-mode"><pre v-pre class="language-bash"><code>$ <span class="token function">sudo</span> /opt/iam/bin/iam-apiserver <span class="token parameter variable">--config</span><span class="token operator">=</span>/etc/iam/iam-apiserver.yaml
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>再次查看console日志，如下图所示：</p>
@@ -350,7 +350,7 @@ $ <span class="token builtin class-name">echo</span> <span class="token variable
 <p><RouterLink to="/projects/">Ⓜ️回到目录🏠</RouterLink></p>
 </li>
 <li>
-<p><a href="https://nsddd.top/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
+<p><a href="https://cubxxw.com/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
 </li>
 <li>
 <p>✴️版权声明 © ：本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>

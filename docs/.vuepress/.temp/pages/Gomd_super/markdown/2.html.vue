@@ -9,7 +9,7 @@
 </div>
 <h2 id="socket图解" tabindex="-1"><a class="header-anchor" href="#socket图解" aria-hidden="true">#</a> socket图解</h2>
 <p>Socket是应用层与TCP/IP协议族通信的中间软件抽象层。在设计模式中，Socket其实就是一个门面模式，它把复杂的TCP/IP协议族隐藏在Socket后面，对用户来说只需要调用Socket规定的相关函数，让Socket去组织符合指定的协议数据然后进行通信。</p>
-<p><img src="http://sm.nsddd.top/smbjaST7yZI5RuNCV.png?xxw@nsddd.top" alt="socket图解"></p>
+<p><img src="http://sm.cubxxw.com/smbjaST7yZI5RuNCV.png?xxw@cubxxw.com" alt="socket图解"></p>
 <ul>
 <li><code v-pre>Socket</code>又称“套接字”，应用程序通常通过“套接字”向网络发出请求或者应答网络请求</li>
 <li>常用的Socket类型有两种：流式<code v-pre>Socket</code>和数据报式<code v-pre>Socket</code>，流式是一种面向连接的Socket，针对于面向连接的TCP服务应用，数据报式<code v-pre>Socket</code>是一种无连接的<code v-pre>Socket</code>，针对于无连接的UDP服务应用</li>
@@ -24,7 +24,7 @@
 <p><RouterLink to="/Gomd_super/">Ⓜ️回到首页🏠</RouterLink></p>
 </li>
 <li>
-<p><a href="https://nsddd.top/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
+<p><a href="https://cubxxw.com/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
 </li>
 <li>
 <p>✴️版权声明 © :本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>

@@ -5,7 +5,7 @@
  * @LastEditTime: 2022-10-25 10:52:34
  * @FilePath: \code\go-super\32-main.go
  * @Github_Address: https://github.com/cubxxw/awesome-cs-cloudnative-blockchain
- * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://nsddd.top
+ * Copyright (c) 2022 by xiongxinwei 3293172751nss@gmail.com, All Rights Reserved. @blog: http://cubxxw.com
  */
 package main
 
@@ -15,7 +15,7 @@ func main() {
 	var interface2 interface{}
 	fmt.Printf("interface{} type is %T, interface{} value is %v\n", interface2, interface2)
 
-	var a interface{} = "nsddd.top"
+	var a interface{} = "cubxxw.com"
 	fmt.Printf("a type is %T, a value is %v\n", a, a)
 	b := a.(string) //类型断言
 	fmt.Printf("b type is %T, b value is %v\n", b, b)

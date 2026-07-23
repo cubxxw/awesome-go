@@ -6,7 +6,7 @@
 <div><a href = '18.md' style='float:left'>⬆️上一节🔗  </a><a href = '20.md' style='float: right'>  ⬇️下一节🔗</a></div>
 <br>
 <blockquote>
-<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://nsddd.top/" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
+<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://cubxxw.com/" target="_blank" rel="noopener noreferrer">http://cubxxw.com<ExternalLinkIcon/></a></p>
 </blockquote>
 <hr>
 <nav class="table-of-contents"><ul><li><router-link to="#预告">预告</router-link></li><li><router-link to="#权限相关术语介绍">权限相关术语介绍</router-link></li><li><router-link to="#权限模型介绍">权限模型介绍</router-link><ul><li><router-link to="#简单的权限模型-权限控制列表-acl">简单的权限模型：权限控制列表（ACL）</router-link></li><li><router-link to="#基于-acl-下放权限的权限模型-自主访问控制-dac">基于 ACL 下放权限的权限模型：自主访问控制（DAC）</router-link></li><li><router-link to="#基于-acl-且安全性更高的权限模型-强制访问控制-mac">基于 ACL 且安全性更高的权限模型：强制访问控制（MAC）</router-link></li><li><router-link to="#最普及的权限模型-基于角色的访问控制-rbac">最普及的权限模型：基于角色的访问控制（RBAC）</router-link></li><li><router-link to="#最强大的权限模型-基于属性的权限验证-abac">最强大的权限模型：基于属性的权限验证（ABAC）</router-link></li></ul></li><li><router-link to="#相关开源项目">相关开源项目</router-link><ul><li><router-link to="#casbin">Casbin</router-link></li><li><router-link to="#keto">keto</router-link></li><li><router-link to="#go-admin">go-admin</router-link></li><li><router-link to="#lyrictian-gin-admin">LyricTian/gin-admin</router-link></li><li><router-link to="#gin-vue-admin">gin-vue-admin</router-link></li><li><router-link to="#选择建议">选择建议</router-link></li></ul></li><li><router-link to="#总结">总结</router-link></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
@@ -22,7 +22,7 @@
 <p>无论是第一点还是第二点，都需要你掌握基本的权限模型知识。那么这一讲，我就来介绍下业界优秀的权限模型，以及这些模型的适用场景，以使你今后设计出更好的资源授权系统。</p>
 <h2 id="权限相关术语介绍" tabindex="-1"><a class="header-anchor" href="#权限相关术语介绍" aria-hidden="true">#</a> 权限相关术语介绍</h2>
 <p>在介绍业界常见的权限模型前，我们先来看下在权限模型中出现的术语。我把常见的术语总结在了下面的表格里：</p>
-<p><img src="http://sm.nsddd.top/sm202302271710095.png" alt="image-20230227170939630"></p>
+<p><img src="http://sm.cubxxw.com/sm202302271710095.png" alt="image-20230227170939630"></p>
 <p>为了方便你理解，这一讲我分别用<strong>用户</strong>、<strong>操作</strong>和<strong>资源</strong>来替代 Subject、Action 和 Object。</p>
 <h2 id="权限模型介绍" tabindex="-1"><a class="header-anchor" href="#权限模型介绍" aria-hidden="true">#</a> 权限模型介绍</h2>
 <p>接下来，我就详细介绍下一些常见的权限模型，让你今后在设计权限系统时，能够根据需求选择合适的权限模型。</p>
@@ -213,13 +213,13 @@ Object: Colin
 <li>……</li>
 </ul>
 <p>该项目还支持 RESTful API 设计规范、Swagger 文档、GORM 库等。go-admin 不仅是一个优秀的权限管理系统，也是一个优秀的、功能齐全的 Go 开源项目。你在做项目开发时，也可以参考该项目的构建思路。go-admin 管理系统自带前端，如下图所示。</p>
-<p><img src="http://sm.nsddd.top/sm202302271730526.png" alt="img"></p>
+<p><img src="http://sm.cubxxw.com/sm202302271730526.png" alt="img"></p>
 <h3 id="lyrictian-gin-admin" tabindex="-1"><a class="header-anchor" href="#lyrictian-gin-admin" aria-hidden="true">#</a> LyricTian/gin-admin</h3>
 <p><a href="https://github.com/LyricTian/gin-admin" target="_blank" rel="noopener noreferrer">gin-admin<ExternalLinkIcon/></a> 类似于 go-admin，是一个基于 Gin+Gorm+Casbin+Wire 实现的权限管理脚手架，并自带前端，在做权限管理系统调研时，也非常值得参考。</p>
 <p>gin-admin 大量采用了 Go 后端开发常用的技术，比如 Gin、GORM、JWT 认证、RESTful API、Logrus 日志包、Swagger 文档等。因此，你在做 Go 后端服务开发时，也可以学习该项目的构建方法。</p>
 <h3 id="gin-vue-admin" tabindex="-1"><a class="header-anchor" href="#gin-vue-admin" aria-hidden="true">#</a> gin-vue-admin</h3>
 <p><a href="https://github.com/flipped-aurora/gin-vue-admin" target="_blank" rel="noopener noreferrer">gin-vue-admin<ExternalLinkIcon/></a> 是一个基于 Gin 和 Vue 开发的全栈前后端分离的后台管理系统，集成了 JWT 鉴权、动态路由、动态菜单、Casbin 鉴权、表单生成器、代码生成器等功能。gin-vue-admin 集成了 RBAC 权限管理模型，界面如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202302271730779.png" alt="img"></p>
+<p><img src="http://sm.cubxxw.com/sm202302271730779.png" alt="img"></p>
 <h3 id="选择建议" tabindex="-1"><a class="header-anchor" href="#选择建议" aria-hidden="true">#</a> 选择建议</h3>
 <p>介绍了那么多优秀的开源项目，最后我想给你一些选择建议。如果你想研究 ACL、RBAC、ABAC 等权限模型如何落地，我强烈建议你学习 <a href="https://github.com/casbin/casbin" target="_blank" rel="noopener noreferrer">Casbin<ExternalLinkIcon/></a> 项目，Casbin 目前有近万的 GitHub star 数，处于活跃的开发状态。有很多项目在使用 Casbin，例如 <a href="https://github.com/go-admin-team/go-admin" target="_blank" rel="noopener noreferrer">go-admin<ExternalLinkIcon/></a>、 <a href="https://github.com/LyricTian/gin-admin" target="_blank" rel="noopener noreferrer">gin-admin<ExternalLinkIcon/></a> 、 <a href="https://github.com/flipped-aurora/gin-vue-admin" target="_blank" rel="noopener noreferrer">gin-vue-admin<ExternalLinkIcon/></a> 等。</p>
 <p><a href="https://github.com/ory/keto" target="_blank" rel="noopener noreferrer">keto<ExternalLinkIcon/></a> 类似于 Casbin，主要通过 Go 包的方式，对外提供授权能力。keto 也是一个非常优秀的权限类项目，当你研究完 Casbin 后，如果还想再研究下其他授权类项目，建议你读下 keto 的源码。</p>
@@ -235,7 +235,7 @@ Object: Colin
 <p><RouterLink to="/projects/">Ⓜ️回到目录🏠</RouterLink></p>
 </li>
 <li>
-<p><a href="https://nsddd.top/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
+<p><a href="https://cubxxw.com/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
 </li>
 <li>
 <p>✴️版权声明 © ：本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>

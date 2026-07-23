@@ -9,7 +9,7 @@
 <hr>
 <p><strong>区块链技术（也称之为分布式账本技术）</strong>，是一种互联网数据库技术，其特点是去中心化，公开透明，让每一个人均可参与的数据库记录</p>
 <blockquote>
-<p>❤️💕💕关于区块链技术，可以关注我，共同学习更多的区块链技术。博客<a href="http://nsddd.top" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
+<p>❤️💕💕关于区块链技术，可以关注我，共同学习更多的区块链技术。博客<a href="http://cubxxw.com" target="_blank" rel="noopener noreferrer">http://cubxxw.com<ExternalLinkIcon/></a></p>
 </blockquote>
 <hr>
 <h1 id="redis进阶-1" tabindex="-1"><a class="header-anchor" href="#redis进阶-1" aria-hidden="true">#</a> Redis进阶</h1>
@@ -249,11 +249,11 @@ rpop：从链表右边弹出数据，踢掉
 <p><strong>set是string类型的==无序集合==。底层是hash table数据结构，set也是存放很多字符串元素，字符串元素是无序的，而且==元素的值不能重复==。</strong></p>
 <div class="language-sql ext-sql line-numbers-mode"><pre v-pre class="language-sql"><code><span class="token number">127.0</span><span class="token number">.0</span><span class="token number">.1</span>:<span class="token number">6379</span><span class="token operator">></span> llen city
 <span class="token punctuation">(</span><span class="token keyword">integer</span><span class="token punctuation">)</span> <span class="token number">4</span>
-<span class="token number">127.0</span><span class="token number">.0</span><span class="token number">.1</span>:<span class="token number">6379</span><span class="token operator">></span> sadd emile xiongxinwei<span class="token variable">@nsddd.top</span> <span class="token number">3293172751</span>nss<span class="token variable">@gmail.com</span> xiongxinwei<span class="token variable">@mail.com</span>
+<span class="token number">127.0</span><span class="token number">.0</span><span class="token number">.1</span>:<span class="token number">6379</span><span class="token operator">></span> sadd emile xiongxinwei<span class="token variable">@cubxxw.com</span> <span class="token number">3293172751</span>nss<span class="token variable">@gmail.com</span> xiongxinwei<span class="token variable">@mail.com</span>
 <span class="token punctuation">(</span><span class="token keyword">integer</span><span class="token punctuation">)</span> <span class="token number">3</span>
 <span class="token number">127.0</span><span class="token number">.0</span><span class="token number">.1</span>:<span class="token number">6379</span><span class="token operator">></span> SMEMBERS emile
 <span class="token number">1</span><span class="token punctuation">)</span> <span class="token string">"3293172751nss@gmail.com"</span>
-<span class="token number">2</span><span class="token punctuation">)</span> <span class="token string">"xiongxinwei@nsddd.top"</span>
+<span class="token number">2</span><span class="token punctuation">)</span> <span class="token string">"xiongxinwei@cubxxw.com"</span>
 <span class="token number">3</span><span class="token punctuation">)</span> <span class="token string">"xiongxinwei@mail.com"</span>
 </code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-text ext-text line-numbers-mode"><pre v-pre class="language-text"><code>sisemmber :判断值是否是成员
 srem :删除指定值

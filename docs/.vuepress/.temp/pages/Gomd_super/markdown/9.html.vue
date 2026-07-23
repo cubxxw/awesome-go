@@ -15,7 +15,7 @@
 </blockquote>
 <p><strong>传统方法：使用一个循环，判断哪些数是素数</strong></p>
 <p><strong>使用并发或并行的方式，==将统计素数的任务分配个多个goroution完成==(速度最少提高四倍，分配给四个CPU)</strong></p>
-<h3 id="进程" tabindex="-1"><a class="header-anchor" href="#进程" aria-hidden="true">#</a> <a href="https://go.nsddd.top/markdown/18.html#%E8%BF%9B%E7%A8%8B" target="_blank" rel="noopener noreferrer">#<ExternalLinkIcon/></a>进程</h3>
+<h3 id="进程" tabindex="-1"><a class="header-anchor" href="#进程" aria-hidden="true">#</a> <a href="https://go.cubxxw.com/markdown/18.html#%E8%BF%9B%E7%A8%8B" target="_blank" rel="noopener noreferrer">#<ExternalLinkIcon/></a>进程</h3>
 <blockquote>
 <p>在学习goroutine中我们需要熟悉下操作系统的进程</p>
 </blockquote>
@@ -32,8 +32,8 @@
 </blockquote>
 <p><strong>一个进程可以创建或者销毁多个线程，同一个进程中的多个线程可以==并发==进行</strong></p>
 <p><strong>一个程序至少有一个进程，一个进程至少有一个线程</strong></p>
-<p>🖱️<a href="https://go.nsddd.top/markdown/%E5%B9%B6%E5%8F%91.html" target="_blank" rel="noopener noreferrer">点击进入操作系统的并发学习<ExternalLinkIcon/></a></p>
-<h3 id="go语言协程和go主线程" tabindex="-1"><a class="header-anchor" href="#go语言协程和go主线程" aria-hidden="true">#</a> <a href="https://go.nsddd.top/markdown/18.html#go%E8%AF%AD%E8%A8%80%E5%8D%8F%E7%A8%8B%E5%92%8Cgo%E4%B8%BB%E7%BA%BF%E7%A8%8B" target="_blank" rel="noopener noreferrer">#<ExternalLinkIcon/></a>Go语言协程和Go主线程</h3>
+<p>🖱️<a href="https://go.cubxxw.com/markdown/%E5%B9%B6%E5%8F%91.html" target="_blank" rel="noopener noreferrer">点击进入操作系统的并发学习<ExternalLinkIcon/></a></p>
+<h3 id="go语言协程和go主线程" tabindex="-1"><a class="header-anchor" href="#go语言协程和go主线程" aria-hidden="true">#</a> <a href="https://go.cubxxw.com/markdown/18.html#go%E8%AF%AD%E8%A8%80%E5%8D%8F%E7%A8%8B%E5%92%8Cgo%E4%B8%BB%E7%BA%BF%E7%A8%8B" target="_blank" rel="noopener noreferrer">#<ExternalLinkIcon/></a>Go语言协程和Go主线程</h3>
 <p>Go语言主线程（也称为线程，也可以理解为进程），一个Go语言线程上可以起多个协程，<strong>协程是轻量级的线程</strong></p>
 <blockquote>
 <p>编译器优化</p>
@@ -45,7 +45,7 @@
 <li>调度由用户控制</li>
 <li>协程是轻量级的线程</li>
 </ul>
-<p><img src="https://go.nsddd.top/assets/RGvViKLpwlOXuEB.29ead913.png" alt="image-20220319135256999"></p>
+<p><img src="https://go.cubxxw.com/assets/RGvViKLpwlOXuEB.29ead913.png" alt="image-20220319135256999"></p>
 <h2 id="使用goroutine" tabindex="-1"><a class="header-anchor" href="#使用goroutine" aria-hidden="true">#</a> 使用goroutine</h2>
 <p>Go语言中使用goroutine非常简单，只需要在调用函数的时候在前面加上go关键字，就可以为一个函数创建一个goroutine。</p>
 <p>一个goroutine必定对应一个函数，可以创建多个goroutine去执行相同的函数。</p>
@@ -154,7 +154,7 @@
 <p><RouterLink to="/Gomd_super/">Ⓜ️回到首页🏠</RouterLink></p>
 </li>
 <li>
-<p><a href="https://nsddd.top/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
+<p><a href="https://cubxxw.com/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
 </li>
 <li>
 <p>✴️版权声明 © :本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>

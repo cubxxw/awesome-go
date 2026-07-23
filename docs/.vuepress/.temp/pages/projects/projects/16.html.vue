@@ -6,7 +6,7 @@
 <div><a href = '15.md' style='float:left'>⬆️上一节🔗  </a><a href = '17.md' style='float: right'>  ⬇️下一节🔗</a></div>
 <br>
 <blockquote>
-<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://nsddd.top/" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
+<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://cubxxw.com/" target="_blank" rel="noopener noreferrer">http://cubxxw.com<ExternalLinkIcon/></a></p>
 </blockquote>
 <hr>
 <nav class="table-of-contents"><ul><li><router-link to="#开始">开始</router-link></li><li><router-link to="#web-服务的核心功能">Web 服务的核心功能</router-link></li><li><router-link to="#为什么选择-gin-框架">为什么选择 Gin 框架？</router-link></li><li><router-link to="#gin-是如何支持-web-服务基础功能的">Gin 是如何支持 Web 服务基础功能的？</router-link><ul><li><router-link to="#http-https-支持">HTTP/HTTPS 支持</router-link></li><li><router-link to="#json-数据格式支持">JSON 数据格式支持</router-link></li><li><router-link to="#路由匹配">路由匹配</router-link></li><li><router-link to="#路由分组">路由分组</router-link></li><li><router-link to="#一进程多服务">一进程多服务</router-link></li><li><router-link to="#参数解析、参数校验、逻辑处理、返回结果">参数解析、参数校验、逻辑处理、返回结果</router-link></li></ul></li><li><router-link to="#gin-是如何支持-web-服务高级功能的">Gin 是如何支持 Web 服务高级功能的？</router-link><ul><li><router-link to="#中间件">中间件</router-link></li><li><router-link to="#认证、requestid、跨域">认证、RequestID、跨域</router-link></li><li><router-link to="#优雅关停">优雅关停</router-link></li></ul></li><li><router-link to="#总结">总结</router-link></li><li><router-link to="#课后练习">课后练习</router-link></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
@@ -16,7 +16,7 @@
 <p>那今天我们就来看下，Web 服务的核心功能有哪些，以及如何开发这些功能。</p>
 <h2 id="web-服务的核心功能" tabindex="-1"><a class="header-anchor" href="#web-服务的核心功能" aria-hidden="true">#</a> Web 服务的核心功能</h2>
 <p>Web 服务有很多功能，为了便于你理解，我将这些功能分成了基础功能和高级功能两大类，并总结在了下面这张图中：</p>
-<p><img src="http://sm.nsddd.top/sm202302222250672.jpeg" alt="img"></p>
+<p><img src="http://sm.cubxxw.com/sm202302222250672.jpeg" alt="img"></p>
 <p>下面，我就按图中的顺序，来串讲下这些功能。</p>
 <p>要实现一个 Web 服务，首先我们要选择通信协议和通信格式。在 Go 项目开发中，有 <code v-pre>HTTP+JSON</code> 和 <code v-pre>gRPC+Protobuf</code> 两种组合可选。因为 iam-apiserver 主要提供的是 REST 风格的 API 接口，所以选择的是 <code v-pre>HTTP+JSON</code> 组合。</p>
 <blockquote>
@@ -24,7 +24,7 @@
 <p>而 Protocol Buffers 则是一种轻量级的数据序列化格式，它可以将结构化数据序列化为二进制格式，同时提供方便的语言无关性。这种格式不仅可以用于 gRPC 中的消息传递，也可以用于其他数据传输格式，例如存储和传输数据。与其他格式相比，Protocol Buffers 可以生成更小、更快的数据结构，同时也比 JSON 和 XML 等格式更易于阅读和理解。</p>
 </blockquote>
 <p>**Web 服务最核心的功能是路由匹配。**路由匹配其实就是根据(HTTP方法, 请求路径)匹配到处理这个请求的函数，最终由该函数处理这次请求，并返回结果，过程如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202302222256592.jpeg" alt="img"></p>
+<p><img src="http://sm.cubxxw.com/sm202302222256592.jpeg" alt="img"></p>
 <p>一次 HTTP 请求经过路由匹配，最终将请求交由<code v-pre>Delete(c *gin.Context)</code>函数来处理。变量c中存放了这次请求的参数，在 Delete 函数中，我们可以进行参数解析、参数校验、逻辑处理，最终返回结果。</p>
 <p>对于大型系统，可能会有很多个 API 接口，API 接口随着需求的更新迭代，可能会有多个版本，为了便于管理，我们需要<strong>对路由进行分组</strong>。</p>
 <p>有时候，我们需要在一个服务进程中，同时开启 HTTP 服务的 80 端口和 HTTPS 的 443 端口，这样我们就可以做到：</p>
@@ -640,7 +640,7 @@ func <span class="token function">main</span><span class="token punctuation">(</
 <p><RouterLink to="/projects/">Ⓜ️回到目录🏠</RouterLink></p>
 </li>
 <li>
-<p><a href="https://nsddd.top/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
+<p><a href="https://cubxxw.com/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
 </li>
 <li>
 <p>✴️版权声明 © ：本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>

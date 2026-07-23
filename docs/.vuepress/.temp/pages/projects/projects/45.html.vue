@@ -6,7 +6,7 @@
 <div><a href = '44.md' style='float:left'>⬆️上一节🔗  </a><a href = '46.md' style='float: right'>  ⬇️下一节🔗</a></div>
 <br>
 <blockquote>
-<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://nsddd.top/" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
+<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://cubxxw.com/" target="_blank" rel="noopener noreferrer">http://cubxxw.com<ExternalLinkIcon/></a></p>
 </blockquote>
 <hr>
 <nav class="table-of-contents"><ul><li><router-link to="#go-modules简介">Go Modules简介</router-link></li><li><router-link to="#go包管理的历史">Go包管理的历史</router-link><ul><li><router-link to="#go1-5版本前-gopath">Go1.5版本前：GOPATH</router-link></li><li><router-link to="#go1-5版本-vendoring">Go1.5版本：Vendoring</router-link></li><li><router-link to="#百花齐放-多种go依赖包管理工具出现">“百花齐放”：多种Go依赖包管理工具出现</router-link></li><li><router-link to="#go1-9版本-dep">Go1.9版本：Dep</router-link></li><li><router-link to="#go1-11版本之后-go-modules">Go1.11版本之后：Go Modules</router-link></li></ul></li><li><router-link to="#包-package-和模块-module">包（package）和模块（module）</router-link></li><li><router-link to="#go-modules-命令">Go Modules 命令</router-link></li><li><router-link to="#go-modules开关">Go Modules开关</router-link></li><li><router-link to="#模块下载">模块下载</router-link><ul><li><router-link to="#通过代理来下载模块">通过代理来下载模块</router-link></li><li><router-link to="#指定版本号下载">指定版本号下载</router-link></li><li><router-link to="#按最小版本下载">按最小版本下载</router-link></li></ul></li><li><router-link to="#go-mod和go-sum介绍">go.mod和go.sum介绍</router-link><ul><li><router-link to="#go-mod文件介绍">go.mod文件介绍</router-link></li><li><router-link to="#go-sum文件介绍">go.sum文件介绍</router-link></li></ul></li><li><router-link to="#模块下载流程">模块下载流程</router-link></li><li><router-link to="#总结">总结</router-link></li><li><router-link to="#课后练习">课后练习</router-link></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
@@ -262,7 +262,7 @@ rsc.io/quote v1.5.2/go.mod h1:LzX7hefJvL54yjefDEDHNONDjII0t9xZLPXsUe+TKr0<span c
 <p>值得注意的是，Go checksum database可以被Go module proxy代理，所以当我们设置了<code v-pre>GOPROXY</code>后，通常情况下不用再设置<code v-pre>GOSUMDB</code>。还要注意的是，go.sum文件也应该提交到你的 Git 仓库中去。</p>
 <h2 id="模块下载流程" tabindex="-1"><a class="header-anchor" href="#模块下载流程" aria-hidden="true">#</a> 模块下载流程</h2>
 <p>上面，我介绍了模块下载的整体流程，还介绍了go.mod和go.sum这两个文件。因为内容比较多，这里用一张图片来做个总结：</p>
-<p><img src="http://sm.nsddd.top/sm202303071856654.jpeg" alt="img"></p>
+<p><img src="http://sm.cubxxw.com/sm202303071856654.jpeg" alt="img"></p>
 <p>最后还想介绍下Go modules的全局缓存。Go modules中，相同版本的模块只会缓存一份，其他所有模块公用。目前，所有模块版本数据都缓存在 <code v-pre>$GOPATH/pkg/mod</code> 和 <code v-pre>$GOPATH/pkg/sum</code> 下，未来有可能移到 <code v-pre>$GOCACHE/mod</code> 和 <code v-pre>$GOCACHE/sum</code> 下，我认为这可能发生在 <code v-pre>GOPATH</code> 被淘汰后。你可以使用 <code v-pre>go clean -modcache</code> 清除所有的缓存。</p>
 <h2 id="总结" tabindex="-1"><a class="header-anchor" href="#总结" aria-hidden="true">#</a> 总结</h2>
 <p>Go依赖包管理是Go语言中一个重点的功能。在Go1.11版本之前，并没有官方的依赖包管理工具，业界虽然存在多个Go依赖包管理方案，但效果都不理想。直到Go1.11版本，Go才推出了官方的依赖包管理工具，Go Modules。这也是我建议你在进行Go项目开发时选择的依赖包管理工具。</p>
@@ -282,7 +282,7 @@ rsc.io/quote v1.5.2/go.mod h1:LzX7hefJvL54yjefDEDHNONDjII0t9xZLPXsUe+TKr0<span c
 <p><RouterLink to="/projects/">Ⓜ️回到目录🏠</RouterLink></p>
 </li>
 <li>
-<p><a href="https://nsddd.top/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
+<p><a href="https://cubxxw.com/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
 </li>
 <li>
 <p>✴️版权声明 © ：本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>

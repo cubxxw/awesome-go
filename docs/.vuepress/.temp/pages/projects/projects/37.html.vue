@@ -6,7 +6,7 @@
 <div><a href = '36.md' style='float:left'>⬆️上一节🔗  </a><a href = '38.md' style='float: right'>  ⬇️下一节🔗</a></div>
 <br>
 <blockquote>
-<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://nsddd.top/" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
+<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://cubxxw.com/" target="_blank" rel="noopener noreferrer">http://cubxxw.com<ExternalLinkIcon/></a></p>
 </blockquote>
 <hr>
 <nav class="table-of-contents"><ul><li><router-link to="#云原生简介">云原生简介</router-link><ul><li><router-link to="#cncf-云原生计算基金会-简介">CNCF（云原生计算基金会）简介</router-link></li><li><router-link to="#什么是云原生">什么是云原生？</router-link></li><li><router-link to="#什么是云原生应用">什么是云原生应用？</router-link></li></ul></li><li><router-link to="#云原生架构包含很多内容-如何学习">云原生架构包含很多内容，如何学习？</router-link></li><li><router-link to="#系统资源层的云原生架构设计">系统资源层的云原生架构设计</router-link><ul><li><router-link to="#kubernetes集群高可用方案设计">Kubernetes集群高可用方案设计</router-link></li><li><router-link to="#kubernetes应用的高可用">Kubernetes应用的高可用</router-link></li></ul></li><li><router-link to="#应用层的云原生架构设计">应用层的云原生架构设计</router-link><ul><li><router-link to="#微服务实现">微服务实现</router-link></li><li><router-link to="#微服务架构设计">微服务架构设计</router-link></li><li><router-link to="#微服务高可用架构设计">微服务高可用架构设计</router-link></li></ul></li><li><router-link to="#云原生架构鸟瞰图">云原生架构鸟瞰图</router-link></li><li><router-link to="#公有云版云原生架构">公有云版云原生架构</router-link></li><li><router-link to="#总结">总结</router-link></li><li><router-link to="#课后练习">课后练习</router-link></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
@@ -19,14 +19,14 @@
 <h3 id="cncf-云原生计算基金会-简介" tabindex="-1"><a class="header-anchor" href="#cncf-云原生计算基金会-简介" aria-hidden="true">#</a> CNCF（云原生计算基金会）简介</h3>
 <p><a href="https://www.cncf.io/" target="_blank" rel="noopener noreferrer">CNCF<ExternalLinkIcon/></a>（Cloud Native Computing Foundation，云原生计算基金会），2015年由谷歌牵头成立，目前已有一百多个企业与机构作为成员，包括亚马逊、微软、思科、红帽等巨头。CNCF致力于培育和维护一个厂商中立的开源社区生态，用以推广云原生技术。</p>
 <p>CNCF目前托管了非常多的开源项目，其中有很多我们耳熟能详的项目，例如 Kubernetes、Prometheus、Envoy、Istio、etcd等。更多的项目，你可以参考CNCF公布的<a href="https://landscape.cncf.io/images/landscape.png" target="_blank" rel="noopener noreferrer">Cloud Native Landscape<ExternalLinkIcon/></a>，它给出了云原生生态的参考体系，如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202303062154204.jpeg" alt="img"></p>
+<p><img src="http://sm.cubxxw.com/sm202303062154204.jpeg" alt="img"></p>
 <h3 id="什么是云原生" tabindex="-1"><a class="header-anchor" href="#什么是云原生" aria-hidden="true">#</a> 什么是云原生？</h3>
 <p>CNCF官方在2018年发布了云原生v1.0，并给出了定义：</p>
 <blockquote>
 <p>“云原生技术有利于各组织在公有云、私有云和混合云等新型动态环境中，构建和运行可弹性扩展的应用。云原生的代表技术包括容器、服务网格、微服务、不可变基础设施和声明式API。 这些技术能够构建容错性好、易于管理和便于观察的松耦合系统。结合可靠的自动化手段，云原生技术使工程师能够轻松地对系统作出频繁和可预测的重大变更。”</p>
 </blockquote>
 <p>简单点说，云原生（Cloud Native）是一种构建和运行应用程序的方法，是一套技术体系和方法论。云原生中包含了3个概念，分别是技术体系、方法论和云原生应用。整个云原生技术栈是围绕着Kubernetes来构建的，具体包括了以下核心技术栈：</p>
-<p><img src="http://sm.nsddd.top/sm202303062154943.jpeg" alt="img"></p>
+<p><img src="http://sm.cubxxw.com/sm202303062154943.jpeg" alt="img"></p>
 <p>这里来介绍下这些核心技术栈的基本内容。</p>
 <ul>
 <li><strong>容器</strong>：Kubernetes的底层计算引擎，提供容器化的计算资源。</li>
@@ -72,7 +72,7 @@
 <p>通过<a href="https://time.geekbang.org/column/article/414159" target="_blank" rel="noopener noreferrer">43讲<ExternalLinkIcon/></a>的学习，我们知道Kubernetes由kube-apiserver、kube-controller-manager、kube-scheduler、cloud-controller-manager、etcd、kubelet、kube-proxy、container runtime 8大核心组件组成。</p>
 <p>其中，kube-apiserver、kube-controller-manager、kube-scheduler、cloud-controller-manager、etcd通常部署在master节点，kubelet、kube-proxy、container runtime 部署在Node节点上。实现Kubernetes集群的高可用，需要分别实现这8大核心组件的高可用。</p>
 <p>Kubernetes集群的高可用架构图如下：</p>
-<p><img src="http://sm.nsddd.top/sm202303062155421.jpeg" alt="img"></p>
+<p><img src="http://sm.cubxxw.com/sm202303062155421.jpeg" alt="img"></p>
 <p>上面图片展示的方案中，所有管理节点都部署了 <code v-pre>kube-apiserver</code>、<code v-pre>kube-controller-manager</code>、<code v-pre>kube-scheduler</code>、etcd等组件。<code v-pre>kube-apiserver</code> 均与本地的etcd进行通信，etcd在三个节点间同步数据；而 <code v-pre>kube-controller-manager</code>、<code v-pre>kube-scheduler</code>和 <code v-pre>cloud-controller-manager</code>，也只与本地的kube-apiserver进行通信，或者通过负载均衡访问。</p>
 <p>一个Kubernetes集群中有多个<strong>Node节点</strong>，当一个Node节点故障时，Kubernetes的调度组件kube-controller-manager会将Pod调度到其他节点上，并将故障节点的Pod在其他可用节点上重建。也就是说，只要集群中有两个以上的节点，当其中一个Node故障时，整个集群仍然能够正常提供服务。换句话说，集群的<strong>kubelet、kube-proxy、container runtime组件</strong>可以是单点的，不用实现这些组件的高可用。</p>
 <p>接下来，我们来看下<strong>Master节点</strong>各组件是如何实现高可用的。先来说下<strong>kube-apiserver组件的高可用方案设计</strong>。</p>
@@ -94,7 +94,7 @@
 <p>在Kubernetes中，我们可以通过Kubernetes Service或者负载均衡来访问这些Pod。当通过负载均衡来访问Pod时，负载均衡后端的RS（Real Server）实例其实就是Pod。我们创建了多个Pod，负载均衡可以自动根据Pod的健康状况来进行负载。</p>
 <p>接下来，我们主要看下这个问题：当通过Kubernetes Service访问Pod时，如何实现高可用？</p>
 <p>高可用原理如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202303062157231.jpeg" alt="img"></p>
+<p><img src="http://sm.cubxxw.com/sm202303062157231.jpeg" alt="img"></p>
 <p>在Kubernetes中，我们可以给每个Pod打上标签（Label），标签是一个key-value对，例如<code v-pre>label: app=Nginx</code>。当我们访问Service时，Service会根据它配置的Label Selector，匹配具有相同Label的Pod，并将这些Pod的endpoint地址作为其后端RS。</p>
 <p>举个例子，你可以看看上面的图片：Service的Label Selector是Labels<code v-pre>app=Nginx</code>，这样就会选择我们创建的具有<code v-pre>label: app=Nginx</code>的3个Pod实例。这时候，Service会根据其负载均衡策略，选取一个Pod将请求流量转发过去。当其中一个Pod故障时，Kubernetes会自动将故障Pod的endpoint从Service后端对应的RS列表中剔除。</p>
 <p>由Deployment创建的ReplicaSet，这时候也会发现有一个Pod故障，健康的Pod实例数变为<code v-pre>2</code>，这时候跟其期望的值<code v-pre>3</code>不匹配，就会自动创建一个新的健康Pod，替换掉故障的Pod。因为新Pod满足Service的Label Selector，所以新Pod的endpoint会被Kubernetes自动添加到Service对应的endpoint列表中。</p>
@@ -198,7 +198,7 @@
 <p><RouterLink to="/projects/">Ⓜ️回到目录🏠</RouterLink></p>
 </li>
 <li>
-<p><a href="https://nsddd.top/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
+<p><a href="https://cubxxw.com/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
 </li>
 <li>
 <p>✴️版权声明 © ：本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>

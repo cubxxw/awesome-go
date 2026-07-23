@@ -6,7 +6,7 @@
 <div><a href = '27.md' style='float:left'>⬆️上一节🔗  </a><a href = '29.md' style='float: right'>  ⬇️下一节🔗</a></div>
 <br>
 <blockquote>
-<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://nsddd.top/" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
+<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://cubxxw.com/" target="_blank" rel="noopener noreferrer">http://cubxxw.com<ExternalLinkIcon/></a></p>
 </blockquote>
 <hr>
 <nav class="table-of-contents"><ul><li><router-link to="#开始">开始</router-link></li><li><router-link to="#如何测试-go-代码">如何测试 Go 代码？</router-link></li><li><router-link to="#测试命名规范">测试命名规范</router-link><ul><li><router-link to="#测试文件的命名规范">测试文件的命名规范</router-link></li><li><router-link to="#包的命名规范">包的命名规范</router-link></li><li><router-link to="#函数的命名规范">函数的命名规范</router-link></li><li><router-link to="#变量的命名规范">变量的命名规范</router-link></li></ul></li><li><router-link to="#单元测试">单元测试</router-link><ul><li><router-link to="#多个输入的测试用例">多个输入的测试用例</router-link></li><li><router-link to="#自动生成单元测试用例">自动生成单元测试用例</router-link></li></ul></li><li><router-link to="#性能测试">性能测试</router-link></li><li><router-link to="#总结">总结</router-link></li><li><router-link to="#课后练习">课后练习</router-link></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
@@ -96,7 +96,7 @@
 <h2 id="单元测试" tabindex="-1"><a class="header-anchor" href="#单元测试" aria-hidden="true">#</a> 单元测试</h2>
 <p>单元测试用例函数以 <code v-pre>Test</code> 开头，例如 <code v-pre>TestXxx</code> 或 <code v-pre>Test_xxx</code> （ <code v-pre>Xxx</code> 部分为任意字母数字组合，首字母大写）。函数参数必须是 <code v-pre>\*testing.T\*</code>，可以使用该类型来记录错误或测试状态。</p>
 <p><strong>我们可以调用 <code v-pre>testing.T</code> 的 <code v-pre>Error</code> 、<code v-pre>Errorf</code> 、<code v-pre>FailNow</code> 、<code v-pre>Fatal</code> 、<code v-pre>FatalIf</code> 方法，来说明测试不通过；调用 <code v-pre>Log</code> 、<code v-pre>Logf</code> 方法来记录测试信息。函数列表和相关描述如下表所示：</strong></p>
-<p><img src="http://sm.nsddd.top/sm202303051034819.jpeg" alt="图片"></p>
+<p><img src="http://sm.cubxxw.com/sm202303051034819.jpeg" alt="图片"></p>
 <p><strong>下面的代码是两个简单的单元测试函数（函数位于文件<a href="https://github.com/marmotedu/gopractise-demo" target="_blank" rel="noopener noreferrer">math_test.go<ExternalLinkIcon/></a>中）：</strong></p>
 <div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">func</span> <span class="token function">TestAbs</span><span class="token punctuation">(</span>t <span class="token operator">*</span>testing<span class="token punctuation">.</span>T<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     got <span class="token operator">:=</span> <span class="token function">Abs</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span>
@@ -210,7 +210,7 @@ ok      github<span class="token punctuation">.</span>com<span class="token oper
 <p>assert包还提供了很多其他函数，供开发者进行结果对比，例如<code v-pre>Zero</code>、<code v-pre>NotZero</code>、<code v-pre>Equal</code>、<code v-pre>NotEqual</code>、<code v-pre>Less</code>、<code v-pre>True</code>、<code v-pre>Nil</code>、<code v-pre>NotNil</code>等。如果想了解更多函数，你可以参考<code v-pre>go doc github.com/stretchr/testify/assert</code>。</p>
 <h3 id="自动生成单元测试用例" tabindex="-1"><a class="header-anchor" href="#自动生成单元测试用例" aria-hidden="true">#</a> 自动生成单元测试用例</h3>
 <p>通过上面的学习，你也许可以发现，测试用例其实可以抽象成下面的模型：</p>
-<p><img src="http://sm.nsddd.top/sm202303051037196.jpeg" alt="图片"></p>
+<p><img src="http://sm.cubxxw.com/sm202303051037196.jpeg" alt="图片"></p>
 <p><strong>用代码可表示为：</strong></p>
 <div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code><span class="token keyword">func</span> <span class="token function">TestXxx</span><span class="token punctuation">(</span>t <span class="token operator">*</span>testing<span class="token punctuation">.</span>T<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">type</span> args <span class="token keyword">struct</span> <span class="token punctuation">{</span>
@@ -397,7 +397,7 @@ ok      github.com/marmotedu/gopractise-demo/31/test    <span class="token numbe
 <p><RouterLink to="/projects/">Ⓜ️回到目录🏠</RouterLink></p>
 </li>
 <li>
-<p><a href="https://nsddd.top/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
+<p><a href="https://cubxxw.com/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
 </li>
 <li>
 <p>✴️版权声明 © ：本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>

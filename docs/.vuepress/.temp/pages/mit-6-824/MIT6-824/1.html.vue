@@ -6,7 +6,7 @@
 <div><a href = '0.md' style='float:left'>⬆️上一节🔗  </a><a href = '2.md' style='float: right'>  ⬇️下一节🔗</a></div>
 <br>
 <blockquote>
-<p>❤️💕💕⚠️ According to the MIT 6.824 Collaboration policy, which prevents students from obtaining Solutions through GitHub, the source repository is for personal use only, and the documentation uses an open source protocol for learning. Myblog:<a href="http://nsddd.top/" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
+<p>❤️💕💕⚠️ According to the MIT 6.824 Collaboration policy, which prevents students from obtaining Solutions through GitHub, the source repository is for personal use only, and the documentation uses an open source protocol for learning. Myblog:<a href="http://cubxxw.com/" target="_blank" rel="noopener noreferrer">http://cubxxw.com<ExternalLinkIcon/></a></p>
 </blockquote>
 <hr>
 <nav class="table-of-contents"><ul><li><router-link to="#分布式问题">分布式问题</router-link><ul><li><router-link to="#使用的技术">使用的技术</router-link></li></ul></li><li><router-link to="#课程">课程</router-link></li><li><router-link to="#我们需要讨论">我们需要讨论</router-link></li><li><router-link to="#我们需要解决">我们需要解决</router-link></li><li><router-link to="#课程结构">课程结构</router-link></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
@@ -49,7 +49,7 @@
 <p>这里的论文每周需要读一篇，论文主要是研究论文，也有一些经典论文，比如今天我希望你们阅读的论文是MapReduce的论文。这篇论文很老，但是这篇论文不论在学术界还是工业界都激发了巨大的关于分布式系统的兴趣。所以，论文有一些是经典论文，也有一些最近发布的论文，用来讨论最近人们关心的最新研究成果。我希望通过这些论文可以让你们弄清楚，什么是基本的问题，研究者们有哪些想法，这些想法可能会，也可能不会对解决分布式系统的问题有用。我们有时会讨论这些论文中的一些实施细节，因为这些细节与实际构建软件系统有很多关联。我们同样会花一些时间去看对人们对系统的评估。人们是如何通过系统容错性和性能来评估一个分布式系统。我希望你们在每次讲课前，都可以完成相关论文的阅读。如果没有提前阅读，光是课程本身的内容或许没有那么有意义，因为我们没有足够的时间来解释论文中的所有内容，同时来反思论文中一些有意思的地方。所以，我真的希望大家来课堂前先阅读论文。我也希望快速高效的读论文会是这堂课的一个收获，比如跳过一些并不太重要的部分，而关注作者重要的想法。我们课程网站上每一个日程的链接都有一些思考问题，你应该在读完每篇论文后回答这个问题。我们也需要你在网站上提出关于论文的一些问题，可以让我思考一下我对课程的准备。如果我有时间我会至少通过电子邮件回答一部分问题。这些问题和回答都需要课程前一天的零点前提交。</p>
 <p>有两次考试，一次是随堂期中，大概在春假前最后一节课；并且会在学期期末周迎来期末考试。考试内容主要为论文和实验中的内容。我建议最好的准备方式当然参加课堂授课，并且阅读论文。另一个好的准备考试的方式就是查看我们过去20年所有的考试，这在网站上都有链接。这样你就知道，我会在考试中问哪些问题？因为我们（相比往年）会涉及到一些重复的论文，所以不可避免的，我会问一些与历年题目类似的问题。</p>
 <p>有四次编程实验。第一次实验需要在下周五前完成，这是一个简单的MapReduce实验。你们要根据你们在论文中读到的来实现你们版本的MapReduce。我们过一会就会讨论这个论文。第二个实验实现Raft算法，这是一个理论上通过复制来让系统容错的算法，具体是通过复制和出现故障时自动切换来实现。第三个实验，你需要使用你的Raft算法实现来建立一个可以容错的KV服务。第四个实验，你需要把你写的KV服务器分发到一系列的独立集群中，这样你会切分你的KV服务，并通过运行这些独立的副本集群进行加速。同时，你也要负责将不同的数据块在不同的服务器之间搬迁，并确保数据完整。这里我们通常称之为分片式KV服务。分片是指我们将数据在多个服务器上做了分区，来实现并行的加速。</p>
-<p><img src="http://sm.nsddd.top/smasedfsdf.png" alt="img"></p>
+<p><img src="http://sm.cubxxw.com/smasedfsdf.png" alt="img"></p>
 <p>如果你不想做实验四，你也可以选择你自己的项目。如果你对分布式系统有一些自己的想法，比如我们课堂上讨论到的某个类型的分布式系统，或者说你有一些自己的追求并且想对这个想法进行评估，看他们能不能正确运行，你可以选择做这个项目。这个项目中你需要联系一些你的同学，因为我们需要以2-3人的小组形式完成。你需要把想法发给我，我来确定下是否合适或者是给你一些建议。如果我觉得合适，你也想做这个项目，你就可以用它在本学期末代替实验四。你需要做一些系统设计，并构建一个真实的系统并在最后一节课前演示。同时需要交一个简短的关于如何构建它的书面报告。我在网站上也提出一些或许对你们构建这个项目有帮助的大胆的想法。当然最好的项目应该是，你自己有一个很好的想法。你需要选择一个和课程讨论内容相关的系统作为你的项目。</p>
 <p>回到实验部分，实验成绩会由一系列针对你代码的测试构成，所以你的成绩就是我们所有测试的结果。我们会公开全部的测试数据，并没有隐藏的测试，所以如果你完成了实验并且可靠的通过了全部测试，除非出现一些愚蠢的问题，一般来说就会得到满分。希望你们不会有任何关于实验评分的问题。我需要提醒你的是，debug这些代码可能很耗时间，因为它们是分布式系统，它们有很多并发和通信，可能发生一些奇怪且困难的错误。所以，你们应该尽早开始实验 ，不要在提交实验的最后时刻还要处理很多麻烦。如果有对实验有问题，可以在工作时间来到助教办公室，你也可以在Piazza上自由提问。当然我也希望，如果你知道一个问题的答案，你可以在Piazza回答别人的提问。</p>
 <h2 id="end-链接" tabindex="-1"><a class="header-anchor" href="#end-链接" aria-hidden="true">#</a> END 链接</h2>
@@ -59,7 +59,7 @@
 <p><RouterLink to="/mit-6-824/">Ⓜ️回到目录🏠</RouterLink></p>
 </li>
 <li>
-<p><a href="https://nsddd.top/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
+<p><a href="https://cubxxw.com/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
 </li>
 <li>
 <p>✴️版权声明 © ：本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>

@@ -6,7 +6,7 @@
 <div><a href = '23.md' style='float:left'>⬆️上一节🔗  </a><a href = '25.md' style='float: right'>  ⬇️下一节🔗</a></div>
 <br>
 <blockquote>
-<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://nsddd.top/" target="_blank" rel="noopener noreferrer">http://nsddd.top<ExternalLinkIcon/></a></p>
+<p>❤️💕💕During the winter vacation, I followed up and learned two projects: tiktok project and IAM project, and summarized and practiced the CloudNative project and Go language. I learned a lot in the process.Myblog:<a href="http://cubxxw.com/" target="_blank" rel="noopener noreferrer">http://cubxxw.com<ExternalLinkIcon/></a></p>
 </blockquote>
 <hr>
 <nav class="table-of-contents"><ul><li><router-link to="#前言">前言</router-link></li><li><router-link to="#数据采集方式的分类">数据采集方式的分类</router-link></li><li><router-link to="#数据采集系统设计">数据采集系统设计</router-link><ul><li><router-link to="#设计数据采集系统时需要解决的核心问题">设计数据采集系统时需要解决的核心问题</router-link></li><li><router-link to="#数据上报功能设计">数据上报功能设计</router-link></li><li><router-link to="#数据采集功能设计">数据采集功能设计</router-link></li><li><router-link to="#数据采集应用模型">数据采集应用模型</router-link></li></ul></li><li><router-link to="#数据采集系统落地项目-iam-authz-server-iam-pump">数据采集系统落地项目：iam-authz-server + iam-pump</router-link></li><li><router-link to="#iam-authz-server-数据上报">iam-authz-server：数据上报</router-link><ul><li><router-link to="#启动服务-启动数据上报服务">启动服务：启动数据上报服务</router-link></li><li><router-link to="#运行服务-异步上报授权日志">运行服务：异步上报授权日志</router-link></li><li><router-link to="#关停服务-优雅关停数据上报">关停服务：优雅关停数据上报</router-link></li></ul></li><li><router-link to="#iam-pump-数据采集">iam-pump：数据采集</router-link><ul><li><router-link to="#初始化服务-数据采集插件定义">初始化服务：数据采集插件定义</router-link></li><li><router-link to="#初始化服务-初始化数据采集插件">初始化服务：初始化数据采集插件</router-link></li><li><router-link to="#初始化服务-健康检查">初始化服务：健康检查</router-link></li><li><router-link to="#运行服务-启动-loop-周期性消费-redis-数据">运行服务：启动 Loop 周期性消费 Redis 数据</router-link></li><li><router-link to="#关停服务-优雅关停数据采集服务">关停服务：优雅关停数据采集服务</router-link></li></ul></li><li><router-link to="#总结">总结</router-link></li><li><router-link to="#课后练习">课后练习</router-link></li><li><router-link to="#end-链接">END 链接</router-link></li></ul></nav>
@@ -24,7 +24,7 @@
 <h2 id="数据采集方式的分类" tabindex="-1"><a class="header-anchor" href="#数据采集方式的分类" aria-hidden="true">#</a> 数据采集方式的分类</h2>
 <p>首先，你需要知道当前数据采集有哪些方式，以便更好地理解异步数据处理方案。</p>
 <p>目前，数据采集主要有两种方式，分别是同步采集和异步采集。二者的概念和优缺点如下表所示：</p>
-<p><img src="http://sm.nsddd.top/sm202303042334375.jpeg" alt="图片">现代应用对性能的要求越来越高，而异步采集对应用程序的性能影响更小，因此异步采集更受开发者欢迎，得到了大规模的应用。接下来，我要介绍的 IAM Pump Server 服务，采用的就是异步采集的方式。</p>
+<p><img src="http://sm.cubxxw.com/sm202303042334375.jpeg" alt="图片">现代应用对性能的要求越来越高，而异步采集对应用程序的性能影响更小，因此异步采集更受开发者欢迎，得到了大规模的应用。接下来，我要介绍的 IAM Pump Server 服务，采用的就是异步采集的方式。</p>
 <h2 id="数据采集系统设计" tabindex="-1"><a class="header-anchor" href="#数据采集系统设计" aria-hidden="true">#</a> 数据采集系统设计</h2>
 <p>这一讲，我采用理论+实战的方式来展示如何设计一个数据采集服务，这里先来介绍下关于数据采集的理论知识，后面会有具体的实战案例。</p>
 <p>在过往的项目开发中，我发现很多开发人员添加了数据采集功能后，因为同步上报数据、单线程、上报逻辑不对等原因，让整个应用程序的性能受到了严重影响。那么，如何在采集过程中不影响程序的性能？</p>
@@ -32,7 +32,7 @@
 <p>我今天就来给你详细介绍下，如何将数据采集功能模型化，以及该模型是如何解决上面说的的各种问题的。</p>
 <h3 id="设计数据采集系统时需要解决的核心问题" tabindex="-1"><a class="header-anchor" href="#设计数据采集系统时需要解决的核心问题" aria-hidden="true">#</a> 设计数据采集系统时需要解决的核心问题</h3>
 <p>采集系统首先需要一个数据源 Input，Input 可以是一个或者多个，Input 中的数据来自于应用程序上报。采集后的数据通常需要经过处理，比如格式化、增删字段、过滤无用的数据等，然后将处理后的数据存储到下游系统（Output）中，如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202303042334306.jpeg" alt="图片"></p>
+<p><img src="http://sm.cubxxw.com/sm202303042334306.jpeg" alt="图片"></p>
 <p><strong>这里，我们需要解决这 3 个核心问题：</strong></p>
 <ul>
 <li>进行数据采集，就需要在正常流程中多加一个上报数据环节，这势必会影响程序的性能。那么，如何让程序的性能损失最小化？</li>
@@ -51,7 +51,7 @@
 <p>当然了，既然是数据采集，还要能够配置采集的频率。最后，因为采集程序通常是非 API 类型的，所以还需要对外暴露一个特殊的 API，用来返回采集程序的健康状态。</p>
 <h3 id="数据采集应用模型" tabindex="-1"><a class="header-anchor" href="#数据采集应用模型" aria-hidden="true">#</a> 数据采集应用模型</h3>
 <p>通过上面的分析和设计，可以绘制出下面这个采集模型：</p>
-<p><img src="http://sm.nsddd.top/sm202303042337956.jpeg" alt="图片"></p>
+<p><img src="http://sm.cubxxw.com/sm202303042337956.jpeg" alt="图片"></p>
 <p>异步上报需要额外的异步逻辑，会增加开发工作量和程序复杂度，所以，对于一些 Input 数据生产速度小于 Output 消费速度，并且 Output 具有高吞吐量、低延时特性的场景，也可以采用同步上报，例如同步上报给 Redis。</p>
 <h2 id="数据采集系统落地项目-iam-authz-server-iam-pump" tabindex="-1"><a class="header-anchor" href="#数据采集系统落地项目-iam-authz-server-iam-pump" aria-hidden="true">#</a> 数据采集系统落地项目：iam-authz-server + iam-pump</h2>
 <p>上面，我介绍了数据采集系统的架构，但是只有模型和理论，肯定还不足以解决你对数据采集程序的开发需求。所以，接下来我来介绍下如何落地上面的数据采集架构。整个架构包括两个部分，分别由不同的服务实现：</p>
@@ -64,7 +64,7 @@
 <p>数据上报的最大难点，就是如何减少上报逻辑对应用性能的影响。对此，我们主要的解决思路就是异步上报数据。</p>
 <p>接下来我会介绍 iam-authz-server 的数据上报设计。这是一个非常成熟的设计，在我所开发和了解的项目中被大量采用，有些项目可以承载十亿级/天的请求量。通过介绍这个设计，我们来看看异步上报的具体方法，以及上报过程中要考虑的因素。</p>
 <p>iam-authz-server 的数据上报架构如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202303042338170.jpeg" alt="图片"></p>
+<p><img src="http://sm.cubxxw.com/sm202303042338170.jpeg" alt="图片"></p>
 <p><strong>iam-authz-server 服务中的数据上报功能可以选择性开启</strong>，开启代码见 <a href="https://github.com/marmotedu/iam/blob/v1.0.6/internal/authzserver/server.go#L147-L156" target="_blank" rel="noopener noreferrer">internal/authzserver/server.go<ExternalLinkIcon/></a> ，代码如下：</p>
 <div class="language-go ext-go line-numbers-mode"><pre v-pre class="language-go"><code> <span class="token keyword">if</span> s<span class="token punctuation">.</span>analyticsOptions<span class="token punctuation">.</span>Enable <span class="token punctuation">{</span>                                           
         analyticsStore <span class="token operator">:=</span> storage<span class="token punctuation">.</span>RedisCluster<span class="token punctuation">{</span>KeyPrefix<span class="token punctuation">:</span> RedisKeyPrefix<span class="token punctuation">}</span>              
@@ -227,7 +227,7 @@ recordWorker()中有些设计技巧，很值得你参考。</p>
 <p><strong>iam-authz-server 将数据上报到 Redis，iam-pump 消费 Redis 中的数据，并保存在 MongoDB 中做持久化存储。</strong></p>
 <p><strong>iam-pump 的设计要点是：</strong> 插件化、可配置地将 Redis 中的数据处理后存储到下游系统中，并且实现优雅关停功能，这些也是设计数据采集程序的要点和难点所在。下面，我们就来看下 iam-pump 是如何插件化地实现一个数据采集程序的。这个数据采集程序的设计思路，在我开发的大型企业应用中有实际的落地验证，你可以放心使用。</p>
 <p>iam-pump 数据采集架构如下图所示：</p>
-<p><img src="http://sm.nsddd.top/sm202303042349253.jpeg" alt="图片"></p>
+<p><img src="http://sm.cubxxw.com/sm202303042349253.jpeg" alt="图片"></p>
 <p>在iam-pump服务启动时，要启动数据采集功能，启动代码见 <a href="https://github.com/marmotedu/iam/blob/v1.0.6/internal/pump/server.go#L58" target="_blank" rel="noopener noreferrer">internal/pump/server.go<ExternalLinkIcon/></a>。</p>
 <p>接下来，我会介绍下 <code v-pre>iam-pump</code> 服务中的 5 部分核心代码：</p>
 <ul>
@@ -407,7 +407,7 @@ func (s preparedPumpServer) Run(stopCh &lt;-chan struct{}) error {
 <p><RouterLink to="/projects/">Ⓜ️回到目录🏠</RouterLink></p>
 </li>
 <li>
-<p><a href="https://nsddd.top/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
+<p><a href="https://cubxxw.com/archives/contributors" target="_blank" rel="noopener noreferrer"><strong>🫵参与贡献💞❤️‍🔥💖</strong><ExternalLinkIcon/></a>)</p>
 </li>
 <li>
 <p>✴️版权声明 © ：本书所有内容遵循<a href="http://zh.wikipedia.org/wiki/Wikipedia:CC-by-sa-3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="noopener noreferrer">CC-BY-SA 3.0协议（署名-相同方式共享）©<ExternalLinkIcon/></a></p>
