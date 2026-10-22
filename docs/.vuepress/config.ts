@@ -190,7 +190,7 @@ export default {
             {
                 text: "📚go文档",
                 children: [
-                    { text: "🔥 Go语言基础篇", link: "/markdown/1.md/" },
+                    { text: "🔥 Go语言基础篇", link: "/markdown/1.html" },
                     { text: "🔥 Go语言进阶篇", link: "/Gomd_super/" },
                     { text: "🔥 Go语言高级篇", link: "/go-advancend/" },
                 ],
@@ -203,7 +203,7 @@ export default {
                     text: "💱个人云盘地址",
                     link: "https://xxw.cubxxw.com/s/wRSz",
                 },
-                { text: "🔥 进阶篇首页", link: "/Gomd_super/markdown/" },
+                { text: "🔥 进阶篇首页", link: "/Gomd_super/" },
                 { text: "🔥 Go语言高级篇", link: "/go-advancend/" },
                 {
                     text: "🔥 Go语言基础篇",
@@ -241,7 +241,7 @@ export default {
                         "/markdown/chan底层分析.md",
                         "/markdown/反射.md",
                         "/markdown/并发.md",
-                        "/markdown/gofloat.md.md",
+                        "/markdown/gofloat.html",
                         "/markdown/file.md",
                         "/markdown/eth.md",
                         "/markdown/Go汇编.md",
@@ -259,7 +259,7 @@ export default {
                     text: "💱个人云盘地址",
                     link: "https://xxw.cubxxw.com/s/wRSz",
                 },
-                { text: "🔥 进阶篇首页", link: "/Gomd_super/markdown/" },
+                { text: "🔥 进阶篇首页", link: "/Gomd_super/" },
                 { text: "🔥 Go语言高级篇", link: "/go-advancend/" },
                 {
                     text: "⚡ Go语言进阶篇",
@@ -385,7 +385,7 @@ export default {
                     text: "💱个人云盘地址",
                     link: "https://xxw.cubxxw.com/s/wRSz",
                 },
-                { text: "🔥 进阶篇首页", link: "/Gomd_super/markdown/" },
+                { text: "🔥 进阶篇首页", link: "/Gomd_super/" },
                 {
                     text: "Go高级编程",
                     children: [
