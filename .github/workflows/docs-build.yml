@@ -42,6 +42,8 @@ jobs:
       - name: Use the verified package manager
         run: npm install --global npm@12.0.2 --ignore-scripts --no-audit --no-fund
       - run: npm ci --ignore-scripts --strict-peer-deps --engine-strict
+      - name: Check the installed dependency and peer graph
+        run: npm run docs:check-deps
       - name: Build and verify documentation
         env:
           NODE_OPTIONS: --max-old-space-size=2048

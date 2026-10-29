@@ -7,20 +7,21 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "docs:check-build": "node scripts/check-docs-build.mjs"
+    "docs:check-build": "node scripts/check-docs-build.mjs",
+    "docs:check-deps": "npm ls --all"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@vuepress/bundler-vite": "2.0.0-rc.31",
-    "@vuepress/plugin-docsearch": "2.0.0-rc.137",
-    "@vuepress/plugin-search": "2.0.0-rc.137",
-    "@vuepress/plugin-toc": "2.0.0-rc.135",
-    "@vuepress/theme-default": "2.0.0-rc.137",
+    "@vuepress/bundler-vite": "2.0.0-rc.30",
+    "@vuepress/plugin-docsearch": "2.0.0-rc.132",
+    "@vuepress/plugin-search": "2.0.0-rc.131",
+    "@vuepress/plugin-toc": "2.0.0-rc.131",
+    "@vuepress/theme-default": "2.0.0-rc.132",
     "markdown-it-task-lists": "2.1.1",
     "sass": "1.105.0",
     "vue": "3.5.44",
-    "vuepress": "2.0.0-rc.31"
+    "vuepress": "2.0.0-rc.30"
   },
   "type": "module",
   "private": true,
