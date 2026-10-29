@@ -1,77 +1,14 @@
-import { defaultTheme } from "vuepress";
+import { viteBundler } from "@vuepress/bundler-vite";
 import { docsearchPlugin } from "@vuepress/plugin-docsearch";
-import { backToTopPlugin } from "@vuepress/plugin-back-to-top";
-import { externalLinkIconPlugin } from "@vuepress/plugin-external-link-icon";
-import { mediumZoomPlugin } from "@vuepress/plugin-medium-zoom";
 import { searchPlugin } from "@vuepress/plugin-search";
-import { prismjsPlugin } from "@vuepress/plugin-prismjs";
-import { shikiPlugin } from "@vuepress/plugin-shiki";
 import { tocPlugin } from "@vuepress/plugin-toc";
-import Vue from "vue";
-import GithubV3 from "@vssue/api-github-v3";
-export default {
-    markdown: { plugins: ["task-lists"] },
-    base: "/",
-    dest: "./dist",
-    lang: "zh-CN",
-    port: 8888,
-    title: "你好",
-    description: "链学社致力于打造出区块链去中心化的学习平台",
-    sidebarDepth: 0,
-    head: [["link", { rel: "icon", href: "/img/1.jpg" }]],
-    plugins: [
-        [
-            "vuepress-plugin-baidu-tongji",
-            { hm: "bf1bd5693b39d433338099c3aa905d50" },
-        ],
-        "@vuepress/nprogress",
-        [
-            "vuepress-plugin-zooming",
-            {
-                selector: ".theme-vdoing-content img:not(.no-zoom)",
-                options: { bgColor: "rgba(0,0,0,0.6)" },
-            },
-        ],
-        [
-            "one-click-copy",
-            {
-                copySelector: [
-                    'div[class*="language-"] pre',
-                    'div[class*="aside-code"] aside',
-                ],
-                copyMessage: "复制成功噢⚡",
-                duration: 1000,
-                showInMobile: false,
-            },
-        ],
-        [
-            "vuepress-plugin-comment",
-            {
-                choosen: "gitalk",
-                options: {
-                    clientID: "4479c25f1d6cdcd8187f",
-                    clientSecret: "ddba2162d94a643e601313646380e48904ded8ee",
-                    repo: "my-blog-comment",
-                    owner: "3293172751",
-                    admin: ["3293172751"],
-                    pagerDirection: "last",
-                    id: '<%- (frontmatter.permalink || frontmatter.to.path || "123456789012345").slice(-16) %>',
-                    title: "「评论」<%- frontmatter.title %>",
-                    labels: ["Gitalk", "Comment"],
-                    body: '页面：<%- window.location.origin + (frontmatter.to.path || window.location.pathname || "123456789012345") %>',
-                },
-            },
-        ],
-        backToTopPlugin(),
-        externalLinkIconPlugin({
-            locales: {
-                "/": { openInNewWindow: "open in new window" },
-                "/zh/": { openInNewWindow: "在新窗口打开" },
-            },
-        }),
-        mediumZoomPlugin({}),
-        searchPlugin({}),
-        docsearchPlugin({
+import { defaultTheme } from "@vuepress/theme-default";
+import taskLists from "markdown-it-task-lists";
+import { defineUserConfig } from "vuepress";
+
+// Preserve the existing search-only configuration without activating an
+// external search provider on local verification or Vercel previews.
+const docsearchOptions = {
             apiKey: "e0bc57bb5910bb4cbaff54471af173d4",
             appId: "LIPIDXUN7V",
             indexName: "go.cubxxw.com",
@@ -123,8 +60,22 @@ export default {
                     },
                 },
             },
-        }),
-        prismjsPlugin({}),
+        };
+const useDocsearch = process.env.AWESOME_GO_DOCSEARCH === "1"
+    && process.env.VERCEL_ENV !== "preview";
+
+export default defineUserConfig({
+    base: "/",
+    dest: "./dist",
+    lang: "zh-CN",
+    port: 8888,
+    title: "你好",
+    description: "链学社致力于打造出区块链去中心化的学习平台",
+    head: [["link", { rel: "icon", href: "/img/1.jpg" }]],
+    bundler: viteBundler(),
+    extendsMarkdown: (markdown) => { markdown.use(taskLists); },
+    plugins: [
+        useDocsearch ? docsearchPlugin(docsearchOptions) : searchPlugin({}),
         tocPlugin({}),
     ],
     theme: defaultTheme({
@@ -469,4 +420,4 @@ export default {
             ],
         },
     }),
-};
+});
