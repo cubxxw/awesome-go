@@ -32,7 +32,7 @@ jobs:
           [[ "$SOURCE_SHA" =~ ^[0-9a-f]{40}$ ]]
           git init .
           git remote add origin "https://github.com/$SOURCE_REPOSITORY.git"
-          git -c protocol.version=2 fetch --no-tags --no-recurse-submodules --filter=blob:none origin "$SOURCE_SHA"
+          git -c protocol.version=2 fetch --no-tags --no-recurse-submodules origin "$SOURCE_SHA"
           git config core.sparseCheckout true
           mkdir -p .git/info
           cat > .git/info/sparse-checkout <<'SPARSE'

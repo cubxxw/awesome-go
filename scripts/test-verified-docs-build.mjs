@@ -107,7 +107,7 @@ test("credential-free exact-SHA sparse checkout preserves an unmapped gitlink", 
   const exact = git(source, "rev-parse", "HEAD");
   git(checkout, "init");
   git(checkout, "remote", "add", "origin", pathToFileURL(source).href);
-  git(checkout, "-c", "protocol.version=2", "fetch", "--no-tags", "--no-recurse-submodules", "--filter=blob:none", "origin", exact);
+  git(checkout, "-c", "protocol.version=2", "fetch", "--no-tags", "--no-recurse-submodules", "origin", exact);
   git(checkout, "config", "core.sparseCheckout", "true");
   await writeFile(path.join(checkout, ".git/info/sparse-checkout"), "/docs/\n");
   git(checkout, "-c", "submodule.recurse=false", "checkout", "--detach", exact);
