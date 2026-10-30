@@ -104,6 +104,10 @@ test("credential-free exact-SHA sparse checkout preserves an unmapped gitlink", 
   const unmapped = "b".repeat(40);
   git(source, "update-index", "--add", "--cacheinfo", `160000,${unmapped},code/unknown`);
   git(source, "-c", "user.name=Fixture", "-c", "user.email=fixture@example.invalid", "-c", "core.hooksPath=/dev/null", "commit", "-m", "fixture");
+  await writeFile(path.join(source, "docs/README.md"), "current source fixture\n");
+  git(source, "add", "docs/README.md");
+  git(source, "-c", "user.name=Fixture", "-c", "user.email=fixture@example.invalid", "-c", "core.hooksPath=/dev/null", "commit", "-m", "second fixture");
+  git(source, "config", "uploadpack.allowFilter", "true");
   const exact = git(source, "rev-parse", "HEAD");
   git(checkout, "init");
   git(checkout, "remote", "add", "origin", pathToFileURL(source).href);
@@ -113,5 +117,17 @@ test("credential-free exact-SHA sparse checkout preserves an unmapped gitlink", 
   git(checkout, "-c", "submodule.recurse=false", "checkout", "--detach", exact);
   assert.equal(git(checkout, "rev-parse", "HEAD"), exact);
   assert.match(git(checkout, "ls-tree", "HEAD", "code/unknown"), new RegExp(`160000 commit ${unmapped}`));
-  assert.equal(await readFile(path.join(checkout, "docs/README.md"), "utf8"), "source fixture\n");
+  assert.equal(await readFile(path.join(checkout, "docs/README.md"), "utf8"), "current source fixture\n");
+  assert.doesNotMatch(git(checkout, "--no-lazy-fetch", "rev-list", "--objects", "--missing=print", exact), /^\?/m);
+  // Warm the partial clone's current checkout; its historical blob must still be missing.
+  const partial = path.join(base, "partial");
+  await mkdir(partial);
+  git(partial, "init");
+  git(partial, "remote", "add", "origin", pathToFileURL(source).href);
+  git(partial, "-c", "protocol.version=2", "fetch", "--filter=blob:none", "--no-tags", "--no-recurse-submodules", "origin", exact);
+  git(partial, "config", "core.sparseCheckout", "true");
+  await writeFile(path.join(partial, ".git/info/sparse-checkout"), "/docs/\n");
+  git(partial, "-c", "submodule.recurse=false", "checkout", "--detach", exact);
+  assert.equal(await readFile(path.join(partial, "docs/README.md"), "utf8"), "current source fixture\n");
+  assert.match(git(partial, "--no-lazy-fetch", "rev-list", "--objects", "--missing=print", exact), /^\?/m);
 });
