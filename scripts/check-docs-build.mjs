@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { readFile, access } from "node:fs/promises";
 import path from "node:path";
 import { stripVTControlCharacters } from "node:util";
+import { createRequire } from "node:module";
 
 const [dest, buildLog] = process.argv.slice(2);
 assert(dest && buildLog, "Pass the isolated output directory and complete build log");
@@ -13,6 +14,8 @@ for (const page of ["index.html", "404.html", "markdown/1.html", "Gomd_super/ind
 }
 const home = await readFile(path.join(output, "index.html"), "utf8");
 const article = await readFile(path.join(output, "markdown/1.html"), "utf8");
+const expectedVuePress = createRequire(import.meta.url)("vuepress/package.json").version;
+assert(home.includes(`content="VuePress ${expectedVuePress}"`) && article.includes(`content="VuePress ${expectedVuePress}"`), "Serve the installed VuePress generator, never historical tracked output");
 const advanced = await readFile(path.join(output, "go-advancend/index.html"), "utf8");
 assert(advanced.includes("第21节 go 语言切片原理") && advanced.includes("第50节"), "Render the formerly empty advanced chapter links with their existing article headings");
 assert(home.includes("Golang"), "Keep the existing home page title");

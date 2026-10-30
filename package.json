@@ -8,7 +8,9 @@
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
     "docs:check-build": "node scripts/check-docs-build.mjs",
-    "docs:check-deps": "npm ls --all"
+    "docs:check-deps": "npm ls --all",
+    "docs:build:verified": "node scripts/build-verified-docs.mjs",
+    "docs:test-build-runner": "node --test scripts/test-verified-docs-build.mjs"
   },
   "author": "",
   "license": "ISC",
@@ -26,7 +28,7 @@
   "type": "module",
   "private": true,
   "engines": {
-    "node": ">=22.18.0"
+    "node": "^22.18.0"
   },
   "packageManager": "npm@12.0.2"
 }
