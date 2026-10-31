@@ -59,20 +59,25 @@ jobs:
       GOMAXPROCS: '2'
       PR_HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
     steps:
+      # The repository preserves legacy gitlinks without .gitmodules. The
+      # checkout action's credential cleanup traverses them even when disabled.
+      # Public read-only Git needs no token and never enters those directories.
       - name: Check out only the reviewed Go source scope
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-        with:
-          persist-credentials: false
-          fetch-depth: 1
-          submodules: false
-          lfs: false
-          sparse-checkout-cone-mode: false
-          sparse-checkout: |
-            /code/${{ matrix.module }}/*.go
-            /code/${{ matrix.module }}/go.mod
-            /code/${{ matrix.module }}/go.sum
-            /code/${{ matrix.module }}/gin/
-            /code/${{ matrix.module }}/hello/
+        working-directory: ${{ github.workspace }}
+        run: |
+          set -euo pipefail
+          [[ "$GITHUB_SHA" =~ ^[0-9a-f]{40}$ ]]
+          git init -q
+          git remote add origin https://github.com/cubxxw/awesome-go.git
+          git -c protocol.version=2 fetch --no-tags --no-recurse-submodules --filter=blob:none --depth=1 origin "$GITHUB_SHA"
+          git sparse-checkout set --no-cone --stdin <<'SOURCES'
+          /code/${{ matrix.module }}/*.go
+          /code/${{ matrix.module }}/go.mod
+          /code/${{ matrix.module }}/go.sum
+          /code/${{ matrix.module }}/gin/
+          /code/${{ matrix.module }}/hello/
+          SOURCES
+          git -c submodule.recurse=false checkout --detach --no-recurse-submodules FETCH_HEAD
 
       - name: Select the current supported stable toolchain
         uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e # v7.0.0
