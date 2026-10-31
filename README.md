@@ -4,7 +4,7 @@ The existing articles, navigation and source examples live in [docs/README.md](d
 
 ## Local verification
 
-Use Node 22.23.2 (see `.nvmrc`) and npm 12.0.2; the VuePress toolchain requires Node >=22.18.0. This site uses the pinned VuePress 2 RC core, Vite bundler and default theme; their RC version numbers differ by package family.
+Use Node 22.23.2 (see `.nvmrc`) and npm 12.0.2. This project supports stable Node 22 versions >=22.22.2; other Node major versions are not supported. This site uses the pinned VuePress 2 RC core, Vite bundler and default theme; their RC version numbers differ by package family.
 
 ```bash
 npm ci --ignore-scripts --strict-peer-deps --engine-strict
@@ -28,4 +28,4 @@ Three historical code gitlinks lack `.gitmodules` metadata; their paths and comm
 
 Both existing Vercel project checks and same-head CI remain release gates. The new CI job only installs the locked public dependencies, builds into runner-local temporary paths and checks output; it does not deploy. Keep the migration draft until comment, submodule and deployment acceptance gaps have been reviewed.
 
-The checked-in Vercel configuration pins the Node 22 line (at least 22.18.0) and actually executes npm 12.0.2 for strict installation and the verified build. It selects only `.build-artifacts/verified-docs/dist`; it cannot fall back to the historical tracked `dist`. Both existing projects must read this repository-root configuration. Vercel Root Directory is a project setting; an inaccessible or different root remains an external acceptance gap. Deployment success must also read back the new generator, page markers and `build-info.json` commit identity.
+The checked-in Vercel configuration pins the Node 22 line (at least 22.22.2) and actually executes npm 12.0.2 for strict installation and the verified build. It selects only `.build-artifacts/verified-docs/dist`; it cannot fall back to the historical tracked `dist`. Both existing projects must read this repository-root configuration. Vercel Root Directory is a project setting; an inaccessible or different root remains an external acceptance gap. Deployment success must also read back the new generator, page markers and `build-info.json` commit identity.

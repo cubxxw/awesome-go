@@ -45,9 +45,12 @@ test("exact source commit and Node/npm contracts reject mismatches", () => {
   assert.throws(() => selectCommit({ GITHUB_SHA: "b".repeat(40) }, commit));
   assert.throws(() => selectCommit({ GITHUB_SHA: "not-a-sha" }, undefined));
   assert.throws(() => selectCommit({}, undefined));
-  assert.doesNotThrow(() => assertRuntime("22.18.0", "12.0.2"));
-  assert.throws(() => assertRuntime("22.17.0", "12.0.2"));
-  assert.throws(() => assertRuntime("24.0.0", "12.0.2"));
+  for (const version of ["22.22.2", "v22.22.2", "22.23.2"]) {
+    assert.doesNotThrow(() => assertRuntime(version, "12.0.2"));
+  }
+  for (const version of ["22.18.0", "22.22.1", "23.0.0", "24.0.0", "24.14.9", "24.15.0", "25.0.0", "26.0.0", "22.22.2-rc.1"]) {
+    assert.throws(() => assertRuntime(version, "12.0.2"));
+  }
   assert.throws(() => assertRuntime("22.23.2", "10.9.0"));
 });
 
