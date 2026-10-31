@@ -6,28 +6,29 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "docs:check-build": "node scripts/check-docs-build.mjs",
+    "docs:check-deps": "npm ls --all",
+    "docs:build:verified": "node scripts/build-verified-docs.mjs",
+    "docs:test-build-runner": "node --test scripts/test-verified-docs-build.mjs"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@vuepress/plugin-docsearch": "^2.0.0-beta.51",
-    "@vuepress/plugin-last-updated": "^1.9.7",
-    "@vuepress/plugin-nprogress": "^1.9.7",
-    "@vuepress/plugin-prismjs": "^2.0.0-beta.51",
-    "@vuepress/plugin-search": "^2.0.0-beta.51",
-    "@vuepress/plugin-shiki": "^2.0.0-beta.51",
-    "@vuepress/plugin-toc": "^2.0.0-beta.51",
-    "markdown-it-task-lists": "^2.1.1",
-    "vuepress": "^2.0.0-beta.51",
-    "vuepress-plugin-baidu-tongji": "^1.0.1",
-    "vuepress-plugin-comment": "^0.7.3",
-    "vuepress-plugin-one-click-copy": "^1.0.6",
-    "vuepress-plugin-zooming": "^1.1.8"
+    "@vuepress/bundler-vite": "2.0.0-rc.30",
+    "@vuepress/plugin-docsearch": "2.0.0-rc.132",
+    "@vuepress/plugin-search": "2.0.0-rc.131",
+    "@vuepress/plugin-toc": "2.0.0-rc.131",
+    "@vuepress/theme-default": "2.0.0-rc.132",
+    "markdown-it-task-lists": "2.1.1",
+    "sass": "1.105.0",
+    "vue": "3.5.44",
+    "vuepress": "2.0.0-rc.30"
   },
-  "dependencies": {
-    "@vssue/api-github-v3": "^1.4.7",
-    "@vssue/api-github-v4": "^1.4.7",
-    "vuepress-plugin-md-enhance": "^1.30.0"
-  }
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": "^22.22.2"
+  },
+  "packageManager": "npm@12.0.2"
 }

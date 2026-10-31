@@ -1,0 +1,74 @@
+name: Documentation build
+
+on:
+  pull_request:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: docs-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out the exact public source without credentials
+        env:
+          SOURCE_SHA: ${{ github.sha }}
+          SOURCE_REPOSITORY: ${{ github.repository }}
+          GIT_TERMINAL_PROMPT: '0'
+          GIT_CONFIG_NOSYSTEM: '1'
+          GIT_CONFIG_GLOBAL: /dev/null
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$SOURCE_REPOSITORY" = "cubxxw/awesome-go"
+          [[ "$SOURCE_SHA" =~ ^[0-9a-f]{40}$ ]]
+          git init .
+          git remote add origin "https://github.com/$SOURCE_REPOSITORY.git"
+          git -c protocol.version=2 fetch --no-tags --no-recurse-submodules origin "$SOURCE_SHA"
+          git config core.sparseCheckout true
+          mkdir -p .git/info
+          cat > .git/info/sparse-checkout <<'SPARSE'
+          /package.json
+          /package-lock.json
+          /.nvmrc
+          /.npmrc
+          /.gitignore
+          /vercel.json
+          /README.md
+          /scripts/
+          /docs/
+          /images/
+          !/docs/.vuepress/.cache/
+          !/docs/.vuepress/.temp/
+          SPARSE
+          git -c submodule.recurse=false checkout --detach "$SOURCE_SHA"
+          test "$(git rev-parse HEAD)" = "$SOURCE_SHA"
+          git --no-lazy-fetch rev-list --objects --missing=print "$SOURCE_SHA" > "$RUNNER_TEMP/docs-source-objects"
+          if grep -q '^?' "$RUNNER_TEMP/docs-source-objects"; then
+            echo "Missing Git objects before the documentation build"
+            exit 1
+          fi
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - name: Use the verified package manager
+        run: npm install --global npm@12.0.2 --ignore-scripts --no-audit --no-fund
+      - run: npm ci --ignore-scripts --strict-peer-deps --engine-strict
+      - name: Check the installed dependency and peer graph
+        run: npm run docs:check-deps
+      - name: Test fail-closed build and identity boundaries
+        run: npm run docs:test-build-runner
+      - name: Build and verify documentation
+        env:
+          NODE_OPTIONS: --max-old-space-size=2048
+          RAYON_NUM_THREADS: '1'
+        run: npm run docs:build:verified

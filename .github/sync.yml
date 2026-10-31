@@ -17,6 +17,6 @@ group:
           .vuepress
           .*
           README.md
-      - source: README.md
+      - source: docs/README.md
         dest: awesome-golang/README.md
         replace: true
