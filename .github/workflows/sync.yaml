@@ -2,45 +2,63 @@
 # Licensed under the MIT License (the "License");
 # you may not use this file except in compliance with the License.
 
-# https://github.com/BetaHuhn/repo-file-sync-action
-name: Synchronize kubecub public code to other repositories
+name: Sync documentation through a target pull request
+
 on:
-    push:
-        branches:
-          - master
-          - main
-    pull_request:
-        branches:
-          - main
-          - master
-    workflow_dispatch:
+  push:
+    branches: [master, main]
+  pull_request:
+    branches: [master, main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: docs-sync-${{ github.repository_id }}-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
   sync:
-    if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Run GitHub File Sync
-        uses: BetaHuhn/repo-file-sync-action@latest
-        with:
-          GH_INSTALLATION_TOKEN: "${{ secrets.BOT_GITHUB_TOKEN }}"
-          CONFIG_PATH: .github/sync.yml
-          GH_PAT: "${{ secrets.BOT_GITHUB_TOKEN }}"
-          ORIGINAL_MESSAGE: true
-          SKIP_PR: true
-          COMMIT_EACH_FILE: false
-          COMMIT_BODY: "🤖 kubbot to synchronize the warehouse"
-          GIT_EMAIL: "3293172751ysy@gmail.com"
-          GIT_USERNAME: "kubbot"
-          PR_BODY: 👌 kubecub provides automated community services
-          REVIEWERS: |
-            kubbot
-            cubxxw
-          PR_LABELS: |
-            file-sync
-            automerge
-          ASSIGNEES: |
-            kubbot
+      - name: Check out exact public source without credentials or submodule traversal
+        env:
+          SOURCE_REPOSITORY: ${{ github.repository }}
+          SOURCE_SHA: ${{ github.sha }}
+          GIT_TERMINAL_PROMPT: '0'
+          GIT_CONFIG_NOSYSTEM: '1'
+          GIT_CONFIG_GLOBAL: /dev/null
+        shell: bash
+        run: |
+          set -euo pipefail
+          case "$SOURCE_REPOSITORY" in
+            cubxxw/awesome-go|cubxxw/awesome-cloud-native) ;;
+            *) exit 1 ;;
+          esac
+          [[ "$SOURCE_SHA" =~ ^[0-9a-f]{40}$ ]]
+          git init .
+          git remote add origin "https://github.com/$SOURCE_REPOSITORY.git"
+          git -c http.followRedirects=false -c protocol.version=2 fetch --filter=blob:none --depth=1 --no-tags --no-recurse-submodules origin "$SOURCE_SHA"
+          git config core.sparseCheckout true
+          mkdir -p .git/info
+          cat > .git/info/sparse-checkout <<'SPARSE'
+          /.github/sync.yml
+          /scripts/sync_docs.py
+          /scripts/test_sync_docs.py
+          /docs/
+          !/docs/.vuepress/
+          SPARSE
+          git -c submodule.recurse=false checkout --detach "$SOURCE_SHA"
+          test "$(git rev-parse HEAD)" = "$SOURCE_SHA"
+      - name: Test local Git safety without credentials or remote writes
+        env:
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: python3 -m unittest discover -s scripts -p 'test_sync_docs.py' -v
+      - name: Create a new target branch and ordinary documentation PR
+        if: github.event_name != 'pull_request'
+        env:
+          BOT_GITHUB_TOKEN: ${{ secrets.BOT_GITHUB_TOKEN }}
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: python3 scripts/sync_docs.py
