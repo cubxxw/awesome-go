@@ -1,0 +1,149 @@
+name: Go dependency consumers
+
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - code/go-super/go.mod
+      - code/go-super/go.sum
+      - code/go-super/60-main.go
+      - code/go-super/65-main.go
+      - code/go-super/gin/**
+      - code/beego/go.mod
+      - code/beego/go.sum
+      - code/beego/main.go
+      - code/beego/hello/**
+      - .github/workflows/go-consumers.yml
+  push:
+    branches: [master]
+    paths:
+      - code/go-super/go.mod
+      - code/go-super/go.sum
+      - code/go-super/60-main.go
+      - code/go-super/65-main.go
+      - code/go-super/gin/**
+      - code/beego/go.mod
+      - code/beego/go.sum
+      - code/beego/main.go
+      - code/beego/hello/**
+      - .github/workflows/go-consumers.yml
+
+permissions:
+  contents: read
+
+concurrency:
+  group: go-consumers-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  consumers:
+    name: Compile ${{ matrix.module }} consumers
+    if: github.repository == 'cubxxw/awesome-go' && github.repository_id == '544877512'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      max-parallel: 1
+      matrix:
+        module: [go-super, beego]
+    defaults:
+      run:
+        shell: bash
+        working-directory: code/${{ matrix.module }}
+    env:
+      GOENV: 'off'
+      GOTOOLCHAIN: local
+      GOWORK: 'off'
+      GOPROXY: https://proxy.golang.org
+      GOSUMDB: sum.golang.org
+      GOMAXPROCS: '2'
+      PR_HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+    steps:
+      # The repository preserves legacy gitlinks without .gitmodules. The
+      # checkout action's credential cleanup traverses them even when disabled.
+      # Public read-only Git needs no token and never enters those directories.
+      - name: Check out only the reviewed Go source scope
+        working-directory: ${{ github.workspace }}
+        run: |
+          set -euo pipefail
+          [[ "$GITHUB_SHA" =~ ^[0-9a-f]{40}$ ]]
+          git init -q
+          git remote add origin https://github.com/cubxxw/awesome-go.git
+          git -c protocol.version=2 fetch --no-tags --no-recurse-submodules --filter=blob:none --depth=1 origin "$GITHUB_SHA"
+          git sparse-checkout set --no-cone --stdin <<'SOURCES'
+          /code/${{ matrix.module }}/*.go
+          /code/${{ matrix.module }}/go.mod
+          /code/${{ matrix.module }}/go.sum
+          /code/${{ matrix.module }}/gin/
+          /code/${{ matrix.module }}/hello/
+          SOURCES
+          git -c submodule.recurse=false checkout --detach --no-recurse-submodules FETCH_HEAD
+
+      - name: Select the current supported stable toolchain
+        uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e # v7.0.0
+        with:
+          go-version: '1.27.3'
+          check-latest: false
+          cache: false
+
+      - name: Verify source and freeze the module inputs
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
+          test "$(go env GOVERSION)" = go1.27.3
+          test "$(go env GOTOOLCHAIN)" = local
+          test "$(go env GOWORK)" = off
+          sha256sum go.mod go.sum > "$RUNNER_TEMP/${{ matrix.module }}-manifest.sha256"
+          go mod download
+          go mod verify
+          sha256sum -c "$RUNNER_TEMP/${{ matrix.module }}-manifest.sha256"
+
+      - name: Resolve the actual selected module and consumer graphs
+        run: |
+          set -euo pipefail
+          go list -mod=readonly -m -f '{{.Path}} {{.Version}}' all > "$RUNNER_TEMP/${{ matrix.module }}-modules.txt"
+          case '${{ matrix.module }}' in
+            go-super) go list -mod=readonly -deps ./gin ./gin/web > "$RUNNER_TEMP/go-super-packages.txt" ;;
+            beego) go list -mod=readonly -deps . ./hello > "$RUNNER_TEMP/beego-packages.txt" ;;
+            *) exit 1 ;;
+          esac
+
+      - name: Compile the real consumers without running application code
+        run: |
+          set -euo pipefail
+          case '${{ matrix.module }}' in
+            go-super)
+              go build -p 1 -mod=readonly -o "$RUNNER_TEMP/go-super-gin" ./gin
+              go build -p 1 -mod=readonly -o "$RUNNER_TEMP/go-super-gin-web" ./gin/web
+              go build -p 1 -mod=readonly -o "$RUNNER_TEMP/go-super-60" 60-main.go
+              go build -p 1 -mod=readonly -o "$RUNNER_TEMP/go-super-65" 65-main.go
+              ;;
+            beego)
+              go build -p 1 -mod=readonly -o "$RUNNER_TEMP/beego-example" .
+              # Compile the existing helper package; do not link it as an app
+              # requiring main(), and never execute a generated test binary.
+              go test -c -p 1 -mod=readonly -o "$RUNNER_TEMP/beego-hello.test" ./hello
+              ;;
+            *) exit 1 ;;
+          esac
+
+      - name: Require unchanged module inputs even after a failed command
+        if: always()
+        run: |
+          set -euo pipefail
+          test -f "$RUNNER_TEMP/${{ matrix.module }}-manifest.sha256"
+          sha256sum -c "$RUNNER_TEMP/${{ matrix.module }}-manifest.sha256"
+          git diff --exit-code -- go.mod go.sum
+
+      - name: Record the bounded compile-only scope
+        run: |
+          set -euo pipefail
+          ssh_count="$(awk '/^golang.org\/x\/crypto\/ssh/ { n++ } END { print n+0 }' "$RUNNER_TEMP/${{ matrix.module }}-packages.txt")"
+          gorilla_count="$(awk '$0 == "github.com/gorilla/websocket" { n++ } END { print n+0 }' "$RUNNER_TEMP/${{ matrix.module }}-packages.txt")"
+          {
+            printf 'module=%s\ntested_source=%s\npr_head=%s\ntoolchain=go1.27.3\napplication_execution=not_run\n' '${{ matrix.module }}' "$GITHUB_SHA" "$PR_HEAD_SHA"
+            printf 'consumer_package_count=%s\n' "$(wc -l < "$RUNNER_TEMP/${{ matrix.module }}-packages.txt")"
+            awk '$1 ~ /^(golang.org\/x\/(crypto|net|sys|text)|github.com\/(gin-gonic\/gin|go-playground\/validator\/v10|beego\/beego\/v2|beego\/bee|astaxie\/beego|gorilla\/websocket))$/ { print }' "$RUNNER_TEMP/${{ matrix.module }}-modules.txt"
+            printf 'ssh_package_count=%s\n' "$ssh_count"
+            printf 'gorilla_package_count=%s\n' "$gorilla_count"
+          } | tee -a "$GITHUB_STEP_SUMMARY"
